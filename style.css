@@ -87,6 +87,7 @@ a {
 #conteudo-principal {
   margin: 80px 0 260px 0;
   text-align: center;
+  text-shadow: 8px 8px 8px #271b0b;
 }
 
 #conteudo-principal h1{
@@ -107,10 +108,12 @@ a {
 
 #conteudo-historias h1 {
   color: #e6dec8;
+  
   margin: 16px;
 }
 
 #conteudo-historias p {
+  color: #e6dec8;
   margin: 16px;
 }
 
@@ -118,13 +121,14 @@ a {
   width: 30em;
 }
 
-#guerra-leviana {
-  text-align: center;
-}
+#localizações
 
-#guerra-leviana p {
-  color: #e6dec8;
-}
+
+
+
+/* FUNDAMENTOS */
+
+
 
 /* MAPA */
 
@@ -148,4 +152,8 @@ a {
 
 #rodape span a {
   color: #e6dec8;
+}
+
+#rodape span a:hover{
+  color: #726c64;
 }
