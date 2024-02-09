@@ -47,11 +47,62 @@ body{
 
 /* PRIMARY CONTENT STYLE */
 
-.card{
+#accordionExample{
   margin-bottom: 20px;
   background-color: brown;
   color: antiquewhite;
 }
+#collapseOne{
+  margin-bottom: 20px;
+  background-color: brown;
+  color: antiquewhite;
+}
+.accordion{
+  margin-bottom: 20px;
+  background-color: brown;
+  color: antiquewhite;
+}
+.ac-color{
+  margin-bottom: 20px;
+  background-color: brown;
+  color: antiquewhite;
+}
+.accordion-button{
+  margin-bottom: 20px;
+  background-color: brown;
+  color: antiquewhite;
+}
+.accordion-item{
+  margin-bottom: 20px;
+  background-color: brown;
+  color: antiquewhite;
+}
+.accordion-body{
+  margin-bottom: 20px;
+  background-color: brown;
+  color: antiquewhite;
+}
+.accordion-collapse{
+  margin-bottom: 20px;
+  background-color: brown;
+  color: antiquewhite;
+}
+.accordion-header{
+  margin-bottom: 20px;
+  background-color: brown;
+  color: antiquewhite;
+}
+.collapse{
+  margin-bottom: 20px;
+  background-color: brown;
+  color: antiquewhite;
+}
+.show{
+  margin-bottom: 20px;
+  background-color: brown;
+  color: antiquewhite;
+}
+
 
 .trailer{
   text-align: center;
