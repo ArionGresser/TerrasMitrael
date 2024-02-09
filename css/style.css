@@ -1,12 +1,65 @@
-/* ESTILIZAÇÃO PADRÃO */
+/* UNIVERSAL STYLE */
 
-
-
-/* HEADER */
-header {
-  
+*{
+  margin: 0;
+  padding: 0;
 }
 
-nav-pills{
-  color: #471D10;
+/* FONT STYLE */
+.medievalsharp-regular {
+  font-family: "MedievalSharp", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+/* HEADER STYLE */
+
+
+header{
+  background-color: brown;
+  margin-bottom: 10px;
+}
+
+/* NAV STYLE */
+
+.navbar-brand{
+  color: antiquewhite;
+}
+
+.nav-link{
+  color: antiquewhite;
+}
+
+.nav-item a:hover{
+  color: rgb(100, 24, 24);
+}
+
+
+
+/* BODY STYLE */
+
+body{
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  background-color: antiquewhite;
+}
+
+
+/* PRIMARY CONTENT STYLE */
+
+.card{
+  margin-bottom: 20px;
+  background-color: brown;
+  color: antiquewhite;
+}
+
+.trailer{
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+.trailer h5{
+  color: antiquewhite;
+  background-color: brown;
 }

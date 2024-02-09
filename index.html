@@ -2,39 +2,150 @@
 <html lang="pt-br">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Terras Mitrael</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/normalize.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Terras de Mitrael</title>
+    <!-- Bootstrap CSS -->
     <link
-      href="css/bootstrap5/css/bootstrap.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- FONT LINK -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <div id="container">
-      <header>
-        <nav class="navbar navbar-light bg-dark justify-content-center">
-          <ul class="nav nav-pills">
-            <li class="nav-item">
-            <a href="index.html" class="nav-link active">home</a>
-            </li>
-            <li class="nav-item">
-              <a href="story.html" class="nav-link " >historias</a>
-            </li>
-            <li class="nav-item">
-              <a href="cast.html" class="nav-link">elenco</a>
-            </li>
-            <li class="nav-item">
-              <a href="map.html" class="nav-link">mapa</a>
-            </li>
-            <!-- <li class="nav-item">
-              Profile
-            </li> -->
-          </ul>
-        </nav>
-      </header>
+    <!-- START HEADER -->
+    <header>
+      <!-- START NAV -->
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand medievalsharp-regular" href="#"
+            >Terras de Mitrael</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Histórias</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Elenco</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Sistema
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Livro do Mestre</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Livro do Jogador</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Livro das Criaturas</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- END NAV -->
+    </header>
+    <!-- END HEADER -->
+
+    <!-- START MOBILE CONTENT -->
+
+    <div class="container-sm">
+      <!-- START PRIMARY VIEW -->
+      <!-- START CARD RESUME -->
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Bem-vindo às Terras de Mitrael!</h5>
+          <p class="card-text">
+            Desde o seu início em 2020, Terras de Mitrael tem cativado a
+            imaginação dos seus jogadores, mergulhando-os em um cenário vibrante
+            de Fantasia Medieval.
+            <br /><br />
+            Com inúmeras histórias entrelaçadas e uma rica tapeçaria de
+            culturas, raças e lugares, Terras de Mitrael oferece uma experiência
+            única para cada jogador.
+            <br />
+            Seja você um nobre cavaleiro, um astuto feiticeiro ou um intrépido
+            aventureiro, há um lugar para você neste mundo em constante
+            evolução.
+            <br /><br />
+            Ao longo dos anos, vários jogadores já deixaram sua marca nas Terras
+            de Mitrael, seja em oneshots emocionantes ou em longas jornadas
+            repletas de desafios e reviravoltas.
+            <br /><br />
+            Agora, em 2024, estamos empolgados em anunciar uma nova fase para o
+            RPG.
+            <br />
+            Estamos trabalhando arduamente para desenvolver mecânicas inovadoras
+            e reformular histórias, tudo com o objetivo de tornar o jogo ainda
+            mais envolvente e imersivo para nossos jogadores fiéis.
+            <br /><br />
+            Prepare-se para descobrir segredos antigos, enfrentar monstros
+            temíveis e forjar alianças improváveis enquanto exploramos novos
+            horizontes em Mitrael.
+            <br />
+            Junte-se a nós nesta jornada emocionante e ajude a moldar o destino
+            deste mundo fantástico.
+          </p>
+        </div>
+      </div>
+      <!-- END CARD RESUME -->
+      <!-- START TRAILER -->
+      <div class="trailer">
+        <h5>Trailer Primeira Temporada</h5>
+        <iframe
+          width="365"
+          height="200"
+          src="https://www.youtube.com/embed/gkz15ziOsAg?si=0eGxSja9gXrsE0LF"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <!-- END TRAILER -->
+      <!-- START CAST -->
+      <div class="cast">
+
+      </div>
+      <!-- END CAST -->
+      <!-- END PRIMARY VIEW -->
     </div>
+
+    <!-- END MOBILE CONTENT -->
+    <!-- Bootstrap JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"

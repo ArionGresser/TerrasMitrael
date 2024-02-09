@@ -9,15 +9,9 @@ Este projeto foi feito em homenagem ao RPG Terras de Mitrael.
 Neste site você encontrará tudo sobre como funciona o sistema e todas as maravilhas do universo das Terras de Mitrael.
 
 
-## Atualização V0.02
+## Atualização V0.01
 
-*Organizado,identado e formatado Código Fonte do projeto.
-
-*Adicionado Menu Superior
-
-*Adicionado as opções Elenco e Episódios no Menu Superior
-
-*Adicionado Cabeçalho, Conteudo e Rodapé
+• 
 
 
 ## Tecnologias Utilizas
