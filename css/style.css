@@ -21,7 +21,7 @@ header {
 /* NAV STYLE */
 
 .navbar-brand {
-  color: antiquewhite;
+  color: burlywood;
 }
 
 .navbar a:hover{
@@ -29,7 +29,7 @@ header {
 }
 
 .nav-link {
-  color: antiquewhite;
+  color: burlywood;
 }
 
 .nav-item a:hover {
@@ -38,16 +38,16 @@ header {
 
 .dropdown-menu {
   background-color: rgb(100, 24, 24);
-  color: antiquewhite;
+  color: burlywood;
 }
 .dropdown-menu  a:hover{
   background-color: brown;
-  color: antiquewhite;
+  color: burlywood;
 }
 
 .dropdown-item {
   background-color: rgb(100, 24, 24);
-  color: antiquewhite;
+  color: burlywood;
 }
 
 
@@ -58,21 +58,27 @@ body {
   align-items: center;
   justify-content: center;
   justify-items: center;
-  background-color: antiquewhite;
+  background-color: burlywood;
 }
 
 /* PRIMARY CONTENT STYLE */
 
 .accordion {
   margin-bottom: 20px;
+  --bs-accordion-border-color: none;
+  --bs-accordion-btn-focus-box-shadow: none;
   --bs-accordion-bg: rgb(100, 24, 24);
-  --bs-accordion-color: antiquewhite;
+  --bs-accordion-color: burlywood;
   --bs-accordion-btn-bg: brown;
-  --bs-accordion-btn-color: antiquewhite;
+  --bs-accordion-btn-color: burlywood;
   --bs-accordion-active-bg: brown;
-  --bs-accordion-active-color: antiquewhite;
+  --bs-accordion-active-color: burlywood;
+  
 }
 
+.accordion-button:not(.collapsed){
+box-shadow: none;
+}
 .container-sm {
   text-align: center;
   justify-content: center;
@@ -82,6 +88,6 @@ body {
 }
 
 .container-sm h4 {
-  color: antiquewhite;
+  color: burlywood;
   background-color: brown;
 }
