@@ -24,6 +24,10 @@ header {
   color: antiquewhite;
 }
 
+.navbar a:hover{
+  color: rgb(100, 24, 24);
+}
+
 .nav-link {
   color: antiquewhite;
 }
@@ -36,11 +40,17 @@ header {
   background-color: rgb(100, 24, 24);
   color: antiquewhite;
 }
+.dropdown-menu  a:hover{
+  background-color: brown;
+  color: antiquewhite;
+}
 
 .dropdown-item {
   background-color: rgb(100, 24, 24);
   color: antiquewhite;
 }
+
+
 
 /* BODY STYLE */
 
@@ -55,11 +65,11 @@ body {
 
 .accordion {
   margin-bottom: 20px;
-  --bs-accordion-bg: brown;
+  --bs-accordion-bg: rgb(100, 24, 24);
   --bs-accordion-color: antiquewhite;
   --bs-accordion-btn-bg: brown;
   --bs-accordion-btn-color: antiquewhite;
-  --bs-accordion-active-bg: rgb(100, 24, 24);
+  --bs-accordion-active-bg: brown;
   --bs-accordion-active-color: antiquewhite;
 }
 
