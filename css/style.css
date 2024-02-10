@@ -1,6 +1,6 @@
 /* UNIVERSAL STYLE */
 
-*{
+* {
   margin: 0;
   padding: 0;
 }
@@ -13,105 +13,65 @@
 }
 /* HEADER STYLE */
 
-
-header{
+header {
   background-color: brown;
   margin-bottom: 10px;
 }
 
 /* NAV STYLE */
 
-.navbar-brand{
+.navbar-brand {
   color: antiquewhite;
 }
 
-.nav-link{
+.nav-link {
   color: antiquewhite;
 }
 
-.nav-item a:hover{
+.nav-item a:hover {
   color: rgb(100, 24, 24);
 }
 
+.dropdown-menu {
+  background-color: rgb(100, 24, 24);
+  color: antiquewhite;
+}
 
+.dropdown-item {
+  background-color: rgb(100, 24, 24);
+  color: antiquewhite;
+}
 
 /* BODY STYLE */
 
-body{
+body {
   align-items: center;
   justify-content: center;
   justify-items: center;
   background-color: antiquewhite;
 }
 
-
 /* PRIMARY CONTENT STYLE */
 
-#accordionExample{
+.accordion {
   margin-bottom: 20px;
-  background-color: brown;
-  color: antiquewhite;
-}
-#collapseOne{
-  margin-bottom: 20px;
-  background-color: brown;
-  color: antiquewhite;
-}
-.accordion{
-  margin-bottom: 20px;
-  background-color: brown;
-  color: antiquewhite;
-}
-.ac-color{
-  margin-bottom: 20px;
-  background-color: brown;
-  color: antiquewhite;
-}
-.accordion-button{
-  margin-bottom: 20px;
-  background-color: brown;
-  color: antiquewhite;
-}
-.accordion-item{
-  margin-bottom: 20px;
-  background-color: brown;
-  color: antiquewhite;
-}
-.accordion-body{
-  margin-bottom: 20px;
-  background-color: brown;
-  color: antiquewhite;
-}
-.accordion-collapse{
-  margin-bottom: 20px;
-  background-color: brown;
-  color: antiquewhite;
-}
-.accordion-header{
-  margin-bottom: 20px;
-  background-color: brown;
-  color: antiquewhite;
-}
-.collapse{
-  margin-bottom: 20px;
-  background-color: brown;
-  color: antiquewhite;
-}
-.show{
-  margin-bottom: 20px;
-  background-color: brown;
-  color: antiquewhite;
+  --bs-accordion-bg: brown;
+  --bs-accordion-color: antiquewhite;
+  --bs-accordion-btn-bg: brown;
+  --bs-accordion-btn-color: antiquewhite;
+  --bs-accordion-active-bg: rgb(100, 24, 24);
+  --bs-accordion-active-color: antiquewhite;
 }
 
-
-.trailer{
+.container-sm {
   text-align: center;
   justify-content: center;
   justify-items: center;
+  align-items: center;
+  align-content: center;
 }
 
-.trailer h5{
+.container-sm h4 {
   color: antiquewhite;
   background-color: brown;
 }
-
