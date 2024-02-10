@@ -102,3 +102,21 @@ body {
   color: burlywood;
   background-color: brown;
 }
+
+/* FOOTER */
+
+footer a{
+  text-decoration: none;
+  color: burlywood;
+}
+
+footer a:hover{
+  color: rgb(146, 117, 79);
+
+}
+.card {
+  --bs-card-bg: brown;
+  --bs-card-color:burlywood;
+  --bs-card-cap-bg: brown;
+  --bs-card-cap-color: burlywood;
+}
