@@ -5,9 +5,15 @@
   padding: 0;
 }
 
-/* FONT STYLE */
+/* FONTS STYLE */
 .medievalsharp-regular {
   font-family: "MedievalSharp", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poor-story-regular {
+  font-family: "Poor Story", system-ui;
   font-weight: 400;
   font-style: normal;
 }
@@ -24,7 +30,7 @@ header {
   color: burlywood;
 }
 
-.navbar a:hover{
+.navbar a:hover {
   color: rgb(100, 24, 24);
 }
 
@@ -40,7 +46,7 @@ header {
   background-color: rgb(100, 24, 24);
   color: burlywood;
 }
-.dropdown-menu  a:hover{
+.dropdown-menu a:hover {
   background-color: brown;
   color: burlywood;
 }
@@ -49,8 +55,6 @@ header {
   background-color: rgb(100, 24, 24);
   color: burlywood;
 }
-
-
 
 /* BODY STYLE */
 
@@ -61,12 +65,11 @@ body {
   background-color: burlywood;
 }
 
-.during-work{
-
+.during-work {
   margin-top: 200px;
 }
 
-.spinner-border{
+.spinner-border {
   margin-top: 20px;
 }
 
@@ -82,11 +85,10 @@ body {
   --bs-accordion-btn-color: burlywood;
   --bs-accordion-active-bg: brown;
   --bs-accordion-active-color: burlywood;
-  
 }
 
-.accordion-button:not(.collapsed){
-box-shadow: none;
+.accordion-button:not(.collapsed) {
+  box-shadow: none;
 }
 .container-sm {
   text-align: center;

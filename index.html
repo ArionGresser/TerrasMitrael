@@ -13,11 +13,20 @@
     />
     <!-- Style CSS -->
     <link rel="stylesheet" href="css/style.css" />
-    <!-- FONT LINK -->
+    <!-- FONTS LINK -->
+    <!-- MEDIEVAL SHARP -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- POOR STORY -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -42,9 +51,11 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav poor-story-regular">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                <a class="nav-link" aria-current="page" href="index.html"
+                  >Home</a
+                >
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="story.html">Histórias</a>
@@ -63,12 +74,20 @@
                   Sistema
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item disabled" href="#">Livro do Mestre</a></li>
                   <li>
-                    <a class="dropdown-item disabled" href="#">Livro do Jogador</a>
+                    <a class="dropdown-item disabled" href="#"
+                      >Livro do Mestre</a
+                    >
                   </li>
                   <li>
-                    <a class="dropdown-item disabled" href="#">Livro das Criaturas</a>
+                    <a class="dropdown-item disabled" href="#"
+                      >Livro do Jogador</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item disabled" href="#"
+                      >Livro das Criaturas</a
+                    >
                   </li>
                 </ul>
               </li>
@@ -82,10 +101,10 @@
 
     <!-- START MOBILE CONTENT -->
 
-    <div class="container-sm">
+    <div class="container-sm poor-story-regular">
       <!-- START PRIMARY VIEW -->
       <!-- START CARD RESUME -->
-      <div class="accordion" id="accordionExample">
+      <div class="accordion poor-story-regular" id="accordionExample">
         <div class="accordion-item">
           <h2 class="accordion-header">
             <button
