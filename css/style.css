@@ -61,6 +61,15 @@ body {
   background-color: burlywood;
 }
 
+.during-work{
+
+  margin-top: 200px;
+}
+
+.spinner-border{
+  margin-top: 20px;
+}
+
 /* PRIMARY CONTENT STYLE */
 
 .accordion {
