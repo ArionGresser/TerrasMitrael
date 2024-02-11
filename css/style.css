@@ -89,6 +89,10 @@ body {
   border-radius: 5px;
   margin: 20px 50px 20px 50px;
 }
+
+.container-sm a{
+  text-decoration: none;
+}
 /* ACCORDION STYLES */
 .accordion {
   margin-bottom: 20px;
