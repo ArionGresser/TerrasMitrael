@@ -75,6 +75,21 @@ body {
 
 /* PRIMARY CONTENT STYLE */
 
+.container-sm {
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+}
+
+.container-sm h4 {
+  color: burlywood;
+  background-color: brown;
+  border-radius: 5px;
+  margin: 20px 50px 20px 50px;
+}
+/* ACCORDION STYLES */
 .accordion {
   margin-bottom: 20px;
   --bs-accordion-border-color: none;
@@ -90,33 +105,45 @@ body {
 .accordion-button:not(.collapsed) {
   box-shadow: none;
 }
-.container-sm {
-  text-align: center;
-  justify-content: center;
-  justify-items: center;
-  align-items: center;
-  align-content: center;
+
+/* COROUSEL STYLE */
+
+.carousel-item img{
+max-height:70vh;
+border-radius: 20px;
 }
 
-.container-sm h4 {
-  color: burlywood;
-  background-color: brown;
+/* COMMUNITY STYLE */
+
+.community i {
+  color: brown;
+  font-size: 20vw;
+}
+.community i:hover {
+  color: rgb(100, 24, 24);
+}
+
+/* MAP STYLE */
+.map img{
+  border-radius: 20px;
+  max-width: 92vw;
+  margin-bottom: 20px;
+  
 }
 
 /* FOOTER */
 
-footer a{
+footer a {
   text-decoration: none;
   color: burlywood;
 }
 
-footer a:hover{
+footer a:hover {
   color: rgb(146, 117, 79);
-
 }
 .card {
   --bs-card-bg: brown;
-  --bs-card-color:burlywood;
+  --bs-card-color: burlywood;
   --bs-card-cap-bg: brown;
   --bs-card-cap-color: burlywood;
 }
