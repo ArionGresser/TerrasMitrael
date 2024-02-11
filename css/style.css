@@ -110,10 +110,13 @@ body {
   box-shadow: none;
 }
 
+/* TRAILER STYLE */
+
+
 /* COROUSEL STYLE */
 
 .carousel-item img{
-max-height:70vh;
+max-height:60vh;
 border-radius: 20px;
 }
 
