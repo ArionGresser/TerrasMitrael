@@ -14,7 +14,7 @@ Neste site você encontrará tudo sobre como funciona o sistema e todas as marav
 • 
 
 
-## Tecnologias Utilizas
+## Stacks for 
 
 HTML
 CSS
