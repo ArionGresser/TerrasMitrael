@@ -1,11 +1,4 @@
 # TerrasMitrael
-The Mitrael Lands Offical Site
-
----
-
-## Acesse o site aqui
-
-Site Terras de Mitrael: https://terrasmitrael.netlify.app/
 
 ---
 
@@ -14,6 +7,12 @@ Site Terras de Mitrael: https://terrasmitrael.netlify.app/
 Terras de Mitrael é um RPG de mesa com um universo abundante e jogadores apaixonados que criam um verdadeiro espetáculo em cada seção da campanha. 
 
 Este projeto está sendo desenvolvido com 2 objetivos principais, consolidar o RPG de mesa Terras de Mitrael e servir como portifólio voltado para desenvolvimento web.
+
+---
+
+## Acesse o site aqui
+
+Site Terras de Mitrael: https://terrasmitrael.netlify.app/
 
 ---
 
