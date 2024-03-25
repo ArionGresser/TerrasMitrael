@@ -83,6 +83,14 @@ body {
   align-content: center;
 }
 
+.container-sm h1 {
+  font-size: 250%;
+  color: burlywood;
+  background-color: brown;
+  border-radius: 5px;
+  margin: 20px 75px 20px 75px;
+}
+
 .container-sm h4 {
   color: burlywood;
   background-color: brown;
@@ -90,7 +98,7 @@ body {
   margin: 20px 50px 20px 50px;
 }
 
-.container-sm a{
+.container-sm a {
   text-decoration: none;
 }
 /* ACCORDION STYLES */
@@ -112,12 +120,11 @@ body {
 
 /* TRAILER STYLE */
 
-
 /* COROUSEL STYLE */
 
-.carousel-item img{
-max-height:60vh;
-border-radius: 20px;
+.carousel-item img {
+  max-height: 60vh;
+  border-radius: 20px;
 }
 
 /* COMMUNITY STYLE */
@@ -131,12 +138,11 @@ border-radius: 20px;
 }
 
 /* MAP STYLE */
-.map img{
+.map img {
   border-radius: 20px;
   max-width: 92vw;
   max-height: 80vh;
   margin-bottom: 20px;
-  
 }
 
 /* FOOTER */
@@ -149,7 +155,28 @@ footer a {
 footer a:hover {
   color: rgb(146, 117, 79);
 }
+footer .card {
+  --bs-card-bg: brown;
+  --bs-card-color: burlywood;
+  --bs-card-cap-bg: brown;
+  --bs-card-cap-color: burlywood;
+}
+
+/* CAST.HTML */
+
+.castpage .card .btn {
+  --bs-btn-color: brown;
+  --bs-btn-bg: burlywood;
+  --bs-btn-border-color: none;
+  --bs-btn-hover-color: brown;
+  --bs-btn-hover-bg: rgb(190, 149, 95);
+  --bs-btn-active-color: brown;
+  --bs-btn-active-bg: rgb(165, 125, 73);
+}
+
+/* rgb(212, 166, 106); */
 .card {
+  margin-bottom: 32px;
   --bs-card-bg: brown;
   --bs-card-color: burlywood;
   --bs-card-cap-bg: brown;
