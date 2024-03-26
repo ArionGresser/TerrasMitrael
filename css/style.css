@@ -182,3 +182,15 @@ footer .card {
   --bs-card-cap-bg: brown;
   --bs-card-cap-color: burlywood;
 }
+
+/* HOWAI.HTML */
+
+/* .howai blockquote{
+  background-color: brown;
+  color: burlywood;
+} */
+
+
+.howai .card a{
+  color:rgb(168, 133, 86) ;
+}
