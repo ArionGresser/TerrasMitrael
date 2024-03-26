@@ -168,8 +168,8 @@ footer .card {
   --bs-btn-color: brown;
   --bs-btn-bg: burlywood;
   --bs-btn-border-color: none;
-  --bs-btn-hover-color: brown;
-  --bs-btn-hover-bg: rgb(190, 149, 95);
+  --bs-btn-hover-color: burlywood;
+  --bs-btn-hover-bg: rgb(100, 24, 24);
   --bs-btn-active-color: brown;
   --bs-btn-active-bg: rgb(190, 149, 95);
 }
