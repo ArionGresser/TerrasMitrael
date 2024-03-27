@@ -191,6 +191,23 @@ footer .card {
 } */
 
 
-.howai .card a{
-  color:rgb(168, 133, 86) ;
+.howai .card a {
+  color: rgb(168, 133, 86);
+}
+
+/* FICHA CLASS */
+
+.ficha span {
+  box-shadow: 0px 8px 10px  rgb(145, 37, 37);
+  font-size: 150%;
+  margin: 25px;
+  padding: 5px;
+}
+
+.ficha .linha .level{
+  font-size: 300%;
+}
+
+.ficha .linha .epx{
+  font-size: 125%;
 }
