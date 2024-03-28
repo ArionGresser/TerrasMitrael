@@ -178,7 +178,7 @@ footer .card {
   --bs-card-cap-color: burlywood;
 }
 
-/* CAST.HTML */
+/* CARD STYLE */
 
 .castpage .card .btn {
   --bs-btn-color: brown;
@@ -190,7 +190,6 @@ footer .card {
   --bs-btn-active-bg: rgb(190, 149, 95);
 }
 
-/* rgb(212, 166, 106); */
 .card {
   margin-bottom: 32px;
   --bs-card-bg: brown;
@@ -199,6 +198,9 @@ footer .card {
   --bs-card-cap-color: burlywood;
 }
 
+.card a {
+  color: rgb(168, 133, 86);
+}
 /* HOWAI.HTML */
 
 /* .howai blockquote{
@@ -207,9 +209,6 @@ footer .card {
 } */
 
 
-.howai .card a {
-  color: rgb(168, 133, 86);
-}
 
 /* FICHA CLASS */
 
