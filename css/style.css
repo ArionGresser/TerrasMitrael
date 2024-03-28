@@ -122,13 +122,13 @@ body {
   --bs-accordion-active-color: burlywood;
 }
 
-.card.accordion {
+.card .accordion {
   margin-bottom: 20px;
   --bs-accordion-border-color: none;
   --bs-accordion-btn-focus-box-shadow: none;
   --bs-accordion-bg: rgb(100, 24, 24);
   --bs-accordion-color: burlywood;
-  --bs-accordion-btn-bg: rgb(100, 24, 24);
+  --bs-accordion-btn-bg: rgb(129, 34, 34);
   --bs-accordion-btn-color: burlywood;
   --bs-accordion-active-bg: rgb(100, 24, 24);
   --bs-accordion-active-color: burlywood;
