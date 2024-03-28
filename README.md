@@ -16,7 +16,7 @@ Site Terras de Mitrael: https://terrasmitrael.netlify.app/
 
 ---
 
-### Atualização V0.05
+### Atualização V0.06
 
 Em breve..
 
