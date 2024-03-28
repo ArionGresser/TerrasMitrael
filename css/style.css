@@ -227,3 +227,9 @@ footer .card {
 .ficha .linha .epx{
   font-size: 125%;
 }
+
+.modifi{
+  border-radius: 8px;
+  font-size: 150%;
+  background-color: rgb(124, 31, 31) ;
+}
