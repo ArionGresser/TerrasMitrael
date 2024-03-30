@@ -220,7 +220,7 @@ footer .card {
 
 .ficha h1{
   font-size: 250%;
-  margin: 0px 0px 20px 0px;
+  margin: 0px 0px 10px 0px;
   border-bottom: 2px solid rgb(145, 37, 37);
 }
 
@@ -247,5 +247,5 @@ footer .card {
 
 .hability {
   margin-bottom: 20px;
-  border-bottom: 2px solid rgb(145, 37, 37);
+  border-bottom: 2px solid brown;
 }
