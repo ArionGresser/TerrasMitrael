@@ -134,6 +134,12 @@ body {
   --bs-accordion-active-color: burlywood;
 }
 
+.accordion img{
+  width: 100%;
+  box-shadow: 0px 8px 10px rgb(72, 14, 14);
+  border-radius: 5px;
+}
+
 /* TRAILER STYLE */
 
 /* COROUSEL STYLE */
@@ -212,6 +218,12 @@ footer .card {
 
 /* FICHA CLASS */
 
+.ficha h1{
+  font-size: 250%;
+  margin: 0px 0px 20px 0px;
+  border-bottom: 2px solid rgb(145, 37, 37);
+}
+
 .ficha span {
   box-shadow: 0px 8px 10px  rgb(145, 37, 37);
   font-size: 150%;
@@ -231,4 +243,9 @@ footer .card {
   border-radius: 8px;
   font-size: 150%;
   background-color: rgb(124, 31, 31) ;
+}
+
+.hability {
+  margin-bottom: 20px;
+  border-bottom: 2px solid rgb(145, 37, 37);
 }
