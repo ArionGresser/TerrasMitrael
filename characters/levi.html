@@ -1,226 +1,415 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Terras de Mitrael</title>
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="../css/style.css" />
-    <!-- FONTS LINK -->
-    <!-- MEDIEVAL SHARP -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap"
-      rel="stylesheet"
-    />
 
-    <!-- POOR STORY -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- START HEADER -->
-    <header>
-      <!-- START NAV -->
-      <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-          <a class="navbar-brand medievalsharp-regular" href="../index.html"
-            >Terras de Mitrael</a
-          >
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav poor-story-regular">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="../index.html"
-                  >Home</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../story.html">Historias</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../cast.html">Elenco</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Sistema
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-item disabled" href="#"
-                      >Livro do Mestre</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item disabled" href="#"
-                      >Livro do Jogador</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item disabled" href="#"
-                      >Livro das Criaturas</a
-                    >
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <!-- END NAV -->
-    </header>
-    <!-- END HEADER -->
-    <!-- START MOBILE CONTENT -->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Terras de Mitrael</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <!-- Style CSS -->
+  <link rel="stylesheet" href="../css/style.css" />
+  <!-- FONTS LINK -->
+  <!-- MEDIEVAL SHARP -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet" />
 
-    <div class="container-sm howai poor-story-regular">
-      <!-- START PRIMARY VIEW -->
-      <a href="../cast.html"><h4>Voltar</h4></a>
-      <h1>Levi, <br> o Fauno</h1>
-      <!-- START HOWAI INTRODUCTION -->
-      <div class="card">
-        <img src="../images/levi.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Levi, e um fauno bardo, orfao por conta da <a href="">Grande Guerra Leviana</a>, ele cresceu sob a tutela de um taberneiro na pequena cidade de <a href="">Entrerio</a>. 
-            <br>
-            Com talento natural para a magia e uma forte ligacao com a natureza, ele busca conhecer melhor sua historia através de suas melodias e encantos.</p>
+  <!-- POOR STORY -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- START HEADER -->
+  <header>
+    <!-- START NAV -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand medievalsharp-regular" href="../index.html">Terras de Mitrael</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav poor-story-regular">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../story.html">Historias</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../cast.html">Elenco</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Sistema
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item disabled" href="#">Livro do Mestre</a>
+                </li>
+                <li>
+                  <a class="dropdown-item disabled" href="#">Livro do Jogador</a>
+                </li>
+                <li>
+                  <a class="dropdown-item disabled" href="#">Livro das Criaturas</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </div>
-   <!-- END HOWAI INTRODUCTION -->
-      <!-- START HOWAI QUOTE -->
-      <figure class="text-end">
-        <blockquote class="blockquote">
-          <p>♪ All the single ladies, all the single ladies.. ♫ .</p>
-        </blockquote>
-        <figcaption class="blockquote-footer">
-          O bardo <cite title="Source Title">Levi</cite>
-        </figcaption>
-      </figure>
-      <!-- END HOWAI QUOTE -->
-      <!-- START HOWAI STORY -->
-      <div class="card">
-        <img src="../images/flute.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h2>Historia</h2>
-          <p class="card-text">
+    </nav>
+    <!-- END NAV -->
+  </header>
+  <!-- END HEADER -->
 
-            Nascido na ilha de 
-            <a href="">
-                Pondor do Aramate
-            </a>, localizada no <a href="">Mar Leviano</a>, onde era o lar de diversas racas que viviam em plena paz e harmonia com a natureza. 
-            <br><br>
-            Uma delas eram os Faunos, conhecidos pelas suas pernas e chifres de bode. 
-            <br><br>
-            Os Faunos passavam maior parte do seu dia fazendo cantigas, escrevendo contos, manipulando a magia de forma harmonica e desde pequenos eram incentivados a tocar instrumentos. 
-            <br><br>
-            Toda essa felicidade foi perdida... 22 anos atras os Orcs invadiram e tomaram a ilha pra si. 
-            <br><br>
-            Assassinaram quase todos os habitantes e escravizaram os que sobraram. 
-            <br><br>
-            Numa tentativa desesperada de salvar a especie, os Faunos colocaram algumas criancas em canoas e as lancaram no 
-            <a href="">Mar Leviano</a>
-            em direcao a costa de Mitrael na esperança de serem encontradas por alguém. 
-            <br><br>
-            A maioria das canoas se perderam no caminho ou afundaram... foram poucos os que chegaram em algum lugar.
-            </p>
+  <!-- START MOBILE CONTENT -->
+
+  <div class="container-sm poor-story-regular">
+    <!-- START PRIMARY VIEW -->
+
+    <a href="../cast.html">
+      <h4>Voltar</h4>
+    </a>
+
+    <!-- START HOWAI INTRODUCTION -->
+    <div class="card">
+      <img src="../images/levi.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text">
+        <div class="ficha">
+          <h1>Levi, O Fauno Bardo</h1>
+          <div class="linha">
+            <span class="level">Level: 3</span>
+            <br>
+          </div>
+          <div class="linha">
+            <span class="epx">EXP: 110 / 375 ↑</span>
+            <br>
+          </div>
         </div>
+        </p>
+        <!-- START RESUMO -->
         <div class="accordion" id="accordionExample">
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Continue lendo..
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                • Resumo
               </button>
             </h2>
             <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-                <br><br>
-                Um dos sortudos sobreviventes fui eu!
-                <br><br> 
-                Minha canoa apareceu de manha cedo numa praia de 
-                <a href="">Entrerio</a>. 
-                
-                Levi apenas carregava consigo 2 coisas, um colar encantadamente misterioso no pescoço e uma flauta Sampona.
-                <br><br>
-                Obviamente eu nao me lembro de nada disso pois eu era um recém nascido.
-                <br><br>
-                Quem sempre contou essa história era o velho que o resgatou. 
-                Ele era um ex soldado da corte e com o dinheiro da aposentadoria montou uma taverna que sempre foi seu sonho. 
-                <br><br>
-                Esse velho alcoolatra me nomeou como "Levi" e me criou junto de seu filho biologico. 
-                O velho já era viuvo a alguns anos... nossa pequena familia de tres integrantes ate que se virava bem. 
-                <br><br>
-                Nos dividiamos um pequeno quarto nos fundos da taverna, era apertado mas gostavamos de morar ali. 
-                Durante o dia o velho sempre nos ensinava alguma tecnica de combate ou manuseio de espadas.
-                <br><br>
-                A noite, trabalhavamos na taverna, limpando vomito dos bebados, atendendo as mesas, separando brigas... mas o que eu mais gostava era de assistir os artistas que ali se apresentavam.
-                <br><br>
-                Algo dentro de mim me dizia que era isso que eu deveria ser.
-                <br><br>
-                Eu sempre adquiria algum conhecimento artistico e musical dessas pessoas, com o tempo dominei a maioria dos instrumentos.
-                <br><br>
-                A flauta sampona foi a que mais me aperfeicoei e desenvolvi minha magia a partir dela. 
-                <br><br>
-                Quanto mais me ligava a música e a arte... mais a curiosidade sobre meu passado desconhecido crescia dentro de mim. Assim passei minha infancia e adolescencia.
-                <br><br> 
-                Pouco depois de eu completar 17 anos, o velho foi assassinado brutalmente por um grupo de ladroes. 
-                <br>
-                O filho biologico herdou a taverna e eu fiquei desolado com o ocorrido, decidi largar tudo e seguir minha voz interior, meu sentimento em relacao a arte nunca mudou... eu tinha certeza de que isso era o certo a se fazer! 
-                <br><br>
-                Juntei meus poucos pertences, me despedi de meu "irmao" e segui meu rumo sem destino. 
-                <br>
-                A partir daquele dia me apresento em todas as tavernas que encontro em meu caminho, esse e meu ganha pao. 
-                <br>
-                Tento usar minha magia so para o bem, por mais que a situacao aperte de vez em quanto e tenho que fazer coisas que nao me orgulho muito. 
-                <br><br>
-                Minha curiosidade pelo meu passado so cresce com o passar dos anos e a saudade daquele velho e do seu filho que me tratavam como familia e enorme. 
-                <br><br>
-                Ja fazem 5 anos que vago sozinho pelo mundo.
-                <br> 
-                Escrevo minhas aventuras em meu caderno de bolso e as guardo com muito carinho. 
-                <br>
-                Espero um dia poder contar essas historias para muita gente!
+                <p>Levi, e um fauno bardo, orfao por conta da <a href="">Grande Guerra Leviana</a>,
+                  ele cresceu sob a tutela de um taberneiro na pequena cidade de <a href="">Entrerio</a>.
+                  <br> <br>
+                  Com talento natural para a magia e uma forte ligacao com a natureza,
+                  ele busca conhecer melhor sua historia atraves de suas melodias e encantos.
+                </p>
               </div>
             </div>
           </div>
+          <!-- END RESUMO -->
+          <!-- START INFO -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                • Informacoes
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+
+                <div class="charinfo">
+                  <h3>Identidade</h3>
+                  <p>Nome: Levi <br>
+                    Idade: 22 Anos <br>
+                    Altura: 1.65 m <br>
+                    Genero: Masculino <br>
+                    Classe: Bardo <br>
+                    Raca: Fauno
+                  </p>
+                </div>
+
+                <div class="charinfo">
+                  <h3>Pontos de personagem</h3>
+                  <p>Vida: 54 HP <br>
+                    Level: 3 <br>
+                    Experiencia: 110 / 375 <br>
+                    Sanidade: 60%</p>
+                </div>
+
+                <div class="charinfo">
+                  <h3>Personalidade</h3>
+                  <p>Bom-Neutro (Justo)<br>
+                    Motivacoes: Colar Misterioso, tocar sua Musica e o seu passado. <br>
+                    Inspiracoes: Velho Taberneiro. <br>
+                    Defeitos: Humor duvidoso e Festejador <br>
+                    Ojetivo: Descobrir mais sobre o passado de sua familia e tornar-se um bardo muito famoso.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END INFO -->
+          <!-- START ATRIBUTOS -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                • Atributos
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <p class="modifi">
+                  Exemplos: <br>
+                  Modificador: [-X], [+X] <br>
+                  Bonus Raca: (X)
+                </p>
+                <p>
+                  • FORÇA: 6 [-2] <br>
+                  • CONTITUIÇÃO: 6 [-2]
+                  <br><br>
+                  • DESTREZA: 10 [0] <br>
+                  • AGILIZADE: 7 (1) [-2]
+                  <br><br>
+                  • INTELIGENCIA: 16 (2) [+3] <br>
+                  • CARISMA: 18 (+4)
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- END ATRIBUTOS -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                • Habilidades
+              </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <p class="modifi">
+                <div class="hability">
+                  <!-- HABILITY 1 -->
+                  <h3>• Olho Nortuno </h3>
+                  <h6>{Passiva} (Raca)</h6>
+                  <br>
+                  <p>Os passos de um Khajiit sao extremamente leves, podem realizar pulos sem emitirem nenhum barulhos.
+                  </p>
+                </div>
+                <!-- HABILITY 2 -->
+                <div class="hability">
+                  <h3>• Instinto Ladino </h3>
+                  <h6>{Passiva}</h6>
+                  <br>
+                  <p>Continua furtivo apos executar alguem no modo furtivo. <br>
+                    Tem chance de aplicar efeito *ASSUSTADO* aos inimigos restantes.</p>
+                </div>
+                <!-- HABILITY 3 -->
+                <div class="hability">
+                  <h3>• Flechas Multiplas Lvl 2</h3>
+                  <h6>2 Cargas p/ batalha</h6>
+                  <br>
+                  <p>Atira 3 flechas ao mesmo tempo.
+                    <br>
+                    Pode acertar 3 inimigos diferentes ou 3 flechas no mesmo alvo.
+                  </p>
+                </div>
+                <!-- HABILITY 4 -->
+                <div class="hability">
+                  <h3>• Ataque Evasivo Lvl 1</h3>
+                  <h6>1 Carga p/ batalha</h6>
+                  <p>Ataca com uma arma de uma mao.
+                    <br>
+                    Apos o ataque se esconde, mantendo-se em modo furtivo.
+                  </p>
+                </div>
+                <!-- HABILITY 5 -->
+                <div class="hability">
+                  <h3>• Arrombamento Lvl 1</h3>
+                  <h6>2 Cargas p/ dia</h6>
+                  <p>Abre qualquer fechadura de nivel iniciante apenas com a unha.</p>
+                </div>
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- END HOWAI INTRODUCTION -->
+    <!-- START HOWAI QUOTE 1 -->
+    <figure class="text-end quote">
+      <blockquote class="blockquote">
+        <p>Sobe o morro do perigo,
+          Nao e mais do que ninguem,
+          Vai subir com vinte e cinco
+          E vai descer com mais de cem.</p>
+      </blockquote>
+      <figcaption class="blockquote-footer">
+        O Bardo, <cite title="Source Title">Levi</cite>
+      </figcaption>
+    </figure>
+    <!-- END HOWAI QUOTE 1 -->
+    <!-- START HOWAI STORY -->
+    <div class="card">
+      <img src="../images/flute.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h2>Historia</h2>
+        <p class="card-text">
+          Nascido na ilha de
+          <a href="">
+            Pondor do Aramate
+          </a>, localizada no <a href="">Mar Leviano</a>, onde era o lar de diversas racas que viviam em plena paz e
+          harmonia com a natureza.
+          <br><br>
+          Uma delas eram os Faunos, conhecidos pelas suas pernas e chifres de bode.
+          <br><br>
+          Os Faunos passavam maior parte do seu dia fazendo cantigas, escrevendo contos, manipulando a magia de forma
+          harmonica e desde pequenos eram incentivados a tocar instrumentos.
+          <br><br>
+          Toda essa felicidade foi perdida... 22 anos atras os Orcs invadiram e tomaram a ilha pra si.
+          <br><br>
+          Assassinaram quase todos os habitantes e escravizaram os que sobraram.
+          <br><br>
+          Numa tentativa desesperada de salvar a especie, os Faunos colocaram algumas criancas em canoas e as lancaram
+          no
+          <a href="">Mar Leviano</a>
+          em direcao a costa de Mitrael na esperança de serem encontradas por alguém.
+          <br><br>
+          A maioria das canoas se perderam no caminho ou afundaram... foram poucos os que chegaram em algum lugar.
+        </p>
+      </div>
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Continue lendo..
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body ">
+              Um dos sortudos sobreviventes fui eu!
+              <br><br>
+              Minha canoa apareceu de manha cedo numa praia de
+              <a href="">Entrerio</a>.
+
+              Levi apenas carregava consigo 2 coisas, um colar encantadamente misterioso no pescoço e uma flauta
+              Sampona.
+              <br><br>
+              Obviamente eu nao me lembro de nada disso pois eu era um recém nascido.
+              <br><br>
+              Quem sempre contou essa história era o velho que o resgatou.
+              Ele era um ex soldado da corte e com o dinheiro da aposentadoria montou uma taverna que sempre foi seu
+              sonho.
+              <br><br>
+              Esse velho alcoolatra me nomeou como "Levi" e me criou junto de seu filho biologico.
+              O velho já era viuvo a alguns anos... nossa pequena familia de tres integrantes ate que se virava bem.
+              <br><br>
+              Nos dividiamos um pequeno quarto nos fundos da taverna, era apertado mas gostavamos de morar ali.
+              Durante o dia o velho sempre nos ensinava alguma tecnica de combate ou manuseio de espadas.
+              <br><br>
+              A noite, trabalhavamos na taverna, limpando vomito dos bebados, atendendo as mesas, separando brigas...
+              mas o que eu mais gostava era de assistir os artistas que ali se apresentavam.
+              <br><br>
+              Algo dentro de mim me dizia que era isso que eu deveria ser.
+              <br><br>
+              Eu sempre adquiria algum conhecimento artistico e musical dessas pessoas, com o tempo dominei a maioria
+              dos instrumentos.
+              <br><br>
+              A flauta sampona foi a que mais me aperfeicoei e desenvolvi minha magia a partir dela.
+              <br><br>
+              Quanto mais me ligava a música e a arte... mais a curiosidade sobre meu passado desconhecido crescia
+              dentro de mim. Assim passei minha infancia e adolescencia.
+              <br><br>
+              Pouco depois de eu completar 17 anos, o velho foi assassinado brutalmente por um grupo de ladroes.
+              <br>
+              O filho biologico herdou a taverna e eu fiquei desolado com o ocorrido, decidi largar tudo e seguir minha
+              voz interior, meu sentimento em relacao a arte nunca mudou... eu tinha certeza de que isso era o certo a
+              se fazer!
+              <br><br>
+              Juntei meus poucos pertences, me despedi de meu "irmao" e segui meu rumo sem destino.
+              <br>
+              A partir daquele dia me apresento em todas as tavernas que encontro em meu caminho, esse e meu ganha pao.
+              <br>
+              Tento usar minha magia so para o bem, por mais que a situacao aperte de vez em quanto e tenho que fazer
+              coisas que nao me orgulho muito.
+              <br><br>
+              Minha curiosidade pelo meu passado so cresce com o passar dos anos e a saudade daquele velho e do seu
+              filho que me tratavam como familia e enorme.
+              <br><br>
+              Ja fazem 5 anos que vago sozinho pelo mundo.
+              <br>
+              Escrevo minhas aventuras em meu caderno de bolso e as guardo com muito carinho.
+              <br>
+              Espero um dia poder contar essas historias para muita gente!
+            </div>
           </div>
         </div>
-        <!-- END HOWAI STORY -->
       </div>
-      <!-- END PRIMARY VIEW -->
     </div>
-    <!-- END MOBILE CONTENT -->
-    <!-- Bootstrap JS -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+    <!-- END HOWAI STORY -->
+
+    <!-- START HOWAI QUOTE 2 -->
+    <figure class="text-end">
+      <blockquote class="blockquote">
+        <p>Se navegar chegou, deixa navegar
+          Chegou deixa chegar.</p>
+      </blockquote>
+      <figcaption class="blockquote-footer">
+        O Fauno, <cite title="Source Title">Levi</cite>
+      </figcaption>
+    </figure>
+    <!-- END HOWAI QUOTE 2 -->
+
+    <!-- START HOWAI QUOTE 3 -->
+    <!-- <figure class="text-end">
+      <blockquote class="blockquote">
+        <p>Para mim o dinheiro sempre foi o mais importante, mas hoje eu percebo que a gloria tambem tem seu lugar.</p>
+      </blockquote>
+      <figcaption class="blockquote-footer">
+        O Ladino, <cite title="Source Title">Howai</cite>
+      </figcaption>
+    </figure> -->
+    <!-- END HOWAI QUOTE 3 -->
+    <a href="../cast.html">
+      <h4>Voltar</h4>
+    </a>
+
+  </div>
+  <!-- END PRIMARY VIEW -->
+  <!-- START FOOTER -->
+  <footer>
+    <div class="card text-center">
+      <div class="card-header">
+        &copy Terras de Mitrael - The Role-Play Game
+      </div>
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text">
+          &reg Desenvolvido & Mestrado por:
+          <a href="https://github.com/ArionGresser">Arion Gresser</a>.
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!-- END FOOTER -->
+  <!-- END MOBILE CONTENT -->
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
