@@ -241,6 +241,11 @@ footer .card {
   border-bottom: 2px solid brown;
 }
 
+.hability img {
+  width: 120px;
+  border-radius: 200px;
+}
+
 .charinfo {
   margin-bottom: 20px;
   border-bottom: 2px solid brown;
