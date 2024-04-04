@@ -245,9 +245,14 @@ footer .card {
   width: 120px;
   border-radius: 200px;
   margin-bottom: 16px;
+  /* box-shadow: 0px 0px 8px rgb(20, 5, 5);  */
 }
 
 .charinfo {
   margin-bottom: 20px;
   border-bottom: 2px solid brown;
 }
+
+/* .blockquote-footer{
+color: rgb(109, 30, 30);
+} */
