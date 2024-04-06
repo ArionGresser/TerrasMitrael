@@ -197,8 +197,8 @@ footer .card {
   --bs-btn-border-color: none;
   --bs-btn-hover-color: burlywood;
   --bs-btn-hover-bg: rgb(100, 24, 24);
-  --bs-btn-active-color: brown;
-  --bs-btn-active-bg: rgb(190, 149, 95);
+  --bs-btn-active-color:burlywood ;
+  --bs-btn-active-bg: rgb(77, 18, 18);
 }
 
 .card {
@@ -262,3 +262,7 @@ footer .card {
 /* .blockquote-footer{
 color: rgb(109, 30, 30);
 } */
+
+.blockquote{
+  font-size: 200%;
+}
