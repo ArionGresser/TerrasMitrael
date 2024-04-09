@@ -266,3 +266,9 @@ color: rgb(109, 30, 30);
 .blockquote{
   font-size: 200%;
 }
+
+/* STORY'S STYLE */
+
+.storyImg img{
+  margin-bottom: 16px;
+}
