@@ -157,8 +157,9 @@ body {
 /* COMMUNITY STYLE */
 
 .community i {
+  margin: 12px;
   color: brown;
-  font-size: 20vw;
+  font-size: 20vh;
 }
 .community i:hover {
   color: rgb(100, 24, 24);
@@ -202,7 +203,7 @@ footer .card {
 }
 
 .card {
-  margin-bottom: 32px;
+  margin-bottom: 16px;
   --bs-card-bg: brown;
   --bs-card-color: burlywood;
   --bs-card-cap-bg: brown;
@@ -268,6 +269,10 @@ color: rgb(109, 30, 30);
 }
 
 /* STORY'S STYLE */
+
+.story{
+  margin-bottom: 8px;
+}
 
 .storyImg img{
   margin-bottom: 16px;
