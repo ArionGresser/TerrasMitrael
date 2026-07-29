@@ -2,111 +2,159 @@
 
 import Image from "next/image";
 import { motion } from "motion/react";
+import { Pergaminho } from "@/components/ui/Pergaminho";
+import { Revelar } from "@/components/ui/Revelar";
+import { BotaoLink, Botao } from "@/components/ui/Botao";
+import {
+  TituloBrasao,
+  TituloSecao,
+  TituloCapitulo,
+  Sobretitulo,
+  Ornamento,
+} from "@/components/ui/Titulo";
 
 /**
- * Página provisória da Fase 1.
- * Existe para confirmar que a base técnica funciona e para dar o primeiro
- * vislumbre da identidade visual. Será substituída pela Home real na Fase 4.
+ * Página de demonstração da Fase 2.
+ * Mostra o design system inteiro em uso, para validação.
+ * Será substituída pela Home real na Fase 4.
  */
 
-const instalado = [
-  { nome: "Next.js 16", papel: "monta as páginas do site" },
-  { nome: "Tailwind CSS 4", papel: "dá forma e cor a tudo" },
-  { nome: "Motion", papel: "as animações e transições" },
-  { nome: "Howler.js", papel: "a trilha e os efeitos sonoros" },
-  { nome: "MDX", papel: "a lore em arquivos de texto editáveis" },
+const CORES = [
+  { nome: "Madeira", classe: "bg-madeira-800", texto: "text-pergaminho-100" },
+  { nome: "Pergaminho", classe: "bg-pergaminho-200", texto: "text-tinta-900" },
+  { nome: "Dourado", classe: "bg-dourado-500", texto: "text-madeira-950" },
+  { nome: "Vermelho", classe: "bg-heraldico-vermelho", texto: "text-pergaminho-50" },
+  { nome: "Verde", classe: "bg-heraldico-verde", texto: "text-pergaminho-50" },
 ];
 
-export default function PaginaProvisoria() {
+export default function Demonstracao() {
   return (
-    <main className="flex min-h-dvh items-center justify-center px-4 py-10 sm:px-6 sm:py-16">
-      {/* O tecido puxado nas bordas da mesa */}
-      <div
-        aria-hidden
-        className="pointer-events-none fixed inset-0 bg-[radial-gradient(ellipse_at_center,transparent_35%,rgba(0,0,0,0.55)_100%)]"
-      />
-
-      <motion.article
-        initial={{ opacity: 0, y: 24, rotate: -0.4 }}
-        animate={{ opacity: 1, y: 0, rotate: -0.4 }}
-        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="textura-pergaminho borda-envelhecida shadow-pergaminho relative w-full max-w-2xl rounded-sm px-6 py-10 sm:px-12 sm:py-14"
+    <main className="mx-auto max-w-3xl px-4 py-20 sm:px-6 sm:py-28">
+      {/* ---------- Abertura ---------- */}
+      <motion.div
+        initial={{ opacity: 0, y: 26 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
       >
-        <header className="text-center">
-          <p className="text-tinta-500 font-titulo text-[0.7rem] tracking-[0.35em] uppercase sm:text-xs">
-            Terceira Era
-          </p>
+        <Pergaminho inclinacao="esquerda" borda={1}>
+          <header className="text-center">
+            <Sobretitulo>Terceira Era</Sobretitulo>
+            <TituloBrasao className="mt-4">Terras de Mitrael</TituloBrasao>
+            <Ornamento className="mt-6" />
+            <p className="text-tinta-700 mx-auto mt-6 max-w-md text-base leading-relaxed italic">
+              Um mundo construído mesa após mesa, história após história.
+            </p>
+          </header>
 
-          <h1 className="text-tinta-900 font-titulo mt-4 text-3xl leading-tight font-bold sm:text-5xl">
-            Terras de Mitrael
-          </h1>
-
-          <div className="mt-5 flex items-center justify-center gap-3" aria-hidden>
-            <span className="via-dourado-600/60 h-px w-16 bg-gradient-to-r from-transparent to-transparent" />
-            <span className="text-dourado-600 text-sm">✦</span>
-            <span className="via-dourado-600/60 h-px w-16 bg-gradient-to-r from-transparent to-transparent" />
+          <div className="mt-9 flex flex-wrap justify-center gap-3">
+            <BotaoLink href="/" variante="primario">
+              Botão principal
+            </BotaoLink>
+            <BotaoLink href="/" variante="secundario">
+              Botão secundário
+            </BotaoLink>
+            <Botao variante="discreto">Botão discreto</Botao>
           </div>
+        </Pergaminho>
+      </motion.div>
 
-          <p className="text-tinta-700 mx-auto mt-5 max-w-md text-sm leading-relaxed italic sm:text-base">
-            A reconstrução começou. Os alicerces do novo mundo estão assentados.
+      {/* ---------- Tipografia ---------- */}
+      <Revelar className="mt-10">
+        <Pergaminho inclinacao="direita" borda={2}>
+          <Sobretitulo>Fase 2 — Design system</Sobretitulo>
+          <TituloSecao className="mt-3">A Grande Guerra Leviana</TituloSecao>
+          <p className="text-tinta-500 mt-1 text-xs">
+            ↑ Cinzel: aguenta títulos longos sem perder clareza
           </p>
-        </header>
 
-        <section className="mt-10">
-          <h2 className="text-tinta-900 font-titulo text-center text-xs tracking-[0.2em] uppercase sm:text-sm">
-            Fase 1 — Fundações
-          </h2>
+          <TituloCapitulo className="mt-7">Capítulo 1 — A Expedição</TituloCapitulo>
+          <p className="mt-3 text-[0.95rem] leading-[1.75] sm:text-base">
+            Ao final do quinto século da Terceira Era, as amarras de uma ditadura
+            imperial sanguinária chegavam ao fim. As pessoas comuns tinham mais
+            liberdade e a civilização, muito mais autonomia; a criação do livre
+            mercado fez com que o desenvolvimento crescesse exponencialmente.
+          </p>
+          <p className="text-tinta-500 mt-2 text-xs">
+            ↑ Lora: a fonte de leitura, confortável em textos longos
+          </p>
 
-          <ul className="mt-5 space-y-2.5">
-            {instalado.map((item, i) => (
-              <motion.li
-                key={item.nome}
-                initial={{ opacity: 0, x: -12 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.5 + i * 0.09, duration: 0.5 }}
-                className="border-dourado-600/25 flex items-baseline gap-3 border-b border-dashed pb-2.5 last:border-0"
+          <Ornamento className="mt-8" />
+
+          <blockquote className="border-dourado-600/50 mt-8 border-l-2 pl-4">
+            <p className="text-tinta-700 text-[0.95rem] leading-relaxed italic sm:text-base">
+              Não me importo o quão forte você é. Se eu te enganar, eu ganhei.
+            </p>
+            <footer className="font-titulo text-tinta-500 mt-2 text-xs tracking-wide">
+              — Howai, o Ladino
+            </footer>
+          </blockquote>
+        </Pergaminho>
+      </Revelar>
+
+      {/* ---------- Paleta ---------- */}
+      <Revelar className="mt-10" atraso={0.05}>
+        <Pergaminho borda={3} variante="cartao">
+          <TituloCapitulo className="text-center">A paleta</TituloCapitulo>
+          <div className="mt-5 grid grid-cols-2 gap-2.5 sm:grid-cols-5">
+            {CORES.map((cor) => (
+              <div
+                key={cor.nome}
+                className={`${cor.classe} ${cor.texto} font-titulo grid h-16 place-items-center rounded-sm border border-black/20 text-[0.7rem] font-semibold shadow-inner`}
               >
-                <span className="text-heraldico-verde shrink-0 text-sm" aria-hidden>
-                  ✓
-                </span>
-                <span className="text-tinta-900 shrink-0 text-sm font-semibold">
-                  {item.nome}
-                </span>
-                <span className="text-tinta-500 text-xs leading-snug sm:text-sm">
-                  {item.papel}
-                </span>
-              </motion.li>
+                {cor.nome}
+              </div>
             ))}
-          </ul>
-        </section>
+          </div>
+        </Pergaminho>
+      </Revelar>
 
-        <motion.section
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.1, duration: 0.7 }}
-          className="mt-10"
-        >
-          <h2 className="text-tinta-500 font-titulo text-center text-[0.65rem] tracking-[0.25em] uppercase">
-            O mapa aguarda
-          </h2>
-          <div className="border-madeira-800/30 shadow-pergaminho relative mx-auto mt-4 max-w-sm overflow-hidden rounded-sm border">
+      {/* ---------- Cartões lado a lado ---------- */}
+      <Revelar className="mt-10">
+        <TituloCapitulo className="text-pergaminho-200 text-center">
+          Folhas espalhadas sobre a mesa
+        </TituloCapitulo>
+      </Revelar>
+
+      <div className="mt-5 grid gap-4 sm:grid-cols-2">
+        {[
+          { t: "Razavar", d: "A capital que abriga a família imperial.", b: 1 as const, i: "esquerda" as const },
+          { t: "Sovara Mithr", d: "A Sagrada Árvore e o pulmão de Mitrael.", b: 2 as const, i: "direita" as const },
+        ].map((item, n) => (
+          <Revelar key={item.t} atraso={n * 0.1} direcao={n === 0 ? "esquerda" : "direita"}>
+            <Pergaminho variante="cartao" borda={item.b} inclinacao={item.i} className="h-full">
+              <TituloCapitulo>{item.t}</TituloCapitulo>
+              <p className="text-tinta-700 mt-2 text-sm leading-relaxed">{item.d}</p>
+              <div className="mt-4">
+                <BotaoLink href="/" variante="secundario" className="text-xs">
+                  Ler mais
+                </BotaoLink>
+              </div>
+            </Pergaminho>
+          </Revelar>
+        ))}
+      </div>
+
+      {/* ---------- Mapa ---------- */}
+      <Revelar className="mt-10">
+        <Pergaminho borda={1} variante="cartao">
+          <TituloCapitulo className="text-center">O mapa de Mitrael</TituloCapitulo>
+          <div className="border-madeira-800/30 shadow-pergaminho relative mt-4 overflow-hidden rounded-sm border">
             <Image
               src="/images/map.jpg"
-              alt="Mapa de Mitrael"
-              width={900}
-              height={600}
-              className="h-auto w-full sepia-[0.18]"
+              alt="Mapa do continente de Mitrael"
+              width={1600}
+              height={1067}
+              className="h-auto w-full"
               priority
             />
           </div>
-        </motion.section>
+        </Pergaminho>
+      </Revelar>
 
-        <footer className="border-dourado-600/25 mt-10 border-t pt-5 text-center">
-          <p className="text-tinta-500 text-[0.7rem] tracking-wide">
-            Página provisória · será substituída pela Home na Fase 4
-          </p>
-        </footer>
-      </motion.article>
+      <p className="text-pergaminho-400/70 mt-12 text-center text-xs">
+        Página de demonstração · toque no selo ✦ no canto superior esquerdo para
+        abrir o menu
+      </p>
     </main>
   );
 }

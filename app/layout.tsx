@@ -1,10 +1,20 @@
 import type { Metadata, Viewport } from "next";
-import { Cinzel, Lora } from "next/font/google";
+import { Cinzel, Lora, Uncial_Antiqua } from "next/font/google";
+import { Mesa } from "@/components/Mesa";
 import "./globals.css";
 
 // As fontes são baixadas durante o build e servidas junto com o site.
 // Nenhuma chamada ao Google no navegador do jogador: carrega mais rápido
 // e não vaza dados de quem acessa.
+
+// Uncial: só o nome do site e títulos curtos de grande destaque.
+// É marcante mas cansa em texto longo, então fica restrita a isso.
+const fonteBrasao = Uncial_Antiqua({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--fonte-brasao",
+  display: "swap",
+});
 
 const fonteTitulo = Cinzel({
   subsets: ["latin"],
@@ -51,8 +61,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR" className={`${fonteTitulo.variable} ${fonteCorpo.variable}`}>
-      <body className="textura-madeira min-h-dvh">{children}</body>
+    <html
+      lang="pt-BR"
+      className={`${fonteBrasao.variable} ${fonteTitulo.variable} ${fonteCorpo.variable}`}
+    >
+      <body className="textura-madeira min-h-dvh">
+        <Mesa>{children}</Mesa>
+      </body>
     </html>
   );
 }
