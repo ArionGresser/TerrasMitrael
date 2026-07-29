@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* ============================================================
-   TERRAS DE MITRAEL — Fundação do design system
+   TERRAS DE MITRAEL / Fundação do design system
    Conceito: pergaminhos e mapas antigos sobre mesa de madeira
    nobre, com tecido de alta qualidade puxado nas bordas.
    ============================================================ */
@@ -84,7 +84,7 @@
 /* ============================================================
    Acessibilidade
    Quem configurou o sistema para reduzir animações não recebe
-   nenhum movimento — exigência de acessibilidade, não opção.
+   nenhum movimento. É exigência de acessibilidade, não opção.
    ============================================================ */
 
 @media (prefers-reduced-motion: reduce) {

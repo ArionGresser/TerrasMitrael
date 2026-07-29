@@ -28,7 +28,7 @@ export function EmBreve({
               {descricao}
             </p>
             <p className="text-tinta-500 mt-5 text-xs">
-              Esta seção está sendo escrita — {fase}.
+              Esta seção está sendo escrita na {fase}.
             </p>
             <div className="mt-7">
               <BotaoLink href="/" variante="secundario">

@@ -16,7 +16,7 @@ const BASE =
   "font-titulo inline-flex items-center justify-center gap-2 rounded-sm border px-5 py-2.5 text-sm font-semibold tracking-wide transition-all duration-200 active:scale-[0.98] min-h-11";
 
 /**
- * Botão-link. min-h-11 garante a área de toque de 44px que o dedo precisa —
+ * Botão-link. min-h-11 garante a área de toque de 44px que o dedo precisa,
  * o site é usado principalmente no celular.
  */
 export function BotaoLink({

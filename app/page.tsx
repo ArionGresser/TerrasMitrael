@@ -17,7 +17,7 @@ const PORTAIS = [
     href: "/locais/",
     nome: "Locais",
     texto:
-      "As terras que formam o continente — capitais, florestas sagradas e lugares onde ninguém quer pisar.",
+      "As terras que formam o continente: capitais, florestas sagradas e lugares onde ninguém quer pisar.",
     imagem: "/images/loc/sovara-mithr.jpg",
     alt: "A floresta de Sovara Mithr",
   },
@@ -85,7 +85,7 @@ export default function Home() {
               <p>
                 Terras de Mitrael nasceu em 2020 como um cenário de fantasia
                 medieval para ser jogado à mesa. Seis anos depois, continua
-                crescendo — não por planejamento, mas porque cada campanha
+                crescendo, não por planejamento, mas porque cada campanha
                 deixou alguma coisa para trás: uma cidade que antes não existia,
                 um herói que virou lenda, uma guerra que ninguém conseguiu
                 esquecer.
@@ -103,7 +103,7 @@ export default function Home() {
                 O cenário entra agora em um novo capítulo. As regras próprias
                 que sustentaram os primeiros anos deram lugar aos livros
                 oficiais de D&amp;D, e as fichas antigas voltam à mesa
-                recalibradas. O mundo é o mesmo de sempre — o que amadureceu foi
+                recalibradas. O mundo é o mesmo de sempre. O que amadureceu foi
                 a forma de jogá-lo.
               </p>
             </div>
@@ -188,7 +188,7 @@ export default function Home() {
             <blockquote className="border-dourado-600/50 mt-7 border-l-2 pl-4">
               <p className="text-tinta-700 text-[0.95rem] leading-relaxed italic">
                 Treze mil trezentos e trinta e três dias de guerra. Ao fim, a
-                vitória custou uma terra inteira — e ela ainda apodrece onde
+                vitória custou uma terra inteira, e ela ainda apodrece onde
                 caiu.
               </p>
             </blockquote>
@@ -212,7 +212,7 @@ export default function Home() {
             </p>
             <Trailer
               idVideo="1LHHXE8YNrE"
-              titulo="Trailer da Primeira Temporada — Terras de Mitrael"
+              titulo="Trailer da Primeira Temporada de Terras de Mitrael"
             />
           </Pergaminho>
         </Revelar>

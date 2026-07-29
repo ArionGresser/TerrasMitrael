@@ -49,7 +49,7 @@ export function Rodape() {
         </div>
 
         <p className="text-pergaminho-400/60 mt-8 text-center text-xs leading-relaxed">
-          Terras de Mitrael — cenário autoral de RPG de mesa
+          Terras de Mitrael, cenário autoral de RPG de mesa
           <br />
           Criado e mestrado por{" "}
           <a

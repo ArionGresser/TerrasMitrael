@@ -34,7 +34,7 @@ const fonteCorpo = Lora({
 export const metadata: Metadata = {
   title: {
     default: "Terras de Mitrael",
-    template: "%s — Terras de Mitrael",
+    template: "%s | Terras de Mitrael",
   },
   description:
     "Cenário autoral de RPG de mesa em fantasia medieval. Explore os locais, os eventos que moldaram a história e os heróis que caminharam por Mitrael.",

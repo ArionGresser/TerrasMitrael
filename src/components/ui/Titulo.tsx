@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
  * A hierarquia tipográfica do site.
  *
  * A fonte uncial (Brasao) fica reservada ao nome do site e a títulos curtos
- * de grande destaque — é marcante, mas cansa em texto longo.
+ * de grande destaque, porque é marcante mas cansa em texto longo.
  * Todo o resto usa Cinzel, que aguenta títulos compridos sem perder clareza.
  */
 
@@ -62,7 +62,7 @@ export function TituloCapitulo({
   );
 }
 
-/** Texto pequeno em maiúsculas espaçadas — "Terceira Era", "Capítulo 1". */
+/** Texto pequeno em maiúsculas espaçadas, como "Terceira Era". */
 export function Sobretitulo({
   children,
   className = "",

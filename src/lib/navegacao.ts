@@ -1,6 +1,6 @@
 /**
  * As seções do site, em um só lugar.
- * Mudar aqui muda o menu, o rodapé e qualquer índice — nunca em três lugares.
+ * Mudar aqui muda o menu, o rodapé e qualquer índice, nunca em três lugares.
  */
 
 export type Secao = {

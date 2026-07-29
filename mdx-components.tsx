@@ -4,8 +4,8 @@ import { TituloSecao, TituloCapitulo, Ornamento } from "@/components/ui/Titulo";
 /**
  * Como o texto escrito em MDX vira HTML no site.
  *
- * Quem edita a lore escreve markdown normal — "## Título", "*itálico*",
- * "> citação" — e o resultado sai já dentro da identidade visual,
+ * Quem edita a lore escreve markdown normal ("## Título", "*itálico*",
+ * "> citação") e o resultado sai já dentro da identidade visual,
  * sem precisar conhecer nenhum componente.
  */
 export function useMDXComponents(componentes: MDXComponents): MDXComponents {

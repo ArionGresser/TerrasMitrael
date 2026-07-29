@@ -28,7 +28,7 @@ export default function PaginaLocais() {
             <TituloBrasao className="mt-4">Locais</TituloBrasao>
             <Ornamento className="mt-6" />
             <p className="text-tinta-700 mx-auto mt-6 max-w-lg text-base leading-relaxed italic">
-              Seis terras que definem o mundo conhecido — e uma delas está
+              Seis terras que definem o mundo conhecido, e uma delas está
               selada do lado de fora.
             </p>
           </header>

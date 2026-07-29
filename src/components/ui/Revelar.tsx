@@ -7,7 +7,7 @@ import { motion, useReducedMotion } from "motion/react";
  * Revela o conteúdo conforme a página é rolada.
  *
  * Quem pediu menos movimento no sistema recebe o conteúdo já visível,
- * sem animação nenhuma — a imersão nunca vem antes da acessibilidade.
+ * sem animação nenhuma. A imersão nunca vem antes da acessibilidade.
  */
 export function Revelar({
   children,

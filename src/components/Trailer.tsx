@@ -8,7 +8,7 @@ import { useState } from "react";
  * Um <iframe> do YouTube na página traz cerca de 1 MB de scripts e cookies
  * de rastreamento para todo mundo que abre a Home, mesmo quem nunca vai
  * clicar em play. Aqui a capa é desenhada em CSS e o vídeo só entra depois
- * do clique — a Home carrega leve e ninguém é rastreado sem querer.
+ * do clique, deixando a Home leve e sem rastrear ninguém sem querer.
  */
 export function Trailer({
   idVideo,
