@@ -1,0 +1,36 @@
+# Instruções para o Netlify construir e publicar o site.
+
+[build]
+  # Comando que gera o site
+  command = "npm run build"
+  # Pasta com o resultado pronto (criada pelo comando acima)
+  publish = "out"
+
+[build.environment]
+  NODE_VERSION = "24"
+
+# Cabeçalhos de segurança aplicados a todas as páginas
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Imagens, áudios e fontes não mudam de nome sem mudar de conteúdo,
+# então o navegador pode guardá-los por um ano. Faz a segunda visita
+# ser praticamente instantânea, inclusive em conexão fraca.
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/audios/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

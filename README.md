@@ -1,87 +1,112 @@
-# TerrasMitrael
+# Terras de Mitrael
+
+Site do cenário autoral de RPG de mesa **Terras de Mitrael**, em fantasia
+medieval, jogado com as regras de D&D 5.5e.
+
+**No ar:** https://terrasmitrael.netlify.app/
 
 ---
 
-## Sobre o Projeto
+## Como editar o conteúdo
 
-Terras de Mitrael é um RPG de mesa com um universo abundante e jogadores apaixonados que criam um verdadeiro espetáculo em cada seção da campanha.
+Toda a lore fica em arquivos de texto na pasta `content/`. **Não é preciso
+mexer em código para editar, adicionar ou remover conteúdo.**
 
-Este projeto está sendo desenvolvido com 2 objetivos principais, consolidar o RPG de mesa Terras de Mitrael e servir como portifólio voltado para desenvolvimento web.
+```
+content/
+├── locais/       um arquivo por local do continente
+├── eventos/      a Grande Guerra Leviana e o que vier depois
+└── personagens/  as fichas e biografias
+```
 
----
+Cada arquivo tem duas partes: um bloco `meta` no topo, com os dados da entrada
+(nome, resumo, imagem), e o texto abaixo, escrito em Markdown comum.
 
-## Acesse o site aqui
+### Adicionar um local novo
 
-Site Terras de Mitrael: https://terrasmitrael.netlify.app/
+1. Copie um arquivo existente de `content/locais/` e mude o nome
+2. Edite o `meta` e escreva o texto
+3. Abra `src/lib/locais.ts`, importe o arquivo novo e acrescente-o à lista
 
----
+O mesmo vale para eventos (`src/lib/eventos.ts`) e personagens
+(`src/lib/personagens.ts`).
 
-### Atualização V0.06
+### Adicionar um personagem atual
 
-Em breve..
+Nos arquivos de `content/personagens/`, o campo `originHero` separa as duas
+gerações:
 
-### Atualização V0.05
+- `originHero: true` marca a primeira geração, cujas fichas nasceram sob o
+  sistema de regras próprio da casa e precisam de calibração
+- `originHero: false` marca personagens criados já em D&D 5.5e
 
-1. Adicionado itens na pagina storys.html
-2. Adicionado fotos dos personagens reais.
-3. Adicionado foto das histórias.
-4. Adicionado link nas fotos do index para acessar página de cada personagem.
-5. Adicionado tela provisória para map.html.
-6. Adicionado button "Voltar" nas telas para facilitar locomoção pelo site.
-7. Adicionado tela para cada personagem.
-8. Adicionado fotos e artes dos personagens.
-9. Adicionado a área destinada a ficha na tela do personagem, utilizando card com foto.
-10. Inserido Accordeon no card com resumo / atributos.
-11. Adicionado a área destinada a história na tela do personagem, utilizando card com foto.
-12. Inserido Accordeon no card com continuação da história.
-14. Adicionado campo "Pensamentos / Falas" dos personagens nas suas respectivas telas.
-15. Corrigido acentuação, pois fonte não suporta.
-16. Corrigido algumas cores.
-
-
-### Atualização V0.04
-
-1. Removido acentuação, pois fonte não aceita;
-2. Ajustado height do .carrousel para melhor visualização no Desktop;
-3. Adicionado file "cast.html" à seção "Elenco / Personagens";
-4. Adicionado file "story.html" à seção "Histórias";
-5. Adicionado file "Map.html" à seção "Mapa";
-6. Adicionado Footer e linkado perfil do GitHub nos nomes dos desenvolvedores.
-
-### Atualização V0.03
-
-1. Estilizado colorização e animação dos links da NavBar no Header;
-2. Alterado fonte da "Logo" com estilo medieval e alterado fonte principal do site com estilo manuscrito.
-3. Alterado border-radius padrão para bordas mais arredondadas;
-4. Adicionado seção "Comunidade" ao body e estilizado animações;
-5. Adicionado seção "Histórias" ao body, utilizado Carousel do BS como conteúdo;
-6. Adicionado seção "Mapa" ao body.
-
-### Atualização V0.02
-
-1. Iniciado estilização com CSS.;
-2. Alterado colorização de aspectos das classes ".accordion" do BS com CSS.;
-3. Adicionados cores padrões para Header e Body.;
-4. Adicionado seção "Trailer" ao Body e incorporado video do Youtube;
-5. Adicionado seção "Personagens" ao Body, utilizado Carousel do BS como conteúdo.
-
-### Atualização V0.01
-
-1. Descartado todo HTML do index.html antigo e refeito novamente;
-2. Iniciado uso do Bootstrap;
-3. Feito Header e iniciado Body;
-4. Adicionado seção "Resumo".
-
-### Atualização V0.00
-
-1. Começo do desenvolvimento utilizando conceitos de Ux & Ui Design para iniciar desenvolvimento pensando em Mobile First e em acelerar processo de desenvolvimento.
-2. Você pode ver como foi projetado aqui → https://miro.com/welcomeonboard/WTZ5Y3BuNk1ndkJMTDRjdE9PN1JzeW9lYzJzYWFJa1hGaFF1cFBNZjFqSUxQOGU5YzBYVDE5aTM4QnJjNGZ1aHwzNDU4NzY0NTY1MDIyMjIxMDk5fDI=?share_link_id=335766398661
+A seção "Personagens atuais" aparece sozinha assim que existir o primeiro
+personagem com `false`.
 
 ---
 
-# Stacks for DEV's
+## Rodar na sua máquina
 
-1. Ux & Ui Design
-2. HTML
-3. CSS - Bootstrap
-4. JavaScript
+```bash
+npm install
+npm run dev
+```
+
+Depois abra http://localhost:3000
+
+Para gerar a versão final, a mesma que vai para o ar:
+
+```bash
+npm run build
+```
+
+O resultado fica na pasta `out/`.
+
+---
+
+## Como o site é feito
+
+| Ferramenta | Papel |
+|---|---|
+| Next.js 16 | Monta as páginas. Gera o site como arquivos estáticos, sem servidor |
+| Tailwind CSS 4 | Cores, espaçamentos e formas |
+| Motion | Animações e transições |
+| Howler.js | Efeitos sonoros |
+| MDX | Permite escrever a lore em texto comum |
+
+Publicado no Netlify, com build automático a cada envio para a `main`.
+
+### Decisões que valem conhecer
+
+- **As texturas de madeira, pergaminho e tecido são feitas em CSS**, sem
+  nenhuma imagem. Custo zero de download.
+- **As fontes são servidas pelo próprio site**, sem chamadas ao Google.
+- **O trailer do YouTube só carrega depois do clique**, o que evita cerca de
+  1 MB de scripts e cookies de rastreamento para quem não vai assistir.
+- **O som começa sempre desligado** e tem botão sempre visível.
+- **Nenhuma requisição a terceiros** é feita ao abrir o site.
+
+---
+
+## Documentação
+
+| Arquivo | Conteúdo |
+|---|---|
+| [`docs/CONTEUDO-ORIGINAL.md`](docs/CONTEUDO-ORIGINAL.md) | Todo o conteúdo do site anterior, preservado em texto puro |
+| [`docs/DESIGN-SYSTEM.md`](docs/DESIGN-SYSTEM.md) | Paleta, tipografia, componentes e regras de acessibilidade |
+| [`docs/LORE-EXPANDIDA.md`](docs/LORE-EXPANDIDA.md) | O que é do site original e o que foi escrito na reconstrução |
+| [`docs/SONS-NECESSARIOS.md`](docs/SONS-NECESSARIOS.md) | Especificação dos efeitos sonoros que faltam |
+
+---
+
+## Histórico
+
+O site anterior, escrito à mão em HTML e Bootstrap entre 2020 e 2024, está
+preservado na tag `v1-arquivo-historico`:
+
+```bash
+git checkout v1-arquivo-historico
+```
+
+Desenvolvido e mestrado por [Arion Gresser](https://github.com/ArionGresser).
+Mapa de Mitrael criado por Lucas Monteiro.
