@@ -41,9 +41,15 @@ export function Pergaminho({
   className = "",
   as: Tag = "article",
 }: Props) {
+  // A inclinação vale apenas para cartões.
+  // Girar uma folha de leitura, que pode ter milhares de pixels de altura,
+  // joga as pontas para fora da tela: a largura da caixa cresce em
+  // altura × seno do ângulo, o que criava rolagem lateral no celular.
+  const giro = variante === "cartao" ? INCLINACOES[inclinacao] : "";
+
   return (
     <Tag
-      className={`textura-pergaminho borda-envelhecida shadow-pergaminho text-tinta-900 ${BORDAS[borda]} ${INCLINACOES[inclinacao]} ${VARIANTES[variante]} ${className}`}
+      className={`textura-pergaminho borda-envelhecida shadow-pergaminho text-tinta-900 ${BORDAS[borda]} ${giro} ${VARIANTES[variante]} ${className}`}
     >
       {children}
     </Tag>

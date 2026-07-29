@@ -100,6 +100,46 @@ Legenda:
 
 ---
 
+## Eventos
+
+### A Grande Guerra Leviana
+
+O texto mais longo do site antigo. Os cinco capítulos foram **preservados na
+íntegra**, com correção de digitação e acentuação, e sem alterar nenhum fato.
+
+- **[O]** Capítulo 1, A Expedição: o fim da ditadura, o livre mercado, a
+  formação dos Expedicionários, a frota de dezesseis embarcações.
+- **[O]** Capítulo 2, Barro Vermelho: as montanhas vermelhas, as flechas
+  flamejantes, o grito "Askar!", a ordem de recuar.
+- **[O]** Capítulo 3, Trilha de Sangue: as quatro embarcações que voltaram, os
+  sobreviventes traumatizados, os seis Orcs no vilarejo.
+- **[O]** Capítulo 4: o Exército Vermelho, a perda de Abarius, a superioridade
+  do aço orc, a convocação dos Honrados Voluntários no décimo ano.
+- **[O]** Capítulo 5: os povos de Tungel, os bruxos Orcs, a convocação dos
+  Lendários Magos e de Vérsia, o nascimento de Undaryus, o domo sobre Askar.
+- **[N]** Abertura curta antes do primeiro capítulo, situando quem embarcou.
+- **[N]** No capítulo 1, um parágrafo sobre o que a frota realmente carregava:
+  o conhecimento acumulado de uma geração inteira dentro de cascos de madeira.
+- **[N]** **O que a vitória custou**, seção final com quatro consequências:
+  duas terras impossíveis, uma geração desaparecida, o conhecimento perdido
+  duas vezes e a incerteza de que a guerra acabou.
+- **[N]** As três ilustrações do acervo (`askarImg1`, `2` e `3`) foram
+  distribuídas ao longo dos capítulos, com legendas.
+
+### Cronologia da Terceira Era
+
+- **[N]** Sete marcos em linha do tempo, todos derivados de datas que já
+  constavam nas crônicas: fim do século V, ano 614 (a partida, a costa
+  vermelha e o primeiro desembarque), ano 624 (os Voluntários), ano 647 (o
+  último suspiro) e ano 650 (a vitória).
+
+Os anos 624, 647 e 650 são **cálculos** a partir do que o texto original já
+dizia: "passados dez anos", "após trinta e três anos" e "após trinta e seis
+anos", contados desde 614. Se a sua contagem for outra, é só ajustar em
+`src/lib/eventos.ts`.
+
+---
+
 ## Cuidados que tomei
 
 **Não fixei nada que pudesse contradizer o que você tem em mente.** Em

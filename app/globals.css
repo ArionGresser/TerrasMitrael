@@ -60,6 +60,9 @@
   html {
     scroll-behavior: smooth;
     color-scheme: dark;
+    /* Cinto de segurança contra rolagem lateral. "clip" não cria um novo
+       contexto de rolagem, então não interfere no resto da página. */
+    overflow-x: clip;
   }
 
   body {

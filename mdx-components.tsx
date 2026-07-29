@@ -1,5 +1,6 @@
 import type { MDXComponents } from "mdx/types";
 import { TituloSecao, TituloCapitulo, Ornamento } from "@/components/ui/Titulo";
+import { Ilustracao } from "@/components/ui/Ilustracao";
 
 /**
  * Como o texto escrito em MDX vira HTML no site.
@@ -41,6 +42,8 @@ export function useMDXComponents(componentes: MDXComponents): MDXComponents {
     ),
     em: ({ children }) => <em className="italic">{children}</em>,
     hr: () => <Ornamento className="my-9" />,
+    // Disponível dentro dos arquivos .mdx sem precisar de import
+    Ilustracao,
     a: ({ href, children }) => (
       <a
         href={href}
