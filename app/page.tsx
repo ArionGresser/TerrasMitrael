@@ -121,7 +121,7 @@ export default function Home() {
         {/* ---------- Portais ---------- */}
         <Revelar className="mt-14">
           <div className="text-center">
-            <TituloCapitulo className="text-pergaminho-200">
+            <TituloCapitulo tom="claro">
               Por onde começar
             </TituloCapitulo>
           </div>
