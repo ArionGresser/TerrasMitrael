@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import type { MDXComponents } from "mdx/types";
 import { TituloSecao, TituloCapitulo, Ornamento } from "@/components/ui/Titulo";
 import { Ilustracao } from "@/components/ui/Ilustracao";
@@ -9,13 +10,29 @@ import { Ilustracao } from "@/components/ui/Ilustracao";
  * "> citação") e o resultado sai já dentro da identidade visual,
  * sem precisar conhecer nenhum componente.
  */
+
+/**
+ * Fica fora da função e com nome próprio porque o componente Capitulos
+ * procura por ele na árvore do texto para saber onde um capítulo começa.
+ * Definido aqui dentro, cada chamada criaria uma função nova e a busca
+ * nunca encontraria nada.
+ */
+export function TituloDeCapitulo({ children }: { children?: ReactNode }) {
+  return (
+    <TituloSecao as="h2" className="mt-10 first:mt-0">
+      {children}
+    </TituloSecao>
+  );
+}
+
+/** O "---" do arquivo .mdx. Também precisa de nome próprio, pelo mesmo motivo. */
+export function SeparadorDeTexto() {
+  return <Ornamento className="my-9" />;
+}
+
 export function useMDXComponents(componentes: MDXComponents): MDXComponents {
   return {
-    h2: ({ children }) => (
-      <TituloSecao as="h2" className="mt-10 first:mt-0">
-        {children}
-      </TituloSecao>
-    ),
+    h2: TituloDeCapitulo,
     h3: ({ children }) => (
       <TituloCapitulo as="h3" className="mt-8">
         {children}
@@ -41,7 +58,7 @@ export function useMDXComponents(componentes: MDXComponents): MDXComponents {
       <strong className="text-tinta-900 font-semibold">{children}</strong>
     ),
     em: ({ children }) => <em className="italic">{children}</em>,
-    hr: () => <Ornamento className="my-9" />,
+    hr: SeparadorDeTexto,
     // Disponível dentro dos arquivos .mdx sem precisar de import
     Ilustracao,
     a: ({ href, children }) => (

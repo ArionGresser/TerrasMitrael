@@ -3,6 +3,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { LOCAIS, buscarLocal } from "@/lib/locais";
 import { Pergaminho } from "@/components/ui/Pergaminho";
+import { Capitulos } from "@/components/ui/Capitulos";
 import { Revelar } from "@/components/ui/Revelar";
 import { BotaoLink } from "@/components/ui/Botao";
 import { Rodape } from "@/components/Rodape";
@@ -61,7 +62,7 @@ export default async function PaginaLocal({ params }: Props) {
           </div>
 
           <div className="mt-10">
-            <Conteudo />
+            <Capitulos Texto={Conteudo} rotuloAbrir="Ler mais" />
           </div>
         </Pergaminho>
 

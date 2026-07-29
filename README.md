@@ -22,6 +22,24 @@ content/
 Cada arquivo tem duas partes: um bloco `meta` no topo, com os dados da entrada
 (nome, resumo, imagem), e o texto abaixo, escrito em Markdown comum.
 
+### Os títulos viram capítulos que abrem e fecham
+
+Toda linha que começa com `## ` vira um capítulo recolhido: na tela aparece só
+o título e as primeiras linhas, e quem estiver lendo abre o que quiser. Isso
+existe porque no celular um texto longo vira uma rolagem sem fim.
+
+Não é preciso marcar nada. Escreva os títulos como sempre e cada capítulo novo
+já nasce assim.
+
+- **Locais e eventos** ganham um capítulo por título
+- **Histórias de personagem** não usam títulos, então viram um bloco só: o
+  primeiro parágrafo aparece e o resto fica atrás de um botão
+- O que estiver escrito **antes do primeiro título** fica sempre visível, e é
+  um bom lugar para a abertura do texto
+
+O texto completo continua dentro da página mesmo com os capítulos fechados,
+então os buscadores leem tudo e abrir um capítulo não carrega nada.
+
 ### Adicionar um local novo
 
 1. Copie um arquivo existente de `content/locais/` e mude o nome

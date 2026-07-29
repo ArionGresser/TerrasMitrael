@@ -3,6 +3,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { EVENTOS, buscarEvento } from "@/lib/eventos";
 import { Pergaminho } from "@/components/ui/Pergaminho";
+import { Capitulos } from "@/components/ui/Capitulos";
 import { Revelar } from "@/components/ui/Revelar";
 import { BotaoLink } from "@/components/ui/Botao";
 import { Rodape } from "@/components/Rodape";
@@ -62,7 +63,7 @@ export default async function PaginaEvento({ params }: Props) {
           </div>
 
           <div className="mt-10">
-            <Conteudo />
+            <Capitulos Texto={Conteudo} rotuloAbrir="Ler capítulo" />
           </div>
         </Pergaminho>
 

@@ -5,6 +5,7 @@ import { PERSONAGENS, buscarPersonagem } from "@/lib/personagens";
 import { SeloOriginHero } from "@/components/personagens/SeloOriginHero";
 import { FichaAntiga } from "@/components/personagens/FichaAntiga";
 import { Pergaminho } from "@/components/ui/Pergaminho";
+import { Capitulos } from "@/components/ui/Capitulos";
 import { Revelar } from "@/components/ui/Revelar";
 import { BotaoLink } from "@/components/ui/Botao";
 import { Ilustracao } from "@/components/ui/Ilustracao";
@@ -98,7 +99,7 @@ export default async function PaginaPersonagem({ params }: Props) {
               História
             </TituloCapitulo>
             <div className="mt-4">
-              <Historia />
+              <Capitulos Texto={Historia} rotuloAbrir="Ler a história" />
             </div>
           </div>
 

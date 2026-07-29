@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Pergaminho } from "@/components/ui/Pergaminho";
+import { Dobra } from "@/components/ui/Dobra";
 import { Revelar } from "@/components/ui/Revelar";
 import { BotaoLink } from "@/components/ui/Botao";
 import { Trailer } from "@/components/Trailer";
@@ -83,7 +84,7 @@ export default function Home() {
           <Pergaminho inclinacao="direita" borda={2}>
             <TituloSecao className="text-center">Um mundo vivo</TituloSecao>
 
-            <div className="mt-6 space-y-5 text-[0.95rem] leading-[1.8] sm:text-base">
+            <div className="mt-6 text-[0.95rem] leading-[1.8] sm:text-base">
               <p>
                 Terras de Mitrael nasceu em 2020 como um cenário de fantasia
                 medieval para ser jogado à mesa. Seis anos depois, continua
@@ -93,30 +94,35 @@ export default function Home() {
                 esquecer.
               </p>
 
-              <p>
-                Aqui você encontra as terras que compõem o continente, os
-                eventos que moldaram sua história e os personagens que
-                caminharam por elas. Nada disso foi inventado por um autor
-                sozinho, em silêncio: foi construído em sessões de jogo, por
-                pessoas que tomaram decisões e viveram as consequências delas.
-              </p>
+              <Dobra previa="nenhuma" className="mt-4">
+                <div className="space-y-5">
+                  <p>
+                    Aqui você encontra as terras que compõem o continente, os
+                    eventos que moldaram sua história e os personagens que
+                    caminharam por elas. Nada disso foi inventado por um autor
+                    sozinho, em silêncio: foi construído em sessões de jogo, por
+                    pessoas que tomaram decisões e viveram as consequências
+                    delas.
+                  </p>
 
-              <p>
-                O cenário entra agora em um novo capítulo. As regras próprias
-                que sustentaram os primeiros anos deram lugar aos livros
-                oficiais de D&amp;D, e as fichas antigas voltam à mesa
-                recalibradas. O mundo é o mesmo de sempre. O que amadureceu foi
-                a forma de jogá-lo.
-              </p>
+                  <p>
+                    O cenário entra agora em um novo capítulo. As regras
+                    próprias que sustentaram os primeiros anos deram lugar aos
+                    livros oficiais de D&amp;D, e as fichas antigas voltam à
+                    mesa recalibradas. O mundo é o mesmo de sempre. O que
+                    amadureceu foi a forma de jogá-lo.
+                  </p>
+                </div>
+
+                <Ornamento className="mt-8" />
+
+                <p className="text-tinta-500 mt-6 text-center text-sm leading-relaxed">
+                  Seja você um cavaleiro de juramento firme, um alquimista
+                  curioso demais para o próprio bem ou um ladino sem nenhuma
+                  vontade de se redimir, há espaço para a sua história aqui.
+                </p>
+              </Dobra>
             </div>
-
-            <Ornamento className="mt-8" />
-
-            <p className="text-tinta-500 mt-6 text-center text-sm leading-relaxed">
-              Seja você um cavaleiro de juramento firme, um alquimista curioso
-              demais para o próprio bem ou um ladino sem nenhuma vontade de se
-              redimir, há espaço para a sua história aqui.
-            </p>
           </Pergaminho>
         </Revelar>
 

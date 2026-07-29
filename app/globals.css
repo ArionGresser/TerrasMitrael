@@ -103,6 +103,18 @@
   }
 }
 
+/* ============================================================
+   Prévia de texto recolhido
+   As últimas linhas do trecho visível somem aos poucos, deixando
+   claro que o texto continua. A máscara apaga o próprio conteúdo,
+   então funciona sobre qualquer fundo, com ou sem textura.
+   ============================================================ */
+
+.dobra-recorte {
+  mask-image: linear-gradient(to bottom, #000 40%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, #000 40%, transparent 100%);
+}
+
 /* Foco sempre visível para quem navega por teclado */
 :focus-visible {
   outline: 2px solid var(--color-dourado-400);
