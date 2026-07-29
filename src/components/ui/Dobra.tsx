@@ -97,23 +97,22 @@ export function Dobra({
 
         <div className="px-4 pb-4">
           {corpo}
-          {!aberto ? (
-            <p className="text-tinta-500 font-titulo mt-2 text-[0.7rem] tracking-[0.15em] uppercase">
-              {rotuloAbrir}
-            </p>
-          ) : (
-            <div className="mt-6 text-center">
-              <button
-                type="button"
-                onClick={alternar}
-                aria-expanded={aberto}
-                aria-controls={id}
-                className="text-tinta-500 hover:text-tinta-900 font-titulo min-h-11 px-3 text-[0.7rem] tracking-[0.15em] uppercase transition-colors"
-              >
-                {rotuloFechar}
-              </button>
-            </div>
-          )}
+
+          {/* O mesmo comando do cabeçalho, repetido embaixo da prévia, que é
+              onde o dedo naturalmente vai depois de ler as primeiras linhas. */}
+          <div className={aberto ? "mt-6 text-center" : "text-left"}>
+            <button
+              type="button"
+              onClick={alternar}
+              aria-expanded={aberto}
+              aria-controls={id}
+              className={`text-tinta-500 hover:text-tinta-900 font-titulo min-h-11 text-[0.7rem] tracking-[0.15em] uppercase transition-colors ${
+                aberto ? "px-3" : "w-full pt-2 text-left"
+              }`}
+            >
+              {aberto ? rotuloFechar : rotuloAbrir}
+            </button>
+          </div>
         </div>
       </section>
     );
