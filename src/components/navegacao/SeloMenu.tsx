@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "motion/react";
 import { SECOES } from "@/lib/navegacao";
+import { tocar } from "@/lib/som";
 
 /**
  * A navegação do site: um selo de cera que, ao ser tocado, desenrola
@@ -71,7 +72,12 @@ export function SeloMenu() {
       <button
         ref={seloRef}
         type="button"
-        onClick={() => setAberto((v) => !v)}
+        onClick={() => {
+          // Fora do atualizador de estado: o React pode executar a função
+          // de atualização mais de uma vez, e o som tocaria em dobro.
+          tocar(aberto ? "fecharMenu" : "abrirMenu");
+          setAberto((v) => !v);
+        }}
         aria-expanded={aberto}
         aria-controls="menu-pergaminho"
         aria-label={aberto ? "Fechar o menu" : "Abrir o menu de navegação"}

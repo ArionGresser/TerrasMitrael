@@ -6,6 +6,7 @@ import Link from "next/link";
 import { AnimatePresence, motion } from "motion/react";
 import { MARCADORES_LOCAIS, type Marcador } from "@/lib/marcadores";
 import { Botao } from "@/components/ui/Botao";
+import { tocar } from "@/lib/som";
 
 const NIVEIS = [1, 1.7, 2.6];
 
@@ -74,7 +75,10 @@ export function MapaInterativo() {
               <button
                 key={marcador.slug}
                 type="button"
-                onClick={() => setAberto(ativo ? null : marcador)}
+                onClick={() => {
+                  tocar("marcador");
+                  setAberto(ativo ? null : marcador);
+                }}
                 aria-label={`Marcador: ${marcador.nome}`}
                 aria-expanded={ativo}
                 // A área clicável tem 44px mesmo com o ponto pequeno,

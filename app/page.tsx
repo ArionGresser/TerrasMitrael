@@ -42,7 +42,9 @@ const PORTAIS = [
     nome: "Mapa",
     texto:
       "O continente inteiro diante de você: os mares, os reinos e a barreira que sela o que veio de fora.",
-    imagem: "/images/map.jpg",
+    // Versão reduzida: o cartão mostra o mapa a 340px, e o arquivo cheio
+    // de 1600px só faz sentido na página do mapa, onde há zoom.
+    imagem: "/images/map-cartao.jpg",
     alt: "Mapa do continente de Mitrael",
   },
 ];

@@ -1,4 +1,5 @@
 import { SeloMenu } from "@/components/navegacao/SeloMenu";
+import { ControleSom } from "@/components/som/ControleSom";
 
 /**
  * A mesa de madeira sobre a qual todo o site acontece:
@@ -24,6 +25,7 @@ export function Mesa({ children }: { children: React.ReactNode }) {
       />
 
       <SeloMenu />
+      <ControleSom />
 
       {/* Atalho para quem navega por teclado pular direto ao conteúdo */}
       <a
