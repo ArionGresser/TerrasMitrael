@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Terras de Mitrael">
+  <title>Terras de Mitrael</title>
+
+  <!--
+    O selo de cera da navegação, reduzido para caber na aba do navegador.
+
+    O contorno do M é o desenho real da fonte Uncial Antiqua, tirado do
+    arquivo da fonte e guardado aqui como traçado. Assim o ícone é a mesma
+    letra do selo, e não depende de nenhuma fonte instalada em quem visita.
+
+    A forma vem dos mesmos quatro raios do CSS (.selo-cera), porque cera
+    pingada nunca é um círculo perfeito.
+  -->
+
+  <defs>
+    <radialGradient id="luz" cx="34%" cy="28%" r="42%">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.32" />
+      <stop offset="1" stop-color="#fff" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="sombra" cx="68%" cy="76%" r="52%">
+      <stop offset="0" stop-color="#000" stop-opacity="0.42" />
+      <stop offset="1" stop-color="#000" stop-opacity="0" />
+    </radialGradient>
+    <clipPath id="cera">
+      <path d="M0 33.28A30.08 33.28 0 0 1 30.08 0A33.92 30.72 0 0 1 64 30.72A32.64 33.28 0 0 1 31.36 64A31.36 30.72 0 0 1 0 33.28Z" />
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#cera)">
+    <path d="M0 0h64v64H0z" fill="#7b2028" />
+    <path d="M0 0h64v64H0z" fill="url(#luz)" />
+    <path d="M0 0h64v64H0z" fill="url(#sombra)" />
+  </g>
+
+  <g transform="translate(32 32) scale(0.0165) translate(-1310.5 735)">
+    <path
+      fill="#f5ecd6"
+      d="M1133 -762Q1133 -841 1126.5 -919.5Q1120 -998 1104.5 -1069.5Q1089 -1141 1064.5 -1202.5Q1040 -1264 1004.0 -1309.5Q968 -1355 919.5 -1381.0Q871 -1407 809 -1407Q720 -1407 649.5 -1355.5Q579 -1304 529.0 -1217.5Q479 -1131 452.5 -1018.5Q426 -906 426 -784Q426 -649 455.5 -539.5Q485 -430 530.0 -344.0Q575 -258 628.0 -194.0Q681 -130 727.5 -88.0Q774 -46 807.5 -24.0Q841 -2 846 0H463Q444 -9 410.5 -40.0Q377 -71 336.5 -120.0Q296 -169 254.5 -234.5Q213 -300 179.0 -377.5Q145 -455 123.5 -543.5Q102 -632 102 -727Q102 -785 112.5 -863.0Q123 -941 151.0 -1023.5Q179 -1106 227.5 -1186.0Q276 -1266 351.0 -1329.0Q426 -1392 531.0 -1431.0Q636 -1470 778 -1470Q872 -1470 948.5 -1452.5Q1025 -1435 1087.0 -1404.5Q1149 -1374 1197.0 -1333.0Q1245 -1292 1282 -1245Q1319 -1292 1370.0 -1333.0Q1421 -1374 1487.0 -1404.5Q1553 -1435 1636.5 -1452.5Q1720 -1470 1823 -1470Q1961 -1470 2066.5 -1439.0Q2172 -1408 2249.5 -1355.5Q2327 -1303 2378.5 -1234.5Q2430 -1166 2461.5 -1091.5Q2493 -1017 2506.0 -940.5Q2519 -864 2519 -797Q2519 -671 2481.0 -567.5Q2443 -464 2383.0 -381.5Q2323 -299 2248.5 -235.0Q2174 -171 2101.0 -124.5Q2028 -78 1964.5 -47.5Q1901 -17 1862 0H1774Q1779 -2 1812.0 -24.5Q1845 -47 1892.0 -90.0Q1939 -133 1992.0 -198.0Q2045 -263 2090.0 -351.0Q2135 -439 2165.0 -550.5Q2195 -662 2195 -799Q2195 -940 2162.0 -1053.0Q2129 -1166 2073.5 -1244.5Q2018 -1323 1945.0 -1365.0Q1872 -1407 1792 -1407Q1728 -1407 1678.0 -1381.0Q1628 -1355 1590.0 -1309.5Q1552 -1264 1525.5 -1202.5Q1499 -1141 1482.0 -1069.5Q1465 -998 1457.5 -919.5Q1450 -841 1450 -762V0H1133Z"
+    />
+  </g>
+</svg>
