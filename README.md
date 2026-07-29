@@ -101,7 +101,8 @@ Publicado no Netlify, com build automático a cada envio para a `main`.
 - **As fontes são servidas pelo próprio site**, sem chamadas ao Google.
 - **O trailer do YouTube só carrega depois do clique**, o que evita cerca de
   1 MB de scripts e cookies de rastreamento para quem não vai assistir.
-- **O som começa sempre desligado** e tem botão sempre visível.
+- **O som começa sempre desligado** e tem botão sempre visível. Nem os efeitos
+  nem a música de fundo são baixados antes de alguém ligar.
 - **Nenhuma requisição a terceiros** é feita ao abrir o site.
 
 ---
@@ -114,6 +115,7 @@ Publicado no Netlify, com build automático a cada envio para a `main`.
 | [`docs/DESIGN-SYSTEM.md`](docs/DESIGN-SYSTEM.md) | Paleta, tipografia, componentes e regras de acessibilidade |
 | [`docs/LORE-EXPANDIDA.md`](docs/LORE-EXPANDIDA.md) | O que é do site original e o que foi escrito na reconstrução |
 | [`docs/SONS-NECESSARIOS.md`](docs/SONS-NECESSARIOS.md) | Especificação dos efeitos sonoros que faltam |
+| [`docs/MUSICAS-NECESSARIAS.md`](docs/MUSICAS-NECESSARIAS.md) | Especificação das músicas de fundo que faltam |
 
 ---
 

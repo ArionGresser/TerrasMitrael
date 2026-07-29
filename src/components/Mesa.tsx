@@ -1,5 +1,6 @@
 import { SeloMenu } from "@/components/navegacao/SeloMenu";
 import { ControleSom } from "@/components/som/ControleSom";
+import { AmbienteSonoro } from "@/components/som/AmbienteSonoro";
 
 /**
  * A mesa de madeira sobre a qual todo o site acontece:
@@ -26,6 +27,7 @@ export function Mesa({ children }: { children: React.ReactNode }) {
 
       <SeloMenu />
       <ControleSom />
+      <AmbienteSonoro />
 
       {/* Atalho para quem navega por teclado pular direto ao conteúdo */}
       <a

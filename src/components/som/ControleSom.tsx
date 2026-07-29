@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { somLigado, definirSom, prepararEfeitos, tocar } from "@/lib/som";
+import { pausarMusica, retomarMusica } from "@/lib/musica";
 
 /**
  * Botão de som, sempre visível, no canto oposto ao selo de navegação.
@@ -45,6 +46,10 @@ export function ControleSom() {
       prepararEfeitos();
       // Um retorno audível de que o som foi ligado
       tocar("marcador");
+      // Continua de onde a música parou, em vez de recomeçar a faixa
+      retomarMusica();
+    } else {
+      pausarMusica();
     }
   }
 
