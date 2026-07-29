@@ -1,0 +1,172 @@
+@import "tailwindcss";
+
+/* ============================================================
+   TERRAS DE MITRAEL — Fundação do design system
+   Conceito: pergaminhos e mapas antigos sobre mesa de madeira
+   nobre, com tecido de alta qualidade puxado nas bordas.
+   ============================================================ */
+
+@theme {
+  /* --- Madeira nobre: a mesa sob os pergaminhos --- */
+  --color-madeira-950: #1a0f08;
+  --color-madeira-900: #241609;
+  --color-madeira-800: #33200f;
+  --color-madeira-700: #452c16;
+  --color-madeira-600: #5c3b1e;
+  --color-madeira-500: #7a5029;
+
+  /* --- Pergaminho: a superfície de leitura --- */
+  --color-pergaminho-50: #fbf6e9;
+  --color-pergaminho-100: #f5ecd6;
+  --color-pergaminho-200: #ecdfbe;
+  --color-pergaminho-300: #dfcda1;
+  --color-pergaminho-400: #cbb37f;
+
+  /* --- Dourado envelhecido: detalhes, selos, bordas --- */
+  --color-dourado-300: #e0c266;
+  --color-dourado-400: #cfa93f;
+  --color-dourado-500: #b8912c;
+  --color-dourado-600: #96741f;
+
+  /* --- Heráldicos: acentos de destaque --- */
+  --color-heraldico-vermelho: #7b2028;
+  --color-heraldico-vermelho-claro: #9c3038;
+  --color-heraldico-verde: #2f4a3c;
+  --color-heraldico-verde-claro: #3f6250;
+
+  /* --- Tinta: o texto sobre o pergaminho --- */
+  --color-tinta-900: #2b1d10;
+  --color-tinta-700: #4a3520;
+  --color-tinta-500: #6b5138;
+
+  /* --- Tipografia --- */
+  --font-titulo: var(--fonte-titulo), Georgia, serif;
+  --font-corpo: var(--fonte-corpo), system-ui, sans-serif;
+
+  /* --- Sombras: pergaminho pousado sobre a mesa --- */
+  --shadow-pergaminho: 0 2px 4px rgb(0 0 0 / 0.28), 0 12px 32px rgb(0 0 0 / 0.42);
+  --shadow-pergaminho-alto: 0 4px 8px rgb(0 0 0 / 0.3), 0 24px 56px rgb(0 0 0 / 0.5);
+}
+
+/* ============================================================
+   Base
+   ============================================================ */
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--color-madeira-900);
+  color: var(--color-pergaminho-100);
+  font-family: var(--font-corpo);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  /* Evita rolagem lateral acidental no celular */
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-titulo);
+  letter-spacing: 0.01em;
+}
+
+/* ============================================================
+   Acessibilidade
+   Quem configurou o sistema para reduzir animações não recebe
+   nenhum movimento — exigência de acessibilidade, não opção.
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Foco sempre visível para quem navega por teclado */
+:focus-visible {
+  outline: 2px solid var(--color-dourado-400);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ============================================================
+   Texturas procedurais
+   Geradas em CSS em vez de imagem: custo zero de download,
+   funcionam em qualquer conexão.
+   ============================================================ */
+
+/* Veios de madeira da mesa */
+.textura-madeira {
+  background-color: var(--color-madeira-900);
+  background-image:
+    repeating-linear-gradient(
+      92deg,
+      rgb(0 0 0 / 0.16) 0px,
+      rgb(0 0 0 / 0.16) 1px,
+      transparent 1px,
+      transparent 4px,
+      rgb(255 255 255 / 0.022) 4px,
+      rgb(255 255 255 / 0.022) 5px,
+      transparent 5px,
+      transparent 11px
+    ),
+    repeating-linear-gradient(
+      88deg,
+      rgb(0 0 0 / 0.1) 0px,
+      rgb(0 0 0 / 0.1) 2px,
+      transparent 2px,
+      transparent 23px
+    ),
+    radial-gradient(
+      ellipse 80% 60% at 50% 0%,
+      rgb(122 80 41 / 0.5) 0%,
+      transparent 70%
+    );
+}
+
+/* Fibras e manchas do pergaminho */
+.textura-pergaminho {
+  background-color: var(--color-pergaminho-100);
+  background-image:
+    radial-gradient(
+      ellipse 60% 45% at 18% 12%,
+      rgb(139 105 55 / 0.11) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse 50% 40% at 85% 78%,
+      rgb(139 105 55 / 0.13) 0%,
+      transparent 62%
+    ),
+    radial-gradient(
+      ellipse 40% 30% at 62% 40%,
+      rgb(160 130 80 / 0.07) 0%,
+      transparent 58%
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgb(120 90 45 / 0.026) 0px,
+      rgb(120 90 45 / 0.026) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+}
+
+/* Bordas escurecidas pelo tempo, como papel envelhecido */
+.borda-envelhecida {
+  box-shadow:
+    inset 0 0 44px rgb(120 85 40 / 0.34),
+    inset 0 0 12px rgb(90 60 25 / 0.22);
+}
