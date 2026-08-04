@@ -4,9 +4,10 @@ import { Howl } from "howler";
  * Efeitos sonoros do site.
  *
  * Três regras que valem sempre:
- * 1. O som começa desligado. Ninguém é surpreendido por áudio.
- * 2. A escolha fica salva no navegador, então quem ligou uma vez não
- *    precisa ligar de novo a cada página.
+ * 1. O som começa ligado, e o botão de desligar fica sempre visível. Quem
+ *    não quiser áudio desliga num toque, de qualquer tela.
+ * 2. A escolha fica salva no navegador, então quem desligou uma vez não
+ *    precisa desligar de novo a cada página.
  * 3. Se um arquivo de som não existir, o site funciona normalmente e em
  *    silêncio. O áudio é enfeite, nunca requisito.
  */
@@ -32,9 +33,14 @@ const CHAVE = "mitrael:som";
 const cache = new Map<Efeito, Howl>();
 let disponivel: Partial<Record<Efeito, boolean>> = {};
 
+/**
+ * No servidor devolve sempre `false`, porque a página estática precisa sair
+ * do build igual à primeira renderização do navegador. Quem nunca mexeu no
+ * botão conta como ligado: só "desligado" gravado desliga.
+ */
 export function somLigado(): boolean {
   if (typeof window === "undefined") return false;
-  return window.localStorage.getItem(CHAVE) === "ligado";
+  return window.localStorage.getItem(CHAVE) !== "desligado";
 }
 
 export function definirSom(ligado: boolean) {

@@ -6,7 +6,10 @@ import { pausarMusica, retomarMusica } from "@/lib/musica";
 
 /**
  * Botão de som, sempre visível, no canto oposto ao selo de navegação.
- * O site abre em silêncio e só toca depois que a pessoa liga.
+ *
+ * O site abre com som. Como todo navegador proíbe áudio antes de alguém
+ * interagir com a página, a música não começa no carregamento: ela entra no
+ * primeiro toque ou tecla, e quem não quiser desliga aqui a qualquer momento.
  */
 export function ControleSom() {
   const [ligado, setLigado] = useState(false);

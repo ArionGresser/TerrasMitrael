@@ -2,9 +2,20 @@
 
 O sistema de música está pronto e funcionando. Faltam apenas os arquivos.
 
-**O site funciona normalmente sem eles.** Se um arquivo não existir, aquela
-seção fica em silêncio, sem erro e sem quebrar nada. Você pode enviar uma
+**O site funciona normalmente sem eles.** Seção que ainda não tem faixa
+própria toca o tema no lugar, sem corte e sem erro. Você pode enviar uma
 música de cada vez, na ordem que quiser.
+
+## Situação hoje
+
+Só `tema.m4a` existe, e ele cobre o site inteiro. Cada faixa nova que chegar
+assume a sua seção automaticamente, sem mexer em código.
+
+O som nasce **ligado**, com o botão de desligar sempre visível no canto
+inferior direito. Vale lembrar de uma regra que é do navegador e não do site:
+nenhum navegador deixa tocar áudio antes de a pessoa interagir com a página.
+Por isso a música entra no primeiro toque, clique ou tecla, não no
+carregamento. Não há como contornar isso, e nem seria bom contornar.
 
 ## Onde colocar
 
