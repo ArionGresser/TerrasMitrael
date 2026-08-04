@@ -1,6 +1,13 @@
 import Image from "next/image";
 import type { MetaPersonagem } from "@/lib/personagens";
-import { TituloCapitulo } from "@/components/ui/Titulo";
+
+/**
+ * A ficha do sistema caseiro, preservada como registro histórico.
+ *
+ * Vale a mesma divisão da ficha nova: o Registro guarda quem o personagem é
+ * e quanto ele tem de cada coisa, e as Habilidades guardam o que ele faz.
+ * Nenhum número daqui vale como regra hoje, e a aba avisa isso.
+ */
 
 function Linha({ rotulo, valor }: { rotulo: string; valor: string }) {
   return (
@@ -11,35 +18,46 @@ function Linha({ rotulo, valor }: { rotulo: string; valor: string }) {
   );
 }
 
-/**
- * A ficha do sistema caseiro, preservada como registro histórico.
- * O aviso no topo deixa claro que nada aqui vale como regra hoje.
- */
-export function FichaAntiga({ meta }: { meta: MetaPersonagem }) {
-  const { identidade, pontos, personalidade, atributos, habilidades } = meta;
+function Secao({
+  titulo,
+  children,
+}: {
+  titulo: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <section className="mt-8">
+      <h3 className="font-titulo text-tinta-500 border-dourado-600/25 border-b pb-1.5 text-[0.66rem] tracking-[0.2em] uppercase">
+        {titulo}
+      </h3>
+      {children}
+    </section>
+  );
+}
 
-  // Os personagens criados sob as regras de 2024 não têm estes campos:
-  // a ficha deles é outra.
-  if (!identidade || !pontos || !personalidade || !atributos || !habilidades) {
-    return null;
-  }
+/**
+ * As fichas antigas nasceram todas com os mesmos campos, mas o tipo os deixa
+ * opcionais porque os personagens de 2024 não os têm. Esta guarda separa os
+ * dois casos num lugar só, em vez de espalhar checagem por toda a página.
+ */
+export function temFichaAntiga(meta: MetaPersonagem): boolean {
+  return Boolean(
+    meta.identidade && meta.pontos && meta.personalidade && meta.atributos
+  );
+}
+
+/* ============================================================
+   Aba "Ficha": quem ele é e quanto tem de cada coisa
+   ============================================================ */
+
+export function FichaAntigaRegistro({ meta }: { meta: MetaPersonagem }) {
+  const { identidade, pontos, personalidade, atributos } = meta;
+
+  if (!identidade || !pontos || !personalidade || !atributos) return null;
 
   return (
-    <section aria-labelledby={`ficha-${meta.slug}`}>
-      <div className="text-center">
-        <TituloCapitulo as="h2" className="" >
-          <span id={`ficha-${meta.slug}`}>Ficha de registro</span>
-        </TituloCapitulo>
-        {meta.originHero ? (
-          <p className="text-tinta-500 mx-auto mt-2 max-w-md text-xs leading-relaxed">
-            Registro histórico do sistema de regras próprio da casa. Não vale
-            como regra no sistema atual.
-          </p>
-        ) : null}
-      </div>
-
-      {/* Identidade e pontos */}
-      <div className="mt-6 grid gap-x-8 gap-y-1 sm:grid-cols-2">
+    <div className="mt-7">
+      <div className="grid gap-x-8 gap-y-1 sm:grid-cols-2">
         <dl>
           <Linha rotulo="Idade" valor={identidade.idade} />
           <Linha rotulo="Altura" valor={identidade.altura} />
@@ -55,12 +73,30 @@ export function FichaAntiga({ meta }: { meta: MetaPersonagem }) {
         </dl>
       </div>
 
-      {/* Personalidade */}
-      <div className="mt-8">
-        <h3 className="font-titulo text-tinta-500 text-[0.68rem] tracking-[0.2em] uppercase">
-          Personalidade
-        </h3>
-        <dl className="mt-2">
+      <Secao titulo="Atributos">
+        <ul className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-3">
+          {atributos.map((atributo) => (
+            <li
+              key={atributo.nome}
+              className="border-dourado-600/25 bg-pergaminho-50/30 rounded-sm border px-3 py-2 text-center"
+            >
+              <p className="text-tinta-500 text-[0.6rem] tracking-[0.1em] uppercase">
+                {atributo.nome}
+              </p>
+              <p className="font-titulo text-tinta-900 mt-0.5 text-2xl leading-none font-bold">
+                {atributo.valor}
+              </p>
+              <p className="text-tinta-500 mt-1 text-[0.6rem]">
+                {atributo.modificador ? `mod ${atributo.modificador}` : " "}
+                {atributo.raca ? ` · raça ${atributo.raca}` : ""}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </Secao>
+
+      <Secao titulo="Personalidade">
+        <dl className="mt-3">
           <Linha rotulo="Alinhamento" valor={personalidade.alinhamento} />
           <Linha rotulo="Motivações" valor={personalidade.motivacoes} />
           <Linha rotulo="Inspirações" valor={personalidade.inspiracoes} />
@@ -69,72 +105,52 @@ export function FichaAntiga({ meta }: { meta: MetaPersonagem }) {
             <Linha rotulo="Adoração" valor={personalidade.adoracao} />
           ) : null}
         </dl>
-        <p className="text-tinta-700 mt-3 text-sm leading-relaxed">
-          <span className="text-tinta-500 text-xs tracking-wide">Objetivo: </span>
+        <p className="text-tinta-700 mt-4 text-sm leading-relaxed">
+          <span className="text-tinta-500 text-xs tracking-wide">
+            Objetivo:{" "}
+          </span>
           {personalidade.objetivo}
         </p>
-      </div>
+      </Secao>
+    </div>
+  );
+}
 
-      {/* Atributos */}
-      <div className="mt-8">
-        <h3 className="font-titulo text-tinta-500 text-[0.68rem] tracking-[0.2em] uppercase">
-          Atributos
-        </h3>
-        <ul className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-3">
-          {atributos.map((atributo) => (
-            <li
-              key={atributo.nome}
-              className="border-dourado-600/25 rounded-sm border px-3 py-2 text-center"
-            >
-              <p className="text-tinta-500 text-[0.62rem] tracking-[0.1em] uppercase">
-                {atributo.nome}
-              </p>
-              <p className="font-titulo text-tinta-900 mt-0.5 text-xl font-bold">
-                {atributo.valor}
-              </p>
-              <p className="text-tinta-500 text-[0.62rem]">
-                {atributo.modificador ? `mod ${atributo.modificador}` : " "}
-                {atributo.raca ? ` · raça ${atributo.raca}` : ""}
-              </p>
-            </li>
-          ))}
-        </ul>
-      </div>
+/* ============================================================
+   Aba "Poderes": o que ele faz
+   ============================================================ */
 
-      {/* Habilidades */}
-      {habilidades.length > 0 ? (
-        <div className="mt-8">
-          <h3 className="font-titulo text-tinta-500 text-[0.68rem] tracking-[0.2em] uppercase">
-            Habilidades
-          </h3>
-          <ul className="mt-3 space-y-4">
-            {habilidades.map((habilidade) => (
-              <li key={habilidade.nome} className="flex gap-3">
-                <div className="border-madeira-800/25 relative size-16 shrink-0 overflow-hidden rounded-sm border sm:size-20">
-                  <Image
-                    src={habilidade.imagem}
-                    alt=""
-                    fill
-                    sizes="80px"
-                    className="object-cover sepia-[0.15]"
-                  />
-                </div>
-                <div className="min-w-0">
-                  <p className="font-titulo text-tinta-900 text-sm font-semibold">
-                    {habilidade.nome}
-                  </p>
-                  <p className="text-tinta-500 text-[0.68rem] tracking-wide">
-                    {habilidade.tipo}
-                  </p>
-                  <p className="text-tinta-700 mt-1 text-sm leading-snug">
-                    {habilidade.descricao}
-                  </p>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ) : null}
-    </section>
+export function FichaAntigaHabilidades({ meta }: { meta: MetaPersonagem }) {
+  const { habilidades } = meta;
+
+  if (!habilidades || habilidades.length === 0) return null;
+
+  return (
+    <ul className="mt-7 space-y-5">
+      {habilidades.map((habilidade) => (
+        <li key={habilidade.nome} className="flex gap-3 sm:gap-4">
+          <div className="border-madeira-800/25 relative size-16 shrink-0 overflow-hidden rounded-sm border sm:size-20">
+            <Image
+              src={habilidade.imagem}
+              alt=""
+              fill
+              sizes="80px"
+              className="object-cover sepia-[0.15]"
+            />
+          </div>
+          <div className="min-w-0">
+            <p className="font-titulo text-tinta-900 text-sm font-semibold">
+              {habilidade.nome}
+            </p>
+            <p className="text-tinta-500 text-[0.68rem] tracking-wide">
+              {habilidade.tipo}
+            </p>
+            <p className="text-tinta-700 mt-1 text-sm leading-snug">
+              {habilidade.descricao}
+            </p>
+          </div>
+        </li>
+      ))}
+    </ul>
   );
 }

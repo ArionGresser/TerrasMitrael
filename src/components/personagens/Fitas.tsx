@@ -16,12 +16,19 @@ import { Costura, estiloDaFita } from "./Fita";
  * Serve na ficha do personagem e no glossário, com o mesmo texto nos dois
  * lugares. No cartaz do mural quem entra é a versão muda, de Fita.tsx.
  */
+const ALINHAMENTOS = {
+  centro: "justify-center",
+  esquerda: "justify-start",
+  /** Centradas no celular, onde o cabeçalho é centrado, e à esquerda depois. */
+  cabecalho: "justify-center sm:justify-start",
+} as const;
+
 export function Fitas({
   chaves,
   alinhamento = "centro",
 }: {
   chaves: string[];
-  alinhamento?: "centro" | "esquerda";
+  alinhamento?: keyof typeof ALINHAMENTOS;
 }) {
   const [aberta, setAberta] = useState<string | null>(null);
   const id = useId();
@@ -32,11 +39,7 @@ export function Fitas({
 
   return (
     <div>
-      <ul
-        className={`flex flex-wrap gap-2 ${
-          alinhamento === "centro" ? "justify-center" : "justify-start"
-        }`}
-      >
+      <ul className={`flex flex-wrap gap-2 ${ALINHAMENTOS[alinhamento]}`}>
         {chaves.map((chave) => {
           const tag = buscarTag(chave);
           const escolhida = aberta === chave;

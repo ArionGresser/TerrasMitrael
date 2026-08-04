@@ -377,6 +377,55 @@
     0 2px 3px rgb(0 0 0 / 0.7);
 }
 
+/* ============================================================
+   Abas do dossiê
+   As divisórias que separam as partes de um personagem, como as
+   linguetas de pergaminho que sobram para fora de uma pasta de
+   couro. A aberta é a própria folha que continua embaixo. As
+   guardadas ficam na sombra que essa folha projeta sobre elas.
+
+   Só sombra interna aqui: o recorte da lingueta apaga qualquer
+   sombra externa, porque ela seria pintada fora da caixa.
+   ============================================================ */
+
+/* A lingueta, mais estreita em cima, como divisória cortada à faca */
+.aba {
+  clip-path: polygon(10px 0, calc(100% - 10px) 0, 100% 100%, 0 100%);
+}
+
+.aba-guardada {
+  background-color: var(--color-pergaminho-300);
+  background-image: linear-gradient(
+    to bottom,
+    rgb(26 15 8 / 0.46) 0%,
+    rgb(26 15 8 / 0.24) 42%,
+    rgb(26 15 8 / 0.34) 100%
+  );
+  box-shadow: inset 0 -1px 3px rgb(26 15 8 / 0.35);
+}
+
+.aba-guardada:hover {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(26 15 8 / 0.28) 0%,
+    rgb(26 15 8 / 0.07) 42%,
+    rgb(26 15 8 / 0.18) 100%
+  );
+}
+
+/* Aberta: puxada para fora, com o fio dourado da dobra pegando a luz */
+.aba-aberta {
+  background-color: var(--color-pergaminho-100);
+  background-image: radial-gradient(
+    ellipse 75% 110% at 50% 0%,
+    rgb(150 116 31 / 0.17) 0%,
+    transparent 72%
+  );
+  box-shadow:
+    inset 0 2px 0 rgb(207 169 63 / 0.8),
+    inset 0 0 18px rgb(120 85 40 / 0.22);
+}
+
 /* Fita de tecido: a ponta recortada em bico, como galhardete */
 .fita {
   clip-path: polygon(

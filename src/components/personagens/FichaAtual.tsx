@@ -1,15 +1,16 @@
 import Image from "next/image";
 import type { FichaAtual as Ficha } from "@/lib/personagens";
 import { buscarHabilidade, type Habilidade } from "@/lib/habilidades";
-import { TituloCapitulo, Ornamento } from "@/components/ui/Titulo";
+import { Ornamento } from "@/components/ui/Titulo";
 import { Selo } from "@/components/ui/Selo";
 
 /**
- * A ficha nas regras de 2024.
+ * A ficha nas regras de 2024, repartida entre as abas do personagem.
  *
- * A leitura vai do mais usado para o mais consultado: primeiro o que decide
- * um turno (defesa, vida, iniciativa), depois os atributos, depois o que se
- * conjura, e por último o que se carrega na mochila.
+ * São três blocos, e cada um responde a uma pergunta diferente:
+ * os Números dizem o que decide um turno, os Poderes dizem o que ele sabe
+ * fazer, e a Mochila diz o que ele carrega. Ninguém precisa passar por uma
+ * lista de magias para conferir a classe de armadura.
  *
  * Magia, traço e talento nenhum tem texto escrito aqui dentro. Tudo vem do
  * catálogo, pela chave.
@@ -59,6 +60,18 @@ function Secao({
       {children}
     </section>
   );
+}
+
+/**
+ * O corpo de uma aba.
+ *
+ * A primeira seção perde a margem de cima, porque logo acima dela já está o
+ * ornamento do cabeçalho. Fica na classe em vez de virar uma propriedade
+ * para cada seção não precisar saber se é a primeira: elas aparecem e somem
+ * conforme o personagem tem ou não aquilo.
+ */
+function CorpoDaAba({ children }: { children: React.ReactNode }) {
+  return <div className="mt-7 [&>section:first-child]:mt-0">{children}</div>;
 }
 
 /** O selo em branco que segura o lugar do ícone que ainda não chegou. */
@@ -151,21 +164,29 @@ const NOMES_DAS_MOEDAS: Record<string, string> = {
   pl: "Platina",
 };
 
-export function FichaAtual({ ficha, nome }: { ficha: Ficha; nome: string }) {
-  const moedas = Object.entries(ficha.moedas).filter(([, v]) => v);
-
+/** A aba de poderes só existe quando há algum para mostrar. */
+export function temPoderes(ficha: Ficha): boolean {
   return (
-    <section aria-label={`Ficha de ${nome}`}>
-      <div className="text-center">
-        <TituloCapitulo as="h2">Ficha de aventura</TituloCapitulo>
-        <p className="text-tinta-500 mt-1 text-xs">
-          {ficha.especie} · {ficha.classe} · {ficha.antecedente} · Nível{" "}
-          {ficha.nivel}
-        </p>
-      </div>
+    ficha.magias.length > 0 ||
+    ficha.caracteristicas.length > 0 ||
+    ficha.tracos.length > 0 ||
+    ficha.talentos.length > 0
+  );
+}
 
-      {/* O que decide um turno */}
-      <div className="mt-6 grid grid-cols-3 gap-2 sm:grid-cols-4">
+/** A linha que resume o personagem em quatro palavras, sob o título da aba. */
+export function resumoDaFicha(ficha: Ficha): string {
+  return `${ficha.especie} · ${ficha.classe} · ${ficha.antecedente} · Nível ${ficha.nivel}`;
+}
+
+/* ============================================================
+   Aba "Ficha": o que decide um turno
+   ============================================================ */
+
+export function FichaAtualNumeros({ ficha }: { ficha: Ficha }) {
+  return (
+    <CorpoDaAba>
+      <div className="grid grid-cols-3 gap-2 sm:grid-cols-4">
         <Caixa rotulo="CA: Classe de Armadura" valor={ficha.combate.ca} destaque />
         <Caixa rotulo="Vida" valor={ficha.combate.pv} destaque />
         <Caixa rotulo="Iniciativa" valor={ficha.combate.iniciativa} />
@@ -237,27 +258,6 @@ export function FichaAtual({ ficha, nome }: { ficha: Ficha; nome: string }) {
         </Secao>
       ) : null}
 
-      {ficha.armas.length > 0 ? (
-        <Secao titulo="Armas">
-          <ul className="mt-3 space-y-1">
-            {ficha.armas.map((arma) => (
-              <li
-                key={arma.nome}
-                className="border-dourado-600/20 flex flex-wrap items-baseline justify-between gap-x-3 border-b border-dashed py-1.5"
-              >
-                <span className="text-tinta-900 text-sm font-semibold">
-                  {arma.nome}
-                </span>
-                <span className="text-tinta-700 text-sm">
-                  {arma.dano}
-                  {arma.observacoes ? ` · ${arma.observacoes}` : ""}
-                </span>
-              </li>
-            ))}
-          </ul>
-        </Secao>
-      ) : null}
-
       {ficha.conjuracao ? (
         <Secao titulo="Conjuração">
           <div className="mt-3 grid grid-cols-3 gap-2">
@@ -268,6 +268,22 @@ export function FichaAtual({ ficha, nome }: { ficha: Ficha; nome: string }) {
         </Secao>
       ) : null}
 
+      <Ornamento className="mt-9" />
+
+      <p className="text-tinta-500 mt-4 text-center text-xs italic">
+        Experiência: {ficha.experiencia}
+      </p>
+    </CorpoDaAba>
+  );
+}
+
+/* ============================================================
+   Aba "Poderes": o que ele sabe fazer
+   ============================================================ */
+
+export function FichaAtualPoderes({ ficha }: { ficha: Ficha }) {
+  return (
+    <CorpoDaAba>
       {ficha.magias.length > 0 ? (
         <Secao titulo="Truques e magias">
           <ListaDeHabilidades chaves={ficha.magias} />
@@ -289,6 +305,72 @@ export function FichaAtual({ ficha, nome }: { ficha: Ficha; nome: string }) {
       {ficha.talentos.length > 0 ? (
         <Secao titulo="Talentos">
           <ListaDeHabilidades chaves={ficha.talentos} />
+        </Secao>
+      ) : null}
+    </CorpoDaAba>
+  );
+}
+
+/* ============================================================
+   Aba "Mochila": o que ele carrega e o que sabe usar
+   ============================================================ */
+
+export function FichaAtualMochila({ ficha }: { ficha: Ficha }) {
+  const moedas = Object.entries(ficha.moedas).filter(([, v]) => v);
+
+  return (
+    <CorpoDaAba>
+      {ficha.armas.length > 0 ? (
+        <Secao titulo="Armas">
+          <ul className="mt-3 space-y-1">
+            {ficha.armas.map((arma) => (
+              <li
+                key={arma.nome}
+                className="border-dourado-600/20 flex flex-wrap items-baseline justify-between gap-x-3 border-b border-dashed py-1.5"
+              >
+                <span className="text-tinta-900 text-sm font-semibold">
+                  {arma.nome}
+                </span>
+                <span className="text-tinta-700 text-sm">
+                  {arma.dano}
+                  {arma.observacoes ? ` · ${arma.observacoes}` : ""}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </Secao>
+      ) : null}
+
+      <Secao titulo="Equipamento">
+        {ficha.equipamento.length > 0 ? (
+          <ul className="text-tinta-900 mt-3 space-y-1 text-sm">
+            {ficha.equipamento.map((item) => (
+              <li key={item} className="marker:text-dourado-600 ml-4 list-disc">
+                {item}
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p className="text-tinta-500 mt-3 text-sm italic">
+            A mochila está vazia. Por enquanto.
+          </p>
+        )}
+      </Secao>
+
+      {moedas.length > 0 ? (
+        <Secao titulo="Bolsa">
+          <ul className="mt-3 flex flex-wrap gap-4">
+            {moedas.map(([sigla, valor]) => (
+              <li key={sigla} className="text-sm">
+                <span className="font-titulo text-tinta-900 font-bold">
+                  {valor}
+                </span>
+                <span className="text-tinta-500 ml-1 text-xs">
+                  {NOMES_DAS_MOEDAS[sigla]}
+                </span>
+              </li>
+            ))}
+          </ul>
         </Secao>
       ) : null}
 
@@ -317,54 +399,17 @@ export function FichaAtual({ ficha, nome }: { ficha: Ficha; nome: string }) {
               </div>
             ) : null}
           </dl>
+        </div>
 
-          <h3 className="font-titulo text-tinta-500 mt-5 text-[0.66rem] tracking-[0.2em] uppercase">
+        <div>
+          <h3 className="font-titulo text-tinta-500 text-[0.66rem] tracking-[0.2em] uppercase">
             Idiomas
           </h3>
           <p className="text-tinta-900 mt-2 text-sm leading-relaxed">
             {ficha.idiomas.join(", ")}
           </p>
         </div>
-
-        <div>
-          <h3 className="font-titulo text-tinta-500 text-[0.66rem] tracking-[0.2em] uppercase">
-            Equipamento
-          </h3>
-          {ficha.equipamento.length > 0 ? (
-            <ul className="text-tinta-900 mt-2 space-y-1 text-sm">
-              {ficha.equipamento.map((item) => (
-                <li key={item} className="marker:text-dourado-600 ml-4 list-disc">
-                  {item}
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p className="text-tinta-500 mt-2 text-sm italic">
-              A mochila está vazia. Por enquanto.
-            </p>
-          )}
-
-          {moedas.length > 0 ? (
-            <>
-              <h3 className="font-titulo text-tinta-500 mt-5 text-[0.66rem] tracking-[0.2em] uppercase">
-                Bolsa
-              </h3>
-              <ul className="mt-2 flex flex-wrap gap-3">
-                {moedas.map(([sigla, valor]) => (
-                  <li key={sigla} className="text-sm">
-                    <span className="font-titulo text-tinta-900 font-bold">
-                      {valor}
-                    </span>
-                    <span className="text-tinta-500 ml-1 text-xs">
-                      {NOMES_DAS_MOEDAS[sigla]}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </>
-          ) : null}
-        </div>
       </div>
-    </section>
+    </CorpoDaAba>
   );
 }

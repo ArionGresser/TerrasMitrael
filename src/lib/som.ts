@@ -46,6 +46,19 @@ const ANDAMENTO: Partial<Record<Efeito, [inicio: number, duracao: number]>> = {
 /** O nome do trecho dentro do arquivo, quando o efeito recorta um. */
 const TRECHO = "toque";
 
+/**
+ * Para onde o efeito cai quando o arquivo dele ainda não existe.
+ *
+ * Vários efeitos estão pedidos e não gravados. Em vez de a interface ficar
+ * muda até o arquivo chegar, o efeito usa o vizinho mais parecido: virar uma
+ * página e abrir um pergaminho são o mesmo roçar de papel. No dia em que o
+ * arquivo próprio entrar na pasta, ele passa a valer sozinho.
+ */
+const RESERVA: Partial<Record<Efeito, Efeito>> = {
+  virarPagina: "abrirMenu",
+  marcador: "abrirMenu",
+};
+
 const CHAVE = "mitrael:som";
 
 const cache = new Map<Efeito, Howl>();
@@ -97,7 +110,10 @@ function obter(efeito: Efeito): Howl | null {
  * gesto da pessoa, e some junto com o gesto. Quem desliga a trilha está
  * dispensando o fundo musical, não o retorno do próprio toque.
  */
-export function tocar(efeito: Efeito) {
+export function tocar(pedido: Efeito) {
+  const reserva = RESERVA[pedido];
+  const efeito = disponivel[pedido] === false && reserva ? reserva : pedido;
+
   const som = obter(efeito);
   if (!som) return;
 

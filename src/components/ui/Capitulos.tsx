@@ -75,9 +75,12 @@ function Trecho({ nos }: { nos: ReactNode[] }) {
 export function Capitulos({
   Texto,
   rotuloAbrir = "Ler capítulo",
+  rotuloTexto,
 }: {
   Texto: ComponentType;
   rotuloAbrir?: string;
+  /** Quando o arquivo não tem capítulo nenhum, o botão único diz outra coisa. */
+  rotuloTexto?: string;
 }) {
   const nos = achatar((Texto as (props: object) => ReactNode)({}));
 
@@ -103,7 +106,11 @@ export function Capitulos({
       <>
         {primeiro}
         {resto.length > 0 ? (
-          <Dobra previa="nenhuma" className="mt-4" rotuloAbrir={rotuloAbrir}>
+          <Dobra
+            previa="nenhuma"
+            className="mt-4"
+            rotuloAbrir={rotuloTexto ?? rotuloAbrir}
+          >
             <Trecho nos={resto} />
           </Dobra>
         ) : null}
