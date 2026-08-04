@@ -77,11 +77,13 @@ function IconeDaHabilidade({ habilidade }: { habilidade: Habilidade }) {
 
   return (
     <span
-      aria-hidden
-      title="Ícone ainda não desenhado"
-      className="border-dourado-600/25 bg-pergaminho-200/50 grid size-13 shrink-0 place-items-center rounded-sm border"
+      title="O ícone desta habilidade ainda está sendo desenhado"
+      className="border-dourado-600/25 bg-pergaminho-200/50 flex size-13 shrink-0 flex-col items-center justify-center gap-0.5 rounded-sm border border-dashed"
     >
-      <Selo variante="marca" className="size-8 opacity-25" />
+      <Selo variante="marca" aria-hidden className="size-6 opacity-25" />
+      <span className="font-titulo text-tinta-500 text-[0.4rem] leading-none tracking-[0.08em] uppercase">
+        em obra
+      </span>
     </span>
   );
 }
