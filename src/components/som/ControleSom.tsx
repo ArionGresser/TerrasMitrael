@@ -5,11 +5,14 @@ import { somLigado, definirSom, prepararEfeitos, tocar } from "@/lib/som";
 import { pausarMusica, retomarMusica } from "@/lib/musica";
 
 /**
- * Botão de som, sempre visível, no canto oposto ao selo de navegação.
+ * Botão da música de fundo, sempre visível, no canto oposto ao selo.
  *
- * O site abre com som. Como todo navegador proíbe áudio antes de alguém
- * interagir com a página, a música não começa no carregamento: ela entra no
- * primeiro toque ou tecla, e quem não quiser desliga aqui a qualquer momento.
+ * Manda na trilha, não nos efeitos: o roçar do pergaminho responde ao toque
+ * de quem está ali e continua valendo com a música desligada.
+ *
+ * O site abre com música. Como todo navegador proíbe áudio antes de alguém
+ * interagir com a página, ela não começa no carregamento: entra no primeiro
+ * toque ou tecla, e quem não quiser desliga aqui a qualquer momento.
  */
 export function ControleSom() {
   const [ligado, setLigado] = useState(false);
@@ -45,10 +48,10 @@ export function ControleSom() {
     setLigado(novo);
     definirSom(novo);
 
+    // Retorno audível dos dois lados: o efeito não obedece a este botão
+    tocar("marcador");
+
     if (novo) {
-      prepararEfeitos();
-      // Um retorno audível de que o som foi ligado
-      tocar("marcador");
       // Continua de onde a música parou, em vez de recomeçar a faixa
       retomarMusica();
     } else {
@@ -63,8 +66,10 @@ export function ControleSom() {
       // aria-pressed só depois de montar, para o servidor e o navegador
       // renderizarem a mesma coisa e não haver aviso de hidratação
       aria-pressed={montado ? ligado : undefined}
-      aria-label={ligado ? "Desligar os sons do site" : "Ligar os sons do site"}
-      title={ligado ? "Desligar os sons" : "Ligar os sons"}
+      aria-label={
+        ligado ? "Desligar a música de fundo" : "Ligar a música de fundo"
+      }
+      title={ligado ? "Desligar a música" : "Ligar a música"}
       className={`border-madeira-600/70 fixed right-4 bottom-4 z-50 grid size-12 place-items-center rounded-full border shadow-lg backdrop-blur-sm transition-colors sm:right-6 sm:bottom-6 ${
         ligado
           ? "bg-heraldico-verde/90 text-pergaminho-50"

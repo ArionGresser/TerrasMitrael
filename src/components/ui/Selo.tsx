@@ -52,21 +52,15 @@ const CERA = contornoDeCera(48, 16);
 
 type Variante = "cera" | "marca";
 
-/**
- * A cera não abre no meio: ela racha em linha quebrada, seguindo o ponto
- * mais fino do relevo. Este é o traçado dessa rachadura.
- */
-const RACHADURA = "M6 44 L28 39 L34 52 L52 45 L58 58 L78 51 L94 57";
-
 export function Selo({
   variante = "cera",
-  rompido = false,
+  pressionado = false,
   className = "",
   id = "selo",
 }: {
   variante?: Variante;
-  /** Cera partida, como fica depois que a carta foi aberta. */
-  rompido?: boolean;
+  /** Ferro apertado até o fim, como fica com o menu aberto. */
+  pressionado?: boolean;
   className?: string;
   /** Precisa ser único quando dois selos aparecem na mesma página. */
   id?: string;
@@ -170,16 +164,35 @@ export function Selo({
         <path d={M_DO_BRASAO} fill="#f7ecd8" />
       </g>
 
-      {/* A carta já foi aberta: a cera partiu */}
-      {rompido ? (
-        <g strokeLinecap="round" strokeLinejoin="round" fill="none">
-          <path d={RACHADURA} stroke="#2a070b" strokeWidth="4.5" />
-          <path
-            d={RACHADURA}
-            stroke="#e08b95"
-            strokeOpacity="0.5"
-            strokeWidth="1.4"
-            transform="translate(0 -1.6)"
+      {/* Ferro apertado até o fim. A parede do disco afunda mais, e é só
+          isso que muda: a sombra interna engrossa e ganha um fio de luz na
+          borda de cima, que é como a vista lê profundidade. */}
+      {pressionado ? (
+        <g fill="none">
+          <circle
+            cx="50"
+            cy="50"
+            r="37.4"
+            stroke="#2a070b"
+            strokeOpacity="0.55"
+            strokeWidth="2.8"
+          />
+          <circle
+            cx="50"
+            cy="50"
+            r="35.4"
+            stroke="#2a070b"
+            strokeOpacity="0.24"
+            strokeWidth="2.4"
+          />
+          <circle
+            cx="50"
+            cy="50"
+            r="36.4"
+            stroke="#e8a0a8"
+            strokeOpacity="0.22"
+            strokeWidth="0.8"
+            transform="translate(0 -1.1)"
           />
         </g>
       ) : null}

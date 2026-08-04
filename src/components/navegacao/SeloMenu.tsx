@@ -131,7 +131,7 @@ export function SeloMenu() {
               porque é a marca da casa e some se for coberto. */}
           <Selo
             variante="cera"
-            rompido={aberto}
+            pressionado={aberto}
             id="selo-menu"
             className="size-full"
           />
