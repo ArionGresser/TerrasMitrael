@@ -158,6 +158,24 @@ export default function PaginaPersonagens() {
           </header>
         </Pergaminho>
 
+        {/* O glossário das fitas, antes dos cartazes: quem chega aprende a
+            ler as fitas primeiro e depois reconhece cada uma nos murais */}
+        <Revelar className="mt-14">
+          <div className="text-center">
+            <TituloSecao tom="claro">O glossário das fitas</TituloSecao>
+            <p className="text-pergaminho-300/80 mx-auto mt-2 max-w-md text-sm leading-relaxed">
+              Toda ficha carrega as suas. Toque numa fita para saber o que ela
+              quer dizer
+            </p>
+          </div>
+        </Revelar>
+
+        <Mural className="mt-6" colunas={1}>
+          <Cartaz>
+            <Glossario />
+          </Cartaz>
+        </Mural>
+
         {/* Personagens atuais, quando existirem */}
         {PERSONAGENS_ATUAIS.length > 0 ? (
           <>
@@ -201,22 +219,6 @@ export default function PaginaPersonagens() {
               indice={i}
             />
           ))}
-        </Mural>
-
-        {/* O glossário das fitas */}
-        <Revelar className="mt-14">
-          <div className="text-center">
-            <TituloSecao tom="claro">O glossário das fitas</TituloSecao>
-            <p className="text-pergaminho-300/80 mx-auto mt-2 max-w-md text-sm leading-relaxed">
-              O que cada fita quer dizer. Toque numa delas para ler
-            </p>
-          </div>
-        </Revelar>
-
-        <Mural className="mt-6" colunas={1}>
-          <Cartaz>
-            <Glossario />
-          </Cartaz>
         </Mural>
 
         {/* O Mestre */}
