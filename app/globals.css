@@ -228,6 +228,102 @@
   border-radius: 6px 11px 3px 7px / 8px 3px 10px 5px;
 }
 
+/* ============================================================
+   Viga do cabeçalho
+   Uma peça de madeira mais escura e mais grossa que o tampo,
+   atravessada no topo da mesa.
+   ============================================================ */
+
+.viga-madeira {
+  background-color: var(--color-madeira-800);
+  background-image:
+    /* Chanfro de cima pegando a luz, chanfro de baixo na sombra */
+    linear-gradient(
+      to bottom,
+      rgb(255 255 255 / 0.13) 0px,
+      rgb(255 255 255 / 0.05) 3px,
+      transparent 7px,
+      transparent calc(100% - 9px),
+      rgb(0 0 0 / 0.3) calc(100% - 4px),
+      rgb(0 0 0 / 0.52) 100%
+    ),
+    /* Sulcos abertos pela goiva ao longo da viga */
+      repeating-linear-gradient(
+        91deg,
+        rgb(0 0 0 / 0.2) 0px,
+        rgb(0 0 0 / 0.2) 1px,
+        transparent 1px,
+        transparent 5px,
+        rgb(255 255 255 / 0.028) 5px,
+        rgb(255 255 255 / 0.028) 6px,
+        transparent 6px,
+        transparent 14px
+      ),
+    radial-gradient(
+      ellipse 70% 130% at 50% 50%,
+      rgb(122 80 41 / 0.42) 0%,
+      transparent 72%
+    );
+  box-shadow:
+    0 5px 14px rgb(0 0 0 / 0.55),
+    inset 0 -1px 0 rgb(0 0 0 / 0.5);
+}
+
+/* ============================================================
+   Placas: a linguagem dos botões
+   Mesma cera e mesma profundidade do selo, em chapa retangular
+   com os cantos cortados, como placa de bronze rebitada.
+   O recorte fica num span interno, e não no botão, para o anel
+   de foco do teclado continuar aparecendo inteiro.
+   ============================================================ */
+
+.placa {
+  clip-path: polygon(
+    7px 0,
+    calc(100% - 7px) 0,
+    100% 7px,
+    100% calc(100% - 7px),
+    calc(100% - 7px) 100%,
+    7px 100%,
+    0 calc(100% - 7px),
+    0 7px
+  );
+}
+
+.placa-cera {
+  background-color: var(--color-heraldico-vermelho);
+  background-image:
+    radial-gradient(
+      ellipse 90% 140% at 28% 0%,
+      rgb(255 255 255 / 0.26) 0%,
+      transparent 58%
+    ),
+    radial-gradient(
+      ellipse 80% 130% at 76% 100%,
+      rgb(0 0 0 / 0.4) 0%,
+      transparent 62%
+    );
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.28),
+    inset 0 -2px 4px rgb(0 0 0 / 0.45),
+    inset 0 0 0 1px rgb(0 0 0 / 0.28);
+}
+
+.placa-bronze {
+  background-color: rgb(150 116 31 / 0.14);
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgb(255 255 255 / 0.12) 0%,
+      transparent 45%,
+      rgb(0 0 0 / 0.2) 100%
+    );
+  box-shadow:
+    inset 0 1px 0 rgb(224 194 102 / 0.4),
+    inset 0 -2px 4px rgb(0 0 0 / 0.3),
+    inset 0 0 0 1px rgb(150 116 31 / 0.55);
+}
+
 /* Selo de cera: relevo e brilho de cera endurecida */
 .selo-cera {
   background-image:

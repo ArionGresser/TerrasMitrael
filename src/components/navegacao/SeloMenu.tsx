@@ -3,8 +3,14 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { AnimatePresence, motion } from "motion/react";
+import {
+  AnimatePresence,
+  motion,
+  useAnimationControls,
+  useReducedMotion,
+} from "motion/react";
 import { SECOES } from "@/lib/navegacao";
+import { Selo } from "@/components/ui/Selo";
 import { tocar } from "@/lib/som";
 
 /**
@@ -17,9 +23,31 @@ import { tocar } from "@/lib/som";
  */
 export function SeloMenu() {
   const [aberto, setAberto] = useState(false);
+  const [carimbadas, setCarimbadas] = useState(0);
   const seloRef = useRef<HTMLButtonElement>(null);
   const menuRef = useRef<HTMLDivElement>(null);
   const caminho = usePathname();
+  const cera = useAnimationControls();
+  const semMovimento = useReducedMotion();
+
+  /**
+   * O gesto de carimbar: o selo desce com força, gira um nada ao encostar,
+   * e volta com um respiro. É o mesmo movimento de quem bate um lacre na
+   * mesa, e é curto de proposito, porque o menu precisa abrir junto.
+   */
+  function carimbar() {
+    tocar(aberto ? "fecharMenu" : "abrirMenu");
+    setAberto((v) => !v);
+
+    if (semMovimento) return;
+
+    setCarimbadas((n) => n + 1);
+    cera.start({
+      scale: [1, 0.82, 1.07, 0.98, 1],
+      rotate: [0, -7, 3, -1, 0],
+      transition: { duration: 0.52, times: [0, 0.16, 0.42, 0.7, 1] },
+    });
+  }
 
   // Fecha o menu ao trocar de página
   useEffect(() => {
@@ -72,36 +100,42 @@ export function SeloMenu() {
       <button
         ref={seloRef}
         type="button"
-        onClick={() => {
-          // Fora do atualizador de estado: o React pode executar a função
-          // de atualização mais de uma vez, e o som tocaria em dobro.
-          tocar(aberto ? "fecharMenu" : "abrirMenu");
-          setAberto((v) => !v);
-        }}
+        // O som e a troca de estado ficam fora do atualizador: o React pode
+        // executar a função de atualização mais de uma vez, e o som sairia
+        // em dobro.
+        onClick={carimbar}
         aria-expanded={aberto}
         aria-controls="menu-pergaminho"
         aria-label={aberto ? "Fechar o menu" : "Abrir o menu de navegação"}
-        className="selo-cera bg-heraldico-vermelho fixed top-4 left-4 z-50 grid size-14 place-items-center transition-transform duration-200 hover:scale-105 active:scale-95 sm:top-6 sm:left-6 sm:size-16"
+        className="fixed top-4 left-4 z-50 grid size-14 place-items-center sm:top-6 sm:left-6 sm:size-16"
       >
-        {/* O selo mostra o M do brasão; aberto, vira um X claro de "fechar".
-            Girar o M só o deixava irreconhecível. */}
-        <AnimatePresence mode="wait" initial={false}>
+        {/* A onda de cera que escapa por baixo no instante da batida */}
+        {carimbadas > 0 ? (
           <motion.span
-            key={aberto ? "fechar" : "brasao"}
-            initial={{ opacity: 0, scale: 0.7 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.7 }}
-            transition={{ duration: 0.18 }}
-            className={`text-pergaminho-100 leading-none drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)] select-none ${
-              aberto
-                ? "text-xl font-light sm:text-2xl"
-                : "font-brasao text-2xl sm:text-3xl"
-            }`}
+            key={carimbadas}
             aria-hidden
-          >
-            {aberto ? "✕" : "M"}
-          </motion.span>
-        </AnimatePresence>
+            initial={{ scale: 0.7, opacity: 0.5 }}
+            animate={{ scale: 1.85, opacity: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="border-dourado-400/70 pointer-events-none absolute inset-0 rounded-full border"
+          />
+        ) : null}
+
+        <motion.span
+          animate={cera}
+          whileHover={semMovimento ? undefined : { scale: 1.06 }}
+          className="relative block size-full drop-shadow-[0_3px_6px_rgba(0,0,0,0.55)]"
+        >
+          {/* Com o menu aberto a cera aparece partida, que é o que acontece
+              com um lacre depois que a carta foi aberta. O M continua ali,
+              porque é a marca da casa e some se for coberto. */}
+          <Selo
+            variante="cera"
+            rompido={aberto}
+            id="selo-menu"
+            className="size-full"
+          />
+        </motion.span>
       </button>
 
       <AnimatePresence>

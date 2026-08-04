@@ -1,3 +1,4 @@
+import { Cabecalho } from "@/components/Cabecalho";
 import { SeloMenu } from "@/components/navegacao/SeloMenu";
 import { ControleSom } from "@/components/som/ControleSom";
 import { AmbienteSonoro } from "@/components/som/AmbienteSonoro";
@@ -38,6 +39,7 @@ export function Mesa({ children }: { children: React.ReactNode }) {
       </a>
 
       <div id="conteudo" className="relative z-10">
+        <Cabecalho />
         {children}
       </div>
     </>
