@@ -7,7 +7,8 @@ import {
   tagsDe,
   type Personagem,
 } from "@/lib/personagens";
-import { Fitas } from "@/components/personagens/Fitas";
+import { FitasMudas } from "@/components/personagens/Fita";
+import { Glossario } from "@/components/personagens/Glossario";
 import { Pergaminho } from "@/components/ui/Pergaminho";
 import { Revelar } from "@/components/ui/Revelar";
 import { BotaoLink } from "@/components/ui/Botao";
@@ -30,9 +31,12 @@ export const metadata: Metadata = {
 function Mural({
   children,
   className = "",
+  colunas = 2,
 }: {
   children: React.ReactNode;
   className?: string;
+  /** O glossário ocupa a tábua inteira; os cartazes se dividem em duas. */
+  colunas?: 1 | 2;
 }) {
   return (
     <div
@@ -52,8 +56,25 @@ function Mural({
         />
       ))}
 
-      <div className="grid gap-5 sm:grid-cols-2">{children}</div>
+      <div className={`grid gap-5 ${colunas === 2 ? "sm:grid-cols-2" : ""}`}>
+        {children}
+      </div>
     </div>
+  );
+}
+
+/** Um cartaz solto pregado na tábua, sem ser o de um personagem. */
+function Cartaz({ children }: { children: React.ReactNode }) {
+  return (
+    <Revelar className="relative pt-2">
+      <span
+        aria-hidden
+        className="tachinha absolute top-0 left-1/2 z-10 size-3 -translate-x-1/2 rounded-full"
+      />
+      <Pergaminho variante="cartao" borda={2}>
+        {children}
+      </Pergaminho>
+    </Revelar>
   );
 }
 
@@ -99,12 +120,8 @@ function CartaoPersonagem({
           {meta.epiteto}
         </p>
 
-        <div className="mt-3">
-          <Fitas
-            chaves={tagsDe(meta)}
-            alinhamento="esquerda"
-            tamanho="miudo"
-          />
+        <div className="mt-2.5">
+          <FitasMudas chaves={tagsDe(meta)} />
         </div>
 
         <p className="text-tinta-700 mt-3 grow text-sm leading-relaxed">
@@ -184,6 +201,22 @@ export default function PaginaPersonagens() {
               indice={i}
             />
           ))}
+        </Mural>
+
+        {/* O glossário das fitas */}
+        <Revelar className="mt-14">
+          <div className="text-center">
+            <TituloSecao tom="claro">O glossário das fitas</TituloSecao>
+            <p className="text-pergaminho-300/80 mx-auto mt-2 max-w-md text-sm leading-relaxed">
+              O que cada fita quer dizer. Toque numa delas para ler
+            </p>
+          </div>
+        </Revelar>
+
+        <Mural className="mt-6" colunas={1}>
+          <Cartaz>
+            <Glossario />
+          </Cartaz>
         </Mural>
 
         {/* O Mestre */}

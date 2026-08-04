@@ -24,8 +24,62 @@ const VERDE = { fita: "#2f4a3c", sombra: "#1c2e25", letra: "#e6f0e8" };
 const DOURADO = { fita: "#96741f", sombra: "#5e4813", letra: "#fdf6e0" };
 const ROXO = { fita: "#4a2c52", sombra: "#2c1930", letra: "#f2e6f5" };
 const AZUL = { fita: "#25415e", sombra: "#15273a", letra: "#e4eef8" };
+const BRONZE = { fita: "#6b4423", sombra: "#3d2513", letra: "#f4e4cd" };
+const PRATA = { fita: "#4d5560", sombra: "#2c3138", letra: "#eef1f5" };
+const VINHO = { fita: "#5a1f3d", sombra: "#361024", letra: "#f7e3ee" };
+const OLIVA = { fita: "#4a4a1f", sombra: "#2b2b11", letra: "#f0f0d8" };
+/** Bronze que envelheceu ao relento, como estátua de fundador de cidade. */
+const AZINHAVRE = { fita: "#1f5a55", sombra: "#0f3330", letra: "#dff2ef" };
 
+/**
+ * A ordem aqui é a ordem do glossário: as que mais aparecem primeiro, as
+ * raras no fim. Quem entra novo entra no grupo a que pertence.
+ */
 export const TAGS: Record<string, Tag> = {
+  // ---------- Renome: sobe junto com o nível ----------
+
+  aventureiro: {
+    nome: "Aventureiro",
+    resumo: "Nível 1 ao 4",
+    texto:
+      "Criado já sob as regras de 2024, e ainda sem renome suficiente para ser chamado de outra coisa. Aventureiro é o que se escreve na ficha de quem acabou de chegar. Salva a vila, mata o lobo, encontra o anel perdido. O título muda conforme o personagem sobe de nível e o mundo passa a ter opinião sobre ele.",
+    cor: VERDE,
+  },
+
+  veterano: {
+    nome: "Veterano",
+    resumo: "Nível 5 ao 10",
+    texto:
+      "O nível 5 é onde a coisa vira. O segundo ataque chega, as magias de terceiro círculo chegam, e o que era um problema sério passa a ser um problema resolvido. Daqui em diante o personagem não é mais o coitado que aceita qualquer contrato: ele escolhe. Quem passa dos primeiros níveis já viu companheiro cair, e isso aparece na cara.",
+    cor: BRONZE,
+  },
+
+  celebridade: {
+    nome: "Celebridade",
+    resumo: "Nível 11 ao 16",
+    texto:
+      "Entrou numa taverna e alguém sussurrou o nome antes de ele pedir a bebida. No nível 11 o personagem deixa de ser aventureiro e vira assunto: reis mandam recado, inimigos preparam armadilha específica, e há pelo menos uma canção com a versão errada dos fatos. A fama abre porta e também marca alvo nas costas.",
+    cor: DOURADO,
+  },
+
+  lenda: {
+    nome: "Lenda",
+    resumo: "Nível 17 ao 20",
+    texto:
+      "Do nível 17 em diante o personagem não resolve mais problemas de reino, resolve problemas de mundo. Existe gente que jura ter visto, gente que jura que nunca existiu, e as duas contam a mesma história. Poucos chegam aqui. Menos ainda chegam inteiros.",
+    cor: VINHO,
+  },
+
+  // ---------- Origem: de onde a ficha veio ----------
+
+  fundador: {
+    nome: "Fundador",
+    resumo: "Primeira campanha",
+    texto:
+      "Do trio que jogou a primeiríssima campanha de Terras de Mitrael, quando o mapa cabia numa folha e metade do continente ainda não tinha nome. Cada decisão que eles tomaram naquela mesa virou fato consumado para todo mundo que veio depois. Não dá para desfazer o que um fundador fez: virou história.",
+    cor: AZINHAVRE,
+  },
+
   "origin-hero": {
     nome: "Origin Hero",
     resumo: "Primeira geração",
@@ -42,13 +96,7 @@ export const TAGS: Record<string, Tag> = {
     cor: VERMELHO,
   },
 
-  aventureiro: {
-    nome: "Aventureiro",
-    resumo: "D&D 5.5e",
-    texto:
-      "Criado já sob as regras de 2024, e ainda sem renome suficiente para ser chamado de outra coisa. Aventureiro é o que se escreve na ficha de quem acabou de chegar. O título muda conforme o personagem sobe de nível e o mundo passa a ter opinião sobre ele.",
-    cor: VERDE,
-  },
+  // ---------- Estado: o que anda acontecendo com ele ----------
 
   "em-construcao": {
     nome: "História a Escrever",
@@ -56,6 +104,48 @@ export const TAGS: Record<string, Tag> = {
     texto:
       "O personagem existe, tem ficha, tem nome e já está em jogo. O que falta é alguém sentar e escrever de onde ele veio. O escriba responsável foi avisado. Duas vezes.",
     cor: AZUL,
+  },
+
+  caido: {
+    nome: "Caído",
+    resumo: "Morreu em mesa",
+    texto:
+      "Morreu jogando, com os dados na mesa e todo mundo olhando. Não foi decisão de roteiro nem saída combinada: foi rolagem. A ficha fica aqui exatamente como estava no último turno, porque apagar seria mentir sobre o que aconteceu naquela noite.",
+    cor: PRATA,
+  },
+
+  aposentado: {
+    nome: "Aposentado",
+    resumo: "Saiu por bem",
+    texto:
+      "Sobreviveu, o que já é bastante, e escolheu parar. Abriu taverna, voltou para casa, aceitou um cargo, sumiu no mar. Continua vivo em algum canto do mapa e pode reaparecer se a história pedir, mas não rola iniciativa há um bom tempo.",
+    cor: OLIVA,
+  },
+
+  desaparecido: {
+    nome: "Desaparecido",
+    resumo: "Paradeiro ignorado",
+    texto:
+      "Ninguém viu cair, ninguém viu sair. Simplesmente não estava mais lá na sessão seguinte. O Mestre sabe onde ele foi parar e não vai contar até a hora certa.",
+    cor: AZUL,
+  },
+
+  // ---------- Papel: de que lado da mesa ----------
+
+  vilao: {
+    nome: "Virou Vilão",
+    resumo: "Trocou de lado",
+    texto:
+      "Começou do lado de cá e terminou do lado de lá. Aconteceu na mesa, na frente de todo mundo, e ninguém conseguiu impedir. Hoje o Mestre é quem rola os dados dele, e o grupo aprendeu a temer uma ficha que conhece de cor.",
+    cor: VERMELHO,
+  },
+
+  convidado: {
+    nome: "Convidado",
+    resumo: "Passou por uma mesa",
+    texto:
+      "Entrou para uma sessão ou duas, deixou marca e foi embora. Personagem de visitante que sentou na cadeira vaga numa noite e acabou virando parte do cânone sem querer.",
+    cor: PRATA,
   },
 
   mestre: {
@@ -66,6 +156,9 @@ export const TAGS: Record<string, Tag> = {
     cor: ROXO,
   },
 };
+
+/** As chaves na ordem em que foram cadastradas, para o glossário seguir. */
+export const CHAVES_DAS_TAGS = Object.keys(TAGS);
 
 export function buscarTag(chave: string): Tag {
   const tag = TAGS[chave];
