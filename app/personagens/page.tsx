@@ -4,12 +4,10 @@ import {
   ORIGIN_HEROES,
   PERSONAGENS_ATUAIS,
   FORA_DE_CATEGORIA,
+  tagsDe,
   type Personagem,
 } from "@/lib/personagens";
-import {
-  SeloOriginHero,
-  ExplicacaoOriginHero,
-} from "@/components/personagens/SeloOriginHero";
+import { Fitas } from "@/components/personagens/Fitas";
 import { Pergaminho } from "@/components/ui/Pergaminho";
 import { Revelar } from "@/components/ui/Revelar";
 import { BotaoLink } from "@/components/ui/Botao";
@@ -28,6 +26,37 @@ export const metadata: Metadata = {
     "Os heróis que caminharam pelas Terras de Mitrael, com suas origens, suas escolhas e as marcas que deixaram no mundo.",
 };
 
+/** O quadro de tábuas onde os cartazes ficam pregados. */
+function Mural({
+  children,
+  className = "",
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  return (
+    <div
+      className={`mural border-madeira-950/70 relative rounded-sm border-4 p-3 sm:p-5 ${className}`}
+    >
+      {/* Os quatro parafusos que prendem o quadro na parede */}
+      {[
+        "top-1.5 left-1.5",
+        "top-1.5 right-1.5",
+        "bottom-1.5 left-1.5",
+        "bottom-1.5 right-1.5",
+      ].map((posicao) => (
+        <span
+          key={posicao}
+          aria-hidden
+          className={`tachinha absolute ${posicao} size-2.5 rounded-full`}
+        />
+      ))}
+
+      <div className="grid gap-5 sm:grid-cols-2">{children}</div>
+    </div>
+  );
+}
+
 function CartaoPersonagem({
   personagem,
   indice,
@@ -41,7 +70,14 @@ function CartaoPersonagem({
     <Revelar
       atraso={(indice % 2) * 0.08}
       direcao={indice % 2 === 0 ? "esquerda" : "direita"}
+      className="relative pt-2"
     >
+      {/* A tachinha que segura o cartaz na tábua */}
+      <span
+        aria-hidden
+        className="tachinha absolute top-0 left-1/2 z-10 size-3 -translate-x-1/2 rounded-full"
+      />
+
       <Pergaminho
         variante="cartao"
         borda={((indice % 3) + 1) as 1 | 2 | 3}
@@ -58,16 +94,18 @@ function CartaoPersonagem({
           />
         </div>
 
-        {meta.originHero ? (
-          <div className="mt-3">
-            <SeloOriginHero tamanho="pequeno" />
-          </div>
-        ) : null}
-
-        <TituloCapitulo className="mt-2">{meta.nome}</TituloCapitulo>
+        <TituloCapitulo className="mt-3">{meta.nome}</TituloCapitulo>
         <p className="text-tinta-500 mt-0.5 text-xs tracking-wide">
           {meta.epiteto}
         </p>
+
+        <div className="mt-3">
+          <Fitas
+            chaves={tagsDe(meta)}
+            alinhamento="esquerda"
+            tamanho="miudo"
+          />
+        </div>
 
         <p className="text-tinta-700 mt-3 grow text-sm leading-relaxed">
           {meta.resumo}
@@ -115,7 +153,7 @@ export default function PaginaPersonagens() {
               </div>
             </Revelar>
 
-            <div className="mt-6 grid gap-4 sm:grid-cols-2">
+            <Mural className="mt-6">
               {PERSONAGENS_ATUAIS.map((personagem, i) => (
                 <CartaoPersonagem
                   key={personagem.meta.slug}
@@ -123,7 +161,7 @@ export default function PaginaPersonagens() {
                   indice={i}
                 />
               ))}
-            </div>
+            </Mural>
           </>
         ) : null}
 
@@ -138,13 +176,7 @@ export default function PaginaPersonagens() {
           </div>
         </Revelar>
 
-        <Revelar className="mt-6">
-          <Pergaminho variante="cartao" borda={2}>
-            <ExplicacaoOriginHero />
-          </Pergaminho>
-        </Revelar>
-
-        <div className="mt-6 grid gap-4 sm:grid-cols-2">
+        <Mural className="mt-6">
           {ORIGIN_HEROES.map((personagem, i) => (
             <CartaoPersonagem
               key={personagem.meta.slug}
@@ -152,7 +184,7 @@ export default function PaginaPersonagens() {
               indice={i}
             />
           ))}
-        </div>
+        </Mural>
 
         {/* O Mestre */}
         {FORA_DE_CATEGORIA.map((personagem) => (
