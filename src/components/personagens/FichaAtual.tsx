@@ -166,7 +166,7 @@ export function FichaAtual({ ficha, nome }: { ficha: Ficha; nome: string }) {
 
       {/* O que decide um turno */}
       <div className="mt-6 grid grid-cols-3 gap-2 sm:grid-cols-4">
-        <Caixa rotulo="Defesa" valor={ficha.combate.ca} destaque />
+        <Caixa rotulo="CA: Classe de Armadura" valor={ficha.combate.ca} destaque />
         <Caixa rotulo="Vida" valor={ficha.combate.pv} destaque />
         <Caixa rotulo="Iniciativa" valor={ficha.combate.iniciativa} />
         <Caixa rotulo="Proficiência" valor={ficha.combate.bonusProficiencia} />
