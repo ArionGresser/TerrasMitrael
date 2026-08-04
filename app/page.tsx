@@ -35,8 +35,8 @@ const PORTAIS = [
     nome: "Personagens",
     texto:
       "Os heróis que caminharam por estas terras, suas origens, suas escolhas e o que deixaram para trás.",
-    imagem: "/images/howai.jpg",
-    alt: "Retrato de Howai, o Ladino",
+    imagem: "/images/personagens/elenco-origin-heroes.jpg",
+    alt: "Os Origin Heroes reunidos numa clareira, diante de ruínas tomadas pela mata",
   },
   {
     href: "/mapa/",
