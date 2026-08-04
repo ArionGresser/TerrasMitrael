@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { PERSONAGENS, buscarPersonagem } from "@/lib/personagens";
-import { SeloOriginHero } from "@/components/personagens/SeloOriginHero";
+import { PERSONAGENS, buscarPersonagem, tagsDe } from "@/lib/personagens";
+import { Fitas } from "@/components/personagens/Fitas";
 import { FichaAntiga } from "@/components/personagens/FichaAntiga";
+import { FichaAtual } from "@/components/personagens/FichaAtual";
 import { Pergaminho } from "@/components/ui/Pergaminho";
 import { Capitulos } from "@/components/ui/Capitulos";
 import { Revelar } from "@/components/ui/Revelar";
@@ -50,11 +51,9 @@ export default async function PaginaPersonagem({ params }: Props) {
             <Sobretitulo>{meta.epiteto}</Sobretitulo>
             <TituloBrasao className="mt-3">{meta.nome}</TituloBrasao>
 
-            {meta.originHero ? (
-              <div className="mt-4 flex justify-center">
-                <SeloOriginHero />
-              </div>
-            ) : null}
+            <div className="mt-5">
+              <Fitas chaves={tagsDe(meta)} />
+            </div>
 
             <Ornamento className="mt-5" />
           </header>
@@ -93,14 +92,21 @@ export default async function PaginaPersonagem({ params }: Props) {
 
           <Ornamento className="mt-10" />
 
-          {/* A história */}
+          {/* A história, ou o recado de quem ainda não a escreveu */}
           <div className="mt-8">
             <TituloCapitulo as="h2" className="text-center">
               História
             </TituloCapitulo>
-            <div className="mt-4">
-              <Capitulos Texto={Historia} rotuloAbrir="Ler a história" />
-            </div>
+
+            {meta.emConstrucao ? (
+              <p className="border-dourado-600/40 text-tinta-700 mx-auto mt-5 max-w-md border border-dashed px-5 py-5 text-center text-sm leading-relaxed italic">
+                {meta.emConstrucao}
+              </p>
+            ) : (
+              <div className="mt-4">
+                <Capitulos Texto={Historia} rotuloAbrir="Ler a história" />
+              </div>
+            )}
           </div>
 
           {meta.ilustracao ? (
@@ -128,9 +134,13 @@ export default async function PaginaPersonagem({ params }: Props) {
 
           <Ornamento className="mt-10" />
 
-          {/* A ficha antiga */}
+          {/* A ficha, na regra que couber */}
           <div className="mt-8">
-            <FichaAntiga meta={meta} />
+            {meta.ficha ? (
+              <FichaAtual ficha={meta.ficha} nome={meta.nome} />
+            ) : (
+              <FichaAntiga meta={meta} />
+            )}
           </div>
         </Pergaminho>
 

@@ -18,6 +18,12 @@ function Linha({ rotulo, valor }: { rotulo: string; valor: string }) {
 export function FichaAntiga({ meta }: { meta: MetaPersonagem }) {
   const { identidade, pontos, personalidade, atributos, habilidades } = meta;
 
+  // Os personagens criados sob as regras de 2024 não têm estes campos:
+  // a ficha deles é outra.
+  if (!identidade || !pontos || !personalidade || !atributos || !habilidades) {
+    return null;
+  }
+
   return (
     <section aria-labelledby={`ficha-${meta.slug}`}>
       <div className="text-center">

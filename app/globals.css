@@ -324,6 +324,18 @@
     inset 0 0 0 1px rgb(150 116 31 / 0.55);
 }
 
+/* Fita de tecido: a ponta recortada em bico, como galhardete */
+.fita {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    calc(100% - 9px) 50%,
+    100% 100%,
+    0 100%,
+    4px 50%
+  );
+}
+
 /* Selo de cera: relevo e brilho de cera endurecida */
 .selo-cera {
   background-image:
