@@ -3,13 +3,12 @@ import type { ComponentType } from "react";
 import * as howai from "@/content/personagens/howai.mdx";
 import * as levi from "@/content/personagens/levi.mdx";
 import * as filavandrel from "@/content/personagens/filavandrel.mdx";
-import * as baine from "@/content/personagens/baine.mdx";
 import * as nero from "@/content/personagens/nero.mdx";
 import * as rargnos from "@/content/personagens/rargnos.mdx";
 import * as tyr from "@/content/personagens/tyr.mdx";
 import * as mestre from "@/content/personagens/mestre.mdx";
 import * as lily from "@/content/personagens/lily-bouvardia.mdx";
-import * as ryhmm from "@/content/personagens/ryhmm-phylimm.mdx";
+import * as pyhmm from "@/content/personagens/pyhmm-phylimm.mdx";
 import * as johnny from "@/content/personagens/johnny-bling-bling.mdx";
 
 export type Atributo = {
@@ -150,13 +149,12 @@ const MODULOS = [
   howai,
   levi,
   filavandrel,
-  baine,
   nero,
   rargnos,
   tyr,
   mestre,
   lily,
-  ryhmm,
+  pyhmm,
   johnny,
 ];
 

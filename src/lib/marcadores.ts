@@ -34,7 +34,7 @@ export const LUGARES_SEM_PAGINA = [
   { nome: "Passagem Golem de Gelo", contexto: "Onde Howai passou a infância" },
   { nome: "Pondor do Aramate", contexto: "Ilha natal de Levi, tomada pelos Orcs" },
   { nome: "Entrerrio", contexto: "A taverna onde Levi foi criado" },
-  { nome: "Guratan", contexto: "Onde Baine trabalhou com Filavandrel" },
+  { nome: "Guratan", contexto: "A cidade onde Filavandrel trabalhou" },
   { nome: "Terras de Tungel", contexto: "Povos decisivos na Grande Guerra" },
   { nome: "Vérsia", contexto: "Os Domadores de Portais, convocados no fim da guerra" },
   { nome: "Drakyrbon Mahur", contexto: "Reino dos dragões e dos Filhos do Fogo" },
