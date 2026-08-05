@@ -17,19 +17,36 @@
     X-Frame-Options = "SAMEORIGIN"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
-# Imagens, áudios e fontes não mudam de nome sem mudar de conteúdo,
-# então o navegador pode guardá-los por um ano. Faz a segunda visita
-# ser praticamente instantânea, inclusive em conexão fraca.
+# Mídia que a gente troca na mão: imagem, som e música.
+#
+# Uma hora de folga é o bastante para a visita inteira acontecer sem baixar
+# nada duas vezes, que é o que importa em conexão fraca. Depois disso o
+# navegador pergunta antes de reusar, e uma imagem substituída aparece.
+#
+# Aqui já esteve "um ano, imutável", e isso quebrou o site de um jeito difícil
+# de achar. O Netlify carimba o mesmo cabeçalho na resposta de arquivo não
+# encontrado: quem abriu uma página que apontava para uma imagem ainda não
+# enviada guardou o erro por um ano, e "imutável" quer dizer que o navegador
+# nem volta para perguntar. Foi o que aconteceu com os retratos do Johnny e da
+# Lily. Um ano só vale para endereço que muda junto com o conteúdo, e nenhum
+# destes muda.
 [[headers]]
   for = "/images/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=3600, must-revalidate"
 
 [[headers]]
-  for = "/audios/*"
+  for = "/sons/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=3600, must-revalidate"
 
+[[headers]]
+  for = "/musicas/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+# Estes o Next.js nomeia com a impressão digital do conteúdo: mudou o arquivo,
+# mudou o endereço. Aqui um ano imutável é seguro e é o que deve ser.
 [[headers]]
   for = "/_next/static/*"
   [headers.values]
