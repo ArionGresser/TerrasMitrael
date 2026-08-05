@@ -57,21 +57,26 @@ const RESERVA: Ambiente = "tema";
 /**
  * O trecho que vale dentro de cada arquivo, em segundos.
  *
- * As faixas chegaram com sobra nas duas pontas: o tema tem dois segundos e
- * meio de nada antes da primeira nota, e todas morrem no fim, umas cortando
- * seco no silêncio e outras descendo num desvanecer. Tocadas de ponta a
- * ponta, a música entrava tarde ao abrir a página e o laço caía num buraco
- * de volume a cada volta.
+ * `inicio` é onde a primeira nota entra. As faixas vêm com silêncio antes
+ * dela, dois segundos e meio no caso do tema, e tocadas do zero a música
+ * demorava a começar depois que a página abria.
  *
- * Em vez de reeditar os arquivos, o tocador entra no ponto certo e volta
- * antes do fim, na altura em que a faixa ainda está inteira. Medido janela a
- * janela na energia da onda, não no olho.
+ * `fim` é onde o último som morre, e não onde a música ainda está cheia.
+ * Essa parte já esteve errada: eu voltava antes, para o volume não cair no
+ * meio da volta, e o resultado era a faixa sendo decepada no ar. Nenhuma
+ * delas foi feita para dar volta, então não existe emenda invisível a
+ * procurar. O que existe é deixar cada uma terminar por inteiro e recomeçar
+ * no silêncio, que é como a música pede para ser ouvida.
+ *
+ * Medido janela a janela na energia da onda, não no olho: cada `fim` está
+ * abaixo de -50 dB, ou seja, em silêncio de verdade e não em silêncio de
+ * quem olhou o gráfico e achou que estava baixo.
  */
 const TRECHO: Partial<Record<Ambiente, { inicio: number; fim: number }>> = {
   tema: { inicio: 2.3, fim: 256.8 },
   johnny: { inicio: 0.2, fim: 233.3 },
-  vrakyr: { inicio: 0.2, fim: 311.5 },
-  pyhmm: { inicio: 0.55, fim: 130 },
+  vrakyr: { inicio: 0.2, fim: 313.6 },
+  pyhmm: { inicio: 0.55, fim: 131.3 },
 };
 
 /**
