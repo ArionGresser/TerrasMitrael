@@ -47,6 +47,22 @@ const TEMA_DE_PERSONAGEM: Record<string, Ambiente> = {
 const RESERVA: Ambiente = "tema";
 
 /**
+ * O trecho que vale dentro de cada arquivo, em segundos.
+ *
+ * As faixas chegaram com silêncio nas duas pontas: o tema tem dois segundos
+ * e meio de nada antes da primeira nota, e quase todas terminam em silêncio
+ * também. Tocadas de ponta a ponta, a música entrava tarde ao abrir a página
+ * e o laço passava por quatro segundos de vazio a cada volta.
+ *
+ * Em vez de reeditar os arquivos, o tocador entra no ponto certo e volta
+ * antes do fim. Medido janela a janela na energia da onda, não no olho.
+ */
+const TRECHO: Partial<Record<Ambiente, { inicio: number; fim: number }>> = {
+  tema: { inicio: 2.3, fim: 256.8 },
+  johnny: { inicio: 0.2, fim: 233.3 },
+};
+
+/**
  * Música é fundo, não é o assunto.
  *
  * O teto é o que sai com o controle no máximo. O padrão de quem chega é a
@@ -56,7 +72,14 @@ const VOLUME_MAXIMO = 0.44;
 const FRACAO_PADRAO = 0.5;
 /** O quanto sobra da música enquanto uma narração fala por cima. */
 const FATOR_ABAFADO = 0.18;
+
+/**
+ * A troca entre duas faixas pede tempo, para uma sair enquanto a outra
+ * entra. A primeira faixa do dia não: ali não há nada de que se despedir,
+ * e um segundo de rampa vira mais um segundo de espera para quem chegou.
+ */
 const TRANSICAO = 1200;
+const ENTRADA = 350;
 
 const CHAVE_VOLUME = "mitrael:volume";
 
@@ -67,6 +90,7 @@ let atual: Ambiente | null = null;
 let abafado = false;
 let esperandoGesto = false;
 let houveGesto = false;
+let vigia: number | null = null;
 
 /**
  * Qual faixa pertence a cada endereço do site.
@@ -118,6 +142,44 @@ export function definirVolumeDaMusica(fracao: number) {
 function volumeAlvo(): number {
   const base = fracaoDoVolume() * VOLUME_MAXIMO;
   return abafado ? base * FATOR_ABAFADO : base;
+}
+
+/**
+ * Devolve a agulha ao começo do trecho antes de o silêncio do fim entrar.
+ *
+ * O laço do próprio navegador continua ligado por baixo, como rede de
+ * segurança: se este vigia falhar, a música ainda volta sozinha, só que
+ * passando pelo silêncio.
+ */
+function vigiarOLaco(faixa: Howl, ambiente: Ambiente) {
+  pararDeVigiar();
+
+  const trecho = TRECHO[ambiente];
+  if (!trecho) return;
+
+  vigia = window.setInterval(() => {
+    if (!faixa.playing()) return;
+    if ((faixa.seek() as number) >= trecho.fim) faixa.seek(trecho.inicio);
+  }, 250);
+}
+
+function pararDeVigiar() {
+  if (vigia !== null) {
+    window.clearInterval(vigia);
+    vigia = null;
+  }
+}
+
+/**
+ * Pula a abertura muda, mas só quando a faixa está começando do zero.
+ *
+ * Quem religou o som no meio da música volta de onde parou: aí a agulha já
+ * está bem depois do ponto de entrada e não há nada a saltar.
+ */
+function saltarAAbertura(faixa: Howl, ambiente: Ambiente) {
+  const trecho = TRECHO[ambiente];
+  if (!trecho) return;
+  if ((faixa.seek() as number) < trecho.inicio) faixa.seek(trecho.inicio);
 }
 
 function obter(ambiente: Ambiente): Howl | null {
@@ -194,6 +256,13 @@ export function tocarAmbiente(pedido: Ambiente) {
   // Antes do primeiro toque na página, nem adianta baixar: o navegador não
   // deixaria tocar de todo jeito. Quem chega e desliga o som na hora não
   // gasta um byte de faixa.
+  //
+  // Já tentamos adiantar o download aqui, e não dá: o Howler destrava o
+  // áudio do navegador no primeiro gesto, tocando um silêncio nos elementos
+  // que ainda estão na reserva dele. Um elemento criado antes disso fica
+  // fora da destravada, e a reprodução é recusada depois. O ganho também
+  // seria pequeno: as faixas são transmitidas aos poucos, não baixadas
+  // inteiras antes de tocar.
   if (!houveGesto) {
     atual = ambiente;
     aguardarGesto();
@@ -212,13 +281,20 @@ export function tocarAmbiente(pedido: Ambiente) {
   // buraco de silêncio na troca e, pior, mataria o tema à toa quando a
   // faixa pedida não existe: o arquivo ausente só se revela ao falhar.
   const trocar = () => {
-    if (anterior && anterior !== ambiente) {
-      const saindo = cache.get(anterior);
+    const havia = anterior && anterior !== ambiente;
+
+    if (havia) {
+      const saindo = cache.get(anterior!);
       if (saindo?.playing()) {
         desvanecer(saindo, 0, () => saindo.stop());
       }
     }
-    faixa.fade(faixa.volume() as number, volumeAlvo(), TRANSICAO);
+
+    faixa.fade(
+      faixa.volume() as number,
+      volumeAlvo(),
+      havia ? TRANSICAO : ENTRADA
+    );
   };
 
   if (faixa.playing()) {
@@ -230,12 +306,20 @@ export function tocarAmbiente(pedido: Ambiente) {
   // fade antes disso deixa a ordem parada numa fila interna do Howler que
   // só esvazia com a reprodução: a música tocava, mas muda, no volume zero
   // com que nasce. A faixa já é criada em zero, então não há o que zerar.
-  faixa.once("play", trocar);
+  //
+  // A agulha também só anda depois que a faixa toca: antes disso o elemento
+  // de áudio pode nem ter os metadados, e o pedido se perde.
+  faixa.once("play", () => {
+    saltarAAbertura(faixa, ambiente);
+    vigiarOLaco(faixa, ambiente);
+    trocar();
+  });
   faixa.play();
 }
 
 /** Ao desligar o som: para onde estava, para voltar do mesmo ponto. */
 export function pausarMusica() {
+  pararDeVigiar();
   if (!atual) return;
   const faixa = cache.get(atual);
   if (!faixa?.playing()) return;
