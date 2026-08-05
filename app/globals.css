@@ -378,6 +378,81 @@
 }
 
 /* ============================================================
+   Régua de volume
+   Um sulco escavado na madeira com um rebite de bronze correndo
+   dentro dele. O trecho já percorrido acende, o resto fica na
+   sombra. A variável --preenchido vem do componente.
+   ============================================================ */
+
+.regua-volume {
+  appearance: none;
+  -webkit-appearance: none;
+  height: 1.75rem;
+  background: transparent;
+  cursor: pointer;
+}
+
+.regua-volume::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 3px;
+  background:
+    linear-gradient(
+      to right,
+      var(--color-dourado-500) 0%,
+      var(--color-dourado-500) var(--preenchido),
+      rgb(0 0 0 / 0.45) var(--preenchido),
+      rgb(0 0 0 / 0.45) 100%
+    );
+  box-shadow:
+    inset 0 1px 2px rgb(0 0 0 / 0.6),
+    0 1px 0 rgb(255 255 255 / 0.07);
+}
+
+.regua-volume::-moz-range-track {
+  height: 6px;
+  border-radius: 3px;
+  background:
+    linear-gradient(
+      to right,
+      var(--color-dourado-500) 0%,
+      var(--color-dourado-500) var(--preenchido),
+      rgb(0 0 0 / 0.45) var(--preenchido),
+      rgb(0 0 0 / 0.45) 100%
+    );
+  box-shadow: inset 0 1px 2px rgb(0 0 0 / 0.6);
+}
+
+/* O rebite. Firefox não aceita margem negativa aqui, e também não
+   precisa: ele já centra o botão no sulco sozinho. */
+.regua-volume::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  margin-top: -4.5px;
+  border-radius: 50%;
+  background-image:
+    radial-gradient(circle at 34% 30%, #e8c98a 0%, #b8912c 42%, transparent 62%),
+    radial-gradient(circle at 62% 74%, #6b4a12 0%, #3d2a08 72%);
+  box-shadow:
+    inset 0 1px 1px rgb(255 255 255 / 0.4),
+    0 1px 3px rgb(0 0 0 / 0.8);
+}
+
+.regua-volume::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  border: 0;
+  border-radius: 50%;
+  background-image:
+    radial-gradient(circle at 34% 30%, #e8c98a 0%, #b8912c 42%, transparent 62%),
+    radial-gradient(circle at 62% 74%, #6b4a12 0%, #3d2a08 72%);
+  box-shadow:
+    inset 0 1px 1px rgb(255 255 255 / 0.4),
+    0 1px 3px rgb(0 0 0 / 0.8);
+}
+
+/* ============================================================
    Abas do dossiê
    As divisórias que separam as partes de um personagem, como as
    linguetas de pergaminho que sobram para fora de uma pasta de

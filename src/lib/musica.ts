@@ -2,7 +2,8 @@ import { Howl } from "howler";
 import { somLigado } from "./som";
 
 /**
- * A música de fundo, uma faixa por seção do site.
+ * A música de fundo: uma faixa por seção do site, e uma própria para o
+ * personagem que tiver a sua.
  *
  * Vale o mesmo contrato dos efeitos: a escolha fica salva, e se um arquivo
  * não existir o site funciona em silêncio, sem erro.
@@ -16,22 +17,48 @@ import { somLigado } from "./som";
  *    site inteiro tem música, em vez de emudecer em três de quatro seções.
  */
 
-export type Ambiente = "tema" | "locais" | "eventos" | "personagens";
+export type Ambiente =
+  | "tema"
+  | "locais"
+  | "eventos"
+  | "personagens"
+  | "johnny";
 
 const ARQUIVOS: Record<Ambiente, string> = {
   tema: "/musicas/tema.m4a",
   locais: "/musicas/locais.m4a",
   eventos: "/musicas/eventos.m4a",
   personagens: "/musicas/personagens.m4a",
+  johnny: "/musicas/johnny-tema.m4a",
+};
+
+/**
+ * Personagem com faixa própria, pela chave do endereço dele.
+ *
+ * Quem está aqui manda na música da própria página, no lugar da faixa da
+ * seção. Toca em laço, como todas: quem fica lendo a ficha inteira não
+ * chega ao silêncio no meio da leitura.
+ */
+const TEMA_DE_PERSONAGEM: Record<string, Ambiente> = {
+  "johnny-bling-bling": "johnny",
 };
 
 /** A faixa que o tema cobre quando a da seção não existe. */
 const RESERVA: Ambiente = "tema";
 
-/** Música é fundo, não é o assunto. Fica bem abaixo da voz e dos efeitos. */
-const VOLUME = 0.22;
-const VOLUME_ABAFADO = 0.04;
+/**
+ * Música é fundo, não é o assunto.
+ *
+ * O teto é o que sai com o controle no máximo. O padrão de quem chega é a
+ * metade dele, que é a altura que já estava boa antes de existir controle.
+ */
+const VOLUME_MAXIMO = 0.44;
+const FRACAO_PADRAO = 0.5;
+/** O quanto sobra da música enquanto uma narração fala por cima. */
+const FATOR_ABAFADO = 0.18;
 const TRANSICAO = 1200;
+
+const CHAVE_VOLUME = "mitrael:volume";
 
 const cache = new Map<Ambiente, Howl>();
 const indisponivel = new Set<Ambiente>();
@@ -41,16 +68,56 @@ let abafado = false;
 let esperandoGesto = false;
 let houveGesto = false;
 
-/** Qual faixa pertence a cada endereço do site. */
+/**
+ * Qual faixa pertence a cada endereço do site.
+ *
+ * A ficha de um personagem com tema próprio ganha da faixa da seção. É o
+ * caso mais específico, então vem primeiro.
+ */
 export function ambienteDaRota(caminho: string): Ambiente {
-  if (caminho.startsWith("/locais")) return "locais";
-  if (caminho.startsWith("/eventos")) return "eventos";
-  if (caminho.startsWith("/personagens")) return "personagens";
+  const partes = caminho.split("/").filter(Boolean);
+
+  if (partes[0] === "personagens") {
+    const proprio = partes[1] ? TEMA_DE_PERSONAGEM[partes[1]] : undefined;
+    if (proprio) return proprio;
+    return "personagens";
+  }
+
+  if (partes[0] === "locais") return "locais";
+  if (partes[0] === "eventos") return "eventos";
   return "tema";
 }
 
+/**
+ * O quanto da música a pessoa pediu, de 0 a 1.
+ *
+ * No servidor devolve o padrão, para a página estática sair do build igual
+ * à primeira renderização do navegador. Quem nunca mexeu no controle fica
+ * na metade.
+ */
+export function fracaoDoVolume(): number {
+  if (typeof window === "undefined") return FRACAO_PADRAO;
+  const salvo = window.localStorage.getItem(CHAVE_VOLUME);
+  if (salvo === null) return FRACAO_PADRAO;
+  const numero = Number(salvo);
+  if (!Number.isFinite(numero)) return FRACAO_PADRAO;
+  return Math.min(1, Math.max(0, numero));
+}
+
+/** Move o volume na hora, sem transição: o dedo está no controle agora. */
+export function definirVolumeDaMusica(fracao: number) {
+  if (typeof window === "undefined") return;
+  const limpa = Math.min(1, Math.max(0, fracao));
+  window.localStorage.setItem(CHAVE_VOLUME, String(limpa));
+
+  if (!atual) return;
+  const faixa = cache.get(atual);
+  if (faixa?.playing()) faixa.volume(volumeAlvo());
+}
+
 function volumeAlvo(): number {
-  return abafado ? VOLUME_ABAFADO : VOLUME;
+  const base = fracaoDoVolume() * VOLUME_MAXIMO;
+  return abafado ? base * FATOR_ABAFADO : base;
 }
 
 function obter(ambiente: Ambiente): Howl | null {

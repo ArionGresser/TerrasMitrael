@@ -22,10 +22,10 @@ const ARQUIVOS: Record<Efeito, string> = {
 };
 
 const VOLUMES: Record<Efeito, number> = {
-  abrirMenu: 0.35,
-  fecharMenu: 0.3,
-  virarPagina: 0.3,
-  marcador: 0.25,
+  abrirMenu: 0.6,
+  fecharMenu: 0.55,
+  virarPagina: 0.45,
+  marcador: 0.35,
 };
 
 /**
