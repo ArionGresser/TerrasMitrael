@@ -197,6 +197,21 @@ export const HABILIDADES: Record<string, Habilidade> = {
       "Domina a propriedade de maestria de duas armas escolhidas, e pode trocar essa escolha a cada descanso longo.",
   },
 
+  "defesa-sem-armadura": {
+    nome: "Defesa sem Armadura",
+    tipo: "classe",
+    descricao:
+      "Sem armadura no corpo, a Classe de Armadura passa a ser 10 mais Destreza mais Constituição. Escudo pode. Armadura atrapalha mais do que protege quem aprendeu a confiar no próprio couro.",
+  },
+
+  furia: {
+    nome: "Fúria",
+    tipo: "classe",
+    descricao:
+      "Entra em fúria com uma ação bônus. Enquanto dura: vantagem em testes e salvaguardas de Força, dano extra em ataques corpo a corpo de Força, e resistência a dano contundente, cortante e perfurante. Não conjura nem se concentra em magia nenhuma. Dura um minuto, e acaba antes se o turno terminar sem ter atacado ninguém nem levado dano.",
+    anotacao: "+2 de dano, duas vezes por descanso longo",
+  },
+
   "invocacoes-misticas": {
     nome: "Invocações Místicas",
     tipo: "classe",
@@ -294,6 +309,41 @@ export const HABILIDADES: Record<string, Habilidade> = {
       "Cabeça difícil de invadir. Vantagem em salvaguardas contra ser enfeitiçado e contra magia que force movimento.",
   },
 
+  /**
+   * A visão anã enxerga o dobro da dos outros povos, então precisa de
+   * entrada própria: o alcance faz parte da explicação, não da anotação
+   * de um personagem só.
+   */
+  "visao-no-escuro-anao": {
+    nome: "Visão no Escuro",
+    tipo: "traco",
+    descricao:
+      "Enxerga na penumbra como se fosse luz plena até trinta e seis metros, e no escuro completo como se fosse penumbra. Quem nasce debaixo da montanha enxerga mais longe no escuro do que quase todo mundo enxerga na luz.",
+    anotacao: "36 metros",
+  },
+
+  "resiliencia-ana": {
+    nome: "Resiliência Anã",
+    tipo: "traco",
+    descricao:
+      "Resistência a dano de veneno e vantagem em salvaguardas para não ser envenenado. Gerações bebendo o que escorre da rocha acabam deixando marca no sangue.",
+  },
+
+  "tenacidade-ana": {
+    nome: "Tenacidade Anã",
+    tipo: "traco",
+    descricao:
+      "O corpo aguenta mais do que a conta dizia que aguentaria: o máximo de pontos de vida sobe em um a cada nível.",
+  },
+
+  "conhecimento-de-pedras": {
+    nome: "Conhecimento de Pedras",
+    tipo: "traco",
+    descricao:
+      "Com uma ação bônus, e desde que os pés estejam em pedra, ganha sentido sísmico até dezoito metros por dez minutos. É enxergar pela vibração o que está do outro lado da parede. Recarrega no descanso longo.",
+    anotacao: "Vezes iguais ao bônus de proficiência",
+  },
+
   // ---------- Talentos ----------
 
   "iniciado-em-magia-clerigo": {
@@ -308,6 +358,13 @@ export const HABILIDADES: Record<string, Habilidade> = {
     tipo: "talento",
     descricao:
       "Três proficiências a mais, escolhidas entre perícias e ferramentas. Serve tanto para quem estudou muito quanto para quem mentiu bem sobre isso.",
+  },
+
+  vigoroso: {
+    nome: "Vigoroso",
+    tipo: "talento",
+    descricao:
+      "O máximo de pontos de vida sobe no dobro do nível. É o talento de quem apanhou muito e continuou de pé, e a ficha registra isso em número.",
   },
 };
 

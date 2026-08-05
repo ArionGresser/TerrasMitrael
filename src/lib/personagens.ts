@@ -10,6 +10,7 @@ import * as mestre from "@/content/personagens/mestre.mdx";
 import * as lily from "@/content/personagens/lily-bouvardia.mdx";
 import * as pyhmm from "@/content/personagens/pyhmm-phylimm.mdx";
 import * as johnny from "@/content/personagens/johnny-bling-bling.mdx";
+import * as vrakyr from "@/content/personagens/vrakyr-windrose.mdx";
 
 export type Atributo = {
   nome: string;
@@ -156,6 +157,7 @@ const MODULOS = [
   lily,
   pyhmm,
   johnny,
+  vrakyr,
 ];
 
 export const PERSONAGENS: Personagem[] = MODULOS.map((modulo) => ({
