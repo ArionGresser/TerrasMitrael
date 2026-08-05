@@ -22,7 +22,8 @@ export type Ambiente =
   | "locais"
   | "eventos"
   | "personagens"
-  | "johnny";
+  | "johnny"
+  | "vrakyr";
 
 const ARQUIVOS: Record<Ambiente, string> = {
   tema: "/musicas/tema.m4a",
@@ -30,6 +31,7 @@ const ARQUIVOS: Record<Ambiente, string> = {
   eventos: "/musicas/eventos.m4a",
   personagens: "/musicas/personagens.m4a",
   johnny: "/musicas/johnny-tema.m4a",
+  vrakyr: "/musicas/vrakyr-tema.m4a",
 };
 
 /**
@@ -41,6 +43,7 @@ const ARQUIVOS: Record<Ambiente, string> = {
  */
 const TEMA_DE_PERSONAGEM: Record<string, Ambiente> = {
   "johnny-bling-bling": "johnny",
+  "vrakyr-windrose": "vrakyr",
 };
 
 /** A faixa que o tema cobre quando a da seção não existe. */
@@ -49,27 +52,31 @@ const RESERVA: Ambiente = "tema";
 /**
  * O trecho que vale dentro de cada arquivo, em segundos.
  *
- * As faixas chegaram com silêncio nas duas pontas: o tema tem dois segundos
- * e meio de nada antes da primeira nota, e quase todas terminam em silêncio
- * também. Tocadas de ponta a ponta, a música entrava tarde ao abrir a página
- * e o laço passava por quatro segundos de vazio a cada volta.
+ * As faixas chegaram com sobra nas duas pontas: o tema tem dois segundos e
+ * meio de nada antes da primeira nota, e todas morrem no fim, umas cortando
+ * seco no silêncio e a do Vrakyr descendo num desvanecer de quatro segundos.
+ * Tocadas de ponta a ponta, a música entrava tarde ao abrir a página e o laço
+ * caía num buraco de volume a cada volta.
  *
  * Em vez de reeditar os arquivos, o tocador entra no ponto certo e volta
- * antes do fim. Medido janela a janela na energia da onda, não no olho.
+ * antes do fim, na altura em que a faixa ainda está inteira. Medido janela a
+ * janela na energia da onda, não no olho.
  */
 const TRECHO: Partial<Record<Ambiente, { inicio: number; fim: number }>> = {
   tema: { inicio: 2.3, fim: 256.8 },
   johnny: { inicio: 0.2, fim: 233.3 },
+  vrakyr: { inicio: 0.1, fim: 312.4 },
 };
 
 /**
  * Música é fundo, não é o assunto.
  *
- * O teto é o que sai com o controle no máximo. O padrão de quem chega é a
- * metade dele, que é a altura que já estava boa antes de existir controle.
+ * O teto é o que sai com o controle no máximo. O padrão de quem chega fica
+ * bem abaixo dele: a música tem que caber embaixo da leitura, e quem quiser
+ * ouvir mais alto empurra o controle para cima.
  */
 const VOLUME_MAXIMO = 0.44;
-const FRACAO_PADRAO = 0.5;
+const FRACAO_PADRAO = 0.35;
 /** O quanto sobra da música enquanto uma narração fala por cima. */
 const FATOR_ABAFADO = 0.18;
 
@@ -116,8 +123,8 @@ export function ambienteDaRota(caminho: string): Ambiente {
  * O quanto da música a pessoa pediu, de 0 a 1.
  *
  * No servidor devolve o padrão, para a página estática sair do build igual
- * à primeira renderização do navegador. Quem nunca mexeu no controle fica
- * na metade.
+ * à primeira renderização do navegador. Quem já mexeu no controle mantém a
+ * escolha, e só ela: mudar o padrão daqui não mexe em preferência salva.
  */
 export function fracaoDoVolume(): number {
   if (typeof window === "undefined") return FRACAO_PADRAO;

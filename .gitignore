@@ -23,3 +23,6 @@ yarn-error.log*
 
 # Netlify
 .netlify/
+
+# Configuração local de ferramentas, não faz parte do site
+.claude/
