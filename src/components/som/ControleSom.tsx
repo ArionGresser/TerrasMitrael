@@ -7,6 +7,7 @@ import {
   retomarMusica,
   fracaoDoVolume,
   definirVolumeDaMusica,
+  VOLUME_PADRAO,
 } from "@/lib/musica";
 
 /**
@@ -16,8 +17,8 @@ import {
  * de quem está ali e continua valendo com a música desligada.
  *
  * O botão redondo abre uma régua de volume ao lado, com o mudo na ponta.
- * Quem chega pela primeira vez entra com a régua na metade, que é a altura
- * que já estava boa antes de existir controle.
+ * Quem chega pela primeira vez entra com a régua em pouco mais de um terço,
+ * que é altura de fundo: dá para ler por cima sem ter que abaixar nada.
  *
  * O site abre com música. Como todo navegador proíbe áudio antes de alguém
  * interagir com a página, ela não começa no carregamento: entra no primeiro
@@ -25,7 +26,7 @@ import {
  */
 export function ControleSom() {
   const [ligado, setLigado] = useState(false);
-  const [volume, setVolume] = useState(0.5);
+  const [volume, setVolume] = useState(VOLUME_PADRAO);
   const [aberto, setAberto] = useState(false);
   const [montado, setMontado] = useState(false);
   const raiz = useRef<HTMLDivElement>(null);
