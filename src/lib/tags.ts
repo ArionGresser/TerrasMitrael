@@ -30,6 +30,13 @@ const VINHO = { fita: "#5a1f3d", sombra: "#361024", letra: "#f7e3ee" };
 const OLIVA = { fita: "#4a4a1f", sombra: "#2b2b11", letra: "#f0f0d8" };
 /** Bronze que envelheceu ao relento, como estátua de fundador de cidade. */
 const AZINHAVRE = { fita: "#1f5a55", sombra: "#0f3330", letra: "#dff2ef" };
+/**
+ * O azul do anil, tinta cara de rota comercial, que só aparecia em roupa de
+ * quem queria ser reconhecido de longe. É o matiz mais claro do quadro de
+ * propósito, e o único nesta faixa: fama é barulho, e barulho não se
+ * confunde com nada.
+ */
+const ANIL = { fita: "#4b3aa0", sombra: "#241a56", letra: "#ece8ff" };
 
 /**
  * A ordem aqui é a ordem do glossário: as que mais aparecem primeiro, as
@@ -54,11 +61,11 @@ export const TAGS: Record<string, Tag> = {
     cor: BRONZE,
   },
 
-  celebridade: {
-    nome: "Celebridade",
+  campeao: {
+    nome: "Campeão",
     resumo: "Nível 11 ao 16",
     texto:
-      "Entrou numa taverna e alguém sussurrou o nome antes de ele pedir a bebida. No nível 11 o personagem deixa de ser aventureiro e vira assunto: reis mandam recado, inimigos preparam armadilha específica, e há pelo menos uma canção com a versão errada dos fatos. A fama abre porta e também marca alvo nas costas.",
+      "Do nível 11 em diante o problema deixa de ser do vilarejo e passa a ser do reino. Entram as magias de sexto círculo, o golpe que antes dependia de sorte agora sai três vezes por turno, e o que assustava o grupo inteiro no primeiro ano vira encontro de passagem. Campeão é quem um rei manda chamar depois que o exército já tentou e não deu.",
     cor: DOURADO,
   },
 
@@ -68,6 +75,16 @@ export const TAGS: Record<string, Tag> = {
     texto:
       "Do nível 17 em diante o personagem não resolve mais problemas de reino, resolve problemas de mundo. Existe gente que jura ter visto, gente que jura que nunca existiu, e as duas contam a mesma história. Poucos chegam aqui. Menos ainda chegam inteiros.",
     cor: VINHO,
+  },
+
+  // ---------- Feito: o que o mundo passou a contar dele ----------
+
+  celebridade: {
+    nome: "Celebridade",
+    resumo: "Conhecido pelo nome",
+    texto:
+      "Esta não tem nada a ver com nível. Tem a ver com quem estava olhando. O bardo cuja canção é cantada em taverna por gente que nunca o viu de perto, o gladiador que a arena chama pelo nome antes de a porta abrir, o herói que uma cidade inteira viu salvar o que ia se perder. Fama abre porta que ouro não abre e marca um alvo nas costas que não sai mais. Sempre existe pelo menos uma versão errada dos fatos por aí, e costuma ser justamente a mais cantada.",
+    cor: ANIL,
   },
 
   // ---------- Origem: de onde a ficha veio ----------
