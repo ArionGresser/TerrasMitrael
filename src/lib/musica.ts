@@ -25,7 +25,8 @@ export type Ambiente =
   | "eventos"
   | "personagens"
   | "johnny"
-  | "vrakyr";
+  | "vrakyr"
+  | "pyhmm";
 
 const ARQUIVOS: Record<Ambiente, string> = {
   tema: "/musicas/tema.m4a",
@@ -34,6 +35,7 @@ const ARQUIVOS: Record<Ambiente, string> = {
   personagens: "/musicas/personagens.m4a",
   johnny: "/musicas/johnny-tema.m4a",
   vrakyr: "/musicas/vrakyr-tema.m4a",
+  pyhmm: "/musicas/pyhmm-tema.m4a",
 };
 
 /**
@@ -46,6 +48,7 @@ const ARQUIVOS: Record<Ambiente, string> = {
 const TEMA_DE_PERSONAGEM: Record<string, Ambiente> = {
   "johnny-bling-bling": "johnny",
   "vrakyr-windrose": "vrakyr",
+  "pyhmm-phylimm": "pyhmm",
 };
 
 /** A faixa que o tema cobre quando a da seção não existe. */
@@ -68,6 +71,7 @@ const TRECHO: Partial<Record<Ambiente, { inicio: number; fim: number }>> = {
   tema: { inicio: 2.3, fim: 256.8 },
   johnny: { inicio: 0.2, fim: 233.3 },
   vrakyr: { inicio: 0.2, fim: 311.5 },
+  pyhmm: { inicio: 0.55, fim: 130 },
 };
 
 /**
