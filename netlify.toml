@@ -30,6 +30,12 @@
 # nem volta para perguntar. Foi o que aconteceu com os retratos do Johnny e da
 # Lily. Um ano só vale para endereço que muda junto com o conteúdo, e nenhum
 # destes muda.
+#
+# Trocar a regra não desfaz o que já está guardado, justamente porque o
+# navegador não volta para perguntar. Por isso os retratos foram renomeados
+# para terminar em "-retrato": endereço novo é a única saída para quem já
+# tinha o erro guardado. Regra que ficou disto: imagem só entra no ar depois
+# que o arquivo dela já está na pasta, nunca antes.
 [[headers]]
   for = "/images/*"
   [headers.values]
