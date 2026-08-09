@@ -1,0 +1,374 @@
+HABILIDADES, MAGIAS E TALENTOS
+Terras de Mitrael, campanha de D&D 5.5e (regras de 2024)
+Cenário autoral de Arion Gresser. Site: https://terrasmitrael.netlify.app
+
+37 habilidades distintas, usadas por 4 personagens de nível 1.
+Se cada personagem tiver o próprio baralho, são 39 cartas no total:
+Dobre a Finados e Maestria com Armas aparecem em duas fichas cada.
+
+COMO LER ESTE ARQUIVO
+Cada habilidade é um bloco separado por uma linha de sinais de igual.
+Os campos vêm rotulados e sempre na mesma ordem. Campo ausente quer
+dizer que não se aplica àquela habilidade.
+
+SUGESTÃO DE CARTA
+Frente: NOME em destaque e TIPO como subtítulo. Quando existirem, a faixa
+de TEMPO, ALCANCE e DURAÇÃO logo abaixo. Corpo: DESCRIÇÃO. A ANOTAÇÃO vem
+destacada e separada, porque é o que o jogador escreveu de próprio punho na
+ficha e na mesa vale mais que a regra geral.
+QUEM USA serve para separar os baralhos e não precisa ser impresso.
+Nos textos, não use travessão. Se a frase pedir um, reescreva a frase.
+
+
+######################################################################
+## TRUQUES  (5)
+######################################################################
+
+======================================================================
+NOME: Chama Sagrada
+TIPO: Truque de Evocação
+ESCOLA: Evocação
+CÍRCULO: Truque
+TEMPO: 1 ação
+ALCANCE: 18 metros
+DURAÇÃO: Instantânea
+DESCRIÇÃO: Um clarão de fogo divino desce sobre a criatura escolhida. Ela faz uma salvaguarda de Destreza e, se falhar, sofre 1d8 de dano radiante. Cobertura não protege de uma luz que vem de cima.
+ANOTAÇÃO NA FICHA: 1d8 radiante
+QUEM USA: Lily Bouvardia
+
+======================================================================
+NOME: Dobre a Finados
+TIPO: Truque de Necromancia
+ESCOLA: Necromancia
+CÍRCULO: Truque
+TEMPO: 1 ação
+ALCANCE: 18 metros
+DURAÇÃO: Instantânea
+DESCRIÇÃO: O som de um sino de funeral ecoa em volta da criatura escolhida, e só ela escuta. Salvaguarda de Sabedoria ou 1d8 de dano necrótico. Se a criatura já estiver ferida, o dado vira 1d12.
+ANOTAÇÃO NA FICHA: 1d8 necromante, vida máxima 1d12
+QUEM USA: Johnny Bling Bling Money, Lily Bouvardia
+
+======================================================================
+NOME: Ilusão Menor
+TIPO: Truque de Ilusão
+ESCOLA: Ilusão
+CÍRCULO: Truque
+TEMPO: 1 ação
+ALCANCE: 9 metros
+DURAÇÃO: 1 minuto
+DESCRIÇÃO: Cria um som ou a imagem de um objeto, do tamanho de um cubo de metro e meio. Quem desconfiar pode gastar uma ação estudando a ilusão: acertando um teste de Investigação contra a CD da magia, percebe a farsa.
+ANOTAÇÃO NA FICHA: 1 minuto
+QUEM USA: Johnny Bling Bling Money
+
+======================================================================
+NOME: Orientação
+TIPO: Truque de Adivinhação
+ESCOLA: Adivinhação
+CÍRCULO: Truque
+TEMPO: 1 ação
+ALCANCE: Toque
+DURAÇÃO: Concentração, até 1 minuto
+DESCRIÇÃO: Toca uma criatura disposta e guia a mão dela. Uma vez antes da magia acabar, ela pode rolar 1d4 e somar o resultado a um teste de habilidade.
+QUEM USA: Lily Bouvardia
+
+======================================================================
+NOME: Resistência
+TIPO: Truque de Abjuração
+ESCOLA: Abjuração
+CÍRCULO: Truque
+TEMPO: 1 ação
+ALCANCE: Toque
+DURAÇÃO: Concentração, até 1 minuto
+DESCRIÇÃO: Toca uma criatura disposta e a abençoa contra o que vier. Uma vez antes da magia acabar, ela pode rolar 1d4 e somar o resultado a uma salvaguarda que esteja fazendo.
+QUEM USA: Lily Bouvardia
+
+######################################################################
+## MAGIAS  (3)
+######################################################################
+
+======================================================================
+NOME: Braços de Hadar
+TIPO: Magia de 1º Círculo, Conjuração
+ESCOLA: Conjuração
+CÍRCULO: 1º
+TEMPO: 1 ação
+ALCANCE: 3 metros (a partir de si)
+DURAÇÃO: Instantânea
+DESCRIÇÃO: Tentáculos rasgam o ar em volta do conjurador e alcançam tudo que estiver perto. Cada criatura na área faz uma salvaguarda de Força: falhando, sofre 2d6 de dano necrótico e não consegue usar reações até o próximo turno dela.
+ANOTAÇÃO NA FICHA: Ao redor, 2d6, prende, tentáculo
+QUEM USA: Johnny Bling Bling Money
+
+======================================================================
+NOME: Bênção
+TIPO: Magia de 1º Círculo, Encantamento
+ESCOLA: Encantamento
+CÍRCULO: 1º
+TEMPO: 1 ação
+ALCANCE: 9 metros
+DURAÇÃO: Concentração, até 1 minuto
+DESCRIÇÃO: Abençoa até três criaturas ao alcance. Enquanto durar, cada uma delas soma 1d4 às jogadas de ataque e às salvaguardas que fizer.
+QUEM USA: Lily Bouvardia
+
+======================================================================
+NOME: Curar Ferimentos
+TIPO: Magia de 1º Círculo, Abjuração
+ESCOLA: Abjuração
+CÍRCULO: 1º
+TEMPO: 1 ação
+ALCANCE: Toque
+DURAÇÃO: Instantânea
+DESCRIÇÃO: Toca uma criatura e fecha o que estava aberto. Ela recupera pontos de vida iguais à rolagem mais o modificador de conjuração. Não funciona em mortos-vivos nem em construtos.
+ANOTAÇÃO NA FICHA: 1d8
+QUEM USA: Lily Bouvardia
+
+######################################################################
+## INVOCAÇÕES MÍSTICAS  (1)
+######################################################################
+
+======================================================================
+NOME: Armadura das Sombras
+TIPO: Invocação Mística
+DESCRIÇÃO: A escuridão se assenta sobre o corpo como um tecido. Permite conjurar Armadura Arcana em si mesmo à vontade, sem gastar espaço de magia. Enquanto durar, a Classe de Armadura passa a ser 13 mais o modificador de Destreza.
+ANOTAÇÃO NA FICHA: Custo 0, armadura 15
+QUEM USA: Johnny Bling Bling Money
+
+######################################################################
+## CARACTERÍSTICAS DE CLASSE  (10)
+######################################################################
+
+======================================================================
+NOME: Ataque Furtivo
+TIPO: Característica de Classe
+DESCRIÇÃO: Sabe onde a armadura não cobre. Uma vez por turno, acrescenta 1d6 de dano a um ataque feito com vantagem, ou com um aliado ao lado do alvo, desde que a arma seja sutil ou de longo alcance.
+ANOTAÇÃO NA FICHA: +1d6
+QUEM USA: Pyhmm Phylimm
+
+======================================================================
+NOME: Conjuração
+TIPO: Característica de Classe
+DESCRIÇÃO: Sabe puxar magia para o mundo. Prepara suas magias a cada descanso longo e as conjura gastando espaços de magia, do círculo correspondente ou acima.
+QUEM USA: Lily Bouvardia
+
+======================================================================
+NOME: Defesa sem Armadura
+TIPO: Característica de Classe
+DESCRIÇÃO: Sem armadura no corpo, a Classe de Armadura passa a ser 10 mais Destreza mais Constituição. Escudo pode. Armadura atrapalha mais do que protege quem aprendeu a confiar no próprio couro.
+QUEM USA: Vrakyr WindRose
+
+======================================================================
+NOME: Especialista
+TIPO: Característica de Classe
+DESCRIÇÃO: Duas perícias deixaram de ser ofício e viraram vício: o bônus de proficiência conta em dobro nelas.
+ANOTAÇÃO NA FICHA: +2 em Furtividade e Prestidigitação
+QUEM USA: Pyhmm Phylimm
+
+======================================================================
+NOME: Fúria
+TIPO: Característica de Classe
+DESCRIÇÃO: Entra em fúria com uma ação bônus. Enquanto dura: vantagem em testes e salvaguardas de Força, dano extra em ataques corpo a corpo de Força, e resistência a dano contundente, cortante e perfurante. Não conjura nem se concentra em magia nenhuma. Dura um minuto, e acaba antes se o turno terminar sem ter atacado ninguém nem levado dano.
+ANOTAÇÃO NA FICHA: +2 de dano, duas vezes por descanso longo
+QUEM USA: Vrakyr WindRose
+
+======================================================================
+NOME: Gírias de Ladrão
+TIPO: Característica de Classe
+DESCRIÇÃO: Conhece o código que corre por baixo das cidades: palavras, sinais e marcas riscadas em portas que só quem é do meio entende.
+QUEM USA: Pyhmm Phylimm
+
+======================================================================
+NOME: Invocações Místicas
+TIPO: Característica de Classe
+DESCRIÇÃO: Fragmentos de conhecimento arrancados do próprio pacto, que ficam ligados ao corpo em vez de precisarem ser conjurados.
+QUEM USA: Johnny Bling Bling Money
+
+======================================================================
+NOME: Maestria com Armas
+TIPO: Característica de Classe
+DESCRIÇÃO: Domina a propriedade de maestria de duas armas escolhidas, e pode trocar essa escolha a cada descanso longo.
+QUEM USA: Pyhmm Phylimm, Vrakyr WindRose
+
+======================================================================
+NOME: Magia de Pacto
+TIPO: Característica de Classe
+DESCRIÇÃO: A magia não vem de estudo nem de fé, vem do acordo. Os espaços de magia são poucos, sempre do círculo mais alto que se possa lançar, e voltam já num descanso curto.
+QUEM USA: Johnny Bling Bling Money
+
+======================================================================
+NOME: Ordem Divina: Taumaturgo
+TIPO: Característica de Classe
+DESCRIÇÃO: Escolheu servir estudando o milagre em vez de empunhar a espada. Conhece um truque de clérigo a mais e soma o modificador de Sabedoria aos testes de Religião.
+QUEM USA: Lily Bouvardia
+
+######################################################################
+## TRAÇOS DE ESPÉCIE  (15)
+######################################################################
+
+======================================================================
+NOME: Afinidade Natural
+TIPO: Traço de Espécie
+DESCRIÇÃO: Proficiência em uma perícia à escolha entre Natureza, Sobrevivência, Lidar com Animais, Medicina e Adestrar Animais.
+QUEM USA: Lily Bouvardia
+
+======================================================================
+NOME: Agilidade Pequenina
+TIPO: Traço de Espécie
+DESCRIÇÃO: Atravessa o espaço de qualquer criatura que seja de tamanho maior que o seu, sem precisar pedir licença.
+QUEM USA: Pyhmm Phylimm
+
+======================================================================
+NOME: Astúcia Goblinoide
+TIPO: Traço de Espécie
+DESCRIÇÃO: Cabeça difícil de invadir. Vantagem em salvaguardas contra ser enfeitiçado e contra magia que force movimento.
+QUEM USA: Johnny Bling Bling Money
+
+======================================================================
+NOME: Cascos
+TIPO: Traço de Espécie
+DESCRIÇÃO: Os cascos traseiros são arma natural. O ataque desarmado com eles causa 1d4 mais o modificador de Força em dano contundente.
+ANOTAÇÃO NA FICHA: 1d4 + Força
+QUEM USA: Lily Bouvardia
+
+======================================================================
+NOME: Conhecimento de Pedras
+TIPO: Traço de Espécie
+DESCRIÇÃO: Com uma ação bônus, e desde que os pés estejam em pedra, ganha sentido sísmico até dezoito metros por dez minutos. É enxergar pela vibração o que está do outro lado da parede. Recarrega no descanso longo.
+ANOTAÇÃO NA FICHA: Vezes iguais ao bônus de proficiência
+QUEM USA: Vrakyr WindRose
+
+======================================================================
+NOME: Coragem
+TIPO: Traço de Espécie
+DESCRIÇÃO: Custa fazer um pequenino recuar. Vantagem em salvaguardas contra a condição amedrontado.
+QUEM USA: Pyhmm Phylimm
+
+======================================================================
+NOME: Fuga Ágil
+TIPO: Traço de Espécie
+DESCRIÇÃO: Sabe a hora de sair. Pode Desengajar ou Esconder usando uma ação bônus, sem abrir mão do turno.
+ANOTAÇÃO NA FICHA: Ação bônus, duas vezes
+QUEM USA: Johnny Bling Bling Money
+
+======================================================================
+NOME: Furtividade Natural
+TIPO: Traço de Espécie
+DESCRIÇÃO: Some atrás de qualquer criatura que seja pelo menos um tamanho maior, e continua escondido enquanto ela estiver ali.
+QUEM USA: Pyhmm Phylimm
+
+======================================================================
+NOME: Fúria dos Pequenos
+TIPO: Traço de Espécie
+DESCRIÇÃO: Quem é pequeno aprende a bater onde dói. Ao acertar uma criatura de tamanho maior que o seu, acrescenta dano extra ao golpe. Recarrega no descanso.
+ANOTAÇÃO NA FICHA: +2 de dano, duas vezes
+QUEM USA: Johnny Bling Bling Money
+
+======================================================================
+NOME: Investida
+TIPO: Traço de Espécie
+DESCRIÇÃO: Corpo de cavalo, e ele sabe o que fazer. Ao se mover pelo menos nove metros em linha reta e acertar um ataque corpo a corpo no mesmo turno, o golpe leva dano extra.
+QUEM USA: Lily Bouvardia
+
+======================================================================
+NOME: Resiliência Anã
+TIPO: Traço de Espécie
+DESCRIÇÃO: Resistência a dano de veneno e vantagem em salvaguardas para não ser envenenado. Gerações bebendo o que escorre da rocha acabam deixando marca no sangue.
+QUEM USA: Vrakyr WindRose
+
+======================================================================
+NOME: Sorte
+TIPO: Traço de Espécie
+DESCRIÇÃO: Quando tira 1 num d20 de ataque, teste de habilidade ou salvaguarda, rola de novo e usa o segundo resultado.
+QUEM USA: Pyhmm Phylimm
+
+======================================================================
+NOME: Tenacidade Anã
+TIPO: Traço de Espécie
+DESCRIÇÃO: O corpo aguenta mais do que a conta dizia que aguentaria: o máximo de pontos de vida sobe em um a cada nível.
+QUEM USA: Vrakyr WindRose
+
+======================================================================
+NOME: Visão no Escuro
+TIPO: Traço de Espécie
+DESCRIÇÃO: Enxerga na penumbra como se fosse luz plena até dezoito metros, e no escuro completo como se fosse penumbra, ainda que só em tons de cinza.
+ANOTAÇÃO NA FICHA: 18 metros
+QUEM USA: Johnny Bling Bling Money
+
+======================================================================
+NOME: Visão no Escuro
+TIPO: Traço de Espécie
+DESCRIÇÃO: Enxerga na penumbra como se fosse luz plena até trinta e seis metros, e no escuro completo como se fosse penumbra. Quem nasce debaixo da montanha enxerga mais longe no escuro do que quase todo mundo enxerga na luz.
+ANOTAÇÃO NA FICHA: 36 metros
+QUEM USA: Vrakyr WindRose
+
+######################################################################
+## TALENTOS  (3)
+######################################################################
+
+======================================================================
+NOME: Habilidoso
+TIPO: Talento
+DESCRIÇÃO: Três proficiências a mais, escolhidas entre perícias e ferramentas. Serve tanto para quem estudou muito quanto para quem mentiu bem sobre isso.
+QUEM USA: Johnny Bling Bling Money
+
+======================================================================
+NOME: Iniciado em Magia: Clérigo
+TIPO: Talento
+DESCRIÇÃO: Aprendeu dois truques e uma magia de 1º círculo da lista de clérigo. A magia pode ser conjurada uma vez por descanso longo sem gastar espaço.
+QUEM USA: Lily Bouvardia
+
+======================================================================
+NOME: Vigoroso
+TIPO: Talento
+DESCRIÇÃO: O máximo de pontos de vida sobe no dobro do nível. É o talento de quem apanhou muito e continuou de pé, e a ficha registra isso em número.
+QUEM USA: Vrakyr WindRose
+
+
+######################################################################
+## BARALHO DE CADA PERSONAGEM
+######################################################################
+
+Lily Bouvardia (12 cartas)
+  - Afinidade Natural
+  - Bênção
+  - Cascos
+  - Chama Sagrada
+  - Conjuração
+  - Curar Ferimentos
+  - Dobre a Finados
+  - Iniciado em Magia: Clérigo
+  - Investida
+  - Ordem Divina: Taumaturgo
+  - Orientação
+  - Resistência
+
+Johnny Bling Bling Money (11 cartas)
+  - Armadura das Sombras
+  - Astúcia Goblinoide
+  - Braços de Hadar
+  - Dobre a Finados
+  - Fuga Ágil
+  - Fúria dos Pequenos
+  - Habilidoso
+  - Ilusão Menor
+  - Invocações Místicas
+  - Magia de Pacto
+  - Visão no Escuro
+
+Pyhmm Phylimm (8 cartas)
+  - Agilidade Pequenina
+  - Ataque Furtivo
+  - Coragem
+  - Especialista
+  - Furtividade Natural
+  - Gírias de Ladrão
+  - Maestria com Armas
+  - Sorte
+
+Vrakyr WindRose (8 cartas)
+  - Conhecimento de Pedras
+  - Defesa sem Armadura
+  - Fúria
+  - Maestria com Armas
+  - Resiliência Anã
+  - Tenacidade Anã
+  - Vigoroso
+  - Visão no Escuro
