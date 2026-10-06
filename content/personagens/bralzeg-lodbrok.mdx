@@ -1,0 +1,205 @@
+export const meta = {
+  slug: "bralzeg-lodbrok",
+  nome: "Bralzeg Lodbrok",
+  epiteto: "A Urna de Bahamut",
+  originHero: true,
+  tags: ["fundador", "origin-hero", "ficha-antiga"],
+  ordem: 2.5,
+  resumo:
+    "Viu os pais morrerem num ataque de orcs aos dez anos e jurou virar o guerreiro mais forte que existe. Carrega dentro de si a alma de Bahamut, um Deus dos Dragões, e fica mais forte a cada dia que os dois se entendem.",
+  imagem: "/images/personagens/bralzeg-lodbrok-retrato.jpg",
+  imagemAlt:
+    "Bralzeg Lodbrok, jovem de cabelo branco em armadura prateada e roupa azul, apoiado numa espada de lâmina azul brilhante, com um escudo às costas",
+  identidade: {
+    idade: "22 anos",
+    altura: "1,90 m",
+    genero: "Masculino",
+    classe: "Guerreiro",
+    raca: "Dohtrohs",
+  },
+  pontos: {
+    vida: "117 HP",
+    nivel: "3",
+    experiencia: "85 / 375",
+    sanidade: "Não registrado",
+  },
+  personalidade: {
+    alinhamento: "Não registrado",
+    motivacoes:
+      "Vingar a morte dos pais e ser o melhor guerreiro das Terras de Mitrael",
+    inspiracoes:
+      "Alduin, o único a alcançar o patamar máximo de afinidade com o próprio espírito de dragão",
+    temperamento: "Corajoso, destemido e amigável",
+    defeitos: "Se culpa pela morte dos pais",
+    objetivo:
+      "Cumprir a promessa feita no dia em que perdeu os pais: tornar-se o guerreiro mais forte que existe, ajudar todos que precisarem e vingar a morte deles.",
+  },
+  atributos: [
+    { nome: "Força", valor: "15", modificador: "+2" },
+    { nome: "Constituição", valor: "15", modificador: "+2" },
+    { nome: "Destreza", valor: "15", modificador: "+2" },
+    { nome: "Agilidade", valor: "10", modificador: "0" },
+    { nome: "Inteligência", valor: "4", modificador: "-3" },
+    { nome: "Carisma", valor: "1", modificador: "-5" },
+  ],
+  habilidades: [
+    {
+      nome: "Conexão Furiosa",
+      tipo: "Passiva de raça · nível 1",
+      descricao:
+        "Durante a batalha, a conexão com Bahamut carrega de 0% a 100%, com 1d10 por turno. Quanto mais vida o guerreiro perde, mais furioso fica e mais forte o vínculo. Ao chegar a 100%, o patamar máximo, libera toda a sua força e perde a consciência: ataca todos ao redor e, quando o vínculo acaba, fica exausto.",
+    },
+    {
+      nome: "Imunidade Draconiana",
+      tipo: "De raça · desde 0% de conexão",
+      descricao:
+        "A urna fica imune ao elemento que o seu dragão dominava em vida.",
+    },
+    {
+      nome: "Lança-Chamas Draconiano",
+      tipo: "De raça · a partir de 25% de conexão",
+      descricao:
+        "A urna cospe o elemento do dragão cujo espírito habita dentro dela.",
+    },
+    {
+      nome: "Proteção Vinculada",
+      tipo: "De raça · a partir de 50% de conexão",
+      descricao:
+        "A urna invoca uma armadura feita do couro do seu dragão, que resiste bem a golpes de forte impacto.",
+    },
+    {
+      nome: "Vínculo Perfeito",
+      tipo: "De raça · com 100% de conexão",
+      descricao:
+        "A urna invoca as asas do dragão sem precisar da armadura e, com elas, armas e ferramentas no molde dele. Depois de chegar uma vez ao patamar máximo, cada novo vínculo com o espírito fica mais fácil.",
+    },
+    {
+      nome: "Crítico Poderoso",
+      tipo: "Nível 2 · uma carga, uma vez por batalha",
+      descricao:
+        "Concentra toda a força das espadas num único golpe, que não pode ser esquivado. Quebra escudos grandes e derruba criaturas enormes. Se o inimigo tentar se defender com espadas e o golpe acertar em cheio, ele morre.",
+    },
+    {
+      nome: "Beyblade Julgadora",
+      tipo: "Nível 1 · duas cargas · 1d10 ATK",
+      descricao:
+        "Gira a espada rapidamente em volta do corpo e causa dano contínuo em área durante uma rodada.",
+    },
+    {
+      nome: "Grito de Guerra",
+      tipo: "Nível 1 · três cargas, uma por batalha",
+      descricao:
+        "Um grito fervoroso que motiva todos os aliados. Eles, e o próprio Bralzeg, recebem +1 em todas as rolagens até o fim da batalha. O bônus não acumula, e o grito tem chance de assustar o inimigo.",
+    },
+  ],
+  mochila: {
+    armas: [
+      { nome: "Katana Dupla de Satetsu", valores: "2d15 ATK" },
+      {
+        nome: "Espada Renascida de Fogo",
+        valores: "1d25 ATK",
+        descricao:
+          "Causa 1d4 de dano incendiário a mais e pode chicotear rajadas de fogo.",
+      },
+    ],
+    equipamento: [
+      {
+        nome: "Armadura Vitoriosa",
+        valores: "1d10 DEF",
+        descricao:
+          "Armadura encantada que permite falar com os lendários antigos donos dela. Aumenta a sanidade e o controle mental, e dá +1 no dado de percepção.",
+      },
+      { nome: "Escudo arremessável", valores: "1d6 ATK · 1d8 DEF" },
+      { nome: "Escudo Dourado", valores: "1d10 DEF" },
+      { nome: "Elixir de Ferro" },
+      { nome: "2 Poções de HP (média)" },
+      { nome: "Corda de 3 m" },
+    ],
+    inventario: [
+      "Livro: Bestiário",
+      "Suprimentos de água e comida",
+      "Saquinho de bufunfa",
+      "Frasco vazio",
+    ],
+    moedas: [
+      { nome: "Pila", quantidade: "55", metal: "ouro" },
+      { nome: "Pratas", quantidade: "100", metal: "prata" },
+      { nome: "Trocados", quantidade: "990", metal: "bronze" },
+    ],
+  },
+  citacoes: [
+    "Não sirvo a ninguém, a nenhum reino. Sirvo a todos que necessitarem das minhas habilidades.",
+  ],
+};
+
+## A vila perto de Razavar
+
+Minha história começa quando eu era apenas uma criança, numa pequena vila perto
+de Razavar. Eu morava com meus pais, fazendeiros muito honestos e esforçados,
+que sempre faziam o melhor pelos filhos. Mas, num dia de verão, algo horrível
+aconteceu: a vila foi atacada por orcs.
+
+Meu pai mandou que nos escondêssemos na mesma hora. Eu tinha apenas dez anos e
+lembro de tudo. Meus pais foram terrivelmente assassinados por aqueles seres
+horríveis.
+
+Nesse exato dia eu fiz uma promessa: eu me tornaria o guerreiro mais forte que
+existe, ajudaria todos que precisassem e vingaria a morte dos meus pais.
+
+---
+
+## A ninguém e a todos
+
+Depois disso vaguei por todos os reinos, vilas e florestas. Em cada lugar que
+eu visitava encontrava algum sábio, guerreiro ou mago que me passava grande
+conhecimento, e foi isso que me tornou o que sou hoje.
+
+Ajudo a todos, não importa o que seja. Não sirvo a ninguém, a nenhum reino.
+Sirvo a todos que necessitarem das minhas habilidades.
+
+---
+
+## As visões
+
+No meu vigésimo aniversário, algo muito estranho aconteceu. Comecei a ter
+visões das Terras de Askar: guerras, conflitos e dragões, coisas que eu nunca
+tinha visto. Achava que eram apenas histórias, como as que meu pai me contava.
+Mas as visões foram ficando mais intensas, como se fossem reais. Aquilo começou
+a me incomodar, mas não me impediu de ajudar quem precisava.
+
+Eu estava na Floresta dos Putrefados, ajudando um bardo a recuperar sua flauta
+mágica, quando simplesmente perdi o controle do meu corpo. Não lembro de nada
+do que aconteceu naquele momento. Quando recuperei o controle, me deparei com a
+floresta toda destruída, com mortes e fogo por toda parte. Fiquei em choque,
+sem saber o que tinha acontecido.
+
+Achei o bardo que eu estava ajudando agonizando de dor no chão, com todo o lado
+esquerdo do corpo queimado. Quando cheguei para ajudá-lo, ele implorou que eu
+não o matasse. Sem entender nada, perguntei:
+
+> “Eu que fiz tudo isso?”
+
+O bardo respondeu:
+
+> “Sim. Você se transformou em um dragão e destruiu tudo o que tinha na sua
+> frente.”
+
+Tentei ajudá-lo, mas infelizmente ele acabou falecendo.
+
+---
+
+## Bahamut
+
+Logo depois, uma voz começou a conversar comigo dentro da minha cabeça. Achei
+que estava ficando louco, mas então ela se apresentou. Era Bahamut, um Deus dos
+Dragões, que teria morrido numa batalha contra os orcs, e eu teria sido
+escolhido para ser a sua urna.
+
+No início fiquei muito confuso, mas ele me contou a sua história e eu contei a
+minha. Foi muito difícil me acostumar a ter a alma de um dragão dentro do
+corpo, e ainda é. Nós conversamos muito, contamos histórias um para o outro, e
+quanto mais conectados ficamos, mais forte eu fico. Acabei descobrindo que
+ganhei alguns poderes vindos dele, como lançar fogo pelas mãos.
+
+Cada dia que passa fico mais conectado a ele, e isso me deixa muito feliz e com
+ainda mais vontade de cumprir a promessa que fiz aos meus pais.

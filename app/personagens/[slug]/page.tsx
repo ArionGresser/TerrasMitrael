@@ -15,7 +15,9 @@ import {
 import {
   FichaAntigaRegistro,
   FichaAntigaHabilidades,
+  FichaAntigaMochila,
   temFichaAntiga,
+  temMochilaAntiga,
 } from "@/components/personagens/FichaAntiga";
 import {
   FichaAtualNumeros,
@@ -227,6 +229,23 @@ export default async function PaginaPersonagem({ params }: Props) {
               legenda="Passivas, magias e golpes anotados na ficha antiga"
             />
             <FichaAntigaHabilidades meta={meta} />
+          </>
+        ),
+      });
+    }
+
+    if (temMochilaAntiga(meta)) {
+      abas.push({
+        chave: "mochila",
+        rotulo: "Mochila",
+        icone: <IconeMochila />,
+        conteudo: (
+          <>
+            <CabecalhoDaAba
+              titulo="Armas e mochila"
+              legenda="O que ele carregava, com os dados do jeito que a mesa usava"
+            />
+            <FichaAntigaMochila meta={meta} />
           </>
         ),
       });

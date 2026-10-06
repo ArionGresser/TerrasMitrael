@@ -12,6 +12,7 @@ import * as pyhmm from "@/content/personagens/pyhmm-phylimm.mdx";
 import * as johnny from "@/content/personagens/johnny-bling-bling.mdx";
 import * as vrakyr from "@/content/personagens/vrakyr-windrose.mdx";
 import * as egon from "@/content/personagens/egon-vitriol.mdx";
+import * as bralzeg from "@/content/personagens/bralzeg-lodbrok.mdx";
 
 export type Atributo = {
   nome: string;
@@ -23,8 +24,25 @@ export type Atributo = {
 export type Habilidade = {
   nome: string;
   tipo: string;
-  imagem: string;
+  /** Sem imagem, a ficha mostra o selo em branco no lugar. */
+  imagem?: string;
   descricao: string;
+};
+
+/** Um item da ficha antiga, com os dados escritos do jeito que a mesa usava. */
+export type ItemAntigo = {
+  nome: string;
+  /** Os dados do item, como "2d15 ATK" ou "1d10 DEF". */
+  valores?: string;
+  descricao?: string;
+};
+
+/** O que um personagem antigo carrega. Cada parte só aparece se existir. */
+export type MochilaAntiga = {
+  armas?: ItemAntigo[];
+  equipamento?: ItemAntigo[];
+  inventario?: string[];
+  moedas?: { nome: string; quantidade: string; metal?: string }[];
 };
 
 /** Um atributo na ficha de D&D 5.5e, com a salvaguarda junto. */
@@ -132,9 +150,12 @@ export type MetaPersonagem = {
     defeitos: string;
     objetivo: string;
     adoracao?: string;
+    /** Como ele é no trato, em poucas palavras. */
+    temperamento?: string;
   };
   atributos?: Atributo[];
   habilidades?: Habilidade[];
+  mochila?: MochilaAntiga;
 };
 
 export type Personagem = {
@@ -164,6 +185,7 @@ const MODULOS = [
   johnny,
   vrakyr,
   egon,
+  bralzeg,
 ];
 
 export const PERSONAGENS: Personagem[] = MODULOS.map((modulo) => ({

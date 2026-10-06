@@ -1,5 +1,6 @@
 import Image from "next/image";
-import type { MetaPersonagem } from "@/lib/personagens";
+import type { ItemAntigo, MetaPersonagem } from "@/lib/personagens";
+import { Selo } from "@/components/ui/Selo";
 
 /**
  * A ficha do sistema caseiro, preservada como registro histórico.
@@ -100,6 +101,9 @@ export function FichaAntigaRegistro({ meta }: { meta: MetaPersonagem }) {
           <Linha rotulo="Alinhamento" valor={personalidade.alinhamento} />
           <Linha rotulo="Motivações" valor={personalidade.motivacoes} />
           <Linha rotulo="Inspirações" valor={personalidade.inspiracoes} />
+          {personalidade.temperamento ? (
+            <Linha rotulo="Temperamento" valor={personalidade.temperamento} />
+          ) : null}
           <Linha rotulo="Defeitos" valor={personalidade.defeitos} />
           {personalidade.adoracao ? (
             <Linha rotulo="Adoração" valor={personalidade.adoracao} />
@@ -129,15 +133,27 @@ export function FichaAntigaHabilidades({ meta }: { meta: MetaPersonagem }) {
     <ul className="mt-7 space-y-5">
       {habilidades.map((habilidade) => (
         <li key={habilidade.nome} className="flex gap-3 sm:gap-4">
-          <div className="border-madeira-800/25 relative size-16 shrink-0 overflow-hidden rounded-sm border sm:size-20">
-            <Image
-              src={habilidade.imagem}
-              alt=""
-              fill
-              sizes="80px"
-              className="object-cover sepia-[0.15]"
-            />
-          </div>
+          {habilidade.imagem ? (
+            <div className="border-madeira-800/25 relative size-16 shrink-0 overflow-hidden rounded-sm border sm:size-20">
+              <Image
+                src={habilidade.imagem}
+                alt=""
+                fill
+                sizes="80px"
+                className="object-cover sepia-[0.15]"
+              />
+            </div>
+          ) : (
+            <span
+              title="A imagem desta habilidade ainda está sendo desenhada"
+              className="border-dourado-600/25 bg-pergaminho-200/50 flex size-16 shrink-0 flex-col items-center justify-center gap-1 rounded-sm border border-dashed sm:size-20"
+            >
+              <Selo variante="marca" aria-hidden className="size-7 opacity-25" />
+              <span className="font-titulo text-tinta-500 text-[0.45rem] leading-none tracking-[0.08em] uppercase">
+                em obra
+              </span>
+            </span>
+          )}
           <div className="min-w-0">
             <p className="font-titulo text-tinta-900 text-sm font-semibold">
               {habilidade.nome}
@@ -152,5 +168,100 @@ export function FichaAntigaHabilidades({ meta }: { meta: MetaPersonagem }) {
         </li>
       ))}
     </ul>
+  );
+}
+
+/* ============================================================
+   Aba "Mochila": o que ele carrega
+   ============================================================ */
+
+function ListaDeItens({ itens }: { itens: ItemAntigo[] }) {
+  return (
+    <ul className="mt-3 space-y-3">
+      {itens.map((item) => (
+        <li
+          key={item.nome}
+          className="border-dourado-600/20 border-b border-dashed pb-2.5 last:border-0"
+        >
+          <div className="flex flex-wrap items-baseline justify-between gap-x-3">
+            <span className="text-tinta-900 text-sm font-semibold">
+              {item.nome}
+            </span>
+            {item.valores ? (
+              <span className="text-tinta-700 text-sm">{item.valores}</span>
+            ) : null}
+          </div>
+          {item.descricao ? (
+            <p className="text-tinta-700 mt-1 text-sm leading-snug">
+              {item.descricao}
+            </p>
+          ) : null}
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+export function temMochilaAntiga(meta: MetaPersonagem): boolean {
+  const m = meta.mochila;
+  return Boolean(
+    m &&
+      (m.armas?.length ||
+        m.equipamento?.length ||
+        m.inventario?.length ||
+        m.moedas?.length)
+  );
+}
+
+export function FichaAntigaMochila({ meta }: { meta: MetaPersonagem }) {
+  const { mochila } = meta;
+  if (!mochila) return null;
+
+  return (
+    <div className="mt-7">
+      {mochila.armas?.length ? (
+        <Secao titulo="Armas">
+          <ListaDeItens itens={mochila.armas} />
+        </Secao>
+      ) : null}
+
+      {mochila.equipamento?.length ? (
+        <Secao titulo="Equipamento">
+          <ListaDeItens itens={mochila.equipamento} />
+        </Secao>
+      ) : null}
+
+      {mochila.inventario?.length ? (
+        <Secao titulo="Inventário">
+          <ul className="text-tinta-900 mt-3 space-y-1 text-sm">
+            {mochila.inventario.map((item) => (
+              <li key={item} className="marker:text-dourado-600 ml-4 list-disc">
+                {item}
+              </li>
+            ))}
+          </ul>
+        </Secao>
+      ) : null}
+
+      {mochila.moedas?.length ? (
+        <Secao titulo="Bolsa">
+          <ul className="mt-3 flex flex-wrap gap-x-6 gap-y-2">
+            {mochila.moedas.map((moeda) => (
+              <li key={moeda.nome} className="text-sm">
+                <span className="font-titulo text-tinta-900 font-bold">
+                  {moeda.quantidade}
+                </span>
+                <span className="text-tinta-700 ml-1">{moeda.nome}</span>
+                {moeda.metal ? (
+                  <span className="text-tinta-500 ml-1 text-xs">
+                    ({moeda.metal})
+                  </span>
+                ) : null}
+              </li>
+            ))}
+          </ul>
+        </Secao>
+      ) : null}
+    </div>
   );
 }
