@@ -1,6 +1,6 @@
 # Ícones das magias e habilidades
 
-Lista completa do que falta de arte no catálogo. São **37 habilidades**, todas
+Lista completa do que falta de arte no catálogo. São **43 habilidades**, todas
 sem ícone hoje.
 
 **O site funciona normalmente sem elas.** Onde não há arte, a ficha mostra um
@@ -35,9 +35,9 @@ Lily e na do Johnny ao mesmo tempo. Você desenha uma vez e vale para todo
 mundo, hoje e para quem entrar no grupo depois.
 
 Duas chaves podem apontar para o mesmo arquivo. **Visão no Escuro** aparece
-duas vezes na lista, uma do Johnny (18 m) e uma do Vrakyr (36 m), porque os
-alcances são diferentes, mas o desenho pode ser o mesmo. Isso reduz o trabalho
-real de 37 para **36 arquivos**.
+duas vezes na lista, uma do Johnny e do Egon (18 m) e uma do Vrakyr (36 m),
+porque os alcances são diferentes, mas o desenho pode ser o mesmo. Isso reduz
+o trabalho real de 43 para **42 arquivos**.
 
 ## A primeira geração não precisa de nada
 
@@ -49,7 +49,7 @@ lista é só do catálogo de D&D 5.5e.
 
 # Prioridade 1: truques, magias e invocações
 
-As nove que aparecem com mais destaque, no bloco de poderes da ficha.
+As onze que aparecem com mais destaque, no bloco de poderes da ficha.
 
 | Arquivo | Habilidade | Quem usa | O que faz | Ideia visual | Em inglês |
 |---|---|---|---|---|---|
@@ -61,11 +61,13 @@ As nove que aparecem com mais destaque, no bloco de poderes da ficha.
 | `curar-ferimentos.png` | Curar Ferimentos (1º círculo, Abjuração) | Lily | Toca uma criatura e devolve pontos de vida | Mão aberta com brilho no centro da palma, ou coração com raios | `heal`, `healing hands`, `life` |
 | `bencao.png` | Bênção (1º círculo, Encantamento) | Lily | Até três aliados somam 1d4 a ataques e salvaguardas | Mão erguida com dois dedos, com halo ou raios em volta | `blessing`, `praying hands`, `halo` |
 | `bracos-de-hadar.png` | Braços de Hadar (1º círculo, Conjuração) | Johnny | Tentáculos rasgam o ar em volta e prendem quem estiver perto, 2d6 necrótico | Vários tentáculos saindo de um ponto central para todos os lados | `tentacles`, `eldritch`, `dark grasp` |
+| `destruicao-divina.png` | Destruição Divina (1º círculo, Evocação) | Egon | Depois de acertar, o golpe acende e leva 2d8 radiante a mais | Lâmina ou machado com um clarão saindo do fio | `divine smite`, `glowing axe`, `holy strike` |
+| `duelo-compelido.png` | Duelo Compelido (1º círculo, Encantamento) | Egon | Desafia uma criatura, que perde a vontade de lutar com outro | Duas armas apontadas uma para a outra, ou luva jogada no chão | `duel`, `challenge`, `gauntlet` |
 | `armadura-das-sombras.png` | Armadura das Sombras (invocação mística) | Johnny | A escuridão veste o corpo, CA passa a 13 mais Destreza | Peitoral ou manto com a silhueta se desfazendo em fumaça nas bordas | `shadow armor`, `dark armor`, `cloak` |
 
 # Prioridade 2: características de classe
 
-Dez arquivos. Aparecem logo abaixo dos poderes.
+Onze arquivos. Aparecem logo abaixo dos poderes.
 
 | Arquivo | Habilidade | Quem usa | Ideia visual | Em inglês |
 |---|---|---|---|---|
@@ -74,15 +76,16 @@ Dez arquivos. Aparecem logo abaixo dos poderes.
 | `ataque-furtivo.png` | Ataque Furtivo | Pyhmm | Adaga nas costas, punhal pingando | `backstab`, `sneak attack` |
 | `especialista.png` | Especialista | Pyhmm | Mão hábil, gazua, medalha | `expertise`, `lockpick` |
 | `girias-de-ladrao.png` | Gírias de Ladrão | Pyhmm | Marca riscada em porta, sinal de mão | `thieves cant`, `secret sign` |
-| `maestria-com-armas.png` | Maestria com Armas | **Pyhmm e Vrakyr** | Espadas cruzadas, alvo | `weapon mastery`, `crossed swords` |
+| `maestria-com-armas.png` | Maestria com Armas | **Pyhmm, Vrakyr e Egon** | Espadas cruzadas, alvo | `weapon mastery`, `crossed swords` |
 | `defesa-sem-armadura.png` | Defesa sem Armadura | Vrakyr | Torso nu em posição de guarda, peito sem couraça | `unarmored`, `bare chest`, `barbarian` |
 | `furia.png` | Fúria | Vrakyr | Cabeça gritando, veias saltadas, punhos cerrados | `rage`, `berserker`, `roar` |
 | `invocacoes-misticas.png` | Invocações Místicas | Johnny | Olho arcano, runa flutuante | `eldritch`, `arcane rune`, `warlock` |
 | `magia-de-pacto.png` | Magia de Pacto | Johnny | Mão selando acordo, contrato, corrente | `pact`, `contract`, `bound hands` |
+| `maos-consagradas.png` | Mãos Consagradas | Egon | Mão aberta com luz escorrendo entre os dedos | `lay on hands`, `healing hand`, `holy hand` |
 
 # Prioridade 3: traços de espécie
 
-Quinze na lista, catorze arquivos, porque as duas Visões no Escuro podem
+Dezessete na lista, dezesseis arquivos, porque as duas Visões no Escuro podem
 compartilhar o desenho.
 
 | Arquivo | Traço | Quem usa | Ideia visual | Em inglês |
@@ -97,21 +100,24 @@ compartilhar o desenho.
 | `furia-dos-pequenos.png` | Fúria dos Pequenos | Johnny | Punho pequeno, figura pequena atacando grande | `fury`, `small fist`, `giant slayer` |
 | `fuga-agil.png` | Fuga Ágil | Johnny | Pés correndo, rastro de poeira | `run`, `escape`, `sprint` |
 | `astucia-goblinoide.png` | Astúcia Goblinoide | Johnny | Cabeça de goblin, cérebro protegido | `goblin`, `cunning`, `mind shield` |
-| `visao-no-escuro.png` | Visão no Escuro, 18 m | Johnny | Olho brilhando no escuro | `darkvision`, `glowing eye` |
+| `visao-no-escuro.png` | Visão no Escuro, 18 m | Johnny e Egon | Olho brilhando no escuro | `darkvision`, `glowing eye` |
 | `visao-no-escuro.png` | Visão no Escuro, 36 m | Vrakyr | **Pode usar o mesmo arquivo acima** | |
 | `resiliencia-ana.png` | Resiliência Anã | Vrakyr | Frasco de veneno riscado, escudo com gota | `poison resistance`, `antidote` |
 | `tenacidade-ana.png` | Tenacidade Anã | Vrakyr | Anão firme de pé, bigorna, raiz agarrada na pedra | `tough`, `anvil`, `sturdy` |
+| `instinto-cacador.png` | Instinto Caçador | Egon | Pegada de felino, olho de caçador | `paw print`, `hunter`, `cat eye` |
+| `rugido-aterrador.png` | Rugido Aterrador | Egon | Cabeça de leão rugindo, ondas saindo da boca | `lion roar`, `roar`, `fear` |
 | `conhecimento-de-pedras.png` | Conhecimento de Pedras | Vrakyr | Mão encostada em parede de rocha, ouvido na pedra, veio mineral | `stone sense`, `rock`, `mining` |
 
 # Prioridade 4: talentos
 
-Três arquivos.
+Quatro arquivos.
 
 | Arquivo | Talento | Quem usa | Ideia visual | Em inglês |
 |---|---|---|---|---|
 | `iniciado-em-magia-clerigo.png` | Iniciado em Magia: Clérigo | Lily | Símbolo sagrado com faísca | `magic initiate`, `holy spark` |
 | `habilidoso.png` | Habilidoso | Johnny | Três ferramentas, mãos ocupadas | `skilled`, `tools`, `versatile` |
 | `vigoroso.png` | Vigoroso | Vrakyr | Coração forte, pulmão, figura carregando peso | `endurance`, `stamina`, `strong heart` |
+| `atacante-selvagem.png` | Atacante Selvagem | Egon | Machado descendo com rastro de golpe, ou dois dados lado a lado | `savage`, `axe strike`, `brutal` |
 
 ---
 
@@ -125,9 +131,11 @@ Se você preferir fechar uma ficha de cada vez em vez de seguir a prioridade:
 | **Johnny Bling Bling** | 11 | dobre-a-finados, ilusao-menor, bracos-de-hadar, armadura-das-sombras, invocacoes-misticas, magia-de-pacto, visao-no-escuro, furia-dos-pequenos, fuga-agil, astucia-goblinoide, habilidoso |
 | **Pyhmm Phylimm** | 8 | ataque-furtivo, especialista, girias-de-ladrao, maestria-com-armas, agilidade-pequenina, coragem, furtividade-natural, sorte |
 | **Vrakyr WindRose** | 8 | defesa-sem-armadura, furia, maestria-com-armas, visao-no-escuro, resiliencia-ana, tenacidade-ana, conhecimento-de-pedras, vigoroso |
+| **Egon Vitriol** | 8 | destruicao-divina, duelo-compelido, maestria-com-armas, maos-consagradas, visao-no-escuro, instinto-cacador, rugido-aterrador, atacante-selvagem |
 
-Dobre a Finados conta para dois, e Maestria com Armas também, então a soma das
-colunas passa de 36 sem que isso signifique arquivo a mais.
+Dobre a Finados conta para dois, Maestria com Armas para três e o desenho da
+Visão no Escuro para três, então a soma das colunas passa de 42 sem que isso
+signifique arquivo a mais.
 
 ---
 

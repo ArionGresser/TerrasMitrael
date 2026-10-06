@@ -103,7 +103,7 @@ guerra).
 
 ## 3. A mesa atual
 
-Quatro personagens de nível 1 nas regras de 2024. **Sempre confirme com o Arion
+Cinco personagens de nível 1 nas regras de 2024. **Sempre confirme com o Arion
 quem esteve na mesa e em que nível estão antes de calcular encontros**, porque
 isso muda a cada sessão.
 
@@ -121,6 +121,13 @@ isso muda a cada sessão.
   Atletismo. Segurou uma viga mestra com as costas para onze pessoas saírem e
   ficou dois dias soterrado. Procura o clã que se espalhou e quer dinheiro para
   desinterditar a mina.
+- **Egon Vitriol**, o Paladino Leonino. Força e Carisma, machado duplo,
+  Intimidação e Persuasão. Único do bando Vitriol que não enlouqueceu quando a
+  maldição caiu sobre Undaryus no fim da guerra: os outros se voltaram uns
+  contra os outros, tomados por uma ira sem explicação. A juba dele ficou
+  pálida, e ele a esconde sob um capuz porque cortá-la seria desonrar os
+  irmãos. Jurou que o rugido dele honraria os que não se levantaram, e procura
+  um jeito de devolver o juízo aos Vitriol que ainda vivem.
 
 Existe também uma **primeira geração** de heróis, de um sistema caseiro
 antigo, que já jogou e faz parte do passado do mundo: Howai (ladino khajiit),
@@ -152,6 +159,10 @@ Prefira sempre puxar de um destes a inventar uma ameaça nova do zero:
    toque desde que algo desceu pelas fendas depois da guerra.
 10. **As alas dos amaldiçoados** no Vernáculo, cheias de casos que ninguém sabe
     tratar.
+11. **Os Vitriol que ainda vivem**, um bando leonino preso à sede de sangue
+    desde o fim da guerra. Ninguém sabe onde estão, quantos sobraram, nem se a
+    maldição tem volta. Converse com o Arion antes de decidir qualquer uma
+    dessas três coisas.
 
 ## 5. O tom
 
@@ -190,9 +201,9 @@ forma:
 
 1. **A pergunta da sessão.** Uma frase: qual escolha difícil essa sessão coloca
    na mesa. Se não existe escolha, é corredor, não aventura.
-2. **O gancho.** Por que estes quatro personagens em particular se envolvem.
+2. **O gancho.** Por que estes personagens em particular se envolvem.
    Amarre em pelo menos uma ficha (a mina do Vrakyr, os pais do Pyhmm, o pacto
-   do Johnny, os votos da Lily).
+   do Johnny, os votos da Lily, o bando do Egon).
 3. **Três cenas ou frentes**, não um roteiro linear. Para cada uma: o que a
    cena quer, o que dá errado, e a saída que ninguém esperava.
 4. **NPCs**, no máximo três por sessão, cada um com nome, uma frase de aparência

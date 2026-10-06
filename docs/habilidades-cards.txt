@@ -2,9 +2,9 @@ HABILIDADES, MAGIAS E TALENTOS
 Terras de Mitrael, campanha de D&D 5.5e (regras de 2024)
 Cenário autoral de Arion Gresser. Site: https://terrasmitrael.netlify.app
 
-37 habilidades distintas, usadas por 4 personagens de nível 1.
-Se cada personagem tiver o próprio baralho, são 39 cartas no total:
-Dobre a Finados e Maestria com Armas aparecem em duas fichas cada.
+43 habilidades distintas, usadas por 5 personagens.
+Se cada personagem tiver o próprio baralho, são 47 cartas no total.
+Dobre a Finados aparece em duas fichas; Maestria com Armas aparece em três fichas; Visão no Escuro aparece em duas fichas.
 
 COMO LER ESTE ARQUIVO
 Cada habilidade é um bloco separado por uma linha de sinais de igual.
@@ -82,9 +82,21 @@ DURAÇÃO: Concentração, até 1 minuto
 DESCRIÇÃO: Toca uma criatura disposta e a abençoa contra o que vier. Uma vez antes da magia acabar, ela pode rolar 1d4 e somar o resultado a uma salvaguarda que esteja fazendo.
 QUEM USA: Lily Bouvardia
 
+
 ######################################################################
-## MAGIAS  (3)
+## MAGIAS  (5)
 ######################################################################
+
+======================================================================
+NOME: Bênção
+TIPO: Magia de 1º Círculo, Encantamento
+ESCOLA: Encantamento
+CÍRCULO: 1º
+TEMPO: 1 ação
+ALCANCE: 9 metros
+DURAÇÃO: Concentração, até 1 minuto
+DESCRIÇÃO: Abençoa até três criaturas ao alcance. Enquanto durar, cada uma delas soma 1d4 às jogadas de ataque e às salvaguardas que fizer.
+QUEM USA: Lily Bouvardia
 
 ======================================================================
 NOME: Braços de Hadar
@@ -99,17 +111,6 @@ ANOTAÇÃO NA FICHA: Ao redor, 2d6, prende, tentáculo
 QUEM USA: Johnny Bling Bling Money
 
 ======================================================================
-NOME: Bênção
-TIPO: Magia de 1º Círculo, Encantamento
-ESCOLA: Encantamento
-CÍRCULO: 1º
-TEMPO: 1 ação
-ALCANCE: 9 metros
-DURAÇÃO: Concentração, até 1 minuto
-DESCRIÇÃO: Abençoa até três criaturas ao alcance. Enquanto durar, cada uma delas soma 1d4 às jogadas de ataque e às salvaguardas que fizer.
-QUEM USA: Lily Bouvardia
-
-======================================================================
 NOME: Curar Ferimentos
 TIPO: Magia de 1º Círculo, Abjuração
 ESCOLA: Abjuração
@@ -120,6 +121,31 @@ DURAÇÃO: Instantânea
 DESCRIÇÃO: Toca uma criatura e fecha o que estava aberto. Ela recupera pontos de vida iguais à rolagem mais o modificador de conjuração. Não funciona em mortos-vivos nem em construtos.
 ANOTAÇÃO NA FICHA: 1d8
 QUEM USA: Lily Bouvardia
+
+======================================================================
+NOME: Destruição Divina
+TIPO: Magia de 1º Círculo, Evocação
+ESCOLA: Evocação
+CÍRCULO: 1º
+TEMPO: Ação bônus, logo após acertar
+ALCANCE: Pessoal
+DURAÇÃO: Instantânea
+DESCRIÇÃO: Logo depois de acertar uma criatura com arma corpo a corpo ou ataque desarmado, o golpe acende. O alvo sofre 2d8 de dano radiante a mais, e mais 1d8 se for corruptor ou morto-vivo. Cada círculo acima do primeiro soma outro 1d8.
+ANOTAÇÃO NA FICHA: Ação bônus, toque, só voz
+QUEM USA: Egon Vitriol
+
+======================================================================
+NOME: Duelo Compelido
+TIPO: Magia de 1º Círculo, Encantamento
+ESCOLA: Encantamento
+CÍRCULO: 1º
+TEMPO: Ação bônus
+ALCANCE: 9 metros
+DURAÇÃO: Concentração, até 1 minuto
+DESCRIÇÃO: Aponta uma criatura e a chama para a briga. Ela faz uma salvaguarda de Sabedoria: falhando, tem desvantagem para atacar qualquer um que não seja o conjurador e não consegue se afastar dele mais de nove metros por vontade própria. Acaba antes se o conjurador atacar outro, mirar magia em outro inimigo, terminar o turno longe demais do alvo ou se um aliado ferir o desafiado.
+ANOTAÇÃO NA FICHA: Ação bônus, 1 minuto, 9 m, só voz
+QUEM USA: Egon Vitriol
+
 
 ######################################################################
 ## INVOCAÇÕES MÍSTICAS  (1)
@@ -132,8 +158,9 @@ DESCRIÇÃO: A escuridão se assenta sobre o corpo como um tecido. Permite conju
 ANOTAÇÃO NA FICHA: Custo 0, armadura 15
 QUEM USA: Johnny Bling Bling Money
 
+
 ######################################################################
-## CARACTERÍSTICAS DE CLASSE  (10)
+## CARACTERÍSTICAS DE CLASSE  (11)
 ######################################################################
 
 ======================================================================
@@ -185,7 +212,7 @@ QUEM USA: Johnny Bling Bling Money
 NOME: Maestria com Armas
 TIPO: Característica de Classe
 DESCRIÇÃO: Domina a propriedade de maestria de duas armas escolhidas, e pode trocar essa escolha a cada descanso longo.
-QUEM USA: Pyhmm Phylimm, Vrakyr WindRose
+QUEM USA: Egon Vitriol, Pyhmm Phylimm, Vrakyr WindRose
 
 ======================================================================
 NOME: Magia de Pacto
@@ -194,13 +221,20 @@ DESCRIÇÃO: A magia não vem de estudo nem de fé, vem do acordo. Os espaços d
 QUEM USA: Johnny Bling Bling Money
 
 ======================================================================
+NOME: Mãos Consagradas
+TIPO: Característica de Classe
+DESCRIÇÃO: Carrega no toque uma reserva de cura que enche de novo a cada descanso longo, igual a cinco vezes o nível. Com uma ação bônus, encosta a mão numa criatura e gasta dessa reserva quantos pontos quiser. Gastando cinco de uma vez, pode em vez disso arrancar dela um veneno.
+QUEM USA: Egon Vitriol
+
+======================================================================
 NOME: Ordem Divina: Taumaturgo
 TIPO: Característica de Classe
 DESCRIÇÃO: Escolheu servir estudando o milagre em vez de empunhar a espada. Conhece um truque de clérigo a mais e soma o modificador de Sabedoria aos testes de Religião.
 QUEM USA: Lily Bouvardia
 
+
 ######################################################################
-## TRAÇOS DE ESPÉCIE  (15)
+## TRAÇOS DE ESPÉCIE  (17)
 ######################################################################
 
 ======================================================================
@@ -249,17 +283,23 @@ ANOTAÇÃO NA FICHA: Ação bônus, duas vezes
 QUEM USA: Johnny Bling Bling Money
 
 ======================================================================
+NOME: Fúria dos Pequenos
+TIPO: Traço de Espécie
+DESCRIÇÃO: Quem é pequeno aprende a bater onde dói. Ao acertar uma criatura de tamanho maior que o seu, acrescenta dano extra ao golpe. Recarrega no descanso.
+ANOTAÇÃO NA FICHA: +2 de dano, duas vezes
+QUEM USA: Johnny Bling Bling Money
+
+======================================================================
 NOME: Furtividade Natural
 TIPO: Traço de Espécie
 DESCRIÇÃO: Some atrás de qualquer criatura que seja pelo menos um tamanho maior, e continua escondido enquanto ela estiver ali.
 QUEM USA: Pyhmm Phylimm
 
 ======================================================================
-NOME: Fúria dos Pequenos
+NOME: Instinto Caçador
 TIPO: Traço de Espécie
-DESCRIÇÃO: Quem é pequeno aprende a bater onde dói. Ao acertar uma criatura de tamanho maior que o seu, acrescenta dano extra ao golpe. Recarrega no descanso.
-ANOTAÇÃO NA FICHA: +2 de dano, duas vezes
-QUEM USA: Johnny Bling Bling Money
+DESCRIÇÃO: Proficiência numa perícia, escolhida entre Atletismo, Intimidação, Percepção e Sobrevivência. Quem cresce num bando aprende cedo a ler o terreno antes de pisar nele.
+QUEM USA: Egon Vitriol
 
 ======================================================================
 NOME: Investida
@@ -272,6 +312,12 @@ NOME: Resiliência Anã
 TIPO: Traço de Espécie
 DESCRIÇÃO: Resistência a dano de veneno e vantagem em salvaguardas para não ser envenenado. Gerações bebendo o que escorre da rocha acabam deixando marca no sangue.
 QUEM USA: Vrakyr WindRose
+
+======================================================================
+NOME: Rugido Aterrador
+TIPO: Traço de Espécie
+DESCRIÇÃO: Com uma ação bônus, solta um rugido. Cada criatura escolhida a até três metros que consiga ouvir faz uma salvaguarda de Sabedoria, com CD 8 mais Constituição mais proficiência: falhando, fica amedrontada até o fim do próximo turno do leonino. Recarrega num descanso curto ou longo.
+QUEM USA: Egon Vitriol
 
 ======================================================================
 NOME: Sorte
@@ -290,7 +336,7 @@ NOME: Visão no Escuro
 TIPO: Traço de Espécie
 DESCRIÇÃO: Enxerga na penumbra como se fosse luz plena até dezoito metros, e no escuro completo como se fosse penumbra, ainda que só em tons de cinza.
 ANOTAÇÃO NA FICHA: 18 metros
-QUEM USA: Johnny Bling Bling Money
+QUEM USA: Egon Vitriol, Johnny Bling Bling Money
 
 ======================================================================
 NOME: Visão no Escuro
@@ -299,9 +345,16 @@ DESCRIÇÃO: Enxerga na penumbra como se fosse luz plena até trinta e seis metr
 ANOTAÇÃO NA FICHA: 36 metros
 QUEM USA: Vrakyr WindRose
 
+
 ######################################################################
-## TALENTOS  (3)
+## TALENTOS  (4)
 ######################################################################
+
+======================================================================
+NOME: Atacante Selvagem
+TIPO: Talento
+DESCRIÇÃO: Uma vez por turno, ao acertar com uma arma, rola os dados de dano dela duas vezes e fica com o resultado que preferir. É o talento de quem aprendeu a lutar onde não existe segunda chance.
+QUEM USA: Egon Vitriol
 
 ======================================================================
 NOME: Habilidoso
@@ -340,6 +393,16 @@ Lily Bouvardia (12 cartas)
   - Orientação
   - Resistência
 
+Pyhmm Phylimm (8 cartas)
+  - Agilidade Pequenina
+  - Ataque Furtivo
+  - Coragem
+  - Especialista
+  - Furtividade Natural
+  - Gírias de Ladrão
+  - Maestria com Armas
+  - Sorte
+
 Johnny Bling Bling Money (11 cartas)
   - Armadura das Sombras
   - Astúcia Goblinoide
@@ -353,16 +416,6 @@ Johnny Bling Bling Money (11 cartas)
   - Magia de Pacto
   - Visão no Escuro
 
-Pyhmm Phylimm (8 cartas)
-  - Agilidade Pequenina
-  - Ataque Furtivo
-  - Coragem
-  - Especialista
-  - Furtividade Natural
-  - Gírias de Ladrão
-  - Maestria com Armas
-  - Sorte
-
 Vrakyr WindRose (8 cartas)
   - Conhecimento de Pedras
   - Defesa sem Armadura
@@ -371,4 +424,14 @@ Vrakyr WindRose (8 cartas)
   - Resiliência Anã
   - Tenacidade Anã
   - Vigoroso
+  - Visão no Escuro
+
+Egon Vitriol (8 cartas)
+  - Atacante Selvagem
+  - Destruição Divina
+  - Duelo Compelido
+  - Instinto Caçador
+  - Maestria com Armas
+  - Mãos Consagradas
+  - Rugido Aterrador
   - Visão no Escuro
