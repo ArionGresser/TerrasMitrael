@@ -131,8 +131,11 @@ isso muda a cada sessão.
 
 Existe também uma **primeira geração** de heróis, de um sistema caseiro
 antigo, que já jogou e faz parte do passado do mundo: Howai (ladino khajiit),
-Levi (bardo fauno), Filavandrel (alquimista), Nero Greyrattus (drow
-necromante), Rargnos Brass (xamã meio-Curinqueã) e Tyr Vidar (viking aesiris).
+Levi (bardo fauno), Bralzeg Lodbrok (guerreiro dohtrohs, que carrega dentro de
+si a alma de Bahamut, um Deus dos Dragões morto lutando contra os orcs),
+Filavandrel (alquimista), Nero Greyrattus (drow necromante), Rargnos Brass
+(xamã meio-Curinqueã) e Tyr Vidar (viking aesiris). Howai, Levi e Bralzeg são
+os fundadores, o trio da primeiríssima campanha.
 Use como lenda, NPC ou eco, nunca como personagem jogável da mesa atual.
 
 ## 4. Os ganchos que o mundo já deixou em aberto
