@@ -7,6 +7,7 @@ import {
   retomarMusica,
   fracaoDoVolume,
   definirVolumeDaMusica,
+  anteciparRota,
   VOLUME_PADRAO,
 } from "@/lib/musica";
 
@@ -38,7 +39,8 @@ export function ControleSom() {
     prepararEfeitos();
   }, []);
 
-  // Som de página virando ao seguir qualquer link interno.
+  // Som de página virando ao seguir qualquer link interno, e a música do
+  // destino já começando a vir no mesmo clique.
   // Fica aqui, num único ouvinte, em vez de espalhado por cada botão
   // do site: assim nenhum link novo precisa lembrar de tocar som.
   useEffect(() => {
@@ -51,6 +53,7 @@ export function ControleSom() {
       if (alvo.getAttribute("target") === "_blank") return;
 
       tocar("virarPagina");
+      anteciparRota(new URL(href, window.location.href).pathname);
     }
 
     document.addEventListener("click", aoClicar);

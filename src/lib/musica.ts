@@ -8,8 +8,10 @@ import { somLigado } from "./som";
  * não existir o site funciona em silêncio, sem erro.
  *
  * Três regras a mais, que só a música precisa:
- * 1. Nada é baixado por quem desligou o som. Quem chega e desliga no primeiro
- *    toque não paga por nenhum megabyte de faixa.
+ * 1. Nada é baixado por quem desligou o som, nem por quem está em conexão 2G
+ *    ou com economia de dados ligada. Para os demais, a faixa da página
+ *    começa a vir só depois que o site terminou de carregar, sem disputar
+ *    banda com imagem nenhuma.
  * 2. A música abaixa sozinha enquanto uma narração toca. Sem isso ninguém
  *    entende a história do personagem por cima do fundo musical.
  * 3. Seção sem faixa própria toca o tema. Enquanto faltarem arquivos, o site
@@ -111,6 +113,8 @@ const CHAVE_VOLUME = "mitrael:volume";
 type Faixa = { elemento: HTMLAudioElement; ganho: GainNode };
 
 const cache = new Map<Ambiente, Faixa>();
+/** Faixas já baixando antes do primeiro toque, ainda sem saída de som. */
+const aquecidas = new Map<Ambiente, HTMLAudioElement>();
 const indisponivel = new Set<Ambiente>();
 
 let contexto: AudioContext | null = null;
@@ -266,16 +270,8 @@ function ligar(ambiente: Ambiente): Faixa | null {
   const ctx = obterContexto();
   if (!ctx) return null;
 
-  const elemento = new Audio(ARQUIVOS[ambiente]);
-  elemento.loop = true;
-  elemento.preload = "auto";
-  elemento.addEventListener("error", () => {
-    // Arquivo ausente: risca esta faixa e cai no tema, em vez de emudecer
-    indisponivel.add(ambiente);
-    cache.delete(ambiente);
-    elemento.pause();
-    if (ambiente !== RESERVA && atual === ambiente) tocarAmbiente(ambiente);
-  });
+  const elemento = aquecidas.get(ambiente) ?? criarElemento(ambiente);
+  aquecidas.delete(ambiente);
 
   const ganho = ctx.createGain();
   ganho.gain.value = 0;
@@ -287,6 +283,78 @@ function ligar(ambiente: Ambiente): Faixa | null {
   return faixa;
 }
 
+function criarElemento(ambiente: Ambiente): HTMLAudioElement {
+  const elemento = new Audio();
+  elemento.loop = true;
+  elemento.preload = "auto";
+  elemento.addEventListener("error", () => {
+    // Arquivo ausente: risca esta faixa e cai no tema, em vez de emudecer
+    indisponivel.add(ambiente);
+    cache.delete(ambiente);
+    aquecidas.delete(ambiente);
+    elemento.pause();
+    if (ambiente !== RESERVA && atual === ambiente) tocarAmbiente(ambiente);
+  });
+  elemento.src = ARQUIVOS[ambiente];
+
+  // Já nasce apontando para depois da abertura muda. Saltar só depois de
+  // tocar obrigava o navegador a buscar de novo um pedaço que nem tinha
+  // chegado, e era mais uma espera na primeira nota.
+  const trecho = TRECHO[ambiente];
+  if (trecho) elemento.currentTime = trecho.inicio;
+  return elemento;
+}
+
+/** Conexão em que cada megabyte pesa: aí a faixa só vem quando pedida. */
+function conexaoEconomica(): boolean {
+  const conexao = (
+    navigator as Navigator & {
+      connection?: { saveData?: boolean; effectiveType?: string };
+    }
+  ).connection;
+  if (!conexao) return false;
+  return Boolean(conexao.saveData) || /2g$/.test(conexao.effectiveType ?? "");
+}
+
+/**
+ * Começa a baixar a faixa da página antes do primeiro toque.
+ *
+ * O navegador não deixa tocar antes disso, mas deixa baixar. Sem isto, o
+ * primeiro toque disparava o download do zero e a música chegava segundos
+ * depois. Espera o site terminar de carregar e o navegador ficar ocioso,
+ * para nunca atrasar texto ou imagem.
+ */
+function preaquecer(ambiente: Ambiente) {
+  if (typeof window === "undefined") return;
+  if (indisponivel.has(ambiente) || cache.has(ambiente)) return;
+  if (aquecidas.has(ambiente) || conexaoEconomica()) return;
+
+  const agir = () => {
+    if (houveGesto || atual !== ambiente || !somLigado()) return;
+    if (aquecidas.has(ambiente) || cache.has(ambiente)) return;
+    aquecidas.set(ambiente, criarElemento(ambiente));
+  };
+  const quandoOcioso = () => {
+    if ("requestIdleCallback" in window) {
+      window.requestIdleCallback(agir, { timeout: 3000 });
+    } else {
+      setTimeout(agir, 1500);
+    }
+  };
+
+  if (document.readyState === "complete") quandoOcioso();
+  else window.addEventListener("load", quandoOcioso, { once: true });
+}
+
+/**
+ * Os eventos que o navegador aceita como "a pessoa pediu som".
+ *
+ * No celular o que vale é o dedo soltando a tela, e não encostando. Esperar
+ * só o encostar fazia o primeiro toque ser ignorado, e a música dependia
+ * de um segundo toque que ninguém sabia que precisava dar.
+ */
+const GESTOS = ["pointerdown", "pointerup", "touchend", "click", "keydown"];
+
 /**
  * Depois de recarregar a página, o navegador proíbe qualquer som que a
  * pessoa não tenha pedido naquele carregamento. É regra do navegador, não
@@ -296,16 +364,29 @@ function aguardarGesto() {
   if (esperandoGesto || typeof window === "undefined") return;
   esperandoGesto = true;
 
-  const retomar = () => {
+  const retomar = (evento: Event) => {
+    // Encostar o dedo não libera som, só soltar. O clique do mouse, sim.
+    if (
+      evento.type === "pointerdown" &&
+      (evento as PointerEvent).pointerType !== "mouse"
+    ) {
+      return;
+    }
+    if (evento.type === "keydown" && (evento as KeyboardEvent).key === "Escape") {
+      return;
+    }
+
     esperandoGesto = false;
     houveGesto = true;
-    document.removeEventListener("pointerdown", retomar);
-    document.removeEventListener("keydown", retomar);
+    for (const gesto of GESTOS) {
+      document.removeEventListener(gesto, retomar, true);
+    }
     if (atual) tocarAmbiente(atual);
   };
 
-  document.addEventListener("pointerdown", retomar, { once: true });
-  document.addEventListener("keydown", retomar, { once: true });
+  for (const gesto of GESTOS) {
+    document.addEventListener(gesto, retomar, true);
+  }
 }
 
 /** A faixa que vai tocar de verdade: a da seção, ou o tema no lugar dela. */
@@ -313,7 +394,34 @@ function resolver(ambiente: Ambiente): Ambiente {
   return indisponivel.has(ambiente) ? RESERVA : ambiente;
 }
 
-/** Entra na faixa da seção, saindo da anterior sem corte. */
+/**
+ * Abaixa e pausa toda faixa que não seja a que acabou de entrar.
+ *
+ * A pausa confere antes se a faixa não voltou a ser a atual durante a
+ * rampa. Sem essa conferência, quem abria um personagem e voltava em menos
+ * de um segundo ficava sem música: a ordem de pausar chegava atrasada e
+ * calava justamente a faixa que tinha acabado de voltar.
+ */
+function despedirDasOutras(ficando: Faixa) {
+  for (const faixa of cache.values()) {
+    if (faixa === ficando || faixa.elemento.paused) continue;
+    levar(faixa, 0, TRANSICAO);
+    window.setTimeout(() => {
+      if (atual && cache.get(atual) === faixa) return;
+      faixa.elemento.pause();
+    }, TRANSICAO * 1000);
+  }
+}
+
+/**
+ * Entra na faixa da seção, saindo da anterior sem buraco.
+ *
+ * A anterior continua tocando até a nova soar de verdade, e só então as
+ * duas se cruzam. Já foi diferente: a anterior saía na hora do clique, e a
+ * nova ainda estava baixando. O resultado era silêncio ao abrir um
+ * personagem, e no iPhone às vezes silêncio até o próximo toque. Se a nova
+ * não puder tocar, quem estava tocando segue tocando.
+ */
 export function tocarAmbiente(pedido: Ambiente) {
   const ambiente = resolver(pedido);
 
@@ -322,11 +430,11 @@ export function tocarAmbiente(pedido: Ambiente) {
     return;
   }
 
-  // Antes do primeiro toque na página, nem adianta baixar: o navegador não
-  // deixaria tocar de todo jeito. Quem chega e desliga o som na hora não
-  // gasta um byte de faixa.
+  // Antes do primeiro toque o navegador não deixa tocar. Deixa baixar,
+  // e é o que se faz enquanto isso, se a conexão permitir.
   if (!houveGesto) {
     atual = ambiente;
+    preaquecer(ambiente);
     aguardarGesto();
     return;
   }
@@ -334,39 +442,62 @@ export function tocarAmbiente(pedido: Ambiente) {
   const faixa = ligar(ambiente);
   if (!faixa) return;
 
-  const anterior = atual;
   atual = ambiente;
 
   // O relógio da Web Audio só anda depois que alguém libera o som. Toda
   // rampa daqui para baixo depende disso, então vem primeiro.
   contexto?.resume();
 
-  // A anterior só sai depois que a nova entra. Cortar antes deixaria um
-  // buraco de silêncio na troca e, pior, mataria o tema à toa quando a
-  // faixa pedida não existe: o arquivo ausente só se revela ao falhar.
-  const havia = anterior !== null && anterior !== ambiente;
-  if (havia) {
-    const saindo = cache.get(anterior);
-    if (saindo && !saindo.elemento.paused) {
-      levar(saindo, 0, TRANSICAO);
-      window.setTimeout(() => saindo.elemento.pause(), TRANSICAO * 1000);
-    }
-  }
-
   const entrar = () => {
+    // Quem trocou de página de novo enquanto esta baixava não quer mais ela
+    if (atual !== ambiente) {
+      faixa.elemento.pause();
+      return;
+    }
+    const haviaOutra = [...cache.values()].some(
+      (outra) => outra !== faixa && !outra.elemento.paused
+    );
     saltarAAbertura(faixa, ambiente);
     vigiarOLaco(faixa, ambiente);
-    levar(faixa, volumeAlvo(), havia ? TRANSICAO : ENTRADA);
+    levar(faixa, volumeAlvo(), haviaOutra ? TRANSICAO : ENTRADA);
+    despedirDasOutras(faixa);
   };
 
-  if (!faixa.elemento.paused) {
-    entrar();
-    return;
-  }
-
-  // A agulha só anda depois que a faixa toca: antes disso o elemento pode
-  // nem ter os metadados, e o pedido se perde.
+  // A promessa só se cumpre quando o som sai de fato, tenha a faixa
+  // começado agora ou no clique do link. É esse o momento de cruzar.
   faixa.elemento.play().then(entrar).catch(aguardarGesto);
+}
+
+/** Se esta faixa é a que deveria estar soando agora. */
+function cacheTocando(faixa: Faixa): boolean {
+  return atual !== null && cache.get(atual) === faixa;
+}
+
+/**
+ * Chamado no clique de um link interno, antes de a página trocar.
+ *
+ * O clique é um gesto da pessoa, e é nele que o navegador mais confia para
+ * liberar som, em especial no iPhone. A faixa do destino começa ali mesmo,
+ * em volume zero, e já vem baixando enquanto a página nova monta. Quando
+ * ela abre, a música está pronta para entrar.
+ */
+export function anteciparRota(caminho: string) {
+  if (!houveGesto || !somLigado()) return;
+
+  const ambiente = resolver(ambienteDaRota(caminho));
+  if (ambiente === atual) return;
+
+  const faixa = ligar(ambiente);
+  if (!faixa || !faixa.elemento.paused) return;
+
+  contexto?.resume();
+  levar(faixa, 0, 0);
+  faixa.elemento.play().catch(() => {});
+
+  // Clique que não virou troca de página: devolve o silêncio que pegou
+  window.setTimeout(() => {
+    if (atual !== ambiente && !cacheTocando(faixa)) faixa.elemento.pause();
+  }, 5000);
 }
 
 /** Ao desligar o som: para onde estava, para voltar do mesmo ponto. */
@@ -377,7 +508,10 @@ export function pausarMusica() {
   if (!faixa || faixa.elemento.paused) return;
 
   levar(faixa, 0, TRANSICAO);
-  window.setTimeout(() => faixa.elemento.pause(), TRANSICAO * 1000);
+  window.setTimeout(() => {
+    // Religou antes de a rampa acabar: a música fica
+    if (!somLigado()) faixa.elemento.pause();
+  }, TRANSICAO * 1000);
 }
 
 /** Ao ligar o som de novo: continua de onde parou. */
