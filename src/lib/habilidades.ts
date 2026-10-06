@@ -141,6 +141,32 @@ export const HABILIDADES: Record<string, Habilidade> = {
     anotacao: "Ao redor, 2d6, prende, tentáculo",
   },
 
+  "destruicao-divina": {
+    nome: "Destruição Divina",
+    tipo: "magia",
+    circulo: 1,
+    escola: "Evocação",
+    tempo: "Ação bônus, logo após acertar",
+    alcance: "Pessoal",
+    duracao: "Instantânea",
+    descricao:
+      "Logo depois de acertar uma criatura com arma corpo a corpo ou ataque desarmado, o golpe acende. O alvo sofre 2d8 de dano radiante a mais, e mais 1d8 se for corruptor ou morto-vivo. Cada círculo acima do primeiro soma outro 1d8.",
+    anotacao: "Ação bônus, toque, só voz",
+  },
+
+  "duelo-compelido": {
+    nome: "Duelo Compelido",
+    tipo: "magia",
+    circulo: 1,
+    escola: "Encantamento",
+    tempo: "Ação bônus",
+    alcance: "9 metros",
+    duracao: "Concentração, até 1 minuto",
+    descricao:
+      "Aponta uma criatura e a chama para a briga. Ela faz uma salvaguarda de Sabedoria: falhando, tem desvantagem para atacar qualquer um que não seja o conjurador e não consegue se afastar dele mais de nove metros por vontade própria. Acaba antes se o conjurador atacar outro, mirar magia em outro inimigo, terminar o turno longe demais do alvo ou se um aliado ferir o desafiado.",
+    anotacao: "Ação bônus, 1 minuto, 9 m, só voz",
+  },
+
   // ---------- Invocações místicas ----------
 
   "armadura-das-sombras": {
@@ -224,6 +250,13 @@ export const HABILIDADES: Record<string, Habilidade> = {
     tipo: "classe",
     descricao:
       "A magia não vem de estudo nem de fé, vem do acordo. Os espaços de magia são poucos, sempre do círculo mais alto que se possa lançar, e voltam já num descanso curto.",
+  },
+
+  "maos-consagradas": {
+    nome: "Mãos Consagradas",
+    tipo: "classe",
+    descricao:
+      "Carrega no toque uma reserva de cura que enche de novo a cada descanso longo, igual a cinco vezes o nível. Com uma ação bônus, encosta a mão numa criatura e gasta dessa reserva quantos pontos quiser. Gastando cinco de uma vez, pode em vez disso arrancar dela um veneno.",
   },
 
   // ---------- Traços de espécie ----------
@@ -344,6 +377,20 @@ export const HABILIDADES: Record<string, Habilidade> = {
     anotacao: "Vezes iguais ao bônus de proficiência",
   },
 
+  "instinto-cacador": {
+    nome: "Instinto Caçador",
+    tipo: "traco",
+    descricao:
+      "Proficiência numa perícia, escolhida entre Atletismo, Intimidação, Percepção e Sobrevivência. Quem cresce num bando aprende cedo a ler o terreno antes de pisar nele.",
+  },
+
+  "rugido-aterrador": {
+    nome: "Rugido Aterrador",
+    tipo: "traco",
+    descricao:
+      "Com uma ação bônus, solta um rugido. Cada criatura escolhida a até três metros que consiga ouvir faz uma salvaguarda de Sabedoria, com CD 8 mais Constituição mais proficiência: falhando, fica amedrontada até o fim do próximo turno do leonino. Recarrega num descanso curto ou longo.",
+  },
+
   // ---------- Talentos ----------
 
   "iniciado-em-magia-clerigo": {
@@ -365,6 +412,13 @@ export const HABILIDADES: Record<string, Habilidade> = {
     tipo: "talento",
     descricao:
       "O máximo de pontos de vida sobe no dobro do nível. É o talento de quem apanhou muito e continuou de pé, e a ficha registra isso em número.",
+  },
+
+  "atacante-selvagem": {
+    nome: "Atacante Selvagem",
+    tipo: "talento",
+    descricao:
+      "Uma vez por turno, ao acertar com uma arma, rola os dados de dano dela duas vezes e fica com o resultado que preferir. É o talento de quem aprendeu a lutar onde não existe segunda chance.",
   },
 };
 

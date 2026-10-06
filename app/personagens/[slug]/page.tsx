@@ -105,6 +105,24 @@ export default async function PaginaPersonagem({ params }: Props) {
             </div>
           )}
 
+          {meta.brasao ? (
+            <figure className="mx-auto mt-10 w-44 sm:w-52">
+              <Image
+                src={meta.brasao}
+                alt={meta.brasaoAlt ?? ""}
+                width={440}
+                height={440}
+                sizes="208px"
+                className="h-auto w-full"
+              />
+              {meta.brasaoLegenda ? (
+                <figcaption className="text-tinta-500 mt-3 text-center text-xs italic">
+                  {meta.brasaoLegenda}
+                </figcaption>
+              ) : null}
+            </figure>
+          ) : null}
+
           {meta.ilustracao ? (
             <Ilustracao src={meta.ilustracao} alt={meta.ilustracaoAlt ?? ""} />
           ) : null}

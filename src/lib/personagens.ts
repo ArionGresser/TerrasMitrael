@@ -11,6 +11,7 @@ import * as lily from "@/content/personagens/lily-bouvardia.mdx";
 import * as pyhmm from "@/content/personagens/pyhmm-phylimm.mdx";
 import * as johnny from "@/content/personagens/johnny-bling-bling.mdx";
 import * as vrakyr from "@/content/personagens/vrakyr-windrose.mdx";
+import * as egon from "@/content/personagens/egon-vitriol.mdx";
 
 export type Atributo = {
   nome: string;
@@ -101,6 +102,10 @@ export type MetaPersonagem = {
   imagemAlt: string;
   ilustracao?: string;
   ilustracaoAlt?: string;
+  /** Símbolo do clã ou da casa, em PNG ou WebP com fundo transparente. */
+  brasao?: string;
+  brasaoAlt?: string;
+  brasaoLegenda?: string;
   audio?: string;
   /** Chaves de src/lib/tags.ts. Viram fitas costuradas na ficha. */
   tags?: string[];
@@ -158,6 +163,7 @@ const MODULOS = [
   pyhmm,
   johnny,
   vrakyr,
+  egon,
 ];
 
 export const PERSONAGENS: Personagem[] = MODULOS.map((modulo) => ({
