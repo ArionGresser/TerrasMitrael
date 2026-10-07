@@ -1,0 +1,258 @@
+=== Figurine of Wondrous Power | Estatueta de Poder Maravilhoso
+tipo: Item Maravilhoso, raridade varia
+A _Estatueta de Poder Maravilhoso_ é uma estatueta pequena o bastante para caber num bolso. Se você usar uma ação de Magia para jogá-la num ponto do chão a até 18 metros de você, ela vira a criatura viva indicada na descrição abaixo. Se o espaço onde a criatura apareceria estiver ocupado por outras criaturas ou objetos, ou se não houver espaço suficiente para ela, a estatueta não vira criatura.
+
+A criatura é Amigável com você e seus aliados. Ela entende os seus idiomas, obedece às suas ordens e age logo depois de você na sua Iniciativa. Se você não der ordens, ela se defende, mas não realiza outras ações.
+
+A criatura existe por um tempo próprio de cada estatueta. No fim desse tempo, ela volta a ser estatueta. Volta antes se os Pontos de Vida da forma de criatura chegarem a 0, ou se você usar uma ação de Magia tocando a criatura para fazê-la voltar. Quando a criatura vira estatueta de novo, a propriedade só pode ser usada outra vez depois de um tempo, indicado na descrição de cada estatueta.
+
+**Grifo de Bronze (Rara).** Esta estatueta de bronze mostra um grifo empinado. Ela pode virar um **Grifo** por até 6 horas. Depois de usada, só pode ser usada de novo depois de 5 dias.
+
+**Mosca de Ébano (Rara).** Esta estatueta de ébano, entalhada como uma mutuca, pode virar uma **Mosca Gigante** (veja a ficha abaixo) por até 12 horas, e pode ser montada. Depois de usada, só pode ser usada de novo depois de 2 dias.
+
+#### Mosca Gigante
+
+_Fera Grande, Sem Tendência_
+
+| CA | Iniciativa | PV | Deslocamento |
+|---|---|---|---|
+| 11 | +1 (11) | 19 (3d10 + 3) | 9 m, Voo 18 m |
+
+| FOR | DES | CON | INT | SAB | CAR |
+|---|---|---|---|---|---|
+| 14 (+2) | 13 (+1) | 13 (+1) | 2 (−4) | 10 (+0) | 3 (−4) |
+
+**Sentidos** Visão no Escuro 18 m, Percepção Passiva 10. **Idiomas** nenhum. **ND** 0 (XP 0; BP +2).
+
+**Leões Dourados (Rara).** Estas estatuetas de leões, de ouro, são sempre feitas em pares. Você pode usar uma ou as duas ao mesmo tempo. Cada uma pode virar um **Leão** por até 1 hora. Depois de usado, um leão só pode ser usado de novo depois de 7 dias.
+
+**Cabras de Marfim (Rara).** Estas estatuetas de cabras, de marfim, são sempre feitas em conjuntos de três. Cada cabra tem a sua aparência e funciona de um jeito diferente das outras. As propriedades delas são estas:
+
+**Cabra do Terror.** Esta estatueta pode virar um **Bode Gigante** por até 3 horas. O bode não pode atacar, mas você pode tirar os chifres dele (sem feri-lo) e usá-los como armas. Um chifre vira uma _Lança de Cavalaria +1_, e o outro uma _Espada Longa +2_. Tirar um chifre exige uma ação de Magia, e as armas somem e os chifres voltam quando o bode vira estatueta de novo. Enquanto você monta o bode, qualquer criatura Hostil que comece o turno numa Emanação de 9 metros a partir dele precisa passar numa salvaguarda de Sabedoria com CD 15 ou fica com a condição Amedrontado por 1 minuto, até você desmontar ou até o bode virar estatueta. A criatura Amedrontada repete a salvaguarda no fim de cada turno dela, encerrando o efeito em si mesma se passar. Depois de passar, a criatura fica imune a este efeito pelas próximas 24 horas. Depois de usada, a estatueta só pode ser usada de novo depois de 15 dias.
+
+**Cabra de Viagem.** Esta estatueta pode virar um bode Grande com as mesmas estatísticas de um **Cavalo de Montaria**. Ela tem 24 cargas, e cada hora (ou parte dela) na forma de bode custa 1 carga. Enquanto tiver cargas, você pode usá-la quantas vezes quiser. Quando as cargas acabam, ela vira estatueta e só pode ser usada de novo depois de 7 dias, quando recupera todas as cargas gastas.
+
+**Cabra do Trabalho.** Esta estatueta pode virar um **Bode Gigante** por até 3 horas. Depois de usada, só pode ser usada de novo depois de 30 dias.
+
+**Elefante de Mármore (Rara).** Esta estatueta de mármore mostra um elefante trombeteando. Ela pode virar um **Elefante** por até 24 horas. Depois de usada, só pode ser usada de novo depois de 7 dias.
+
+**Corcel de Obsidiana (Muito Rara).** Este cavalo de obsidiana polida pode virar um **Pesadelo** por até 24 horas. O pesadelo só luta para se defender. Depois de usado, só pode ser usado de novo depois de 5 dias.
+
+Cada vez que você usa a estatueta, há 10% de chance de ela ignorar as suas ordens, inclusive a de voltar à forma de estatueta. Se você montar o pesadelo enquanto ele estiver ignorando as suas ordens, você e ele são levados na hora para um lugar aleatório do plano de Hades, onde o pesadelo volta a ser estatueta.
+
+**Cão de Ônix (Rara).** Esta estatueta de cão, de ônix, pode virar um **Mastim** por até 6 horas. O mastim tem Inteligência 8 e fala o Comum. Também tem Percepção às Cegas com alcance de 18 metros. Depois de usado, só pode ser usado de novo depois de 7 dias.
+
+**Coruja de Serpentina (Rara).** Esta estatueta de coruja, de serpentina, pode virar uma **Coruja Gigante** por até 8 horas. A coruja pode se comunicar com você por telepatia a qualquer distância, se vocês estiverem no mesmo plano de existência. Depois de usada, só pode ser usada de novo depois de 2 dias.
+
+**Corvo de Prata (Incomum).** Esta estatueta de corvo, de prata, pode virar um **Corvo** por até 12 horas. Depois de usado, só pode ser usado de novo depois de 2 dias. Na forma de corvo, a estatueta permite que você conjure _Mensageiro Animal_ nela.
+
+=== Flame Tongue | Língua de Fogo
+tipo: Arma (qualquer arma corpo a corpo), Rara (exige Sintonia)
+Enquanto segura esta arma mágica, você pode usar uma Ação Bônus e dizer uma palavra de comando para fazer chamas envolverem a parte da arma que causa dano. As chamas iluminam com Luz Plena num raio de 12 metros e com Penumbra por mais 12 metros. Enquanto estiver em chamas, a arma causa 2d6 de dano de fogo extra quando acerta. As chamas duram até você usar uma Ação Bônus para repetir o comando, ou até largar, guardar ou embainhar a arma.
+
+=== Folding Boat | Barco Dobrável
+tipo: Item Maravilhoso, Raro
+Este objeto parece uma caixa de madeira com 30 centímetros de comprimento, 15 de largura e 15 de altura. Pesa 2 kg e flutua. Pode ser aberta para guardar coisas. O item também tem três palavras de comando, cada uma exigindo uma ação de Magia:
+
+**Primeira Palavra de Comando.** A caixa se desdobra num Bote a Remo.
+
+**Segunda Palavra de Comando.** A caixa se desdobra numa Barcaça.
+
+**Terceira Palavra de Comando.** O _Barco Dobrável_ volta a ser caixa, se não houver criaturas a bordo. Os objetos na embarcação que não cabem na caixa ficam do lado de fora quando ela se dobra. Os que cabem vão para dentro.
+
+Quando a caixa vira embarcação, passa a pesar o mesmo que uma embarcação normal do tamanho dela, e o que estava guardado na caixa fica no barco.
+
+As estatísticas do Bote a Remo e da Barcaça estão em Equipamento. Se os Pontos de Vida de qualquer uma das embarcações chegarem a 0, o _Barco Dobrável_ é destruído.
+
+=== Frost Brand | Marca Gélida
+tipo: Arma (Glaive, Espada Grande, Espada Longa, Rapieira, Cimitarra ou Espada Curta), Muito Rara (exige Sintonia)
+Quando você acerta uma jogada de ataque com esta arma mágica, o alvo sofre 1d6 de dano de frio extra. Além disso, enquanto segura a arma, você tem Resistência a dano de fogo.
+
+No frio de congelar, a arma ilumina com Luz Plena num raio de 3 metros e com Penumbra por mais 3 metros.
+
+Quando saca esta arma, você pode apagar todas as chamas não mágicas a até 9 metros de você. Depois de usada, esta propriedade só pode ser usada de novo depois de 1 hora.
+
+=== Gauntlets of Ogre Power | Manoplas da Força do Ogro
+tipo: Item Maravilhoso, Incomum (exige Sintonia)
+A sua Força é 19 enquanto você usa estas manoplas. Elas não têm efeito se a sua Força já for 19 ou mais sem elas.
+
+=== Gem of Brightness | Gema do Brilho
+tipo: Item Maravilhoso, Incomum
+Este prisma tem 50 cargas. Enquanto o segura, você pode usar uma ação de Magia e dizer uma de três palavras de comando para causar um destes efeitos:
+
+**Primeira Palavra de Comando.** A gema ilumina com Luz Plena num raio de 9 metros e com Penumbra por mais 9 metros. Este efeito não gasta carga. Dura até você usar uma Ação Bônus para repetir a palavra de comando ou até usar outra função da gema.
+
+**Segunda Palavra de Comando.** Você gasta 1 carga e faz a gema disparar um raio de luz ofuscante numa criatura que consiga ver a até 18 metros de você. A criatura precisa passar numa salvaguarda de Constituição com CD 15 ou fica com a condição Cego por 1 minuto. Ela repete a salvaguarda no fim de cada turno dela, encerrando o efeito em si mesma se passar.
+
+**Terceira Palavra de Comando.** Você gasta 5 cargas e faz a gema explodir em luz intensa num Cone de 9 metros. Cada criatura no Cone faz uma salvaguarda como se tivesse sido atingida pelo raio da segunda palavra de comando.
+
+Quando todas as cargas acabam, a gema vira uma joia comum que vale 50 PO.
+
+=== Gem of Seeing | Gema da Visão
+tipo: Item Maravilhoso, Raro (exige Sintonia)
+Esta gema tem 3 cargas. Com uma ação de Magia, você pode gastar 1 carga. Pelos próximos 10 minutos, você tem Visão Verdadeira até 36 metros quando olha através da gema.
+
+A gema recupera 1d3 cargas gastas todo dia ao amanhecer.
+
+=== Giant Slayer | Matadora de Gigantes
+tipo: Arma (qualquer simples ou marcial), Rara
+Você ganha +1 de bônus nas jogadas de ataque e de dano feitas com esta arma mágica.
+
+Quando você acerta um Gigante com esta arma, ele sofre 2d6 de dano extra do tipo da arma e precisa passar numa salvaguarda de Força com CD 15 ou fica com a condição Caído.
+
+=== Glamoured Studded Leather | Couro Batido Encantado
+tipo: Armadura (Armadura de Couro Batido), Rara
+Enquanto veste esta armadura, você ganha +1 de bônus na Classe de Armadura. Também pode usar uma Ação Bônus para fazer a armadura parecer uma roupa comum ou outro tipo de armadura. Você decide como ela fica (cor, estilo e acessórios), mas a armadura mantém o volume e o peso normais. A aparência ilusória dura até você usar esta propriedade de novo ou tirar a armadura.
+
+=== Gloves of Missile Snaring | Luvas Apanha-Projéteis
+tipo: Item Maravilhoso, Incomum (exige Sintonia)
+Se for atingido por uma jogada de ataque feita com uma arma de ataque à distância ou de Arremesso enquanto usa estas luvas, você pode usar uma Reação para reduzir o dano em 1d10 + seu modificador de Destreza, se tiver uma mão livre. Se reduzir o dano a 0, pode pegar a munição ou a arma, se ela for pequena o bastante para caber nessa mão.
+
+=== Gloves of Swimming and Climbing | Luvas de Natação e Escalada
+tipo: Item Maravilhoso, Incomum (exige Sintonia)
+Enquanto usa estas luvas, você tem Deslocamento de Escalada e de Natação iguais ao seu Deslocamento, e ganha +5 de bônus nos testes de Força (Atletismo) para escalar ou nadar.
+
+=== Gloves of Thievery | Luvas do Ladrão
+tipo: Item Maravilhoso, Incomum
+Estas luvas ficam imperceptíveis quando vestidas. Enquanto as usa, você ganha +5 de bônus nos testes de Destreza (Prestidigitação).
+
+=== Goggles of Night | Óculos da Noite
+tipo: Item Maravilhoso, Incomum
+Enquanto usa estas lentes escuras, você tem Visão no Escuro até 18 metros. Se já tiver Visão no Escuro, os óculos aumentam o alcance dela em 18 metros.
+
+=== Hammer of Thunderbolts | Martelo dos Raios
+tipo: Arma (Marreta ou Martelo de Guerra), Lendária (exige Sintonia)
+Você ganha +1 de bônus nas jogadas de ataque e de dano feitas com esta arma mágica.
+
+A arma tem 5 cargas. Você pode gastar 1 carga e fazer um ataque à distância com ela, arremessando-a como se tivesse a propriedade Arremesso, com distância normal de 6 metros e longa de 18 metros. Se o ataque acertar, a arma solta um trovão que pode ser ouvido a até 90 metros. O alvo e cada criatura a até 9 metros dele, exceto você, precisam passar numa salvaguarda de Constituição com CD 17 ou ficam com a condição Atordoado até o fim do seu próximo turno. Logo depois de acertar ou errar, a arma volta voando para a sua mão. Ela recupera 1d4 + 1 cargas gastas todo dia ao amanhecer.
+
+_Flagelo dos Gigantes._ Enquanto estiver em Sintonia com a arma e usar um _Cinto da Força do Gigante_ ou _Manoplas da Força do Ogro_ com os quais também esteja em Sintonia, você ganha os benefícios abaixo:
+
+_Ruína dos Gigantes._ Quando você tira 20 no d20 de uma jogada de ataque com esta arma contra um Gigante, ele precisa passar numa salvaguarda de Constituição com CD 17 ou morre.
+
+_Poder dos Gigantes._ O valor de Força dado pelo seu _Cinto da Força do Gigante_ ou pelas _Manoplas da Força do Ogro_ aumenta em 4, até o máximo de 30.
+
+=== Handy Haversack | Mochila Prática
+tipo: Item Maravilhoso, Raro
+Esta mochila tem um bolso central e dois laterais, e cada um é um espaço extradimensional. Cada bolso lateral guarda até 100 kg de material, sem passar de uns 700 litros. O bolso central guarda até 250 kg, sem passar de uns 1.800 litros. A mochila sempre pesa 2,5 kg, não importa o que tenha dentro.
+
+Pegar um item da mochila exige a ação de Usar ou uma Ação Bônus (à sua escolha). Quando você procura um item específico na mochila, ele sempre está magicamente por cima.
+
+Se qualquer bolso for sobrecarregado, furado ou rasgado, a mochila se rompe e é destruída. Se a mochila for destruída, o conteúdo se perde para sempre, mas um Artefato sempre reaparece em algum lugar. Se for virada do avesso, o conteúdo cai intacto, e a mochila precisa ser desvirada antes de ser usada de novo.
+
+Cada bolso tem ar suficiente para 10 minutos de respiração, divididos pelo número de criaturas respirando lá dentro.
+
+Colocar a mochila dentro de um espaço extradimensional criado por uma _Bolsa Guarda-Tudo_, um _Buraco Portátil_ ou item parecido destrói os dois itens na hora e abre um portal para o Plano Astral. O portal surge onde um item foi colocado dentro do outro. Qualquer criatura a até 3 metros do portal que não esteja atrás de Cobertura Total é sugada por ele e largada num lugar aleatório do Plano Astral. Depois, o portal se fecha. Ele só vai num sentido e não pode ser reaberto.
+
+=== Hat of Disguise | Chapéu do Disfarce
+tipo: Item Maravilhoso, Incomum (exige Sintonia)
+Enquanto usa este chapéu, você pode conjurar a magia _Disfarçar-se_. A magia termina se o chapéu for tirado.
+
+=== Hat of Many Spells | Chapéu de Muitas Magias
+tipo: Item Maravilhoso, Muito Raro (exige Sintonia por um Mago)
+Este chapéu pontudo tem as propriedades abaixo.
+
+_Foco de Conjuração._ Enquanto segura o chapéu, você pode usá-lo como Foco de Conjuração para as suas magias de Mago. Qualquer magia conjurada com o chapéu ganha um componente Somático especial: você precisa enfiar a mão no chapéu e "tirar" a magia de dentro dele.
+
+_Magia Desconhecida._ Enquanto segura o chapéu, você pode tentar conjurar uma magia de 1º círculo ou mais que não conheça. A magia precisa estar na lista de magias do Mago, ser de um círculo que você consiga conjurar e não ter componentes Materiais que custem mais de 1.000 PO. Depois de escolher a magia, você precisa gastar um espaço de magia do círculo dela. Para saber se a conjura, faça um teste de Inteligência (Arcanismo) com CD 10 + o círculo da magia. Se passar, conjura a magia no tempo de conjuração normal, e só pode usar esta propriedade de novo quando terminar um Descanso Curto ou Longo. Se falhar, não conjura a magia, e acontece um efeito aleatório, sorteado na tabela abaixo.
+
+Qualquer magia que você conjure com o chapéu usa a sua CD de salvaguarda e o seu bônus de ataque de magia.
+
+| 1d100 | Efeito |
+|---|---|
+| 01–50 | Você conjura uma magia aleatória, sorteada com 1d10: **1**, _Aumentar/Reduzir_ (aumentar); **2**, _Aumentar/Reduzir_ (reduzir); **3**, _Fogo das Fadas_; **4**, _Bola de Fogo_; **5**, _Lufada de Vento_; **6**, _Invisibilidade_ (em si mesmo); **7**, _Relâmpago_; **8**, _Força Fantasmagórica_; **9**, _Metamorfose_; **10**, _Névoa Fétida_. |
+| 51–55 | Você fica com a condição Atordoado até o fim do seu próximo turno, achando que algo incrível acabou de acontecer. |
+| 56–60 | Um enxame inofensivo de borboletas enche um Cubo de 3 metros a até 9 metros de você. O enxame se dispersa depois de 1 minuto. |
+| 61–65 | Você tira um objeto comum do chapéu. Role 1d4: **1**, um frasco de Ácido; **2**, um frasco de Fogo de Alquimista; **3**, um Pé de Cabra; **4**, uma Tocha acesa. |
+| 66–70 | Você tem um surto de enjoo mágico e fica com a condição Envenenado por 1 hora. |
+| 71–75 | Você fica com a condição Petrificado até o fim do seu próximo turno. |
+| 76–80 | Você tira um objeto comum do chapéu. Role 1d4: **1**, uma Adaga; **2**, uma Corda com um Gancho de Escalada amarrado numa ponta; **3**, um saco de Estrepes; **4**, uma gema que vale 50 PO. |
+| 81–85 | Uma criatura aparece num espaço desocupado o mais perto possível de você. Ela não está sob o seu controle, age como agiria normalmente e some depois de 1 hora ou quando seus Pontos de Vida chegam a 0. Role 1d4: **1**, um **Camelo**; **2**, uma **Serpente Constritora**; **3**, um **Elefante**; **4**, uma **Mula**. |
+| 86–90 | Um **Enxame de Morcegos** Hostil sai voando do chapéu, ocupa o seu espaço e ataca você. |
+| 91–95 | Um portal vertical de 3 metros de diâmetro, que vai e volta, se abre para outro plano de existência num espaço desocupado a até 9 metros de você, e fica aberto até o fim do seu próximo turno. O Mestre decide aonde ele leva. |
+| 96–00 | Você tira um item mágico do chapéu. Role 1d6 para a raridade: **1–3**, Comum; **4–5**, Incomum; **6**, Raro. O Mestre escolhe o item, que some depois de 1 hora se não for consumido ou destruído antes. |
+
+=== Headband of Intellect | Tiara do Intelecto
+tipo: Item Maravilhoso, Incomum (exige Sintonia)
+A sua Inteligência é 19 enquanto você usa esta tiara. Ela não tem efeito se a sua Inteligência já for 19 ou mais sem ela.
+
+=== Helm of Brilliance | Elmo do Brilho
+tipo: Item Maravilhoso, Muito Raro (exige Sintonia)
+Este elmo é cravejado de 1d10 diamantes, 2d10 rubis, 3d10 opalas de fogo e 4d10 opalas. Qualquer gema arrancada do elmo vira pó. Quando todas as gemas forem retiradas ou destruídas, o elmo perde a magia.
+
+Você ganha os benefícios abaixo enquanto usa o elmo.
+
+_Luz do Diamante._ Enquanto tiver pelo menos um diamante, o elmo emite uma Emanação de 9 metros. Quando houver pelo menos um Morto-Vivo nessa área, a Emanação se enche de Penumbra. Qualquer Morto-Vivo que comece o turno nessa área sofre 1d6 de dano radiante.
+
+_Chamas da Opala de Fogo._ Enquanto o elmo tiver pelo menos uma opala de fogo, você pode usar uma ação de Magia para fazer uma arma que esteja segurando pegar fogo. As chamas iluminam com Luz Plena num raio de 3 metros e com Penumbra por mais 3 metros. Elas não ferem você nem a arma. Quando você acerta um ataque com a arma em chamas, o alvo sofre 1d6 de dano de fogo extra. As chamas duram até você usar uma Ação Bônus para apagá-las ou até largar ou guardar a arma.
+
+_Resistência do Rubi._ Enquanto o elmo tiver pelo menos um rubi, você tem Resistência a dano de fogo.
+
+_Magias._ Você pode conjurar uma destas magias (CD de salvaguarda 18), usando como componente uma gema do elmo do tipo indicado: _Luz do Dia_ (opala), _Bola de Fogo_ (opala de fogo), _Rajada Prismática_ (diamante) ou _Muralha de Fogo_ (rubi). A gema é destruída quando a magia é conjurada e some do elmo.
+
+_Sofrendo Dano de Fogo._ Role 1d20 se estiver usando o elmo e sofrer dano de fogo por falhar numa salvaguarda contra uma magia. Num 1, o elmo dispara raios de luz das gemas que restam e é destruído. Cada criatura numa Emanação de 18 metros a partir de você precisa passar numa salvaguarda de Destreza com CD 17 ou é atingida por um raio, sofrendo dano radiante igual ao número de gemas no elmo.
+
+=== Helm of Comprehending Languages | Elmo da Compreensão de Idiomas
+tipo: Item Maravilhoso, Incomum
+Enquanto usa este elmo, você pode conjurar _Compreender Idiomas_ com ele.
+
+=== Helm of Telepathy | Elmo da Telepatia
+tipo: Item Maravilhoso, Incomum (exige Sintonia)
+Enquanto usa este elmo, você tem telepatia com alcance de 9 metros, e pode conjurar _Detectar Pensamentos_ ou _Sugestão_ (CD de salvaguarda 13) com ele. Depois que uma dessas magias for conjurada com o elmo, ela só pode ser conjurada com ele de novo no amanhecer seguinte.
+
+=== Helm of Teleportation | Elmo do Teletransporte
+tipo: Item Maravilhoso, Raro (exige Sintonia)
+Este elmo tem 3 cargas. Enquanto o usa, você pode gastar 1 carga para conjurar _Teletransporte_ com ele. O elmo recupera 1d3 cargas gastas todo dia ao amanhecer.
+
+=== Holy Avenger | Vingadora Sagrada
+tipo: Arma (qualquer simples ou marcial), Lendária (exige Sintonia por um Paladino)
+Você ganha +3 de bônus nas jogadas de ataque e de dano feitas com esta arma mágica. Quando acerta um Ínfero ou um Morto-Vivo com ela, essa criatura sofre 2d10 de dano radiante extra.
+
+Enquanto você segura a arma sacada, ela cria uma Emanação de 3 metros a partir de você. Você e todas as criaturas Amigáveis a você na Emanação têm Vantagem nas salvaguardas contra magias e outros efeitos mágicos. Se você tiver 17 ou mais níveis na classe Paladino, a Emanação aumenta para 9 metros.
+
+=== Horn of Blasting | Trompa da Explosão
+tipo: Item Maravilhoso, Raro
+Você pode usar uma ação de Magia para soprar a trompa, que solta uma explosão trovejante num Cone de 9 metros, audível a até 180 metros. Cada criatura no Cone faz uma salvaguarda de Constituição com CD 15. Se falhar, sofre 5d8 de dano trovejante e fica com a condição Surdo por 1 minuto. Se passar, só sofre metade desse dano. Os objetos de vidro ou cristal no Cone que ninguém esteja vestindo ou carregando sofrem 10d8 de dano trovejante.
+
+Cada uso da magia da trompa tem 20% de chance de fazê-la explodir. A explosão causa 10d6 de dano de energia a quem a usou e destrói a trompa.
+
+=== Horn of Valhalla | Trompa de Valhalla
+tipo: Item Maravilhoso, Raro (Prata ou Latão), Muito Raro (Bronze) ou Lendário (Ferro)
+Você pode usar uma ação de Magia para soprar esta trompa. Em resposta, espíritos guerreiros do plano de Ysgard aparecem em espaços desocupados a até 18 metros de você. Cada espírito usa a ficha do **Berserker** e volta para Ysgard depois de 1 hora ou quando seus Pontos de Vida chegam a 0. Os espíritos parecem guerreiros vivos, que respiram, e têm Imunidade às condições Enfeitiçado e Amedrontado. Depois de usada, a trompa só pode ser usada de novo depois de 7 dias.
+
+Existem quatro tipos conhecidos de _Trompa de Valhalla_, cada um feito de um metal diferente. O tipo define quantos espíritos ela invoca e o requisito para usá-la. O Mestre escolhe o tipo ou o sorteia na tabela abaixo.
+
+Se você soprar a trompa sem cumprir o requisito, os espíritos invocados atacam você. Se cumprir, eles são Amigáveis com você e seus aliados e seguem as suas ordens.
+
+| 1d100 | Tipo de trompa | Espíritos | Requisito |
+|---|---|---|---|
+| 01–40 | Prata | 2 | Nenhum |
+| 41–75 | Latão | 3 | Proficiência em todas as armas simples |
+| 76–90 | Bronze | 4 | Treino com todas as armaduras médias |
+| 91–00 | Ferro | 5 | Proficiência em todas as armas marciais |
+
+=== Horseshoes of a Zephyr | Ferraduras do Zéfiro
+tipo: Item Maravilhoso, Muito Raro
+Estas ferraduras vêm num conjunto de quatro. Com uma ação de Magia, você pode encostar uma ferradura no casco de um cavalo ou criatura parecida, e ela se prende sozinha ao casco. Tirar uma ferradura também exige uma ação de Magia.
+
+Enquanto as quatro ferraduras estiverem presas aos cascos de um cavalo ou criatura parecida, ela se move normalmente flutuando 10 centímetros acima da superfície. Assim, pode atravessar ou ficar parada sobre superfícies que não são sólidas ou firmes, como água ou lava. A criatura não deixa rastros e ignora o Terreno Difícil. Além disso, pode viajar até 12 horas por dia sem ganhar níveis de Exaustão pela viagem longa.
+
+=== Horseshoes of Speed | Ferraduras da Velocidade
+tipo: Item Maravilhoso, Raro
+Estas ferraduras vêm num conjunto de quatro. Com uma ação de Magia, você pode encostar uma ferradura no casco de um cavalo ou criatura parecida, e ela se prende sozinha ao casco. Tirar uma ferradura também exige uma ação de Magia.
+
+Enquanto as quatro ferraduras estiverem presas à mesma criatura, o Deslocamento dela aumenta em 9 metros.
+
+=== Immovable Rod | Cetro Imóvel
+tipo: Cetro, Incomum
+Este cetro de ferro tem um botão numa das pontas. Você pode usar a ação de Usar para apertar o botão, o que deixa o cetro magicamente fixo no lugar. Até você ou outra criatura usar a ação de Usar para apertar o botão de novo, o cetro não se move, mesmo desafiando a gravidade. Ele aguenta até 4.000 kg. Mais peso que isso faz o cetro se desativar e cair. Uma criatura pode usar a ação de Usar para fazer um teste de Força (Atletismo) com CD 30, movendo o cetro fixo até 3 metros se passar.
+
+=== Instant Fortress | Fortaleza Instantânea
+tipo: Item Maravilhoso, Raro (exige Sintonia)
+Com uma ação de Magia, você pode colocar esta estatueta de adamante de 2,5 centímetros no chão e, dizendo uma palavra de comando, fazê-la crescer depressa até virar uma torre quadrada de adamante. Repetir a palavra de comando faz a torre voltar a ser estatueta, o que só funciona se a torre estiver vazia. Cada criatura na área onde a torre aparece é empurrada para um espaço desocupado do lado de fora, junto à torre. Os objetos na área que ninguém esteja vestindo ou carregando também são empurrados para longe dela.
+
+A torre tem 6 metros de lado e 9 metros de altura, com seteiras em todos os lados e ameias no alto. Por dentro é dividida em dois andares, ligados por uma escada de mão, uma escadaria ou uma rampa (à sua escolha), que termina num alçapão que dá para o telhado. Quando criada, a torre tem uma única porta no térreo, no lado voltado para você. A porta só se abre quando você manda, o que pode fazer com uma Ação Bônus. Ela é imune à magia _Arrombar_ e a magias parecidas.
+
+A magia impede que a torre seja derrubada. O telhado, a porta e as paredes têm CA 20; PV 100; Imunidade a dano contundente, perfurante e cortante, exceto o causado por armas de cerco; e Resistência a todos os outros danos.
+
+Encolher a torre de volta para estatueta não conserta os danos dela. Só a magia _Desejo_ consegue consertar a torre (esse uso da magia conta como reproduzir uma magia de 8º círculo ou menos). Cada conjuração de _Desejo_ faz a torre recuperar todos os seus Pontos de Vida.
