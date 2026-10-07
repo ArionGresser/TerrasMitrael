@@ -99,7 +99,7 @@ function emLinha(texto: string): ReactNode {
     if (p.startsWith("**") && p.endsWith("**")) {
       return (
         <strong key={i} className="text-tinta-900 font-semibold">
-          {p.slice(2, -2)}
+          {emLinha(p.slice(2, -2))}
         </strong>
       );
     }

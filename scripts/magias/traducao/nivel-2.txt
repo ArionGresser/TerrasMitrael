@@ -1,0 +1,417 @@
+=== Acid Arrow | Flecha Ácida
+material: folha de ruibarbo em pó
+Uma flecha verde e cintilante dispara em direção a um alvo dentro do alcance e explode num jato de ácido. Faça um ataque mágico à distância contra o alvo. Se acertar, o alvo sofre 4d4 de dano ácido na hora e mais 2d4 de dano ácido no fim do próximo turno dele. Se errar, a flecha respinga ácido no alvo, que sofre só metade do dano inicial.
+
+_Usando um Espaço de Magia de Círculo Superior._ O dano (o inicial e o seguinte) aumenta em 1d4 para cada círculo do espaço acima do 2º.
+
+=== Aid | Auxílio
+material: uma tira de pano branco
+Escolha até três criaturas dentro do alcance. O máximo de Pontos de Vida e os Pontos de Vida atuais de cada alvo aumentam em 5 pela duração.
+
+_Usando um Espaço de Magia de Círculo Superior._ Os Pontos de Vida de cada alvo aumentam em mais 5 para cada círculo do espaço acima do 2º.
+
+=== Alter Self | Alterar-se
+Você altera a sua forma física. Escolha uma das opções a seguir. Os efeitos duram pela duração, e nesse tempo você pode usar uma ação de Magia para trocar a opção escolhida por outra.
+
+_Adaptação Aquática._ Brotam guelras em você e membranas entre os seus dedos. Você consegue respirar debaixo d'água e ganha Deslocamento de Natação igual ao seu Deslocamento.
+
+_Mudar a Aparência._ Você altera a sua aparência. Decide como fica, incluindo altura, peso, traços do rosto, som da voz, comprimento do cabelo, cores e outras características marcantes. Pode até parecer de outra espécie, mas nenhuma das suas estatísticas muda. Você não pode parecer uma criatura de outro tamanho, e o seu formato básico continua o mesmo: se for bípede, por exemplo, não pode usar esta magia para virar quadrúpede. Pela duração, você pode usar uma ação de Magia para mudar a aparência de novo desse jeito.
+
+_Armas Naturais._ Crescem em você garras (cortante), presas (perfurante), chifres (perfurante) ou cascos (contundente). Quando usa o seu Ataque Desarmado para causar dano com essa parte nova, ela causa 1d6 de dano do tipo entre parênteses, no lugar do dano normal do Ataque Desarmado, e você usa o modificador do seu atributo de conjuração nas jogadas de ataque e de dano, no lugar da Força.
+
+=== Animal Messenger | Mensageiro Animal
+material: um pedacinho de comida
+Uma Fera Miúda à sua escolha que você consiga ver dentro do alcance precisa ser bem-sucedida numa salvaguarda de Carisma, ou então tenta entregar uma mensagem por você (se o Nível de Desafio do alvo não for 0, ele é bem-sucedido automaticamente). Você indica um lugar onde já esteve e um destinatário que bata com uma descrição geral, como "uma pessoa com o uniforme da guarda da cidade" ou "um anão ruivo de chapéu pontudo". Também diz uma mensagem de até vinte e cinco palavras. Pela duração, a Fera viaja na direção do lugar indicado, percorrendo cerca de 40 quilômetros a cada 24 horas, ou 80 quilômetros se puder voar.
+
+Quando a Fera chega, ela entrega a mensagem à criatura que você descreveu, imitando o seu jeito de falar. Se ela não chegar ao destino antes de a magia acabar, a mensagem se perde, e a Fera volta para onde você conjurou a magia.
+
+_Usando um Espaço de Magia de Círculo Superior._ A duração da magia aumenta em 48 horas para cada círculo do espaço acima do 2º.
+
+=== Arcane Lock | Tranca Arcana
+material: pó de ouro que valha 25 PO ou mais, consumido pela magia
+Você toca uma porta, janela, portão, recipiente ou alçapão fechado e o tranca magicamente pela duração. Essa tranca não pode ser aberta por nenhum meio não mágico. Você e as criaturas que indicar ao conjurar a magia podem abrir e fechar o objeto mesmo assim. Você também pode definir uma senha que, dita a até 1,5 metro do objeto, o destranca por 1 minuto.
+
+=== Arcanist's Magic Aura | Aura Mágica do Arcanista
+material: um quadradinho de seda
+Com um toque, você põe uma ilusão numa criatura voluntária ou num objeto que não esteja sendo vestido ou carregado. Uma criatura recebe o efeito Máscara, abaixo, e um objeto recebe o efeito Aura Falsa, também abaixo. O efeito dura pela duração. Se você conjurar a magia no mesmo alvo todos os dias por 30 dias, a ilusão passa a durar até ser dissipada.
+
+_Máscara (Criatura)._ Escolha um tipo de criatura diferente do tipo real do alvo. Magias e outros efeitos mágicos tratam o alvo como se ele fosse do tipo escolhido.
+
+_Aura Falsa (Objeto)._ Você muda o jeito como o alvo aparece para magias e efeitos mágicos que detectam auras mágicas, como _Detectar Magia_. Pode fazer um objeto não mágico parecer mágico, um item mágico parecer não mágico, ou mudar a aura do objeto para que pareça pertencer a uma escola de magia à sua escolha.
+
+=== Augury | Augúrio
+material: varetas, ossos, cartas ou outros objetos de adivinhação marcados especialmente, que valham 25 PO ou mais
+Você recebe de uma entidade de outro plano um presságio sobre o resultado de algo que planeja fazer nos próximos 30 minutos. O Mestre escolhe o presságio na tabela Presságios.
+
+**Presságios**
+
+| Presságio | Para resultados que serão… |
+|---|---|
+| Ventura | Bons |
+| Desgraça | Ruins |
+| Ventura e desgraça | Bons e ruins |
+| Indiferença | Nem bons nem ruins |
+
+A magia não leva em conta circunstâncias, como outras magias, que possam mudar o resultado.
+
+Se você conjurar a magia mais de uma vez antes de terminar um Descanso Longo, há uma chance cumulativa de 25 por cento, para cada conjuração depois da primeira, de você não receber resposta nenhuma.
+
+=== Barkskin | Pele de Árvore
+material: um punhado de casca de árvore
+Você toca uma criatura voluntária. Até a magia acabar, a pele do alvo ganha aparência de casca de árvore, e ele tem Classe de Armadura 17, se a CA dele for menor que isso.
+
+=== Blindness/Deafness | Cegueira/Surdez
+Uma criatura que você consiga ver dentro do alcance precisa ser bem-sucedida numa salvaguarda de Constituição, ou fica com a condição Cego ou Surdo (à sua escolha) pela duração. No fim de cada turno dela, o alvo repete a salvaguarda e, se for bem-sucedido, encerra a magia em si mesmo.
+
+_Usando um Espaço de Magia de Círculo Superior._ Você pode escolher uma criatura adicional como alvo para cada círculo do espaço acima do 2º.
+
+=== Blur | Nublar
+O seu corpo fica borrado. Pela duração, qualquer criatura tem Desvantagem nas jogadas de ataque contra você. Um atacante é imune a esse efeito se perceber você com Percepção às Cegas ou Visão Verdadeira.
+
+=== Calm Emotions | Acalmar Emoções
+Cada Humanoide numa Esfera de 6 metros de raio, centrada num ponto à sua escolha dentro do alcance, precisa ser bem-sucedido numa salvaguarda de Carisma ou é afetado por um dos efeitos a seguir (escolha para cada criatura):
+
+- A criatura tem Imunidade às condições Enfeitiçado e Amedrontado até a magia acabar. Se ela já estava Enfeitiçada ou Amedrontada, essas condições ficam suspensas pela duração.
+- A criatura fica Indiferente às criaturas à sua escolha com quem é Hostil. Essa indiferença acaba se o alvo sofrer dano ou vir os aliados dele sofrendo dano. Quando a magia acaba, a atitude da criatura volta ao normal.
+
+=== Continual Flame | Chama Contínua
+material: pó de rubi que valha 50 PO ou mais, consumido pela magia
+Uma chama brota de um objeto que você toca. O efeito emite Luz Plena num raio de 6 metros e Penumbra por mais 6 metros. Parece uma chama comum, mas não produz calor nem consome combustível. A chama pode ser coberta ou escondida, mas não abafada nem apagada.
+
+=== Darkness | Escuridão
+material: pelo de morcego e um pedaço de carvão
+Pela duração, uma Escuridão mágica se espalha a partir de um ponto dentro do alcance e preenche uma Esfera de 4,5 metros de raio. A Visão no Escuro não enxerga através dela, e luz não mágica não consegue iluminá-la.
+
+Se preferir, você conjura a magia num objeto que não esteja sendo vestido ou carregado, e a Escuridão preenche uma Emanação de 4,5 metros a partir dele. Cobrir o objeto com algo opaco, como uma tigela ou um elmo, bloqueia a Escuridão.
+
+Se qualquer parte da área desta magia se sobrepuser a uma área de Luz Plena ou Penumbra criada por uma magia de 2º círculo ou menor, essa outra magia é dissipada.
+
+=== Darkvision | Visão no Escuro
+material: uma cenoura seca
+Pela duração, uma criatura voluntária que você toca tem Visão no Escuro com alcance de 45 metros.
+
+=== Detect Thoughts | Detectar Pensamentos
+material: 1 Peça de Cobre
+Você ativa um dos efeitos abaixo. Até a magia acabar, pode ativar qualquer um deles com uma ação de Magia nos seus turnos seguintes.
+
+_Sentir Pensamentos._ Você sente a presença de pensamentos a até 9 metros de você, de criaturas que conheçam idiomas ou sejam telepáticas. Não lê os pensamentos, mas sabe que há ali uma criatura que pensa.
+
+A magia é bloqueada por 30 centímetros de pedra, terra ou madeira, 2,5 centímetros de metal, ou uma lâmina fina de chumbo.
+
+_Ler Pensamentos._ Escolha como alvo uma criatura que você consiga ver a até 9 metros, ou uma criatura a até 9 metros que você tenha detectado com a opção Sentir Pensamentos. Você descobre o que está mais presente na mente do alvo naquele momento. Se o alvo não conhecer idioma nenhum e não for telepático, você não descobre nada.
+
+Com uma ação de Magia no seu próximo turno, você pode tentar sondar mais fundo a mente do alvo. Se fizer isso, o alvo faz uma salvaguarda de Sabedoria. Se falhar, você percebe o raciocínio dele, as emoções e algo que pesa muito na mente dele (como uma preocupação, um amor ou um ódio). Se for bem-sucedido, a magia acaba. De um jeito ou de outro, o alvo sabe que você está sondando a mente dele e, até você desviar a atenção, ele pode usar uma ação no turno dele para fazer um teste de Inteligência (Arcanismo) contra a CD de salvaguarda da sua magia, encerrando a magia se passar.
+
+=== Dragon's Breath | Sopro de Dragão
+material: uma pimenta ardida
+Você toca uma criatura voluntária e escolhe ácido, frio, fogo, elétrico ou veneno. Até a magia acabar, o alvo pode usar uma ação de Magia para soprar um Cone de 4,5 metros. Cada criatura na área faz uma salvaguarda de Destreza, sofrendo 3d6 de dano do tipo escolhido se falhar, ou metade desse dano se for bem-sucedida.
+
+_Usando um Espaço de Magia de Círculo Superior._ O dano aumenta em 1d6 para cada círculo do espaço acima do 2º.
+
+=== Enhance Ability | Aprimorar Atributo
+material: pelo ou uma pena
+Você toca uma criatura e escolhe Força, Destreza, Inteligência, Sabedoria ou Carisma. Pela duração, o alvo tem Vantagem nos testes do atributo escolhido.
+
+_Usando um Espaço de Magia de Círculo Superior._ Você pode escolher uma criatura adicional como alvo para cada círculo do espaço acima do 2º, e pode escolher um atributo diferente para cada alvo.
+
+=== Enlarge/Reduce | Aumentar/Reduzir
+material: uma pitada de ferro em pó
+Pela duração, a magia aumenta ou reduz uma criatura ou um objeto que você consiga ver dentro do alcance (veja o efeito escolhido abaixo). Um objeto escolhido como alvo não pode estar sendo vestido nem carregado. Se o alvo for uma criatura que não quer ser afetada, ela pode fazer uma salvaguarda de Constituição. Se for bem-sucedida, a magia não tem efeito.
+
+Tudo o que a criatura estiver vestindo e carregando muda de tamanho junto. Qualquer item que ela largar volta ao tamanho normal na hora. Uma arma arremessada ou uma munição volta ao tamanho normal logo depois de acertar ou errar o alvo.
+
+_Aumentar._ O tamanho do alvo sobe uma categoria, de Médio para Grande, por exemplo. O alvo também tem Vantagem em testes de Força e salvaguardas de Força. Os ataques dele com as armas aumentadas ou com Ataques Desarmados causam 1d4 de dano extra quando acertam.
+
+_Reduzir._ O tamanho do alvo desce uma categoria, de Médio para Pequeno, por exemplo. O alvo também tem Desvantagem em testes de Força e salvaguardas de Força. Os ataques dele com as armas reduzidas ou com Ataques Desarmados causam 1d4 de dano a menos quando acertam (o dano não pode ficar abaixo de 1).
+
+=== Enthrall | Fascinar
+Você tece uma enxurrada de palavras que distrai, e as criaturas à sua escolha que você consiga ver dentro do alcance fazem uma salvaguarda de Sabedoria. Qualquer criatura com quem você ou seus companheiros estejam lutando é bem-sucedida automaticamente. Se falhar, o alvo sofre −10 nos testes de Sabedoria (Percepção) e na Percepção Passiva até a magia acabar.
+
+=== Find Steed | Encontrar Montaria
+componentes: V, S
+Você invoca um ser de outro plano que aparece como uma montaria leal num espaço desocupado à sua escolha dentro do alcance. Essa criatura usa o bloco de estatísticas **Montaria Sobrenatural**. Se você já tiver uma montaria desta magia, ela é substituída pela nova.
+
+A montaria se parece com um animal Grande que pode ser montado, à sua escolha, como um cavalo, um camelo, um lobo atroz ou um alce. Sempre que conjurar a magia, escolha o tipo de criatura da montaria (Celestial, Fada ou Ínfero), que define certos traços no bloco de estatísticas.
+
+_Combate._ A montaria é aliada sua e dos seus aliados. Em combate, ela divide a sua contagem de Iniciativa e funciona como uma montaria controlada enquanto você a monta (como nas regras de combate montado). Se você estiver com a condição Incapacitado, a montaria age logo depois do seu turno, de forma independente, concentrada em proteger você.
+
+_Sumiço da Montaria._ A montaria desaparece se chegar a 0 Pontos de Vida ou se você morrer. Quando desaparece, deixa para trás tudo o que estava vestindo ou carregando. Se você conjurar esta magia de novo, decide se invoca a montaria que sumiu ou outra.
+
+_Usando um Espaço de Magia de Círculo Superior._ Use o círculo do espaço como o círculo da magia no bloco de estatísticas.
+
+#### Montaria Sobrenatural
+
+_Celestial, Fada ou Ínfero Grande (à sua escolha), Neutro_
+
+**CA** 10 + 1 por círculo da magia
+
+**PV** 5 + 10 por círculo da magia (a montaria tem um número de Dados de Vida [d10] igual ao círculo da magia)
+
+**Deslocamento** 18 m, Voo 18 m (exige magia de 4º círculo ou superior)
+
+| Atributo | Valor | Mod | Salv |
+|---|---|---|---|
+| FOR | 18 | +4 | +4 |
+| DES | 12 | +1 | +1 |
+| CON | 14 | +2 | +2 |
+| INT | 6 | −2 | −2 |
+| SAB | 12 | +1 | +1 |
+| CAR | 8 | −1 | −1 |
+
+**Sentidos** Percepção Passiva 11
+
+**Idiomas** Telepatia a 1,5 quilômetro (só funciona com você)
+
+**ND** Nenhum (XP 0; o Bônus de Proficiência é igual ao seu)
+
+#### Traços
+
+**_Vínculo Vital._** Quando você recupera Pontos de Vida com uma magia de 1º círculo ou superior, a montaria recupera a mesma quantidade, se você estiver a até 1,5 metro dela.
+
+#### Ações
+
+**_Pancada Sobrenatural._** _Jogada de Ataque Corpo a Corpo:_ bônus igual ao seu modificador de ataque mágico, alcance 1,5 m. _Acerto:_ 1d8 mais o círculo da magia de dano radiante (Celestial), psíquico (Fada) ou necrótico (Ínfero).
+
+#### Ações Bônus
+
+**_Olhar Funesto (Só Ínfero; Recarrega após um Descanso Longo)._** _Salvaguarda de Sabedoria:_ CD igual à CD de salvaguarda da sua magia, uma criatura a até 18 metros que a montaria consiga ver. _Falha:_ o alvo fica com a condição Amedrontado até o fim do seu próximo turno.
+
+**_Passo Feérico (Só Fada; Recarrega após um Descanso Longo)._** A montaria se teletransporta, junto com quem a monta, para um espaço desocupado à sua escolha a até 18 metros dela.
+
+**_Toque Curativo (Só Celestial; Recarrega após um Descanso Longo)._** Uma criatura a até 1,5 metro da montaria recupera Pontos de Vida iguais a 2d8 mais o círculo da magia.
+
+=== Find Traps | Encontrar Armadilhas
+Você sente qualquer armadilha dentro do alcance que esteja na sua linha de visão. Para esta magia, armadilha é qualquer objeto ou mecanismo criado para causar dano ou outro perigo. Assim, a magia sentiria as magias _Alarme_ ou _Glifo de Proteção_, ou um fosso mecânico, mas não revelaria um ponto frágil natural no piso, um teto instável ou um buraco escondido.
+
+Esta magia revela que há uma armadilha, mas não onde ela está. Você descobre a natureza geral do perigo de cada armadilha que sentir.
+
+=== Flame Blade | Lâmina Flamejante
+material: uma folha de sumagre
+Você evoca uma lâmina de fogo na sua mão livre. Ela tem tamanho e formato parecidos com os de uma cimitarra e dura pela duração. Se você soltar a lâmina, ela desaparece, mas você pode evocá-la de novo com uma Ação Bônus.
+
+Com uma ação de Magia, você pode fazer um ataque mágico corpo a corpo com a lâmina de fogo. Se acertar, o alvo sofre dano de fogo igual a 3d6 mais o modificador do seu atributo de conjuração.
+
+A lâmina flamejante emite Luz Plena num raio de 3 metros e Penumbra por mais 3 metros.
+
+_Usando um Espaço de Magia de Círculo Superior._ O dano aumenta em 1d6 para cada círculo do espaço acima do 2º.
+
+=== Flaming Sphere | Esfera Flamejante
+material: uma bola de cera
+Você cria uma esfera de fogo com 1,5 metro de diâmetro num espaço desocupado no chão dentro do alcance. Ela dura pela duração. Qualquer criatura que terminar o turno a até 1,5 metro da esfera faz uma salvaguarda de Destreza, sofrendo 2d6 de dano de fogo se falhar, ou metade desse dano se for bem-sucedida.
+
+Com uma Ação Bônus, você pode mover a esfera até 9 metros, rolando-a pelo chão. Se a mover para o espaço de uma criatura, essa criatura faz a salvaguarda contra a esfera, e a esfera para de se mover naquele turno.
+
+Ao mover a esfera, você pode fazê-la passar por cima de barreiras de até 1,5 metro de altura e saltar buracos de até 3 metros de largura. Objetos inflamáveis que não estejam sendo vestidos ou carregados pegam fogo se a esfera os tocar, e ela emite Luz Plena num raio de 6 metros e Penumbra por mais 6 metros.
+
+_Usando um Espaço de Magia de Círculo Superior._ O dano aumenta em 1d6 para cada círculo do espaço acima do 2º.
+
+=== Gentle Repose | Repouso Tranquilo
+material: 2 Peças de Cobre, consumidas pela magia
+Você toca um cadáver ou outros restos mortais. Pela duração, o alvo fica protegido da decomposição e não pode virar Morto-Vivo.
+
+Na prática, a magia também estende o prazo para trazer o alvo de volta dos mortos, já que os dias passados sob o efeito dela não contam no prazo de magias como _Reviver os Mortos_.
+
+=== Gust of Wind | Lufada de Vento
+material: uma semente de leguminosa
+Uma Linha de vento forte com 18 metros de comprimento e 3 metros de largura sopra de você numa direção à sua escolha, pela duração. Cada criatura na Linha precisa ser bem-sucedida numa salvaguarda de Força ou é empurrada 4,5 metros para longe de você, na direção da Linha. Uma criatura que terminar o turno na Linha faz a mesma salvaguarda.
+
+Qualquer criatura na Linha precisa gastar 2 metros de movimento para cada 1 metro que avançar na sua direção.
+
+A lufada dispersa gases e vapores e apaga velas e chamas desprotegidas parecidas na área. Chamas protegidas, como as de lanternas, dançam loucamente e têm 50 por cento de chance de se apagar.
+
+Com uma Ação Bônus nos seus turnos seguintes, você pode mudar a direção em que a Linha sopra de você.
+
+=== Heat Metal | Esquentar Metal
+material: um pedaço de ferro e uma chama
+Escolha um objeto de metal fabricado, como uma arma de metal ou uma armadura de metal Pesada ou Média, que você consiga ver dentro do alcance. Você faz o objeto ficar em brasa. Qualquer criatura em contato físico com ele sofre 2d8 de dano de fogo quando você conjura a magia. Até a magia acabar, você pode usar uma Ação Bônus em cada um dos seus turnos seguintes para causar esse dano de novo, se o objeto estiver dentro do alcance.
+
+Se uma criatura estiver segurando ou vestindo o objeto e sofrer o dano dele, ela precisa ser bem-sucedida numa salvaguarda de Constituição ou larga o objeto, se puder. Se não largar, tem Desvantagem nas jogadas de ataque e nos testes de atributo até o começo do seu próximo turno.
+
+_Usando um Espaço de Magia de Círculo Superior._ O dano aumenta em 1d8 para cada círculo do espaço acima do 2º.
+
+=== Hold Person | Imobilizar Pessoa
+material: um pedaço reto de ferro
+Escolha um Humanoide que você consiga ver dentro do alcance. O alvo precisa ser bem-sucedido numa salvaguarda de Sabedoria ou fica com a condição Paralisado pela duração. No fim de cada turno dele, o alvo repete a salvaguarda e, se for bem-sucedido, encerra a magia em si mesmo.
+
+_Usando um Espaço de Magia de Círculo Superior._ Você pode escolher um Humanoide adicional como alvo para cada círculo do espaço acima do 2º.
+
+=== Invisibility | Invisibilidade
+material: um cílio envolto em goma-arábica
+Uma criatura que você toca fica com a condição Invisível até a magia acabar. A magia acaba antes, na mesma hora, se o alvo fizer uma jogada de ataque, causar dano ou conjurar uma magia.
+
+_Usando um Espaço de Magia de Círculo Superior._ Você pode escolher uma criatura adicional como alvo para cada círculo do espaço acima do 2º.
+
+=== Knock | Arrombar
+Escolha um objeto que você consiga ver dentro do alcance. Pode ser uma porta, uma caixa, um baú, um par de algemas, um cadeado ou outro objeto que tenha um meio comum ou mágico de impedir o acesso.
+
+Um alvo mantido fechado por uma tranca comum, ou que esteja emperrado ou travado com barra, fica destrancado, desemperrado ou destravado. Se o objeto tiver várias trancas, só uma delas é aberta.
+
+Se o alvo estiver fechado por _Tranca Arcana_, essa magia fica suspensa por 10 minutos, e nesse tempo o alvo pode ser aberto e fechado.
+
+Quando você conjura a magia, uma batida alta, audível a até 90 metros, sai do alvo.
+
+=== Lesser Restoration | Restauração Menor
+Você toca uma criatura e encerra nela uma destas condições: Cego, Surdo, Paralisado ou Envenenado.
+
+=== Levitate | Levitação
+material: uma mola de metal
+Uma criatura ou um objeto solto à sua escolha que você consiga ver dentro do alcance sobe na vertical até 6 metros e fica suspenso ali pela duração. A magia consegue levitar um objeto de até 250 quilos. Uma criatura que não queira ser afetada e seja bem-sucedida numa salvaguarda de Constituição não é afetada.
+
+O alvo só consegue se mover empurrando ou puxando um objeto ou superfície fixos ao alcance dele (como uma parede ou um teto), o que permite se mover como se estivesse escalando. No seu turno, você pode mudar a altura do alvo em até 6 metros, para cima ou para baixo. Se você for o alvo, pode subir ou descer como parte do seu movimento. Senão, pode usar uma ação de Magia para mover o alvo, que precisa continuar dentro do alcance da magia.
+
+Quando a magia acaba, o alvo desce flutuando suavemente até o chão, se ainda estiver no ar.
+
+=== Locate Animals or Plants | Localizar Animais ou Plantas
+material: pelo de um cão farejador
+Descreva ou nomeie um tipo específico de Fera, de criatura Planta ou de planta não mágica. Você descobre a direção e a distância até a criatura ou planta mais próxima desse tipo a até 7,5 quilômetros, se houver alguma.
+
+=== Locate Object | Localizar Objeto
+material: um graveto bifurcado
+Descreva ou nomeie um objeto que você conheça. Você sente a direção em que ele está, se estiver a até 300 metros de você. Se o objeto estiver em movimento, você sabe para que lado ele vai.
+
+A magia consegue localizar um objeto específico que você conheça se já o tiver visto de perto, a até 9 metros, pelo menos uma vez. Se preferir, ela localiza o objeto mais próximo de um certo tipo, como uma peça de roupa, uma joia, um móvel, uma ferramenta ou uma arma.
+
+A magia não localiza um objeto se qualquer espessura de chumbo bloquear o caminho direto entre você e ele.
+
+=== Magic Mouth | Boca Encantada
+material: pó de jade que valha 10 PO ou mais, consumido pela magia
+Você implanta uma mensagem num objeto dentro do alcance, uma mensagem dita quando uma condição de ativação acontecer. Escolha um objeto que você consiga ver e que não esteja sendo vestido ou carregado por outra criatura. Então diga a mensagem, que pode ter até 25 palavras, mas pode ser falada ao longo de até 10 minutos. Por fim, determine a circunstância que fará a magia entregar a mensagem.
+
+Quando essa ativação acontece, uma boca mágica aparece no objeto e recita a mensagem com a sua voz, no mesmo volume em que você falou. Se o objeto escolhido tiver uma boca ou algo parecido com uma boca (por exemplo, a boca de uma estátua), a boca mágica aparece ali, e as palavras parecem sair da boca do objeto. Quando conjura a magia, você decide se ela acaba depois de entregar a mensagem ou se fica e repete a mensagem sempre que a ativação acontecer.
+
+A ativação pode ser tão geral ou tão detalhada quanto você quiser, mas precisa se basear em condições visuais ou sonoras que aconteçam a até 9 metros do objeto. Por exemplo, você pode mandar a boca falar quando qualquer criatura se aproximar a até 9 metros do objeto, ou quando um sino de prata tocar a até 9 metros dele.
+
+=== Magic Weapon | Arma Mágica
+Você toca uma arma não mágica. Até a magia acabar, ela vira uma arma mágica com +1 de bônus nas jogadas de ataque e de dano. A magia acaba antes se você a conjurar de novo.
+
+_Usando um Espaço de Magia de Círculo Superior._ O bônus sobe para +2 com um espaço de 3º a 5º círculo, e para +3 com um espaço de 6º círculo ou superior.
+
+=== Mind Spike | Espinho Mental
+Você crava um espinho de energia psiônica na mente de uma criatura que você consiga ver dentro do alcance. O alvo faz uma salvaguarda de Sabedoria, sofrendo 3d8 de dano psíquico se falhar, ou metade desse dano se for bem-sucedido. Se falhar, você também sabe onde o alvo está até a magia acabar, mas só enquanto os dois estiverem no mesmo plano de existência. Enquanto você souber, o alvo não consegue se esconder de você e, se estiver com a condição Invisível, não recebe benefício dela contra você.
+
+_Usando um Espaço de Magia de Círculo Superior._ O dano aumenta em 1d8 para cada círculo do espaço acima do 2º.
+
+=== Mirror Image | Imagem Espelhada
+Três duplicatas ilusórias suas aparecem no seu espaço. Até a magia acabar, elas se movem com você e imitam as suas ações, trocando de posição de um jeito que é impossível saber qual imagem é a verdadeira.
+
+Cada vez que uma criatura acertar você com uma jogada de ataque durante a magia, role um d6 para cada duplicata que restar. Se qualquer d6 der 3 ou mais, uma das duplicatas é atingida no seu lugar e é destruída. Fora isso, as duplicatas ignoram qualquer outro dano e efeito. A magia acaba quando as três duplicatas forem destruídas.
+
+Uma criatura não é afetada por esta magia se estiver com a condição Cego, ou se tiver Percepção às Cegas ou Visão Verdadeira.
+
+=== Misty Step | Passo Nebuloso
+Envolto por um instante numa névoa prateada, você se teletransporta até 9 metros, para um espaço desocupado que consiga ver.
+
+=== Moonbeam | Raio Lunar
+material: uma folha de menisperma
+Um feixe prateado de luz pálida desce num Cilindro de 1,5 metro de raio e 12 metros de altura, centrado num ponto dentro do alcance. Até a magia acabar, o Cilindro fica cheio de Penumbra, e você pode usar uma ação de Magia nos turnos seguintes para mover o Cilindro até 18 metros.
+
+Quando o Cilindro aparece, cada criatura nele faz uma salvaguarda de Constituição. Se falhar, a criatura sofre 2d10 de dano radiante e, se estiver com a forma mudada (por causa da magia _Metamorfose_, por exemplo), volta à forma verdadeira e não pode mudar de forma até sair do Cilindro. Se for bem-sucedida, sofre só metade do dano. Uma criatura também faz essa salvaguarda quando a área da magia passa para o espaço dela, e quando entra na área ou termina o turno nela. Uma criatura só faz essa salvaguarda uma vez por turno.
+
+_Usando um Espaço de Magia de Círculo Superior._ O dano aumenta em 1d10 para cada círculo do espaço acima do 2º.
+
+=== Pass without Trace | Passos sem Pegadas
+material: cinzas de visco queimado
+Você irradia uma aura que esconde, numa Emanação de 9 metros, pela duração. Enquanto estiverem na aura, você e cada criatura que escolher recebem +10 de bônus em testes de Destreza (Furtividade) e não deixam rastros.
+
+=== Phantasmal Force | Força Fantasmagórica
+material: um pouco de lã
+Você tenta criar uma ilusão na mente de uma criatura que você consiga ver dentro do alcance. O alvo faz uma salvaguarda de Inteligência. Se falhar, você cria um objeto, uma criatura ou outro fenômeno fantasmagórico que não seja maior que um Cubo de 3 metros e que só o alvo percebe, pela duração. O fantasma inclui som, temperatura e outros estímulos.
+
+O alvo pode usar uma ação de Estudo para examinar o fantasma com um teste de Inteligência (Investigação) contra a CD de salvaguarda da sua magia. Se passar, percebe que o fantasma é uma ilusão, e a magia acaba.
+
+Enquanto estiver sob a magia, o alvo trata o fantasma como real e arranja explicação para qualquer resultado sem lógica ao interagir com ele. Por exemplo, se o alvo pisar numa ponte fantasmagórica e sobreviver à queda, acredita que a ponte existe e que alguma outra coisa o fez cair.
+
+Um alvo afetado pode até sofrer dano da ilusão, se o fantasma for uma criatura ou um perigo. Em cada um dos seus turnos, esse fantasma pode causar 2d8 de dano psíquico ao alvo, se ele estiver na área do fantasma ou a até 1,5 metro dele. O alvo percebe o dano como de um tipo que combine com a ilusão.
+
+=== Prayer of Healing | Oração Curativa
+Até cinco criaturas à sua escolha que fiquem dentro do alcance durante toda a conjuração recebem os benefícios de um Descanso Curto e também recuperam 2d8 Pontos de Vida. Uma criatura não pode ser afetada por esta magia de novo até terminar um Descanso Longo.
+
+_Usando um Espaço de Magia de Círculo Superior._ A cura aumenta em 1d8 para cada círculo do espaço acima do 2º.
+
+=== Protection from Poison | Proteção contra Veneno
+Você toca uma criatura e encerra nela a condição Envenenado. Pela duração, o alvo tem Vantagem nas salvaguardas para evitar ou encerrar a condição Envenenado, e tem Resistência a dano de veneno.
+
+=== Ray of Enfeeblement | Raio do Enfraquecimento
+Um feixe de energia que drena as forças dispara de você em direção a uma criatura dentro do alcance. O alvo precisa fazer uma salvaguarda de Constituição. Se for bem-sucedido, tem Desvantagem na próxima jogada de ataque que fizer até o começo do seu próximo turno.
+
+Se falhar, o alvo tem Desvantagem nos Testes de D20 baseados em Força pela duração. Nesse tempo, ele também subtrai 1d8 de todas as jogadas de dano. O alvo repete a salvaguarda no fim de cada turno dele, encerrando a magia se for bem-sucedido.
+
+=== Rope Trick | Truque de Corda
+material: um pedaço de corda
+Você toca uma corda. Uma das pontas sobe flutuando até a corda ficar perpendicular ao chão ou alcançar um teto. Na ponta de cima, abre-se um portal Invisível de 90 centímetros por 1,5 metro para um espaço extradimensional que dura até a magia acabar. Chega-se a esse espaço subindo pela corda, que pode ser puxada para dentro ou jogada para fora dele.
+
+O espaço comporta até oito criaturas Médias ou menores. Ataques, magias e outros efeitos não entram nem saem do espaço, mas as criaturas lá dentro conseguem ver através do portal. Tudo o que estiver dentro do espaço cai para fora quando a magia acaba.
+
+=== Scorching Ray | Raio Ardente
+Você arremessa três raios de fogo, num alvo dentro do alcance ou em vários. Faça um ataque mágico à distância para cada raio. Se acertar, o alvo sofre 2d6 de dano de fogo.
+
+_Usando um Espaço de Magia de Círculo Superior._ Você cria um raio adicional para cada círculo do espaço acima do 2º.
+
+=== See Invisibility | Ver o Invisível
+material: uma pitada de talco
+Pela duração, você vê criaturas e objetos com a condição Invisível como se fossem visíveis, e consegue enxergar o Plano Etéreo. As criaturas e os objetos de lá parecem fantasmas.
+
+=== Shatter | Despedaçar
+material: uma lasca de mica
+Um barulho alto explode num ponto à sua escolha dentro do alcance. Cada criatura numa Esfera de 3 metros de raio centrada ali faz uma salvaguarda de Constituição, sofrendo 3d8 de dano trovejante se falhar, ou metade desse dano se for bem-sucedida. Um Constructo tem Desvantagem nessa salvaguarda.
+
+Um objeto não mágico que não esteja sendo vestido ou carregado também sofre o dano, se estiver na área da magia.
+
+_Usando um Espaço de Magia de Círculo Superior._ O dano aumenta em 1d8 para cada círculo do espaço acima do 2º.
+
+=== Shining Smite | Destruição Reluzente
+tempo: Ação Bônus, que você usa logo depois de acertar uma criatura com uma arma corpo a corpo ou um Ataque Desarmado
+O alvo atingido sofre 2d6 de dano radiante extra com o ataque. Até a magia acabar, o alvo emite Luz Plena num raio de 1,5 metro, as jogadas de ataque contra ele têm Vantagem, e ele não pode se beneficiar da condição Invisível.
+
+_Usando um Espaço de Magia de Círculo Superior._ O dano aumenta em 1d6 para cada círculo do espaço acima do 2º.
+
+=== Silence | Silêncio
+Pela duração, nenhum som pode ser criado dentro de uma Esfera de 6 metros de raio, centrada num ponto à sua escolha dentro do alcance, nem atravessá-la. Qualquer criatura ou objeto inteiramente dentro da Esfera tem Imunidade a dano trovejante, e as criaturas ficam com a condição Surdo enquanto estiverem inteiramente dentro dela. É impossível conjurar ali uma magia que tenha componente Verbal.
+
+=== Spider Climb | Patas de Aranha
+material: uma gota de betume e uma aranha
+Até a magia acabar, uma criatura voluntária que você toca ganha a capacidade de subir, descer e atravessar superfícies verticais e andar pelo teto, deixando as mãos livres. O alvo também ganha Deslocamento de Escalada igual ao seu Deslocamento.
+
+_Usando um Espaço de Magia de Círculo Superior._ Você pode escolher uma criatura adicional como alvo para cada círculo do espaço acima do 2º.
+
+=== Spike Growth | Crescer Espinhos
+material: sete espinhos
+O chão numa Esfera de 6 metros de raio, centrada num ponto dentro do alcance, se enche de pontas duras e espinhos. A área vira Terreno Difícil pela duração. Quando uma criatura entra na área ou se move dentro dela, sofre 2d4 de dano perfurante a cada 1,5 metro que percorrer.
+
+A transformação do chão fica disfarçada para parecer natural. Qualquer criatura que não consiga ver a área quando a magia é conjurada precisa usar a ação de Procurar e ser bem-sucedida num teste de Sabedoria (Percepção ou Sobrevivência) contra a CD de salvaguarda da sua magia para perceber o perigo antes de entrar.
+
+=== Spiritual Weapon | Arma Espiritual
+Você cria uma força espectral e flutuante, parecida com uma arma à sua escolha, que dura pela duração. A força aparece dentro do alcance, num espaço à sua escolha, e você pode fazer na hora um ataque mágico corpo a corpo contra uma criatura a até 1,5 metro dela. Se acertar, o alvo sofre dano de energia igual a 1d8 mais o modificador do seu atributo de conjuração.
+
+Com uma Ação Bônus nos seus turnos seguintes, você pode mover a força até 6 metros e repetir o ataque contra uma criatura a até 1,5 metro dela.
+
+_Usando um Espaço de Magia de Círculo Superior._ O dano aumenta em 1d8 para cada círculo do espaço acima do 2º.
+
+=== Suggestion | Sugestão
+material: uma gota de mel
+Você sugere um curso de ação, descrito em no máximo 25 palavras, a uma criatura que você consiga ver dentro do alcance e que consiga ouvir e entender você. A sugestão precisa soar possível e não pode envolver nada que obviamente cause dano ao alvo ou aos aliados dele. Por exemplo, você pode dizer: "Pegue a chave do cofre do culto e entregue para mim." Ou: "Pare de lutar, saia desta biblioteca em paz e não volte."
+
+O alvo precisa ser bem-sucedido numa salvaguarda de Sabedoria ou fica com a condição Enfeitiçado pela duração, ou até que você ou seus aliados causem dano a ele. O alvo Enfeitiçado segue a sugestão o melhor que pode. A atividade sugerida pode durar a magia inteira, mas, se puder ser concluída antes, a magia acaba para o alvo quando ele a concluir.
+
+=== Warding Bond | Vínculo Protetor
+material: um par de anéis de platina que valham 50 PO ou mais cada, que você e o alvo precisam usar pela duração
+Você toca outra criatura voluntária e cria uma ligação mística entre vocês até a magia acabar. Enquanto o alvo estiver a até 18 metros de você, ele recebe +1 de bônus na CA e nas salvaguardas, e tem Resistência a todo dano. Além disso, cada vez que ele sofrer dano, você sofre a mesma quantidade.
+
+A magia acaba se você chegar a 0 Pontos de Vida ou se vocês ficarem a mais de 18 metros um do outro. Também acaba se a magia for conjurada de novo em qualquer uma das duas criaturas ligadas.
+
+=== Web | Teia
+material: um pouco de teia de aranha
+Você conjura uma massa de teia grudenta num ponto dentro do alcance. As teias preenchem ali um Cubo de 6 metros pela duração. Elas são Terreno Difícil, e a área dentro delas é Levemente Obscurecida.
+
+Se as teias não estiverem presas entre duas massas sólidas (como paredes ou árvores) ou estendidas sobre um piso, parede ou teto, a teia desaba sobre si mesma, e a magia acaba no começo do seu próximo turno. Teias estendidas sobre uma superfície plana têm 1,5 metro de espessura.
+
+Na primeira vez que uma criatura entrar nas teias num turno, ou quando começar o turno nelas, ela precisa ser bem-sucedida numa salvaguarda de Destreza ou fica com a condição Contido enquanto estiver nas teias ou até se soltar.
+
+Uma criatura Contida pelas teias pode usar uma ação para fazer um teste de Força (Atletismo) contra a CD de salvaguarda da sua magia. Se passar, deixa de estar Contida.
+
+As teias são inflamáveis. Qualquer Cubo de 1,5 metro de teia exposto ao fogo queima em 1 rodada, causando 2d4 de dano de fogo a qualquer criatura que comece o turno no fogo.
+
+=== Zone of Truth | Zona da Verdade
+Você cria uma zona mágica contra a mentira numa Esfera de 4,5 metros de raio, centrada num ponto dentro do alcance. Até a magia acabar, uma criatura que entrar na área pela primeira vez num turno, ou que começar o turno nela, faz uma salvaguarda de Carisma. Se falhar, não consegue dizer uma mentira deliberada enquanto estiver no raio. Você sabe se cada criatura passou ou falhou nessa salvaguarda.
+
+Uma criatura afetada sabe da magia e pode evitar responder perguntas que normalmente responderia com uma mentira. Ela pode ser evasiva, mas precisa dizer a verdade.
