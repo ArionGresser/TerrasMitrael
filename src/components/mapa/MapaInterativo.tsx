@@ -144,7 +144,7 @@ export function MapaInterativo() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 10 }}
             transition={{ duration: 0.25 }}
-            className="textura-pergaminho borda-envelhecida pergaminho-borda-2 shadow-pergaminho mt-4 px-5 py-4"
+            className="textura-pergaminho borda-envelhecida pergaminho-borda-2 mt-4 px-5 py-4"
           >
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div>

@@ -12,6 +12,13 @@ import { AmbienteSonoro } from "@/components/som/AmbienteSonoro";
 export function Mesa({ children }: { children: React.ReactNode }) {
   return (
     <>
+      {/* A luz da vela na madeira: um brilho quente parado na tela, por baixo
+          do papel. Ao rolar, a mesa e as folhas passam por baixo dele. */}
+      <div
+        aria-hidden
+        className="pointer-events-none fixed inset-0 z-0 bg-[radial-gradient(ellipse_70%_55%_at_50%_36%,rgba(255,170,90,0.13),transparent_70%)]"
+      />
+
       {/* Vinheta: a luz de vela cai no centro da mesa e some nas bordas */}
       <div
         aria-hidden

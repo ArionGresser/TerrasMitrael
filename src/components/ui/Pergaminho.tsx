@@ -56,7 +56,7 @@ export function Pergaminho({
 
   return (
     <Tag
-      className={`textura-pergaminho borda-envelhecida shadow-pergaminho text-tinta-900 relative ${BORDAS[borda]} ${giro} ${VARIANTES[variante]} ${className}`}
+      className={`textura-pergaminho borda-envelhecida text-tinta-900 relative ${BORDAS[borda]} ${giro} ${VARIANTES[variante]} ${className}`}
     >
       {rolos === true ? <span aria-hidden className="rolo rolo-topo" /> : null}
       {children}

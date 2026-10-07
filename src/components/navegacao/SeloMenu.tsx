@@ -171,7 +171,7 @@ export function SeloMenu() {
                 className="from-madeira-700 via-madeira-500 to-madeira-700 h-2.5 w-full rounded-full bg-gradient-to-b shadow-md"
               />
 
-              <nav className="textura-pergaminho borda-envelhecida pergaminho-borda-2 shadow-pergaminho-alto px-2 py-3">
+              <nav className="textura-pergaminho borda-envelhecida folha-alta pergaminho-borda-2 px-2 py-3">
                 <ul>
                   {SECOES.map((secao, i) => {
                     const ativo =

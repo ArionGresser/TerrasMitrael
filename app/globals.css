@@ -44,9 +44,16 @@
   --font-titulo: var(--fonte-titulo), Georgia, serif;
   --font-corpo: var(--fonte-corpo), system-ui, sans-serif;
 
-  /* --- Sombras: pergaminho pousado sobre a mesa --- */
-  --shadow-pergaminho: 0 2px 4px rgb(0 0 0 / 0.28), 0 12px 32px rgb(0 0 0 / 0.42);
-  --shadow-pergaminho-alto: 0 4px 8px rgb(0 0 0 / 0.3), 0 24px 56px rgb(0 0 0 / 0.5);
+  /* --- Sombras: pergaminho pousado sobre a mesa ---
+     Em camadas, com a luz vindo de cima: a primeira é o contato do papel
+     com a madeira, colada na borda; as outras abrem embaixo, largas e
+     suaves. A "alta" é para o que fica erguido acima do resto (o menu). */
+  --shadow-pergaminho:
+    0 1px 1px rgb(0 0 0 / 0.42), 0 3px 6px -1px rgb(0 0 0 / 0.34),
+    0 10px 18px -6px rgb(0 0 0 / 0.42), 0 26px 48px -14px rgb(0 0 0 / 0.6);
+  --shadow-pergaminho-alto:
+    0 2px 3px rgb(0 0 0 / 0.35), 0 10px 20px -4px rgb(0 0 0 / 0.42),
+    0 32px 64px -12px rgb(0 0 0 / 0.65);
 }
 
 /* ============================================================
@@ -128,33 +135,20 @@
    funcionam em qualquer conexão.
    ============================================================ */
 
-/* Veios de madeira da mesa */
+/* O tampo da mesa: tábuas largas de nogueira, geradas por
+   scripts/texturas/gerar-mesa.py. A imagem fecha nas bordas e se repete;
+   rola junto com a página, como o papel que está em cima dela. */
 .textura-madeira {
   background-color: var(--color-madeira-900);
-  background-image:
-    repeating-linear-gradient(
-      92deg,
-      rgb(0 0 0 / 0.16) 0px,
-      rgb(0 0 0 / 0.16) 1px,
-      transparent 1px,
-      transparent 4px,
-      rgb(255 255 255 / 0.022) 4px,
-      rgb(255 255 255 / 0.022) 5px,
-      transparent 5px,
-      transparent 11px
-    ),
-    repeating-linear-gradient(
-      88deg,
-      rgb(0 0 0 / 0.1) 0px,
-      rgb(0 0 0 / 0.1) 2px,
-      transparent 2px,
-      transparent 23px
-    ),
-    radial-gradient(
-      ellipse 80% 60% at 50% 0%,
-      rgb(122 80 41 / 0.5) 0%,
-      transparent 70%
-    );
+  background-image: url("/images/mesa.webp");
+  background-size: 820px auto;
+  background-position: center top;
+}
+
+@media (min-width: 640px) {
+  .textura-madeira {
+    background-size: 1280px auto;
+  }
 }
 
 /* Fibras e manchas do pergaminho */
@@ -187,9 +181,17 @@
 
 /* Bordas escurecidas pelo tempo, como papel envelhecido */
 .borda-envelhecida {
+  /* As bordas escuras por dentro e a sombra na mesa por fora, juntas: numa
+     regra só, porque uma box-shadow apaga a outra. */
   box-shadow:
     inset 0 0 44px rgb(120 85 40 / 0.34),
-    inset 0 0 12px rgb(90 60 25 / 0.22);
+    inset 0 0 12px rgb(90 60 25 / 0.22),
+    var(--sombra-da-folha, var(--shadow-pergaminho));
+}
+
+/* Para a folha que fica erguida acima das outras, como o menu aberto */
+.folha-alta {
+  --sombra-da-folha: var(--shadow-pergaminho-alto);
 }
 
 /* ============================================================
