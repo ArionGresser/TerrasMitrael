@@ -1,0 +1,303 @@
+=== Young Brass Dragon
++ Ataques Múltiplos
+O dragão faz três ataques de Dilacerar. Ele pode trocar dois ataques por um uso de Sopro do Sono.
++ Dilacerar
++ Sopro de Fogo (Recarga 5–6)
+_Teste de Resistência de Destreza:_ CD 14, cada criatura numa Linha de 12 m de comprimento e 1,5 m de largura. _Falha:_ 38 (11d6) de dano de fogo. _Sucesso:_ Metade do dano.
++ Sopro do Sono
+_Teste de Resistência de Constituição:_ CD 14, cada criatura num Cone de 9 m. _Falha:_ O alvo fica com a condição Incapacitado até o fim do próximo turno dele, quando repete o teste. _Segunda Falha:_ O alvo fica com a condição Inconsciente por 1 minuto. O efeito acaba para o alvo se ele sofrer dano ou se uma criatura a até 1,5 m dele usar uma ação para acordá-lo.
+
+=== Adult Brass Dragon
++ Resistência Lendária (3/Dia, ou 4/Dia no Covil)
+Se o dragão falhar num teste de resistência, pode escolher ser bem-sucedido.
++ Ataques Múltiplos
+O dragão faz três ataques de Dilacerar. Ele pode trocar um ataque por um uso de (A) Sopro do Sono ou (B) Conjuração para conjurar _Raio Ardente_.
++ Dilacerar
++ Sopro de Fogo (Recarga 5–6)
+_Teste de Resistência de Destreza:_ CD 18, cada criatura numa Linha de 18 m de comprimento e 1,5 m de largura. _Falha:_ 45 (10d8) de dano de fogo. _Sucesso:_ Metade do dano.
++ Sopro do Sono
+_Teste de Resistência de Constituição:_ CD 18, cada criatura num Cone de 18 m. _Falha:_ O alvo fica com a condição Incapacitado até o fim do próximo turno dele, quando repete o teste. _Segunda Falha:_ O alvo fica com a condição Inconsciente por 10 minutos. O efeito acaba para o alvo se ele sofrer dano ou se uma criatura a até 1,5 m dele usar uma ação para acordá-lo.
++ Conjuração
+O dragão conjura uma das magias a seguir, sem precisar de componentes Materiais e usando Carisma como atributo de conjuração (CD de resistência 16):
+
+**À vontade:** _Detectar Magia_, _Ilusão Menor_, _Raio Ardente_, _Mudança de Forma_ (só formas de Fera ou Humanoide, sem ganhar Pontos de Vida Temporários da magia e sem precisar de Concentração nem de Pontos de Vida Temporários para mantê-la), _Falar com Animais_
+
+**1/Dia cada:** _Detectar Pensamentos_, _Controlar o Clima_
++ :intro
+_Usos de Ação Lendária: 3 (4 no Covil). Logo depois do turno de outra criatura, o dragão pode gastar um uso para fazer uma das ações a seguir. Ele recupera todos os usos gastos no início de cada turno seu._
++ Luz Ofuscante
+O dragão usa Conjuração para conjurar _Raio Ardente_.
++ Bote
+O dragão se move até metade do Deslocamento e faz um ataque de Dilacerar.
++ Areias Escaldantes
+_Teste de Resistência de Destreza:_ CD 16, uma criatura que o dragão consiga ver a até 36 m. _Falha:_ 27 (6d8) de dano de fogo, e o Deslocamento do alvo cai pela metade até o fim do próximo turno dele. _Falha ou Sucesso:_ O dragão só pode usar esta ação de novo no início do próximo turno dele.
+
+=== Ancient Brass Dragon
++ Resistência Lendária (4/Dia, ou 5/Dia no Covil)
+Se o dragão falhar num teste de resistência, pode escolher ser bem-sucedido.
++ Ataques Múltiplos
+O dragão faz três ataques de Dilacerar. Ele pode trocar um ataque por um uso de (A) Sopro do Sono ou (B) Conjuração para conjurar _Raio Ardente_ (versão de 3º círculo).
++ Dilacerar
++ Sopro de Fogo (Recarga 5–6)
+_Teste de Resistência de Destreza:_ CD 21, cada criatura numa Linha de 27 m de comprimento e 1,5 m de largura. _Falha:_ 58 (13d8) de dano de fogo. _Sucesso:_ Metade do dano.
++ Sopro do Sono
+_Teste de Resistência de Constituição:_ CD 21, cada criatura num Cone de 27 m. _Falha:_ O alvo fica com a condição Incapacitado até o fim do próximo turno dele, quando repete o teste. _Segunda Falha:_ O alvo fica com a condição Inconsciente por 10 minutos. O efeito acaba para o alvo se ele sofrer dano ou se uma criatura a até 1,5 m dele usar uma ação para acordá-lo.
++ Conjuração
+O dragão conjura uma das magias a seguir, sem precisar de componentes Materiais e usando Carisma como atributo de conjuração (CD de resistência 20):
+
+**À vontade:** _Detectar Magia_, _Ilusão Menor_, _Raio Ardente_ (versão de 3º círculo), _Mudança de Forma_ (só formas de Fera ou Humanoide, sem ganhar Pontos de Vida Temporários da magia e sem precisar de Concentração nem de Pontos de Vida Temporários para mantê-la), _Falar com Animais_
+
+**1/Dia cada:** _Controlar o Clima_, _Detectar Pensamentos_
++ :intro
+_Usos de Ação Lendária: 3 (4 no Covil). Logo depois do turno de outra criatura, o dragão pode gastar um uso para fazer uma das ações a seguir. Ele recupera todos os usos gastos no início de cada turno seu._
++ Luz Ofuscante
+O dragão usa Conjuração para conjurar _Raio Ardente_ (versão de 3º círculo).
++ Bote
+O dragão se move até metade do Deslocamento e faz um ataque de Dilacerar.
++ Areias Escaldantes
+_Teste de Resistência de Destreza:_ CD 20, uma criatura que o dragão consiga ver a até 36 m. _Falha:_ 36 (8d8) de dano de fogo, e o Deslocamento do alvo cai pela metade até o fim do próximo turno dele. _Falha ou Sucesso:_ O dragão só pode usar esta ação de novo no início do próximo turno dele.
+
+=== Bronze Dragon Wyrmling
++ Anfíbio
+O dragão respira ar e água.
++ Ataques Múltiplos
+O dragão faz dois ataques de Dilacerar.
++ Dilacerar
++ Sopro Relampejante (Recarga 5–6)
+_Teste de Resistência de Destreza:_ CD 12, cada criatura numa Linha de 12 m de comprimento e 1,5 m de largura. _Falha:_ 16 (3d10) de dano elétrico. _Sucesso:_ Metade do dano.
++ Sopro Repulsor
+_Teste de Resistência de Força:_ CD 12, cada criatura num Cone de 9 m. _Falha:_ O alvo é empurrado até 9 m em linha reta para longe do dragão e fica com a condição Caído.
+
+=== Young Bronze Dragon
++ Anfíbio
+O dragão respira ar e água.
++ Ataques Múltiplos
+O dragão faz três ataques de Dilacerar. Ele pode trocar um ataque por um uso de Sopro Repulsor.
++ Dilacerar
++ Sopro Relampejante (Recarga 5–6)
+_Teste de Resistência de Destreza:_ CD 15, cada criatura numa Linha de 18 m de comprimento e 1,5 m de largura. _Falha:_ 49 (9d10) de dano elétrico. _Sucesso:_ Metade do dano.
++ Sopro Repulsor
+_Teste de Resistência de Força:_ CD 15, cada criatura num Cone de 9 m. _Falha:_ O alvo é empurrado até 12 m em linha reta para longe do dragão e fica com a condição Caído.
+
+=== Adult Bronze Dragon
++ Anfíbio
+O dragão respira ar e água.
++ Resistência Lendária (3/Dia, ou 4/Dia no Covil)
+Se o dragão falhar num teste de resistência, pode escolher ser bem-sucedido.
++ Ataques Múltiplos
+O dragão faz três ataques de Dilacerar. Ele pode trocar um ataque por um uso de (A) Sopro Repulsor ou (B) Conjuração para conjurar _Raio Guiador_ (versão de 2º círculo).
++ Dilacerar
++ Sopro Relampejante (Recarga 5–6)
+_Teste de Resistência de Destreza:_ CD 19, cada criatura numa Linha de 27 m de comprimento e 1,5 m de largura. _Falha:_ 55 (10d10) de dano elétrico. _Sucesso:_ Metade do dano.
++ Sopro Repulsor
+_Teste de Resistência de Força:_ CD 19, cada criatura num Cone de 9 m. _Falha:_ O alvo é empurrado até 18 m em linha reta para longe do dragão e fica com a condição Caído.
++ Conjuração
+O dragão conjura uma das magias a seguir, sem precisar de componentes Materiais e usando Carisma como atributo de conjuração (CD de resistência 17, +10 para acertar com ataques mágicos):
+
+**À vontade:** _Detectar Magia_, _Raio Guiador_ (versão de 2º círculo), _Mudança de Forma_ (só formas de Fera ou Humanoide, sem ganhar Pontos de Vida Temporários da magia e sem precisar de Concentração nem de Pontos de Vida Temporários para mantê-la), _Falar com Animais_, _Taumaturgia_
+
+**1/Dia cada:** _Detectar Pensamentos_, _Respirar na Água_
++ :intro
+_Usos de Ação Lendária: 3 (4 no Covil). Logo depois do turno de outra criatura, o dragão pode gastar um uso para fazer uma das ações a seguir. Ele recupera todos os usos gastos no início de cada turno seu._
++ Luz Guiadora
+O dragão usa Conjuração para conjurar _Raio Guiador_ (versão de 2º círculo).
++ Bote
+O dragão se move até metade do Deslocamento e faz um ataque de Dilacerar.
++ Trovoada
+_Teste de Resistência de Constituição:_ CD 17, cada criatura numa Esfera de 6 m de raio centrada num ponto que o dragão consiga ver a até 27 m. _Falha:_ 10 (3d6) de dano trovejante, e o alvo fica com a condição Surdo até o fim do próximo turno dele.
+
+=== Ancient Bronze Dragon
++ Anfíbio
+O dragão respira ar e água.
++ Resistência Lendária (4/Dia, ou 5/Dia no Covil)
+Se o dragão falhar num teste de resistência, pode escolher ser bem-sucedido.
++ Ataques Múltiplos
+O dragão faz três ataques de Dilacerar. Ele pode trocar um ataque por um uso de (A) Sopro Repulsor ou (B) Conjuração para conjurar _Raio Guiador_ (versão de 2º círculo).
++ Dilacerar
++ Sopro Relampejante (Recarga 5–6)
+_Teste de Resistência de Destreza:_ CD 23, cada criatura numa Linha de 36 m de comprimento e 3 m de largura. _Falha:_ 82 (15d10) de dano elétrico. _Sucesso:_ Metade do dano.
++ Sopro Repulsor
+_Teste de Resistência de Força:_ CD 23, cada criatura num Cone de 9 m. _Falha:_ O alvo é empurrado até 18 m em linha reta para longe do dragão e fica com a condição Caído.
++ Conjuração
+O dragão conjura uma das magias a seguir, sem precisar de componentes Materiais e usando Carisma como atributo de conjuração (CD de resistência 22, +14 para acertar com ataques mágicos):
+
+**À vontade:** _Detectar Magia_, _Raio Guiador_ (versão de 2º círculo), _Mudança de Forma_ (só formas de Fera ou Humanoide, sem ganhar Pontos de Vida Temporários da magia e sem precisar de Concentração nem de Pontos de Vida Temporários para mantê-la), _Falar com Animais_, _Taumaturgia_
+
+**1/Dia cada:** _Detectar Pensamentos_, _Controlar a Água_, _Vidência_, _Respirar na Água_
++ :intro
+_Usos de Ação Lendária: 3 (4 no Covil). Logo depois do turno de outra criatura, o dragão pode gastar um uso para fazer uma das ações a seguir. Ele recupera todos os usos gastos no início de cada turno seu._
++ Luz Guiadora
+O dragão usa Conjuração para conjurar _Raio Guiador_ (versão de 2º círculo).
++ Bote
+O dragão se move até metade do Deslocamento e faz um ataque de Dilacerar.
++ Trovoada
+_Teste de Resistência de Constituição:_ CD 22, cada criatura numa Esfera de 6 m de raio centrada num ponto que o dragão consiga ver a até 36 m. _Falha:_ 13 (3d8) de dano trovejante, e o alvo fica com a condição Surdo até o fim do próximo turno dele.
+
+=== Bugbear Stalker
++ Raptor
+O bugbear não precisa gastar movimento extra para mover uma criatura que esteja agarrando.
++ Ataques Múltiplos
+O bugbear faz dois ataques de Azagaia ou de Maça Estrela.
++ Azagaia
++ Maça Estrela
+_Jogada de Ataque Corpo a Corpo:_ +5 (com Vantagem se o alvo estiver Agarrado pelo bugbear), alcance 3 m. _Acerto:_ 12 (2d8 + 3) de dano perfurante.
++ Agarrar Ligeiro
+_Teste de Resistência de Destreza:_ CD 13, uma criatura Média ou menor que o bugbear consiga ver a até 3 m. _Falha:_ O alvo fica com a condição Agarrado (CD 13 para escapar).
+
+=== Bugbear Warrior
++ Raptor
+O bugbear não precisa gastar movimento extra para mover uma criatura que esteja agarrando.
++ Agarrar
+_Jogada de Ataque Corpo a Corpo:_ +4, alcance 3 m. _Acerto:_ 9 (2d6 + 2) de dano contundente. Se o alvo for uma criatura Média ou menor, fica com a condição Agarrado (CD 12 para escapar).
++ Martelo Leve
+_Jogada de Ataque Corpo a Corpo ou à Distância:_ +4 (com Vantagem se o alvo estiver Agarrado pelo bugbear), alcance 3 m ou 6/18 m. _Acerto:_ 9 (3d4 + 2) de dano contundente.
+
+=== Bulette
++ Ataques Múltiplos
+O bulette faz dois ataques de Mordida.
++ Mordida
++ Salto Mortal
+O bulette gasta 1,5 m de movimento para saltar até um espaço a até 4,5 m que tenha uma ou mais criaturas Grandes ou menores. _Teste de Resistência de Destreza:_ CD 15, cada criatura no espaço de destino do bulette. _Falha:_ 19 (3d12) de dano contundente, e o alvo fica com a condição Caído. _Sucesso:_ Metade do dano, e o alvo é empurrado 1,5 m em linha reta para longe do bulette.
++ Salto
+O bulette salta até 9 m gastando 3 m de movimento.
+
+=== Centaur Trooper
++ Ataques Múltiplos
+O centauro faz dois ataques, com Pique ou Arco Longo, em qualquer combinação.
++ Pique
++ Arco Longo
++ Investida Atropelante (Recarga 5–6)
+O centauro se move até o seu Deslocamento sem provocar Ataques de Oportunidade e pode atravessar os espaços de criaturas Médias ou menores. Cada criatura em cujo espaço o centauro entrar é alvo uma vez do efeito a seguir. _Teste de Resistência de Força:_ CD 14. _Falha:_ 7 (1d6 + 4) de dano contundente, e o alvo fica com a condição Caído.
+
+=== Chain Devil
++ Restauração Diabólica
+Se o diabo morrer fora dos Nove Infernos, o corpo some numa fumaça sulfurosa, e ele ganha um corpo novo na hora, revivendo com todos os Pontos de Vida em algum lugar dos Nove Infernos.
++ Resistência à Magia
+O diabo tem Vantagem nos testes de resistência contra magias e outros efeitos mágicos.
++ Ataques Múltiplos
+O diabo faz dois ataques de Corrente e usa Conjurar Corrente Infernal.
++ Corrente
+_Jogada de Ataque Corpo a Corpo:_ +7, alcance 3 m. _Acerto:_ 11 (2d6 + 4) de dano cortante. Se o alvo for uma criatura Grande ou menor, fica com a condição Agarrado (CD 14 para escapar) por uma das duas correntes e com a condição Contido até a agarrada acabar.
++ Conjurar Corrente Infernal
+O diabo conjura uma corrente em chamas para prender uma criatura. _Teste de Resistência de Destreza:_ CD 15, uma criatura que o diabo consiga ver a até 18 m. _Falha:_ 9 (2d4 + 4) de dano de fogo, e o alvo fica com a condição Contido até o fim do próximo turno do diabo, quando a corrente some. Se o alvo for Grande ou menor, o diabo o puxa até 9 m em linha reta na direção dele. _Sucesso:_ A corrente some.
++ Olhar Inquietante
+_Gatilho:_ Uma criatura que o diabo consiga ver começa o turno a até 9 m dele e consegue vê-lo. _Resposta, Teste de Resistência de Sabedoria:_ CD 15, a criatura que provocou a reação. _Falha:_ O alvo fica com a condição Amedrontado até o fim do turno dele. _Sucesso:_ O alvo fica imune ao Olhar Inquietante deste diabo por 24 horas.
+
+=== Chimera
++ Ataques Múltiplos
+A quimera faz um ataque de Marrada, um de Mordida e um de Garra. Ela pode trocar o ataque de Garra por um uso de Sopro de Fogo, se estiver disponível.
++ Mordida
+_Jogada de Ataque Corpo a Corpo:_ +7, alcance 1,5 m. _Acerto:_ 11 (2d6 + 4) de dano perfurante, ou 18 (4d6 + 4) de dano perfurante se a quimera tiver Vantagem na jogada de ataque.
++ Garra
++ Marrada
+_Jogada de Ataque Corpo a Corpo:_ +7, alcance 1,5 m. _Acerto:_ 10 (1d12 + 4) de dano contundente. Se o alvo for uma criatura Média ou menor, fica com a condição Caído.
++ Sopro de Fogo (Recarga 5–6)
+_Teste de Resistência de Destreza:_ CD 15, cada criatura num Cone de 4,5 m. _Falha:_ 31 (7d8) de dano de fogo. _Sucesso:_ Metade do dano.
+
+=== Chuul
++ Anfíbio
+O chuul respira ar e água.
++ Sentir Magia
+O chuul sente magia a até 36 m dele. Fora isso, este traço funciona como a magia _Detectar Magia_, mas não é mágico.
++ Ataques Múltiplos
+O chuul faz dois ataques de Pinça e usa Tentáculos Paralisantes.
++ Pinça
+_Jogada de Ataque Corpo a Corpo:_ +6, alcance 3 m. _Acerto:_ 9 (1d10 + 4) de dano contundente. Se o alvo for uma criatura Grande ou menor, fica com a condição Agarrado (CD 14 para escapar) por uma das duas pinças.
++ Tentáculos Paralisantes
+_Teste de Resistência de Constituição:_ CD 13, uma criatura Agarrada pelo chuul. _Falha:_ O alvo fica com a condição Envenenado e repete o teste no fim de cada turno dele, encerrando o efeito em si mesmo com um sucesso. Depois de 1 minuto, ele é bem-sucedido automaticamente. Envenenado, o alvo também fica com a condição Paralisado.
+
+=== Clay Golem
++ Absorção de Ácido
+Sempre que sofreria dano ácido, o golem não sofre dano e, em vez disso, recupera Pontos de Vida iguais ao dano ácido causado.
++ Fúria Cega
+Sempre que o golem começar o turno Sangrando, role 1d6. Com 6, ele entra em fúria cega. Em cada turno em que estiver em fúria cega, o golem ataca a criatura mais próxima que consiga ver. Se nenhuma estiver perto o bastante para ele se mover até ela e atacar, ele ataca um objeto. Depois de entrar em fúria cega, o golem continua assim até ser destruído ou deixar de estar Sangrando.
++ Forma Imutável
+O golem não pode mudar de forma.
++ Resistência à Magia
+O golem tem Vantagem nos testes de resistência contra magias e outros efeitos mágicos.
++ Ataques Múltiplos
+O golem faz dois ataques de Pancada, ou três se tiver usado Acelerar neste turno.
++ Pancada
+_Jogada de Ataque Corpo a Corpo:_ +9, alcance 1,5 m. _Acerto:_ 10 (1d10 + 5) de dano contundente mais 6 (1d12) de dano ácido, e o máximo de Pontos de Vida do alvo diminui numa quantidade igual ao dano ácido sofrido.
++ Acelerar (Recarga 5–6)
+O golem faz as ações de Disparada e Desengajar.
+
+=== Cloaker
++ Sensibilidade à Luz
+Na Luz Plena, o manto vivo tem Desvantagem nas jogadas de ataque.
++ Ataques Múltiplos
+O manto vivo faz um ataque de Grudar e dois de Cauda.
++ Grudar
+_Jogada de Ataque Corpo a Corpo:_ +6, alcance 1,5 m. _Acerto:_ 13 (3d6 + 3) de dano perfurante. Se o alvo for uma criatura Grande ou menor, o manto vivo gruda nela. Enquanto estiver grudado, o alvo fica com a condição Cego, e o manto vivo não pode fazer ataques de Grudar contra outros alvos. Além disso, o manto vivo sofre só metade do dano que recebe (arredondado para baixo), e o alvo sofre a mesma quantidade de dano.
+
+O manto vivo pode se soltar gastando 1,5 m de movimento. O alvo ou uma criatura a até 1,5 m dele pode usar uma ação para tentar soltá-lo, com um teste de Força (Atletismo) CD 14 bem-sucedido.
++ Cauda
++ Lamento
+_Teste de Resistência de Sabedoria:_ CD 13, cada criatura numa Emanação de 18 m a partir do manto vivo. _Falha:_ O alvo fica com a condição Amedrontado até o fim do próximo turno do manto vivo. _Sucesso:_ O alvo fica imune ao Lamento deste manto vivo pelas próximas 24 horas.
++ Fantasmas (Recarga depois de um Descanso Curto ou Longo)
+O manto vivo conjura a magia _Imagem Espelhada_, sem precisar de componentes e usando Sabedoria como atributo de conjuração. A magia acaba antes se o manto vivo começar ou terminar o turno em Luz Plena.
+
+=== Cloud Giant
++ Ataques Múltiplos
+O gigante faz dois ataques, com Maça Trovejante ou Nuvem de Trovão, em qualquer combinação. Ele pode trocar um ataque por um uso de Conjuração para conjurar _Névoa Obscurecente_.
++ Maça Trovejante
++ Nuvem de Trovão
+_Jogada de Ataque à Distância:_ +12, alcance 72 m. _Acerto:_ 18 (3d6 + 8) de dano trovejante, e o alvo fica com a condição Incapacitado até o fim do próximo turno dele.
++ Conjuração
+O gigante conjura uma das magias a seguir, sem precisar de componentes Materiais e usando Carisma como atributo de conjuração (CD de resistência 15):
+
+**À vontade:** _Detectar Magia_, _Névoa Obscurecente_, _Luz_
+
+**1/Dia cada:** _Controlar o Clima_, _Forma Gasosa_, _Telecinese_
++ Passo Nebuloso
+O gigante conjura a magia _Passo Nebuloso_, usando o mesmo atributo de conjuração de Conjuração.
+
+=== Cockatrice
++ Mordida Petrificante
+_Jogada de Ataque Corpo a Corpo:_ +3, alcance 1,5 m. _Acerto:_ 3 (1d4 + 1) de dano perfurante. Se o alvo for uma criatura, ele sofre o efeito a seguir. _Teste de Resistência de Constituição:_ CD 11. _Primeira Falha:_ O alvo fica com a condição Contido. Ele repete o teste no fim do próximo turno dele se ainda estiver Contido, encerrando o efeito em si mesmo com um sucesso. _Segunda Falha:_ O alvo fica com a condição Petrificado, no lugar de Contido, por 24 horas.
+
+=== Commoner
++ Ofício
+O plebeu tem proficiência numa perícia à escolha do Mestre e tem Vantagem sempre que faz um teste de atributo com essa perícia.
++ Clava
+
+=== Copper Dragon Wyrmling
++ Dilacerar
++ Sopro Ácido (Recarga 5–6)
+_Teste de Resistência de Destreza:_ CD 11, cada criatura numa Linha de 6 m de comprimento e 1,5 m de largura. _Falha:_ 18 (4d8) de dano ácido. _Sucesso:_ Metade do dano.
++ Sopro Lento
+_Teste de Resistência de Constituição:_ CD 11, cada criatura num Cone de 4,5 m. _Falha:_ O alvo não pode usar Reações, o Deslocamento dele cai pela metade e, no turno dele, pode fazer uma ação ou uma Ação Bônus, não as duas. O efeito dura até o fim do próximo turno dele.
+
+=== Young Copper Dragon
++ Ataques Múltiplos
+O dragão faz três ataques de Dilacerar. Ele pode trocar um ataque por um uso de Sopro Lento.
++ Dilacerar
++ Sopro Ácido (Recarga 5–6)
+_Teste de Resistência de Destreza:_ CD 14, cada criatura numa Linha de 12 m de comprimento e 1,5 m de largura. _Falha:_ 40 (9d8) de dano ácido. _Sucesso:_ Metade do dano.
++ Sopro Lento
+_Teste de Resistência de Constituição:_ CD 14, cada criatura num Cone de 9 m. _Falha:_ O alvo não pode usar Reações, o Deslocamento dele cai pela metade e, no turno dele, pode fazer uma ação ou uma Ação Bônus, não as duas. O efeito dura até o fim do próximo turno dele.
+
+=== Adult Copper Dragon
++ Resistência Lendária (3/Dia, ou 4/Dia no Covil)
+Se o dragão falhar num teste de resistência, pode escolher ser bem-sucedido.
++ Ataques Múltiplos
+O dragão faz três ataques de Dilacerar. Ele pode trocar um ataque por um uso de (A) Sopro Lento ou (B) Conjuração para conjurar _Espinho Mental_ (versão de 4º círculo).
++ Dilacerar
++ Sopro Ácido (Recarga 5–6)
+_Teste de Resistência de Destreza:_ CD 18, cada criatura numa Linha de 18 m de comprimento e 1,5 m de largura. _Falha:_ 54 (12d8) de dano ácido. _Sucesso:_ Metade do dano.
++ Sopro Lento
+_Teste de Resistência de Constituição:_ CD 18, cada criatura num Cone de 18 m. _Falha:_ O alvo não pode usar Reações, o Deslocamento dele cai pela metade e, no turno dele, pode fazer uma ação ou uma Ação Bônus, não as duas. O efeito dura até o fim do próximo turno dele.
++ Conjuração
+O dragão conjura uma das magias a seguir, sem precisar de componentes Materiais e usando Carisma como atributo de conjuração (CD de resistência 17):
+
+**À vontade:** _Detectar Magia_, _Espinho Mental_ (versão de 4º círculo), _Ilusão Menor_, _Mudança de Forma_ (só formas de Fera ou Humanoide, sem ganhar Pontos de Vida Temporários da magia e sem precisar de Concentração nem de Pontos de Vida Temporários para mantê-la)
+
+**1/Dia cada:** _Restauração Maior_, _Imagem Maior_
++ :intro
+_Usos de Ação Lendária: 3 (4 no Covil). Logo depois do turno de outra criatura, o dragão pode gastar um uso para fazer uma das ações a seguir. Ele recupera todos os usos gastos no início de cada turno seu._
++ Magia Risonha
+_Teste de Resistência de Carisma:_ CD 17, uma criatura que o dragão consiga ver a até 27 m. _Falha:_ 24 (7d6) de dano psíquico. Até o fim do próximo turno dele, sempre que o alvo fizer um teste de atributo ou uma jogada de ataque, ele rola 1d6 e subtrai o resultado do Teste de D20. _Falha ou Sucesso:_ O dragão só pode usar esta ação de novo no início do próximo turno dele.
++ Choque Mental
+O dragão usa Conjuração para conjurar _Espinho Mental_ (versão de 4º círculo). Ele só pode usar esta ação de novo no início do próximo turno dele.
++ Bote
+O dragão se move até metade do Deslocamento e faz um ataque de Dilacerar.
