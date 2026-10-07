@@ -1,0 +1,314 @@
+=== Cloak of Invisibility | Capa da Invisibilidade
+tipo: Item Maravilhoso, Lendário (exige Sintonia)
+Esta capa tem 3 cargas e recupera 1d3 cargas gastas todo dia ao amanhecer. Enquanto a usa, você pode usar uma ação de Magia para puxar o capuz sobre a cabeça e gastar 1 carga para ficar com a condição Invisível por 1 hora. O efeito termina antes se você baixar o capuz (sem precisar de ação) ou deixar de usar a capa.
+
+=== Cloak of Protection | Capa de Proteção
+tipo: Item Maravilhoso, Incomum (exige Sintonia)
+Você ganha +1 de bônus na Classe de Armadura e nas salvaguardas enquanto usa esta capa.
+
+=== Cloak of the Bat | Capa do Morcego
+tipo: Item Maravilhoso, Raro (exige Sintonia)
+Enquanto usa esta capa, você tem Vantagem nos testes de Destreza (Furtividade). Numa área de Penumbra ou Escuridão, você pode segurar as pontas da capa e usá-la para ganhar Deslocamento de Voo de 12 metros. Se em algum momento deixar de segurar as pontas enquanto voa assim, ou se não estiver mais na Penumbra ou na Escuridão, você perde esse Deslocamento de Voo.
+
+Enquanto usa a capa numa área de Penumbra ou Escuridão, você pode conjurar _Metamorfose_ em si mesmo, virando um Morcego. Nessa forma, você mantém os seus valores de Inteligência, Sabedoria e Carisma. A capa só pode ser usada assim de novo no amanhecer seguinte.
+
+=== Cloak of the Manta Ray | Capa da Arraia
+tipo: Item Maravilhoso, Incomum (exige Sintonia)
+Enquanto usa esta capa, você consegue respirar debaixo d'água e tem Deslocamento de Natação de 18 metros.
+
+=== Crystal Ball | Bola de Cristal
+tipo: Item Maravilhoso, Muito Raro (exige Sintonia)
+Enquanto toca este orbe de cristal, você pode conjurar _Vidência_ (CD de salvaguarda 17) com ele.
+
+=== Crystal Ball of Mind Reading | Bola de Cristal da Leitura Mental
+tipo: Item Maravilhoso, Lendário (exige Sintonia)
+Enquanto toca este orbe de cristal, você pode conjurar _Vidência_ (CD de salvaguarda 17) com ele. Além disso, pode conjurar _Detectar Pensamentos_ (CD de salvaguarda 17) em criaturas que consiga ver a até 9 metros do sensor da magia. Você não precisa se concentrar nessa _Detectar Pensamentos_ para mantê-la durante a duração, mas ela termina se a _Vidência_ terminar.
+
+=== Crystal Ball of Telepathy | Bola de Cristal da Telepatia
+tipo: Item Maravilhoso, Lendário (exige Sintonia)
+Enquanto toca este orbe de cristal, você pode conjurar _Vidência_ (CD de salvaguarda 17) com ele. Além disso, pode se comunicar por telepatia com criaturas que consiga ver a até 9 metros do sensor da magia. Também pode conjurar _Sugestão_ (CD de salvaguarda 17) pelo sensor numa dessas criaturas. Você não precisa se concentrar nessa _Sugestão_ para mantê-la durante a duração, mas ela termina se a _Vidência_ terminar. Você só pode conjurar _Sugestão_ assim de novo no amanhecer seguinte.
+
+=== Crystal Ball of True Seeing | Bola de Cristal da Visão Verdadeira
+tipo: Item Maravilhoso, Lendário (exige Sintonia)
+Enquanto toca este orbe de cristal, você pode conjurar _Vidência_ (CD de salvaguarda 17) com ele. Além disso, você tem Visão Verdadeira com alcance de 36 metros, centrada no sensor da magia.
+
+=== Cube of Force | Cubo de Energia
+tipo: Item Maravilhoso, Raro (exige Sintonia)
+Este cubo tem uns 2,5 centímetros de lado. Cada face tem uma marca diferente. Você pode apertar uma das faces, gastar as cargas que ela pede e assim conjurar a magia ligada a ela (CD de salvaguarda 17), como mostra a tabela.
+
+O cubo começa com 10 cargas e recupera 1d6 cargas gastas todo dia ao amanhecer.
+
+| Magia | Custo em cargas |
+|---|---|
+| _Armadura Arcana_ | 1 |
+| _Escudo Arcano_ | 1 |
+| _Pequena Cabana_ | 3 |
+| _Santuário Particular_ | 4 |
+| _Esfera Resiliente_ | 4 |
+| _Muralha de Energia_ | 5 |
+
+=== Cubic Gate | Portal Cúbico
+tipo: Item Maravilhoso, Lendário
+Este cubo tem uns 7,5 centímetros de lado e irradia uma energia mágica que se sente no ar. Cada um dos seis lados está ligado a um plano de existência diferente, e um deles é o Plano Material. Os outros lados levam a planos definidos pelo Mestre.
+
+O cubo tem 3 cargas e recupera 1d3 cargas gastas todo dia ao amanhecer. Com uma ação de Magia, você pode gastar 1 carga do cubo para conjurar uma das magias abaixo usando-o.
+
+_Portal._ Apertando um lado do cubo, você conjura _Portal_, abrindo uma passagem para o plano de existência ligado a esse lado.
+
+_Viagem Planar._ Apertando um lado do cubo duas vezes, você conjura _Viagem Planar_, levando os alvos para o plano de existência ligado a esse lado.
+
+=== Dagger of Venom | Adaga Venenosa
+tipo: Arma (Adaga), Rara
+Você ganha +1 de bônus nas jogadas de ataque e de dano feitas com esta arma mágica.
+
+Você pode usar uma Ação Bônus para cobrir a lâmina de veneno com magia. O veneno dura 1 minuto ou até um ataque com esta arma acertar uma criatura. Essa criatura precisa passar numa salvaguarda de Constituição com CD 15 ou sofre 2d10 de dano de veneno e fica com a condição Envenenado por 1 minuto. A arma só pode ser usada assim de novo no amanhecer seguinte.
+
+=== Dancing Sword | Espada Dançante
+tipo: Arma (Espada Grande, Espada Longa, Rapieira, Cimitarra ou Espada Curta), Muito Rara (exige Sintonia)
+Você pode usar uma Ação Bônus para jogar esta arma mágica no ar. Quando faz isso, a arma começa a pairar, voa até 9 metros e ataca uma criatura à sua escolha a até 1,5 metro dela. A arma usa a sua jogada de ataque e soma o seu modificador de atributo às rolagens de dano.
+
+Enquanto a arma paira, você pode usar uma Ação Bônus para fazê-la voar até 9 metros para outro ponto a até 9 metros de você. Como parte da mesma Ação Bônus, pode fazê-la atacar uma criatura a até 1,5 metro dela.
+
+Depois do quarto ataque, a arma voa de volta para você e tenta voltar para a sua mão. Se você não tiver mão livre, ela cai no chão no seu espaço. Se não tiver caminho livre até você, chega o mais perto que puder e cai no chão. Ela também para de pairar se você a segurar ou se estiver a mais de 9 metros dela.
+
+=== Decanter of Endless Water | Jarra da Água Infinita
+tipo: Item Maravilhoso, Incomum
+Esta garrafa arrolhada chacoalha quando sacudida, como se tivesse água. A jarra pesa 1 kg.
+
+Você pode usar uma ação de Magia para tirar a rolha e dizer uma de três palavras de comando, e então sai da garrafa uma quantidade de água doce ou salgada (à sua escolha). A água para de sair no início do seu próximo turno. As palavras de comando são estas:
+
+**Respingo.** A jarra produz 4 litros de água.
+
+**Fonte.** A jarra produz 20 litros de água.
+
+**Gêiser.** A jarra produz 110 litros de água, que jorram numa Linha de 9 metros de comprimento por 30 centímetros de largura. Se estiver segurando a jarra, você pode apontar o gêiser numa direção (sem precisar de ação). Uma criatura à sua escolha na Linha precisa passar numa salvaguarda de Força com CD 13 ou sofre 1d4 de dano contundente e fica com a condição Caído. Em vez de uma criatura, você pode mirar um objeto na Linha que ninguém esteja vestindo ou carregando e que pese no máximo 100 kg. O gêiser derruba o objeto.
+
+=== Deck of Illusions | Baralho de Ilusões
+tipo: Item Maravilhoso, Incomum
+Esta caixa guarda um conjunto de cartas. Um baralho completo tem 34 cartas: 32 com o desenho de criaturas específicas e duas com a face espelhada. Um baralho encontrado como tesouro costuma ter 1d20 − 1 cartas a menos.
+
+A magia do baralho só funciona se as cartas forem tiradas ao acaso. Você pode usar uma ação de Magia para tirar uma carta ao acaso e jogá-la no chão num ponto a até 9 metros de você. Uma ilusão de uma criatura, sorteada na tabela do Baralho de Ilusões, se forma sobre a carta e dura até ser dissipada. A criatura ilusória parece e se comporta como uma criatura real da sua espécie, mas não pode causar mal nenhum. Enquanto estiver a até 36 metros da criatura ilusória e conseguir vê-la, você pode usar uma ação de Magia para movê-la para qualquer lugar a até 9 metros da carta.
+
+Qualquer interação física com a criatura ilusória revela que ela é falsa, porque os objetos a atravessam. Uma criatura que use a ação de Estudar para examinar a criatura ilusória com os olhos descobre que é uma ilusão se passar num teste de Inteligência (Investigação) com CD 15. A ilusão dura até a carta ser movida ou a ilusão ser dissipada (com a magia _Dissipar Magia_ ou efeito parecido). Quando a ilusão termina, a imagem da carta some, e ela não pode mais ser usada.
+
+| 1d100 | Ilusão |
+|---|---|
+| 01–03 | Dragão Vermelho Adulto |
+| 04–06 | Arquimago |
+| 07–09 | Assassino |
+| 10–12 | Capitão Bandido |
+| 13–15 | Basilisco |
+| 16–18 | Berserker |
+| 19–21 | Guerreiro Bugbear |
+| 22–24 | Gigante das Nuvens |
+| 25–27 | Druida |
+| 28–30 | Erínia |
+| 31–33 | Ettin |
+| 34–36 | Gigante do Fogo |
+| 37–39 | Gigante do Gelo |
+| 40–42 | Guerreiro Gnoll |
+| 43–45 | Guerreiro Goblin |
+| 46–48 | Naga Guardiã |
+| 49–51 | Gigante das Colinas |
+| 52–54 | Guerreiro Hobgoblin |
+| 55–57 | Íncubo |
+| 58–60 | Golem de Ferro |
+| 61–63 | Cavaleiro |
+| 64–66 | Guerreiro Kobold |
+| 67–69 | Lich |
+| 70–72 | Medusa |
+| 73–75 | Bruxa Noturna |
+| 76–78 | Ogro |
+| 79–81 | Oni |
+| 82–84 | Sacerdote |
+| 85–87 | Súcubo |
+| 88–90 | Troll |
+| 91–93 | Guerreiro Veterano |
+| 94–96 | Serpe |
+| 97–00 | Quem tirou a carta |
+
+=== Defender | Defensora
+tipo: Arma (qualquer arma corpo a corpo), Lendária (exige Sintonia)
+Você ganha +3 de bônus nas jogadas de ataque e de dano feitas com esta arma mágica.
+
+Na primeira vez que ataca com a arma em cada um dos seus turnos, você pode transferir parte ou todo o bônus da arma para a sua Classe de Armadura. Por exemplo, pode reduzir o bônus nas jogadas de ataque e de dano para +1 e ganhar +2 de bônus na Classe de Armadura. Os bônus ajustados valem até o início do seu próximo turno, mas você precisa estar segurando a arma para receber o bônus de CA dela.
+
+=== Demon Armor | Armadura Demoníaca
+tipo: Armadura (qualquer leve, média ou pesada), Muito Rara (exige Sintonia)
+Enquanto veste esta armadura, você ganha +1 de bônus na Classe de Armadura e conhece o idioma Abissal. Além disso, as manoplas com garras da armadura fazem os seus Ataques Desarmados causarem 1d8 de dano cortante em vez do dano contundente de sempre, e você ganha +1 de bônus nas jogadas de ataque e de dano dos seus Ataques Desarmados.
+
+_Maldição._ Depois de vestir esta armadura amaldiçoada, você não consegue tirá-la, a menos que seja alvo da magia _Remover Maldição_ ou de magia parecida. Enquanto a veste, você tem Desvantagem nas jogadas de ataque contra demônios e nas salvaguardas contra as magias e as habilidades especiais deles.
+
+=== Dimensional Shackles | Grilhões Dimensionais
+tipo: Item Maravilhoso, Raro
+Você pode usar a ação de Usar para prender estes grilhões numa criatura com a condição Incapacitado. Os grilhões se ajustam a criaturas de tamanho Pequeno a Grande. Eles impedem a criatura presa de usar qualquer forma de movimento extradimensional, inclusive o teletransporte ou a viagem para outro plano de existência. Não impedem a criatura de atravessar um portal interdimensional.
+
+Você e qualquer criatura que você indicar ao usar os grilhões podem usar a ação de Usar para tirá-los. A cada 30 dias, a criatura presa pode fazer um teste de Força (Atletismo) com CD 30. Se passar, ela se liberta e destrói os grilhões.
+
+=== Dragon Orb | Orbe do Dragão
+tipo: Item Maravilhoso, Artefato (exige Sintonia)
+O orbe é um globo de cristal gravado com uns 25 centímetros de diâmetro. Quando usado, cresce para uns 50 centímetros, e uma névoa gira dentro dele.
+
+Enquanto estiver em Sintonia com um orbe, você pode usar uma ação de Magia para olhar as profundezas dele. Depois, precisa fazer uma salvaguarda de Carisma com CD 15. Se passar, você controla o orbe enquanto continuar em Sintonia com ele. Se falhar, o orbe lhe impõe a condição Enfeitiçado enquanto você continuar em Sintonia com ele.
+
+Enquanto estiver Enfeitiçado pelo orbe, você não consegue encerrar a Sintonia por vontade própria, e o orbe conjura _Sugestão_ em você à vontade (CD de salvaguarda 18), empurrando-o para os fins malignos que ele deseja. A essência dracônica dentro do orbe pode querer muitas coisas: a aniquilação de uma sociedade ou organização, a liberdade do orbe, espalhar sofrimento pelo mundo, aumentar o culto a Tiamat, ou outra coisa que o Mestre decida.
+
+_Magias._ O orbe tem 7 cargas e recupera 1d4 + 3 cargas gastas todo dia ao amanhecer. Se você controlar o orbe, pode conjurar com ele uma das magias da tabela abaixo. A tabela diz quantas cargas você precisa gastar para cada uma.
+
+| Magia | Custo em cargas |
+|---|---|
+| _Curar Ferimentos_ (versão de 9º círculo) | 4 |
+| _Luz do Dia_ | 1 |
+| _Proteção contra a Morte_ | 2 |
+| _Detectar Magia_ | 0 |
+| _Vidência_ (CD de salvaguarda 18) | 3 |
+
+_Chamar Dragões._ Enquanto controla o orbe, você pode usar uma ação de Magia para fazê-lo soltar um chamado telepático que se espalha em todas as direções por 60 km. Os dragões cromáticos nesse alcance se sentem obrigados a ir até o orbe o quanto antes, pelo caminho mais direto. Divindades dracônicas como Tiamat não são afetadas pelo chamado. Os dragões cromáticos atraídos pelo orbe podem ficar Hostis com você por tê-los obrigado contra a vontade. Depois de usada, esta propriedade só pode ser usada de novo depois de 1 hora.
+
+_Destruindo um Orbe._ O _Orbe do Dragão_ tem CA 20 e é destruído se sofrer dano de uma _Arma +3_ ou da magia _Desintegrar_. Nada mais pode feri-lo.
+
+=== Dragon Scale Mail | Armadura de Escamas de Dragão
+tipo: Armadura (Brunea), Muito Rara (exige Sintonia)
+A _Armadura de Escamas de Dragão_ é feita das escamas de um tipo de dragão. Às vezes os dragões juntam as escamas que soltam e as dão de presente. Outras vezes, caçadores preservam com cuidado o couro de um dragão morto. De um jeito ou de outro, esta armadura é muito valorizada.
+
+Enquanto veste esta armadura, você ganha +1 de bônus na Classe de Armadura, tem Vantagem nas salvaguardas contra as armas de sopro dos Dragões e tem Resistência a um tipo de dano definido pelo tipo de dragão que forneceu as escamas (veja a tabela).
+
+Além disso, você pode concentrar os seus sentidos com uma ação de Magia para saber a distância e a direção do dragão mais próximo, a até 45 km de você, do mesmo tipo da armadura. Esta ação só pode ser usada de novo no amanhecer seguinte.
+
+| Dragão | Resistência | Dragão | Resistência |
+|---|---|---|---|
+| Azul | Elétrico | Bronze | Elétrico |
+| Branco | Frio | Cobre | Ácido |
+| Latão | Fogo | Ouro | Fogo |
+| Preto | Ácido | Prata | Frio |
+| Verde | Veneno | Vermelho | Fogo |
+
+=== Dragon Slayer | Matadora de Dragões
+tipo: Arma (qualquer simples ou marcial), Rara
+Você ganha +1 de bônus nas jogadas de ataque e de dano feitas com esta arma mágica.
+
+A arma causa 3d6 de dano extra do tipo dela se o alvo for um Dragão.
+
+=== Dust of Disappearance | Pó do Desaparecimento
+tipo: Item Maravilhoso, Incomum
+Este pó parece areia fina. Há o bastante para um uso. Quando você usa a ação de Usar para jogar o pó no ar, você e cada criatura e objeto numa Emanação de 3 metros a partir de você ficam com a condição Invisível por 2d4 minutos. A duração é a mesma para todos, e o pó é consumido quando a magia faz efeito. Logo depois que uma criatura afetada faz uma jogada de ataque, causa dano ou conjura uma magia, a condição Invisível termina para ela.
+
+=== Dust of Dryness | Pó da Secura
+tipo: Item Maravilhoso, Incomum
+Este saquinho tem 1d6 + 4 pitadas de pó. Com a ação de Usar, você pode salpicar uma pitada sobre a água, transformando até um Cubo de 4,5 metros de água numa bolinha do tamanho de uma bola de gude, que flutua ou fica perto de onde o pó caiu. O peso da bolinha é desprezível. Uma criatura pode usar a ação de Usar para espatifar a bolinha numa superfície dura, fazendo-a se quebrar e soltar a água que o pó absorveu. Isso destrói a bolinha e acaba com a magia dela.
+
+Com a ação de Usar, você pode salpicar uma pitada do pó num Elemental a até 1,5 metro de você que seja feito principalmente de água (como um **Elemental da Água**). Uma criatura assim atingida pela pitada faz uma salvaguarda de Constituição com CD 13, sofrendo 10d6 de dano necrótico se falhar, ou metade desse dano se passar.
+
+=== Dust of Sneezing and Choking | Pó do Espirro e do Engasgo
+tipo: Item Maravilhoso, Incomum
+Encontrado num recipiente pequeno, este pó parece o _Pó do Desaparecimento_, e a magia _Identificação_ o revela como tal. Há o bastante para um uso.
+
+Com a ação de Usar, você pode jogar o pó no ar, obrigando você mesmo e toda criatura numa Emanação de 9 metros a partir de você a fazer uma salvaguarda de Constituição com CD 15. Constructos, Elementais, Gosmas, Plantas e Mortos-Vivos passam automaticamente.
+
+Se falhar, a criatura começa a espirrar sem parar: fica com a condição Incapacitado e está sufocando. Ela repete a salvaguarda no fim de cada turno dela, encerrando o efeito em si mesma se passar. O efeito também termina para qualquer criatura que seja alvo da magia _Restauração Menor_.
+
+=== Dwarven Plate | Armadura de Placas Anã
+tipo: Armadura (Meia-Armadura ou Armadura de Placas), Muito Rara
+Enquanto veste esta armadura, você ganha +2 de bônus na Classe de Armadura. Além disso, se um efeito mover você contra a sua vontade pelo chão, você pode usar uma Reação para reduzir em até 3 metros a distância que é movido.
+
+=== Dwarven Thrower | Arremessador Anão
+tipo: Arma (Martelo de Guerra), Muito Rara (exige Sintonia por um anão ou por uma criatura em Sintonia com um Cinto dos Anões)
+Você ganha +3 de bônus nas jogadas de ataque e de dano feitas com esta arma mágica. Ela tem a propriedade Arremesso, com distância normal de 6 metros e distância longa de 18 metros. Quando você acerta um ataque à distância com esta arma, ela causa 1d8 de dano de energia extra, ou 2d8 de dano de energia extra se o alvo for um Gigante. Logo depois de acertar ou errar, a arma volta voando para a sua mão.
+
+=== Efficient Quiver | Aljava Eficiente
+tipo: Item Maravilhoso, Incomum
+Cada um dos três compartimentos desta aljava leva a um espaço extradimensional que permite guardar muitos itens sem que ela pese mais de 1 kg. O compartimento mais curto guarda até 60 Flechas, Virotes ou objetos parecidos. O do meio guarda até 18 Azagaias ou objetos parecidos. O mais longo guarda até 6 objetos compridos, como arcos, Bordões ou Lanças.
+
+Você pode sacar qualquer item da aljava como se o tirasse de uma aljava ou bainha comum.
+
+=== Efreeti Bottle | Garrafa do Efreeti
+tipo: Item Maravilhoso, Muito Raro
+Quando você usa uma ação de Magia para tirar a rolha desta garrafa de latão pintada, sai dela uma nuvem de fumaça espessa. No fim do seu turno, a fumaça some num clarão de fogo inofensivo, e um **Efreeti** aparece num espaço desocupado a até 9 metros de você.
+
+Na primeira vez que a garrafa é aberta, o Mestre rola na tabela abaixo para saber o que acontece.
+
+| 1d10 | Efeito |
+|---|---|
+| 1 | O efreeti ataca você. Depois de lutar por 5 rodadas, ele some, e a garrafa perde a magia. |
+| 2–9 | O efreeti entende os seus idiomas e obedece às suas ordens por 1 hora. Depois disso, volta para a garrafa, e uma nova rolha o prende. A rolha não pode ser tirada por 24 horas. Nas duas próximas vezes que a garrafa for aberta, acontece o mesmo. Se for aberta uma quarta vez, o efreeti escapa e some, e a garrafa perde a magia. |
+| 10 | O efreeti entende os seus idiomas e pode conjurar _Desejo_ uma vez para você. Ele some quando realiza o desejo ou depois de 1 hora, e a garrafa perde a magia. |
+
+=== Elemental Gem | Gema Elemental
+tipo: Item Maravilhoso, Incomum
+Esta gema guarda uma partícula de energia elemental. Quando você usa a ação de Usar para quebrar a gema, um elemental é invocado, e a gema deixa de ser mágica. O elemental aparece num espaço desocupado o mais perto possível da gema quebrada, entende os seus idiomas, obedece às suas ordens e age logo depois de você na sua Iniciativa. Ele some depois de 1 hora, quando morre ou quando você o dispensa com uma Ação Bônus. O tipo de gema define o elemental, como mostra a tabela.
+
+| Gema | Elemental invocado |
+|---|---|
+| Safira azul | Elemental do Ar |
+| Esmeralda | Elemental da Água |
+| Coríndon vermelho | Elemental do Fogo |
+| Diamante amarelo | Elemental da Terra |
+
+=== Elixir of Health | Elixir da Saúde
+tipo: Poção, Rara
+Quando você bebe esta poção, fica curado de todos os contágios mágicos. Além disso, estas condições terminam em você: Cego, Surdo, Paralisado e Envenenado.
+
+O líquido vermelho e transparente tem bolhinhas de luz.
+
+=== Elven Chain | Cota Élfica
+tipo: Armadura (Cota de Malha ou Camisão de Malha), Rara
+Você ganha +1 de bônus na Classe de Armadura enquanto veste esta armadura. Você é considerado treinado com ela, mesmo sem treino com armaduras médias ou pesadas.
+
+=== Energy Bow | Arco de Energia
+tipo: Arma (Arco Longo ou Arco Curto), Muito Rara (exige Sintonia)
+Você ganha +1 de bônus nas jogadas de ataque e de dano feitas com esta arma mágica, que não tem corda. Cada vez que você puxa o braço para trás no gesto de disparar, uma flecha mágica de energia dourada aparece encaixada e pronta. A flecha criada pela arma causa dano de energia em vez de perfurante quando acerta, e some depois de acertar ou errar o alvo. Até sumir, ela ilumina com Luz Plena num raio de 6 metros e com Penumbra por mais 6 metros.
+
+A arma tem as propriedades abaixo.
+
+_Flecha de Contenção._ Sempre que usar esta arma para um ataque à distância contra uma criatura, você pode tentar contê-la em vez de causar dano. Se a flecha acertar, o alvo precisa passar numa salvaguarda de Força com CD 15 ou fica com a condição Contido por 1 minuto. Com uma ação, uma criatura Contida pela flecha pode fazer um teste de Força (Atletismo) com CD 20 para tentar se soltar, encerrando o efeito em si mesma se passar.
+
+_Flecha de Transporte._ Com uma ação de Magia, você pode disparar uma flecha de energia num alvo que consiga ver a até 18 metros de você. O alvo pode ser uma criatura voluntária Média ou menor, ou um objeto que ninguém esteja vestindo ou carregando, desde que caiba num Cubo de 1,5 metro. A flecha teletransporta o alvo para um espaço desocupado que você consiga ver a até 3 metros de você.
+
+_Escada de Energia._ Com uma ação de Magia, você pode soltar uma rajada de flechas de energia numa parede a até 18 metros de você. As flechas viram degraus brilhantes que saem da parede, formando nela uma escada mágica de até 18 metros. A escada dura 1 minuto e depois some.
+
+=== Eversmoking Bottle | Garrafa de Fumaça Eterna
+tipo: Item Maravilhoso, Incomum
+Com uma ação de Magia, você pode abrir ou fechar esta garrafa. Abri-la faz sair uma fumaça espessa, formando uma nuvem que preenche uma Emanação de 18 metros a partir da garrafa. A área dentro da fumaça fica em Escuridão Densa.
+
+A cada minuto que a garrafa continua aberta, a Emanação cresce 3 metros, até o máximo de 36 metros.
+
+Fechar a garrafa deixa a nuvem parada no lugar até se dispersar, depois de 10 minutos. Um vento forte (como o criado pela magia _Lufada de Vento_) dispersa a nuvem depois de 1 minuto.
+
+=== Eyes of Charming | Olhos Encantadores
+tipo: Item Maravilhoso, Incomum (exige Sintonia)
+Estas lentes de cristal se encaixam sobre os olhos. Elas têm 3 cargas. Enquanto as usa, você pode gastar 1 ou mais cargas para conjurar _Enfeitiçar Pessoa_ (CD de salvaguarda 13). Com 1 carga, conjura a versão de 1º círculo da magia. Cada carga a mais aumenta o círculo da magia em um. As lentes recuperam todas as cargas gastas todo dia ao amanhecer.
+
+=== Eyes of Minute Seeing | Olhos da Visão Minuciosa
+tipo: Item Maravilhoso, Incomum
+Estas lentes de cristal se encaixam sobre os olhos. Enquanto as usa, a sua visão melhora muito até 30 centímetros de distância, dando a você Visão no Escuro nesse alcance e Vantagem nos testes de Inteligência (Investigação) para examinar algo dentro dele.
+
+=== Eyes of the Eagle | Olhos de Águia
+tipo: Item Maravilhoso, Incomum
+Estas lentes de cristal se encaixam sobre os olhos. Enquanto as usa, você tem Vantagem nos testes de Sabedoria (Percepção) que dependem da visão. Com boa visibilidade, você distingue detalhes até de criaturas e objetos muito distantes, de apenas 60 centímetros.
+
+=== Feather Token | Pena Mágica
+tipo: Item Maravilhoso, raridade varia
+Este objeto parece uma pena. Existem vários tipos de pena mágica, cada uma com um efeito diferente de uso único. O Mestre escolhe o tipo ou o sorteia na tabela de Penas Mágicas. O tipo define a raridade.
+
+_Âncora (Incomum)._ Você pode usar uma ação de Magia para encostar a pena num barco ou navio. Pelas próximas 24 horas, a embarcação não pode ser movida de jeito nenhum. Encostar a pena na embarcação de novo encerra o efeito. Quando o efeito termina, a pena some.
+
+_Pássaro (Rara)._ Você pode usar uma ação de Magia para jogar a pena 1,5 metro para cima. Ela some, e um pássaro enorme e colorido aparece no lugar. O pássaro tem as estatísticas de um **Roca**, mas não pode atacar. Ele obedece às suas ordens simples e pode carregar até 250 kg voando na velocidade máxima (24 km/h, até 216 km por dia, com 1 hora de descanso a cada 3 horas de voo) ou 500 kg na metade dessa velocidade. O pássaro some depois de voar a distância máxima de um dia ou se os Pontos de Vida dele chegarem a 0. Você pode dispensá-lo com uma ação de Magia.
+
+_Leque (Incomum)._ Se estiver num barco ou navio, você pode usar uma ação de Magia para jogar a pena até 3 metros para cima. Ela some, e um leque gigante que abana aparece no lugar. O leque flutua e cria um vento forte, que pode encher as velas de um navio, aumentando a velocidade dele em 7,5 km/h por 8 horas. Você pode dispensar o leque com uma ação de Magia.
+
+_Barco-Cisne (Rara)._ Você pode usar uma ação de Magia para encostar a pena numa extensão de água de pelo menos 18 metros de diâmetro. Ela some, e um barco em forma de cisne, com 15 metros de comprimento e 6 de largura, aparece no lugar. O barco anda sozinho pela água a 9 km/h. Estando no barco, você pode usar uma ação de Magia para mandá-lo se mover ou virar até 90 graus. O barco fica por 24 horas e depois some. Você pode dispensá-lo com uma ação de Magia.
+
+_Árvore (Incomum)._ Você precisa estar ao ar livre para usar esta pena. Pode usar uma ação de Magia para encostá-la num espaço desocupado do chão. Ela some, e no lugar surge um carvalho comum, sem magia. A árvore tem 18 metros de altura e tronco de 1,5 metro de diâmetro, e os galhos do topo se abrem num raio de 6 metros.
+
+_Chicote (Rara)._ Você pode usar uma ação de Magia para jogar a pena num ponto a até 3 metros de você. Ela some, e um chicote flutuante aparece no lugar. Depois, você pode usar uma Ação Bônus para fazer um ataque corpo a corpo com magia contra uma criatura a até 3 metros do chicote, com bônus de ataque de +9. Se acertar, o alvo sofre 1d6 + 5 de dano de energia.
+
+Com uma Ação Bônus, você pode mandar o chicote voar até 6 metros e repetir o ataque contra uma criatura a até 3 metros dele. O chicote some depois de 1 hora, quando você usa uma ação de Magia para dispensá-lo, ou quando você morre ou fica com a condição Incapacitado.
+
+| 1d100 | Pena | Raridade |
+|---|---|---|
+| 01–20 | Âncora | Incomum |
+| 21–35 | Pássaro | Rara |
+| 36–50 | Leque | Incomum |
+| 51–65 | Barco-cisne | Rara |
+| 66–90 | Árvore | Incomum |
+| 91–00 | Chicote | Rara |
