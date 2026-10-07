@@ -64,17 +64,21 @@ function Tabela({ linhas }: { linhas: string[] }) {
       .map((c) => c.trim());
 
   const [cabecalho, , ...corpo] = linhas;
+  // Tabelas largas (as de espaços de magia têm até 15 colunas) ficam mais
+  // apertadas, para caber inteiras no computador; no celular, rolam de lado.
+  const larga = celulas(cabecalho).length > 8;
+  const espaco = larga ? "px-1 py-1" : "px-2 py-1.5";
 
   return (
     <div className="-mx-1 overflow-x-auto px-1">
-      <table className="w-full border-collapse text-left text-sm">
+      <table className={`w-full border-collapse text-left ${larga ? "text-xs" : "text-sm"}`}>
         <thead>
           <tr className="border-dourado-600/50 border-b-2">
             {celulas(cabecalho).map((c, i) => (
               <th
                 key={i}
                 scope="col"
-                className="font-titulo text-tinta-700 px-2 py-1.5 text-xs font-bold tracking-wide"
+                className={`font-titulo text-tinta-700 ${espaco} align-bottom text-xs font-bold tracking-wide`}
               >
                 {emLinha(c)}
               </th>
@@ -85,7 +89,7 @@ function Tabela({ linhas }: { linhas: string[] }) {
           {corpo.map((linha, i) => (
             <tr key={i} className="border-dourado-600/20 border-b even:bg-pergaminho-200/30">
               {celulas(linha).map((c, j) => (
-                <td key={j} className="px-2 py-1.5 align-top">
+                <td key={j} className={`${espaco} align-top ${larga && j !== 2 ? "whitespace-nowrap" : ""}`}>
                   {emLinha(c)}
                 </td>
               ))}
