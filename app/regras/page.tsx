@@ -9,7 +9,7 @@ import { TituloBrasao, Sobretitulo, Ornamento } from "@/components/ui/Titulo";
 export const metadata: Metadata = {
   title: "Compêndio",
   description:
-    "As regras de 2024 de D&D em português: classes, espécies, antecedentes, talentos, magias e mais. Tradução livre do SRD 5.2.1.",
+    "As regras de 2024 de D&D em português: classes, espécies, antecedentes, talentos, magias, itens mágicos, monstros e mais. Tradução livre do SRD 5.2.1.",
 };
 
 /** As partes do Compêndio que têm página própria, fora de content/regras. */
@@ -41,6 +41,14 @@ const FIXAS = [
     original: "Magic Items",
     ordem: 7,
     resumo: "Os 258 itens mágicos, com busca por tipo, raridade e sintonia.",
+  },
+  {
+    href: "/monstros/",
+    titulo: "Bestiário",
+    original: "Monsters & Animals",
+    ordem: 8,
+    resumo:
+      "Os 330 monstros e animais, com busca por tipo, Nível de Desafio e tamanho.",
   },
 ];
 

@@ -1,0 +1,76 @@
+=== Swarm of Insects
++ Patas de Aranha
+Se tiver Deslocamento de Escalada, o enxame escala superfícies difíceis, inclusive pelo teto, sem precisar fazer teste de atributo.
++ Enxame
+O enxame pode ocupar o espaço de outra criatura e vice-versa, e passa por qualquer abertura grande o bastante para um inseto Miúdo. O enxame não pode recuperar Pontos de Vida nem ganhar Pontos de Vida Temporários.
++ Mordidas
+_Jogada de Ataque Corpo a Corpo:_ +3, alcance 1,5 m. _Acerto:_ 6 (2d4 + 1) de dano de veneno, ou 3 (1d4 + 1) de dano de veneno se o enxame estiver Sangrando.
+
+=== Swarm of Piranhas
++ Enxame
+O enxame pode ocupar o espaço de outra criatura e vice-versa, e passa por qualquer abertura grande o bastante para uma piranha Miúda. O enxame não pode recuperar Pontos de Vida nem ganhar Pontos de Vida Temporários.
++ Respirar na Água
+O enxame só respira debaixo d'água.
++ Mordidas
+_Jogada de Ataque Corpo a Corpo:_ +5 (com Vantagem se o alvo não estiver com todos os Pontos de Vida), alcance 1,5 m. _Acerto:_ 8 (2d4 + 3) de dano perfurante, ou 5 (1d4 + 3) de dano perfurante se o enxame estiver Sangrando.
+
+=== Swarm of Rats
++ Enxame
+O enxame pode ocupar o espaço de outra criatura e vice-versa, e passa por qualquer abertura grande o bastante para um rato Miúdo. O enxame não pode recuperar Pontos de Vida nem ganhar Pontos de Vida Temporários.
++ Mordidas
+_Jogada de Ataque Corpo a Corpo:_ +2, alcance 1,5 m. _Acerto:_ 5 (2d4) de dano perfurante, ou 2 (1d4) de dano perfurante se o enxame estiver Sangrando.
+
+=== Swarm of Ravens
++ Enxame
+O enxame pode ocupar o espaço de outra criatura e vice-versa, e passa por qualquer abertura grande o bastante para um corvo Miúdo. O enxame não pode recuperar Pontos de Vida nem ganhar Pontos de Vida Temporários.
++ Bicos
+_Jogada de Ataque Corpo a Corpo:_ +4, alcance 1,5 m. _Acerto:_ 5 (1d6 + 2) de dano perfurante, ou 2 (1d4) de dano perfurante se o enxame estiver Sangrando.
++ Cacofonia (Recarga 6)
+_Teste de Resistência de Sabedoria:_ CD 10, uma criatura no espaço do enxame. _Falha:_ O alvo fica com a condição Surdo até o início do próximo turno do enxame. Surdo, o alvo também tem Desvantagem nos testes de atributo e nas jogadas de ataque.
+
+=== Swarm of Venomous Snakes
++ Enxame
+O enxame pode ocupar o espaço de outra criatura e vice-versa, e passa por qualquer abertura grande o bastante para uma serpente Miúda. O enxame não pode recuperar Pontos de Vida nem ganhar Pontos de Vida Temporários.
++ Mordidas
+_Jogada de Ataque Corpo a Corpo:_ +6, alcance 1,5 m. _Acerto:_ 8 (1d8 + 4) de dano perfurante, ou 6 (1d4 + 4) de dano perfurante se o enxame estiver Sangrando, mais 10 (3d6) de dano de veneno.
+
+=== Tiger
++ Dilacerar
+_Jogada de Ataque Corpo a Corpo:_ +5, alcance 1,5 m. _Acerto:_ 10 (2d6 + 3) de dano cortante. Se o alvo for uma criatura Grande ou menor, fica com a condição Caído.
++ Fuga Ágil
+O tigre faz a ação de Desengajar ou Esconder.
+
+=== Triceratops
++ Ataques Múltiplos
+O tricerátopo faz dois ataques de Chifrada.
++ Chifrada
+_Jogada de Ataque Corpo a Corpo:_ +9, alcance 1,5 m. _Acerto:_ 19 (2d12 + 6) de dano perfurante. Se o alvo for Enorme ou menor e o tricerátopo tiver se movido 6 m ou mais em linha reta na direção dele logo antes do acerto, o alvo sofre 9 (2d8) de dano perfurante extra e fica com a condição Caído.
+
+=== Tyrannosaurus Rex
++ Ataques Múltiplos
+O tiranossauro faz um ataque de Mordida e um de Cauda.
++ Mordida
+_Jogada de Ataque Corpo a Corpo:_ +10, alcance 3 m. _Acerto:_ 33 (4d12 + 7) de dano perfurante. Se o alvo for uma criatura Grande ou menor, fica com a condição Agarrado (CD 17 para escapar). Agarrado, o alvo também fica com a condição Contido e não pode ser alvo da Cauda do tiranossauro.
++ Cauda
+_Jogada de Ataque Corpo a Corpo:_ +10, alcance 4,5 m. _Acerto:_ 25 (4d8 + 7) de dano contundente. Se o alvo for uma criatura Enorme ou menor, fica com a condição Caído.
+
+=== Venomous Snake
++ Mordida
+
+=== Vulture
++ Táticas de Matilha
+O abutre tem Vantagem numa jogada de ataque contra uma criatura se pelo menos um aliado dele estiver a até 1,5 m dela e não estiver com a condição Incapacitado.
++ Bico
+
+=== Warhorse
++ Cascos
+_Jogada de Ataque Corpo a Corpo:_ +6, alcance 1,5 m. _Acerto:_ 9 (2d4 + 4) de dano contundente. Se o alvo for uma criatura Grande ou menor e o cavalo tiver se movido 6 m ou mais em linha reta na direção dele logo antes do acerto, o alvo sofre 5 (2d4) de dano contundente extra e fica com a condição Caído.
+
+=== Weasel
++ Mordida
+
+=== Wolf
++ Táticas de Matilha
+O lobo tem Vantagem nas jogadas de ataque contra uma criatura se pelo menos um aliado dele estiver a até 1,5 m dela e não estiver com a condição Incapacitado.
++ Mordida
+_Jogada de Ataque Corpo a Corpo:_ +4, alcance 1,5 m. _Acerto:_ 5 (1d6 + 2) de dano perfurante. Se o alvo for uma criatura Média ou menor, fica com a condição Caído.

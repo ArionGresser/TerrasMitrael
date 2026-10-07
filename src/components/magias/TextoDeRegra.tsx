@@ -2,6 +2,7 @@ import { Fragment, type ReactNode } from "react";
 import Link from "next/link";
 import { magiaPeloNome } from "@/lib/magias";
 import { itemPeloNome } from "@/lib/itens";
+import { monstroPeloNome } from "@/lib/monstros";
 
 /**
  * Transforma o texto de uma magia em HTML.
@@ -13,7 +14,8 @@ import { itemPeloNome } from "@/lib/itens";
  * markdown inteiro só para isso.
  *
  * Quando o itálico é o nome de uma magia do grimório ou de um item mágico,
- * ele vira link para a página dela.
+ * ele vira link para a página dela. O negrito com o nome de uma criatura do
+ * bestiário (como **Sombra**) vira link para a ficha dela.
  */
 export function TextoDeRegra({ texto }: { texto: string }) {
   const blocos = texto.trim().split(/\n\s*\n/);
@@ -129,6 +131,18 @@ function emLinha(texto: string): ReactNode {
       );
     }
     if (p.startsWith("**") && p.endsWith("**")) {
+      const criatura = monstroPeloNome(p.slice(2, -2));
+      if (criatura) {
+        return (
+          <Link
+            key={i}
+            href={`/monstros/${criatura.slug}/`}
+            className="text-tinta-900 decoration-dourado-600/60 hover:text-heraldico-vermelho font-semibold underline underline-offset-2 transition-colors"
+          >
+            {p.slice(2, -2)}
+          </Link>
+        );
+      }
       return (
         <strong key={i} className="text-tinta-900 font-semibold">
           {emLinha(p.slice(2, -2))}
