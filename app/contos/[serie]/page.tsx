@@ -73,7 +73,14 @@ export default async function PaginaSerie({ params }: Props) {
                     selo={temporada.titulo}
                     titulo={`Temporada ${temporada.numero}`}
                     chamada={contagemDeEpisodios(temporada)}
-                    href={`/contos/${serie.slug}/${chaveDaTemporada(temporada)}/`}
+                    // Temporada sem episódio nenhum fica apagada e sem
+                    // clique, como as séries em produção. Acende sozinha
+                    // quando o primeiro episódio for publicado.
+                    href={
+                      temporada.episodios.length > 0
+                        ? `/contos/${serie.slug}/${chaveDaTemporada(temporada)}/`
+                        : undefined
+                    }
                     prioridade={i < 2}
                   />
                 </div>
