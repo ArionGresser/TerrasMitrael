@@ -1,0 +1,298 @@
+=== Arcane Eye | Olho Arcano
+material: um pouco de pelo de morcego
+Você cria um olho Invisível e invulnerável dentro do alcance, que flutua pela duração. Você recebe mentalmente as imagens do olho, que enxerga em todas as direções. Ele também tem Visão no Escuro com alcance de 9 metros.
+
+Com uma Ação Bônus, você pode mover o olho até 9 metros em qualquer direção. Uma barreira sólida bloqueia o movimento do olho, mas ele passa por uma abertura de até 2,5 centímetros de diâmetro.
+
+=== Aura of Life | Aura de Vida
+Uma aura irradia de você numa Emanação de 9 metros pela duração. Enquanto estiverem na aura, você e seus aliados têm Resistência a dano necrótico, e o máximo de Pontos de Vida de vocês não pode ser reduzido. Se um aliado com 0 Pontos de Vida começar o turno na aura, ele recupera 1 Ponto de Vida.
+
+=== Banishment | Banimento
+material: um pentáculo
+Uma criatura que você consiga ver dentro do alcance precisa ser bem-sucedida numa salvaguarda de Carisma ou é levada para um semiplano inofensivo pela duração. Enquanto estiver lá, o alvo fica com a condição Incapacitado. Quando a magia acaba, o alvo reaparece no espaço que deixou, ou no espaço desocupado mais próximo, se aquele estiver ocupado.
+
+Se o alvo for uma Aberração, um Celestial, um Elemental, uma Fada ou um Ínfero, ele não volta se a magia durar 1 minuto. Em vez disso, é levado para um lugar aleatório de um plano (à escolha do Mestre) ligado ao tipo de criatura dele.
+
+_Usando um Espaço de Magia de Círculo Superior._ Você pode escolher uma criatura adicional como alvo para cada círculo do espaço acima do 4º.
+
+=== Black Tentacles | Tentáculos Negros
+material: um tentáculo
+Tentáculos negros e serpenteantes preenchem um quadrado de 6 metros no chão que você consiga ver dentro do alcance. Pela duração, eles transformam o chão da área em Terreno Difícil.
+
+Cada criatura na área faz uma salvaguarda de Força. Se falhar, sofre 3d6 de dano contundente e fica com a condição Contido até a magia acabar. Uma criatura também faz essa salvaguarda se entrar na área ou terminar o turno nela. Uma criatura só faz essa salvaguarda uma vez por turno.
+
+Uma criatura Contida pode usar uma ação para fazer um teste de Força (Atletismo) contra a CD de salvaguarda da sua magia, encerrando a condição em si mesma se passar.
+
+=== Blight | Praga
+Uma criatura que você consiga ver dentro do alcance faz uma salvaguarda de Constituição, sofrendo 8d8 de dano necrótico se falhar, ou metade desse dano se for bem-sucedida. Uma criatura Planta falha automaticamente.
+
+Se preferir, escolha como alvo uma planta não mágica que não seja uma criatura, como uma árvore ou um arbusto. Ela não faz salvaguarda: simplesmente murcha e morre.
+
+_Usando um Espaço de Magia de Círculo Superior._ O dano aumenta em 1d8 para cada círculo do espaço acima do 4º.
+
+=== Charm Monster | Enfeitiçar Monstro
+Uma criatura que você consiga ver dentro do alcance faz uma salvaguarda de Sabedoria, com Vantagem se você ou seus aliados estiverem lutando contra ela. Se falhar, o alvo fica com a condição Enfeitiçado até a magia acabar ou até que você ou seus aliados causem dano a ele. A criatura Enfeitiçada é Amistosa com você. Quando a magia acaba, o alvo sabe que foi Enfeitiçado por você.
+
+_Usando um Espaço de Magia de Círculo Superior._ Você pode escolher uma criatura adicional como alvo para cada círculo do espaço acima do 4º.
+
+=== Compulsion | Compulsão
+Cada criatura à sua escolha que você consiga ver dentro do alcance precisa ser bem-sucedida numa salvaguarda de Sabedoria ou fica com a condição Enfeitiçado até a magia acabar.
+
+Pela duração, você pode usar uma Ação Bônus para indicar uma direção horizontal a você. Cada alvo Enfeitiçado precisa usar o máximo possível do movimento para ir nessa direção no próximo turno dele, pelo caminho mais seguro. Depois de se mover desse jeito, o alvo repete a salvaguarda e, se for bem-sucedido, encerra a magia em si mesmo.
+
+=== Confusion | Confusão
+material: três cascas de noz
+Cada criatura numa Esfera de 3 metros de raio, centrada num ponto à sua escolha dentro do alcance, precisa ser bem-sucedida numa salvaguarda de Sabedoria, ou então não pode usar Ações Bônus nem Reações e precisa rolar 1d10 no começo de cada turno dele para saber como se comporta naquele turno, consultando a tabela abaixo.
+
+| 1d10 | Comportamento no turno |
+|---|---|
+| 1 | O alvo não faz nenhuma ação e usa todo o movimento para se mover. Role 1d4 para a direção: 1, norte; 2, leste; 3, sul; 4, oeste. |
+| 2–6 | O alvo não se move nem faz ações. |
+| 7–8 | O alvo não se move e usa a ação de Atacar para fazer um ataque corpo a corpo contra uma criatura aleatória ao alcance dele. Se não houver nenhuma, ele não faz ação. |
+| 9–10 | O alvo escolhe o que fazer. |
+
+No fim de cada turno dele, um alvo afetado repete a salvaguarda e, se for bem-sucedido, encerra a magia em si mesmo.
+
+_Usando um Espaço de Magia de Círculo Superior._ O raio da Esfera aumenta em 1,5 metro para cada círculo do espaço acima do 4º.
+
+=== Conjure Minor Elementals | Conjurar Elementais Menores
+Você conjura espíritos dos Planos Elementais que voam à sua volta numa Emanação de 4,5 metros pela duração. Até a magia acabar, qualquer ataque seu causa 2d8 de dano extra quando acerta uma criatura na Emanação. Esse dano é ácido, de frio, de fogo ou elétrico (você escolhe ao atacar).
+
+Além disso, o chão da Emanação é Terreno Difícil para os seus inimigos.
+
+_Usando um Espaço de Magia de Círculo Superior._ O dano aumenta em 1d8 para cada círculo do espaço acima do 4º.
+
+=== Conjure Woodland Beings | Conjurar Seres da Floresta
+Você conjura espíritos da natureza que voam à sua volta numa Emanação de 3 metros pela duração. Sempre que a Emanação entrar no espaço de uma criatura que você consiga ver, e sempre que uma criatura que você consiga ver entrar na Emanação ou terminar o turno nela, você pode obrigá-la a fazer uma salvaguarda de Sabedoria. A criatura sofre 5d8 de dano de energia se falhar, ou metade desse dano se for bem-sucedida. Uma criatura só faz essa salvaguarda uma vez por turno.
+
+Além disso, você pode usar a ação de Desengajar como Ação Bônus pela duração da magia.
+
+_Usando um Espaço de Magia de Círculo Superior._ O dano aumenta em 1d8 para cada círculo do espaço acima do 4º.
+
+=== Control Water | Controlar a Água
+material: uma mistura de água e poeira
+Até a magia acabar, você controla toda a água dentro de uma área à sua escolha, um Cubo de até 30 metros de lado, com um dos efeitos a seguir. Com uma ação de Magia nos seus turnos seguintes, você pode repetir o mesmo efeito ou escolher outro.
+
+_Inundação._ Você faz o nível de toda a água parada na área subir até 6 metros. Se escolher uma área numa grande massa de água, cria em vez disso uma onda de 6 metros de altura que vai de um lado da área ao outro e então arrebenta. Qualquer veículo Enorme ou menor no caminho da onda é levado com ela até o outro lado. Qualquer veículo Enorme ou menor atingido pela onda tem 25 por cento de chance de virar.
+
+O nível da água fica elevado até a magia acabar ou até você escolher outro efeito. Se esse efeito tiver criado uma onda, ela se repete no começo do seu próximo turno enquanto a inundação durar.
+
+_Abrir as Águas._ Você abre a água da área e cria uma vala. A vala atravessa a área da magia, e a água separada forma uma parede de cada lado. A vala fica até a magia acabar ou até você escolher outro efeito. Depois, a água vai enchendo a vala devagar ao longo da rodada seguinte, até voltar ao nível normal.
+
+_Desviar o Fluxo._ Você faz a água corrente da área ir na direção que escolher, mesmo que precise passar por cima de obstáculos, subir paredes ou seguir outras direções improváveis. A água na área se move como você mandar, mas, depois que sai da área da magia, volta a correr de acordo com o terreno. Ela continua indo na direção escolhida até a magia acabar ou até você escolher outro efeito.
+
+_Redemoinho._ Você faz um redemoinho se formar no centro da área, que precisa ter pelo menos 15 metros de lado e 7,5 metros de profundidade. O redemoinho dura até você escolher outro efeito ou a magia acabar. Ele tem 1,5 metro de largura na base, até 15 metros no topo e 7,5 metros de altura. Qualquer criatura na água a até 7,5 metros do redemoinho é puxada 3 metros na direção dele. Na primeira vez que uma criatura entrar no redemoinho num turno, ou quando terminar o turno nele, faz uma salvaguarda de Força. Se falhar, sofre 2d8 de dano contundente. Se for bem-sucedida, sofre metade do dano. Uma criatura só consegue nadar para longe do redemoinho se antes usar uma ação para se afastar e passar num teste de Força (Atletismo) contra a CD de salvaguarda da sua magia.
+
+=== Death Ward | Proteção contra a Morte
+Você toca uma criatura e lhe dá uma certa proteção contra a morte. Na primeira vez que o alvo cairia a 0 Pontos de Vida antes de a magia acabar, ele fica com 1 Ponto de Vida, e a magia acaba.
+
+Se a magia ainda estiver ativa quando o alvo sofrer um efeito que o mataria na hora sem causar dano, esse efeito é anulado contra ele, e a magia acaba.
+
+=== Dimension Door | Porta Dimensional
+Você se teletransporta para um lugar dentro do alcance e chega exatamente ao ponto desejado. Pode ser um lugar que você consiga ver, que consiga imaginar, ou que consiga descrever dizendo distância e direção, como "60 metros para baixo, em linha reta" ou "90 metros para cima, rumo a noroeste, num ângulo de 45 graus".
+
+Você também pode teletransportar uma criatura voluntária. Ela precisa estar a até 1,5 metro de você quando você se teletransportar, e chega a um espaço a até 1,5 metro do seu destino.
+
+Se você, a outra criatura ou os dois fossem chegar a um espaço ocupado por uma criatura ou completamente tomado por um ou mais objetos, você e qualquer criatura viajando com você sofrem 4d6 de dano de energia cada um, e o teletransporte falha.
+
+=== Divination | Adivinhação
+material: incenso que valha 25 PO ou mais, consumido pela magia
+Esta magia põe você em contato com um deus ou com servos de um deus. Você faz uma pergunta sobre um objetivo, evento ou atividade específicos que vão acontecer nos próximos 7 dias. O Mestre dá uma resposta verdadeira, que pode ser uma frase curta ou uma rima enigmática. A magia não leva em conta circunstâncias que possam mudar a resposta, como a conjuração de outras magias.
+
+Se você conjurar a magia mais de uma vez antes de terminar um Descanso Longo, há uma chance cumulativa de 25 por cento, para cada conjuração depois da primeira, de você não receber resposta nenhuma.
+
+=== Dominate Beast | Dominar Fera
+Uma Fera que você consiga ver dentro do alcance precisa ser bem-sucedida numa salvaguarda de Sabedoria ou fica com a condição Enfeitiçado pela duração. O alvo tem Vantagem na salvaguarda se você ou seus aliados estiverem lutando contra ele. Sempre que sofrer dano, o alvo repete a salvaguarda e, se for bem-sucedido, encerra a magia em si mesmo.
+
+Você tem uma ligação telepática com o alvo Enfeitiçado enquanto os dois estiverem no mesmo plano de existência. No seu turno, pode usar essa ligação para dar ordens ao alvo (sem gastar ação), como "Ataque aquela criatura", "Vá para lá" ou "Pegue aquele objeto". O alvo faz o possível para obedecer no turno dele. Se ele cumprir uma ordem e não receber outra, age e se move como quiser, concentrado em se proteger.
+
+Você pode mandar o alvo usar uma Reação, mas precisa usar a sua própria Reação para isso.
+
+_Usando um Espaço de Magia de Círculo Superior._ A sua Concentração pode durar mais com um espaço de 5º círculo (até 10 minutos), de 6º (até 1 hora) ou de 7º ou mais (até 8 horas).
+
+=== Fabricate | Fabricar
+Você transforma matéria-prima em produtos do mesmo material. Por exemplo, pode fabricar uma ponte de madeira a partir de um grupo de árvores, uma corda a partir de um maço de cânhamo, ou roupas a partir de linho ou lã.
+
+Escolha matérias-primas que você consiga ver dentro do alcance. Com material suficiente, você pode fabricar um objeto Grande ou menor (que caiba num Cubo de 3 metros ou em oito Cubos de 1,5 metro ligados). Se estiver trabalhando com metal, pedra ou outra substância mineral, porém, o objeto não pode ser maior que Médio (cabendo num Cubo de 1,5 metro). A qualidade dos objetos fabricados depende da qualidade da matéria-prima.
+
+Esta magia não cria criaturas nem itens mágicos. Também não serve para criar itens que exijam grande habilidade, como armas e armaduras, a menos que você tenha proficiência com o tipo de Ferramentas de Artesão usado para fazer esses objetos.
+
+=== Faithful Hound | Cão Fiel
+material: um apito de prata
+Você conjura um cão de guarda fantasma num espaço desocupado que você consiga ver dentro do alcance. O cão fica pela duração ou até vocês ficarem a mais de 90 metros um do outro.
+
+Ninguém além de você consegue ver o cão, e ele é intangível e invulnerável. Quando uma criatura Pequena ou maior chega a até 9 metros dele sem antes dizer a senha que você definiu ao conjurar a magia, o cão começa a latir alto. O cão tem Visão Verdadeira com alcance de 9 metros.
+
+No começo de cada um dos seus turnos, o cão tenta morder um inimigo a até 1,5 metro dele. Esse inimigo precisa ser bem-sucedido numa salvaguarda de Destreza ou sofre 4d8 de dano de energia.
+
+Nos seus turnos seguintes, você pode usar uma ação de Magia para mover o cão até 9 metros.
+
+=== Fire Shield | Escudo de Fogo
+material: um pouco de fósforo ou um vaga-lume
+Chamas tênues envolvem o seu corpo pela duração, emitindo Luz Plena num raio de 3 metros e Penumbra por mais 3 metros.
+
+As chamas dão a você um escudo quente ou um escudo gelado, à sua escolha. O escudo quente dá Resistência a dano de frio, e o escudo gelado dá Resistência a dano de fogo.
+
+Além disso, sempre que uma criatura a até 1,5 metro acertar você com uma jogada de ataque corpo a corpo, o escudo explode em chamas. O atacante sofre 2d8 de dano de fogo do escudo quente, ou 2d8 de dano de frio do escudo gelado.
+
+=== Freedom of Movement | Liberdade de Movimento
+material: uma tira de couro
+Você toca uma criatura voluntária. Pela duração, o movimento do alvo não é afetado por Terreno Difícil, e magias e outros efeitos mágicos não podem reduzir o Deslocamento dele nem deixá-lo com as condições Paralisado ou Contido. O alvo também tem Deslocamento de Natação igual ao seu Deslocamento.
+
+Além disso, o alvo pode gastar 1,5 metro de movimento para escapar automaticamente de amarras não mágicas, como algemas, ou de uma criatura que o esteja deixando com a condição Agarrado.
+
+_Usando um Espaço de Magia de Círculo Superior._ Você pode escolher uma criatura adicional como alvo para cada círculo do espaço acima do 4º.
+
+=== Giant Insect | Inseto Gigante
+Você invoca uma centopeia, uma aranha ou uma vespa gigante (escolhida quando conjura a magia). Ela surge num espaço desocupado que você consiga ver dentro do alcance e usa o bloco de estatísticas **Inseto Gigante**. A forma escolhida define certos detalhes do bloco. A criatura desaparece quando chega a 0 Pontos de Vida ou quando a magia acaba.
+
+A criatura é aliada sua e dos seus aliados. Em combate, ela divide a sua contagem de Iniciativa, mas age logo depois do seu turno. Ela obedece às suas ordens faladas (sem você gastar ação). Se você não der nenhuma, ela usa a ação de Esquivar e usa o movimento para evitar perigo.
+
+_Usando um Espaço de Magia de Círculo Superior._ Use o círculo do espaço como o círculo da magia no bloco de estatísticas.
+
+#### Inseto Gigante
+
+_Fera Grande, Sem Alinhamento_
+
+**CA** 11 + o círculo da magia
+
+**PV** 30 + 10 para cada círculo da magia acima do 4º
+
+**Deslocamento** 12 m, Escalada 12 m, Voo 12 m (só vespa)
+
+| Atributo | Valor | Mod | Salv |
+|---|---|---|---|
+| FOR | 17 | +3 | +3 |
+| DES | 13 | +1 | +1 |
+| CON | 15 | +2 | +2 |
+| INT | 4 | −3 | −3 |
+| SAB | 14 | +2 | +2 |
+| CAR | 3 | −4 | −4 |
+
+**Sentidos** Visão no Escuro 18 m; Percepção Passiva 12
+
+**Idiomas** Entende os idiomas que você conhece
+
+**ND** Nenhum (XP 0; o Bônus de Proficiência é igual ao seu)
+
+#### Traços
+
+_Escalada de Aranha._ O inseto consegue escalar superfícies difíceis, inclusive andar pelo teto, sem precisar fazer teste de atributo.
+
+#### Ações
+
+_Ataques Múltiplos._ O inseto faz um número de ataques igual à metade do círculo desta magia (arredondado para baixo).
+
+_Ferroada Venenosa._ _Jogada de Ataque Corpo a Corpo:_ bônus igual ao seu modificador de ataque mágico, alcance 3 m. _Acerto:_ 1d6 + 3 mais o círculo da magia de dano perfurante, mais 1d4 de dano de veneno.
+
+_Jato de Teia (Só Aranha)._ _Jogada de Ataque à Distância:_ bônus igual ao seu modificador de ataque mágico, distância 18 m. _Acerto:_ 1d10 + 3 mais o círculo da magia de dano contundente, e o Deslocamento do alvo cai para 0 até o começo do próximo turno do inseto.
+
+#### Ações Bônus
+
+_Cuspe Venenoso (Só Centopeia)._ _Salvaguarda de Constituição:_ a CD de salvaguarda da sua magia, uma criatura que o inseto consiga ver a até 3 metros. _Falha:_ o alvo fica com a condição Envenenado até o começo do próximo turno do inseto.
+
+=== Greater Invisibility | Invisibilidade Maior
+Uma criatura que você toca fica com a condição Invisível até a magia acabar.
+
+=== Guardian of Faith | Guardião da Fé
+Um guardião espectral Grande aparece e flutua pela duração num espaço desocupado que você consiga ver dentro do alcance. O guardião ocupa esse espaço e é invulnerável, e tem uma forma que combina com a sua divindade ou o seu panteão.
+
+Qualquer inimigo que entrar num espaço a até 3 metros do guardião pela primeira vez num turno, ou que começar o turno ali, faz uma salvaguarda de Destreza, sofrendo 20 de dano radiante se falhar, ou metade desse dano se for bem-sucedido. O guardião some quando tiver causado 60 de dano no total.
+
+=== Hallucinatory Terrain | Terreno Alucinógeno
+material: um cogumelo
+Você faz o terreno natural num Cubo de 45 metros dentro do alcance parecer, soar e cheirar como outro tipo de terreno natural. Assim, um campo aberto ou uma estrada podem parecer um pântano, uma colina, uma fenda ou outro terreno difícil ou intransponível. Uma lagoa pode parecer um prado, um precipício uma ladeira suave, ou uma ravina cheia de pedras uma estrada larga e lisa. Estruturas construídas, equipamentos e criaturas dentro da área não mudam.
+
+O terreno continua igual ao toque, então as criaturas que entrarem na área provavelmente vão notar a ilusão. Se a diferença não for óbvia ao toque, uma criatura que examinar a ilusão pode usar a ação de Estudo para fazer um teste de Inteligência (Investigação) contra a CD de salvaguarda da sua magia e desacreditá-la. Se perceber que o terreno é ilusório, a criatura vê uma imagem vaga sobreposta ao terreno real.
+
+=== Ice Storm | Tempestade de Gelo
+material: uma luva de lã
+Granizo cai num Cilindro de 6 metros de raio e 12 metros de altura, centrado num ponto dentro do alcance. Cada criatura no Cilindro faz uma salvaguarda de Destreza. Uma criatura sofre 2d10 de dano contundente e 4d6 de dano de frio se falhar, ou metade desse dano se for bem-sucedida.
+
+As pedras de granizo transformam o chão do Cilindro em Terreno Difícil até o fim do seu próximo turno.
+
+_Usando um Espaço de Magia de Círculo Superior._ O dano contundente aumenta em 1d10 para cada círculo do espaço acima do 4º.
+
+=== Locate Creature | Localizar Criatura
+material: pelo de um cão farejador
+Descreva ou nomeie uma criatura que você conheça. Você sente a direção em que ela está, se ela estiver a até 300 metros de você. Se a criatura estiver se movendo, você sabe para que lado ela vai.
+
+A magia consegue localizar uma criatura específica que você conheça, ou a criatura mais próxima de um certo tipo (como um humano ou um unicórnio), se você já tiver visto uma criatura assim de perto, a até 9 metros, pelo menos uma vez. Se a criatura descrita ou nomeada estiver em outra forma, como sob efeito de _Carne para Pedra_ ou _Metamorfose_, esta magia não a localiza.
+
+Esta magia não localiza uma criatura se qualquer espessura de chumbo bloquear o caminho direto entre você e ela.
+
+=== Phantasmal Killer | Assassino Fantasmagórico
+Você mergulha nos pesadelos de uma criatura que consiga ver dentro do alcance e cria uma ilusão dos medos mais profundos dela, que só ela vê. O alvo faz uma salvaguarda de Sabedoria. Se falhar, sofre 4d10 de dano psíquico e tem Desvantagem nos testes de atributo e nas jogadas de ataque pela duração. Se for bem-sucedido, sofre metade do dano, e a magia acaba.
+
+Pela duração, o alvo faz uma salvaguarda de Sabedoria no fim de cada turno dele. Se falhar, sofre o dano psíquico de novo. Se for bem-sucedido, a magia acaba.
+
+_Usando um Espaço de Magia de Círculo Superior._ O dano aumenta em 1d10 para cada círculo do espaço acima do 4º.
+
+=== Polymorph | Metamorfose
+material: um casulo de lagarta
+Você tenta transformar uma criatura que consiga ver dentro do alcance numa Fera. O alvo precisa ser bem-sucedido numa salvaguarda de Sabedoria ou muda para a forma de uma Fera pela duração. Pode ser qualquer Fera à sua escolha com Nível de Desafio igual ou menor que o do alvo (ou que o nível do alvo, se ele não tiver Nível de Desafio). As estatísticas de jogo do alvo são substituídas pelo bloco de estatísticas da Fera escolhida, mas ele mantém alinhamento, personalidade, tipo de criatura, Pontos de Vida e Dados de Vida.
+
+O alvo ganha Pontos de Vida Temporários iguais aos Pontos de Vida da forma de Fera. Os que sobrarem desaparecem quando a magia acaba. A magia acaba antes para o alvo se ele ficar sem Pontos de Vida Temporários.
+
+As ações que o alvo pode fazer ficam limitadas pela anatomia da nova forma, e ele não pode falar nem conjurar magias.
+
+O equipamento do alvo se funde à nova forma. A criatura não pode usar esse equipamento nem se beneficiar dele de nenhum jeito.
+
+=== Private Sanctum | Santuário Particular
+material: uma lâmina fina de chumbo
+Você deixa uma área dentro do alcance magicamente segura. A área é um Cubo que pode ter de 1,5 metro a 30 metros de lado. A magia dura pela duração.
+
+Quando conjura a magia, você decide que tipo de segurança ela dá, escolhendo qualquer uma destas propriedades:
+
+- O som não atravessa a barreira na borda da área protegida.
+- A barreira da área protegida parece escura e enevoada, e impede a visão (inclusive a Visão no Escuro) através dela.
+- Sensores criados por magias de Adivinhação não podem aparecer dentro da área protegida nem atravessar a barreira em volta dela.
+- As criaturas na área não podem ser alvo de magias de Adivinhação.
+- Nada pode se teletransportar para dentro ou para fora da área protegida.
+- A viagem entre planos fica bloqueada dentro da área protegida.
+
+Conjurar esta magia no mesmo lugar todos os dias por 365 dias faz a magia durar até ser dissipada.
+
+_Usando um Espaço de Magia de Círculo Superior._ Você pode aumentar o tamanho do Cubo em 30 metros para cada círculo do espaço acima do 4º.
+
+=== Resilient Sphere | Esfera Resiliente
+material: uma esfera de vidro
+Uma esfera cintilante envolve uma criatura ou objeto Grande ou menor dentro do alcance. Uma criatura que não queira ser afetada precisa ser bem-sucedida numa salvaguarda de Destreza ou fica presa na esfera pela duração.
+
+Nada atravessa a barreira, nem para dentro nem para fora: nem objetos físicos, nem energia, nem efeitos de outras magias, embora uma criatura dentro da esfera consiga respirar ali. A esfera é imune a todo dano, e uma criatura ou objeto lá dentro não pode sofrer dano de ataques ou efeitos de fora, nem uma criatura lá dentro pode causar dano a nada do lado de fora.
+
+A esfera não tem peso e é só grande o bastante para conter a criatura ou o objeto lá dentro. Uma criatura presa pode usar uma ação para empurrar as paredes da esfera e assim rolá-la a até metade do Deslocamento dela. Do mesmo jeito, outras criaturas podem pegar e mover o globo.
+
+Uma magia _Desintegrar_ mirada no globo o destrói sem ferir o que está dentro.
+
+=== Secret Chest | Baú Secreto
+material: um baú de 90 por 60 por 60 centímetros, feito de materiais raros que valham 5.000 PO ou mais, e uma réplica Miúda do baú feita dos mesmos materiais, que valha 50 PO ou mais
+Você esconde um baú, com todo o conteúdo, no Plano Etéreo. Precisa tocar o baú e a réplica em miniatura que servem de componentes Materiais da magia. O baú comporta até 340 litros de material sem vida (90 por 60 por 60 centímetros).
+
+Enquanto o baú estiver no Plano Etéreo, você pode usar uma ação de Magia e tocar a réplica para chamar o baú de volta. Ele aparece num espaço desocupado no chão a até 1,5 metro de você. Você pode mandar o baú de volta ao Plano Etéreo usando uma ação de Magia para tocar o baú e a réplica.
+
+Depois de 60 dias, há uma chance cumulativa de 5 por cento, no fim de cada dia, de a magia acabar. A magia também acaba se você a conjurar de novo ou se a réplica Miúda for destruída. Se a magia acabar com o baú grande no Plano Etéreo, ele fica lá para você ou outra pessoa encontrar.
+
+=== Stone Shape | Moldar Rochas
+material: argila mole
+Você toca um objeto de pedra de tamanho Médio ou menor, ou um trecho de pedra de até 1,5 metro em qualquer dimensão, e dá a ele o formato que quiser. Por exemplo, pode transformar uma rocha grande numa arma, numa estátua ou num cofre, ou abrir uma passagem pequena numa parede de 1,5 metro de espessura. Também pode moldar uma porta de pedra ou o batente dela para lacrar a porta. O objeto criado pode ter até duas dobradiças e um trinco, mas detalhes mecânicos mais finos não são possíveis.
+
+=== Stoneskin | Pele de Pedra
+material: pó de diamante que valha 100 PO ou mais, consumido pela magia
+Até a magia acabar, uma criatura voluntária que você toca tem Resistência a dano contundente, perfurante e cortante.
+
+=== Vitriolic Sphere | Esfera Vitriólica
+material: uma gota de bile
+Você aponta para um lugar dentro do alcance, e uma bola de ácido brilhante, com 30 centímetros de diâmetro, dispara até lá e explode numa Esfera de 6 metros de raio. Cada criatura na área faz uma salvaguarda de Destreza. Se falhar, sofre 10d4 de dano ácido na hora e mais 5d4 de dano ácido no fim do próximo turno dela. Se for bem-sucedida, sofre só metade do dano inicial.
+
+_Usando um Espaço de Magia de Círculo Superior._ O dano inicial aumenta em 2d4 para cada círculo do espaço acima do 4º.
+
+=== Wall of Fire | Muralha de Fogo
+material: um pedaço de carvão
+Você cria uma muralha de fogo numa superfície sólida dentro do alcance. Ela pode ter até 18 metros de comprimento, 6 metros de altura e 30 centímetros de espessura, ou ser um anel de até 6 metros de diâmetro, 6 metros de altura e 30 centímetros de espessura. A muralha é opaca e dura pela duração.
+
+Quando a muralha aparece, cada criatura na área dela faz uma salvaguarda de Destreza, sofrendo 5d8 de dano de fogo se falhar, ou metade desse dano se for bem-sucedida.
+
+Um dos lados da muralha, escolhido por você ao conjurar a magia, causa 5d8 de dano de fogo a cada criatura que terminar o turno a até 3 metros desse lado ou dentro da muralha. Uma criatura sofre o mesmo dano quando entra na muralha pela primeira vez num turno ou termina o turno nela. O outro lado da muralha não causa dano.
+
+_Usando um Espaço de Magia de Círculo Superior._ O dano aumenta em 1d8 para cada círculo do espaço acima do 4º.
