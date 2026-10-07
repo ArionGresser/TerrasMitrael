@@ -41,6 +41,11 @@ export const SECOES: Secao[] = [
     descricao: "As magias das regras de 2024, em português",
   },
   {
+    href: "/classes/",
+    nome: "Classes",
+    descricao: "As classes das regras de 2024, em português",
+  },
+  {
     href: "/especies/",
     nome: "Espécies",
     descricao: "Os povos das regras de 2024, em português",
