@@ -1,0 +1,321 @@
+=== Ancient Silver Dragon
++ Resistência Lendária (4/Dia, ou 5/Dia no Covil)
+Se o dragão falhar num teste de resistência, pode escolher ser bem-sucedido.
++ Ataques Múltiplos
+O dragão faz três ataques de Dilacerar. Ele pode trocar um ataque por um uso de (A) Sopro Paralisante ou (B) Conjuração para conjurar _Faca de Gelo_ (versão de 2º círculo).
++ Dilacerar
++ Sopro Gélido (Recarga 5–6)
+_Teste de Resistência de Constituição:_ CD 24, cada criatura num Cone de 27 m. _Falha:_ 67 (15d8) de dano de frio. _Sucesso:_ Metade do dano.
++ Sopro Paralisante
+_Teste de Resistência de Constituição:_ CD 24, cada criatura num Cone de 27 m. _Primeira Falha:_ O alvo fica com a condição Incapacitado até o fim do próximo turno dele, quando repete o teste. _Segunda Falha:_ O alvo fica com a condição Paralisado e repete o teste no fim de cada turno dele, encerrando o efeito em si mesmo com um sucesso. Depois de 1 minuto, é bem-sucedido automaticamente.
++ Conjuração
+O dragão conjura uma das magias a seguir, sem precisar de componentes Materiais e usando Carisma como atributo de conjuração (CD de resistência 23, +15 para acertar com ataques mágicos):
+
+**À vontade:** _Detectar Magia_, _Imobilizar Monstro_, _Faca de Gelo_ (versão de 2º círculo), _Mudança de Forma_ (só formas de Fera ou Humanoide, sem ganhar Pontos de Vida Temporários da magia e sem precisar de Concentração nem de Pontos de Vida Temporários para mantê-la)
+
+**1/Dia cada:** _Controlar o Clima_, _Tempestade de Gelo_ (versão de 7º círculo), _Teletransporte_, _Zona da Verdade_
++ :intro
+_Usos de Ação Lendária: 3 (4 no Covil). Logo depois do turno de outra criatura, o dragão pode gastar um uso para fazer uma das ações a seguir. Ele recupera todos os usos gastos no início de cada turno seu._
++ Calafrio
+O dragão usa Conjuração para conjurar _Imobilizar Monstro_. Ele só pode usar esta ação de novo no início do próximo turno dele.
++ Vendaval Gélido
+_Teste de Resistência de Destreza:_ CD 23, cada criatura numa Linha de 18 m de comprimento e 3 m de largura. _Falha:_ 14 (4d6) de dano de frio, e o alvo é empurrado até 9 m em linha reta para longe do dragão. _Sucesso:_ Só metade do dano. _Falha ou Sucesso:_ O dragão só pode usar esta ação de novo no início do próximo turno dele.
++ Bote
+O dragão se move até metade do Deslocamento e faz um ataque de Dilacerar.
+
+=== Skeleton
++ Espada Curta
++ Arco Curto
+
+=== Warhorse Skeleton
++ Cascos
+_Jogada de Ataque Corpo a Corpo:_ +6, alcance 1,5 m. _Acerto:_ 7 (1d6 + 4) de dano contundente. Se o alvo for uma criatura Grande ou menor e o esqueleto tiver se movido 6 m ou mais em linha reta na direção dele logo antes do acerto, o alvo fica com a condição Caído.
+
+=== Minotaur Skeleton
++ Chifrada
+_Jogada de Ataque Corpo a Corpo:_ +6, alcance 1,5 m. _Acerto:_ 11 (2d6 + 4) de dano perfurante. Se o alvo for uma criatura Grande ou menor e o esqueleto tiver se movido 6 m ou mais em linha reta na direção dele logo antes do acerto, o alvo sofre 9 (2d8) de dano perfurante extra e fica com a condição Caído.
++ Pancada
+
+=== Solar
++ Percepção Divina
+O solar sabe quando ouve uma mentira.
++ Restauração Exaltada
+Se o solar morrer fora do Monte Celéstia, o corpo some, e ele ganha um corpo novo na hora, revivendo com todos os Pontos de Vida em algum lugar do Monte Celéstia.
++ Resistência Lendária (4/Dia)
+Se o solar falhar num teste de resistência, pode escolher ser bem-sucedido.
++ Resistência à Magia
+O solar tem Vantagem nos testes de resistência contra magias e outros efeitos mágicos.
++ Ataques Múltiplos
+O solar faz dois ataques de Espada Voadora. Ele pode trocar um ataque por um uso de Arco Matador.
++ Espada Voadora
+_Jogada de Ataque Corpo a Corpo ou à Distância:_ +15, alcance 3 m ou 36 m. _Acerto:_ 22 (4d6 + 8) de dano cortante mais 36 (8d8) de dano radiante. _Acerto ou Erro:_ Logo depois de um ataque à distância, a espada volta magicamente para a mão do solar ou fica pairando a até 1,5 m dele.
++ Arco Matador
+_Teste de Resistência de Destreza:_ CD 21, uma criatura que o solar consiga ver a até 180 m. _Falha:_ Se a criatura tiver 100 Pontos de Vida ou menos, ela morre. Se tiver mais, sofre 24 (4d8 + 6) de dano perfurante mais 36 (8d8) de dano radiante.
++ Conjuração
+O solar conjura uma das magias a seguir, sem precisar de componentes Materiais e usando Carisma como atributo de conjuração (CD de resistência 25):
+
+**À vontade:** _Detectar o Bem e o Mal_
+
+**1/Dia cada:** _Comunhão_, _Controlar o Clima_, _Dissipar o Bem e o Mal_, _Ressurreição_
++ Auxílio Divino (3/Dia)
+O solar conjura _Curar Ferimentos_ (versão de 2º círculo), _Restauração Menor_ ou _Remover Maldição_, usando o mesmo atributo de conjuração de Conjuração.
++ :intro
+_Usos de Ação Lendária: 3. Logo depois do turno de outra criatura, o solar pode gastar um uso para fazer uma das ações a seguir. Ele recupera todos os usos gastos no início de cada turno seu._
++ Olhar Cegante
+_Teste de Resistência de Constituição:_ CD 25, uma criatura que o solar consiga ver a até 36 m. _Falha:_ O alvo fica com a condição Cego por 1 minuto. _Falha ou Sucesso:_ O solar só pode usar esta ação de novo no início do próximo turno dele.
++ Teletransporte Radiante
+O solar se teletransporta até 18 m para um espaço desocupado que consiga ver. _Teste de Resistência de Destreza:_ CD 25, cada criatura numa Emanação de 3 m a partir do solar no espaço de destino. _Falha:_ 11 (2d10) de dano radiante. _Sucesso:_ Metade do dano.
+
+=== Specter
++ Movimento Incorpóreo
+O espectro atravessa outras criaturas e objetos como se fossem Terreno Difícil. Ele sofre 5 (1d10) de dano de energia se terminar o turno dentro de um objeto.
++ Sensibilidade à Luz do Sol
+Sob a luz do sol, o espectro tem Desvantagem nos testes de atributo e nas jogadas de ataque.
++ Dreno de Vida
+_Jogada de Ataque Corpo a Corpo:_ +4, alcance 1,5 m. _Acerto:_ 7 (2d6) de dano necrótico. Se o alvo for uma criatura, o máximo de Pontos de Vida dele diminui numa quantidade igual ao dano sofrido.
+
+=== Sphinx of Wonder
++ Resistência à Magia
+A esfinge tem Vantagem nos testes de resistência contra magias e outros efeitos mágicos.
++ Dilacerar
++ Lampejo de Engenhosidade (2/Dia)
+_Gatilho:_ A esfinge ou outra criatura a até 9 m faz um teste de atributo ou um teste de resistência. _Resposta:_ A esfinge soma 2 à jogada.
+
+=== Sphinx of Lore
++ Inescrutável
+Nenhuma magia consegue observar a esfinge à distância nem detectar os pensamentos dela sem permissão. Testes de Sabedoria (Intuição) para descobrir as intenções ou a sinceridade dela têm Desvantagem.
++ Resistência Lendária (3/Dia, ou 4/Dia no Covil)
+Se a esfinge falhar num teste de resistência, pode escolher ser bem-sucedida.
++ Ataques Múltiplos
+A esfinge faz três ataques de Garra.
++ Garra
++ Rugido Dilacerante (Recarga 5–6)
+_Teste de Resistência de Sabedoria:_ CD 16, cada inimigo numa Emanação de 90 m a partir da esfinge. _Falha:_ 35 (10d6) de dano psíquico, e o alvo fica com a condição Incapacitado até o início do próximo turno da esfinge.
++ Conjuração
+A esfinge conjura uma das magias a seguir, sem precisar de componentes Materiais e usando Inteligência como atributo de conjuração (CD de resistência 16):
+
+**À vontade:** _Detectar Magia_, _Identificação_, _Mãos Mágicas_, _Ilusão Menor_, _Prestidigitação_
+
+**1/Dia cada:** _Dissipar Magia_, _Conhecimento Lendário_, _Localizar Objeto_, _Viagem Planar_, _Remover Maldição_, _Idiomas_
++ :intro
+_Usos de Ação Lendária: 3 (4 no Covil). Logo depois do turno de outra criatura, a esfinge pode gastar um uso para fazer uma das ações a seguir. Ela recupera todos os usos gastos no início de cada turno seu._
++ Espreita Arcana
+A esfinge pode se teletransportar até 9 m para um espaço desocupado que consiga ver e faz um ataque de Garra.
++ Peso dos Anos
+_Teste de Resistência de Constituição:_ CD 16, uma criatura que a esfinge consiga ver a até 36 m. _Falha:_ O alvo ganha 1 nível de Exaustão. Enquanto tiver qualquer nível de Exaustão, ele parece 3d10 anos mais velho. _Falha ou Sucesso:_ A esfinge só pode usar esta ação de novo no início do próximo turno dela.
+
+=== Sphinx of Valor
++ Inescrutável
+Nenhuma magia consegue observar a esfinge à distância nem detectar os pensamentos dela sem permissão. Testes de Sabedoria (Intuição) para descobrir as intenções ou a sinceridade dela têm Desvantagem.
++ Resistência Lendária (3/Dia, ou 4/Dia no Covil)
+Se a esfinge falhar num teste de resistência, pode escolher ser bem-sucedida.
++ Ataques Múltiplos
+A esfinge faz dois ataques de Garra e usa Rugido.
++ Garra
++ Rugido (3/Dia)
+A esfinge solta um rugido mágico. Cada vez que ela ruge, o rugido tem um efeito diferente, como descrito abaixo (a sequência recomeça quando ela faz um Descanso Longo):
++ Primeiro Rugido
+_Teste de Resistência de Sabedoria:_ CD 20, cada inimigo numa Emanação de 150 m a partir da esfinge. _Falha:_ O alvo fica com a condição Amedrontado por 1 minuto.
++ Segundo Rugido
+_Teste de Resistência de Sabedoria:_ CD 20, cada inimigo numa Emanação de 150 m a partir da esfinge. _Falha:_ O alvo fica com a condição Paralisado e repete o teste no fim de cada turno dele, encerrando o efeito em si mesmo com um sucesso. Depois de 1 minuto, é bem-sucedido automaticamente.
++ Terceiro Rugido
+_Teste de Resistência de Constituição:_ CD 20, cada inimigo numa Emanação de 150 m a partir da esfinge. _Falha:_ 44 (8d10) de dano trovejante, e o alvo fica com a condição Caído. _Sucesso:_ Só metade do dano.
++ Conjuração
+A esfinge conjura uma das magias a seguir, sem precisar de componentes Materiais e usando Sabedoria como atributo de conjuração (CD de resistência 20):
+
+**À vontade:** _Detectar o Bem e o Mal_, _Taumaturgia_
+
+**1/Dia cada:** _Detectar Magia_, _Dissipar Magia_, _Restauração Maior_, _Banquete dos Heróis_, _Zona da Verdade_
++ :intro
+_Usos de Ação Lendária: 3 (4 no Covil). Logo depois do turno de outra criatura, a esfinge pode gastar um uso para fazer uma das ações a seguir. Ela recupera todos os usos gastos no início de cada turno seu._
++ Espreita Arcana
+A esfinge pode se teletransportar até 9 m para um espaço desocupado que consiga ver e faz um ataque de Garra.
++ Peso dos Anos
+_Teste de Resistência de Constituição:_ CD 16, uma criatura que a esfinge consiga ver a até 36 m. _Falha:_ O alvo ganha 1 nível de Exaustão. Enquanto tiver qualquer nível de Exaustão, ele parece 3d10 anos mais velho. _Falha ou Sucesso:_ A esfinge só pode usar esta ação de novo no início do próximo turno dela.
+
+=== Spirit Naga
++ Restauração Infernal
+Se morrer, a naga volta à vida em 1d6 dias e recupera todos os Pontos de Vida. Só a magia _Desejo_ consegue impedir este traço de funcionar.
++ Ataques Múltiplos
+A naga faz três ataques, com Mordida ou Raio Necrótico, em qualquer combinação.
++ Mordida
++ Raio Necrótico
+_Jogada de Ataque à Distância:_ +6, alcance 18 m. _Acerto:_ 21 (6d6) de dano necrótico.
++ Conjuração
+A naga conjura uma das magias a seguir, sem precisar de componentes Somáticos nem Materiais e usando Inteligência como atributo de conjuração (CD de resistência 14):
+
+**À vontade:** _Detectar Magia_, _Mãos Mágicas_, _Ilusão Menor_, _Respirar na Água_
+
+**2/Dia cada:** _Detectar Pensamentos_, _Porta Dimensional_, _Imobilizar Pessoa_ (versão de 3º círculo), _Relâmpago_ (versão de 4º círculo)
+
+=== Sprite
++ Espada de Agulha
++ Arco Encantador
+_Jogada de Ataque à Distância:_ +6, alcance 12/48 m. _Acerto:_ 1 de dano perfurante, e o alvo fica com a condição Enfeitiçado até o início do próximo turno do duende.
++ Ver Corações
+_Teste de Resistência de Carisma:_ CD 10, uma criatura a até 1,5 m que o duende consiga ver (Celestiais, Ínferos e Mortos-Vivos falham automaticamente). _Falha:_ O duende descobre as emoções e a tendência do alvo.
++ Invisibilidade
+O duende conjura _Invisibilidade_ em si mesmo, sem precisar de componentes e usando Carisma como atributo de conjuração.
+
+=== Spy
++ Espada Curta
++ Besta de Mão
++ Ação Ardilosa
+O espião faz a ação de Disparada, Desengajar ou Esconder.
+
+=== Stirge
++ Probóscide
+_Jogada de Ataque Corpo a Corpo:_ +5, alcance 1,5 m. _Acerto:_ 6 (1d6 + 3) de dano perfurante, e o stirge gruda no alvo. Grudado, o stirge não pode fazer ataques de Probóscide, e o alvo sofre 5 (2d4) de dano necrótico no início de cada turno do stirge.
+
+O stirge pode se soltar gastando 1,5 m de movimento. O alvo ou uma criatura a até 1,5 m dele pode soltar o stirge com uma ação.
+
+=== Stone Giant
++ Ataques Múltiplos
+O gigante faz dois ataques, com Clava de Pedra ou Pedregulho, em qualquer combinação.
++ Clava de Pedra
++ Pedregulho
+_Jogada de Ataque à Distância:_ +9, alcance 18/72 m. _Acerto:_ 15 (2d8 + 6) de dano contundente. Se o alvo for uma criatura Grande ou menor, fica com a condição Caído.
++ Desviar Projétil (Recarga 5–6)
+_Gatilho:_ O gigante é atingido por uma jogada de ataque à distância e sofre dano contundente, perfurante ou cortante dela. _Resposta:_ O gigante reduz o dano que sofre do ataque em 11 (1d10 + 6) e, se esse dano cair a 0, pode redirecionar parte da força do ataque. _Teste de Resistência de Destreza:_ CD 17, uma criatura que o gigante consiga ver a até 18 m. _Falha:_ 11 (1d10 + 6) de dano de energia.
+
+=== Stone Golem
++ Forma Imutável
+O golem não pode mudar de forma.
++ Resistência à Magia
+O golem tem Vantagem nos testes de resistência contra magias e outros efeitos mágicos.
++ Ataques Múltiplos
+O golem faz dois ataques, com Pancada ou Raio de Energia, em qualquer combinação.
++ Pancada
++ Raio de Energia
+_Jogada de Ataque à Distância:_ +9, alcance 36 m. _Acerto:_ 22 (4d10) de dano de energia.
++ Lentidão (Recarga 5–6)
+O golem conjura a magia _Lentidão_, sem precisar de componentes e usando Constituição como atributo de conjuração (CD de resistência 17).
+
+=== Storm Giant
++ Anfíbio
+O gigante respira ar e água.
++ Ataques Múltiplos
+O gigante faz dois ataques, com Espada da Tempestade ou Raio Trovejante, em qualquer combinação.
++ Espada da Tempestade
++ Raio Trovejante
+_Jogada de Ataque à Distância:_ +14, alcance 150 m. _Acerto:_ 22 (2d12 + 9) de dano elétrico, e o alvo fica com as condições Cego e Surdo até o início do próximo turno do gigante.
++ Tempestade de Raios (Recarga 5–6)
+_Teste de Resistência de Destreza:_ CD 18, cada criatura num Cilindro de 3 m de raio e 12 m de altura a partir de um ponto que o gigante consiga ver a até 150 m. _Falha:_ 55 (10d10) de dano elétrico. _Sucesso:_ Metade do dano.
++ Conjuração
+O gigante conjura uma das magias a seguir, sem precisar de componentes Materiais e usando Sabedoria como atributo de conjuração (CD de resistência 18):
+
+**À vontade:** _Detectar Magia_, _Luz_
+
+**1/Dia:** _Controlar o Clima_
+
+=== Succubus
++ Forma de Íncubo
+Quando termina um Descanso Longo, o súcubo pode mudar de forma para um **Íncubo**, passando a usar aquela ficha em vez desta.
++ Ataques Múltiplos
+O súcubo faz um ataque de Toque Infernal e usa Encanto ou Beijo Drenante.
++ Toque Infernal
++ Encanto
+O súcubo conjura _Dominar Pessoa_ (versão de 8º círculo), sem precisar de componentes e usando Carisma como atributo de conjuração (CD de resistência 15).
++ Beijo Drenante
+_Teste de Resistência de Constituição:_ CD 15, uma criatura Enfeitiçada pelo súcubo a até 1,5 m. _Falha:_ 13 (3d8) de dano psíquico. _Sucesso:_ Metade do dano. _Falha ou Sucesso:_ O máximo de Pontos de Vida do alvo diminui numa quantidade igual ao dano sofrido.
++ Mudar de Forma
+O súcubo muda de forma para um Humanoide Médio ou Pequeno, ou volta à forma verdadeira. As estatísticas de jogo dele são as mesmas em todas as formas, mas o Deslocamento de Voo só existe na forma verdadeira. O equipamento que ele veste ou carrega não se transforma.
+
+=== Tarrasque
++ Resistência Lendária (6/Dia)
+Se a tarrasque falhar num teste de resistência, pode escolher ser bem-sucedida.
++ Resistência à Magia
+A tarrasque tem Vantagem nos testes de resistência contra magias e outros efeitos mágicos.
++ Carapaça Refletora
+Se a tarrasque for alvo da magia _Mísseis Mágicos_ ou de uma magia que exija jogada de ataque à distância, role 1d6. Com **1–5**, ela não é afetada. Com **6**, não é afetada e reflete a magia, fazendo de quem a conjurou o alvo.
++ Monstro de Cerco
+A tarrasque causa dano dobrado a objetos e estruturas.
++ Ataques Múltiplos
+A tarrasque faz um ataque de Mordida e três outros ataques, com Garra ou Cauda, em qualquer combinação.
++ Mordida
+_Jogada de Ataque Corpo a Corpo:_ +19, alcance 4,5 m. _Acerto:_ 36 (4d12 + 10) de dano perfurante, e o alvo fica com a condição Agarrado (CD 20 para escapar). Até a agarrada acabar, o alvo fica com a condição Contido e não pode se teletransportar.
++ Garra
++ Cauda
+_Jogada de Ataque Corpo a Corpo:_ +19, alcance 9 m. _Acerto:_ 23 (3d8 + 10) de dano contundente. Se o alvo for uma criatura Enorme ou menor, fica com a condição Caído.
++ Bramido Trovejante (Recarga 5–6)
+_Teste de Resistência de Constituição:_ CD 27, cada criatura e cada objeto que ninguém esteja vestindo ou carregando num Cone de 45 m. _Falha:_ 78 (12d12) de dano trovejante, e o alvo fica com as condições Surdo e Amedrontado até o fim do próximo turno dele. _Sucesso:_ Só metade do dano.
++ Engolir
+_Teste de Resistência de Força:_ CD 27, uma criatura Grande ou menor Agarrada pela tarrasque (ela pode ter até seis criaturas engolidas ao mesmo tempo). _Falha:_ O alvo é engolido, e a condição Agarrado acaba. A criatura engolida fica com as condições Cego e Contido, não pode se teletransportar, tem Cobertura Total contra ataques e outros efeitos de fora da tarrasque e sofre 56 (16d6) de dano ácido no início de cada turno da tarrasque.
+
+Se a tarrasque sofrer 60 de dano ou mais num único turno vindo de uma criatura dentro dela, ela precisa ser bem-sucedida num teste de resistência de Constituição CD 20 no fim desse turno ou regurgita todas as criaturas engolidas, que caem num espaço a até 3 m dela com a condição Caído. Se a tarrasque morrer, as criaturas engolidas deixam de estar Contidas e podem sair do cadáver usando 6 m de movimento, saindo Caídas.
++ :intro
+_Usos de Ação Lendária: 3. Logo depois do turno de outra criatura, a tarrasque pode gastar um uso para fazer uma das ações a seguir. Ela recupera todos os usos gastos no início de cada turno seu._
++ Investida Brutal
+A tarrasque se move até metade do Deslocamento e faz um ataque de Garra ou de Cauda.
++ Passos que Sacodem o Mundo
+A tarrasque se move até o seu Deslocamento. No fim desse movimento, ela cria uma onda de choque instantânea numa Emanação de 18 m a partir de si. As criaturas na área perdem a Concentração e, se forem Médias ou menores, ficam com a condição Caído. A tarrasque só pode usar esta ação de novo no início do próximo turno dela.
+
+=== Tough
++ Táticas de Matilha
+O brutamontes tem Vantagem numa jogada de ataque contra uma criatura se pelo menos um aliado dele estiver a até 1,5 m dela e não estiver com a condição Incapacitado.
++ Maça
++ Besta Pesada
+
+=== Tough Boss
++ Táticas de Matilha
+O brutamontes tem Vantagem numa jogada de ataque contra uma criatura se pelo menos um aliado dele estiver a até 1,5 m dela e não estiver com a condição Incapacitado.
++ Ataques Múltiplos
+O brutamontes faz dois ataques, com Martelo de Guerra ou Besta Pesada, em qualquer combinação.
++ Martelo de Guerra
+_Jogada de Ataque Corpo a Corpo:_ +5, alcance 1,5 m. _Acerto:_ 12 (2d8 + 3) de dano contundente. Se o alvo for uma criatura Grande ou menor, o brutamontes o empurra até 3 m em linha reta para longe dele.
++ Besta Pesada
+
+=== Treant
++ Monstro de Cerco
+O ente causa dano dobrado a objetos e estruturas.
++ Ataques Múltiplos
+O ente faz dois ataques de Pancada.
++ Pancada
++ Chuva de Casca
+_Jogada de Ataque à Distância:_ +10, alcance 54 m. _Acerto:_ 28 (4d10 + 6) de dano perfurante.
++ Animar Árvores (1/Dia)
+O ente anima magicamente até duas árvores que consiga ver a até 18 m dele. Cada árvore usa a ficha do Ente, mas com Inteligência e Carisma 1, não fala e não tem esta ação. A árvore age logo depois do ente, na mesma contagem de Iniciativa, e obedece a ele. Ela continua animada por 1 dia ou até morrer, o ente morrer ou ela ficar a mais de 36 m dele. Então a árvore cria raízes, se puder.
+
+=== Troll
++ Membros Asquerosos (4/Dia)
+Se o troll terminar qualquer turno Sangrando e tiver sofrido 15 ou mais de dano cortante nesse turno, um dos membros dele é decepado, cai no espaço do troll e vira um **Membro de Troll**. O membro age logo depois do turno do troll. O troll tem 1 nível de Exaustão por membro que falta e faz crescer membros novos na próxima vez que recuperar Pontos de Vida.
++ Regeneração
+O troll recupera 15 Pontos de Vida no início de cada turno dele. Se sofrer dano ácido ou de fogo, este traço não funciona no próximo turno dele. O troll só morre se começar o turno com 0 Pontos de Vida e não se regenerar.
++ Ataques Múltiplos
+O troll faz três ataques de Dilacerar.
++ Dilacerar
++ Investida
+O troll se move até metade do Deslocamento em linha reta na direção de um inimigo que consiga ver.
+
+=== Troll Limb
++ Regeneração
+O membro recupera 5 Pontos de Vida no início de cada turno dele. Se sofrer dano ácido ou de fogo, este traço não funciona no próximo turno dele. O membro só morre se começar o turno com 0 Pontos de Vida e não se regenerar.
++ Cria de Troll
+O membro tem, de um jeito estranho, os mesmos sentidos de um troll inteiro. Se não for destruído em 24 horas, role 1d12. Com 12, o membro vira um **Troll**. Se não, ele seca e apodrece.
++ Dilacerar
+
+=== Unicorn
++ Resistência Lendária (3/Dia)
+Se o unicórnio falhar num teste de resistência, pode escolher ser bem-sucedido.
++ Resistência à Magia
+O unicórnio tem Vantagem nos testes de resistência contra magias e outros efeitos mágicos.
++ Ataques Múltiplos
+O unicórnio faz um ataque de Cascos e um de Chifre Radiante.
++ Cascos
++ Chifre Radiante
++ Conjuração
+O unicórnio conjura uma das magias a seguir, sem precisar de componentes e usando Carisma como atributo de conjuração (CD de resistência 14):
+
+**À vontade:** _Detectar o Bem e o Mal_, _Arte Druídica_
+
+**1/Dia cada:** _Acalmar Emoções_, _Dissipar o Bem e o Mal_, _Constrição_, _Passos sem Pegadas_, _Palavra de Recordação_
++ Bênção do Unicórnio (3/Dia)
+O unicórnio toca outra criatura com o chifre e conjura _Curar Ferimentos_ ou _Restauração Menor_ nela, usando o mesmo atributo de conjuração de Conjuração.
++ :intro
+_Usos de Ação Lendária: 3. Logo depois do turno de outra criatura, o unicórnio pode gastar um uso para fazer uma das ações a seguir. Ele recupera todos os usos gastos no início de cada turno seu._
++ Chifrada em Investida
+O unicórnio se move até metade do Deslocamento sem provocar Ataques de Oportunidade e faz um ataque de Chifre Radiante.
++ Escudo Cintilante
+O unicórnio escolhe a si mesmo ou uma criatura que consiga ver a até 18 m dele. O alvo ganha 10 (3d6) Pontos de Vida Temporários, e a CA dele aumenta em 2 até o fim do próximo turno do unicórnio.
+
+O unicórnio só pode usar esta ação de novo no início do próximo turno dele.
