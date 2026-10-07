@@ -1,0 +1,296 @@
+=== Staff of the Magi | Cajado dos Magos
+tipo: Cajado, Lendário (exige Sintonia por um Bruxo, Feiticeiro ou Mago)
+Este cajado tem 50 cargas e pode ser empunhado como um Bordão mágico que dá +2 de bônus nas jogadas de ataque e de dano feitas com ele. Enquanto o segura, você recebe +2 de bônus nas jogadas de ataque com magia.
+
+_Absorver Magia._ Enquanto segura o cajado, você tem Vantagem nos testes de resistência contra magias. Além disso, pode usar uma Reação quando outra criatura conjura uma magia que tenha só você como alvo. Se fizer isso, o cajado absorve a magia, cancela o efeito dela e ganha cargas iguais ao círculo da magia absorvida. Mas, se isso fizer o total de cargas passar de 50, o cajado explode como se você tivesse ativado o Golpe Retaliador (veja abaixo).
+
+_Magias._ Enquanto segura o cajado, você pode conjurar com ele uma das magias da tabela a seguir, usando a CD de resistência das suas magias. A tabela indica quantas cargas a magia gasta.
+
+| Magia | Cargas |
+|---|---|
+| _Tranca Arcana_ | 0 |
+| _Conjurar Elemental_ | 7 |
+| _Detectar Magia_ | 0 |
+| _Dissipar Magia_ | 3 |
+| _Aumentar/Reduzir_ | 0 |
+| _Bola de Fogo_ (versão de 7º círculo) | 7 |
+| _Esfera Flamejante_ | 2 |
+| _Tempestade de Gelo_ | 4 |
+| _Invisibilidade_ | 2 |
+| _Arrombar_ | 2 |
+| _Luz_ | 0 |
+| _Relâmpago_ (versão de 7º círculo) | 7 |
+| _Criar Passagem_ | 5 |
+| _Viagem Planar_ | 7 |
+| _Proteção contra o Bem e o Mal_ | 0 |
+| _Telecinese_ | 5 |
+| _Muralha de Fogo_ | 4 |
+| _Teia_ | 2 |
+
+_Recuperar Cargas._ O cajado recupera 4d6 + 2 cargas gastas todo dia ao amanhecer. Se você gastar a última carga, role 1d20. Com 20, o cajado recupera 1d12 + 1 cargas.
+
+_Golpe Retaliador._ Você pode usar uma ação de Magia para quebrar o cajado no joelho ou contra uma superfície sólida. O cajado é destruído e libera a magia numa explosão que preenche uma Emanação de 9 metros a partir dele. Você tem 50% de chance de viajar na hora para um plano de existência aleatório, escapando da explosão. Se não escapar, você sofre dano de energia igual a 16 vezes o número de cargas no cajado. Cada outra criatura na área faz um teste de resistência de Destreza CD 17. Com uma falha, sofre dano de energia igual a 6 vezes o número de cargas no cajado. Com um sucesso, sofre metade do dano.
+
+=== Staff of the Python | Cajado da Serpente
+tipo: Cajado, Incomum (exige Sintonia)
+Com uma ação de Magia, você pode arremessar este cajado para que caia num espaço desocupado a até 3 metros de você. Ali ele se transforma numa **Serpente Constritora Gigante**. A serpente fica sob o seu controle e divide a sua contagem de Iniciativa, agindo logo depois de você.
+
+No seu turno, você pode dar ordens mentais à serpente (sem gastar ação) se ela estiver a até 18 metros e você não estiver com a condição Incapacitado. Você decide que ação ela faz e para onde se move no turno dela, ou pode dar uma ordem geral, como atacar seus inimigos ou vigiar um lugar. Sem ordens suas, a serpente se defende.
+
+Com uma Ação Bônus, você pode mandar a serpente voltar à forma de cajado no espaço em que está, e a propriedade só pode ser usada de novo depois de 1 hora. Se a serpente cair a 0 Pontos de Vida, ela morre e volta à forma de cajado, que então se despedaça e é destruído. Se a serpente voltar à forma de cajado antes de perder todos os Pontos de Vida, ela os recupera todos.
+
+=== Staff of the Woodlands | Cajado dos Bosques
+tipo: Cajado, Raro (exige Sintonia por um Druida)
+Este cajado tem 6 cargas e pode ser empunhado como um Bordão mágico que dá +2 de bônus nas jogadas de ataque e de dano feitas com ele. Enquanto o segura, você recebe +2 de bônus nas jogadas de ataque com magia.
+
+_Magias._ Enquanto segura o cajado, você pode conjurar com ele uma das magias da tabela a seguir, usando a CD de resistência das suas magias. A tabela indica quantas cargas a magia gasta.
+
+| Magia | Cargas |
+|---|---|
+| _Amizade Animal_ | 1 |
+| _Despertar_ | 5 |
+| _Pele de Árvore_ | 2 |
+| _Localizar Animais ou Plantas_ | 2 |
+| _Passos sem Pegadas_ | 2 |
+| _Falar com Animais_ | 1 |
+| _Falar com as Plantas_ | 3 |
+| _Muralha de Espinhos_ | 6 |
+
+_Forma de Árvore._ Você pode usar uma ação de Magia para fincar uma ponta do cajado na terra, num espaço desocupado, e gastar 1 carga para transformá-lo numa árvore saudável. A árvore tem 18 metros de altura e tronco de 1,5 metro de diâmetro, e os galhos do alto se abrem num raio de 6 metros. Ela parece comum, mas irradia uma aura fraca de magia de Transmutação, que pode ser percebida com a magia _Detectar Magia_. Tocando a árvore e usando uma ação de Magia, você devolve o cajado à forma normal. Qualquer criatura que esteja na árvore cai quando ela volta a ser cajado.
+
+_Recuperar Cargas._ O cajado recupera 1d6 cargas gastas todo dia ao amanhecer. Se você gastar a última carga, role 1d20. Com 1, o cajado perde as propriedades e vira um Bordão não mágico.
+
+=== Staff of Thunder and Lightning | Cajado do Trovão e do Relâmpago
+tipo: Cajado, Muito Raro (exige Sintonia)
+Este cajado pode ser empunhado como um Bordão mágico que dá +2 de bônus nas jogadas de ataque e de dano feitas com ele. Ele também tem as propriedades adicionais a seguir. Depois de usada, cada uma delas só pode ser usada de novo no próximo amanhecer.
+
+_Relâmpago._ Quando acerta um ataque corpo a corpo com o cajado, você pode fazer o alvo sofrer 2d6 de dano elétrico extra (sem gastar ação).
+
+_Trovão._ Quando acerta um ataque corpo a corpo com o cajado, você pode fazê-lo soltar um estrondo de trovão que se ouve a até 90 metros (sem gastar ação). O alvo atingido precisa ser bem-sucedido em um teste de resistência de Constituição CD 17 ou fica com a condição Atordoado até o fim do seu próximo turno.
+
+**_Trovão e Relâmpago._** Logo depois de acertar um ataque corpo a corpo com o cajado, você pode usar uma Ação Bônus para usar as propriedades Relâmpago e Trovão (veja acima) ao mesmo tempo. Isso não gasta o uso diário daquelas propriedades, só o desta.
+
+_Descarga Elétrica._ Você pode usar uma ação de Magia para fazer um raio saltar da ponta do cajado numa Linha de 1,5 metro de largura e 36 metros de comprimento. Cada criatura na Linha faz um teste de resistência de Destreza CD 17. Sofre 9d6 de dano elétrico com uma falha, ou metade com um sucesso.
+
+_Trovoada._ Você pode usar uma ação de Magia para fazer o cajado produzir um trovão que se ouve a até 180 metros. Toda criatura numa Emanação de 18 metros a partir de você faz um teste de resistência de Constituição CD 17. Com uma falha, sofre 2d6 de dano trovejante e fica com a condição Surdo por 1 minuto. Com um sucesso, sofre só metade do dano.
+
+=== Staff of Withering | Cajado do Definhamento
+tipo: Cajado, Raro (exige Sintonia)
+Este cajado tem 3 cargas e recupera 1d3 cargas gastas todo dia ao amanhecer.
+
+O cajado pode ser empunhado como um Bordão mágico. Ao acertar, ele causa o dano de um Bordão normal, e você pode gastar 1 carga para causar 2d10 de dano necrótico extra ao alvo e obrigá-lo a fazer um teste de resistência de Constituição CD 15. Com uma falha, o alvo tem Desvantagem por 1 hora em todo teste de atributo ou teste de resistência que use Força ou Constituição.
+
+=== Stone of Controlling Earth Elementals | Pedra de Controle dos Elementais da Terra
+tipo: Item Maravilhoso, Raro
+Encostando esta pedra de 2,5 kg no chão, você pode usar uma ação de Magia para invocar um **Elemental da Terra**. O elemental aparece num espaço desocupado à sua escolha a até 9 metros de você, obedece às suas ordens e age logo depois de você na sua contagem de Iniciativa. Ele desaparece depois de 1 hora, quando morre ou quando você o dispensa com uma Ação Bônus. A pedra só pode ser usada assim de novo no próximo amanhecer.
+
+=== Stone of Good Luck (Luckstone) | Pedra da Sorte
+tipo: Item Maravilhoso, Incomum (exige Sintonia)
+Enquanto esta ágata polida estiver com você, você recebe +1 de bônus nos testes de atributo e nos testes de resistência.
+
+=== Sun Blade | Lâmina Solar
+tipo: Arma (Espada Longa), Rara (exige Sintonia)
+Este item parece ser só o cabo de uma espada.
+
+_Lâmina de Luz._ Segurando o cabo, você pode usar uma Ação Bônus para fazer surgir ou sumir uma lâmina de luz pura. Enquanto a lâmina existe, esta arma mágica funciona como uma Espada Longa com a propriedade Acuidade. Se você tem proficiência com Espadas Longas ou Espadas Curtas, tem proficiência com a _Lâmina Solar_.
+
+Você recebe +2 de bônus nas jogadas de ataque e de dano feitas com esta arma, que causa dano radiante em vez de cortante. Quando acerta um Morto-Vivo com ela, o alvo sofre 1d8 de dano radiante extra.
+
+_Luz do Sol._ A lâmina luminosa emite Luz Plena num raio de 4,5 metros e Penumbra por mais 4,5 metros. A luz é luz do sol. Enquanto a lâmina existir, você pode usar uma ação de Magia para aumentar ou diminuir em 1,5 metro cada um dos raios de Luz Plena e de Penumbra, até o máximo de 9 metros cada ou o mínimo de 3 metros cada.
+
+=== Sword of Life Stealing | Espada Roubavidas
+tipo: Arma (Glaive, Espada Grande, Espada Longa, Rapieira, Cimitarra ou Espada Curta), Rara (exige Sintonia)
+Quando ataca uma criatura com esta arma mágica e tira 20 no d20 da jogada de ataque, o alvo sofre 15 de dano necrótico extra se não for um Constructo nem um Morto-Vivo, e você ganha Pontos de Vida Temporários iguais ao dano necrótico que ele sofreu.
+
+=== Sword of Sharpness | Espada Afiada
+tipo: Arma (Glaive, Espada Grande, Espada Longa ou Cimitarra), Muito Rara (exige Sintonia)
+Quando ataca um objeto com esta arma mágica e acerta, os dados de dano da arma contra ele rendem o valor máximo.
+
+Quando ataca uma criatura com esta arma e tira 20 no d20 da jogada de ataque, o alvo sofre 14 de dano cortante extra e ganha 1 nível de Exaustão.
+
+=== Sword of Wounding | Espada Ferina
+tipo: Arma (Glaive, Espada Grande, Espada Longa, Rapieira, Cimitarra ou Espada Curta), Rara (exige Sintonia)
+Quando acerta uma criatura com um ataque usando esta arma mágica, o alvo sofre 2d6 de dano necrótico extra e precisa ser bem-sucedido em um teste de resistência de Constituição CD 15 ou não pode recuperar Pontos de Vida por 1 hora. O alvo repete o teste no fim de cada turno dele e encerra o efeito em si mesmo com um sucesso.
+
+=== Talisman of Pure Good | Talismã do Bem Supremo
+tipo: Item Maravilhoso, Lendário (exige Sintonia por um Clérigo ou Paladino)
+Este talismã é um símbolo poderoso da bondade. Um Ínfero ou Morto-Vivo que toque o talismã sofre 8d6 de dano radiante, e sofre o dano de novo cada vez que terminar o turno segurando ou carregando o talismã.
+
+_Símbolo Sagrado._ Você pode usar o talismã como Símbolo Sagrado. Enquanto o usa ou segura, você recebe +2 de bônus nas jogadas de ataque com magia.
+
+_Repreensão Pura._ O talismã tem 7 cargas. Enquanto o usa ou segura, você pode usar uma ação de Magia para gastar 1 carga e escolher como alvo uma criatura que consiga ver no chão a até 36 metros. Uma fenda em chamas se abre debaixo dela, e o alvo faz um teste de resistência de Destreza CD 20. Se for um Ínfero ou Morto-Vivo, tem Desvantagem no teste. Com uma falha, o alvo cai na fenda e é destruído, sem deixar restos. Com um sucesso, não é lançado na fenda, mas sofre 4d6 de dano psíquico pelo susto. Em qualquer caso, a fenda então se fecha sem deixar rastro. Quando você gasta a última carga, o talismã se desfaz em pontinhos de luz dourada e é destruído.
+
+=== Talisman of the Sphere | Talismã da Esfera
+tipo: Item Maravilhoso, Lendário (exige Sintonia)
+Enquanto segura ou usa este talismã, você tem Vantagem nos testes de Inteligência (Arcanismo) para controlar uma _Esfera da Aniquilação_. Além disso, quando começa o turno controlando uma _Esfera da Aniquilação_, você pode usar uma ação de Magia para movê-la 3 metros mais 3 metros vezes o seu modificador de Inteligência. Esse movimento não precisa ser em linha reta.
+
+=== Talisman of Ultimate Evil | Talismã do Mal Supremo
+tipo: Item Maravilhoso, Lendário (exige Sintonia)
+Este item simboliza o mal sem remorso. Uma criatura que não seja Ínfero nem Morto-Vivo e toque o talismã sofre 8d6 de dano necrótico, e sofre o dano de novo cada vez que terminar o turno segurando ou carregando o talismã.
+
+_Símbolo Sagrado._ Você pode usar o talismã como Símbolo Sagrado. Enquanto o usa ou segura, você recebe +2 de bônus nas jogadas de ataque com magia.
+
+_Fim Supremo._ O talismã tem 6 cargas. Enquanto o usa ou segura, você pode usar uma ação de Magia para gastar 1 carga e escolher como alvo uma criatura que consiga ver no chão a até 36 metros. Uma fenda em chamas se abre debaixo dela, e o alvo faz um teste de resistência de Destreza CD 20. Se for um Celestial, tem Desvantagem no teste. Com uma falha, o alvo cai na fenda e é destruído, sem deixar restos. Com um sucesso, não é lançado na fenda, mas sofre 4d6 de dano psíquico pelo susto. Em qualquer caso, a fenda então se fecha sem deixar rastro. Quando você gasta a última carga, o talismã se dissolve num lodo fedorento e é destruído.
+
+=== Thunderous Greatclub | Clava Grande Trovejante
+tipo: Arma (Clava Grande), Muito Rara (exige Sintonia)
+Enquanto estiver em Sintonia com esta arma mágica, a sua Força é 20, a não ser que já seja igual ou maior. A arma causa 1d8 de dano trovejante extra a qualquer criatura que acerte e 3d8 de dano trovejante extra a objetos que acerte e que ninguém esteja vestindo ou carregando.
+
+A arma tem as seguintes propriedades adicionais.
+
+_Estrondo de Trovão._ Com uma ação de Magia, você pode bater a arma numa superfície dura para criar um estrondo de trovão que se ouve a até 90 metros. Você também cria um Cone de 9 metros de energia trovejante. Cada criatura no Cone precisa ser bem-sucedida em um teste de resistência de Força CD 15 ou fica com a condição Caído. Objetos não mágicos no Cone que ninguém esteja vestindo ou carregando sofrem 3d8 de dano trovejante.
+
+_Terremoto._ Com uma ação de Magia, você pode bater a arma no chão para criar um tremor intenso num círculo de 15 metros de raio, centrado no ponto do impacto. Estruturas em contato com o chão nessa área sofrem 50 de dano contundente, e cada criatura no chão dessa área precisa ser bem-sucedida em um teste de resistência de Destreza CD 20 ou fica com a condição Caído. Se essa criatura também estiver se concentrando, precisa ser bem-sucedida num teste de resistência de Constituição CD 20 ou perde a Concentração. Além disso, você pode fazer uma fenda de 9 metros de profundidade e 3 de largura se abrir no chão em qualquer ponto da área. Toda criatura num ponto onde a fenda se abrir faz um teste de resistência de Destreza CD 20. Com uma falha, cai na fenda. Com um sucesso, se move junto com a borda dela. Qualquer estrutura num ponto onde a fenda se abrir desaba para dentro dela. Depois de usada, esta propriedade só pode ser usada de novo no próximo amanhecer.
+
+=== Tome of Clear Thought | Tomo do Pensamento Claro
+tipo: Item Maravilhoso, Muito Raro
+Este livro traz exercícios de memória e lógica, e as palavras dele são carregadas de magia. Se você passar 48 horas, num período de até 6 dias, estudando o conteúdo do livro e praticando as orientações dele, a sua Inteligência aumenta em 2, até o máximo de 30. O tomo então perde a magia, mas a recupera depois de um século.
+
+=== Tome of Leadership and Influence | Tomo da Liderança e Influência
+tipo: Item Maravilhoso, Muito Raro
+Este livro traz orientações para influenciar e encantar os outros, e as palavras dele são carregadas de magia. Se você passar 48 horas, num período de até 6 dias, estudando o conteúdo do livro e praticando as orientações dele, o seu Carisma aumenta em 2, até o máximo de 30. O tomo então perde a magia, mas a recupera depois de um século.
+
+=== Tome of Understanding | Tomo da Compreensão
+tipo: Item Maravilhoso, Muito Raro
+Este livro traz exercícios de intuição e percepção, e as palavras dele são carregadas de magia. Se você passar 48 horas, num período de até 6 dias, estudando o conteúdo do livro e praticando as orientações dele, a sua Sabedoria aumenta em 2, até o máximo de 30. O tomo então perde a magia, mas a recupera depois de um século.
+
+=== Trident of Fish Command | Tridente do Comando dos Peixes
+tipo: Arma (Tridente), Incomum (exige Sintonia)
+Esta arma mágica tem 3 cargas e recupera 1d3 cargas gastas todo dia ao amanhecer. Enquanto a carrega, você pode gastar 1 carga para conjurar com ela _Dominar Fera_ (CD de resistência 15) numa Fera que tenha Deslocamento de Natação.
+
+=== Universal Solvent | Solvente Universal
+tipo: Item Maravilhoso, Lendário
+Este tubo guarda um líquido leitoso com forte cheiro de álcool. Quando encontrado, o tubo tem 1d6 + 1 doses de 30 ml.
+
+Você pode usar uma ação de Usar para derramar 1 ou mais doses do solvente numa superfície ao seu alcance. Cada dose dissolve na hora até 30 centímetros quadrados de qualquer adesivo que toque, inclusive a _Cola Soberana_.
+
+=== Vicious Weapon | Arma Cruel
+tipo: Arma (qualquer simples ou marcial), Rara
+Esta arma mágica causa 2d6 de dano extra a qualquer criatura que acerte. O dano extra é do mesmo tipo do dano normal da arma.
+
+=== Vorpal Sword | Espada Vorpal
+tipo: Arma (Glaive, Espada Grande, Espada Longa ou Cimitarra), Lendária (exige Sintonia)
+Você recebe +3 de bônus nas jogadas de ataque e de dano feitas com esta arma mágica. Além disso, a arma ignora Resistência a dano cortante.
+
+Quando usa esta arma para atacar uma criatura que tenha pelo menos uma cabeça e tira 20 no d20 da jogada de ataque, você corta uma das cabeças dela. A criatura morre se não puder sobreviver sem a cabeça perdida. Uma criatura é imune a este efeito se tiver Imunidade a dano cortante, se não tiver ou não precisar de cabeça, ou se o Mestre decidir que ela é grande demais para ter a cabeça cortada com esta arma. Nesse caso, ela sofre 30 de dano cortante extra com o acerto. Se a criatura tiver Resistência Lendária, pode gastar um uso diário desse traço para não perder a cabeça, sofrendo o dano extra no lugar.
+
+=== Wand of Binding | Varinha da Imobilização
+tipo: Varinha, Rara (exige Sintonia)
+Esta varinha tem 7 cargas.
+
+_Magias._ Enquanto segura a varinha, você pode conjurar com ela uma das magias da tabela a seguir (CD de resistência 17). A tabela indica quantas cargas a magia gasta.
+
+| Magia | Cargas |
+|---|---|
+| _Imobilizar Monstro_ | 5 |
+| _Imobilizar Pessoa_ | 2 |
+
+_Recuperar Cargas._ A varinha recupera 1d6 + 1 cargas gastas todo dia ao amanhecer. Se você gastar a última carga, role 1d20. Com 1, a varinha vira cinzas e é destruída.
+
+=== Wand of Enemy Detection | Varinha de Detectar Inimigos
+tipo: Varinha, Rara (exige Sintonia)
+Esta varinha tem 7 cargas. Enquanto a segura, você pode usar uma ação de Magia para gastar 1 carga. Por 1 minuto, você sabe a direção da criatura Hostil a você mais próxima a até 18 metros, mas não a distância. A varinha percebe a presença de criaturas Hostis Invisíveis, etéreas, disfarçadas ou escondidas, além das que estão à vista. O efeito termina se você parar de segurar a varinha.
+
+_Recuperar Cargas._ A varinha recupera 1d6 + 1 cargas gastas todo dia ao amanhecer. Se você gastar a última carga, role 1d20. Com 1, a varinha vira cinzas e é destruída.
+
+=== Wand of Fear | Varinha do Medo
+tipo: Varinha, Rara (exige Sintonia)
+Esta varinha tem 7 cargas.
+
+_Magias._ Enquanto segura a varinha, você pode conjurar com ela uma das magias da tabela a seguir (CD de resistência 15). A tabela indica quantas cargas a magia gasta.
+
+| Magia | Cargas |
+|---|---|
+| _Comando_ (só "fuja" ou "rasteje") | 1 |
+| _Medo_ (Cone de 18 metros) | 3 |
+
+_Recuperar Cargas._ A varinha recupera 1d6 + 1 cargas gastas todo dia ao amanhecer. Se você gastar a última carga, role 1d20. Com 1, a varinha vira cinzas e é destruída.
+
+=== Wand of Fireballs | Varinha de Bolas de Fogo
+tipo: Varinha, Rara (exige Sintonia por um Conjurador)
+Esta varinha tem 7 cargas. Enquanto a segura, você pode gastar até 3 cargas para conjurar com ela _Bola de Fogo_ (CD de resistência 15). Com 1 carga, você conjura a versão de 3º círculo da magia. Cada carga a mais aumenta o círculo da magia em 1.
+
+_Recuperar Cargas._ A varinha recupera 1d6 + 1 cargas gastas todo dia ao amanhecer. Se você gastar a última carga, role 1d20. Com 1, a varinha vira cinzas e é destruída.
+
+=== Wand of Lightning Bolts | Varinha de Relâmpagos
+tipo: Varinha, Rara (exige Sintonia por um Conjurador)
+Esta varinha tem 7 cargas. Enquanto a segura, você pode gastar até 3 cargas para conjurar com ela _Relâmpago_ (CD de resistência 15). Com 1 carga, você conjura a versão de 3º círculo da magia. Cada carga a mais aumenta o círculo da magia em 1.
+
+_Recuperar Cargas._ A varinha recupera 1d6 + 1 cargas gastas todo dia ao amanhecer. Se você gastar a última carga, role 1d20. Com 1, a varinha vira cinzas e é destruída.
+
+=== Wand of Magic Detection | Varinha de Detectar Magia
+tipo: Varinha, Incomum
+Esta varinha tem 3 cargas. Enquanto a segura, você pode gastar 1 carga para conjurar com ela _Detectar Magia_. A varinha recupera 1d3 cargas gastas todo dia ao amanhecer.
+
+=== Wand of Magic Missiles | Varinha de Mísseis Mágicos
+tipo: Varinha, Incomum
+Esta varinha tem 7 cargas. Enquanto a segura, você pode gastar até 3 cargas para conjurar com ela _Mísseis Mágicos_. Com 1 carga, você conjura a versão de 1º círculo da magia. Cada carga a mais aumenta o círculo da magia em 1.
+
+_Recuperar Cargas._ A varinha recupera 1d6 + 1 cargas gastas todo dia ao amanhecer. Se você gastar a última carga, role 1d20. Com 1, a varinha vira cinzas e é destruída.
+
+=== Wand of Paralysis | Varinha da Paralisia
+tipo: Varinha, Rara (exige Sintonia por um Conjurador)
+Esta varinha tem 7 cargas. Enquanto a segura, você pode usar uma ação de Magia para gastar 1 carga e fazer um raio azul e fino disparar da ponta em direção a uma criatura que consiga ver a até 18 metros. O alvo precisa ser bem-sucedido em um teste de resistência de Constituição CD 15 ou fica com a condição Paralisado por 1 minuto. No fim de cada turno dele, o alvo repete o teste e encerra o efeito em si mesmo com um sucesso.
+
+_Recuperar Cargas._ A varinha recupera 1d6 + 1 cargas gastas todo dia ao amanhecer. Se você gastar a última carga, role 1d20. Com 1, a varinha vira cinzas e é destruída.
+
+=== Wand of Polymorph | Varinha da Metamorfose
+tipo: Varinha, Muito Rara (exige Sintonia por um Conjurador)
+Esta varinha tem 7 cargas. Enquanto a segura, você pode gastar 1 carga para conjurar com ela _Metamorfose_ (CD de resistência 15).
+
+_Recuperar Cargas._ A varinha recupera 1d6 + 1 cargas gastas todo dia ao amanhecer. Se você gastar a última carga, role 1d20. Com 1, a varinha vira cinzas e é destruída.
+
+=== Wand of Secrets | Varinha dos Segredos
+tipo: Varinha, Incomum
+Esta varinha tem 3 cargas e recupera 1d3 cargas gastas todo dia ao amanhecer. Enquanto a segura, você pode usar uma ação de Magia para gastar 1 carga e, se houver uma porta secreta ou armadilha a até 18 metros, a varinha pulsa e aponta para a mais próxima.
+
+=== Wand of the War Mage, +1, +2, or +3 | Varinha do Mago de Guerra +1, +2 ou +3
+tipo: Varinha, Incomum (+1), Rara (+2) ou Muito Rara (+3) (exige Sintonia por um Conjurador)
+Enquanto segura esta varinha, você recebe um bônus nas jogadas de ataque com magia que depende da raridade dela. Além disso, você ignora Meia Cobertura ao fazer uma jogada de ataque com magia.
+
+=== Wand of Web | Varinha da Teia
+tipo: Varinha, Incomum (exige Sintonia por um Conjurador)
+Esta varinha tem 7 cargas. Enquanto a segura, você pode gastar 1 carga para conjurar com ela _Teia_ (CD de resistência 13).
+
+_Recuperar Cargas._ A varinha recupera 1d6 + 1 cargas gastas todo dia ao amanhecer. Se você gastar a última carga, role 1d20. Com 1, a varinha vira cinzas e é destruída.
+
+=== Wand of Wonder | Varinha das Maravilhas
+tipo: Varinha, Rara (exige Sintonia)
+Esta varinha tem 7 cargas. Enquanto a segura, você pode usar uma ação de Magia para gastar 1 carga e escolher um ponto a até 36 metros. Esse lugar vira o ponto de origem de uma magia ou outro efeito mágico, sorteado na tabela Efeitos da Varinha das Maravilhas. As magias conjuradas com a varinha têm CD de resistência 15. Se o alcance máximo normal da magia for menor que 36 metros, ele passa a ser 36 metros quando conjurada com a varinha. Se um efeito puder afetar vários alvos, o Mestre sorteia quais deles são afetados.
+
+_Recuperar Cargas._ A varinha recupera 1d6 + 1 cargas gastas todo dia ao amanhecer. Se você gastar a última carga, role 1d20. Com 1, a varinha vira pó e é destruída.
+
+#### Efeitos da Varinha das Maravilhas
+
+| 1d100 | Efeito |
+|---|---|
+| 01–20 | Você conjura uma magia a partir do ponto escolhido. Role 1d10 para saber qual: com 1–2, _Escuridão_; com 3–4, _Fogo das Fadas_; com 5–6, _Bola de Fogo_; com 7–8, _Lentidão_; com 9–10, _Névoa Fétida_. |
+| 21–25 | Nada acontece no ponto escolhido. Em vez disso, você fica com a condição Atordoado até o início do seu próximo turno, achando que algo incrível acabou de acontecer. |
+| 26–30 | Você conjura _Lufada de Vento_. A Linha criada pela magia vai de você até o ponto escolhido. |
+| 31–35 | Nada acontece no ponto escolhido. Em vez disso, você sofre 1d6 de dano psíquico. |
+| 36–40 | Uma chuva forte cai por 1 minuto num Cilindro de 36 metros de altura e 18 metros de raio, centrado no ponto escolhido. Durante esse tempo, a área fica em Escuridão Leve. |
+| 41–45 | Uma nuvem de 600 borboletas enormes preenche um Cilindro de 18 metros de altura e 9 metros de raio, centrado no ponto escolhido. As borboletas ficam por 10 minutos, e durante esse tempo a área fica em Escuridão Densa. |
+| 46–50 | Você conjura _Relâmpago_. A Linha criada pela magia vai de você até o ponto escolhido. |
+| 51–55 | A criatura mais próxima do ponto escolhido aumenta como se você tivesse conjurado _Aumentar/Reduzir_ nela. Se o alvo não for você e não puder ser afetado pela magia, você vira o alvo. |
+| 56–60 | Uma criatura formada por magia aparece num espaço desocupado o mais perto possível do ponto escolhido. Ela não fica sob o seu controle, age como agiria normalmente e some depois de 1 hora ou quando cai a 0 Pontos de Vida. Role 1d4 para saber qual criatura aparece: com 1, um Rinoceronte; com 2, um Elefante; com 3–4, um Rato. |
+| 61–64 | Grama cobre um círculo de 18 metros de raio, com o centro o mais perto possível do ponto escolhido. A grama que já existia ali cresce até dez vezes o tamanho normal e continua assim por 1 minuto. |
+| 65–68 | Um objeto à escolha do Mestre some para o Plano Etéreo. Ele não pode estar sendo vestido nem carregado, precisa estar a até 36 metros do ponto escolhido e não pode ter mais de 3 metros em nenhuma dimensão. Se não houver objeto assim no alcance, nada acontece. |
+| 69–72 | Nada acontece no ponto escolhido. Em vez disso, você encolhe como se tivesse conjurado _Aumentar/Reduzir_ em si mesmo e fica assim por 1 minuto. |
+| 73–77 | Folhas brotam na criatura mais próxima do ponto escolhido. A não ser que sejam arrancadas, as folhas ficam marrons e caem depois de 24 horas. |
+| 78–82 | Nada acontece no ponto escolhido. Em vez disso, uma explosão de luz colorida e cintilante se espalha a partir de você numa Emanação de 9 metros. Cada criatura na área precisa ser bem-sucedida em um teste de resistência de Constituição CD 15 ou fica com a condição Cego por 1 minuto. A criatura repete o teste no fim de cada turno dela e encerra o efeito em si mesma com um sucesso. |
+| 83–87 | Nada acontece no ponto escolhido. Em vez disso, você conjura _Invisibilidade_ em si mesmo. |
+| 88–92 | Nada acontece no ponto escolhido. Em vez disso, um jorro de 1d4 × 10 gemas, cada uma valendo 1 PO, sai da ponta da varinha numa Linha de 9 metros de comprimento e 1,5 metro de largura na direção do ponto escolhido. Cada gema causa 1 de dano contundente, e o dano total das gemas é dividido igualmente entre todas as criaturas na Linha. |
+| 93–97 | Você conjura _Metamorfose_ na criatura mais próxima do ponto escolhido. Role 1d4 para saber a nova forma: com 1, um Urso-Negro; com 2, uma Vespa Gigante; com 3–4, um Sapo. |
+| 98–00 | A criatura mais próxima do ponto escolhido faz um teste de resistência de Constituição CD 15. Com uma falha, ela fica com a condição Contido e começa a virar pedra. Contida desse jeito, repete o teste no fim do próximo turno dela. Com um sucesso, o efeito termina. Com uma falha, fica com a condição Petrificado no lugar de Contido. A petrificação dura até a criatura ser libertada pela magia _Restauração Maior_ ou magia parecida. |
+
+=== Weapon, +1, +2, or +3 | Arma +1, +2 ou +3
+tipo: Arma (qualquer simples ou marcial), Incomum (+1), Rara (+2) ou Muito Rara (+3)
+Você recebe um bônus nas jogadas de ataque e de dano feitas com esta arma mágica. O bônus depende da raridade da arma.
+
+=== Weapon of Warning | Arma de Alerta
+tipo: Arma (qualquer simples ou marcial), Incomum (exige Sintonia)
+Enquanto esta arma estiver ao seu alcance e você estiver em Sintonia com ela, você e os aliados a até 9 metros recebem os benefícios a seguir.
+
+_Alarme._ A arma desperta magicamente quem estiver dormindo de forma natural quando o combate começa. Este benefício não acorda quem está em sono induzido por magia.
+
+_Prontidão Sobrenatural._ Cada um tem Vantagem nas jogadas de Iniciativa.

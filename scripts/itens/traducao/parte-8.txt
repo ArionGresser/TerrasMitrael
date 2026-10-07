@@ -1,0 +1,19 @@
+=== Well of Many Worlds | Poço dos Muitos Mundos
+tipo: Item Maravilhoso, Lendário
+Este tecido negro e fino, macio como seda, vem dobrado do tamanho de um lenço. Aberto, vira um pano circular de 1,8 metro de diâmetro.
+
+Você pode usar uma ação de Magia para desdobrar o _Poço dos Muitos Mundos_ e colocá-lo sobre uma superfície sólida. Ele então forma um portal circular de mão dupla, com 1,8 metro de diâmetro, para outro mundo ou plano de existência. Cada vez que o item abre um portal, o Mestre decide aonde ele leva. O portal fica aberto até uma criatura a até 1,5 metro dele usar uma ação de Magia para fechá-lo, segurando as bordas do pano e dobrando-o.
+
+Depois que o _Poço dos Muitos Mundos_ abre um portal, ele só pode abrir outro depois de 1d8 horas.
+
+=== Wind Fan | Leque dos Ventos
+tipo: Item Maravilhoso, Incomum
+Enquanto segura este leque, você pode conjurar com ele _Lufada de Vento_ (CD de resistência 13). Cada vez que o leque for usado de novo antes do próximo amanhecer, ele tem uma chance cumulativa de 20% de não funcionar. Se falhar, ele se rasga em farrapos inúteis e não mágicos.
+
+=== Winged Boots | Botas Aladas
+tipo: Item Maravilhoso, Incomum (exige Sintonia)
+Estas botas têm 4 cargas e recuperam 1d4 cargas gastas todo dia ao amanhecer. Enquanto as calça, você pode usar uma ação de Magia para gastar 1 carga e receber Deslocamento de Voo de 9 metros por 1 hora. Se estiver voando quando o tempo acabar, você desce 9 metros por rodada até pousar.
+
+=== Wings of Flying | Asas de Voo
+tipo: Item Maravilhoso, Raro (exige Sintonia)
+Enquanto veste esta capa, você pode usar uma ação de Magia para transformá-la num par de asas nas suas costas. As asas duram 1 hora ou até você encerrar o efeito antes com uma ação de Magia. Elas te dão Deslocamento de Voo de 18 metros. Se estiver no ar quando as asas sumirem, você cai. Depois que as asas somem, você só pode usá-las de novo depois de 1d12 horas.
