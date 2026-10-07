@@ -36,6 +36,11 @@ export const SECOES: Secao[] = [
     descricao: "As sessões jogadas, contadas como história",
   },
   {
+    href: "/magias/",
+    nome: "Grimório",
+    descricao: "As magias das regras de 2024, em português",
+  },
+  {
     href: "/mapa/",
     nome: "Mapa",
     descricao: "O continente inteiro diante de você",

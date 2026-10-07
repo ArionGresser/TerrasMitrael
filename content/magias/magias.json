@@ -1,0 +1,500 @@
+[
+ {
+  "slug": "arte-druidica",
+  "nome": "Arte Druídica",
+  "original": "Druidcraft",
+  "nivel": 0,
+  "escola": "Transmutação",
+  "classes": [
+   "Druida"
+  ],
+  "tempo": "Ação",
+  "alcance": "9 metros",
+  "componentes": "V, S",
+  "duracao": "Instantânea",
+  "concentracao": false,
+  "ritual": false,
+  "texto": "Sussurrando aos espíritos da natureza, você cria um dos efeitos a seguir dentro do alcance.\n\n_Previsão do Tempo._ Você cria um efeito sensorial Miúdo e inofensivo que prevê como estará o tempo no seu local pelas próximas 24 horas. O efeito pode aparecer como um orbe dourado para céu limpo, uma nuvem para chuva, flocos caindo para neve, e assim por diante. Ele dura 1 rodada.\n\n_Florescer._ Você faz uma flor desabrochar, uma vagem de sementes se abrir ou um botão de folha brotar na hora.\n\n_Efeito Sensorial._ Você cria um efeito sensorial inofensivo, como folhas caindo, fadas espectrais dançando, uma brisa suave, o som de um animal ou um leve cheiro de gambá. O efeito precisa caber num Cubo de 1,5 metro.\n\n_Brincar com Fogo._ Você acende ou apaga uma vela, uma tocha ou uma fogueira."
+ },
+ {
+  "slug": "bordao-mistico",
+  "nome": "Bordão Místico",
+  "original": "Shillelagh",
+  "nivel": 0,
+  "escola": "Transmutação",
+  "classes": [
+   "Druida"
+  ],
+  "tempo": "Ação Bônus",
+  "alcance": "Pessoal",
+  "componentes": "V, S, M (visco)",
+  "duracao": "1 minuto",
+  "concentracao": false,
+  "ritual": false,
+  "texto": "Uma Clava ou um Bordão que você esteja segurando se enche do poder da natureza. Pela duração, você pode usar o seu atributo de conjuração no lugar da Força nas jogadas de ataque e de dano dos ataques corpo a corpo com essa arma, e o dado de dano da arma vira um d8. Se o ataque causar dano, ele pode ser de energia ou do tipo normal da arma (à sua escolha).\n\nA magia acaba antes se você a conjurar de novo ou se soltar a arma.\n\n_Aprimoramento de Truque._ O dado de dano muda quando você alcança os níveis 5 (d10), 11 (d12) e 17 (2d6)."
+ },
+ {
+  "slug": "centelha-estelar",
+  "nome": "Centelha Estelar",
+  "original": "Starry Wisp",
+  "nivel": 0,
+  "escola": "Evocação",
+  "classes": [
+   "Bardo",
+   "Druida"
+  ],
+  "tempo": "Ação",
+  "alcance": "18 metros",
+  "componentes": "V, S",
+  "duracao": "Instantânea",
+  "concentracao": false,
+  "ritual": false,
+  "texto": "Você lança uma fagulha de luz numa criatura ou objeto dentro do alcance. Faça um ataque mágico à distância contra o alvo. Se acertar, o alvo sofre 1d8 de dano radiante e, até o fim do seu próximo turno, emite Penumbra num raio de 3 metros e não pode se beneficiar da condição Invisível.\n\n_Aprimoramento de Truque._ O dano aumenta em 1d8 quando você alcança os níveis 5 (2d8), 11 (3d8) e 17 (4d8)."
+ },
+ {
+  "slug": "chama-sagrada",
+  "nome": "Chama Sagrada",
+  "original": "Sacred Flame",
+  "nivel": 0,
+  "escola": "Evocação",
+  "classes": [
+   "Clérigo"
+  ],
+  "tempo": "Ação",
+  "alcance": "18 metros",
+  "componentes": "V, S",
+  "duracao": "Instantânea",
+  "concentracao": false,
+  "ritual": false,
+  "texto": "Um brilho em forma de chama desce sobre uma criatura que você consiga ver dentro do alcance. O alvo precisa ser bem-sucedido numa salvaguarda de Destreza ou sofre 1d8 de dano radiante. Nesta salvaguarda, o alvo não recebe benefício de Meia Cobertura nem de Três Quartos de Cobertura.\n\n_Aprimoramento de Truque._ O dano aumenta em 1d8 quando você alcança os níveis 5 (2d8), 11 (3d8) e 17 (4d8)."
+ },
+ {
+  "slug": "consertar",
+  "nome": "Consertar",
+  "original": "Mending",
+  "nivel": 0,
+  "escola": "Transmutação",
+  "classes": [
+   "Bardo",
+   "Clérigo",
+   "Druida",
+   "Feiticeiro",
+   "Mago"
+  ],
+  "tempo": "1 minuto",
+  "alcance": "Toque",
+  "componentes": "V, S, M (duas magnetitas)",
+  "duracao": "Instantânea",
+  "concentracao": false,
+  "ritual": false,
+  "texto": "Esta magia conserta uma única quebra ou rasgo num objeto que você toca, como um elo de corrente partido, as duas metades de uma chave quebrada, uma capa rasgada ou um odre vazando. Desde que a quebra ou o rasgo não tenha mais de 30 centímetros em nenhuma dimensão, você o conserta sem deixar rastro do dano.\n\nEsta magia pode consertar fisicamente um item mágico, mas não devolve a magia a ele."
+ },
+ {
+  "slug": "elementalismo",
+  "nome": "Elementalismo",
+  "original": "Elementalism",
+  "nivel": 0,
+  "escola": "Transmutação",
+  "classes": [
+   "Druida",
+   "Feiticeiro",
+   "Mago"
+  ],
+  "tempo": "Ação",
+  "alcance": "9 metros",
+  "componentes": "V, S",
+  "duracao": "Instantânea",
+  "concentracao": false,
+  "ritual": false,
+  "texto": "Você exerce controle sobre os elementos e cria um dos efeitos a seguir dentro do alcance.\n\n_Chamar o Ar._ Você cria uma brisa forte o bastante para agitar tecidos, levantar poeira, farfalhar folhas e fechar portas e janelas abertas, tudo num Cubo de 1,5 metro. Portas e janelas mantidas abertas por alguém ou alguma coisa não são afetadas.\n\n_Chamar a Terra._ Você cria uma fina camada de poeira ou areia que cobre as superfícies numa área quadrada de 1,5 metro, ou faz uma única palavra aparecer, com a sua letra, num trecho de terra ou areia.\n\n_Chamar o Fogo._ Você cria uma nuvem fina de brasas inofensivas e fumaça colorida e perfumada num Cubo de 1,5 metro. Você escolhe a cor e o cheiro, e as brasas podem acender velas, tochas ou lamparinas nessa área. O cheiro da fumaça permanece por 1 minuto.\n\n_Chamar a Água._ Você cria um borrifo de névoa fresca que umedece de leve criaturas e objetos num Cubo de 1,5 metro. Se preferir, cria 1 copo de água limpa, num recipiente aberto ou sobre uma superfície, e a água evapora em 1 minuto.\n\n_Esculpir o Elemento._ Você faz terra, areia, fogo, fumaça, névoa ou água que caiba num Cubo de 30 centímetros assumir uma forma rústica (como a de uma criatura) por 1 hora."
+ },
+ {
+  "slug": "explosao-feiticeira",
+  "nome": "Explosão Feiticeira",
+  "original": "Sorcerous Burst",
+  "nivel": 0,
+  "escola": "Evocação",
+  "classes": [
+   "Feiticeiro"
+  ],
+  "tempo": "Ação",
+  "alcance": "36 metros",
+  "componentes": "V, S",
+  "duracao": "Instantânea",
+  "concentracao": false,
+  "ritual": false,
+  "texto": "Você lança energia feiticeira contra uma criatura ou objeto dentro do alcance. Faça um ataque mágico à distância contra o alvo. Se acertar, o alvo sofre 1d8 de dano de um tipo à sua escolha: ácido, frio, fogo, elétrico, veneno, psíquico ou trovejante.\n\nSe você tirar 8 num d8 desta magia, pode rolar outro d8 e somá-lo ao dano. Quando conjura esta magia, o número máximo desses d8 extras que você pode somar é igual ao modificador do seu atributo de conjuração.\n\n_Aprimoramento de Truque._ O dano aumenta em 1d8 quando você alcança os níveis 5 (2d8), 11 (3d8) e 17 (4d8)."
+ },
+ {
+  "slug": "globos-de-luz",
+  "nome": "Globos de Luz",
+  "original": "Dancing Lights",
+  "nivel": 0,
+  "escola": "Ilusão",
+  "classes": [
+   "Bardo",
+   "Feiticeiro",
+   "Mago"
+  ],
+  "tempo": "Ação",
+  "alcance": "36 metros",
+  "componentes": "V, S, M (um pouco de fósforo)",
+  "duracao": "Concentração, até 1 minuto",
+  "concentracao": true,
+  "ritual": false,
+  "texto": "Você cria até quatro luzes do tamanho de tochas dentro do alcance, que aparecem como tochas, lanternas ou orbes brilhantes flutuando pela duração. Se preferir, você junta as quatro luzes numa só forma brilhante Média, vagamente humanoide. Seja qual for a forma escolhida, cada luz emite Penumbra num raio de 3 metros.\n\nCom uma Ação Bônus, você pode mover as luzes até 18 metros, para um espaço dentro do alcance. Cada luz precisa estar a até 6 metros de outra luz criada por esta magia, e uma luz desaparece se sair do alcance da magia."
+ },
+ {
+  "slug": "golpe-certeiro",
+  "nome": "Golpe Certeiro",
+  "original": "True Strike",
+  "nivel": 0,
+  "escola": "Adivinhação",
+  "classes": [
+   "Bardo",
+   "Bruxo",
+   "Feiticeiro",
+   "Mago"
+  ],
+  "tempo": "Ação",
+  "alcance": "Pessoal",
+  "componentes": "S, M (uma arma com a qual você tenha proficiência e que valha 1 PC ou mais)",
+  "duracao": "Instantânea",
+  "concentracao": false,
+  "ritual": false,
+  "texto": "Guiado por um lampejo de intuição mágica, você faz um ataque com a arma usada para conjurar a magia. O ataque usa o seu atributo de conjuração nas jogadas de ataque e de dano, no lugar da Força ou da Destreza. Se o ataque causar dano, ele pode ser radiante ou do tipo normal da arma (à sua escolha).\n\n_Aprimoramento de Truque._ Seja o dano radiante ou do tipo normal da arma, o ataque causa dano radiante extra quando você alcança os níveis 5 (1d6), 11 (2d6) e 17 (3d6)."
+ },
+ {
+  "slug": "ilusao-menor",
+  "nome": "Ilusão Menor",
+  "original": "Minor Illusion",
+  "nivel": 0,
+  "escola": "Ilusão",
+  "classes": [
+   "Bardo",
+   "Bruxo",
+   "Feiticeiro",
+   "Mago"
+  ],
+  "tempo": "Ação",
+  "alcance": "9 metros",
+  "componentes": "S, M (um pouco de lã)",
+  "duracao": "1 minuto",
+  "concentracao": false,
+  "ritual": false,
+  "texto": "Você cria um som ou a imagem de um objeto dentro do alcance, que dura pela duração da magia. Veja abaixo os efeitos de cada um. A ilusão acaba se você conjurar esta magia de novo.\n\nSe uma criatura usar uma ação de Estudo para examinar o som ou a imagem, ela pode perceber que é uma ilusão com um teste bem-sucedido de Inteligência (Investigação) contra a CD de salvaguarda da sua magia. Se uma criatura perceber que é uma ilusão, a ilusão fica tênue para ela.\n\n_Som._ Se você criar um som, o volume pode ir de um sussurro a um grito. Pode ser a sua voz, a voz de outra pessoa, o rugido de um leão, batidas de tambor ou qualquer outro som que você escolher. O som continua sem parar durante a duração, ou você pode fazer sons separados em momentos diferentes antes de a magia acabar.\n\n_Imagem._ Se você criar a imagem de um objeto, como uma cadeira, pegadas de lama ou um pequeno baú, ela não pode ser maior que um Cubo de 1,5 metro. A imagem não produz som, luz, cheiro nem qualquer outro efeito sensorial. Interagir fisicamente com ela revela que é uma ilusão, porque as coisas a atravessam."
+ },
+ {
+  "slug": "luz",
+  "nome": "Luz",
+  "original": "Light",
+  "nivel": 0,
+  "escola": "Evocação",
+  "classes": [
+   "Bardo",
+   "Clérigo",
+   "Feiticeiro",
+   "Mago"
+  ],
+  "tempo": "Ação",
+  "alcance": "Toque",
+  "componentes": "V, M (um vaga-lume ou musgo fosforescente)",
+  "duracao": "1 hora",
+  "concentracao": false,
+  "ritual": false,
+  "texto": "Você toca um objeto Grande ou menor que não esteja sendo vestido ou carregado por outra pessoa. Até a magia acabar, o objeto emite Luz Plena num raio de 6 metros e Penumbra por mais 6 metros. A luz pode ter a cor que você quiser.\n\nCobrir o objeto com algo opaco bloqueia a luz. A magia acaba se você a conjurar de novo."
+ },
+ {
+  "slug": "maos-magicas",
+  "nome": "Mãos Mágicas",
+  "original": "Mage Hand",
+  "nivel": 0,
+  "escola": "Conjuração",
+  "classes": [
+   "Bardo",
+   "Bruxo",
+   "Feiticeiro",
+   "Mago"
+  ],
+  "tempo": "Ação",
+  "alcance": "9 metros",
+  "componentes": "V, S",
+  "duracao": "1 minuto",
+  "concentracao": false,
+  "ritual": false,
+  "texto": "Uma mão espectral e flutuante aparece num ponto à sua escolha dentro do alcance. A mão dura pela duração da magia e desaparece se ficar a mais de 9 metros de você ou se você conjurar esta magia de novo.\n\nQuando conjura a magia, você pode usar a mão para manipular um objeto, abrir uma porta ou recipiente destrancado, guardar ou pegar um item de um recipiente aberto, ou despejar o conteúdo de um frasco.\n\nCom uma ação de Magia nos seus turnos seguintes, você pode controlar a mão do mesmo jeito. Como parte dessa ação, pode mover a mão até 9 metros.\n\nA mão não pode atacar, ativar itens mágicos nem carregar mais de 5 quilos."
+ },
+ {
+  "slug": "mensagem",
+  "nome": "Mensagem",
+  "original": "Message",
+  "nivel": 0,
+  "escola": "Transmutação",
+  "classes": [
+   "Bardo",
+   "Druida",
+   "Feiticeiro",
+   "Mago"
+  ],
+  "tempo": "Ação",
+  "alcance": "36 metros",
+  "componentes": "S, M (um fio de cobre)",
+  "duracao": "1 rodada",
+  "concentracao": false,
+  "ritual": false,
+  "texto": "Você aponta para uma criatura dentro do alcance e sussurra uma mensagem. O alvo (e só ele) ouve a mensagem e pode responder num sussurro que só você ouve.\n\nVocê pode conjurar esta magia através de objetos sólidos se conhecer o alvo e souber que ele está do outro lado da barreira. Silêncio mágico, 30 centímetros de pedra, metal ou madeira, ou uma lâmina fina de chumbo bloqueiam a magia."
+ },
+ {
+  "slug": "orientacao",
+  "nome": "Orientação",
+  "original": "Guidance",
+  "nivel": 0,
+  "escola": "Adivinhação",
+  "classes": [
+   "Clérigo",
+   "Druida"
+  ],
+  "tempo": "Ação",
+  "alcance": "Toque",
+  "componentes": "V, S",
+  "duracao": "Concentração, até 1 minuto",
+  "concentracao": true,
+  "ritual": false,
+  "texto": "Você toca uma criatura voluntária e escolhe uma perícia. Até a magia acabar, a criatura soma 1d4 a qualquer teste de atributo que use a perícia escolhida."
+ },
+ {
+  "slug": "poupar-os-moribundos",
+  "nome": "Poupar os Moribundos",
+  "original": "Spare the Dying",
+  "nivel": 0,
+  "escola": "Necromancia",
+  "classes": [
+   "Clérigo",
+   "Druida"
+  ],
+  "tempo": "Ação",
+  "alcance": "4,5 metros",
+  "componentes": "V, S",
+  "duracao": "Instantânea",
+  "concentracao": false,
+  "ritual": false,
+  "texto": "Escolha uma criatura dentro do alcance que esteja com 0 Pontos de Vida e não esteja morta. A criatura fica Estabilizada.\n\n_Aprimoramento de Truque._ O alcance dobra quando você alcança os níveis 5 (9 metros), 11 (18 metros) e 17 (36 metros)."
+ },
+ {
+  "slug": "prestidigitacao",
+  "nome": "Prestidigitação",
+  "original": "Prestidigitation",
+  "nivel": 0,
+  "escola": "Transmutação",
+  "classes": [
+   "Bardo",
+   "Bruxo",
+   "Feiticeiro",
+   "Mago"
+  ],
+  "tempo": "Ação",
+  "alcance": "3 metros",
+  "componentes": "V, S",
+  "duracao": "Até 1 hora",
+  "concentracao": false,
+  "ritual": false,
+  "texto": "Você cria um efeito mágico dentro do alcance. Escolha o efeito entre as opções abaixo. Se conjurar esta magia várias vezes, pode ter até três dos efeitos não instantâneos ativos ao mesmo tempo.\n\n_Efeito Sensorial._ Você cria um efeito sensorial instantâneo e inofensivo, como uma chuva de faíscas, um sopro de vento, notas musicais suaves ou um cheiro estranho.\n\n_Brincar com Fogo._ Você acende ou apaga, na hora, uma vela, uma tocha ou uma pequena fogueira.\n\n_Limpar ou Sujar._ Você limpa ou suja, na hora, um objeto que caiba num cubo de 30 centímetros.\n\n_Sensação Menor._ Você esfria, esquenta ou dá sabor a até um cubo de 30 centímetros de material sem vida, por 1 hora.\n\n_Marca Mágica._ Você faz uma cor, uma pequena marca ou um símbolo aparecer num objeto ou superfície por 1 hora.\n\n_Criação Menor._ Você cria uma bugiganga não mágica ou uma imagem ilusória que caiba na sua mão. Ela dura até o fim do seu próximo turno. A bugiganga não causa dano e não tem valor em dinheiro."
+ },
+ {
+  "slug": "produzir-chama",
+  "nome": "Produzir Chama",
+  "original": "Produce Flame",
+  "nivel": 0,
+  "escola": "Conjuração",
+  "classes": [
+   "Druida"
+  ],
+  "tempo": "Ação Bônus",
+  "alcance": "Pessoal",
+  "componentes": "V, S",
+  "duracao": "10 minutos",
+  "concentracao": false,
+  "ritual": false,
+  "texto": "Uma chama tremulante aparece na sua mão e fica ali pela duração. Enquanto estiver lá, a chama não emite calor nem incendeia nada, e emite Luz Plena num raio de 6 metros e Penumbra por mais 6 metros. A magia acaba se você a conjurar de novo.\n\nAté a magia acabar, você pode usar uma ação de Magia para arremessar fogo numa criatura ou objeto a até 18 metros de você. Faça um ataque mágico à distância. Se acertar, o alvo sofre 1d8 de dano de fogo.\n\n_Aprimoramento de Truque._ O dano aumenta em 1d8 quando você alcança os níveis 5 (2d8), 11 (3d8) e 17 (4d8)."
+ },
+ {
+  "slug": "raio-de-fogo",
+  "nome": "Raio de Fogo",
+  "original": "Fire Bolt",
+  "nivel": 0,
+  "escola": "Evocação",
+  "classes": [
+   "Feiticeiro",
+   "Mago"
+  ],
+  "tempo": "Ação",
+  "alcance": "36 metros",
+  "componentes": "V, S",
+  "duracao": "Instantânea",
+  "concentracao": false,
+  "ritual": false,
+  "texto": "Você arremessa uma fagulha de fogo numa criatura ou objeto dentro do alcance. Faça um ataque mágico à distância contra o alvo. Se acertar, o alvo sofre 1d10 de dano de fogo. Um objeto inflamável atingido por esta magia pega fogo se não estiver sendo vestido ou carregado.\n\n_Aprimoramento de Truque._ O dano aumenta em 1d10 quando você alcança os níveis 5 (2d10), 11 (3d10) e 17 (4d10)."
+ },
+ {
+  "slug": "raio-de-gelo",
+  "nome": "Raio de Gelo",
+  "original": "Ray of Frost",
+  "nivel": 0,
+  "escola": "Evocação",
+  "classes": [
+   "Feiticeiro",
+   "Mago"
+  ],
+  "tempo": "Ação",
+  "alcance": "18 metros",
+  "componentes": "V, S",
+  "duracao": "Instantânea",
+  "concentracao": false,
+  "ritual": false,
+  "texto": "Um feixe gelado de luz branco-azulada dispara em direção a uma criatura dentro do alcance. Faça um ataque mágico à distância contra o alvo. Se acertar, ele sofre 1d8 de dano de frio e o Deslocamento dele diminui em 3 metros até o começo do seu próximo turno.\n\n_Aprimoramento de Truque._ O dano aumenta em 1d8 quando você alcança os níveis 5 (2d8), 11 (3d8) e 17 (4d8)."
+ },
+ {
+  "slug": "rajada-de-veneno",
+  "nome": "Rajada de Veneno",
+  "original": "Poison Spray",
+  "nivel": 0,
+  "escola": "Necromancia",
+  "classes": [
+   "Bruxo",
+   "Druida",
+   "Feiticeiro",
+   "Mago"
+  ],
+  "tempo": "Ação",
+  "alcance": "9 metros",
+  "componentes": "V, S",
+  "duracao": "Instantânea",
+  "concentracao": false,
+  "ritual": false,
+  "texto": "Você borrifa uma névoa tóxica numa criatura dentro do alcance. Faça um ataque mágico à distância contra o alvo. Se acertar, o alvo sofre 1d12 de dano de veneno.\n\n_Aprimoramento de Truque._ O dano aumenta em 1d12 quando você alcança os níveis 5 (2d12), 11 (3d12) e 17 (4d12)."
+ },
+ {
+  "slug": "rajada-mistica",
+  "nome": "Rajada Mística",
+  "original": "Eldritch Blast",
+  "nivel": 0,
+  "escola": "Evocação",
+  "classes": [
+   "Bruxo"
+  ],
+  "tempo": "Ação",
+  "alcance": "36 metros",
+  "componentes": "V, S",
+  "duracao": "Instantânea",
+  "concentracao": false,
+  "ritual": false,
+  "texto": "Você arremessa um feixe de energia crepitante. Faça um ataque mágico à distância contra uma criatura ou um objeto dentro do alcance. Se acertar, o alvo sofre 1d10 de dano de energia.\n\n_Aprimoramento de Truque._ A magia cria dois feixes no nível 5, três no nível 11 e quatro no nível 17. Você pode mirar os feixes no mesmo alvo ou em alvos diferentes. Faça uma jogada de ataque separada para cada feixe."
+ },
+ {
+  "slug": "resistencia",
+  "nome": "Resistência",
+  "original": "Resistance",
+  "nivel": 0,
+  "escola": "Abjuração",
+  "classes": [
+   "Clérigo",
+   "Druida"
+  ],
+  "tempo": "Ação",
+  "alcance": "Toque",
+  "componentes": "V, S",
+  "duracao": "Concentração, até 1 minuto",
+  "concentracao": true,
+  "ritual": false,
+  "texto": "Você toca uma criatura voluntária e escolhe um tipo de dano: ácido, contundente, frio, fogo, elétrico, necrótico, perfurante, veneno, radiante, cortante ou trovejante. Quando a criatura sofrer dano do tipo escolhido antes de a magia acabar, ela reduz o dano total sofrido em 1d4. Uma criatura só pode se beneficiar desta magia uma vez por turno."
+ },
+ {
+  "slug": "respingo-acido",
+  "nome": "Respingo Ácido",
+  "original": "Acid Splash",
+  "nivel": 0,
+  "escola": "Evocação",
+  "classes": [
+   "Feiticeiro",
+   "Mago"
+  ],
+  "tempo": "Ação",
+  "alcance": "18 metros",
+  "componentes": "V, S",
+  "duracao": "Instantânea",
+  "concentracao": false,
+  "ritual": false,
+  "texto": "Você cria uma bolha ácida em um ponto dentro do alcance, onde ela explode numa Esfera de 1,5 metro de raio. Cada criatura nessa Esfera precisa ser bem-sucedida numa salvaguarda de Destreza ou sofre 1d6 de dano ácido.\n\n_Aprimoramento de Truque._ O dano aumenta em 1d6 quando você alcança os níveis 5 (2d6), 11 (3d6) e 17 (4d6)."
+ },
+ {
+  "slug": "taumaturgia",
+  "nome": "Taumaturgia",
+  "original": "Thaumaturgy",
+  "nivel": 0,
+  "escola": "Transmutação",
+  "classes": [
+   "Clérigo"
+  ],
+  "tempo": "Ação",
+  "alcance": "9 metros",
+  "componentes": "V",
+  "duracao": "Até 1 minuto",
+  "concentracao": false,
+  "ritual": false,
+  "texto": "Você manifesta um pequeno prodígio dentro do alcance, criando um dos efeitos abaixo. Se conjurar esta magia várias vezes, pode ter até três dos efeitos de 1 minuto ativos ao mesmo tempo.\n\n_Olhos Alterados._ Você altera a aparência dos seus olhos por 1 minuto.\n\n_Voz Trovejante._ Sua voz soa até três vezes mais alta que o normal por 1 minuto. Durante esse tempo, você tem Vantagem em testes de Carisma (Intimidação).\n\n_Brincar com Fogo._ Você faz chamas tremularem, aumentarem, diminuírem ou mudarem de cor por 1 minuto.\n\n_Mão Invisível._ Você faz, na hora, uma porta ou janela destrancada se escancarar ou bater.\n\n_Som Fantasma._ Você cria um som instantâneo que sai de um ponto à sua escolha dentro do alcance, como o ronco de um trovão, o grito de um corvo ou sussurros sinistros.\n\n_Tremores._ Você provoca tremores inofensivos no chão por 1 minuto."
+ },
+ {
+  "slug": "toque-arrepiante",
+  "nome": "Toque Arrepiante",
+  "original": "Chill Touch",
+  "nivel": 0,
+  "escola": "Necromancia",
+  "classes": [
+   "Bruxo",
+   "Feiticeiro",
+   "Mago"
+  ],
+  "tempo": "Ação",
+  "alcance": "Toque",
+  "componentes": "V, S",
+  "duracao": "Instantânea",
+  "concentracao": false,
+  "ritual": false,
+  "texto": "Canalizando o frio da sepultura, faça um ataque mágico corpo a corpo contra um alvo ao seu alcance. Se acertar, o alvo sofre 1d10 de dano necrótico e não pode recuperar Pontos de Vida até o fim do seu próximo turno.\n\n_Aprimoramento de Truque._ O dano aumenta em 1d10 quando você alcança os níveis 5 (2d10), 11 (3d10) e 17 (4d10)."
+ },
+ {
+  "slug": "toque-chocante",
+  "nome": "Toque Chocante",
+  "original": "Shocking Grasp",
+  "nivel": 0,
+  "escola": "Evocação",
+  "classes": [
+   "Feiticeiro",
+   "Mago"
+  ],
+  "tempo": "Ação",
+  "alcance": "Toque",
+  "componentes": "V, S",
+  "duracao": "Instantânea",
+  "concentracao": false,
+  "ritual": false,
+  "texto": "Um raio salta de você para uma criatura que você tenta tocar. Faça um ataque mágico corpo a corpo contra o alvo. Se acertar, o alvo sofre 1d8 de dano elétrico e não pode fazer Ataques de Oportunidade até o começo do próximo turno dele.\n\n_Aprimoramento de Truque._ O dano aumenta em 1d8 quando você alcança os níveis 5 (2d8), 11 (3d8) e 17 (4d8)."
+ },
+ {
+  "slug": "zombaria-viciosa",
+  "nome": "Zombaria Viciosa",
+  "original": "Vicious Mockery",
+  "nivel": 0,
+  "escola": "Encantamento",
+  "classes": [
+   "Bardo"
+  ],
+  "tempo": "Ação",
+  "alcance": "18 metros",
+  "componentes": "V",
+  "duracao": "Instantânea",
+  "concentracao": false,
+  "ritual": false,
+  "texto": "Você solta uma enxurrada de insultos carregados de encantamentos sutis contra uma criatura que você consiga ver ou ouvir dentro do alcance. O alvo precisa ser bem-sucedido numa salvaguarda de Sabedoria ou sofre 1d6 de dano psíquico e tem Desvantagem na próxima jogada de ataque que fizer antes do fim do próximo turno dele.\n\n_Aprimoramento de Truque._ O dano aumenta em 1d6 quando você alcança os níveis 5 (2d6), 11 (3d6) e 17 (4d6)."
+ }
+]
