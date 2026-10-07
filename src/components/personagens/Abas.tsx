@@ -164,7 +164,7 @@ export function Abas({
         })}
       </div>
 
-      <Pergaminho borda={2}>
+      <Pergaminho borda={2} rolos="base">
         {abas.map((aba, i) => (
           <div
             key={aba.chave}

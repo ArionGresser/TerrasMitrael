@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { ItemAntigo, MetaPersonagem } from "@/lib/personagens";
 import { Selo } from "@/components/ui/Selo";
+import { Secao } from "@/components/personagens/Painel";
 
 /**
  * A ficha do sistema caseiro, preservada como registro histórico.
@@ -13,26 +14,11 @@ import { Selo } from "@/components/ui/Selo";
 function Linha({ rotulo, valor }: { rotulo: string; valor: string }) {
   return (
     <div className="border-dourado-600/20 flex items-baseline justify-between gap-3 border-b border-dashed py-1.5 last:border-0">
-      <dt className="text-tinta-500 shrink-0 text-xs tracking-wide">{rotulo}</dt>
+      <dt className="text-tinta-500 shrink-0 text-xs tracking-wide">
+        {rotulo}
+      </dt>
       <dd className="text-tinta-900 text-right text-sm">{valor}</dd>
     </div>
-  );
-}
-
-function Secao({
-  titulo,
-  children,
-}: {
-  titulo: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <section className="mt-8">
-      <h3 className="font-titulo text-tinta-500 border-dourado-600/25 border-b pb-1.5 text-[0.66rem] tracking-[0.2em] uppercase">
-        {titulo}
-      </h3>
-      {children}
-    </section>
   );
 }
 
@@ -43,7 +29,7 @@ function Secao({
  */
 export function temFichaAntiga(meta: MetaPersonagem): boolean {
   return Boolean(
-    meta.identidade && meta.pontos && meta.personalidade && meta.atributos
+    meta.identidade && meta.pontos && meta.personalidade && meta.atributos,
   );
 }
 
@@ -57,22 +43,24 @@ export function FichaAntigaRegistro({ meta }: { meta: MetaPersonagem }) {
   if (!identidade || !pontos || !personalidade || !atributos) return null;
 
   return (
-    <div className="mt-7">
-      <div className="grid gap-x-8 gap-y-1 sm:grid-cols-2">
-        <dl>
-          <Linha rotulo="Idade" valor={identidade.idade} />
-          <Linha rotulo="Altura" valor={identidade.altura} />
-          <Linha rotulo="Gênero" valor={identidade.genero} />
-          <Linha rotulo="Classe" valor={identidade.classe} />
-          <Linha rotulo="Raça" valor={identidade.raca} />
-        </dl>
-        <dl>
-          <Linha rotulo="Vida" valor={pontos.vida} />
-          <Linha rotulo="Nível" valor={pontos.nivel} />
-          <Linha rotulo="Experiência" valor={pontos.experiencia} />
-          <Linha rotulo="Sanidade" valor={pontos.sanidade} />
-        </dl>
-      </div>
+    <div className="mt-7 [&>section:first-child]:mt-4">
+      <Secao titulo="Registro">
+        <div className="grid gap-x-8 gap-y-1 sm:grid-cols-2">
+          <dl>
+            <Linha rotulo="Idade" valor={identidade.idade} />
+            <Linha rotulo="Altura" valor={identidade.altura} />
+            <Linha rotulo="Gênero" valor={identidade.genero} />
+            <Linha rotulo="Classe" valor={identidade.classe} />
+            <Linha rotulo="Raça" valor={identidade.raca} />
+          </dl>
+          <dl>
+            <Linha rotulo="Vida" valor={pontos.vida} />
+            <Linha rotulo="Nível" valor={pontos.nivel} />
+            <Linha rotulo="Experiência" valor={pontos.experiencia} />
+            <Linha rotulo="Sanidade" valor={pontos.sanidade} />
+          </dl>
+        </div>
+      </Secao>
 
       <Secao titulo="Atributos">
         <ul className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-3">
@@ -130,9 +118,12 @@ export function FichaAntigaHabilidades({ meta }: { meta: MetaPersonagem }) {
   if (!habilidades || habilidades.length === 0) return null;
 
   return (
-    <ul className="mt-7 space-y-5">
+    <ul className="mt-7 space-y-3">
       {habilidades.map((habilidade) => (
-        <li key={habilidade.nome} className="flex gap-3 sm:gap-4">
+        <li
+          key={habilidade.nome}
+          className="painel-ficha flex gap-3 p-3 sm:gap-4 sm:p-4"
+        >
           {habilidade.imagem ? (
             <div className="border-madeira-800/25 relative size-16 shrink-0 overflow-hidden rounded-sm border sm:size-20">
               <Image
@@ -148,7 +139,11 @@ export function FichaAntigaHabilidades({ meta }: { meta: MetaPersonagem }) {
               title="A imagem desta habilidade ainda está sendo desenhada"
               className="border-dourado-600/25 bg-pergaminho-200/50 flex size-16 shrink-0 flex-col items-center justify-center gap-1 rounded-sm border border-dashed sm:size-20"
             >
-              <Selo variante="marca" aria-hidden className="size-7 opacity-25" />
+              <Selo
+                variante="marca"
+                aria-hidden
+                className="size-7 opacity-25"
+              />
               <span className="font-titulo text-tinta-500 text-[0.45rem] leading-none tracking-[0.08em] uppercase">
                 em obra
               </span>
@@ -206,10 +201,10 @@ export function temMochilaAntiga(meta: MetaPersonagem): boolean {
   const m = meta.mochila;
   return Boolean(
     m &&
-      (m.armas?.length ||
-        m.equipamento?.length ||
-        m.inventario?.length ||
-        m.moedas?.length)
+    (m.armas?.length ||
+      m.equipamento?.length ||
+      m.inventario?.length ||
+      m.moedas?.length),
   );
 }
 
@@ -218,7 +213,7 @@ export function FichaAntigaMochila({ meta }: { meta: MetaPersonagem }) {
   if (!mochila) return null;
 
   return (
-    <div className="mt-7">
+    <div className="mt-7 [&>section:first-child]:mt-4">
       {mochila.armas?.length ? (
         <Secao titulo="Armas">
           <ListaDeItens itens={mochila.armas} />

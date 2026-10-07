@@ -830,3 +830,69 @@
     inset 1px 0 0 rgb(150 116 31 / 0.25),
     inset -1px 0 0 rgb(150 116 31 / 0.25);
 }
+
+/* ============================================================
+   Quadros da ficha
+   Filete dourado duplo com cantoneiras nos quatro cantos, e a
+   plaquinha do nome assentada na borda de cima.
+   ============================================================ */
+
+.painel-ficha {
+  --canto: var(--color-dourado-600);
+  position: relative;
+  border-radius: 2px;
+  background-color: rgb(255 251 238 / 0.42);
+  background-image:
+    linear-gradient(var(--canto), var(--canto)),
+    linear-gradient(var(--canto), var(--canto)),
+    linear-gradient(var(--canto), var(--canto)),
+    linear-gradient(var(--canto), var(--canto)),
+    linear-gradient(var(--canto), var(--canto)),
+    linear-gradient(var(--canto), var(--canto)),
+    linear-gradient(var(--canto), var(--canto)),
+    linear-gradient(var(--canto), var(--canto));
+  background-repeat: no-repeat;
+  background-size:
+    14px 2px, 2px 14px,
+    14px 2px, 2px 14px,
+    14px 2px, 2px 14px,
+    14px 2px, 2px 14px;
+  background-position:
+    top left, top left,
+    top right, top right,
+    bottom left, bottom left,
+    bottom right, bottom right;
+  box-shadow:
+    inset 0 0 0 1px rgb(150 116 31 / 0.4),
+    inset 0 0 0 4px rgb(245 236 214 / 0.9),
+    inset 0 0 0 5px rgb(150 116 31 / 0.2),
+    inset 0 0 22px rgb(120 85 40 / 0.1);
+}
+
+.placa-painel {
+  background-color: var(--color-pergaminho-100);
+  border: 1px solid rgb(150 116 31 / 0.55);
+  border-radius: 2px;
+  box-shadow:
+    0 1px 2px rgb(0 0 0 / 0.12),
+    inset 0 0 0 2px var(--color-pergaminho-100),
+    inset 0 0 0 3px rgb(150 116 31 / 0.25);
+}
+
+/* O medalhão do modificador de cada atributo */
+.medalhao {
+  background: radial-gradient(
+    circle at 40% 32%,
+    var(--color-pergaminho-50) 0%,
+    var(--color-pergaminho-200) 100%
+  );
+  box-shadow:
+    inset 0 0 0 2px var(--color-pergaminho-50),
+    inset 0 0 0 3px rgb(150 116 31 / 0.55),
+    0 2px 4px rgb(90 60 25 / 0.25);
+}
+
+/* Dentro do quadro, a plaquinha já dá o respiro de cima */
+.painel-ficha > h3 + * {
+  margin-top: 0;
+}

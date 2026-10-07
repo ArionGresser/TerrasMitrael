@@ -12,9 +12,10 @@ type Props = {
   as?: "article" | "section" | "div" | "aside";
   /**
    * Os rolos de cima e de baixo, como um pergaminho aberto sobre a mesa.
-   * Ligados por padrão nas folhas de leitura; cartões não têm.
+   * Ligados por padrão nas folhas de leitura; cartões não têm. "base" deixa
+   * só o de baixo, para a folha que nasce colada nas linguetas de abas.
    */
-  rolos?: boolean;
+  rolos?: boolean | "base";
 };
 
 const INCLINACOES = {
@@ -57,7 +58,7 @@ export function Pergaminho({
     <Tag
       className={`textura-pergaminho borda-envelhecida shadow-pergaminho text-tinta-900 relative ${BORDAS[borda]} ${giro} ${VARIANTES[variante]} ${className}`}
     >
-      {rolos ? <span aria-hidden className="rolo rolo-topo" /> : null}
+      {rolos === true ? <span aria-hidden className="rolo rolo-topo" /> : null}
       {children}
       {rolos ? <span aria-hidden className="rolo rolo-base" /> : null}
     </Tag>
