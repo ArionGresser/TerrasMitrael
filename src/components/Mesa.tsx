@@ -5,21 +5,13 @@ import { AmbienteSonoro } from "@/components/som/AmbienteSonoro";
 
 /**
  * A mesa de madeira sobre a qual todo o site acontece:
- * o tampo, o tecido puxado nas bordas e a navegação por selo.
+ * o tampo, a luz de vela e a navegação por selo.
  *
  * Envolve todas as páginas.
  */
 export function Mesa({ children }: { children: React.ReactNode }) {
   return (
     <>
-      {/* Tecido nas bordas da mesa. Fino no celular, generoso no desktop. */}
-      <div aria-hidden className="pointer-events-none fixed inset-0 z-30">
-        <div className="textura-tecido absolute inset-x-0 top-0 h-2 opacity-90 shadow-[0_2px_10px_rgba(0,0,0,0.6)] sm:h-4" />
-        <div className="textura-tecido absolute inset-x-0 bottom-0 h-2 opacity-90 shadow-[0_-2px_10px_rgba(0,0,0,0.6)] sm:h-4" />
-        <div className="textura-tecido absolute inset-y-0 left-0 w-2 opacity-90 shadow-[2px_0_10px_rgba(0,0,0,0.6)] sm:w-4" />
-        <div className="textura-tecido absolute inset-y-0 right-0 w-2 opacity-90 shadow-[-2px_0_10px_rgba(0,0,0,0.6)] sm:w-4" />
-      </div>
-
       {/* Vinheta: a luz de vela cai no centro da mesa e some nas bordas */}
       <div
         aria-hidden

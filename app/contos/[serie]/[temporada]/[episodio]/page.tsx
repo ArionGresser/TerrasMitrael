@@ -17,6 +17,7 @@ import {
 } from "@/lib/contos";
 import { Elenco, Trilha } from "@/components/contos/Partes";
 import { Arte } from "@/components/contos/Cartaz";
+import { BarraLeitura } from "@/components/contos/BarraLeitura";
 import { Pergaminho } from "@/components/ui/Pergaminho";
 import { BotaoLink } from "@/components/ui/Botao";
 import { Rodape } from "@/components/Rodape";
@@ -113,9 +114,9 @@ export default async function PaginaEpisodio({ params }: Props) {
 
   return (
     <>
-      {/* O quanto já foi lido, num fio dourado no alto da tela. Só CSS: em
-          navegador que não sabe fazer isso, o fio simplesmente não aparece. */}
-      <div aria-hidden className="barra-leitura" />
+      {/* O quanto já foi lido, num fio dourado no alto da tela. Em navegador
+          que não sabe fazer isso, o fio simplesmente não aparece. */}
+      <BarraLeitura />
 
       <main className="mx-auto max-w-3xl px-4 pt-20 pb-8 sm:px-6 sm:pt-28">
         <Trilha
@@ -150,7 +151,7 @@ export default async function PaginaEpisodio({ params }: Props) {
           </div>
         </header>
 
-        <Pergaminho borda={1} className="-mt-2 sm:-mt-3">
+        <Pergaminho borda={1} className="mt-7">
           <p className="text-tinta-700 mx-auto max-w-[34rem] text-center text-[0.95rem] leading-relaxed italic sm:text-base">
             {episodio.meta.resumo}
           </p>

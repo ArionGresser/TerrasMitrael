@@ -10,6 +10,11 @@ type Props = {
   variante?: "leitura" | "cartao";
   className?: string;
   as?: "article" | "section" | "div" | "aside";
+  /**
+   * Os rolos de cima e de baixo, como um pergaminho aberto sobre a mesa.
+   * Ligados por padrão nas folhas de leitura; cartões não têm.
+   */
+  rolos?: boolean;
 };
 
 const INCLINACOES = {
@@ -40,6 +45,7 @@ export function Pergaminho({
   variante = "leitura",
   className = "",
   as: Tag = "article",
+  rolos = variante === "leitura",
 }: Props) {
   // A inclinação vale apenas para cartões.
   // Girar uma folha de leitura, que pode ter milhares de pixels de altura,
@@ -49,9 +55,11 @@ export function Pergaminho({
 
   return (
     <Tag
-      className={`textura-pergaminho borda-envelhecida shadow-pergaminho text-tinta-900 ${BORDAS[borda]} ${giro} ${VARIANTES[variante]} ${className}`}
+      className={`textura-pergaminho borda-envelhecida shadow-pergaminho text-tinta-900 relative ${BORDAS[borda]} ${giro} ${VARIANTES[variante]} ${className}`}
     >
+      {rolos ? <span aria-hidden className="rolo rolo-topo" /> : null}
       {children}
+      {rolos ? <span aria-hidden className="rolo rolo-base" /> : null}
     </Tag>
   );
 }

@@ -122,7 +122,7 @@ export function Capitulos({
     <>
       {abertura.length > 0 ? <Trecho nos={abertura} /> : null}
 
-      <div className={abertura.length > 0 ? "mt-8 space-y-3" : "space-y-3"}>
+      <div className={abertura.length > 0 ? "mt-8 space-y-5" : "space-y-5"}>
         {capitulos.map((capitulo, i) => (
           <Dobra key={i} titulo={capitulo.titulo} rotuloAbrir={rotuloAbrir}>
             <Trecho nos={semSeparadorNoFim(capitulo.nos)} />

@@ -1,7 +1,11 @@
 "use client";
 
 import { useId, useRef, useState, type ReactNode } from "react";
+import { motion, useReducedMotion } from "motion/react";
 import { tocar } from "@/lib/som";
+
+/** Quanto do capítulo aparece com o pergaminho ainda enrolado, em pixels. */
+const ALTURA_ENROLADO = 96;
 
 /**
  * Texto longo recolhido, com botão para abrir.
@@ -35,6 +39,7 @@ export function Dobra({
   className?: string;
 }) {
   const [aberto, setAberto] = useState(false);
+  const reduzido = useReducedMotion();
   const id = useId();
   const raiz = useRef<HTMLDivElement>(null);
 
@@ -67,27 +72,25 @@ export function Dobra({
     </div>
   );
 
-  // Com título, o bloco vira um capítulo fechado: cabeçalho clicável em cima,
-  // prévia embaixo.
+  // Com título, o bloco vira um pergaminho enrolado: o rolo de cima leva o
+  // nome do capítulo, e ao clicar o papel desce até o fim do texto, puxando
+  // o rolo de baixo junto.
   if (titulo) {
     return (
-      <section
-        ref={raiz}
-        className={`border-dourado-600/25 hover:border-dourado-600/50 scroll-mt-20 rounded-sm border transition-colors ${className}`}
-      >
+      <section ref={raiz} className={`scroll-mt-20 ${className}`}>
         <button
           type="button"
           onClick={alternar}
           aria-expanded={aberto}
           aria-controls={id}
-          className="flex min-h-11 w-full items-center justify-between gap-3 px-4 py-3 text-left"
+          className="rolo-capitulo flex min-h-12 w-full items-center justify-between gap-3 px-5 py-2.5 text-left"
         >
           <span className="font-titulo text-tinta-900 text-lg leading-snug font-semibold sm:text-xl">
             {titulo}
           </span>
           <span
             aria-hidden
-            className={`text-dourado-600 shrink-0 text-sm transition-transform duration-200 ${
+            className={`text-tinta-700 shrink-0 text-sm transition-transform duration-300 ${
               aberto ? "rotate-180" : ""
             }`}
           >
@@ -95,11 +98,27 @@ export function Dobra({
           </span>
         </button>
 
-        <div className="px-4 pb-4">
-          {corpo}
+        <div className="folha-capitulo mx-2 px-4 pt-4 pb-2 sm:mx-3 sm:px-5">
+          <motion.div
+            initial={false}
+            animate={{ height: aberto ? "auto" : ALTURA_ENROLADO }}
+            transition={{
+              duration: reduzido ? 0 : 0.75,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            className={aberto ? "overflow-hidden" : "dobra-recorte overflow-hidden"}
+          >
+            <div
+              id={id}
+              inert={!aberto || undefined}
+              className="[&>*:first-child]:mt-0"
+            >
+              {children}
+            </div>
+          </motion.div>
 
-          {/* O mesmo comando do cabeçalho, repetido embaixo da prévia, que é
-              onde o dedo naturalmente vai depois de ler as primeiras linhas. */}
+          {/* O mesmo comando do rolo de cima, repetido embaixo da prévia, que
+              é onde o dedo naturalmente vai depois de ler as primeiras linhas. */}
           <div className={aberto ? "mt-6 text-center" : "text-left"}>
             <button
               type="button"
@@ -107,13 +126,15 @@ export function Dobra({
               aria-expanded={aberto}
               aria-controls={id}
               className={`text-tinta-500 hover:text-tinta-900 font-titulo min-h-11 text-[0.7rem] tracking-[0.15em] uppercase transition-colors ${
-                aberto ? "px-3" : "w-full pt-2 text-left"
+                aberto ? "px-3" : "w-full pt-1 text-left"
               }`}
             >
               {aberto ? rotuloFechar : rotuloAbrir}
             </button>
           </div>
         </div>
+
+        <span aria-hidden className="rolo-capitulo-base" />
       </section>
     );
   }
