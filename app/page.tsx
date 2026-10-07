@@ -75,10 +75,10 @@ export default function Home() {
     <>
       <main className="mx-auto max-w-3xl px-4 pt-20 pb-8 sm:px-6 sm:pt-28">
         {/* ---------- Abertura ----------
-            O mapa do continente aberto na mesa, e o pergaminho de boas-vindas
-            pousado por cima dele. No celular o mapa ocupa a largura toda e
-            vem recortado em pé, mostrando o coração do continente. */}
-        <div className="relative -mx-4 aspect-[4/5] overflow-hidden shadow-[0_14px_40px_-12px_rgba(0,0,0,0.85)] sm:mx-0 sm:aspect-[16/9] sm:rounded-sm sm:border sm:border-black/40">
+            O mapa do continente aberto na mesa, escurecido por uma vinheta
+            forte, e o nome do mundo escrito direto sobre ele. No celular o
+            mapa ocupa a largura toda e vem recortado em pé. */}
+        <header className="relative -mx-4 grid aspect-[4/5] place-items-center overflow-hidden shadow-[0_14px_40px_-12px_rgba(0,0,0,0.85)] sm:mx-0 sm:aspect-[16/9] sm:rounded-sm sm:border sm:border-black/40">
           <picture>
             <source media="(min-width: 640px)" srcSet="/images/heroi-mapa-largo.webp" />
             <img
@@ -91,39 +91,26 @@ export default function Home() {
               className="absolute inset-0 size-full object-cover"
             />
           </picture>
-          <div
-            aria-hidden
-            className="from-madeira-900 absolute inset-0 bg-gradient-to-t via-transparent via-45% to-black/30"
-          />
-          <div
-            aria-hidden
-            className="absolute inset-0 shadow-[inset_0_0_60px_rgba(0,0,0,0.55)]"
-          />
-        </div>
 
-        <Pergaminho inclinacao="esquerda" borda={1} className="relative -mt-24 sm:-mt-28">
-          <header className="text-center">
-            <Sobretitulo>Cenário autoral de RPG de mesa</Sobretitulo>
+          {/* A vinheta: escurece as bordas e abre uma sombra no meio, atrás
+              do nome, para o texto claro ler bem sobre qualquer parte do mapa */}
+          <div aria-hidden className="vinheta-abertura absolute inset-0" />
 
-            <TituloBrasao className="mt-4">Terras de Mitrael</TituloBrasao>
-
-            <Ornamento className="mt-6" />
-
-            <p className="text-tinta-700 mx-auto mt-6 max-w-lg text-base leading-relaxed italic sm:text-lg">
-              Um mundo de fantasia medieval construído mesa após mesa, desde
-              2020.
-            </p>
-          </header>
-
-          <div className="mt-9 flex flex-wrap justify-center gap-3">
-            <BotaoLink href="/locais/" variante="primario">
-              Explorar o mundo
-            </BotaoLink>
-            <BotaoLink href="/mapa/" variante="secundario">
-              Ver o mapa
-            </BotaoLink>
+          <div className="relative px-6 text-center">
+            <Sobretitulo tom="claro" className="sobretitulo-abertura text-dourado-200!">
+              Cenário autoral de RPG de mesa
+            </Sobretitulo>
+            <TituloBrasao
+              tom="claro"
+              className="titulo-abertura mt-3 text-[3.1rem]! sm:mt-4 sm:text-6xl! lg:text-7xl!"
+            >
+              Terras de
+              <br />
+              Mitrael
+            </TituloBrasao>
+            <Ornamento className="mt-5 [&_span]:text-dourado-300 sm:mt-6" />
           </div>
-        </Pergaminho>
+        </header>
 
         {/* ---------- Apresentação ---------- */}
         <Revelar className="mt-8">
@@ -333,7 +320,7 @@ export default function Home() {
 }
 
 /**
- * O mural de novidades: as cinco coisas que entraram no site por último, e o
+ * O mural de novidades: as três coisas que entraram no site por último, e o
  * caminho para a lista completa. Os dados moram em src/lib/novidades.ts.
  */
 function Novidades() {

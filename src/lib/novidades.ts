@@ -90,7 +90,7 @@ function episodios(): Novidade[] {
             titulo: meta.titulo,
             texto: meta.resumo,
             href: `/contos/${serie.slug}/${chaveDaTemporada(temporada)}/${chaveDoEpisodio(episodio)}/`,
-            ...imagemDoEpisodio(meta.capa, meta.elenco),
+            ...imagemDoEpisodio(meta.capa ?? meta.vitrine, meta.elenco),
             data: meta.publicado,
           },
         ];
@@ -131,7 +131,7 @@ export function todasAsNovidades(): Novidade[] {
 }
 
 /** As mais recentes, para a página inicial. */
-export function novidades(limite = 5): Novidade[] {
+export function novidades(limite = 3): Novidade[] {
   return todasAsNovidades().slice(0, limite);
 }
 

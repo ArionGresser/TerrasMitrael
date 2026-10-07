@@ -38,7 +38,7 @@ export function Cabecalho() {
   );
 }
 
-function Ferragem() {
+export function Ferragem() {
   return (
     <span className="ferragem flex h-full w-5 flex-col items-center justify-between py-2 sm:w-7 sm:py-2.5">
       <span className="rebite block size-1.5 rounded-full sm:size-2" />

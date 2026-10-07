@@ -39,6 +39,11 @@ export type MetaEpisodio = {
    * de quem jogou a sessão, lado a lado.
    */
   capa?: string;
+  /**
+   * Imagem provisória para os cartões (Novidades) enquanto o episódio não
+   * tem capa própria. O alto do episódio continua com os rostos.
+   */
+  vitrine?: string;
 };
 
 export type Episodio = {
