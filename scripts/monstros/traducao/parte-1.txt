@@ -1,0 +1,332 @@
+=== Aboleth
++ Anfíbio
+O aboleth respira ar e água.
++ Restauração Sobrenatural
+Se for destruído, o aboleth ganha um corpo novo em 5d10 dias e revive com todos os Pontos de Vida no Reino Distante ou em outro lugar escolhido pelo Mestre.
++ Resistência Lendária (3/Dia, ou 4/Dia no Covil)
+Se o aboleth falhar num teste de resistência, pode escolher ser bem-sucedido.
++ Nuvem de Muco
+Debaixo d'água, o aboleth fica envolto em muco. _Teste de Resistência de Constituição:_ CD 14, cada criatura numa Emanação de 1,5 m a partir do aboleth, no fim do turno dele. _Falha:_ O alvo é amaldiçoado. Até a maldição acabar, a pele do alvo fica viscosa, ele respira ar e água e não pode recuperar Pontos de Vida a não ser que esteja debaixo d'água.
+
+Enquanto estiver fora de uma massa de água, a criatura amaldiçoada sofre 6 (1d12) de dano ácido ao fim de cada 10 minutos, a não ser que alguém umedeça a pele dela antes de passarem esses minutos.
++ Telepatia Invasiva
+Se uma criatura que o aboleth consiga ver se comunicar com ele por telepatia, o aboleth descobre os maiores desejos dela.
++ Ataques Múltiplos
+O aboleth faz dois ataques de Tentáculo e usa Consumir Memórias ou Dominar Mente, se estiver disponível.
++ Tentáculo
+_Jogada de Ataque Corpo a Corpo:_ +9, alcance 4,5 m. _Acerto:_ 12 (2d6 + 5) de dano contundente. Se o alvo for uma criatura Grande ou menor, fica com a condição Agarrado (CD 14 para escapar) por um dos quatro tentáculos.
++ Consumir Memórias
+_Teste de Resistência de Inteligência:_ CD 16, uma criatura a até 9 m que esteja Enfeitiçada ou Agarrada pelo aboleth. _Falha:_ 10 (3d6) de dano psíquico.
+
+_Sucesso:_ Metade do dano. _Falha ou Sucesso:_ O aboleth ganha as memórias do alvo se ele for um Humanoide e for reduzido a 0 Pontos de Vida por esta ação.
++ Dominar Mente (2/Dia)
+_Teste de Resistência de Sabedoria:_ CD 16, uma criatura que o aboleth consiga ver a até 9 m. _Falha:_ O alvo fica com a condição Enfeitiçado até o aboleth morrer ou estar num plano de existência diferente do dele. Enfeitiçado, o alvo age como aliado do aboleth e fica sob o controle dele enquanto estiver a até 18 m. Além disso, o aboleth e o alvo podem se comunicar por telepatia a qualquer distância.
+
+O alvo repete o teste sempre que sofre dano e também depois de cada 24 horas que passar a pelo menos 1,5 km do aboleth, encerrando o efeito em si mesmo com um sucesso.
++ :intro
+_Usos de Ação Lendária: 3 (4 no Covil). Logo depois do turno de outra criatura, o aboleth pode gastar um uso para fazer uma das ações a seguir. Ele recupera todos os usos gastos no início de cada turno seu._
++ Chicotada
+O aboleth faz um ataque de Tentáculo.
++ Dreno Psíquico
+Se tiver pelo menos uma criatura Enfeitiçada ou Agarrada, o aboleth usa Consumir Memórias e recupera 5 (1d10) Pontos de Vida.
+
+=== Air Elemental
++ Forma de Ar
+O elemental pode entrar no espaço de uma criatura e parar ali. Ele passa por frestas de até 2,5 centímetros sem gastar movimento extra.
++ Ataques Múltiplos
+O elemental faz dois ataques de Pancada Trovejante.
++ Pancada Trovejante
++ Redemoinho (Recarga 4–6)
+_Teste de Resistência de Força:_ CD 13, uma criatura Média ou menor no espaço do elemental. _Falha:_ 24 (4d10 + 2) de dano trovejante, e o alvo é empurrado até 6 m em linha reta para longe do elemental e fica com a condição Caído. _Sucesso:_ Só metade do dano.
+
+=== Animated Armor
++ Ataques Múltiplos
+A armadura faz dois ataques de Pancada.
++ Pancada
+
+=== Animated Flying Sword
++ Talho
+
+=== Animated Rug of Smothering
++ Sufocar
+_Jogada de Ataque Corpo a Corpo:_ +5, alcance 1,5 m. _Acerto:_ 10 (2d6 + 3) de dano contundente. Se o alvo for uma criatura Média ou menor, o tapete pode deixá-lo com a condição Agarrado (CD 13 para escapar) em vez de causar dano. Até a agarrada acabar, o alvo fica com as condições Cego e Contido, está sufocando e sofre 10 (2d6 + 3) de dano contundente no início de cada turno dele. O tapete só sufoca uma criatura por vez.
+
+Enquanto agarra o alvo, o tapete não pode usar esta ação, sofre só metade do dano que recebe (arredondado para baixo), e o alvo sofre a mesma quantidade de dano.
+
+=== Ankheg
++ Escavador
+O ankheg escava rocha sólida com metade do Deslocamento de Escavação e deixa para trás um túnel de 3 m de diâmetro.
++ Mordida
+_Jogada de Ataque Corpo a Corpo:_ +5 (com Vantagem se o alvo estiver Agarrado pelo ankheg), alcance 1,5 m. _Acerto:_ 10 (2d6 + 3) de dano cortante mais 3 (1d6) de dano ácido. Se o alvo for uma criatura Grande ou menor, fica com a condição Agarrado (CD 13 para escapar).
++ Jato Ácido (Recarga 6)
+_Teste de Resistência de Destreza:_ CD 12, cada criatura numa Linha de 9 m de comprimento e 1,5 m de largura. _Falha:_ 14 (4d6) de dano ácido. _Sucesso:_ Metade do dano.
+
+=== Assassin
++ Evasão
+Se o assassino for alvo de um efeito que permite um teste de resistência de Destreza para sofrer só metade do dano, ele não sofre dano nenhum com um sucesso e só metade com uma falha. Não pode usar este traço se estiver com a condição Incapacitado.
++ Ataques Múltiplos
+O assassino faz três ataques, com Espada Curta ou Besta Leve, em qualquer combinação.
++ Espada Curta
+_Jogada de Ataque Corpo a Corpo:_ +7, alcance 1,5 m. _Acerto:_ 7 (1d6 + 4) de dano perfurante mais 17 (5d6) de dano de veneno, e o alvo fica com a condição Envenenado até o início do próximo turno do assassino.
++ Besta Leve
++ Ação Ardilosa
+O assassino faz a ação de Disparada, Desengajar ou Esconder.
+
+=== Awakened Shrub
++ Arranhão
+
+=== Awakened Tree
++ Pancada
+
+=== Axe Beak
++ Bico
+
+=== Azer Sentinel
++ Aura de Fogo
+No fim de cada turno do azer, cada criatura à escolha dele numa Emanação de 1,5 m a partir dele sofre 5 (1d10) de dano de fogo, a não ser que o azer esteja com a condição Incapacitado.
++ Iluminação
+O azer emite Luz Plena num raio de 3 m e Penumbra por mais 3 m.
++ Martelo Ardente
+
+=== Balor
++ Agonia da Morte
+O balor explode quando morre. _Teste de Resistência de Destreza:_ CD 20, cada criatura numa Emanação de 9 m a partir do balor. _Falha:_ 31 (9d6) de dano de fogo mais 31 (9d6) de dano de energia. _Sucesso:_ Metade do dano. _Falha ou Sucesso:_ Se o balor morrer fora do Abismo, ganha um corpo novo na hora e revive com todos os Pontos de Vida em algum lugar do Abismo.
++ Aura de Fogo
+No fim de cada turno do balor, cada criatura numa Emanação de 1,5 m a partir dele sofre 13 (3d8) de dano de fogo.
++ Resistência Lendária (3/Dia)
+Se o balor falhar num teste de resistência, pode escolher ser bem-sucedido.
++ Resistência à Magia
+O balor tem Vantagem nos testes de resistência contra magias e outros efeitos mágicos.
++ Ataques Múltiplos
+O balor faz um ataque de Chicote de Chamas e um de Lâmina Relampejante.
++ Chicote de Chamas
+_Jogada de Ataque Corpo a Corpo:_ +14, alcance 9 m. _Acerto:_ 18 (3d6 + 8) de dano de energia mais 17 (5d6) de dano de fogo. Se o alvo for uma criatura Enorme ou menor, o balor o puxa até 7,5 m em linha reta na direção dele, e o alvo fica com a condição Caído.
++ Lâmina Relampejante
+_Jogada de Ataque Corpo a Corpo:_ +14, alcance 3 m. _Acerto:_ 21 (3d8 + 8) de dano de energia mais 22 (4d10) de dano elétrico, e o alvo não pode usar Reações até o início do próximo turno do balor.
++ Teletransporte
+O balor se teletransporta, ou teletransporta um demônio disposto a até 3 m dele, até 18 m para um espaço desocupado que ele consiga ver.
+
+=== Bandit
++ Cimitarra
++ Besta Leve
+
+=== Bandit Captain
++ Ataques Múltiplos
+O bandido faz dois ataques, com Cimitarra e Pistola, em qualquer combinação.
++ Cimitarra
++ Pistola
++ Aparar
+_Gatilho:_ O bandido é atingido por uma jogada de ataque corpo a corpo enquanto segura uma arma. _Resposta:_ O bandido soma 2 à CA contra esse ataque, o que pode fazê-lo errar.
+
+=== Barbed Devil
++ Couro Farpado
+No início de cada turno dele, o diabo causa 5 (1d10) de dano perfurante a qualquer criatura que esteja agarrando ou que o esteja agarrando.
++ Restauração Diabólica
+Se o diabo morrer fora dos Nove Infernos, o corpo some numa fumaça sulfurosa, e ele ganha um corpo novo na hora, revivendo com todos os Pontos de Vida em algum lugar dos Nove Infernos.
++ Resistência à Magia
+O diabo tem Vantagem nos testes de resistência contra magias e outros efeitos mágicos.
++ Ataques Múltiplos
+O diabo faz um ataque de Garras e um de Cauda, ou dois ataques de Arremessar Chamas.
++ Garras
+_Jogada de Ataque Corpo a Corpo:_ +6, alcance 1,5 m. _Acerto:_ 10 (2d6 + 3) de dano perfurante. Se o alvo for uma criatura Grande ou menor, fica com a condição Agarrado (CD 13 para escapar) pelas duas garras.
++ Cauda
++ Arremessar Chamas
+_Jogada de Ataque à Distância:_ +5, alcance 45 m. _Acerto:_ 17 (5d6) de dano de fogo. Se o alvo for um objeto inflamável que ninguém esteja vestindo ou carregando, ele pega fogo.
+
+=== Basilisk
++ Mordida
++ Olhar Petrificante (Recarga 4–6)
+_Teste de Resistência de Constituição:_ CD 12, cada criatura num Cone de 9 m. Se o basilisco vir o próprio reflexo no Cone, ele também precisa fazer este teste. _Primeira Falha:_ O alvo fica com a condição Contido e repete o teste no fim do próximo turno dele se ainda estiver Contido, encerrando o efeito em si mesmo com um sucesso. _Segunda Falha:_ O alvo fica com a condição Petrificado no lugar de Contido.
+
+=== Bearded Devil
++ Resistência à Magia
+O diabo tem Vantagem nos testes de resistência contra magias e outros efeitos mágicos.
++ Ataques Múltiplos
+O diabo faz um ataque de Barba e um de Glaive Infernal.
++ Barba
+_Jogada de Ataque Corpo a Corpo:_ +5, alcance 1,5 m. _Acerto:_ 7 (1d8 + 3) de dano perfurante, e o alvo fica com a condição Envenenado até o início do próximo turno do diabo. Até esse veneno acabar, o alvo não pode recuperar Pontos de Vida.
++ Glaive Infernal
+_Jogada de Ataque Corpo a Corpo:_ +5, alcance 3 m. _Acerto:_ 8 (1d10 + 3) de dano cortante. Se o alvo for uma criatura e ainda não tiver uma ferida infernal, ele sofre o efeito a seguir. _Teste de Resistência de Constituição:_ CD 12. _Falha:_ O alvo recebe uma ferida infernal. Enquanto estiver ferido, perde 5 (1d10) Pontos de Vida no início de cada turno dele. A ferida se fecha depois de 1 minuto, depois que uma magia devolver Pontos de Vida ao alvo, ou depois que ele ou uma criatura a até 1,5 m usar uma ação para estancá-la, com um teste de Sabedoria (Medicina) CD 12 bem-sucedido.
+
+=== Behir
++ Ataques Múltiplos
+O behir faz um ataque de Mordida e usa Constringir.
++ Mordida
++ Constringir
+_Teste de Resistência de Força:_ CD 18, uma criatura Grande ou menor que o behir consiga ver a até 1,5 m. _Falha:_ 28 (5d8 + 6) de dano contundente. O alvo fica com a condição Agarrado (CD 16 para escapar) e com a condição Contido até a agarrada acabar.
++ Sopro Relampejante (Recarga 5–6)
+_Teste de Resistência de Destreza:_ CD 16, cada criatura numa Linha de 27 m de comprimento e 1,5 m de largura. _Falha:_ 66 (12d10) de dano elétrico. _Sucesso:_ Metade do dano.
++ Engolir
+_Teste de Resistência de Destreza:_ CD 18, uma criatura Grande ou menor Agarrada pelo behir (ele só consegue ter uma criatura engolida por vez). _Falha:_ O behir engole o alvo, que deixa de estar Agarrado. Engolida, a criatura fica com as condições Cego e Contido, tem Cobertura Total contra ataques e outros efeitos de fora do behir e sofre 21 (6d6) de dano ácido no início de cada turno do behir.
+
+Se o behir sofrer 30 de dano ou mais num único turno vindo da criatura engolida, ele precisa ser bem-sucedido num teste de resistência de Constituição CD 14 no fim desse turno ou regurgita a criatura, que cai num espaço a até 3 m dele com a condição Caído. Se o behir morrer, a criatura engolida deixa de estar Contida e pode sair do cadáver usando 4,5 m de movimento, saindo Caída.
+
+=== Berserker
++ Frenesi Sangrento
+Enquanto estiver Sangrando, o berserker tem Vantagem nas jogadas de ataque e nos testes de resistência.
++ Machado Grande
+
+=== Black Dragon Wyrmling
++ Anfíbio
+O dragão respira ar e água.
++ Ataques Múltiplos
+O dragão faz dois ataques de Dilacerar.
++ Dilacerar
++ Sopro Ácido (Recarga 5–6)
+_Teste de Resistência de Destreza:_ CD 11, cada criatura numa Linha de 4,5 m de comprimento e 1,5 m de largura. _Falha:_ 22 (5d8) de dano ácido. _Sucesso:_ Metade do dano.
+
+=== Young Black Dragon
++ Anfíbio
+O dragão respira ar e água.
++ Ataques Múltiplos
+O dragão faz três ataques de Dilacerar.
++ Dilacerar
++ Sopro Ácido (Recarga 5–6)
+_Teste de Resistência de Destreza:_ CD 14, cada criatura numa Linha de 9 m de comprimento e 1,5 m de largura. _Falha:_ 49 (14d6) de dano ácido. _Sucesso:_ Metade do dano.
+
+=== Adult Black Dragon
++ Anfíbio
+O dragão respira ar e água.
++ Resistência Lendária (3/Dia, ou 4/Dia no Covil)
+Se o dragão falhar num teste de resistência, pode escolher ser bem-sucedido.
++ Ataques Múltiplos
+O dragão faz três ataques de Dilacerar. Ele pode trocar um ataque por um uso de Conjuração para conjurar _Flecha Ácida_ (versão de 3º círculo).
++ Dilacerar
++ Sopro Ácido (Recarga 5–6)
+_Teste de Resistência de Destreza:_ CD 18, cada criatura numa Linha de 18 m de comprimento e 1,5 m de largura. _Falha:_ 54 (12d8) de dano ácido. _Sucesso:_ Metade do dano.
++ Conjuração
+O dragão conjura uma das magias a seguir, sem precisar de componentes Materiais e usando Carisma como atributo de conjuração (CD de resistência 17, +9 para acertar com ataques mágicos):
+
+**À vontade:** _Flecha Ácida_ (versão de 3º círculo), _Detectar Magia_, _Medo_
+
+**1/Dia cada:** _Falar com os Mortos_, _Esfera Vitriólica_
++ :intro
+_Usos de Ação Lendária: 3 (4 no Covil). Logo depois do turno de outra criatura, o dragão pode gastar um uso para fazer uma das ações a seguir. Ele recupera todos os usos gastos no início de cada turno seu._
++ Nuvem de Insetos
+_Teste de Resistência de Destreza:_ CD 17, uma criatura que o dragão consiga ver a até 36 m. _Falha:_ 22 (4d10) de dano de veneno, e o alvo tem Desvantagem nos testes de resistência para manter a Concentração até o fim do próximo turno dele. _Falha ou Sucesso:_ O dragão só pode usar esta ação de novo no início do próximo turno dele.
++ Presença Aterradora
+O dragão usa Conjuração para conjurar _Medo_. Ele só pode usar esta ação de novo no início do próximo turno dele.
++ Bote
+O dragão se move até metade do Deslocamento e faz um ataque de Dilacerar.
+
+=== Ancient Black Dragon
++ Anfíbio
+O dragão respira ar e água.
++ Resistência Lendária (4/Dia, ou 5/Dia no Covil)
+Se o dragão falhar num teste de resistência, pode escolher ser bem-sucedido.
++ Ataques Múltiplos
+O dragão faz três ataques de Dilacerar. Ele pode trocar um ataque por um uso de Conjuração para conjurar _Flecha Ácida_ (versão de 4º círculo).
++ Dilacerar
++ Sopro Ácido (Recarga 5–6)
+_Teste de Resistência de Destreza:_ CD 22, cada criatura numa Linha de 27 m de comprimento e 3 m de largura. _Falha:_ 67 (15d8) de dano ácido. _Sucesso:_ Metade do dano.
++ Conjuração
+O dragão conjura uma das magias a seguir, sem precisar de componentes Materiais e usando Carisma como atributo de conjuração (CD de resistência 21, +13 para acertar com ataques mágicos):
+
+**À vontade:** _Flecha Ácida_ (versão de 4º círculo), _Detectar Magia_, _Medo_
+
+**1/Dia cada:** _Criar Mortos-Vivos_, _Falar com os Mortos_, _Esfera Vitriólica_ (versão de 5º círculo)
++ :intro
+_Usos de Ação Lendária: 3 (4 no Covil). Logo depois do turno de outra criatura, o dragão pode gastar um uso para fazer uma das ações a seguir. Ele recupera todos os usos gastos no início de cada turno seu._
++ Nuvem de Insetos
+_Teste de Resistência de Destreza:_ CD 21, uma criatura que o dragão consiga ver a até 36 m. _Falha:_ 33 (6d10) de dano de veneno, e o alvo tem Desvantagem nos testes de resistência para manter a Concentração até o fim do próximo turno dele. _Falha ou Sucesso:_ O dragão só pode usar esta ação de novo no início do próximo turno dele.
++ Presença Aterradora
+O dragão usa Conjuração para conjurar _Medo_. Ele só pode usar esta ação de novo no início do próximo turno dele.
++ Bote
+O dragão se move até metade do Deslocamento e faz um ataque de Dilacerar.
+
+=== Black Pudding
++ Amorfo
+O pudim passa por frestas de até 2,5 centímetros sem gastar movimento extra.
++ Forma Corrosiva
+Uma criatura que acerte o pudim com uma jogada de ataque corpo a corpo sofre 4 (1d8) de dano ácido. Munição não mágica é destruída logo depois de acertar o pudim e causar dano. Qualquer arma não mágica sofre uma penalidade cumulativa de −1 nas jogadas de ataque logo depois de causar dano ao pudim e encostar nele. A arma é destruída se a penalidade chegar a −5. A magia _Consertar_ conjurada na arma remove a penalidade.
+
+Em 1 minuto, o pudim corrói até 60 centímetros de madeira ou metal não mágicos.
++ Patas de Aranha
+O pudim escala superfícies difíceis, inclusive pelo teto, sem precisar fazer teste de atributo.
++ Pseudópode Dissolvente
+_Jogada de Ataque Corpo a Corpo:_ +5, alcance 3 m. _Acerto:_ 17 (4d6 + 3) de dano ácido. Armaduras não mágicas vestidas pelo alvo sofrem uma penalidade de −1 na CA que dão. A armadura é destruída se a penalidade reduzir a CA dela a 10. A magia _Consertar_ conjurada na armadura remove a penalidade.
++ Divisão
+_Gatilho:_ Enquanto for Grande ou Médio e tiver 10 Pontos de Vida ou mais, o pudim fica Sangrando ou sofre dano elétrico ou cortante. _Resposta:_ O pudim se divide em dois novos **Pudins Negros**. Cada pudim novo é uma categoria de tamanho menor que o original e age na Iniciativa dele. Os Pontos de Vida do pudim original são divididos igualmente entre os novos (arredondados para baixo).
+
+=== Blink Dog
++ Mordida
++ Teletransporte (Recarga 4–6)
+O cão se teletransporta até 12 m para um espaço desocupado que consiga ver.
+
+=== Blue Dragon Wyrmling
++ Ataques Múltiplos
+O dragão faz dois ataques de Dilacerar.
++ Dilacerar
++ Sopro Relampejante (Recarga 5–6)
+_Teste de Resistência de Destreza:_ CD 12, cada criatura numa Linha de 9 m de comprimento e 1,5 m de largura. _Falha:_ 21 (6d6) de dano elétrico. _Sucesso:_ Metade do dano.
+
+=== Young Blue Dragon
++ Ataques Múltiplos
+O dragão faz três ataques de Dilacerar.
++ Dilacerar
++ Sopro Relampejante (Recarga 5–6)
+_Teste de Resistência de Destreza:_ CD 16, cada criatura numa Linha de 18 m de comprimento e 1,5 m de largura. _Falha:_ 55 (10d10) de dano elétrico. _Sucesso:_ Metade do dano.
+
+=== Adult Blue Dragon
++ Resistência Lendária (3/Dia, ou 4/Dia no Covil)
+Se o dragão falhar num teste de resistência, pode escolher ser bem-sucedido.
++ Ataques Múltiplos
+O dragão faz três ataques de Dilacerar. Ele pode trocar um ataque por um uso de Conjuração para conjurar _Despedaçar_.
++ Dilacerar
++ Sopro Relampejante (Recarga 5–6)
+_Teste de Resistência de Destreza:_ CD 19, cada criatura numa Linha de 27 m de comprimento e 1,5 m de largura. _Falha:_ 60 (11d10) de dano elétrico. _Sucesso:_ Metade do dano.
++ Conjuração
+O dragão conjura uma das magias a seguir, sem precisar de componentes Materiais e usando Carisma como atributo de conjuração (CD de resistência 18):
+
+**À vontade:** _Detectar Magia_, _Invisibilidade_, _Mãos Mágicas_, _Despedaçar_
+
+**1/Dia cada:** _Vidência_, _Enviar Mensagem_
++ :intro
+_Usos de Ação Lendária: 3 (4 no Covil). Logo depois do turno de outra criatura, o dragão pode gastar um uso para fazer uma das ações a seguir. Ele recupera todos os usos gastos no início de cada turno seu._
++ Voo Encoberto
+O dragão usa Conjuração para conjurar _Invisibilidade_ em si mesmo e pode voar até metade do Deslocamento de Voo. Ele só pode usar esta ação de novo no início do próximo turno dele.
++ Estrondo Sônico
+O dragão usa Conjuração para conjurar _Despedaçar_. Ele só pode usar esta ação de novo no início do próximo turno dele.
++ Rabada
+O dragão faz um ataque de Dilacerar.
+
+=== Ancient Blue Dragon
++ Resistência Lendária (4/Dia, ou 5/Dia no Covil)
+Se o dragão falhar num teste de resistência, pode escolher ser bem-sucedido.
++ Ataques Múltiplos
+O dragão faz três ataques de Dilacerar. Ele pode trocar um ataque por um uso de Conjuração para conjurar _Despedaçar_ (versão de 3º círculo).
++ Dilacerar
++ Sopro Relampejante (Recarga 5–6)
+_Teste de Resistência de Destreza:_ CD 23, cada criatura numa Linha de 36 m de comprimento e 3 m de largura. _Falha:_ 88 (16d10) de dano elétrico. _Sucesso:_ Metade do dano.
++ Conjuração
+O dragão conjura uma das magias a seguir, sem precisar de componentes Materiais e usando Carisma como atributo de conjuração (CD de resistência 22):
+
+**À vontade:** _Detectar Magia_, _Invisibilidade_, _Mãos Mágicas_, _Despedaçar_ (versão de 3º círculo)
+
+**1/Dia cada:** _Vidência_, _Enviar Mensagem_
++ :intro
+_Usos de Ação Lendária: 3 (4 no Covil). Logo depois do turno de outra criatura, o dragão pode gastar um uso para fazer uma das ações a seguir. Ele recupera todos os usos gastos no início de cada turno seu._
++ Voo Encoberto
+O dragão usa Conjuração para conjurar _Invisibilidade_ em si mesmo e pode voar até metade do Deslocamento de Voo. Ele só pode usar esta ação de novo no início do próximo turno dele.
++ Estrondo Sônico
+O dragão usa Conjuração para conjurar _Despedaçar_ (versão de 3º círculo). Ele só pode usar esta ação de novo no início do próximo turno dele.
++ Rabada
+O dragão faz um ataque de Dilacerar.
+
+=== Bone Devil
++ Restauração Diabólica
+Se o diabo morrer fora dos Nove Infernos, o corpo some numa fumaça sulfurosa, e ele ganha um corpo novo na hora, revivendo com todos os Pontos de Vida em algum lugar dos Nove Infernos.
++ Resistência à Magia
+O diabo tem Vantagem nos testes de resistência contra magias e outros efeitos mágicos.
++ Ataques Múltiplos
+O diabo faz dois ataques de Garra e um de Ferrão Infernal.
++ Garra
++ Ferrão Infernal
+_Jogada de Ataque Corpo a Corpo:_ +8, alcance 3 m. _Acerto:_ 15 (2d10 + 4) de dano perfurante mais 18 (4d8) de dano de veneno, e o alvo fica com a condição Envenenado até o início do próximo turno do diabo. Envenenado, o alvo não pode recuperar Pontos de Vida.
+
+=== Brass Dragon Wyrmling
++ Dilacerar
++ Sopro de Fogo (Recarga 5–6)
+_Teste de Resistência de Destreza:_ CD 11, cada criatura numa Linha de 6 m de comprimento e 1,5 m de largura. _Falha:_ 14 (4d6) de dano de fogo. _Sucesso:_ Metade do dano.
++ Sopro do Sono
+_Teste de Resistência de Constituição:_ CD 11, cada criatura num Cone de 4,5 m. _Falha:_ O alvo fica com a condição Incapacitado até o fim do próximo turno dele, quando repete o teste. _Segunda Falha:_ O alvo fica com a condição Inconsciente por 1 minuto. O efeito acaba para o alvo se ele sofrer dano ou se uma criatura a até 1,5 m dele usar uma ação para acordá-lo.

@@ -1,0 +1,332 @@
+# Nomes das criaturas: inglês | português
+# Os nomes que já aparecem nos itens mágicos e nas magias seguem iguais.
+Aboleth | Aboleth
+Air Elemental | Elemental do Ar
+Animated Armor | Armadura Animada
+Animated Flying Sword | Espada Voadora Animada
+Animated Rug of Smothering | Tapete Sufocante Animado
+Ankheg | Ankheg
+Assassin | Assassino
+Awakened Shrub | Arbusto Desperto
+Awakened Tree | Árvore Desperta
+Axe Beak | Bico-de-Machado
+Azer Sentinel | Sentinela Azer
+Balor | Balor
+Bandit | Bandido
+Bandit Captain | Capitão Bandido
+Barbed Devil | Diabo Farpado
+Basilisk | Basilisco
+Bearded Devil | Diabo Barbado
+Behir | Behir
+Berserker | Berserker
+Black Dragon Wyrmling | Filhote de Dragão Negro
+Young Black Dragon | Dragão Negro Jovem
+Adult Black Dragon | Dragão Negro Adulto
+Ancient Black Dragon | Dragão Negro Ancião
+Black Pudding | Pudim Negro
+Blink Dog | Cão Teleportador
+Blue Dragon Wyrmling | Filhote de Dragão Azul
+Young Blue Dragon | Dragão Azul Jovem
+Adult Blue Dragon | Dragão Azul Adulto
+Ancient Blue Dragon | Dragão Azul Ancião
+Bone Devil | Diabo de Ossos
+Brass Dragon Wyrmling | Filhote de Dragão de Latão
+Young Brass Dragon | Dragão de Latão Jovem
+Adult Brass Dragon | Dragão de Latão Adulto
+Ancient Brass Dragon | Dragão de Latão Ancião
+Bronze Dragon Wyrmling | Filhote de Dragão de Bronze
+Young Bronze Dragon | Dragão de Bronze Jovem
+Adult Bronze Dragon | Dragão de Bronze Adulto
+Ancient Bronze Dragon | Dragão de Bronze Ancião
+Bugbear Stalker | Bugbear Espreitador
+Bugbear Warrior | Bugbear Guerreiro
+Bulette | Bulette
+Centaur Trooper | Centauro Soldado
+Chain Devil | Diabo das Correntes
+Chimera | Quimera
+Chuul | Chuul
+Clay Golem | Golem de Barro
+Cloaker | Manto Vivo
+Cloud Giant | Gigante das Nuvens
+Cockatrice | Cocatriz
+Commoner | Plebeu
+Copper Dragon Wyrmling | Filhote de Dragão de Cobre
+Young Copper Dragon | Dragão de Cobre Jovem
+Adult Copper Dragon | Dragão de Cobre Adulto
+Ancient Copper Dragon | Dragão de Cobre Ancião
+Couatl | Couatl
+Swarm of Crawling Claws | Enxame de Garras Rastejantes
+Cultist | Cultista
+Cultist Fanatic | Cultista Fanático
+Darkmantle | Manto Sombrio
+Death Dog | Cão da Morte
+Deva | Deva
+Djinni | Djinni
+Doppelganger | Doppelganger
+Dragon Turtle | Tartaruga-Dragão
+Dretch | Dretch
+Drider | Drider
+Druid | Druida
+Dryad | Dríade
+Earth Elemental | Elemental da Terra
+Efreeti | Efreeti
+Erinyes | Erínia
+Ettercap | Ettercap
+Ettin | Ettin
+Fire Elemental | Elemental do Fogo
+Fire Giant | Gigante do Fogo
+Flesh Golem | Golem de Carne
+Frost Giant | Gigante do Gelo
+Shrieker Fungus | Fungo Guinchador
+Violet Fungus | Fungo Violeta
+Gargoyle | Gárgula
+Gelatinous Cube | Cubo Gelatinoso
+Ghast | Lívido
+Ghost | Fantasma
+Ghoul | Carniçal
+Gibbering Mouther | Boca Tagarela
+Glabrezu | Glabrezu
+Gladiator | Gladiador
+Gnoll Warrior | Gnoll Guerreiro
+Goblin Minion | Goblin Lacaio
+Goblin Warrior | Goblin Guerreiro
+Goblin Boss | Chefe Goblin
+Gold Dragon Wyrmling | Filhote de Dragão de Ouro
+Young Gold Dragon | Dragão de Ouro Jovem
+Adult Gold Dragon | Dragão de Ouro Adulto
+Ancient Gold Dragon | Dragão de Ouro Ancião
+Gorgon | Górgona
+Gray Ooze | Gosma Cinzenta
+Green Dragon Wyrmling | Filhote de Dragão Verde
+Young Green Dragon | Dragão Verde Jovem
+Adult Green Dragon | Dragão Verde Adulto
+Ancient Green Dragon | Dragão Verde Ancião
+Green Hag | Bruxa Verde
+Grick | Grick
+Griffon | Grifo
+Grimlock | Grimlock
+Guardian Naga | Naga Guardiã
+Guard | Guarda
+Guard Captain | Capitão da Guarda
+Half-Dragon | Meio-Dragão
+Harpy | Harpia
+Hell Hound | Cão Infernal
+Hezrou | Hezrou
+Hill Giant | Gigante das Colinas
+Hippogriff | Hipogrifo
+Hobgoblin Warrior | Hobgoblin Guerreiro
+Hobgoblin Captain | Capitão Hobgoblin
+Homunculus | Homúnculo
+Horned Devil | Diabo Chifrudo
+Hydra | Hidra
+Ice Devil | Diabo do Gelo
+Imp | Diabrete
+Incubus | Íncubo
+Invisible Stalker | Perseguidor Invisível
+Iron Golem | Golem de Ferro
+Knight | Cavaleiro
+Kobold Warrior | Kobold Guerreiro
+Kraken | Kraken
+Lamia | Lâmia
+Lemure | Lêmure
+Lich | Lich
+Mage | Mago
+Archmage | Arquimago
+Magmin | Magmin
+Manticore | Mantícora
+Marilith | Marilith
+Medusa | Medusa
+Dust Mephit | Mefite do Pó
+Ice Mephit | Mefite do Gelo
+Magma Mephit | Mefite do Magma
+Steam Mephit | Mefite do Vapor
+Merfolk Skirmisher | Tritão Escaramuçador
+Merrow | Merrow
+Mimic | Mímico
+Minotaur of Baphomet | Minotauro de Baphomet
+Mummy | Múmia
+Mummy Lord | Senhor Múmia
+Nalfeshnee | Nalfeshnee
+Night Hag | Bruxa da Noite
+Nightmare | Pesadelo
+Noble | Nobre
+Ochre Jelly | Geleia Ocre
+Ogre | Ogro
+Oni | Oni
+Otyugh | Otyugh
+Owlbear | Urso-Coruja
+Pegasus | Pégaso
+Phase Spider | Aranha Etérea
+Pirate | Pirata
+Pirate Captain | Capitão Pirata
+Pit Fiend | Diabo do Fosso
+Planetar | Planetar
+Priest Acolyte | Sacerdote Acólito
+Priest | Sacerdote
+Pseudodragon | Pseudodragão
+Purple Worm | Verme Púrpura
+Quasit | Quasit
+Rakshasa | Rakshasa
+Red Dragon Wyrmling | Filhote de Dragão Vermelho
+Young Red Dragon | Dragão Vermelho Jovem
+Adult Red Dragon | Dragão Vermelho Adulto
+Ancient Red Dragon | Dragão Vermelho Ancião
+Remorhaz | Remorhaz
+Roc | Roca
+Roper | Roper
+Rust Monster | Monstro da Ferrugem
+Sahuagin Warrior | Sahuagin Guerreiro
+Salamander | Salamandra
+Satyr | Sátiro
+Scout | Batedor
+Sea Hag | Bruxa do Mar
+Shadow | Sombra
+Shambling Mound | Monte Ambulante
+Shield Guardian | Guardião Escudo
+Silver Dragon Wyrmling | Filhote de Dragão de Prata
+Young Silver Dragon | Dragão de Prata Jovem
+Adult Silver Dragon | Dragão de Prata Adulto
+Ancient Silver Dragon | Dragão de Prata Ancião
+Skeleton | Esqueleto
+Warhorse Skeleton | Esqueleto de Cavalo de Guerra
+Minotaur Skeleton | Esqueleto de Minotauro
+Solar | Solar
+Specter | Espectro
+Sphinx of Wonder | Esfinge da Maravilha
+Sphinx of Lore | Esfinge do Saber
+Sphinx of Valor | Esfinge do Valor
+Spirit Naga | Naga Espiritual
+Sprite | Duende
+Spy | Espião
+Stirge | Stirge
+Stone Giant | Gigante das Pedras
+Stone Golem | Golem de Pedra
+Storm Giant | Gigante das Tempestades
+Succubus | Súcubo
+Tarrasque | Tarrasque
+Tough | Brutamontes
+Tough Boss | Chefe Brutamontes
+Treant | Ente
+Troll | Troll
+Troll Limb | Membro de Troll
+Unicorn | Unicórnio
+Vampire Familiar | Familiar Vampírico
+Vampire Spawn | Cria Vampírica
+Vampire | Vampiro
+Vrock | Vrock
+Warrior Infantry | Guerreiro de Infantaria
+Warrior Veteran | Guerreiro Veterano
+Water Elemental | Elemental da Água
+Werebear | Homem-Urso
+Wereboar | Homem-Javali
+Wererat | Homem-Rato
+Weretiger | Homem-Tigre
+Werewolf | Lobisomem
+White Dragon Wyrmling | Filhote de Dragão Branco
+Young White Dragon | Dragão Branco Jovem
+Adult White Dragon | Dragão Branco Adulto
+Ancient White Dragon | Dragão Branco Ancião
+Wight | Inumano
+Will-o'-Wisp | Fogo-Fátuo
+Winter Wolf | Lobo do Inverno
+Worg | Worg
+Wraith | Aparição
+Wyvern | Serpe
+Xorn | Xorn
+Zombie | Zumbi
+Ogre Zombie | Zumbi Ogro
+Allosaurus | Alossauro
+Ankylosaurus | Anquilossauro
+Ape | Macaco
+Archelon | Arquelon
+Baboon | Babuíno
+Badger | Texugo
+Bat | Morcego
+Black Bear | Urso-Negro
+Blood Hawk | Falcão Sanguinário
+Boar | Javali
+Brown Bear | Urso-Pardo
+Camel | Camelo
+Cat | Gato
+Constrictor Snake | Serpente Constritora
+Crab | Caranguejo
+Crocodile | Crocodilo
+Deer | Cervo
+Dire Wolf | Lobo Atroz
+Draft Horse | Cavalo de Tração
+Eagle | Águia
+Elephant | Elefante
+Elk | Alce
+Flying Snake | Serpente Voadora
+Frog | Sapo
+Giant Ape | Macaco Gigante
+Giant Badger | Texugo Gigante
+Giant Bat | Morcego Gigante
+Giant Boar | Javali Gigante
+Giant Centipede | Centopeia Gigante
+Giant Constrictor Snake | Serpente Constritora Gigante
+Giant Crab | Caranguejo Gigante
+Giant Crocodile | Crocodilo Gigante
+Giant Eagle | Águia Gigante
+Giant Elk | Alce Gigante
+Giant Fire Beetle | Besouro de Fogo Gigante
+Giant Frog | Sapo Gigante
+Giant Goat | Bode Gigante
+Giant Hyena | Hiena Gigante
+Giant Lizard | Lagarto Gigante
+Giant Octopus | Polvo Gigante
+Giant Owl | Coruja Gigante
+Giant Rat | Rato Gigante
+Giant Scorpion | Escorpião Gigante
+Giant Seahorse | Cavalo-Marinho Gigante
+Giant Shark | Tubarão Gigante
+Giant Spider | Aranha Gigante
+Giant Toad | Sapo-Boi Gigante
+Giant Venomous Snake | Serpente Venenosa Gigante
+Giant Vulture | Abutre Gigante
+Giant Wasp | Vespa Gigante
+Giant Weasel | Doninha Gigante
+Giant Wolf Spider | Aranha-Lobo Gigante
+Goat | Bode
+Hawk | Falcão
+Hippopotamus | Hipopótamo
+Hunter Shark | Tubarão Caçador
+Hyena | Hiena
+Jackal | Chacal
+Killer Whale | Orca
+Lion | Leão
+Lizard | Lagarto
+Mammoth | Mamute
+Mastiff | Mastim
+Mule | Mula
+Octopus | Polvo
+Owl | Coruja
+Panther | Pantera
+Piranha | Piranha
+Plesiosaurus | Plesiossauro
+Polar Bear | Urso-Polar
+Pony | Pônei
+Pteranodon | Pteranodonte
+Rat | Rato
+Raven | Corvo
+Reef Shark | Tubarão-de-Recife
+Rhinoceros | Rinoceronte
+Riding Horse | Cavalo de Montaria
+Saber-Toothed Tiger | Tigre-Dentes-de-Sabre
+Scorpion | Escorpião
+Seahorse | Cavalo-Marinho
+Spider | Aranha
+Swarm of Bats | Enxame de Morcegos
+Swarm of Insects | Enxame de Insetos
+Swarm of Piranhas | Enxame de Piranhas
+Swarm of Rats | Enxame de Ratos
+Swarm of Ravens | Enxame de Corvos
+Swarm of Venomous Snakes | Enxame de Serpentes Venenosas
+Tiger | Tigre
+Triceratops | Tricerátopo
+Tyrannosaurus Rex | Tiranossauro Rex
+Venomous Snake | Serpente Venenosa
+Vulture | Abutre
+Warhorse | Cavalo de Guerra
+Weasel | Doninha
+Wolf | Lobo

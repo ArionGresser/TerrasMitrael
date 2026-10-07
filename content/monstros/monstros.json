@@ -1,0 +1,2523 @@
+[
+ {
+  "slug": "aboleth",
+  "nome": "Aboleth",
+  "original": "Aboleth",
+  "fonte": "monstro",
+  "linha": "Aberração Grande, Leal e Mau",
+  "tipo": "Aberração",
+  "tamanho": "Large",
+  "ca": "17",
+  "iniciativa": "+7 (17)",
+  "pv": "150 (20d10 + 40)",
+  "deslocamento": "3 m, Natação 12 m",
+  "atributos": [
+   {
+    "sigla": "For",
+    "valor": 21,
+    "mod": "+5",
+    "save": "+5"
+   },
+   {
+    "sigla": "Des",
+    "valor": 9,
+    "mod": "−1",
+    "save": "+3"
+   },
+   {
+    "sigla": "Con",
+    "valor": 15,
+    "mod": "+2",
+    "save": "+6"
+   },
+   {
+    "sigla": "Int",
+    "valor": 18,
+    "mod": "+4",
+    "save": "+8"
+   },
+   {
+    "sigla": "Sab",
+    "valor": 15,
+    "mod": "+2",
+    "save": "+6"
+   },
+   {
+    "sigla": "Car",
+    "valor": 18,
+    "mod": "+4",
+    "save": "+4"
+   }
+  ],
+  "campos": [
+   {
+    "rotulo": "Perícias",
+    "valor": "História +12, Percepção +10"
+   },
+   {
+    "rotulo": "Sentidos",
+    "valor": "Visão no Escuro 36 m; Percepção Passiva 20"
+   },
+   {
+    "rotulo": "Idiomas",
+    "valor": "Fala Profunda; telepatia 36 m"
+   }
+  ],
+  "nd": "10",
+  "ndNumero": 10.0,
+  "xp": "5.900 (ou 7.200 no covil)",
+  "bp": "+4",
+  "secoes": [
+   {
+    "titulo": "Traços",
+    "texto": "**_Anfíbio._** O aboleth respira ar e água.\n\n**_Restauração Sobrenatural._** Se for destruído, o aboleth ganha um corpo novo em 5d10 dias e revive com todos os Pontos de Vida no Reino Distante ou em outro lugar escolhido pelo Mestre.\n\n**_Resistência Lendária (3/Dia, ou 4/Dia no Covil)._** Se o aboleth falhar num teste de resistência, pode escolher ser bem-sucedido.\n\n**_Nuvem de Muco._** Debaixo d'água, o aboleth fica envolto em muco. _Teste de Resistência de Constituição:_ CD 14, cada criatura numa Emanação de 1,5 m a partir do aboleth, no fim do turno dele. _Falha:_ O alvo é amaldiçoado. Até a maldição acabar, a pele do alvo fica viscosa, ele respira ar e água e não pode recuperar Pontos de Vida a não ser que esteja debaixo d'água.\n\nEnquanto estiver fora de uma massa de água, a criatura amaldiçoada sofre 6 (1d12) de dano ácido ao fim de cada 10 minutos, a não ser que alguém umedeça a pele dela antes de passarem esses minutos.\n\n**_Telepatia Invasiva._** Se uma criatura que o aboleth consiga ver se comunicar com ele por telepatia, o aboleth descobre os maiores desejos dela."
+   },
+   {
+    "titulo": "Ações",
+    "texto": "**_Ataques Múltiplos._** O aboleth faz dois ataques de Tentáculo e usa Consumir Memórias ou Dominar Mente, se estiver disponível.\n\n**_Tentáculo._** _Jogada de Ataque Corpo a Corpo:_ +9, alcance 4,5 m. _Acerto:_ 12 (2d6 + 5) de dano contundente. Se o alvo for uma criatura Grande ou menor, fica com a condição Agarrado (CD 14 para escapar) por um dos quatro tentáculos.\n\n**_Consumir Memórias._** _Teste de Resistência de Inteligência:_ CD 16, uma criatura a até 9 m que esteja Enfeitiçada ou Agarrada pelo aboleth. _Falha:_ 10 (3d6) de dano psíquico.\n\n_Sucesso:_ Metade do dano. _Falha ou Sucesso:_ O aboleth ganha as memórias do alvo se ele for um Humanoide e for reduzido a 0 Pontos de Vida por esta ação.\n\n**_Dominar Mente (2/Dia)._** _Teste de Resistência de Sabedoria:_ CD 16, uma criatura que o aboleth consiga ver a até 9 m. _Falha:_ O alvo fica com a condição Enfeitiçado até o aboleth morrer ou estar num plano de existência diferente do dele. Enfeitiçado, o alvo age como aliado do aboleth e fica sob o controle dele enquanto estiver a até 18 m. Além disso, o aboleth e o alvo podem se comunicar por telepatia a qualquer distância.\n\nO alvo repete o teste sempre que sofre dano e também depois de cada 24 horas que passar a pelo menos 1,5 km do aboleth, encerrando o efeito em si mesmo com um sucesso."
+   },
+   {
+    "titulo": "Ações Lendárias",
+    "texto": "_Usos de Ação Lendária: 3 (4 no Covil). Logo depois do turno de outra criatura, o aboleth pode gastar um uso para fazer uma das ações a seguir. Ele recupera todos os usos gastos no início de cada turno seu._\n\n**_Chicotada._** O aboleth faz um ataque de Tentáculo.\n\n**_Dreno Psíquico._** Se tiver pelo menos uma criatura Enfeitiçada ou Agarrada, o aboleth usa Consumir Memórias e recupera 5 (1d10) Pontos de Vida."
+   }
+  ]
+ },
+ {
+  "slug": "ankheg",
+  "nome": "Ankheg",
+  "original": "Ankheg",
+  "fonte": "monstro",
+  "linha": "Monstruosidade Grande, Sem Tendência",
+  "tipo": "Monstruosidade",
+  "tamanho": "Large",
+  "ca": "14",
+  "iniciativa": "+0 (10)",
+  "pv": "45 (6d10 + 12)",
+  "deslocamento": "9 m, Escavação 3 m",
+  "atributos": [
+   {
+    "sigla": "For",
+    "valor": 17,
+    "mod": "+3",
+    "save": "+3"
+   },
+   {
+    "sigla": "Des",
+    "valor": 11,
+    "mod": "+0",
+    "save": "+0"
+   },
+   {
+    "sigla": "Con",
+    "valor": 14,
+    "mod": "+2",
+    "save": "+2"
+   },
+   {
+    "sigla": "Int",
+    "valor": 1,
+    "mod": "−5",
+    "save": "−5"
+   },
+   {
+    "sigla": "Sab",
+    "valor": 13,
+    "mod": "+1",
+    "save": "+1"
+   },
+   {
+    "sigla": "Car",
+    "valor": 6,
+    "mod": "−2",
+    "save": "−2"
+   }
+  ],
+  "campos": [
+   {
+    "rotulo": "Sentidos",
+    "valor": "Visão no Escuro 18 m, Sentido Sísmico 18 m; Percepção Passiva 11"
+   },
+   {
+    "rotulo": "Idiomas",
+    "valor": "nenhum"
+   }
+  ],
+  "nd": "2",
+  "ndNumero": 2.0,
+  "xp": "450",
+  "bp": "+2",
+  "secoes": [
+   {
+    "titulo": "Traços",
+    "texto": "**_Escavador._** O ankheg escava rocha sólida com metade do Deslocamento de Escavação e deixa para trás um túnel de 3 m de diâmetro."
+   },
+   {
+    "titulo": "Ações",
+    "texto": "**_Mordida._** _Jogada de Ataque Corpo a Corpo:_ +5 (com Vantagem se o alvo estiver Agarrado pelo ankheg), alcance 1,5 m. _Acerto:_ 10 (2d6 + 3) de dano cortante mais 3 (1d6) de dano ácido. Se o alvo for uma criatura Grande ou menor, fica com a condição Agarrado (CD 13 para escapar).\n\n**_Jato Ácido (Recarga 6)._** _Teste de Resistência de Destreza:_ CD 12, cada criatura numa Linha de 9 m de comprimento e 1,5 m de largura. _Falha:_ 14 (4d6) de dano ácido. _Sucesso:_ Metade do dano."
+   }
+  ]
+ },
+ {
+  "slug": "arbusto-desperto",
+  "nome": "Arbusto Desperto",
+  "original": "Awakened Shrub",
+  "fonte": "monstro",
+  "linha": "Planta Pequena, Neutro",
+  "tipo": "Planta",
+  "tamanho": "Small",
+  "ca": "9",
+  "iniciativa": "−1 (9)",
+  "pv": "10 (3d6)",
+  "deslocamento": "6 m",
+  "atributos": [
+   {
+    "sigla": "For",
+    "valor": 3,
+    "mod": "−4",
+    "save": "−4"
+   },
+   {
+    "sigla": "Des",
+    "valor": 8,
+    "mod": "−1",
+    "save": "−1"
+   },
+   {
+    "sigla": "Con",
+    "valor": 11,
+    "mod": "+0",
+    "save": "+0"
+   },
+   {
+    "sigla": "Int",
+    "valor": 10,
+    "mod": "+0",
+    "save": "+0"
+   },
+   {
+    "sigla": "Sab",
+    "valor": 10,
+    "mod": "+0",
+    "save": "+0"
+   },
+   {
+    "sigla": "Car",
+    "valor": 6,
+    "mod": "−2",
+    "save": "−2"
+   }
+  ],
+  "campos": [
+   {
+    "rotulo": "Vulnerabilidades",
+    "valor": "Fogo"
+   },
+   {
+    "rotulo": "Resistências",
+    "valor": "Perfurante"
+   },
+   {
+    "rotulo": "Sentidos",
+    "valor": "Percepção Passiva 10"
+   },
+   {
+    "rotulo": "Idiomas",
+    "valor": "Comum e mais um idioma"
+   }
+  ],
+  "nd": "0",
+  "ndNumero": 0.0,
+  "xp": "10",
+  "bp": "+2",
+  "secoes": [
+   {
+    "titulo": "Ações",
+    "texto": "**_Arranhão._** _Jogada de Ataque Corpo a Corpo:_ +1, alcance 1,5 m. _Acerto:_ 1 de dano cortante."
+   }
+  ]
+ },
+ {
+  "slug": "armadura-animada",
+  "nome": "Armadura Animada",
+  "original": "Animated Armor",
+  "fonte": "monstro",
+  "linha": "Constructo Médio, Sem Tendência",
+  "tipo": "Constructo",
+  "tamanho": "Medium",
+  "ca": "18",
+  "iniciativa": "+2 (12)",
+  "pv": "33 (6d8 + 6)",
+  "deslocamento": "7,5 m",
+  "atributos": [
+   {
+    "sigla": "For",
+    "valor": 14,
+    "mod": "+2",
+    "save": "+2"
+   },
+   {
+    "sigla": "Des",
+    "valor": 11,
+    "mod": "+0",
+    "save": "+0"
+   },
+   {
+    "sigla": "Con",
+    "valor": 13,
+    "mod": "+1",
+    "save": "+1"
+   },
+   {
+    "sigla": "Int",
+    "valor": 1,
+    "mod": "−5",
+    "save": "−5"
+   },
+   {
+    "sigla": "Sab",
+    "valor": 3,
+    "mod": "−4",
+    "save": "−4"
+   },
+   {
+    "sigla": "Car",
+    "valor": 1,
+    "mod": "−5",
+    "save": "−5"
+   }
+  ],
+  "campos": [
+   {
+    "rotulo": "Imunidades",
+    "valor": "Veneno, Psíquico; Enfeitiçado, Surdo, Exaustão, Amedrontado, Paralisado, Petrificado, Envenenado"
+   },
+   {
+    "rotulo": "Sentidos",
+    "valor": "Percepção às Cegas 18 m; Percepção Passiva 6"
+   },
+   {
+    "rotulo": "Idiomas",
+    "valor": "nenhum"
+   }
+  ],
+  "nd": "1",
+  "ndNumero": 1.0,
+  "xp": "200",
+  "bp": "+2",
+  "secoes": [
+   {
+    "titulo": "Ações",
+    "texto": "**_Ataques Múltiplos._** A armadura faz dois ataques de Pancada.\n\n**_Pancada._** _Jogada de Ataque Corpo a Corpo:_ +4, alcance 1,5 m. _Acerto:_ 5 (1d6 + 2) de dano contundente."
+   }
+  ]
+ },
+ {
+  "slug": "arvore-desperta",
+  "nome": "Árvore Desperta",
+  "original": "Awakened Tree",
+  "fonte": "monstro",
+  "linha": "Planta Enorme, Neutro",
+  "tipo": "Planta",
+  "tamanho": "Huge",
+  "ca": "13",
+  "iniciativa": "−2 (8)",
+  "pv": "59 (7d12 + 14)",
+  "deslocamento": "6 m",
+  "atributos": [
+   {
+    "sigla": "For",
+    "valor": 19,
+    "mod": "+4",
+    "save": "+4"
+   },
+   {
+    "sigla": "Des",
+    "valor": 6,
+    "mod": "−2",
+    "save": "−2"
+   },
+   {
+    "sigla": "Con",
+    "valor": 15,
+    "mod": "+2",
+    "save": "+2"
+   },
+   {
+    "sigla": "Int",
+    "valor": 10,
+    "mod": "+0",
+    "save": "+0"
+   },
+   {
+    "sigla": "Sab",
+    "valor": 10,
+    "mod": "+0",
+    "save": "+0"
+   },
+   {
+    "sigla": "Car",
+    "valor": 7,
+    "mod": "−2",
+    "save": "−2"
+   }
+  ],
+  "campos": [
+   {
+    "rotulo": "Vulnerabilidades",
+    "valor": "Fogo"
+   },
+   {
+    "rotulo": "Resistências",
+    "valor": "Contundente, Perfurante"
+   },
+   {
+    "rotulo": "Sentidos",
+    "valor": "Percepção Passiva 10"
+   },
+   {
+    "rotulo": "Idiomas",
+    "valor": "Comum e mais um idioma"
+   }
+  ],
+  "nd": "2",
+  "ndNumero": 2.0,
+  "xp": "450",
+  "bp": "+2",
+  "secoes": [
+   {
+    "titulo": "Ações",
+    "texto": "**_Pancada._** _Jogada de Ataque Corpo a Corpo:_ +6, alcance 3 m. _Acerto:_ 14 (3d6 + 4) de dano contundente."
+   }
+  ]
+ },
+ {
+  "slug": "assassino",
+  "nome": "Assassino",
+  "original": "Assassin",
+  "fonte": "monstro",
+  "linha": "Humanoide Médio ou Pequeno, Neutro",
+  "tipo": "Humanoide",
+  "tamanho": "Medium",
+  "ca": "16",
+  "iniciativa": "+10 (20)",
+  "pv": "97 (15d8 + 30)",
+  "deslocamento": "9 m",
+  "atributos": [
+   {
+    "sigla": "For",
+    "valor": 11,
+    "mod": "+0",
+    "save": "+0"
+   },
+   {
+    "sigla": "Des",
+    "valor": 18,
+    "mod": "+4",
+    "save": "+7"
+   },
+   {
+    "sigla": "Con",
+    "valor": 14,
+    "mod": "+2",
+    "save": "+2"
+   },
+   {
+    "sigla": "Int",
+    "valor": 16,
+    "mod": "+3",
+    "save": "+6"
+   },
+   {
+    "sigla": "Sab",
+    "valor": 11,
+    "mod": "+0",
+    "save": "+0"
+   },
+   {
+    "sigla": "Car",
+    "valor": 10,
+    "mod": "+0",
+    "save": "+0"
+   }
+  ],
+  "campos": [
+   {
+    "rotulo": "Perícias",
+    "valor": "Acrobacia +7, Percepção +6, Furtividade +10"
+   },
+   {
+    "rotulo": "Resistências",
+    "valor": "Veneno"
+   },
+   {
+    "rotulo": "Equipamento",
+    "valor": "Besta Leve, Espada Curta, Armadura de Couro Batido"
+   },
+   {
+    "rotulo": "Sentidos",
+    "valor": "Percepção Passiva 16"
+   },
+   {
+    "rotulo": "Idiomas",
+    "valor": "Comum, Gíria de Ladrão"
+   }
+  ],
+  "nd": "8",
+  "ndNumero": 8.0,
+  "xp": "3.900",
+  "bp": "+3",
+  "secoes": [
+   {
+    "titulo": "Traços",
+    "texto": "**_Evasão._** Se o assassino for alvo de um efeito que permite um teste de resistência de Destreza para sofrer só metade do dano, ele não sofre dano nenhum com um sucesso e só metade com uma falha. Não pode usar este traço se estiver com a condição Incapacitado."
+   },
+   {
+    "titulo": "Ações",
+    "texto": "**_Ataques Múltiplos._** O assassino faz três ataques, com Espada Curta ou Besta Leve, em qualquer combinação.\n\n**_Espada Curta._** _Jogada de Ataque Corpo a Corpo:_ +7, alcance 1,5 m. _Acerto:_ 7 (1d6 + 4) de dano perfurante mais 17 (5d6) de dano de veneno, e o alvo fica com a condição Envenenado até o início do próximo turno do assassino.\n\n**_Besta Leve._** _Jogada de Ataque à Distância:_ +7, alcance 24/96 m. _Acerto:_ 8 (1d8 + 4) de dano perfurante mais 21 (6d6) de dano de veneno."
+   },
+   {
+    "titulo": "Ações Bônus",
+    "texto": "**_Ação Ardilosa._** O assassino faz a ação de Disparada, Desengajar ou Esconder."
+   }
+  ]
+ },
+ {
+  "slug": "balor",
+  "nome": "Balor",
+  "original": "Balor",
+  "fonte": "monstro",
+  "linha": "Ínfero (Demônio) Enorme, Caótico e Mau",
+  "tipo": "Ínfero",
+  "tamanho": "Huge",
+  "ca": "19",
+  "iniciativa": "+14 (24)",
+  "pv": "287 (23d12 + 138)",
+  "deslocamento": "12 m, Voo 24 m",
+  "atributos": [
+   {
+    "sigla": "For",
+    "valor": 26,
+    "mod": "+8",
+    "save": "+8"
+   },
+   {
+    "sigla": "Des",
+    "valor": 15,
+    "mod": "+2",
+    "save": "+2"
+   },
+   {
+    "sigla": "Con",
+    "valor": 22,
+    "mod": "+6",
+    "save": "+12"
+   },
+   {
+    "sigla": "Int",
+    "valor": 20,
+    "mod": "+5",
+    "save": "+5"
+   },
+   {
+    "sigla": "Sab",
+    "valor": 16,
+    "mod": "+3",
+    "save": "+9"
+   },
+   {
+    "sigla": "Car",
+    "valor": 22,
+    "mod": "+6",
+    "save": "+6"
+   }
+  ],
+  "campos": [
+   {
+    "rotulo": "Perícias",
+    "valor": "Percepção +9"
+   },
+   {
+    "rotulo": "Resistências",
+    "valor": "Frio, Elétrico"
+   },
+   {
+    "rotulo": "Imunidades",
+    "valor": "Fogo, Veneno; Enfeitiçado, Amedrontado, Envenenado"
+   },
+   {
+    "rotulo": "Sentidos",
+    "valor": "Visão Verdadeira 36 m; Percepção Passiva 19"
+   },
+   {
+    "rotulo": "Idiomas",
+    "valor": "Abissal; telepatia 36 m"
+   }
+  ],
+  "nd": "19",
+  "ndNumero": 19.0,
+  "xp": "22.000",
+  "bp": "+6",
+  "secoes": [
+   {
+    "titulo": "Traços",
+    "texto": "**_Agonia da Morte._** O balor explode quando morre. _Teste de Resistência de Destreza:_ CD 20, cada criatura numa Emanação de 9 m a partir do balor. _Falha:_ 31 (9d6) de dano de fogo mais 31 (9d6) de dano de energia. _Sucesso:_ Metade do dano. _Falha ou Sucesso:_ Se o balor morrer fora do Abismo, ganha um corpo novo na hora e revive com todos os Pontos de Vida em algum lugar do Abismo.\n\n**_Aura de Fogo._** No fim de cada turno do balor, cada criatura numa Emanação de 1,5 m a partir dele sofre 13 (3d8) de dano de fogo.\n\n**_Resistência Lendária (3/Dia)._** Se o balor falhar num teste de resistência, pode escolher ser bem-sucedido.\n\n**_Resistência à Magia._** O balor tem Vantagem nos testes de resistência contra magias e outros efeitos mágicos."
+   },
+   {
+    "titulo": "Ações",
+    "texto": "**_Ataques Múltiplos._** O balor faz um ataque de Chicote de Chamas e um de Lâmina Relampejante.\n\n**_Chicote de Chamas._** _Jogada de Ataque Corpo a Corpo:_ +14, alcance 9 m. _Acerto:_ 18 (3d6 + 8) de dano de energia mais 17 (5d6) de dano de fogo. Se o alvo for uma criatura Enorme ou menor, o balor o puxa até 7,5 m em linha reta na direção dele, e o alvo fica com a condição Caído.\n\n**_Lâmina Relampejante._** _Jogada de Ataque Corpo a Corpo:_ +14, alcance 3 m. _Acerto:_ 21 (3d8 + 8) de dano de energia mais 22 (4d10) de dano elétrico, e o alvo não pode usar Reações até o início do próximo turno do balor."
+   },
+   {
+    "titulo": "Ações Bônus",
+    "texto": "**_Teletransporte._** O balor se teletransporta, ou teletransporta um demônio disposto a até 3 m dele, até 18 m para um espaço desocupado que ele consiga ver."
+   }
+  ]
+ },
+ {
+  "slug": "bandido",
+  "nome": "Bandido",
+  "original": "Bandit",
+  "fonte": "monstro",
+  "linha": "Humanoide Médio ou Pequeno, Neutro",
+  "tipo": "Humanoide",
+  "tamanho": "Medium",
+  "ca": "12",
+  "iniciativa": "+1 (11)",
+  "pv": "11 (2d8 + 2)",
+  "deslocamento": "9 m",
+  "atributos": [
+   {
+    "sigla": "For",
+    "valor": 11,
+    "mod": "+0",
+    "save": "+0"
+   },
+   {
+    "sigla": "Des",
+    "valor": 12,
+    "mod": "+1",
+    "save": "+1"
+   },
+   {
+    "sigla": "Con",
+    "valor": 12,
+    "mod": "+1",
+    "save": "+1"
+   },
+   {
+    "sigla": "Int",
+    "valor": 10,
+    "mod": "+0",
+    "save": "+0"
+   },
+   {
+    "sigla": "Sab",
+    "valor": 10,
+    "mod": "+0",
+    "save": "+0"
+   },
+   {
+    "sigla": "Car",
+    "valor": 10,
+    "mod": "+0",
+    "save": "+0"
+   }
+  ],
+  "campos": [
+   {
+    "rotulo": "Equipamento",
+    "valor": "Armadura de Couro, Besta Leve, Cimitarra"
+   },
+   {
+    "rotulo": "Sentidos",
+    "valor": "Percepção Passiva 10"
+   },
+   {
+    "rotulo": "Idiomas",
+    "valor": "Comum, Gíria de Ladrão"
+   }
+  ],
+  "nd": "1/8",
+  "ndNumero": 0.125,
+  "xp": "25",
+  "bp": "+2",
+  "secoes": [
+   {
+    "titulo": "Ações",
+    "texto": "**_Cimitarra._** _Jogada de Ataque Corpo a Corpo:_ +3, alcance 1,5 m. _Acerto:_ 4 (1d6 + 1) de dano cortante.\n\n**_Besta Leve._** _Jogada de Ataque à Distância:_ +3, alcance 24/96 m. _Acerto:_ 5 (1d8 + 1) de dano perfurante."
+   }
+  ]
+ },
+ {
+  "slug": "basilisco",
+  "nome": "Basilisco",
+  "original": "Basilisk",
+  "fonte": "monstro",
+  "linha": "Monstruosidade Média, Sem Tendência",
+  "tipo": "Monstruosidade",
+  "tamanho": "Medium",
+  "ca": "15",
+  "iniciativa": "−1 (9)",
+  "pv": "52 (8d8 + 16)",
+  "deslocamento": "6 m",
+  "atributos": [
+   {
+    "sigla": "For",
+    "valor": 16,
+    "mod": "+3",
+    "save": "+3"
+   },
+   {
+    "sigla": "Des",
+    "valor": 8,
+    "mod": "−1",
+    "save": "−1"
+   },
+   {
+    "sigla": "Con",
+    "valor": 15,
+    "mod": "+2",
+    "save": "+2"
+   },
+   {
+    "sigla": "Int",
+    "valor": 2,
+    "mod": "−4",
+    "save": "−4"
+   },
+   {
+    "sigla": "Sab",
+    "valor": 8,
+    "mod": "−1",
+    "save": "−1"
+   },
+   {
+    "sigla": "Car",
+    "valor": 7,
+    "mod": "−2",
+    "save": "−2"
+   }
+  ],
+  "campos": [
+   {
+    "rotulo": "Sentidos",
+    "valor": "Visão no Escuro 18 m; Percepção Passiva 9"
+   },
+   {
+    "rotulo": "Idiomas",
+    "valor": "nenhum"
+   }
+  ],
+  "nd": "3",
+  "ndNumero": 3.0,
+  "xp": "700",
+  "bp": "+2",
+  "secoes": [
+   {
+    "titulo": "Ações",
+    "texto": "**_Mordida._** _Jogada de Ataque Corpo a Corpo:_ +5, alcance 1,5 m. _Acerto:_ 10 (2d6 + 3) de dano perfurante mais 7 (2d6) de dano de veneno."
+   },
+   {
+    "titulo": "Ações Bônus",
+    "texto": "**_Olhar Petrificante (Recarga 4–6)._** _Teste de Resistência de Constituição:_ CD 12, cada criatura num Cone de 9 m. Se o basilisco vir o próprio reflexo no Cone, ele também precisa fazer este teste. _Primeira Falha:_ O alvo fica com a condição Contido e repete o teste no fim do próximo turno dele se ainda estiver Contido, encerrando o efeito em si mesmo com um sucesso. _Segunda Falha:_ O alvo fica com a condição Petrificado no lugar de Contido."
+   }
+  ]
+ },
+ {
+  "slug": "behir",
+  "nome": "Behir",
+  "original": "Behir",
+  "fonte": "monstro",
+  "linha": "Monstruosidade Enorme, Neutro e Mau",
+  "tipo": "Monstruosidade",
+  "tamanho": "Huge",
+  "ca": "17",
+  "iniciativa": "+3 (13)",
+  "pv": "168 (16d12 + 64)",
+  "deslocamento": "15 m, Escalada 15 m",
+  "atributos": [
+   {
+    "sigla": "For",
+    "valor": 23,
+    "mod": "+6",
+    "save": "+6"
+   },
+   {
+    "sigla": "Des",
+    "valor": 16,
+    "mod": "+3",
+    "save": "+3"
+   },
+   {
+    "sigla": "Con",
+    "valor": 18,
+    "mod": "+4",
+    "save": "+4"
+   },
+   {
+    "sigla": "Int",
+    "valor": 7,
+    "mod": "−2",
+    "save": "−2"
+   },
+   {
+    "sigla": "Sab",
+    "valor": 14,
+    "mod": "+2",
+    "save": "+2"
+   },
+   {
+    "sigla": "Car",
+    "valor": 12,
+    "mod": "+1",
+    "save": "+1"
+   }
+  ],
+  "campos": [
+   {
+    "rotulo": "Perícias",
+    "valor": "Percepção +6, Furtividade +7"
+   },
+   {
+    "rotulo": "Imunidades",
+    "valor": "Elétrico"
+   },
+   {
+    "rotulo": "Sentidos",
+    "valor": "Visão no Escuro 27 m; Percepção Passiva 16"
+   },
+   {
+    "rotulo": "Idiomas",
+    "valor": "Dracônico"
+   }
+  ],
+  "nd": "11",
+  "ndNumero": 11.0,
+  "xp": "7.200",
+  "bp": "+4",
+  "secoes": [
+   {
+    "titulo": "Ações",
+    "texto": "**_Ataques Múltiplos._** O behir faz um ataque de Mordida e usa Constringir.\n\n**_Mordida._** _Jogada de Ataque Corpo a Corpo:_ +10, alcance 3 m. _Acerto:_ 19 (2d12 + 6) de dano perfurante mais 11 (2d10) de dano elétrico.\n\n**_Constringir._** _Teste de Resistência de Força:_ CD 18, uma criatura Grande ou menor que o behir consiga ver a até 1,5 m. _Falha:_ 28 (5d8 + 6) de dano contundente. O alvo fica com a condição Agarrado (CD 16 para escapar) e com a condição Contido até a agarrada acabar.\n\n**_Sopro Relampejante (Recarga 5–6)._** _Teste de Resistência de Destreza:_ CD 16, cada criatura numa Linha de 27 m de comprimento e 1,5 m de largura. _Falha:_ 66 (12d10) de dano elétrico. _Sucesso:_ Metade do dano."
+   },
+   {
+    "titulo": "Ações Bônus",
+    "texto": "**_Engolir._** _Teste de Resistência de Destreza:_ CD 18, uma criatura Grande ou menor Agarrada pelo behir (ele só consegue ter uma criatura engolida por vez). _Falha:_ O behir engole o alvo, que deixa de estar Agarrado. Engolida, a criatura fica com as condições Cego e Contido, tem Cobertura Total contra ataques e outros efeitos de fora do behir e sofre 21 (6d6) de dano ácido no início de cada turno do behir.\n\nSe o behir sofrer 30 de dano ou mais num único turno vindo da criatura engolida, ele precisa ser bem-sucedido num teste de resistência de Constituição CD 14 no fim desse turno ou regurgita a criatura, que cai num espaço a até 3 m dele com a condição Caído. Se o behir morrer, a criatura engolida deixa de estar Contida e pode sair do cadáver usando 4,5 m de movimento, saindo Caída."
+   }
+  ]
+ },
+ {
+  "slug": "berserker",
+  "nome": "Berserker",
+  "original": "Berserker",
+  "fonte": "monstro",
+  "linha": "Humanoide Médio ou Pequeno, Neutro",
+  "tipo": "Humanoide",
+  "tamanho": "Medium",
+  "ca": "13",
+  "iniciativa": "+1 (11)",
+  "pv": "67 (9d8 + 27)",
+  "deslocamento": "9 m",
+  "atributos": [
+   {
+    "sigla": "For",
+    "valor": 16,
+    "mod": "+3",
+    "save": "+3"
+   },
+   {
+    "sigla": "Des",
+    "valor": 12,
+    "mod": "+1",
+    "save": "+1"
+   },
+   {
+    "sigla": "Con",
+    "valor": 17,
+    "mod": "+3",
+    "save": "+3"
+   },
+   {
+    "sigla": "Int",
+    "valor": 9,
+    "mod": "−1",
+    "save": "−1"
+   },
+   {
+    "sigla": "Sab",
+    "valor": 11,
+    "mod": "+0",
+    "save": "+0"
+   },
+   {
+    "sigla": "Car",
+    "valor": 9,
+    "mod": "−1",
+    "save": "−1"
+   }
+  ],
+  "campos": [
+   {
+    "rotulo": "Equipamento",
+    "valor": "Machado Grande, Gibão de Peles"
+   },
+   {
+    "rotulo": "Sentidos",
+    "valor": "Percepção Passiva 10"
+   },
+   {
+    "rotulo": "Idiomas",
+    "valor": "Comum"
+   }
+  ],
+  "nd": "2",
+  "ndNumero": 2.0,
+  "xp": "450",
+  "bp": "+2",
+  "secoes": [
+   {
+    "titulo": "Traços",
+    "texto": "**_Frenesi Sangrento._** Enquanto estiver Sangrando, o berserker tem Vantagem nas jogadas de ataque e nos testes de resistência."
+   },
+   {
+    "titulo": "Ações",
+    "texto": "**_Machado Grande._** _Jogada de Ataque Corpo a Corpo:_ +5, alcance 1,5 m. _Acerto:_ 9 (1d12 + 3) de dano cortante."
+   }
+  ]
+ },
+ {
+  "slug": "bico-de-machado",
+  "nome": "Bico-de-Machado",
+  "original": "Axe Beak",
+  "fonte": "monstro",
+  "linha": "Monstruosidade Grande, Sem Tendência",
+  "tipo": "Monstruosidade",
+  "tamanho": "Large",
+  "ca": "11",
+  "iniciativa": "+1 (11)",
+  "pv": "19 (3d10 + 3)",
+  "deslocamento": "15 m",
+  "atributos": [
+   {
+    "sigla": "For",
+    "valor": 14,
+    "mod": "+2",
+    "save": "+2"
+   },
+   {
+    "sigla": "Des",
+    "valor": 12,
+    "mod": "+1",
+    "save": "+1"
+   },
+   {
+    "sigla": "Con",
+    "valor": 12,
+    "mod": "+1",
+    "save": "+1"
+   },
+   {
+    "sigla": "Int",
+    "valor": 2,
+    "mod": "−4",
+    "save": "−4"
+   },
+   {
+    "sigla": "Sab",
+    "valor": 10,
+    "mod": "+0",
+    "save": "+0"
+   },
+   {
+    "sigla": "Car",
+    "valor": 5,
+    "mod": "−3",
+    "save": "−3"
+   }
+  ],
+  "campos": [
+   {
+    "rotulo": "Sentidos",
+    "valor": "Percepção Passiva 10"
+   },
+   {
+    "rotulo": "Idiomas",
+    "valor": "nenhum"
+   }
+  ],
+  "nd": "1/4",
+  "ndNumero": 0.25,
+  "xp": "50",
+  "bp": "+2",
+  "secoes": [
+   {
+    "titulo": "Ações",
+    "texto": "**_Bico._** _Jogada de Ataque Corpo a Corpo:_ +4, alcance 1,5 m. _Acerto:_ 6 (1d8 + 2) de dano cortante."
+   }
+  ]
+ },
+ {
+  "slug": "cao-teleportador",
+  "nome": "Cão Teleportador",
+  "original": "Blink Dog",
+  "fonte": "monstro",
+  "linha": "Fada Média, Leal e Bom",
+  "tipo": "Fada",
+  "tamanho": "Medium",
+  "ca": "13",
+  "iniciativa": "+3 (13)",
+  "pv": "22 (4d8 + 4)",
+  "deslocamento": "12 m",
+  "atributos": [
+   {
+    "sigla": "For",
+    "valor": 12,
+    "mod": "+1",
+    "save": "+1"
+   },
+   {
+    "sigla": "Des",
+    "valor": 17,
+    "mod": "+3",
+    "save": "+3"
+   },
+   {
+    "sigla": "Con",
+    "valor": 12,
+    "mod": "+1",
+    "save": "+1"
+   },
+   {
+    "sigla": "Int",
+    "valor": 10,
+    "mod": "+0",
+    "save": "+0"
+   },
+   {
+    "sigla": "Sab",
+    "valor": 13,
+    "mod": "+1",
+    "save": "+1"
+   },
+   {
+    "sigla": "Car",
+    "valor": 11,
+    "mod": "+0",
+    "save": "+0"
+   }
+  ],
+  "campos": [
+   {
+    "rotulo": "Perícias",
+    "valor": "Percepção +5, Furtividade +5"
+   },
+   {
+    "rotulo": "Sentidos",
+    "valor": "Visão no Escuro 18 m; Percepção Passiva 15"
+   },
+   {
+    "rotulo": "Idiomas",
+    "valor": "Cão Teleportador; entende Élfico e Silvestre, mas não os fala"
+   }
+  ],
+  "nd": "1/4",
+  "ndNumero": 0.25,
+  "xp": "50",
+  "bp": "+2",
+  "secoes": [
+   {
+    "titulo": "Ações",
+    "texto": "**_Mordida._** _Jogada de Ataque Corpo a Corpo:_ +5, alcance 1,5 m. _Acerto:_ 5 (1d4 + 3) de dano perfurante."
+   },
+   {
+    "titulo": "Ações Bônus",
+    "texto": "**_Teletransporte (Recarga 4–6)._** O cão se teletransporta até 12 m para um espaço desocupado que consiga ver."
+   }
+  ]
+ },
+ {
+  "slug": "capitao-bandido",
+  "nome": "Capitão Bandido",
+  "original": "Bandit Captain",
+  "fonte": "monstro",
+  "linha": "Humanoide Médio ou Pequeno, Neutro",
+  "tipo": "Humanoide",
+  "tamanho": "Medium",
+  "ca": "15",
+  "iniciativa": "+3 (13)",
+  "pv": "52 (8d8 + 16)",
+  "deslocamento": "9 m",
+  "atributos": [
+   {
+    "sigla": "For",
+    "valor": 15,
+    "mod": "+2",
+    "save": "+4"
+   },
+   {
+    "sigla": "Des",
+    "valor": 16,
+    "mod": "+3",
+    "save": "+5"
+   },
+   {
+    "sigla": "Con",
+    "valor": 14,
+    "mod": "+2",
+    "save": "+2"
+   },
+   {
+    "sigla": "Int",
+    "valor": 14,
+    "mod": "+2",
+    "save": "+2"
+   },
+   {
+    "sigla": "Sab",
+    "valor": 11,
+    "mod": "+0",
+    "save": "+2"
+   },
+   {
+    "sigla": "Car",
+    "valor": 14,
+    "mod": "+2",
+    "save": "+2"
+   }
+  ],
+  "campos": [
+   {
+    "rotulo": "Perícias",
+    "valor": "Atletismo +4, Enganação +4"
+   },
+   {
+    "rotulo": "Equipamento",
+    "valor": "Pistola, Cimitarra, Armadura de Couro Batido"
+   },
+   {
+    "rotulo": "Sentidos",
+    "valor": "Percepção Passiva 10"
+   },
+   {
+    "rotulo": "Idiomas",
+    "valor": "Comum, Gíria de Ladrão"
+   }
+  ],
+  "nd": "2",
+  "ndNumero": 2.0,
+  "xp": "450",
+  "bp": "+2",
+  "secoes": [
+   {
+    "titulo": "Ações",
+    "texto": "**_Ataques Múltiplos._** O bandido faz dois ataques, com Cimitarra e Pistola, em qualquer combinação.\n\n**_Cimitarra._** _Jogada de Ataque Corpo a Corpo:_ +5, alcance 1,5 m. _Acerto:_ 6 (1d6 + 3) de dano cortante.\n\n**_Pistola._** _Jogada de Ataque à Distância:_ +5, alcance 9/27 m. _Acerto:_ 8 (1d10 + 3) de dano perfurante."
+   },
+   {
+    "titulo": "Reações",
+    "texto": "**_Aparar._** _Gatilho:_ O bandido é atingido por uma jogada de ataque corpo a corpo enquanto segura uma arma. _Resposta:_ O bandido soma 2 à CA contra esse ataque, o que pode fazê-lo errar."
+   }
+  ]
+ },
+ {
+  "slug": "diabo-barbado",
+  "nome": "Diabo Barbado",
+  "original": "Bearded Devil",
+  "fonte": "monstro",
+  "linha": "Ínfero (Diabo) Médio, Leal e Mau",
+  "tipo": "Ínfero",
+  "tamanho": "Medium",
+  "ca": "13",
+  "iniciativa": "+2 (12)",
+  "pv": "58 (9d8 + 18)",
+  "deslocamento": "9 m",
+  "atributos": [
+   {
+    "sigla": "For",
+    "valor": 16,
+    "mod": "+3",
+    "save": "+5"
+   },
+   {
+    "sigla": "Des",
+    "valor": 15,
+    "mod": "+2",
+    "save": "+2"
+   },
+   {
+    "sigla": "Con",
+    "valor": 15,
+    "mod": "+2",
+    "save": "+4"
+   },
+   {
+    "sigla": "Int",
+    "valor": 9,
+    "mod": "−1",
+    "save": "−1"
+   },
+   {
+    "sigla": "Sab",
+    "valor": 11,
+    "mod": "+0",
+    "save": "+0"
+   },
+   {
+    "sigla": "Car",
+    "valor": 14,
+    "mod": "+2",
+    "save": "+4"
+   }
+  ],
+  "campos": [
+   {
+    "rotulo": "Resistências",
+    "valor": "Frio"
+   },
+   {
+    "rotulo": "Imunidades",
+    "valor": "Fogo, Veneno; Amedrontado, Envenenado"
+   },
+   {
+    "rotulo": "Sentidos",
+    "valor": "Visão no Escuro 36 m (a Escuridão mágica não atrapalha); Percepção Passiva 10"
+   },
+   {
+    "rotulo": "Idiomas",
+    "valor": "Infernal; telepatia 36 m"
+   }
+  ],
+  "nd": "3",
+  "ndNumero": 3.0,
+  "xp": "700",
+  "bp": "+2",
+  "secoes": [
+   {
+    "titulo": "Traços",
+    "texto": "**_Resistência à Magia._** O diabo tem Vantagem nos testes de resistência contra magias e outros efeitos mágicos."
+   },
+   {
+    "titulo": "Ações",
+    "texto": "**_Ataques Múltiplos._** O diabo faz um ataque de Barba e um de Glaive Infernal.\n\n**_Barba._** _Jogada de Ataque Corpo a Corpo:_ +5, alcance 1,5 m. _Acerto:_ 7 (1d8 + 3) de dano perfurante, e o alvo fica com a condição Envenenado até o início do próximo turno do diabo. Até esse veneno acabar, o alvo não pode recuperar Pontos de Vida.\n\n**_Glaive Infernal._** _Jogada de Ataque Corpo a Corpo:_ +5, alcance 3 m. _Acerto:_ 8 (1d10 + 3) de dano cortante. Se o alvo for uma criatura e ainda não tiver uma ferida infernal, ele sofre o efeito a seguir. _Teste de Resistência de Constituição:_ CD 12. _Falha:_ O alvo recebe uma ferida infernal. Enquanto estiver ferido, perde 5 (1d10) Pontos de Vida no início de cada turno dele. A ferida se fecha depois de 1 minuto, depois que uma magia devolver Pontos de Vida ao alvo, ou depois que ele ou uma criatura a até 1,5 m usar uma ação para estancá-la, com um teste de Sabedoria (Medicina) CD 12 bem-sucedido."
+   }
+  ]
+ },
+ {
+  "slug": "diabo-de-ossos",
+  "nome": "Diabo de Ossos",
+  "original": "Bone Devil",
+  "fonte": "monstro",
+  "linha": "Ínfero (Diabo) Grande, Leal e Mau",
+  "tipo": "Ínfero",
+  "tamanho": "Large",
+  "ca": "16",
+  "iniciativa": "+7 (17)",
+  "pv": "161 (17d10 + 68)",
+  "deslocamento": "12 m, Voo 12 m",
+  "atributos": [
+   {
+    "sigla": "For",
+    "valor": 18,
+    "mod": "+4",
+    "save": "+8"
+   },
+   {
+    "sigla": "Des",
+    "valor": 16,
+    "mod": "+3",
+    "save": "+3"
+   },
+   {
+    "sigla": "Con",
+    "valor": 18,
+    "mod": "+4",
+    "save": "+4"
+   },
+   {
+    "sigla": "Int",
+    "valor": 13,
+    "mod": "+1",
+    "save": "+5"
+   },
+   {
+    "sigla": "Sab",
+    "valor": 14,
+    "mod": "+2",
+    "save": "+6"
+   },
+   {
+    "sigla": "Car",
+    "valor": 16,
+    "mod": "+3",
+    "save": "+7"
+   }
+  ],
+  "campos": [
+   {
+    "rotulo": "Perícias",
+    "valor": "Enganação +7, Intuição +6"
+   },
+   {
+    "rotulo": "Resistências",
+    "valor": "Frio"
+   },
+   {
+    "rotulo": "Imunidades",
+    "valor": "Fogo, Veneno; Envenenado"
+   },
+   {
+    "rotulo": "Sentidos",
+    "valor": "Visão no Escuro 36 m (a Escuridão mágica não atrapalha); Percepção Passiva 12"
+   },
+   {
+    "rotulo": "Idiomas",
+    "valor": "Infernal; telepatia 36 m"
+   }
+  ],
+  "nd": "9",
+  "ndNumero": 9.0,
+  "xp": "5.000",
+  "bp": "+4",
+  "secoes": [
+   {
+    "titulo": "Traços",
+    "texto": "**_Restauração Diabólica._** Se o diabo morrer fora dos Nove Infernos, o corpo some numa fumaça sulfurosa, e ele ganha um corpo novo na hora, revivendo com todos os Pontos de Vida em algum lugar dos Nove Infernos.\n\n**_Resistência à Magia._** O diabo tem Vantagem nos testes de resistência contra magias e outros efeitos mágicos."
+   },
+   {
+    "titulo": "Ações",
+    "texto": "**_Ataques Múltiplos._** O diabo faz dois ataques de Garra e um de Ferrão Infernal.\n\n**_Garra._** _Jogada de Ataque Corpo a Corpo:_ +8, alcance 3 m. _Acerto:_ 13 (2d8 + 4) de dano cortante.\n\n**_Ferrão Infernal._** _Jogada de Ataque Corpo a Corpo:_ +8, alcance 3 m. _Acerto:_ 15 (2d10 + 4) de dano perfurante mais 18 (4d8) de dano de veneno, e o alvo fica com a condição Envenenado até o início do próximo turno do diabo. Envenenado, o alvo não pode recuperar Pontos de Vida."
+   }
+  ]
+ },
+ {
+  "slug": "diabo-farpado",
+  "nome": "Diabo Farpado",
+  "original": "Barbed Devil",
+  "fonte": "monstro",
+  "linha": "Ínfero (Diabo) Médio, Leal e Mau",
+  "tipo": "Ínfero",
+  "tamanho": "Medium",
+  "ca": "15",
+  "iniciativa": "+3 (13)",
+  "pv": "110 (13d8 + 52)",
+  "deslocamento": "9 m, Escalada 9 m",
+  "atributos": [
+   {
+    "sigla": "For",
+    "valor": 16,
+    "mod": "+3",
+    "save": "+6"
+   },
+   {
+    "sigla": "Des",
+    "valor": 17,
+    "mod": "+3",
+    "save": "+3"
+   },
+   {
+    "sigla": "Con",
+    "valor": 18,
+    "mod": "+4",
+    "save": "+7"
+   },
+   {
+    "sigla": "Int",
+    "valor": 12,
+    "mod": "+1",
+    "save": "+1"
+   },
+   {
+    "sigla": "Sab",
+    "valor": 14,
+    "mod": "+2",
+    "save": "+5"
+   },
+   {
+    "sigla": "Car",
+    "valor": 14,
+    "mod": "+2",
+    "save": "+5"
+   }
+  ],
+  "campos": [
+   {
+    "rotulo": "Perícias",
+    "valor": "Enganação +5, Intuição +5, Percepção +8"
+   },
+   {
+    "rotulo": "Resistências",
+    "valor": "Frio"
+   },
+   {
+    "rotulo": "Imunidades",
+    "valor": "Fogo, Veneno; Envenenado"
+   },
+   {
+    "rotulo": "Sentidos",
+    "valor": "Visão no Escuro 36 m (a Escuridão mágica não atrapalha); Percepção Passiva 18"
+   },
+   {
+    "rotulo": "Idiomas",
+    "valor": "Infernal; telepatia 36 m"
+   }
+  ],
+  "nd": "5",
+  "ndNumero": 5.0,
+  "xp": "1.800",
+  "bp": "+3",
+  "secoes": [
+   {
+    "titulo": "Traços",
+    "texto": "**_Couro Farpado._** No início de cada turno dele, o diabo causa 5 (1d10) de dano perfurante a qualquer criatura que esteja agarrando ou que o esteja agarrando.\n\n**_Restauração Diabólica._** Se o diabo morrer fora dos Nove Infernos, o corpo some numa fumaça sulfurosa, e ele ganha um corpo novo na hora, revivendo com todos os Pontos de Vida em algum lugar dos Nove Infernos.\n\n**_Resistência à Magia._** O diabo tem Vantagem nos testes de resistência contra magias e outros efeitos mágicos."
+   },
+   {
+    "titulo": "Ações",
+    "texto": "**_Ataques Múltiplos._** O diabo faz um ataque de Garras e um de Cauda, ou dois ataques de Arremessar Chamas.\n\n**_Garras._** _Jogada de Ataque Corpo a Corpo:_ +6, alcance 1,5 m. _Acerto:_ 10 (2d6 + 3) de dano perfurante. Se o alvo for uma criatura Grande ou menor, fica com a condição Agarrado (CD 13 para escapar) pelas duas garras.\n\n**_Cauda._** _Jogada de Ataque Corpo a Corpo:_ +6, alcance 3 m. _Acerto:_ 14 (2d10 + 3) de dano cortante.\n\n**_Arremessar Chamas._** _Jogada de Ataque à Distância:_ +5, alcance 45 m. _Acerto:_ 17 (5d6) de dano de fogo. Se o alvo for um objeto inflamável que ninguém esteja vestindo ou carregando, ele pega fogo."
+   }
+  ]
+ },
+ {
+  "slug": "dragao-azul-adulto",
+  "nome": "Dragão Azul Adulto",
+  "original": "Adult Blue Dragon",
+  "fonte": "monstro",
+  "linha": "Dragão (Cromático) Enorme, Leal e Mau",
+  "tipo": "Dragão",
+  "tamanho": "Huge",
+  "ca": "19",
+  "iniciativa": "+10 (20)",
+  "pv": "212 (17d12 + 102)",
+  "deslocamento": "12 m, Escavação 9 m, Voo 24 m",
+  "atributos": [
+   {
+    "sigla": "For",
+    "valor": 25,
+    "mod": "+7",
+    "save": "+7"
+   },
+   {
+    "sigla": "Des",
+    "valor": 10,
+    "mod": "+0",
+    "save": "+5"
+   },
+   {
+    "sigla": "Con",
+    "valor": 23,
+    "mod": "+6",
+    "save": "+6"
+   },
+   {
+    "sigla": "Int",
+    "valor": 16,
+    "mod": "+3",
+    "save": "+3"
+   },
+   {
+    "sigla": "Sab",
+    "valor": 15,
+    "mod": "+2",
+    "save": "+7"
+   },
+   {
+    "sigla": "Car",
+    "valor": 20,
+    "mod": "+5",
+    "save": "+5"
+   }
+  ],
+  "campos": [
+   {
+    "rotulo": "Perícias",
+    "valor": "Percepção +12, Furtividade +5"
+   },
+   {
+    "rotulo": "Imunidades",
+    "valor": "Elétrico"
+   },
+   {
+    "rotulo": "Sentidos",
+    "valor": "Percepção às Cegas 18 m, Visão no Escuro 36 m; Percepção Passiva 22"
+   },
+   {
+    "rotulo": "Idiomas",
+    "valor": "Comum, Dracônico"
+   }
+  ],
+  "nd": "16",
+  "ndNumero": 16.0,
+  "xp": "15.000 (ou 18.000 no covil)",
+  "bp": "+5",
+  "secoes": [
+   {
+    "titulo": "Traços",
+    "texto": "**_Resistência Lendária (3/Dia, ou 4/Dia no Covil)._** Se o dragão falhar num teste de resistência, pode escolher ser bem-sucedido."
+   },
+   {
+    "titulo": "Ações",
+    "texto": "**_Ataques Múltiplos._** O dragão faz três ataques de Dilacerar. Ele pode trocar um ataque por um uso de Conjuração para conjurar _Despedaçar_.\n\n**_Dilacerar._** _Jogada de Ataque Corpo a Corpo:_ +12, alcance 3 m. _Acerto:_ 16 (2d8 + 7) de dano cortante mais 5 (1d10) de dano elétrico.\n\n**_Sopro Relampejante (Recarga 5–6)._** _Teste de Resistência de Destreza:_ CD 19, cada criatura numa Linha de 27 m de comprimento e 1,5 m de largura. _Falha:_ 60 (11d10) de dano elétrico. _Sucesso:_ Metade do dano.\n\n**_Conjuração._** O dragão conjura uma das magias a seguir, sem precisar de componentes Materiais e usando Carisma como atributo de conjuração (CD de resistência 18):\n\n**À vontade:** _Detectar Magia_, _Invisibilidade_, _Mãos Mágicas_, _Despedaçar_\n\n**1/Dia cada:** _Vidência_, _Enviar Mensagem_"
+   },
+   {
+    "titulo": "Ações Lendárias",
+    "texto": "_Usos de Ação Lendária: 3 (4 no Covil). Logo depois do turno de outra criatura, o dragão pode gastar um uso para fazer uma das ações a seguir. Ele recupera todos os usos gastos no início de cada turno seu._\n\n**_Voo Encoberto._** O dragão usa Conjuração para conjurar _Invisibilidade_ em si mesmo e pode voar até metade do Deslocamento de Voo. Ele só pode usar esta ação de novo no início do próximo turno dele.\n\n**_Estrondo Sônico._** O dragão usa Conjuração para conjurar _Despedaçar_. Ele só pode usar esta ação de novo no início do próximo turno dele.\n\n**_Rabada._** O dragão faz um ataque de Dilacerar."
+   }
+  ]
+ },
+ {
+  "slug": "dragao-azul-anciao",
+  "nome": "Dragão Azul Ancião",
+  "original": "Ancient Blue Dragon",
+  "fonte": "monstro",
+  "linha": "Dragão (Cromático) Imenso, Leal e Mau",
+  "tipo": "Dragão",
+  "tamanho": "Gargantuan",
+  "ca": "22",
+  "iniciativa": "+14 (24)",
+  "pv": "481 (26d20 + 208)",
+  "deslocamento": "12 m, Escavação 12 m, Voo 24 m",
+  "atributos": [
+   {
+    "sigla": "For",
+    "valor": 29,
+    "mod": "+9",
+    "save": "+9"
+   },
+   {
+    "sigla": "Des",
+    "valor": 10,
+    "mod": "+0",
+    "save": "+7"
+   },
+   {
+    "sigla": "Con",
+    "valor": 27,
+    "mod": "+8",
+    "save": "+8"
+   },
+   {
+    "sigla": "Int",
+    "valor": 18,
+    "mod": "+4",
+    "save": "+4"
+   },
+   {
+    "sigla": "Sab",
+    "valor": 17,
+    "mod": "+3",
+    "save": "+10"
+   },
+   {
+    "sigla": "Car",
+    "valor": 25,
+    "mod": "+7",
+    "save": "+7"
+   }
+  ],
+  "campos": [
+   {
+    "rotulo": "Perícias",
+    "valor": "Percepção +17, Furtividade +7"
+   },
+   {
+    "rotulo": "Imunidades",
+    "valor": "Elétrico"
+   },
+   {
+    "rotulo": "Sentidos",
+    "valor": "Percepção às Cegas 18 m, Visão no Escuro 36 m; Percepção Passiva 27"
+   },
+   {
+    "rotulo": "Idiomas",
+    "valor": "Comum, Dracônico"
+   }
+  ],
+  "nd": "23",
+  "ndNumero": 23.0,
+  "xp": "50.000 (ou 62.000 no covil)",
+  "bp": "+7",
+  "secoes": [
+   {
+    "titulo": "Traços",
+    "texto": "**_Resistência Lendária (4/Dia, ou 5/Dia no Covil)._** Se o dragão falhar num teste de resistência, pode escolher ser bem-sucedido."
+   },
+   {
+    "titulo": "Ações",
+    "texto": "**_Ataques Múltiplos._** O dragão faz três ataques de Dilacerar. Ele pode trocar um ataque por um uso de Conjuração para conjurar _Despedaçar_ (versão de 3º círculo).\n\n**_Dilacerar._** _Jogada de Ataque Corpo a Corpo:_ +16, alcance 4,5 m. _Acerto:_ 18 (2d8 + 9) de dano cortante mais 11 (2d10) de dano elétrico.\n\n**_Sopro Relampejante (Recarga 5–6)._** _Teste de Resistência de Destreza:_ CD 23, cada criatura numa Linha de 36 m de comprimento e 3 m de largura. _Falha:_ 88 (16d10) de dano elétrico. _Sucesso:_ Metade do dano.\n\n**_Conjuração._** O dragão conjura uma das magias a seguir, sem precisar de componentes Materiais e usando Carisma como atributo de conjuração (CD de resistência 22):\n\n**À vontade:** _Detectar Magia_, _Invisibilidade_, _Mãos Mágicas_, _Despedaçar_ (versão de 3º círculo)\n\n**1/Dia cada:** _Vidência_, _Enviar Mensagem_"
+   },
+   {
+    "titulo": "Ações Lendárias",
+    "texto": "_Usos de Ação Lendária: 3 (4 no Covil). Logo depois do turno de outra criatura, o dragão pode gastar um uso para fazer uma das ações a seguir. Ele recupera todos os usos gastos no início de cada turno seu._\n\n**_Voo Encoberto._** O dragão usa Conjuração para conjurar _Invisibilidade_ em si mesmo e pode voar até metade do Deslocamento de Voo. Ele só pode usar esta ação de novo no início do próximo turno dele.\n\n**_Estrondo Sônico._** O dragão usa Conjuração para conjurar _Despedaçar_ (versão de 3º círculo). Ele só pode usar esta ação de novo no início do próximo turno dele.\n\n**_Rabada._** O dragão faz um ataque de Dilacerar."
+   }
+  ]
+ },
+ {
+  "slug": "dragao-azul-jovem",
+  "nome": "Dragão Azul Jovem",
+  "original": "Young Blue Dragon",
+  "fonte": "monstro",
+  "linha": "Dragão (Cromático) Grande, Leal e Mau",
+  "tipo": "Dragão",
+  "tamanho": "Large",
+  "ca": "18",
+  "iniciativa": "+4 (14)",
+  "pv": "152 (16d10 + 64)",
+  "deslocamento": "12 m, Escavação 6 m, Voo 24 m",
+  "atributos": [
+   {
+    "sigla": "For",
+    "valor": 21,
+    "mod": "+5",
+    "save": "+5"
+   },
+   {
+    "sigla": "Des",
+    "valor": 10,
+    "mod": "+0",
+    "save": "+4"
+   },
+   {
+    "sigla": "Con",
+    "valor": 19,
+    "mod": "+4",
+    "save": "+4"
+   },
+   {
+    "sigla": "Int",
+    "valor": 14,
+    "mod": "+2",
+    "save": "+2"
+   },
+   {
+    "sigla": "Sab",
+    "valor": 13,
+    "mod": "+1",
+    "save": "+5"
+   },
+   {
+    "sigla": "Car",
+    "valor": 17,
+    "mod": "+3",
+    "save": "+3"
+   }
+  ],
+  "campos": [
+   {
+    "rotulo": "Perícias",
+    "valor": "Percepção +9, Furtividade +4"
+   },
+   {
+    "rotulo": "Imunidades",
+    "valor": "Elétrico"
+   },
+   {
+    "rotulo": "Sentidos",
+    "valor": "Percepção às Cegas 9 m, Visão no Escuro 36 m; Percepção Passiva 19"
+   },
+   {
+    "rotulo": "Idiomas",
+    "valor": "Comum, Dracônico"
+   }
+  ],
+  "nd": "9",
+  "ndNumero": 9.0,
+  "xp": "5.000",
+  "bp": "+4",
+  "secoes": [
+   {
+    "titulo": "Ações",
+    "texto": "**_Ataques Múltiplos._** O dragão faz três ataques de Dilacerar.\n\n**_Dilacerar._** _Jogada de Ataque Corpo a Corpo:_ +9, alcance 3 m. _Acerto:_ 12 (2d6 + 5) de dano cortante mais 5 (1d10) de dano elétrico.\n\n**_Sopro Relampejante (Recarga 5–6)._** _Teste de Resistência de Destreza:_ CD 16, cada criatura numa Linha de 18 m de comprimento e 1,5 m de largura. _Falha:_ 55 (10d10) de dano elétrico. _Sucesso:_ Metade do dano."
+   }
+  ]
+ },
+ {
+  "slug": "dragao-negro-adulto",
+  "nome": "Dragão Negro Adulto",
+  "original": "Adult Black Dragon",
+  "fonte": "monstro",
+  "linha": "Dragão (Cromático) Enorme, Caótico e Mau",
+  "tipo": "Dragão",
+  "tamanho": "Huge",
+  "ca": "19",
+  "iniciativa": "+12 (22)",
+  "pv": "195 (17d12 + 85)",
+  "deslocamento": "12 m, Voo 24 m, Natação 12 m",
+  "atributos": [
+   {
+    "sigla": "For",
+    "valor": 23,
+    "mod": "+6",
+    "save": "+6"
+   },
+   {
+    "sigla": "Des",
+    "valor": 14,
+    "mod": "+2",
+    "save": "+7"
+   },
+   {
+    "sigla": "Con",
+    "valor": 21,
+    "mod": "+5",
+    "save": "+5"
+   },
+   {
+    "sigla": "Int",
+    "valor": 14,
+    "mod": "+2",
+    "save": "+2"
+   },
+   {
+    "sigla": "Sab",
+    "valor": 13,
+    "mod": "+1",
+    "save": "+6"
+   },
+   {
+    "sigla": "Car",
+    "valor": 19,
+    "mod": "+4",
+    "save": "+4"
+   }
+  ],
+  "campos": [
+   {
+    "rotulo": "Perícias",
+    "valor": "Percepção +11, Furtividade +7"
+   },
+   {
+    "rotulo": "Imunidades",
+    "valor": "Ácido"
+   },
+   {
+    "rotulo": "Sentidos",
+    "valor": "Percepção às Cegas 18 m, Visão no Escuro 36 m; Percepção Passiva 21"
+   },
+   {
+    "rotulo": "Idiomas",
+    "valor": "Comum, Dracônico"
+   }
+  ],
+  "nd": "14",
+  "ndNumero": 14.0,
+  "xp": "11.500 (ou 13.000 no covil)",
+  "bp": "+5",
+  "secoes": [
+   {
+    "titulo": "Traços",
+    "texto": "**_Anfíbio._** O dragão respira ar e água.\n\n**_Resistência Lendária (3/Dia, ou 4/Dia no Covil)._** Se o dragão falhar num teste de resistência, pode escolher ser bem-sucedido."
+   },
+   {
+    "titulo": "Ações",
+    "texto": "**_Ataques Múltiplos._** O dragão faz três ataques de Dilacerar. Ele pode trocar um ataque por um uso de Conjuração para conjurar _Flecha Ácida_ (versão de 3º círculo).\n\n**_Dilacerar._** _Jogada de Ataque Corpo a Corpo:_ +11, alcance 3 m. _Acerto:_ 13 (2d6 + 6) de dano cortante mais 4 (1d8) de dano ácido.\n\n**_Sopro Ácido (Recarga 5–6)._** _Teste de Resistência de Destreza:_ CD 18, cada criatura numa Linha de 18 m de comprimento e 1,5 m de largura. _Falha:_ 54 (12d8) de dano ácido. _Sucesso:_ Metade do dano.\n\n**_Conjuração._** O dragão conjura uma das magias a seguir, sem precisar de componentes Materiais e usando Carisma como atributo de conjuração (CD de resistência 17, +9 para acertar com ataques mágicos):\n\n**À vontade:** _Flecha Ácida_ (versão de 3º círculo), _Detectar Magia_, _Medo_\n\n**1/Dia cada:** _Falar com os Mortos_, _Esfera Vitriólica_"
+   },
+   {
+    "titulo": "Ações Lendárias",
+    "texto": "_Usos de Ação Lendária: 3 (4 no Covil). Logo depois do turno de outra criatura, o dragão pode gastar um uso para fazer uma das ações a seguir. Ele recupera todos os usos gastos no início de cada turno seu._\n\n**_Nuvem de Insetos._** _Teste de Resistência de Destreza:_ CD 17, uma criatura que o dragão consiga ver a até 36 m. _Falha:_ 22 (4d10) de dano de veneno, e o alvo tem Desvantagem nos testes de resistência para manter a Concentração até o fim do próximo turno dele. _Falha ou Sucesso:_ O dragão só pode usar esta ação de novo no início do próximo turno dele.\n\n**_Presença Aterradora._** O dragão usa Conjuração para conjurar _Medo_. Ele só pode usar esta ação de novo no início do próximo turno dele.\n\n**_Bote._** O dragão se move até metade do Deslocamento e faz um ataque de Dilacerar."
+   }
+  ]
+ },
+ {
+  "slug": "dragao-negro-anciao",
+  "nome": "Dragão Negro Ancião",
+  "original": "Ancient Black Dragon",
+  "fonte": "monstro",
+  "linha": "Dragão (Cromático) Imenso, Caótico e Mau",
+  "tipo": "Dragão",
+  "tamanho": "Gargantuan",
+  "ca": "22",
+  "iniciativa": "+16 (26)",
+  "pv": "367 (21d20 + 147)",
+  "deslocamento": "12 m, Voo 24 m, Natação 12 m",
+  "atributos": [
+   {
+    "sigla": "For",
+    "valor": 27,
+    "mod": "+8",
+    "save": "+8"
+   },
+   {
+    "sigla": "Des",
+    "valor": 14,
+    "mod": "+2",
+    "save": "+9"
+   },
+   {
+    "sigla": "Con",
+    "valor": 25,
+    "mod": "+7",
+    "save": "+7"
+   },
+   {
+    "sigla": "Int",
+    "valor": 16,
+    "mod": "+3",
+    "save": "+3"
+   },
+   {
+    "sigla": "Sab",
+    "valor": 15,
+    "mod": "+2",
+    "save": "+9"
+   },
+   {
+    "sigla": "Car",
+    "valor": 22,
+    "mod": "+6",
+    "save": "+6"
+   }
+  ],
+  "campos": [
+   {
+    "rotulo": "Perícias",
+    "valor": "Percepção +16, Furtividade +9"
+   },
+   {
+    "rotulo": "Imunidades",
+    "valor": "Ácido"
+   },
+   {
+    "rotulo": "Sentidos",
+    "valor": "Percepção às Cegas 18 m, Visão no Escuro 36 m; Percepção Passiva 26"
+   },
+   {
+    "rotulo": "Idiomas",
+    "valor": "Comum, Dracônico"
+   }
+  ],
+  "nd": "21",
+  "ndNumero": 21.0,
+  "xp": "33.000 (ou 41.000 no covil)",
+  "bp": "+7",
+  "secoes": [
+   {
+    "titulo": "Traços",
+    "texto": "**_Anfíbio._** O dragão respira ar e água.\n\n**_Resistência Lendária (4/Dia, ou 5/Dia no Covil)._** Se o dragão falhar num teste de resistência, pode escolher ser bem-sucedido."
+   },
+   {
+    "titulo": "Ações",
+    "texto": "**_Ataques Múltiplos._** O dragão faz três ataques de Dilacerar. Ele pode trocar um ataque por um uso de Conjuração para conjurar _Flecha Ácida_ (versão de 4º círculo).\n\n**_Dilacerar._** _Jogada de Ataque Corpo a Corpo:_ +15, alcance 4,5 m. _Acerto:_ 17 (2d8 + 8) de dano cortante mais 9 (2d8) de dano ácido.\n\n**_Sopro Ácido (Recarga 5–6)._** _Teste de Resistência de Destreza:_ CD 22, cada criatura numa Linha de 27 m de comprimento e 3 m de largura. _Falha:_ 67 (15d8) de dano ácido. _Sucesso:_ Metade do dano.\n\n**_Conjuração._** O dragão conjura uma das magias a seguir, sem precisar de componentes Materiais e usando Carisma como atributo de conjuração (CD de resistência 21, +13 para acertar com ataques mágicos):\n\n**À vontade:** _Flecha Ácida_ (versão de 4º círculo), _Detectar Magia_, _Medo_\n\n**1/Dia cada:** _Criar Mortos-Vivos_, _Falar com os Mortos_, _Esfera Vitriólica_ (versão de 5º círculo)"
+   },
+   {
+    "titulo": "Ações Lendárias",
+    "texto": "_Usos de Ação Lendária: 3 (4 no Covil). Logo depois do turno de outra criatura, o dragão pode gastar um uso para fazer uma das ações a seguir. Ele recupera todos os usos gastos no início de cada turno seu._\n\n**_Nuvem de Insetos._** _Teste de Resistência de Destreza:_ CD 21, uma criatura que o dragão consiga ver a até 36 m. _Falha:_ 33 (6d10) de dano de veneno, e o alvo tem Desvantagem nos testes de resistência para manter a Concentração até o fim do próximo turno dele. _Falha ou Sucesso:_ O dragão só pode usar esta ação de novo no início do próximo turno dele.\n\n**_Presença Aterradora._** O dragão usa Conjuração para conjurar _Medo_. Ele só pode usar esta ação de novo no início do próximo turno dele.\n\n**_Bote._** O dragão se move até metade do Deslocamento e faz um ataque de Dilacerar."
+   }
+  ]
+ },
+ {
+  "slug": "dragao-negro-jovem",
+  "nome": "Dragão Negro Jovem",
+  "original": "Young Black Dragon",
+  "fonte": "monstro",
+  "linha": "Dragão (Cromático) Grande, Caótico e Mau",
+  "tipo": "Dragão",
+  "tamanho": "Large",
+  "ca": "18",
+  "iniciativa": "+5 (15)",
+  "pv": "127 (15d10 + 45)",
+  "deslocamento": "12 m, Voo 24 m, Natação 12 m",
+  "atributos": [
+   {
+    "sigla": "For",
+    "valor": 19,
+    "mod": "+4",
+    "save": "+4"
+   },
+   {
+    "sigla": "Des",
+    "valor": 14,
+    "mod": "+2",
+    "save": "+5"
+   },
+   {
+    "sigla": "Con",
+    "valor": 17,
+    "mod": "+3",
+    "save": "+3"
+   },
+   {
+    "sigla": "Int",
+    "valor": 12,
+    "mod": "+1",
+    "save": "+1"
+   },
+   {
+    "sigla": "Sab",
+    "valor": 11,
+    "mod": "+0",
+    "save": "+3"
+   },
+   {
+    "sigla": "Car",
+    "valor": 15,
+    "mod": "+2",
+    "save": "+2"
+   }
+  ],
+  "campos": [
+   {
+    "rotulo": "Perícias",
+    "valor": "Percepção +6, Furtividade +5"
+   },
+   {
+    "rotulo": "Imunidades",
+    "valor": "Ácido"
+   },
+   {
+    "rotulo": "Sentidos",
+    "valor": "Percepção às Cegas 9 m, Visão no Escuro 36 m; Percepção Passiva 16"
+   },
+   {
+    "rotulo": "Idiomas",
+    "valor": "Comum, Dracônico"
+   }
+  ],
+  "nd": "7",
+  "ndNumero": 7.0,
+  "xp": "2.900",
+  "bp": "+3",
+  "secoes": [
+   {
+    "titulo": "Traços",
+    "texto": "**_Anfíbio._** O dragão respira ar e água."
+   },
+   {
+    "titulo": "Ações",
+    "texto": "**_Ataques Múltiplos._** O dragão faz três ataques de Dilacerar.\n\n**_Dilacerar._** _Jogada de Ataque Corpo a Corpo:_ +7, alcance 3 m. _Acerto:_ 9 (2d4 + 4) de dano cortante mais 3 (1d6) de dano ácido.\n\n**_Sopro Ácido (Recarga 5–6)._** _Teste de Resistência de Destreza:_ CD 14, cada criatura numa Linha de 9 m de comprimento e 1,5 m de largura. _Falha:_ 49 (14d6) de dano ácido. _Sucesso:_ Metade do dano."
+   }
+  ]
+ },
+ {
+  "slug": "elemental-do-ar",
+  "nome": "Elemental do Ar",
+  "original": "Air Elemental",
+  "fonte": "monstro",
+  "linha": "Elemental Grande, Neutro",
+  "tipo": "Elemental",
+  "tamanho": "Large",
+  "ca": "15",
+  "iniciativa": "+5 (15)",
+  "pv": "90 (12d10 + 24)",
+  "deslocamento": "3 m, Voo 27 m (pairar)",
+  "atributos": [
+   {
+    "sigla": "For",
+    "valor": 14,
+    "mod": "+2",
+    "save": "+2"
+   },
+   {
+    "sigla": "Des",
+    "valor": 20,
+    "mod": "+5",
+    "save": "+5"
+   },
+   {
+    "sigla": "Con",
+    "valor": 14,
+    "mod": "+2",
+    "save": "+2"
+   },
+   {
+    "sigla": "Int",
+    "valor": 6,
+    "mod": "−2",
+    "save": "−2"
+   },
+   {
+    "sigla": "Sab",
+    "valor": 10,
+    "mod": "+0",
+    "save": "+0"
+   },
+   {
+    "sigla": "Car",
+    "valor": 6,
+    "mod": "−2",
+    "save": "−2"
+   }
+  ],
+  "campos": [
+   {
+    "rotulo": "Resistências",
+    "valor": "Contundente, Elétrico, Perfurante, Cortante"
+   },
+   {
+    "rotulo": "Imunidades",
+    "valor": "Veneno, Trovejante; Exaustão, Agarrado, Paralisado, Petrificado, Envenenado, Caído, Contido, Inconsciente"
+   },
+   {
+    "rotulo": "Sentidos",
+    "valor": "Visão no Escuro 18 m; Percepção Passiva 10"
+   },
+   {
+    "rotulo": "Idiomas",
+    "valor": "Primordial (Auran)"
+   }
+  ],
+  "nd": "5",
+  "ndNumero": 5.0,
+  "xp": "1.800",
+  "bp": "+3",
+  "secoes": [
+   {
+    "titulo": "Traços",
+    "texto": "**_Forma de Ar._** O elemental pode entrar no espaço de uma criatura e parar ali. Ele passa por frestas de até 2,5 centímetros sem gastar movimento extra."
+   },
+   {
+    "titulo": "Ações",
+    "texto": "**_Ataques Múltiplos._** O elemental faz dois ataques de Pancada Trovejante.\n\n**_Pancada Trovejante._** _Jogada de Ataque Corpo a Corpo:_ +8, alcance 3 m. _Acerto:_ 14 (2d8 + 5) de dano trovejante.\n\n**_Redemoinho (Recarga 4–6)._** _Teste de Resistência de Força:_ CD 13, uma criatura Média ou menor no espaço do elemental. _Falha:_ 24 (4d10 + 2) de dano trovejante, e o alvo é empurrado até 6 m em linha reta para longe do elemental e fica com a condição Caído. _Sucesso:_ Só metade do dano."
+   }
+  ]
+ },
+ {
+  "slug": "espada-voadora-animada",
+  "nome": "Espada Voadora Animada",
+  "original": "Animated Flying Sword",
+  "fonte": "monstro",
+  "linha": "Constructo Pequeno, Sem Tendência",
+  "tipo": "Constructo",
+  "tamanho": "Small",
+  "ca": "17",
+  "iniciativa": "+4 (14)",
+  "pv": "14 (4d6)",
+  "deslocamento": "1,5 m, Voo 15 m (pairar)",
+  "atributos": [
+   {
+    "sigla": "For",
+    "valor": 12,
+    "mod": "+1",
+    "save": "+1"
+   },
+   {
+    "sigla": "Des",
+    "valor": 15,
+    "mod": "+2",
+    "save": "+4"
+   },
+   {
+    "sigla": "Con",
+    "valor": 11,
+    "mod": "+0",
+    "save": "+0"
+   },
+   {
+    "sigla": "Int",
+    "valor": 1,
+    "mod": "−5",
+    "save": "−5"
+   },
+   {
+    "sigla": "Sab",
+    "valor": 5,
+    "mod": "−3",
+    "save": "−3"
+   },
+   {
+    "sigla": "Car",
+    "valor": 1,
+    "mod": "−5",
+    "save": "−5"
+   }
+  ],
+  "campos": [
+   {
+    "rotulo": "Imunidades",
+    "valor": "Veneno, Psíquico; Enfeitiçado, Surdo, Exaustão, Amedrontado, Paralisado, Petrificado, Envenenado"
+   },
+   {
+    "rotulo": "Sentidos",
+    "valor": "Percepção às Cegas 18 m; Percepção Passiva 7"
+   },
+   {
+    "rotulo": "Idiomas",
+    "valor": "nenhum"
+   }
+  ],
+  "nd": "1/4",
+  "ndNumero": 0.25,
+  "xp": "50",
+  "bp": "+2",
+  "secoes": [
+   {
+    "titulo": "Ações",
+    "texto": "**_Talho._** _Jogada de Ataque Corpo a Corpo:_ +4, alcance 1,5 m. _Acerto:_ 6 (1d8 + 2) de dano cortante."
+   }
+  ]
+ },
+ {
+  "slug": "filhote-de-dragao-azul",
+  "nome": "Filhote de Dragão Azul",
+  "original": "Blue Dragon Wyrmling",
+  "fonte": "monstro",
+  "linha": "Dragão (Cromático) Médio, Leal e Mau",
+  "tipo": "Dragão",
+  "tamanho": "Medium",
+  "ca": "17",
+  "iniciativa": "+2 (12)",
+  "pv": "65 (10d8 + 20)",
+  "deslocamento": "9 m, Escavação 4,5 m, Voo 18 m",
+  "atributos": [
+   {
+    "sigla": "For",
+    "valor": 17,
+    "mod": "+3",
+    "save": "+3"
+   },
+   {
+    "sigla": "Des",
+    "valor": 10,
+    "mod": "+0",
+    "save": "+2"
+   },
+   {
+    "sigla": "Con",
+    "valor": 15,
+    "mod": "+2",
+    "save": "+2"
+   },
+   {
+    "sigla": "Int",
+    "valor": 12,
+    "mod": "+1",
+    "save": "+1"
+   },
+   {
+    "sigla": "Sab",
+    "valor": 11,
+    "mod": "+0",
+    "save": "+2"
+   },
+   {
+    "sigla": "Car",
+    "valor": 15,
+    "mod": "+2",
+    "save": "+2"
+   }
+  ],
+  "campos": [
+   {
+    "rotulo": "Perícias",
+    "valor": "Percepção +4, Furtividade +2"
+   },
+   {
+    "rotulo": "Imunidades",
+    "valor": "Elétrico"
+   },
+   {
+    "rotulo": "Sentidos",
+    "valor": "Percepção às Cegas 3 m, Visão no Escuro 18 m; Percepção Passiva 14"
+   },
+   {
+    "rotulo": "Idiomas",
+    "valor": "Dracônico"
+   }
+  ],
+  "nd": "3",
+  "ndNumero": 3.0,
+  "xp": "700",
+  "bp": "+2",
+  "secoes": [
+   {
+    "titulo": "Ações",
+    "texto": "**_Ataques Múltiplos._** O dragão faz dois ataques de Dilacerar.\n\n**_Dilacerar._** _Jogada de Ataque Corpo a Corpo:_ +5, alcance 1,5 m. _Acerto:_ 8 (1d10 + 3) de dano cortante mais 3 (1d6) de dano elétrico.\n\n**_Sopro Relampejante (Recarga 5–6)._** _Teste de Resistência de Destreza:_ CD 12, cada criatura numa Linha de 9 m de comprimento e 1,5 m de largura. _Falha:_ 21 (6d6) de dano elétrico. _Sucesso:_ Metade do dano."
+   }
+  ]
+ },
+ {
+  "slug": "filhote-de-dragao-de-latao",
+  "nome": "Filhote de Dragão de Latão",
+  "original": "Brass Dragon Wyrmling",
+  "fonte": "monstro",
+  "linha": "Dragão (Metálico) Médio, Caótico e Bom",
+  "tipo": "Dragão",
+  "tamanho": "Medium",
+  "ca": "15",
+  "iniciativa": "+2 (12)",
+  "pv": "22 (4d8 + 4)",
+  "deslocamento": "9 m, Escavação 4,5 m, Voo 18 m",
+  "atributos": [
+   {
+    "sigla": "For",
+    "valor": 15,
+    "mod": "+2",
+    "save": "+2"
+   },
+   {
+    "sigla": "Des",
+    "valor": 10,
+    "mod": "+0",
+    "save": "+2"
+   },
+   {
+    "sigla": "Con",
+    "valor": 13,
+    "mod": "+1",
+    "save": "+1"
+   },
+   {
+    "sigla": "Int",
+    "valor": 10,
+    "mod": "+0",
+    "save": "+0"
+   },
+   {
+    "sigla": "Sab",
+    "valor": 11,
+    "mod": "+0",
+    "save": "+2"
+   },
+   {
+    "sigla": "Car",
+    "valor": 13,
+    "mod": "+1",
+    "save": "+1"
+   }
+  ],
+  "campos": [
+   {
+    "rotulo": "Perícias",
+    "valor": "Percepção +4, Furtividade +2"
+   },
+   {
+    "rotulo": "Imunidades",
+    "valor": "Fogo"
+   },
+   {
+    "rotulo": "Sentidos",
+    "valor": "Percepção às Cegas 3 m, Visão no Escuro 18 m; Percepção Passiva 14"
+   },
+   {
+    "rotulo": "Idiomas",
+    "valor": "Dracônico"
+   }
+  ],
+  "nd": "1",
+  "ndNumero": 1.0,
+  "xp": "200",
+  "bp": "+2",
+  "secoes": [
+   {
+    "titulo": "Ações",
+    "texto": "**_Dilacerar._** _Jogada de Ataque Corpo a Corpo:_ +4, alcance 1,5 m. _Acerto:_ 7 (1d10 + 2) de dano cortante.\n\n**_Sopro de Fogo (Recarga 5–6)._** _Teste de Resistência de Destreza:_ CD 11, cada criatura numa Linha de 6 m de comprimento e 1,5 m de largura. _Falha:_ 14 (4d6) de dano de fogo. _Sucesso:_ Metade do dano.\n\n**_Sopro do Sono._** _Teste de Resistência de Constituição:_ CD 11, cada criatura num Cone de 4,5 m. _Falha:_ O alvo fica com a condição Incapacitado até o fim do próximo turno dele, quando repete o teste. _Segunda Falha:_ O alvo fica com a condição Inconsciente por 1 minuto. O efeito acaba para o alvo se ele sofrer dano ou se uma criatura a até 1,5 m dele usar uma ação para acordá-lo."
+   }
+  ]
+ },
+ {
+  "slug": "filhote-de-dragao-negro",
+  "nome": "Filhote de Dragão Negro",
+  "original": "Black Dragon Wyrmling",
+  "fonte": "monstro",
+  "linha": "Dragão (Cromático) Médio, Caótico e Mau",
+  "tipo": "Dragão",
+  "tamanho": "Medium",
+  "ca": "17",
+  "iniciativa": "+4 (14)",
+  "pv": "33 (6d8 + 6)",
+  "deslocamento": "9 m, Voo 18 m, Natação 9 m",
+  "atributos": [
+   {
+    "sigla": "For",
+    "valor": 15,
+    "mod": "+2",
+    "save": "+2"
+   },
+   {
+    "sigla": "Des",
+    "valor": 14,
+    "mod": "+2",
+    "save": "+4"
+   },
+   {
+    "sigla": "Con",
+    "valor": 13,
+    "mod": "+1",
+    "save": "+1"
+   },
+   {
+    "sigla": "Int",
+    "valor": 10,
+    "mod": "+0",
+    "save": "+0"
+   },
+   {
+    "sigla": "Sab",
+    "valor": 11,
+    "mod": "+0",
+    "save": "+2"
+   },
+   {
+    "sigla": "Car",
+    "valor": 13,
+    "mod": "+1",
+    "save": "+1"
+   }
+  ],
+  "campos": [
+   {
+    "rotulo": "Perícias",
+    "valor": "Percepção +4, Furtividade +4"
+   },
+   {
+    "rotulo": "Imunidades",
+    "valor": "Ácido"
+   },
+   {
+    "rotulo": "Sentidos",
+    "valor": "Percepção às Cegas 3 m, Visão no Escuro 18 m; Percepção Passiva 14"
+   },
+   {
+    "rotulo": "Idiomas",
+    "valor": "Dracônico"
+   }
+  ],
+  "nd": "2",
+  "ndNumero": 2.0,
+  "xp": "450",
+  "bp": "+2",
+  "secoes": [
+   {
+    "titulo": "Traços",
+    "texto": "**_Anfíbio._** O dragão respira ar e água."
+   },
+   {
+    "titulo": "Ações",
+    "texto": "**_Ataques Múltiplos._** O dragão faz dois ataques de Dilacerar.\n\n**_Dilacerar._** _Jogada de Ataque Corpo a Corpo:_ +4, alcance 1,5 m. _Acerto:_ 5 (1d6 + 2) de dano cortante mais 2 (1d4) de dano ácido.\n\n**_Sopro Ácido (Recarga 5–6)._** _Teste de Resistência de Destreza:_ CD 11, cada criatura numa Linha de 4,5 m de comprimento e 1,5 m de largura. _Falha:_ 22 (5d8) de dano ácido. _Sucesso:_ Metade do dano."
+   }
+  ]
+ },
+ {
+  "slug": "pudim-negro",
+  "nome": "Pudim Negro",
+  "original": "Black Pudding",
+  "fonte": "monstro",
+  "linha": "Gosma Grande, Sem Tendência",
+  "tipo": "Gosma",
+  "tamanho": "Large",
+  "ca": "7",
+  "iniciativa": "−3 (7)",
+  "pv": "68 (8d10 + 24)",
+  "deslocamento": "6 m, Escalada 6 m",
+  "atributos": [
+   {
+    "sigla": "For",
+    "valor": 16,
+    "mod": "+3",
+    "save": "+3"
+   },
+   {
+    "sigla": "Des",
+    "valor": 5,
+    "mod": "−3",
+    "save": "−3"
+   },
+   {
+    "sigla": "Con",
+    "valor": 16,
+    "mod": "+3",
+    "save": "+3"
+   },
+   {
+    "sigla": "Int",
+    "valor": 1,
+    "mod": "−5",
+    "save": "−5"
+   },
+   {
+    "sigla": "Sab",
+    "valor": 6,
+    "mod": "−2",
+    "save": "−2"
+   },
+   {
+    "sigla": "Car",
+    "valor": 1,
+    "mod": "−5",
+    "save": "−5"
+   }
+  ],
+  "campos": [
+   {
+    "rotulo": "Imunidades",
+    "valor": "Ácido, Frio, Elétrico, Cortante; Enfeitiçado, Surdo, Exaustão, Amedrontado, Agarrado, Caído, Contido"
+   },
+   {
+    "rotulo": "Sentidos",
+    "valor": "Percepção às Cegas 18 m; Percepção Passiva 8"
+   },
+   {
+    "rotulo": "Idiomas",
+    "valor": "nenhum"
+   }
+  ],
+  "nd": "4",
+  "ndNumero": 4.0,
+  "xp": "1.100",
+  "bp": "+2",
+  "secoes": [
+   {
+    "titulo": "Traços",
+    "texto": "**_Amorfo._** O pudim passa por frestas de até 2,5 centímetros sem gastar movimento extra.\n\n**_Forma Corrosiva._** Uma criatura que acerte o pudim com uma jogada de ataque corpo a corpo sofre 4 (1d8) de dano ácido. Munição não mágica é destruída logo depois de acertar o pudim e causar dano. Qualquer arma não mágica sofre uma penalidade cumulativa de −1 nas jogadas de ataque logo depois de causar dano ao pudim e encostar nele. A arma é destruída se a penalidade chegar a −5. A magia _Consertar_ conjurada na arma remove a penalidade.\n\nEm 1 minuto, o pudim corrói até 60 centímetros de madeira ou metal não mágicos.\n\n**_Patas de Aranha._** O pudim escala superfícies difíceis, inclusive pelo teto, sem precisar fazer teste de atributo."
+   },
+   {
+    "titulo": "Ações",
+    "texto": "**_Pseudópode Dissolvente._** _Jogada de Ataque Corpo a Corpo:_ +5, alcance 3 m. _Acerto:_ 17 (4d6 + 3) de dano ácido. Armaduras não mágicas vestidas pelo alvo sofrem uma penalidade de −1 na CA que dão. A armadura é destruída se a penalidade reduzir a CA dela a 10. A magia _Consertar_ conjurada na armadura remove a penalidade."
+   },
+   {
+    "titulo": "Reações",
+    "texto": "**_Divisão._** _Gatilho:_ Enquanto for Grande ou Médio e tiver 10 Pontos de Vida ou mais, o pudim fica Sangrando ou sofre dano elétrico ou cortante. _Resposta:_ O pudim se divide em dois novos **Pudins Negros**. Cada pudim novo é uma categoria de tamanho menor que o original e age na Iniciativa dele. Os Pontos de Vida do pudim original são divididos igualmente entre os novos (arredondados para baixo)."
+   }
+  ]
+ },
+ {
+  "slug": "sentinela-azer",
+  "nome": "Sentinela Azer",
+  "original": "Azer Sentinel",
+  "fonte": "monstro",
+  "linha": "Elemental Médio, Leal e Neutro",
+  "tipo": "Elemental",
+  "tamanho": "Medium",
+  "ca": "17",
+  "iniciativa": "+1 (11)",
+  "pv": "39 (6d8 + 12)",
+  "deslocamento": "9 m",
+  "atributos": [
+   {
+    "sigla": "For",
+    "valor": 17,
+    "mod": "+3",
+    "save": "+3"
+   },
+   {
+    "sigla": "Des",
+    "valor": 12,
+    "mod": "+1",
+    "save": "+1"
+   },
+   {
+    "sigla": "Con",
+    "valor": 15,
+    "mod": "+2",
+    "save": "+4"
+   },
+   {
+    "sigla": "Int",
+    "valor": 12,
+    "mod": "+1",
+    "save": "+1"
+   },
+   {
+    "sigla": "Sab",
+    "valor": 13,
+    "mod": "+1",
+    "save": "+1"
+   },
+   {
+    "sigla": "Car",
+    "valor": 10,
+    "mod": "+0",
+    "save": "+0"
+   }
+  ],
+  "campos": [
+   {
+    "rotulo": "Imunidades",
+    "valor": "Fogo, Veneno; Envenenado"
+   },
+   {
+    "rotulo": "Sentidos",
+    "valor": "Percepção Passiva 11"
+   },
+   {
+    "rotulo": "Idiomas",
+    "valor": "Primordial (Ignan)"
+   }
+  ],
+  "nd": "2",
+  "ndNumero": 2.0,
+  "xp": "450",
+  "bp": "+2",
+  "secoes": [
+   {
+    "titulo": "Traços",
+    "texto": "**_Aura de Fogo._** No fim de cada turno do azer, cada criatura à escolha dele numa Emanação de 1,5 m a partir dele sofre 5 (1d10) de dano de fogo, a não ser que o azer esteja com a condição Incapacitado.\n\n**_Iluminação._** O azer emite Luz Plena num raio de 3 m e Penumbra por mais 3 m."
+   },
+   {
+    "titulo": "Ações",
+    "texto": "**_Martelo Ardente._** _Jogada de Ataque Corpo a Corpo:_ +5, alcance 1,5 m. _Acerto:_ 8 (1d10 + 3) de dano contundente mais 3 (1d6) de dano de fogo."
+   }
+  ]
+ },
+ {
+  "slug": "tapete-sufocante-animado",
+  "nome": "Tapete Sufocante Animado",
+  "original": "Animated Rug of Smothering",
+  "fonte": "monstro",
+  "linha": "Constructo Grande, Sem Tendência",
+  "tipo": "Constructo",
+  "tamanho": "Large",
+  "ca": "12",
+  "iniciativa": "+4 (14)",
+  "pv": "27 (5d10)",
+  "deslocamento": "3 m",
+  "atributos": [
+   {
+    "sigla": "For",
+    "valor": 17,
+    "mod": "+3",
+    "save": "+3"
+   },
+   {
+    "sigla": "Des",
+    "valor": 14,
+    "mod": "+2",
+    "save": "+2"
+   },
+   {
+    "sigla": "Con",
+    "valor": 10,
+    "mod": "+0",
+    "save": "+0"
+   },
+   {
+    "sigla": "Int",
+    "valor": 1,
+    "mod": "−5",
+    "save": "−5"
+   },
+   {
+    "sigla": "Sab",
+    "valor": 3,
+    "mod": "−4",
+    "save": "−4"
+   },
+   {
+    "sigla": "Car",
+    "valor": 1,
+    "mod": "−5",
+    "save": "−5"
+   }
+  ],
+  "campos": [
+   {
+    "rotulo": "Imunidades",
+    "valor": "Veneno, Psíquico; Enfeitiçado, Surdo, Exaustão, Amedrontado, Paralisado, Petrificado, Envenenado"
+   },
+   {
+    "rotulo": "Sentidos",
+    "valor": "Percepção às Cegas 18 m; Percepção Passiva 6"
+   },
+   {
+    "rotulo": "Idiomas",
+    "valor": "nenhum"
+   }
+  ],
+  "nd": "2",
+  "ndNumero": 2.0,
+  "xp": "450",
+  "bp": "+2",
+  "secoes": [
+   {
+    "titulo": "Ações",
+    "texto": "**_Sufocar._** _Jogada de Ataque Corpo a Corpo:_ +5, alcance 1,5 m. _Acerto:_ 10 (2d6 + 3) de dano contundente. Se o alvo for uma criatura Média ou menor, o tapete pode deixá-lo com a condição Agarrado (CD 13 para escapar) em vez de causar dano. Até a agarrada acabar, o alvo fica com as condições Cego e Contido, está sufocando e sofre 10 (2d6 + 3) de dano contundente no início de cada turno dele. O tapete só sufoca uma criatura por vez.\n\nEnquanto agarra o alvo, o tapete não pode usar esta ação, sofre só metade do dano que recebe (arredondado para baixo), e o alvo sofre a mesma quantidade de dano."
+   }
+  ]
+ }
+]
