@@ -1,0 +1,347 @@
+=== Alarm | Alarme
+material: um sino e um fio de prata
+Você arma um alarme contra intrusos. Escolha uma porta, uma janela ou uma área dentro do alcance que não seja maior que um Cubo de 6 metros. Até a magia acabar, um alarme avisa você sempre que uma criatura tocar ou entrar na área protegida. Quando conjura a magia, você pode indicar criaturas que não disparam o alarme. Você também escolhe se o alarme é sonoro ou mental:
+
+**Alarme Sonoro.** O alarme produz o som de uma sineta por 10 segundos, audível a até 18 metros da área protegida.
+
+**Alarme Mental.** Você recebe um aviso mental se estiver a até 1,5 quilômetro da área protegida. O aviso acorda você se estiver dormindo.
+
+=== Animal Friendship | Amizade Animal
+material: um pedacinho de comida
+Escolha como alvo uma Fera que você consiga ver dentro do alcance. O alvo precisa ser bem-sucedido numa salvaguarda de Sabedoria ou fica com a condição Enfeitiçado pela duração. Se você ou um dos seus aliados causar dano ao alvo, a magia acaba.
+
+_Usando um Espaço de Magia de Círculo Superior._ Você pode escolher uma Fera adicional como alvo para cada círculo do espaço acima do 1º.
+
+=== Bane | Perdição
+material: uma gota de sangue
+Até três criaturas à sua escolha que você consiga ver dentro do alcance fazem uma salvaguarda de Carisma. Sempre que um alvo que falhou nessa salvaguarda fizer uma jogada de ataque ou uma salvaguarda antes de a magia acabar, ele precisa subtrair 1d4 do resultado.
+
+_Usando um Espaço de Magia de Círculo Superior._ Você pode escolher uma criatura adicional como alvo para cada círculo do espaço acima do 1º.
+
+=== Bless | Bênção
+material: um Símbolo Sagrado que valha 5 PO ou mais
+Você abençoa até três criaturas dentro do alcance. Sempre que um alvo fizer uma jogada de ataque ou uma salvaguarda antes de a magia acabar, ele soma 1d4 ao resultado.
+
+_Usando um Espaço de Magia de Círculo Superior._ Você pode escolher uma criatura adicional como alvo para cada círculo do espaço acima do 1º.
+
+=== Burning Hands | Mãos Flamejantes
+Uma lâmina fina de chamas dispara de você. Cada criatura num Cone de 4,5 metros faz uma salvaguarda de Destreza, sofrendo 3d6 de dano de fogo se falhar, ou metade desse dano se for bem-sucedida.
+
+Objetos inflamáveis no Cone que não estejam sendo vestidos ou carregados pegam fogo.
+
+_Usando um Espaço de Magia de Círculo Superior._ O dano aumenta em 1d6 para cada círculo do espaço acima do 1º.
+
+=== Charm Person | Enfeitiçar Pessoa
+Um Humanoide que você consiga ver dentro do alcance faz uma salvaguarda de Sabedoria, com Vantagem se você ou seus aliados estiverem lutando contra ele. Se falhar, o alvo fica com a condição Enfeitiçado até a magia acabar ou até que você ou seus aliados causem dano a ele. A criatura Enfeitiçada é Amistosa com você. Quando a magia acaba, o alvo sabe que foi Enfeitiçado por você.
+
+_Usando um Espaço de Magia de Círculo Superior._ Você pode escolher uma criatura adicional como alvo para cada círculo do espaço acima do 1º.
+
+=== Chromatic Orb | Orbe Cromático
+material: um diamante que valha 50 PO ou mais
+Você arremessa um orbe de energia num alvo dentro do alcance. Escolha ácido, frio, fogo, elétrico, veneno ou trovejante como o tipo do orbe e faça um ataque mágico à distância contra o alvo. Se acertar, o alvo sofre 3d8 de dano do tipo escolhido.
+
+Se você tirar o mesmo número em dois ou mais dos d8, o orbe salta para outro alvo à sua escolha a até 9 metros do primeiro. Faça uma jogada de ataque contra o novo alvo e role o dano de novo. O orbe não pode saltar outra vez, a menos que você conjure a magia com um espaço de 2º círculo ou superior.
+
+_Usando um Espaço de Magia de Círculo Superior._ O dano aumenta em 1d8 para cada círculo do espaço acima do 1º. O orbe pode saltar um número máximo de vezes igual ao círculo do espaço gasto, e cada criatura só pode ser alvo uma vez em cada conjuração desta magia.
+
+=== Color Spray | Leque Cromático
+material: uma pitada de areia colorida
+Você lança uma rajada ofuscante de luzes coloridas e piscantes. Cada criatura num Cone de 4,5 metros que sai de você precisa ser bem-sucedida numa salvaguarda de Constituição ou fica com a condição Cego até o fim do seu próximo turno.
+
+=== Command | Comando
+Você diz um comando de uma só palavra a uma criatura que você consiga ver dentro do alcance. O alvo precisa ser bem-sucedido numa salvaguarda de Sabedoria ou obedece ao comando no próximo turno dele. Escolha o comando entre estas opções:
+
+**Aproxime-se.** O alvo se move na sua direção pelo caminho mais curto e direto, e encerra o turno se chegar a até 1,5 metro de você.
+
+**Largue.** O alvo larga o que estiver segurando e encerra o turno.
+
+**Fuja.** O alvo gasta o turno se afastando de você pelo meio mais rápido que tiver.
+
+**Rasteje.** O alvo fica com a condição Caído e encerra o turno.
+
+**Pare.** No turno dele, o alvo não se move e não faz nenhuma ação nem Ação Bônus.
+
+_Usando um Espaço de Magia de Círculo Superior._ Você pode afetar uma criatura adicional para cada círculo do espaço acima do 1º.
+
+=== Comprehend Languages | Compreender Idiomas
+material: uma pitada de fuligem e sal
+Pela duração, você entende o sentido literal de qualquer idioma que ouvir ou vir sendo sinalizado. Também entende qualquer idioma escrito que vir, mas precisa estar tocando a superfície onde as palavras estão escritas. Ler uma página de texto leva cerca de 1 minuto. Esta magia não decifra símbolos nem mensagens secretas.
+
+=== Create or Destroy Water | Criar ou Destruir Água
+material: uma mistura de água e areia
+Você faz uma das coisas a seguir:
+
+**Criar Água.** Você cria até 40 litros de água limpa dentro do alcance, num recipiente aberto. Se preferir, a água cai como chuva num Cubo de 9 metros dentro do alcance, apagando as chamas expostas ali.
+
+**Destruir Água.** Você destrói até 40 litros de água num recipiente aberto dentro do alcance. Se preferir, destrói a neblina num Cubo de 9 metros dentro do alcance.
+
+_Usando um Espaço de Magia de Círculo Superior._ Para cada círculo do espaço acima do 1º, você cria ou destrói mais 40 litros de água, ou o tamanho do Cubo aumenta em 1,5 metro.
+
+=== Cure Wounds | Curar Ferimentos
+Uma criatura que você toca recupera Pontos de Vida iguais a 2d8 mais o modificador do seu atributo de conjuração.
+
+_Usando um Espaço de Magia de Círculo Superior._ A cura aumenta em 2d8 para cada círculo do espaço acima do 1º.
+
+=== Detect Evil and Good | Detectar o Bem e o Mal
+Pela duração, você sente a localização de qualquer Aberração, Celestial, Elemental, Fada, Ínfero ou Morto-Vivo a até 9 metros de você. Também sente se a magia _Consagrar_ está ativa ali e, se estiver, onde.
+
+A magia é bloqueada por 30 centímetros de pedra, terra ou madeira, 2,5 centímetros de metal, ou uma lâmina fina de chumbo.
+
+=== Detect Magic | Detectar Magia
+Pela duração, você sente a presença de efeitos mágicos a até 9 metros de você. Se sentir algum, pode usar a ação de Magia para ver uma aura tênue em volta de qualquer criatura ou objeto visível na área que carregue magia e, se o efeito tiver sido criado por uma magia, descobre a escola dessa magia.
+
+A magia é bloqueada por 30 centímetros de pedra, terra ou madeira, 2,5 centímetros de metal, ou uma lâmina fina de chumbo.
+
+=== Detect Poison and Disease | Detectar Veneno e Doença
+material: uma folha de teixo
+Pela duração, você sente a localização de venenos, criaturas venenosas ou peçonhentas e contágios mágicos a até 9 metros de você. Em cada caso, você sabe que tipo de veneno, criatura ou contágio é.
+
+A magia é bloqueada por 30 centímetros de pedra, terra ou madeira, 2,5 centímetros de metal, ou uma lâmina fina de chumbo.
+
+=== Disguise Self | Disfarçar-se
+Você muda a sua aparência, incluindo roupas, armadura, armas e outros pertences que estiver carregando, até a magia acabar. Pode parecer até 30 centímetros mais baixo ou mais alto, e mais pesado ou mais leve. A forma escolhida precisa ter a mesma disposição básica de membros que você. Fora isso, a ilusão vai até onde você quiser.
+
+As mudanças feitas por esta magia não resistem a uma inspeção física. Por exemplo, se você usar a magia para pôr um chapéu na roupa, os objetos atravessam o chapéu, e quem o tocar não sente nada.
+
+Para perceber que você está disfarçado, uma criatura precisa usar a ação de Estudo para examinar a sua aparência e ser bem-sucedida num teste de Inteligência (Investigação) contra a CD de salvaguarda da sua magia.
+
+=== Dissonant Whispers | Sussurros Dissonantes
+Uma criatura à sua escolha que você consiga ver dentro do alcance ouve uma melodia discordante na mente. O alvo faz uma salvaguarda de Sabedoria. Se falhar, sofre 3d6 de dano psíquico e precisa usar a Reação na mesma hora, se puder, para se afastar de você o máximo que conseguir, pelo caminho mais seguro. Se for bem-sucedido, sofre só metade do dano.
+
+_Usando um Espaço de Magia de Círculo Superior._ O dano aumenta em 1d6 para cada círculo do espaço acima do 1º.
+
+=== Divine Favor | Favor Divino
+Até a magia acabar, seus ataques com armas causam 1d4 de dano radiante extra quando acertam.
+
+=== Divine Smite | Destruição Divina
+tempo: Ação Bônus, que você usa logo depois de acertar um alvo com uma arma corpo a corpo ou um Ataque Desarmado
+O alvo sofre 2d8 de dano radiante extra com o ataque. O dano aumenta em 1d8 se o alvo for um Ínfero ou um Morto-Vivo.
+
+_Usando um Espaço de Magia de Círculo Superior._ O dano aumenta em 1d8 para cada círculo do espaço acima do 1º.
+
+=== Ensnaring Strike | Golpe Constritor
+tempo: Ação Bônus, que você usa logo depois de acertar uma criatura com uma arma
+Quando você acerta o alvo, vinhas agarradoras surgem nele, e ele faz uma salvaguarda de Força. Uma criatura Grande ou maior tem Vantagem nessa salvaguarda. Se falhar, o alvo fica com a condição Contido até a magia acabar. Se for bem-sucedido, as vinhas murcham e a magia acaba.
+
+Enquanto estiver Contido, o alvo sofre 1d6 de dano perfurante no começo de cada turno dele. O alvo, ou uma criatura que o alcance, pode usar uma ação para fazer um teste de Força (Atletismo) contra a CD de salvaguarda da sua magia. Se passar, a magia acaba.
+
+_Usando um Espaço de Magia de Círculo Superior._ O dano aumenta em 1d6 para cada círculo do espaço acima do 1º.
+
+=== Entangle | Constrição
+Plantas agarradoras brotam do chão num quadrado de 6 metros dentro do alcance. Pela duração, elas transformam o chão da área em Terreno Difícil. Elas desaparecem quando a magia acaba.
+
+Cada criatura (exceto você) que estiver na área quando você conjurar a magia precisa ser bem-sucedida numa salvaguarda de Força ou fica com a condição Contido até a magia acabar. Uma criatura Contida pode usar uma ação para fazer um teste de Força (Atletismo) contra a CD de salvaguarda da sua magia. Se passar, ela se solta das plantas e deixa de estar Contida por elas.
+
+=== Expeditious Retreat | Recuo Acelerado
+Você usa a ação de Disparada e, até a magia acabar, pode usar essa ação de novo como Ação Bônus.
+
+=== Faerie Fire | Fogo das Fadas
+Os objetos num Cubo de 6 metros dentro do alcance ficam contornados por uma luz azul, verde ou violeta (à sua escolha). Cada criatura no Cubo também fica contornada se falhar numa salvaguarda de Destreza. Pela duração, os objetos e as criaturas afetadas emitem Penumbra num raio de 3 metros e não podem se beneficiar da condição Invisível.
+
+Jogadas de ataque contra uma criatura ou objeto afetado têm Vantagem se o atacante conseguir vê-lo.
+
+=== False Life | Vida Falsa
+material: uma gota de álcool
+Você ganha 2d4 + 4 Pontos de Vida Temporários.
+
+_Usando um Espaço de Magia de Círculo Superior._ Você ganha mais 5 Pontos de Vida Temporários para cada círculo do espaço acima do 1º.
+
+=== Feather Fall | Queda Suave
+tempo: Reação, que você usa quando você, ou uma criatura que você consiga ver a até 18 metros de você, começa a cair
+material: uma pena pequena ou um pouco de penugem
+Escolha até cinco criaturas em queda dentro do alcance. A velocidade de queda de cada uma diminui para 18 metros por rodada até a magia acabar. Se uma criatura chegar ao chão antes de a magia acabar, ela não sofre dano da queda, e a magia acaba para ela.
+
+=== Find Familiar | Encontrar Familiar
+material: incenso aceso que valha 10 PO ou mais, consumido pela magia
+Você ganha os serviços de um familiar, um espírito que assume a forma animal que você escolher: **morcego, gato, sapo, falcão, lagarto, polvo, coruja, rato, corvo, aranha, doninha** ou outra Fera com Nível de Desafio 0. O familiar aparece num espaço desocupado dentro do alcance e tem as estatísticas da forma escolhida, mas é um Celestial, uma Fada ou um Ínfero (à sua escolha) em vez de uma Fera. Ele age de forma independente, mas obedece aos seus comandos.
+
+_Conexão Telepática._ Enquanto o familiar estiver a até 30 metros de você, vocês podem se comunicar por telepatia. Além disso, com uma Ação Bônus, você pode ver pelos olhos dele e ouvir o que ele ouve até o começo do seu próximo turno, ganhando os benefícios de qualquer sentido especial que ele tenha.
+
+Por fim, quando você conjura uma magia de alcance de toque, o familiar pode entregar o toque por você. Ele precisa estar a até 30 metros de você e usar a Reação dele para entregar o toque quando você conjurar a magia.
+
+_Combate._ O familiar é aliado seu e dos seus aliados. Ele rola a própria Iniciativa e age no próprio turno. Um familiar não pode atacar, mas pode fazer as outras ações normalmente.
+
+_Sumiço do Familiar._ Quando o familiar chega a 0 Pontos de Vida, ele desaparece, e volta depois que você conjurar esta magia de novo. Com uma ação de Magia, você pode dispensá-lo temporariamente para uma dimensão de bolso, ou então dispensá-lo para sempre. Com uma ação de Magia enquanto ele estiver dispensado, você pode fazê-lo reaparecer num espaço desocupado a até 9 metros de você. Sempre que o familiar chega a 0 Pontos de Vida ou some na dimensão de bolso, ele deixa no espaço dele tudo o que estava vestindo ou carregando.
+
+_Um Familiar Só._ Você não pode ter mais de um familiar ao mesmo tempo. Se conjurar esta magia enquanto já tiver um, ele assume uma nova forma permitida.
+
+=== Floating Disk | Disco Flutuante
+material: uma gota de mercúrio
+Esta magia cria um plano circular e horizontal de energia, com 90 centímetros de diâmetro e 2,5 centímetros de espessura, que flutua a 90 centímetros do chão, num espaço desocupado à sua escolha que você consiga ver dentro do alcance. O disco dura pela duração e aguenta até 250 quilos. Se mais peso for posto nele, a magia acaba, e tudo o que estiver sobre o disco cai no chão.
+
+O disco fica parado enquanto você estiver a até 6 metros dele. Se você se afastar mais de 6 metros, o disco segue você para continuar a até 6 metros de distância. Ele consegue atravessar terreno irregular, subir ou descer escadas, ladeiras e afins, mas não vence um desnível de 3 metros ou mais. Por exemplo, o disco não atravessa um buraco de 3 metros de profundidade, nem sairia de um buraco assim se tivesse sido criado lá no fundo.
+
+Se você se afastar mais de 30 metros do disco (normalmente porque ele não conseguiu contornar um obstáculo para segui-lo), a magia acaba.
+
+=== Fog Cloud | Névoa Obscurecente
+Você cria uma Esfera de neblina com 6 metros de raio, centrada num ponto dentro do alcance. A Esfera é Totalmente Obscurecida. Ela dura pela duração ou até que um vento forte (como o criado por _Lufada de Vento_) a disperse.
+
+_Usando um Espaço de Magia de Círculo Superior._ O raio da neblina aumenta em 6 metros para cada círculo do espaço acima do 1º.
+
+=== Goodberry | Bom Fruto
+material: um raminho de visco
+Dez frutinhas aparecem na sua mão, cheias de magia pela duração. Uma criatura pode usar uma Ação Bônus para comer uma delas. Comer uma frutinha restaura 1 Ponto de Vida, e ela alimenta o bastante para sustentar uma criatura por um dia.
+
+As frutinhas que não forem comidas desaparecem quando a magia acaba.
+
+=== Grease | Área Escorregadia
+material: um pedaço de torresmo ou de manteiga
+Uma graxa não inflamável cobre o chão num quadrado de 3 metros centrado num ponto dentro do alcance e o transforma em Terreno Difícil pela duração.
+
+Quando a graxa aparece, cada criatura de pé na área precisa ser bem-sucedida numa salvaguarda de Destreza ou fica com a condição Caído. Uma criatura que entrar na área ou terminar o turno nela também precisa ser bem-sucedida nessa salvaguarda ou cai.
+
+=== Guiding Bolt | Raio Guiador
+Você arremessa um raio de luz numa criatura dentro do alcance. Faça um ataque mágico à distância contra o alvo. Se acertar, ele sofre 4d6 de dano radiante, e a próxima jogada de ataque contra ele antes do fim do seu próximo turno tem Vantagem.
+
+_Usando um Espaço de Magia de Círculo Superior._ O dano aumenta em 1d6 para cada círculo do espaço acima do 1º.
+
+=== Healing Word | Palavra Curativa
+Uma criatura à sua escolha que você consiga ver dentro do alcance recupera Pontos de Vida iguais a 2d4 mais o modificador do seu atributo de conjuração.
+
+_Usando um Espaço de Magia de Círculo Superior._ A cura aumenta em 2d4 para cada círculo do espaço acima do 1º.
+
+=== Hellish Rebuke | Repreensão Infernal
+tempo: Reação, que você usa quando sofre dano de uma criatura que você consiga ver a até 18 metros de você
+A criatura que causou o dano fica, por um instante, cercada de chamas verdes. Ela faz uma salvaguarda de Destreza, sofrendo 2d10 de dano de fogo se falhar, ou metade desse dano se for bem-sucedida.
+
+_Usando um Espaço de Magia de Círculo Superior._ O dano aumenta em 1d10 para cada círculo do espaço acima do 1º.
+
+=== Heroism | Heroísmo
+Uma criatura voluntária que você toca se enche de coragem. Até a magia acabar, ela é imune à condição Amedrontado e ganha Pontos de Vida Temporários iguais ao modificador do seu atributo de conjuração no começo de cada turno dela.
+
+_Usando um Espaço de Magia de Círculo Superior._ Você pode escolher uma criatura adicional como alvo para cada círculo do espaço acima do 1º.
+
+=== Hex | Bruxaria
+material: o olho petrificado de um tritão
+Você lança uma maldição numa criatura que você consiga ver dentro do alcance. Até a magia acabar, você causa 1d6 de dano necrótico extra ao alvo sempre que o acertar com uma jogada de ataque. Além disso, escolha um atributo quando conjurar a magia. O alvo tem Desvantagem nos testes desse atributo.
+
+Se o alvo chegar a 0 Pontos de Vida antes de a magia acabar, você pode usar uma Ação Bônus num turno seguinte para amaldiçoar outra criatura.
+
+_Usando um Espaço de Magia de Círculo Superior._ A sua Concentração pode durar mais com um espaço de 2º círculo (até 4 horas), de 3º ou 4º (até 8 horas) ou de 5º ou mais (24 horas).
+
+=== Hideous Laughter | Riso Histérico
+material: uma torta e uma pena
+Uma criatura à sua escolha que você consiga ver dentro do alcance faz uma salvaguarda de Sabedoria. Se falhar, fica com as condições Caído e Incapacitado pela duração. Nesse tempo, ela ri sem parar, se for capaz de rir, e não consegue sair da condição Caído sozinha.
+
+No fim de cada turno dela, e sempre que sofrer dano, ela faz outra salvaguarda de Sabedoria. O alvo tem Vantagem na salvaguarda provocada por dano. Se for bem-sucedido, a magia acaba.
+
+_Usando um Espaço de Magia de Círculo Superior._ Você pode escolher uma criatura adicional como alvo para cada círculo do espaço acima do 1º.
+
+=== Hunter's Mark | Marca do Caçador
+Você marca magicamente uma criatura que consiga ver dentro do alcance como sua presa. Até a magia acabar, você causa 1d6 de dano de energia extra ao alvo sempre que o acertar com uma jogada de ataque. Você também tem Vantagem em qualquer teste de Sabedoria (Percepção ou Sobrevivência) que fizer para encontrá-lo.
+
+Se o alvo chegar a 0 Pontos de Vida antes de a magia acabar, você pode usar uma Ação Bônus para passar a marca para outra criatura que consiga ver dentro do alcance.
+
+_Usando um Espaço de Magia de Círculo Superior._ A sua Concentração pode durar mais com um espaço de 3º ou 4º círculo (até 8 horas) ou de 5º ou mais (até 24 horas).
+
+=== Ice Knife | Faca de Gelo
+material: uma gota de água ou um pedaço de gelo
+Você cria um caco de gelo e o arremessa numa criatura dentro do alcance. Faça um ataque mágico à distância contra o alvo. Se acertar, o alvo sofre 1d10 de dano perfurante. Acertando ou não, o caco então explode. O alvo e cada criatura a até 1,5 metro dele precisam ser bem-sucedidos numa salvaguarda de Destreza ou sofrem 2d6 de dano de frio.
+
+_Usando um Espaço de Magia de Círculo Superior._ O dano de frio aumenta em 1d6 para cada círculo do espaço acima do 1º.
+
+=== Identify | Identificação
+material: uma pérola que valha 100 PO ou mais
+Você toca um objeto durante toda a conjuração da magia. Se for um item mágico ou outro objeto mágico, você descobre as propriedades dele e como usá-las, se ele exige Sintonização e quantas cargas tem, se tiver alguma. Você descobre se há magias em andamento afetando o item e quais são. Se o item foi criado por uma magia, você descobre o nome dela.
+
+Se, em vez disso, você tocar uma criatura durante a conjuração, descobre quais magias em andamento estão afetando ela, se houver.
+
+=== Illusory Script | Escrita Ilusória
+material: tinta que valha 10 PO ou mais, consumida pela magia
+Você escreve em pergaminho, papel ou outro material adequado e o enche com uma ilusão que dura pela duração. Para você e para as criaturas que indicar ao conjurar a magia, a escrita parece normal, parece ter a sua letra e transmite o sentido que você quis dar ao texto. Para todos os outros, a escrita parece feita numa grafia desconhecida ou mágica, impossível de entender. Se preferir, a ilusão pode alterar o sentido, a letra e o idioma do texto, desde que seja um idioma que você conheça.
+
+Se a magia for dissipada, tanto a escrita original quanto a ilusão desaparecem.
+
+Uma criatura com Visão Verdadeira consegue ler a mensagem escondida.
+
+=== Inflict Wounds | Infligir Ferimentos
+Uma criatura que você toca faz uma salvaguarda de Constituição, sofrendo 2d10 de dano necrótico se falhar, ou metade desse dano se for bem-sucedida.
+
+_Usando um Espaço de Magia de Círculo Superior._ O dano aumenta em 1d10 para cada círculo do espaço acima do 1º.
+
+=== Jump | Salto
+material: a perna traseira de um gafanhoto
+Você toca uma criatura voluntária. Uma vez em cada turno dela, até a magia acabar, essa criatura pode saltar até 9 metros gastando 3 metros de movimento.
+
+_Usando um Espaço de Magia de Círculo Superior._ Você pode escolher uma criatura adicional como alvo para cada círculo do espaço acima do 1º.
+
+=== Longstrider | Passos Largos
+material: uma pitada de terra
+Você toca uma criatura. O Deslocamento do alvo aumenta em 3 metros até a magia acabar.
+
+_Usando um Espaço de Magia de Círculo Superior._ Você pode escolher uma criatura adicional como alvo para cada círculo do espaço acima do 1º.
+
+=== Mage Armor | Armadura Arcana
+material: um pedaço de couro curtido
+Você toca uma criatura voluntária que não esteja usando armadura. Até a magia acabar, a CA base do alvo passa a ser 13 mais o modificador de Destreza dele. A magia acaba antes se o alvo vestir uma armadura.
+
+=== Magic Missile | Mísseis Mágicos
+Você cria três dardos brilhantes de energia mágica. Cada dardo atinge uma criatura à sua escolha que você consiga ver dentro do alcance e causa 1d4 + 1 de dano de energia. Todos os dardos acertam ao mesmo tempo, e você pode mirá-los numa criatura só ou em várias.
+
+_Usando um Espaço de Magia de Círculo Superior._ A magia cria mais um dardo para cada círculo do espaço acima do 1º.
+
+=== Protection from Evil and Good | Proteção contra o Bem e o Mal
+material: um frasco de Água Benta que valha 25 PO ou mais, consumido pela magia
+Até a magia acabar, uma criatura voluntária que você toca fica protegida contra criaturas que sejam Aberrações, Celestiais, Elementais, Fadas, Ínferos ou Mortos-Vivos.
+
+A proteção traz vários benefícios. Criaturas desses tipos têm Desvantagem nas jogadas de ataque contra o alvo. O alvo também não pode ser possuído por elas, nem receber delas as condições Enfeitiçado ou Amedrontado. Se o alvo já estiver possuído, Enfeitiçado ou Amedrontado por uma dessas criaturas, ele tem Vantagem em qualquer nova salvaguarda contra o efeito.
+
+=== Purify Food and Drink | Purificar Alimentos e Bebidas
+Você remove veneno e podridão de comida e bebida não mágicas numa Esfera de 1,5 metro de raio centrada num ponto dentro do alcance.
+
+=== Ray of Sickness | Raio Adoecedor
+Você dispara um raio esverdeado numa criatura dentro do alcance. Faça um ataque mágico à distância contra o alvo. Se acertar, o alvo sofre 2d8 de dano de veneno e fica com a condição Envenenado até o fim do seu próximo turno.
+
+_Usando um Espaço de Magia de Círculo Superior._ O dano aumenta em 1d8 para cada círculo do espaço acima do 1º.
+
+=== Sanctuary | Santuário
+material: um caco de vidro de um espelho
+Você protege uma criatura dentro do alcance. Até a magia acabar, qualquer criatura que mirar a criatura protegida com uma jogada de ataque ou uma magia que cause dano precisa ser bem-sucedida numa salvaguarda de Sabedoria, ou então escolhe um novo alvo ou perde o ataque ou a magia. Esta magia não protege contra áreas de efeito. A magia acaba se a criatura protegida fizer uma jogada de ataque, conjurar uma magia ou causar dano.
+
+=== Searing Smite | Destruição Lancinante
+tempo: Ação Bônus, que você usa logo depois de acertar um alvo com uma arma corpo a corpo ou um Ataque Desarmado
+Quando você acerta o alvo, ele sofre 1d6 de dano de fogo extra com o ataque. No começo de cada turno dele, até a magia acabar, o alvo sofre 1d6 de dano de fogo e depois faz uma salvaguarda de Constituição. Se falhar, a magia continua. Se for bem-sucedido, a magia acaba.
+
+_Usando um Espaço de Magia de Círculo Superior._ Todo o dano aumenta em 1d6 para cada círculo do espaço acima do 1º.
+
+=== Shield | Escudo Arcano
+tempo: Reação, que você usa quando é atingido por uma jogada de ataque ou vira alvo da magia Mísseis Mágicos
+Uma barreira imperceptível de energia mágica protege você. Até o começo do seu próximo turno, você recebe +5 de bônus na CA, inclusive contra o ataque que provocou a magia, e não sofre dano de _Mísseis Mágicos_.
+
+=== Shield of Faith | Escudo da Fé
+material: um pergaminho de oração
+Um campo cintilante envolve uma criatura à sua escolha dentro do alcance e lhe dá +2 de bônus na CA pela duração.
+
+=== Silent Image | Imagem Silenciosa
+material: um pouco de lã
+Você cria a imagem de um objeto, uma criatura ou outro fenômeno visível que não seja maior que um Cubo de 4,5 metros. A imagem aparece num ponto dentro do alcance e dura pela duração. Ela é só visual: não vem acompanhada de som, cheiro nem outro efeito sensorial.
+
+Com uma ação de Magia, você pode mover a imagem para qualquer ponto dentro do alcance. Enquanto ela muda de lugar, você pode alterar a aparência dela para os movimentos parecerem naturais. Por exemplo, se criar a imagem de uma criatura e movê-la, pode fazer parecer que ela está andando.
+
+Interagir fisicamente com a imagem revela que é uma ilusão, porque as coisas a atravessam. Uma criatura que usar a ação de Estudo para examinar a imagem pode perceber que é uma ilusão com um teste bem-sucedido de Inteligência (Investigação) contra a CD de salvaguarda da sua magia. Se perceber, a criatura passa a enxergar através da imagem.
+
+=== Sleep | Sono
+material: uma pitada de areia ou pétalas de rosa
+Cada criatura à sua escolha numa Esfera de 1,5 metro de raio, centrada num ponto dentro do alcance, precisa ser bem-sucedida numa salvaguarda de Sabedoria ou fica com a condição Incapacitado até o fim do próximo turno dela, quando precisa repetir a salvaguarda. Se falhar na segunda, o alvo fica com a condição Inconsciente pela duração. A magia acaba para um alvo se ele sofrer dano ou se alguém a até 1,5 metro dele usar uma ação para sacudi-lo e tirá-lo do efeito.
+
+Criaturas que não dormem, como os elfos, ou que tenham Imunidade à condição Exaustão, são automaticamente bem-sucedidas nas salvaguardas contra esta magia.
+
+=== Speak with Animals | Falar com Animais
+Pela duração, você consegue entender Feras e conversar com elas em voz alta, e pode usar qualquer uma das perícias da ação de Influenciar com elas.
+
+A maioria das Feras tem pouco a dizer sobre assuntos que não envolvam sobrevivência ou companhia, mas, no mínimo, uma Fera pode dar informações sobre lugares e monstros por perto, incluindo tudo o que percebeu no último dia.
+
+=== Thunderwave | Onda Trovejante
+Você solta uma onda de energia trovejante. Cada criatura num Cubo de 4,5 metros que sai de você faz uma salvaguarda de Constituição. Se falhar, a criatura sofre 2d8 de dano trovejante e é empurrada 3 metros para longe de você. Se for bem-sucedida, sofre só metade do dano.
+
+Além disso, objetos soltos que estejam inteiramente dentro do Cubo são empurrados 3 metros para longe de você, e um estrondo pode ser ouvido a até 90 metros.
+
+_Usando um Espaço de Magia de Círculo Superior._ O dano aumenta em 1d8 para cada círculo do espaço acima do 1º.
+
+=== Unseen Servant | Servo Invisível
+material: um pedaço de barbante e um de madeira
+Esta magia cria uma força Invisível, sem mente e sem forma, de tamanho Médio, que faz tarefas simples sob o seu comando até a magia acabar. O servo surge num espaço desocupado no chão dentro do alcance. Ele tem CA 10, 1 Ponto de Vida e Força 2, e não pode atacar. Se chegar a 0 Pontos de Vida, a magia acaba.
+
+Uma vez em cada um dos seus turnos, com uma Ação Bônus, você pode mandar mentalmente o servo se mover até 4,5 metros e interagir com um objeto. O servo faz tarefas simples que um humano faria, como buscar coisas, limpar, remendar, dobrar roupas, acender fogueiras, servir comida e encher copos. Depois que você dá o comando, ele faz a tarefa o melhor que pode até terminar, e então espera o próximo comando.
+
+Se você mandar o servo fazer uma tarefa que o leve a mais de 18 metros de você, a magia acaba.
