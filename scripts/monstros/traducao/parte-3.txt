@@ -1,0 +1,330 @@
+=== Ancient Copper Dragon
++ Resistência Lendária (4/Dia, ou 5/Dia no Covil)
+Se o dragão falhar num teste de resistência, pode escolher ser bem-sucedido.
++ Ataques Múltiplos
+O dragão faz três ataques de Dilacerar. Ele pode trocar um ataque por um uso de (A) Sopro Lento ou (B) Conjuração para conjurar _Espinho Mental_ (versão de 5º círculo).
++ Dilacerar
++ Sopro Ácido (Recarga 5–6)
+_Teste de Resistência de Destreza:_ CD 22, cada criatura numa Linha de 27 m de comprimento e 3 m de largura. _Falha:_ 63 (14d8) de dano ácido. _Sucesso:_ Metade do dano.
++ Sopro Lento
+_Teste de Resistência de Constituição:_ CD 22, cada criatura num Cone de 27 m. _Falha:_ O alvo não pode usar Reações, o Deslocamento dele cai pela metade e, no turno dele, pode fazer uma ação ou uma Ação Bônus, não as duas. O efeito dura até o fim do próximo turno dele.
++ Conjuração
+O dragão conjura uma das magias a seguir, sem precisar de componentes Materiais e usando Carisma como atributo de conjuração (CD de resistência 21):
+
+**À vontade:** _Detectar Magia_, _Espinho Mental_ (versão de 5º círculo), _Ilusão Menor_, _Mudança de Forma_ (só formas de Fera ou Humanoide, sem ganhar Pontos de Vida Temporários da magia e sem precisar de Concentração nem de Pontos de Vida Temporários para mantê-la)
+
+**1/Dia cada:** _Restauração Maior_, _Imagem Maior_, _Projetar Imagem_
++ :intro
+_Usos de Ação Lendária: 3 (4 no Covil). Logo depois do turno de outra criatura, o dragão pode gastar um uso para fazer uma das ações a seguir. Ele recupera todos os usos gastos no início de cada turno seu._
++ Magia Risonha
+_Teste de Resistência de Carisma:_ CD 21, uma criatura que o dragão consiga ver a até 36 m. _Falha:_ 31 (9d6) de dano psíquico. Até o fim do próximo turno dele, sempre que o alvo fizer um teste de atributo ou uma jogada de ataque, ele rola 1d8 e subtrai o resultado do Teste de D20. _Falha ou Sucesso:_ O dragão só pode usar esta ação de novo no início do próximo turno dele.
++ Choque Mental
+O dragão usa Conjuração para conjurar _Espinho Mental_ (versão de 5º círculo). Ele só pode usar esta ação de novo no início do próximo turno dele.
++ Bote
+O dragão se move até metade do Deslocamento e faz um ataque de Dilacerar.
+
+=== Couatl
++ Mente Protegida
+Os pensamentos do couatl não podem ser lidos de jeito nenhum, e outras criaturas só se comunicam com ele por telepatia se ele permitir.
++ Mordida
+_Jogada de Ataque Corpo a Corpo:_ +7, alcance 1,5 m. _Acerto:_ 11 (1d12 + 5) de dano perfurante, e o alvo fica com a condição Envenenado até o fim do próximo turno do couatl.
++ Constringir
+_Teste de Resistência de Força:_ CD 15, uma criatura Média ou menor que o couatl consiga ver a até 1,5 m. _Falha:_ 8 (1d6 + 5) de dano contundente. O alvo fica com a condição Agarrado (CD 13 para escapar) e com a condição Contido até a agarrada acabar.
++ Conjuração
+O couatl conjura uma das magias a seguir, sem precisar de componentes e usando Sabedoria como atributo de conjuração (CD de resistência 15):
+
+**À vontade:** _Detectar o Bem e o Mal_, _Detectar Magia_, _Detectar Pensamentos_, _Mudança de Forma_ (só formas de Fera ou Humanoide, sem ganhar Pontos de Vida Temporários da magia e sem precisar de Concentração nem de Pontos de Vida Temporários para mantê-la)
+
+**1/Dia cada:** _Criar Alimentos e Água_, _Sonho_, _Restauração Maior_, _Vidência_, _Sono_
++ Auxílio Divino (2/Dia)
+O couatl conjura _Bênção_, _Restauração Menor_ ou _Santuário_, sem precisar de componentes e usando o mesmo atributo de conjuração de Conjuração.
+
+=== Swarm of Crawling Claws
++ Enxame
+O enxame pode ocupar o espaço de outra criatura e vice-versa, e passa por qualquer abertura grande o bastante para uma criatura Miúda. O enxame não pode recuperar Pontos de Vida nem ganhar Pontos de Vida Temporários.
++ Enxame de Mãos Agarradoras
+_Jogada de Ataque Corpo a Corpo:_ +4, alcance 1,5 m. _Acerto:_ 20 (4d8 + 2) de dano necrótico, ou 11 (2d8 + 2) de dano necrótico se o enxame estiver Sangrando. Se o alvo for uma criatura Média ou menor, fica com a condição Caído.
+
+=== Cultist
++ Foice Ritual
+
+=== Cultist Fanatic
++ Lâmina do Pacto
++ Conjuração
+O cultista conjura uma das magias a seguir, usando Sabedoria como atributo de conjuração (CD de resistência 12, +4 para acertar com ataques mágicos):
+
+**À vontade:** _Luz_, _Taumaturgia_
+
+**2/Dia:** _Comando_
+
+**1/Dia:** _Imobilizar Pessoa_
++ Arma Espiritual (2/Dia)
+O cultista conjura a magia _Arma Espiritual_, usando o mesmo atributo de conjuração de Conjuração.
+
+=== Darkmantle
++ Esmagar
+_Jogada de Ataque Corpo a Corpo:_ +5, alcance 1,5 m. _Acerto:_ 6 (1d6 + 3) de dano contundente, e o manto sombrio gruda no alvo. Se o alvo for uma criatura Média ou menor e o manto sombrio tiver tido Vantagem na jogada de ataque, ele cobre o alvo, que fica com a condição Cego e sufocando enquanto o manto sombrio estiver grudado desse jeito.
+
+Grudado num alvo, o manto sombrio só pode atacar esse alvo, mas tem Vantagem nas jogadas de ataque. O Deslocamento dele vira 0, ele não recebe nenhum bônus de Deslocamento e se move junto com o alvo.
+
+Uma criatura pode usar uma ação para tentar soltar o manto sombrio de si, com um teste de Força (Atletismo) CD 13 bem-sucedido. No turno dele, o manto sombrio pode se soltar usando 1,5 m de movimento.
++ Aura de Escuridão (1/Dia)
+Escuridão mágica preenche uma Emanação de 4,5 m a partir do manto sombrio. O efeito dura enquanto ele mantiver a Concentração, até 10 minutos. Visão no Escuro não atravessa essa área, e luz nenhuma consegue iluminá-la.
+
+=== Death Dog
++ Ataques Múltiplos
+O cão da morte faz dois ataques de Mordida.
++ Mordida
+_Jogada de Ataque Corpo a Corpo:_ +4, alcance 1,5 m. _Acerto:_ 4 (1d4 + 2) de dano perfurante. Se o alvo for uma criatura, ele sofre o efeito a seguir. _Teste de Resistência de Constituição:_ CD 12. _Primeira Falha:_ O alvo fica com a condição Envenenado. Envenenado, o máximo de Pontos de Vida dele não volta ao normal ao terminar um Descanso Longo, e ele repete o teste a cada 24 horas, encerrando o efeito em si mesmo com um sucesso. _Falhas Seguintes:_ O máximo de Pontos de Vida do alvo Envenenado diminui 5 (1d10).
+
+=== Deva
++ Restauração Exaltada
+Se o deva morrer fora do Monte Celéstia, o corpo some, e ele ganha um corpo novo na hora, revivendo com todos os Pontos de Vida em algum lugar do Monte Celéstia.
++ Resistência à Magia
+O deva tem Vantagem nos testes de resistência contra magias e outros efeitos mágicos.
++ Ataques Múltiplos
+O deva faz dois ataques de Maça Sagrada.
++ Maça Sagrada
++ Conjuração
+O deva conjura uma das magias a seguir, sem precisar de componentes Materiais e usando Carisma como atributo de conjuração (CD de resistência 17):
+
+**À vontade:** _Detectar o Bem e o Mal_, _Mudança de Forma_ (só formas de Fera ou Humanoide, sem ganhar Pontos de Vida Temporários da magia e sem precisar de Concentração nem de Pontos de Vida Temporários para mantê-la)
+
+**1/Dia cada:** _Comunhão_, _Reviver os Mortos_
++ Auxílio Divino (2/Dia)
+O deva conjura _Curar Ferimentos_, _Restauração Menor_ ou _Remover Maldição_, usando o mesmo atributo de conjuração de Conjuração.
+
+=== Djinni
++ Restauração Elemental
+Se o djinni morrer fora do Plano Elemental do Ar, o corpo se desfaz em névoa, e ele ganha um corpo novo em 1d4 dias, revivendo com todos os Pontos de Vida em algum lugar do Plano do Ar.
++ Resistência à Magia
+O djinni tem Vantagem nos testes de resistência contra magias e outros efeitos mágicos.
++ Desejos
+O djinni tem 30% de chance de conhecer a magia _Desejo_. Se conhecer, só pode conjurá-la em nome de uma criatura que não seja gênio e que expresse um desejo de um jeito que ele entenda. Quando conjura a magia para essa criatura, o djinni não sofre nenhum dos desgastes dela. Depois de conjurá-la três vezes, ele só pode fazer isso de novo depois de 365 dias.
++ Ataques Múltiplos
+O djinni faz três ataques, com Lâmina da Tempestade ou Raio da Tempestade, em qualquer combinação.
++ Lâmina da Tempestade
+_Jogada de Ataque Corpo a Corpo:_ +9, alcance 1,5 m. _Acerto:_ 12 (2d6 + 5) de dano cortante mais 7 (2d6) de dano elétrico.
++ Raio da Tempestade
+_Jogada de Ataque à Distância:_ +9, alcance 36 m. _Acerto:_ 13 (3d8) de dano trovejante. Se o alvo for uma criatura Grande ou menor, fica com a condição Caído.
++ Criar Redemoinho
+O djinni conjura um redemoinho num ponto que consiga ver a até 36 m. O redemoinho preenche um Cilindro de 6 m de raio e 18 m de altura centrado nesse ponto e dura até a Concentração do djinni nele acabar. O djinni pode mover o redemoinho até 6 m no início de cada turno dele.
+
+Sempre que o redemoinho entrar no espaço de uma criatura ou uma criatura entrar no redemoinho, ela sofre o efeito a seguir. _Teste de Resistência de Força:_ CD 17 (cada criatura faz este teste só uma vez por turno, e o djinni não é afetado). _Falha:_ Enquanto estiver no redemoinho, o alvo fica com a condição Contido e se move junto com ele. No início de cada turno dele, o alvo Contido sofre 21 (6d6) de dano trovejante. No fim de cada turno dele, repete o teste, encerrando o efeito em si mesmo com um sucesso.
++ Conjuração
+O djinni conjura uma das magias a seguir, sem precisar de componentes Materiais e usando Carisma como atributo de conjuração (CD de resistência 17):
+
+**À vontade:** _Detectar o Bem e o Mal_, _Detectar Magia_
+
+**2/Dia cada:** _Criar Alimentos e Água_ (pode criar vinho em vez de água), _Idiomas_, _Caminhar no Vento_
+
+**1/Dia cada:** _Criação_, _Forma Gasosa_, _Invisibilidade_, _Imagem Maior_, _Viagem Planar_
+
+=== Doppelganger
++ Ataques Múltiplos
+O doppelganger faz dois ataques de Pancada e usa Semblante Perturbador, se estiver disponível.
++ Pancada
+_Jogada de Ataque Corpo a Corpo:_ +6 (com Vantagem durante a primeira rodada de cada combate), alcance 1,5 m. _Acerto:_ 11 (2d6 + 4) de dano contundente.
++ Ler Pensamentos
+O doppelganger conjura _Detectar Pensamentos_, sem precisar de componentes e usando Carisma como atributo de conjuração (CD de resistência 12).
++ Semblante Perturbador (Recarga 6)
+_Teste de Resistência de Sabedoria:_ CD 12, cada criatura numa Emanação de 4,5 m a partir do doppelganger que consiga vê-lo. _Falha:_ O alvo fica com a condição Amedrontado e repete o teste no fim de cada turno dele, encerrando o efeito em si mesmo com um sucesso. Depois de 1 minuto, ele é bem-sucedido automaticamente.
++ Mudar de Forma
+O doppelganger muda de forma para um Humanoide Médio ou Pequeno, ou volta à forma verdadeira. As estatísticas de jogo dele, fora o tamanho, são as mesmas em todas as formas. O equipamento que ele veste ou carrega não se transforma.
+
+=== Dragon Turtle
++ Anfíbio
+A tartaruga-dragão respira ar e água.
++ Ataques Múltiplos
+A tartaruga-dragão faz três ataques de Mordida. Ela pode trocar um ataque por um ataque de Cauda.
++ Mordida
+_Jogada de Ataque Corpo a Corpo:_ +13, alcance 4,5 m. _Acerto:_ 23 (3d10 + 7) de dano perfurante mais 7 (2d6) de dano de fogo. Estar debaixo d'água não dá Resistência a este dano de fogo.
++ Cauda
+_Jogada de Ataque Corpo a Corpo:_ +13, alcance 4,5 m. _Acerto:_ 18 (2d10 + 7) de dano contundente. Se o alvo for uma criatura Enorme ou menor, fica com a condição Caído.
++ Sopro de Vapor (Recarga 5–6)
+_Teste de Resistência de Constituição:_ CD 19, cada criatura num Cone de 18 m. _Falha:_ 56 (16d6) de dano de fogo. _Sucesso:_ Metade do dano. _Falha ou Sucesso:_ Estar debaixo d'água não dá Resistência a este dano de fogo.
+
+=== Dretch
++ Dilacerar
++ Nuvem Fétida (1/Dia)
+_Teste de Resistência de Constituição:_ CD 11, cada criatura numa Emanação de 3 m a partir do dretch. _Falha:_ O alvo fica com a condição Envenenado até o fim do próximo turno dele. Envenenada, a criatura pode fazer uma ação ou uma Ação Bônus no turno dela, não as duas, e não pode usar Reações.
+
+=== Drider
++ Patas de Aranha
+O drider escala superfícies difíceis, inclusive pelo teto, sem precisar fazer teste de atributo.
++ Sensibilidade à Luz do Sol
+Sob a luz do sol, o drider tem Desvantagem nos testes de atributo e nas jogadas de ataque.
++ Andarilho das Teias
+O drider ignora restrições de movimento causadas por teias e sabe onde está qualquer outra criatura em contato com a mesma teia.
++ Ataques Múltiplos
+O drider faz três ataques, com Pata Dianteira ou Jato de Veneno, em qualquer combinação.
++ Pata Dianteira
++ Jato de Veneno
+_Jogada de Ataque à Distância:_ +6, alcance 36 m. _Acerto:_ 13 (3d6 + 3) de dano de veneno.
++ Magia da Rainha Aranha (Recarga 5–6)
+O drider conjura _Escuridão_, _Fogo das Fadas_ ou _Teia_, sem precisar de componentes Materiais e usando Sabedoria como atributo de conjuração (CD de resistência 14).
+
+=== Druid
++ Ataques Múltiplos
+O druida faz dois ataques, com Cajado de Vinhas ou Luz Verdejante, em qualquer combinação.
++ Cajado de Vinhas
++ Luz Verdejante
+_Jogada de Ataque à Distância:_ +5, alcance 27 m. _Acerto:_ 10 (3d6) de dano radiante.
++ Conjuração
+O druida conjura uma das magias a seguir, usando Sabedoria como atributo de conjuração (CD de resistência 13):
+
+**À vontade:** _Arte Druídica_, _Falar com Animais_
+
+**2/Dia cada:** _Constrição_, _Onda Trovejante_
+
+**1/Dia cada:** _Mensageiro Animal_, _Passos Largos_, _Raio Lunar_
+
+=== Dryad
++ Resistência à Magia
+A dríade tem Vantagem nos testes de resistência contra magias e outros efeitos mágicos.
++ Falar com Feras e Plantas
+A dríade consegue se comunicar com Feras e Plantas como se tivessem um idioma em comum.
++ Ataques Múltiplos
+A dríade faz um ataque de Chicote de Vinha ou de Rajada de Espinhos e pode usar Conjuração para conjurar _Enfeitiçar Monstro_.
++ Chicote de Vinha
++ Rajada de Espinhos
+_Jogada de Ataque à Distância:_ +6, alcance 18 m. _Acerto:_ 7 (1d6 + 4) de dano perfurante.
++ Conjuração
+A dríade conjura uma das magias a seguir, sem precisar de componentes Materiais e usando Carisma como atributo de conjuração (CD de resistência 14):
+
+**À vontade:** _Amizade Animal_, _Enfeitiçar Monstro_ (dura 24 horas e acaba antes se a dríade conjurar a magia de novo), _Arte Druídica_
+
+**1/Dia cada:** _Constrição_, _Passos sem Pegadas_
++ Caminhar entre Árvores
+Se estiver a até 1,5 m de uma árvore Grande ou maior, a dríade se teletransporta para um espaço desocupado a até 1,5 m de outra árvore Grande ou maior que esteja a até 18 m da primeira.
+
+=== Earth Elemental
++ Deslizar pela Terra
+O elemental escava terra e pedra não mágicas e não trabalhadas. Ao fazer isso, não perturba o material por onde passa.
++ Monstro de Cerco
+O elemental causa dano dobrado a objetos e estruturas.
++ Ataques Múltiplos
+O elemental faz dois ataques, com Pancada ou Arremesso de Rocha, em qualquer combinação.
++ Pancada
++ Arremesso de Rocha
+_Jogada de Ataque à Distância:_ +8, alcance 18 m. _Acerto:_ 8 (1d6 + 5) de dano contundente. Se o alvo for uma criatura Grande ou menor, fica com a condição Caído.
+
+=== Efreeti
++ Restauração Elemental
+Se o efreeti morrer fora do Plano Elemental do Fogo, o corpo se desfaz em cinzas, e ele ganha um corpo novo em 1d4 dias, revivendo com todos os Pontos de Vida em algum lugar do Plano do Fogo.
++ Resistência à Magia
+O efreeti tem Vantagem nos testes de resistência contra magias e outros efeitos mágicos.
++ Desejos
+O efreeti tem 30% de chance de conhecer a magia _Desejo_. Se conhecer, só pode conjurá-la em nome de uma criatura que não seja gênio e que expresse um desejo de um jeito que ele entenda. Quando conjura a magia para essa criatura, o efreeti não sofre nenhum dos desgastes dela. Depois de conjurá-la três vezes, ele só pode fazer isso de novo depois de 365 dias.
++ Ataques Múltiplos
+O efreeti faz três ataques, com Lâmina Incandescente ou Arremessar Chamas, em qualquer combinação.
++ Lâmina Incandescente
++ Arremessar Chamas
+_Jogada de Ataque à Distância:_ +8, alcance 36 m. _Acerto:_ 24 (7d6) de dano de fogo.
++ Conjuração
+O efreeti conjura uma das magias a seguir, sem precisar de componentes Materiais e usando Carisma como atributo de conjuração (CD de resistência 16):
+
+**À vontade:** _Detectar Magia_, _Elementalismo_
+
+**1/Dia cada:** _Forma Gasosa_, _Invisibilidade_, _Imagem Maior_, _Viagem Planar_, _Idiomas_, _Muralha de Fogo_ (versão de 7º círculo)
+
+=== Erinyes
++ Restauração Diabólica
+Se a erínia morrer fora dos Nove Infernos, o corpo some numa fumaça sulfurosa, e ela ganha um corpo novo na hora, revivendo com todos os Pontos de Vida em algum lugar dos Nove Infernos.
++ Resistência à Magia
+A erínia tem Vantagem nos testes de resistência contra magias e outros efeitos mágicos.
++ Corda Mágica
+A erínia tem uma corda mágica. Enquanto a carrega, ela pode usar a ação Corda Enredante. A corda tem CA 20, 90 PV e Imunidade a dano de veneno e psíquico. Ela vira pó se cair a 0 Pontos de Vida, se ficar a 1,5 m ou mais da erínia por 1 hora ou mais, ou se a erínia morrer. Se a corda for danificada ou destruída, a erínia pode restaurá-la por completo ao terminar um Descanso Curto ou Longo.
++ Ataques Múltiplos
+A erínia faz três ataques de Espada Definhante e pode usar Corda Enredante.
++ Espada Definhante
++ Corda Enredante (Exige a Corda Mágica)
+_Teste de Resistência de Força:_ CD 16, uma criatura que a erínia consiga ver a até 36 m. _Falha:_ 14 (4d6) de dano de energia, e o alvo fica com a condição Contido até a corda ser destruída, a erínia usar uma Ação Bônus para soltá-lo ou usar Corda Enredante de novo.
++ Aparar
+_Gatilho:_ A erínia é atingida por uma jogada de ataque corpo a corpo enquanto segura uma arma. _Resposta:_ A erínia soma 4 à CA contra esse ataque, o que pode fazê-la errar.
+
+=== Ettercap
++ Patas de Aranha
+O ettercap escala superfícies difíceis, inclusive pelo teto, sem precisar fazer teste de atributo.
++ Andarilho das Teias
+O ettercap ignora restrições de movimento causadas por teias e sabe onde está qualquer outra criatura em contato com a mesma teia.
++ Ataques Múltiplos
+O ettercap faz um ataque de Mordida e um de Garra.
++ Mordida
+_Jogada de Ataque Corpo a Corpo:_ +4, alcance 1,5 m. _Acerto:_ 5 (1d6 + 2) de dano perfurante mais 2 (1d4) de dano de veneno, e o alvo fica com a condição Envenenado até o início do próximo turno do ettercap.
++ Garra
++ Fio de Teia (Recarga 5–6)
+_Teste de Resistência de Destreza:_ CD 12, uma criatura Grande ou menor que o ettercap consiga ver a até 9 m. _Falha:_ O alvo fica com a condição Contido até a teia ser destruída (CA 10; 5 PV; Vulnerabilidade a dano de fogo; Imunidade a dano contundente, de veneno e psíquico).
++ Puxar
+O ettercap puxa uma criatura a até 9 m dele que esteja Contida pelo Fio de Teia, até 7,5 m em linha reta na direção dele.
+
+=== Ettin
++ Ataques Múltiplos
+O ettin faz um ataque de Machado de Batalha e um de Maça Estrela.
++ Machado de Batalha
+_Jogada de Ataque Corpo a Corpo:_ +7, alcance 1,5 m. _Acerto:_ 14 (2d8 + 5) de dano cortante. Se o alvo for uma criatura Grande ou menor, fica com a condição Caído.
++ Maça Estrela
+_Jogada de Ataque Corpo a Corpo:_ +7, alcance 1,5 m. _Acerto:_ 14 (2d8 + 5) de dano perfurante, e o alvo tem Desvantagem na próxima jogada de ataque que fizer antes do fim do próximo turno dele.
+
+=== Fire Elemental
++ Aura de Fogo
+No fim de cada turno do elemental, cada criatura numa Emanação de 3 m a partir dele sofre 5 (1d10) de dano de fogo. Criaturas e objetos inflamáveis na Emanação pegam fogo.
++ Forma de Fogo
+O elemental passa por frestas de até 2,5 centímetros sem gastar movimento extra e pode entrar no espaço de uma criatura e parar ali. Na primeira vez que entra no espaço de uma criatura num turno, ela sofre 5 (1d10) de dano de fogo.
++ Iluminação
+O elemental emite Luz Plena num raio de 9 m e Penumbra por mais 9 m.
++ Vulnerável à Água
+O elemental sofre 3 (1d6) de dano de frio a cada 1,5 m que se move na água ou a cada 4 litros de água jogados nele.
++ Ataques Múltiplos
+O elemental faz dois ataques de Queimar.
++ Queimar
+_Jogada de Ataque Corpo a Corpo:_ +6, alcance 1,5 m. _Acerto:_ 10 (2d6 + 3) de dano de fogo. Se o alvo for uma criatura ou um objeto inflamável, ele pega fogo.
+
+=== Fire Giant
++ Ataques Múltiplos
+O gigante faz dois ataques, com Espada Flamejante ou Arremessar Martelo, em qualquer combinação.
++ Espada Flamejante
++ Arremessar Martelo
+_Jogada de Ataque à Distância:_ +11, alcance 18/72 m. _Acerto:_ 23 (3d10 + 7) de dano contundente mais 4 (1d8) de dano de fogo, e o alvo é empurrado até 4,5 m em linha reta para longe do gigante e tem Desvantagem na próxima jogada de ataque que fizer antes do fim do próximo turno dele.
+
+=== Flesh Golem
++ Aversão ao Fogo
+Se sofrer dano de fogo, o golem tem Desvantagem nas jogadas de ataque e nos testes de atributo até o fim do próximo turno dele.
++ Fúria Cega
+Sempre que o golem começar o turno Sangrando, role 1d6. Com 6, ele entra em fúria cega. Em cada turno em que estiver em fúria cega, o golem ataca a criatura mais próxima que consiga ver. Se nenhuma estiver perto o bastante para ele se mover até ela e atacar, ele ataca um objeto. Depois de entrar em fúria cega, o golem continua assim até ser destruído ou deixar de estar Sangrando.
+
+O criador do golem, se estiver a até 18 m dele em fúria cega, pode tentar acalmá-lo usando uma ação para fazer um teste de Carisma (Persuasão) CD 15. O golem precisa conseguir ouvir o criador. Com um sucesso, o golem sai da fúria cega até o início do próximo turno dele, quando volta a rolar para o traço Fúria Cega se ainda estiver Sangrando.
++ Forma Imutável
+O golem não pode mudar de forma.
++ Absorção Elétrica
+Sempre que sofreria dano elétrico, o golem recupera Pontos de Vida iguais ao dano elétrico causado.
++ Resistência à Magia
+O golem tem Vantagem nos testes de resistência contra magias e outros efeitos mágicos.
++ Ataques Múltiplos
+O golem faz dois ataques de Pancada.
++ Pancada
+
+=== Frost Giant
++ Ataques Múltiplos
+O gigante faz dois ataques, com Machado Gélido ou Arco Gigante, em qualquer combinação.
++ Machado Gélido
++ Arco Gigante
+_Jogada de Ataque à Distância:_ +9, alcance 45/180 m. _Acerto:_ 17 (2d10 + 6) de dano perfurante mais 7 (2d6) de dano de frio, e o Deslocamento do alvo diminui 3 m até o fim do próximo turno dele.
++ Grito de Guerra (Recarga 5–6)
+O gigante, ou uma criatura à escolha dele que consiga vê-lo ou ouvi-lo, ganha 16 (2d10 + 5) Pontos de Vida Temporários e tem Vantagem nas jogadas de ataque até o início do próximo turno do gigante.
+
+=== Shrieker Fungus
++ Guincho
+_Gatilho:_ Uma criatura ou uma fonte de Luz Plena se move a até 9 m do fungo. _Resposta:_ O fungo solta um guincho que se ouve a até 90 m dele, por 1 minuto ou até ele morrer.
+
+=== Violet Fungus
++ Ataques Múltiplos
+O fungo faz dois ataques de Toque Apodrecedor.
++ Toque Apodrecedor
+
+=== Gargoyle
++ Voo Rasante
+A gárgula não provoca Ataque de Oportunidade quando voa para fora do alcance de um inimigo.
++ Ataques Múltiplos
+A gárgula faz dois ataques de Garra.
++ Garra
