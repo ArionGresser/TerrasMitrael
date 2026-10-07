@@ -1,8 +1,8 @@
 import { Selo } from "@/components/ui/Selo";
 
 /**
- * A viga de madeira que atravessa o topo da mesa, com a marca do selo
- * imperial queimada no meio dela.
+ * A viga de madeira que atravessa o topo da mesa, presa por ferragens de
+ * ferro nas pontas, com a marca do selo imperial queimada no meio dela.
  *
  * Não é barra de navegação nem fica presa na tela: é adorno da mesa, então
  * sai de vista quando a pessoa rola. A navegação continua no selo de cera,
@@ -22,10 +22,10 @@ export function Cabecalho() {
             pegando a luz da vela e o de baixo jogando sombra na mesa. */}
         <div className="viga-madeira h-14 w-full sm:h-[4.5rem]" />
 
-        {/* Os pregos de ferro que prendem a viga nas pontas */}
-        <div className="absolute inset-x-0 top-1/2 flex -translate-y-1/2 justify-between px-3 sm:px-6">
-          <Prego />
-          <Prego />
+        {/* As ferragens que prendem a viga nas pontas */}
+        <div className="absolute inset-x-0 top-0 flex h-full justify-between px-20 sm:px-24">
+          <Ferragem />
+          <Ferragem />
         </div>
 
         {/* A marca do ferro quente, mordendo a viga e a mesa abaixo dela */}
@@ -38,8 +38,11 @@ export function Cabecalho() {
   );
 }
 
-function Prego() {
+function Ferragem() {
   return (
-    <span className="from-madeira-500 to-madeira-950 block size-2.5 rounded-full bg-gradient-to-br shadow-[inset_0_1px_1px_rgba(255,255,255,0.28),0_1px_2px_rgba(0,0,0,0.6)] sm:size-3" />
+    <span className="ferragem flex h-full w-5 flex-col items-center justify-between py-2 sm:w-7 sm:py-2.5">
+      <span className="rebite block size-1.5 rounded-full sm:size-2" />
+      <span className="rebite block size-1.5 rounded-full sm:size-2" />
+    </span>
   );
 }

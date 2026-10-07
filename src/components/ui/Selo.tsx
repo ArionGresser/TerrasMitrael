@@ -17,24 +17,24 @@ const M_DO_BRASAO =
 const POSICAO_DO_M = "translate(50 50) scale(0.0233) translate(-1310.5 735)";
 
 /**
- * Cera derretida nunca sai redonda: ela escorre para fora em bicos
- * irregulares quando o ferro aperta. Estes números fazem esse contorno.
+ * Cera derretida nunca sai redonda: o ferro aperta e ela escapa para fora em
+ * línguas de tamanhos diferentes, umas curtas, outras compridas, sem padrão.
+ * Estes números são essas línguas, sempre os mesmos, para o selo não mudar
+ * de forma entre uma página e outra.
  */
-const VARIACAO = [
-  1, 1.035, 0.968, 1.022, 0.994, 1.041, 0.962, 1.014, 1.03, 0.978, 1.018,
-  0.972, 1.008, 1.038, 0.984, 1.026,
+const LINGUAS = [
+  1, 0.965, 1.02, 0.95, 0.985, 1.045, 0.97, 0.94, 1.0, 1.035, 0.96, 0.99,
+  1.06, 0.975, 0.945, 1.01, 0.98, 1.025, 0.955, 0.99, 1.04, 0.965, 0.95,
+  1.015, 0.975, 1.05, 0.96, 0.985,
 ];
 
-function contornoDeCera(raio: number, bicos: number): string {
-  const total = bicos * 2;
-  const pontos: [number, number][] = [];
-
-  for (let i = 0; i < total; i++) {
+function contornoDeCera(raio: number): string {
+  const total = LINGUAS.length;
+  const pontos: [number, number][] = LINGUAS.map((variacao, i) => {
     const angulo = (i / total) * Math.PI * 2 - Math.PI / 2;
-    const vale = i % 2 === 1;
-    const r = raio * (vale ? 0.945 : 1) * VARIACAO[i % VARIACAO.length];
-    pontos.push([50 + Math.cos(angulo) * r, 50 + Math.sin(angulo) * r]);
-  }
+    const r = raio * variacao;
+    return [50 + Math.cos(angulo) * r, 50 + Math.sin(angulo) * r];
+  });
 
   const meio = (a: [number, number], b: [number, number]) =>
     `${((a[0] + b[0]) / 2).toFixed(2)} ${((a[1] + b[1]) / 2).toFixed(2)}`;
@@ -48,7 +48,7 @@ function contornoDeCera(raio: number, bicos: number): string {
   return `${d}Z`;
 }
 
-const CERA = contornoDeCera(48, 16);
+const CERA = contornoDeCera(46.5);
 
 type Variante = "cera" | "marca";
 
@@ -118,81 +118,163 @@ export function Selo({
       focusable="false"
     >
       <defs>
-        <radialGradient id={`${id}-luz`} cx="34%" cy="26%" r="62%">
-          <stop offset="0" stopColor="#c4525c" />
-          <stop offset="0.55" stopColor="#7b2028" />
-          <stop offset="1" stopColor="#4d1219" />
+        {/* A luz da vela vem do alto à esquerda */}
+        <radialGradient id={`${id}-cera`} cx="36%" cy="30%" r="70%">
+          <stop offset="0" stopColor="#a02c37" />
+          <stop offset="0.5" stopColor="#7c1d27" />
+          <stop offset="1" stopColor="#430c13" />
         </radialGradient>
-        <radialGradient id={`${id}-fundo`} cx="50%" cy="50%" r="50%">
-          <stop offset="0.62" stopColor="#000" stopOpacity="0" />
-          <stop offset="1" stopColor="#000" stopOpacity="0.45" />
+
+        {/* O fundo da cavidade, onde o ferro afundou a cera: a parede de
+            cima fica na sombra e a de baixo pega a luz, ao contrário da
+            borda, que é como o olho entende "afundado". */}
+        <radialGradient id={`${id}-fundo`} cx="58%" cy="64%" r="62%">
+          <stop offset="0" stopColor="#8a2530" />
+          <stop offset="0.7" stopColor="#6c1922" />
+          <stop offset="1" stopColor="#4a0f16" />
         </radialGradient>
+
+        {/* O relevo do brasão, um tom acima do fundo */}
+        <linearGradient id={`${id}-relevo`} x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stopColor="#a9343f" />
+          <stop offset="1" stopColor="#6a1820" />
+        </linearGradient>
+
+        {/* Brilho de cera endurecida, um reflexo largo e macio */}
+        <radialGradient id={`${id}-brilho`} cx="33%" cy="24%" r="38%">
+          <stop offset="0" stopColor="#fff" stopOpacity="0.3" />
+          <stop offset="1" stopColor="#fff" stopOpacity="0" />
+        </radialGradient>
+
+        {/* As irregularidades da cera, bolhas e manchas finas */}
+        <filter id={`${id}-poros`} x="0" y="0" width="100%" height="100%">
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="0.55"
+            numOctaves="2"
+            seed="4"
+          />
+          <feColorMatrix
+            values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.55 -0.22"
+          />
+        </filter>
+
+        <clipPath id={`${id}-recorte`}>
+          <path d={CERA} />
+        </clipPath>
       </defs>
 
       {/* A cera que escorreu para fora quando o ferro apertou */}
-      <path d={CERA} fill={`url(#${id}-luz)`} />
-      <path d={CERA} fill={`url(#${id}-fundo)`} />
+      <path d={CERA} fill={`url(#${id}-cera)`} />
+      <rect
+        width="100"
+        height="100"
+        filter={`url(#${id}-poros)`}
+        clipPath={`url(#${id}-recorte)`}
+        opacity="0.5"
+      />
+      {/* A beira escura onde a cera afina e esfria primeiro */}
+      <path
+        d={CERA}
+        fill="none"
+        stroke="#3a0a10"
+        strokeOpacity="0.55"
+        strokeWidth="1.2"
+      />
 
-      {/* O disco fundo, onde o ferro comprimiu a cera */}
-      <circle cx="50" cy="50" r="38" fill="#000" opacity="0.18" />
-      <circle cx="50" cy="50" r="37" fill={`url(#${id}-luz)`} opacity="0.85" />
-
-      {/* O anel de contas da matriz imperial */}
+      {/* A borda levantada que o ferro empurrou para cima */}
       <circle
         cx="50"
         cy="50"
-        r="41.5"
+        r="38.5"
         fill="none"
-        stroke="#000"
-        strokeOpacity="0.28"
-        strokeWidth="1.6"
+        stroke="#c4525c"
+        strokeOpacity="0.55"
+        strokeWidth="2"
+        transform="translate(-0.6 -0.8)"
       />
       <circle
         cx="50"
         cy="50"
-        r="41.5"
+        r="38.5"
         fill="none"
-        stroke="#e8a0a8"
-        strokeOpacity="0.3"
-        strokeWidth="0.7"
-        strokeDasharray="1.6 2.9"
+        stroke="#3a0a10"
+        strokeOpacity="0.5"
+        strokeWidth="2"
+        transform="translate(0.7 0.9)"
       />
 
-      {/* O brasão, com a sombra que a cera guarda em volta do relevo */}
+      {/* A cavidade */}
+      <circle cx="50" cy="50" r="36.5" fill={`url(#${id}-fundo)`} />
+      <circle
+        cx="50"
+        cy="50"
+        r="35.6"
+        fill="none"
+        stroke="#2a060b"
+        strokeOpacity="0.5"
+        strokeWidth="2.2"
+        transform="translate(0.5 0.9)"
+      />
+
+      {/* O anel de contas da matriz imperial, em relevo */}
+      <circle
+        cx="50"
+        cy="50"
+        r="32.5"
+        fill="none"
+        stroke="#3a0a10"
+        strokeOpacity="0.45"
+        strokeWidth="1.3"
+        strokeDasharray="0.1 2.6"
+        strokeLinecap="round"
+        transform="translate(0.35 0.45)"
+      />
+      <circle
+        cx="50"
+        cy="50"
+        r="32.5"
+        fill="none"
+        stroke="#d26a74"
+        strokeOpacity="0.7"
+        strokeWidth="1.1"
+        strokeDasharray="0.1 2.6"
+        strokeLinecap="round"
+      />
+
+      {/* O brasão em relevo: luz em cima, sombra embaixo, cor da cera */}
       <g transform={POSICAO_DO_M}>
-        <path d={M_DO_BRASAO} transform="translate(0 46)" fill="#3d0d13" />
-        <path d={M_DO_BRASAO} fill="#f7ecd8" />
+        <path d={M_DO_BRASAO} transform="translate(45 60)" fill="#2a060b" fillOpacity="0.7" />
+        <path d={M_DO_BRASAO} transform="translate(-35 -45)" fill="#e07a85" fillOpacity="0.7" />
+        <path d={M_DO_BRASAO} fill={`url(#${id}-relevo)`} />
+        <path d={M_DO_BRASAO} fill="#e9c27a" fillOpacity="0.12" />
       </g>
 
-      {/* Ferro apertado até o fim. A parede do disco afunda mais, e é só
+      {/* O reflexo por cima de tudo */}
+      <path d={CERA} fill={`url(#${id}-brilho)`} />
+
+      {/* Ferro apertado até o fim. A parede da cavidade afunda mais, e é só
           isso que muda: a sombra interna engrossa e ganha um fio de luz na
-          borda de cima, que é como a vista lê profundidade. */}
+          borda de baixo, que é como a vista lê profundidade. */}
       {pressionado ? (
         <g fill="none">
           <circle
             cx="50"
             cy="50"
-            r="37.4"
+            r="35.2"
             stroke="#2a070b"
-            strokeOpacity="0.55"
-            strokeWidth="2.8"
+            strokeOpacity="0.6"
+            strokeWidth="3.2"
+            transform="translate(0.4 0.8)"
           />
           <circle
             cx="50"
             cy="50"
-            r="35.4"
-            stroke="#2a070b"
-            strokeOpacity="0.24"
-            strokeWidth="2.4"
-          />
-          <circle
-            cx="50"
-            cy="50"
-            r="36.4"
+            r="35.8"
             stroke="#e8a0a8"
-            strokeOpacity="0.22"
+            strokeOpacity="0.25"
             strokeWidth="0.8"
-            transform="translate(0 -1.1)"
+            transform="translate(0 1.2)"
           />
         </g>
       ) : null}
