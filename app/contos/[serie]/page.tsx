@@ -70,8 +70,8 @@ export default async function PaginaSerie({ params }: Props) {
                 <div className="mx-auto w-full max-w-[16rem]">
                   <Poster
                     arte={{ tipo: "mosaico", personagens: temporada.elenco }}
-                    selo={`Temporada ${temporada.numero}`}
-                    titulo={temporada.titulo}
+                    selo={temporada.titulo}
+                    titulo={`Temporada ${temporada.numero}`}
                     chamada={contagemDeEpisodios(temporada)}
                     href={`/contos/${serie.slug}/${chaveDaTemporada(temporada)}/`}
                     prioridade={i < 2}
