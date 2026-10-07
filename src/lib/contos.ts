@@ -25,6 +25,11 @@ export type MetaEpisodio = {
   titulo: string;
   /** Uma ou duas frases, para a lista da temporada. Sem estragar o final. */
   resumo: string;
+  /**
+   * Quando o episódio entrou no site, com hora e fuso, como
+   * "2026-10-07T02:38-03:00". É o que ordena o mural de Novidades.
+   */
+  publicado?: string;
   /** Quando a sessão foi jogada, do jeito que se fala: "agosto de 2026". */
   sessao?: string;
   /** Quem esteve na mesa nesta sessão, pelas chaves dos personagens. */
@@ -71,7 +76,8 @@ export type Serie = {
 
 /**
  * Para publicar um episódio novo:
- * 1. crie o arquivo em content/contos/<série>/temporada-N/episodio-NN.mdx
+ * 1. crie o arquivo em content/contos/<série>/temporada-N/episodio-NN.mdx,
+ *    com `publicado` na meta para ele entrar no mural de Novidades
  * 2. importe-o no topo deste arquivo
  * 3. acrescente-o à lista `episodios` da temporada certa
  */

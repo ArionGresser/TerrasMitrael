@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
 import { novidades } from "@/lib/novidades";
+import { ListaDeNovidades } from "@/components/Novidades";
 import { Pergaminho } from "@/components/ui/Pergaminho";
 import { Dobra } from "@/components/ui/Dobra";
 import { Revelar } from "@/components/ui/Revelar";
@@ -47,6 +47,16 @@ const PORTAIS = [
       "As sessões jogadas, contadas como história. Cada sessão vira um episódio, temporada por temporada.",
     imagem: "/images/contos/cronicas/t2e2-saida.webp",
     alt: "A saída de uma mina na encosta de um morro, com um vilarejo lá embaixo no vale",
+  },
+  {
+    href: "/magias/",
+    nome: "Grimório",
+    texto:
+      "As magias das regras de 2024 em português, para conferir uma regra na mesa ou escolher a do próximo nível.",
+    imagem: "/images/book.jpg",
+    alt: "Um grimório de capa de couro, envolto em brilho arcano",
+    // A arte é pequena e quadrada: fica inteira, no centro, sobre fundo escuro
+    inteira: true,
   },
   {
     href: "/mapa/",
@@ -165,11 +175,11 @@ export default function Home() {
         {/* ---------- Novidades ---------- */}
         <Novidades />
 
-        {/* ---------- Portais ---------- */}
+        {/* ---------- Portais: as seções do site ---------- */}
         <Revelar className="mt-14">
           <div className="text-center">
             <TituloCapitulo tom="claro">
-              Por onde começar
+              Caminhos de Mitrael
             </TituloCapitulo>
           </div>
         </Revelar>
@@ -209,7 +219,11 @@ export default function Home() {
                         ? "(max-width: 640px) 100vw, 700px"
                         : "(max-width: 640px) 100vw, 340px"
                     }
-                    className="object-cover sepia-[0.12]"
+                    className={
+                      "inteira" in portal && portal.inteira
+                        ? "bg-madeira-950 object-contain p-3"
+                        : "object-cover sepia-[0.12]"
+                    }
                   />
                 </div>
 
@@ -319,9 +333,8 @@ export default function Home() {
 }
 
 /**
- * O mural de novidades: o episódio mais novo dos Contos e o que mais entrou
- * no site por último, como personagens novos. A lista mora em
- * src/lib/novidades.ts.
+ * O mural de novidades: as cinco coisas que entraram no site por último, e o
+ * caminho para a lista completa. Os dados moram em src/lib/novidades.ts.
  */
 function Novidades() {
   const itens = novidades();
@@ -340,46 +353,15 @@ function Novidades() {
         </div>
       </Revelar>
 
-      <ul className="border-dourado-600/30 bg-madeira-950/60 divide-dourado-600/15 mt-6 divide-y rounded-sm border shadow-[0_10px_30px_-12px_rgba(0,0,0,0.8)]">
-        {itens.map((item, i) => (
-          <li key={item.chave}>
-            <Revelar atraso={i * 0.06}>
-              <Link
-                href={item.href}
-                className="group hover:bg-madeira-800/50 flex items-center gap-4 p-3 transition-colors sm:p-4"
-              >
-                <span className="border-dourado-600/40 relative size-16 shrink-0 overflow-hidden rounded-sm border sm:size-20">
-                  <Image
-                    src={item.imagem}
-                    alt=""
-                    fill
-                    sizes="80px"
-                    className="object-cover sepia-[0.12]"
-                    style={{ objectPosition: item.posicao ?? "center" }}
-                  />
-                </span>
-                <span className="min-w-0">
-                  <span className="font-titulo text-dourado-400 block text-[0.6rem] tracking-[0.22em] uppercase">
-                    {item.etiqueta}
-                  </span>
-                  <span className="font-titulo text-pergaminho-50 mt-0.5 block text-base leading-snug font-semibold group-hover:underline sm:text-lg">
-                    {item.titulo}
-                  </span>
-                  <span className="text-pergaminho-200/85 mt-1 line-clamp-2 block text-xs leading-relaxed sm:text-sm">
-                    {item.texto}
-                  </span>
-                </span>
-                <span
-                  aria-hidden
-                  className="text-dourado-400 ml-auto shrink-0 pl-1 transition-transform motion-safe:group-hover:translate-x-0.5"
-                >
-                  →
-                </span>
-              </Link>
-            </Revelar>
-          </li>
-        ))}
-      </ul>
+      <div className="mt-6">
+        <ListaDeNovidades itens={itens} />
+      </div>
+
+      <div className="mt-5 text-center">
+        <BotaoLink href="/novidades/" variante="primario">
+          Ver todas as novidades
+        </BotaoLink>
+      </div>
     </section>
   );
 }
