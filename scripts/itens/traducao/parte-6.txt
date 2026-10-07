@@ -1,0 +1,329 @@
+=== Robe of Stars | Manto das Estrelas
+tipo: Item Maravilhoso, Muito Raro (exige Sintonia)
+Este manto negro ou azul-escuro é bordado com pequenas estrelas brancas ou prateadas. Enquanto o veste, você recebe +1 de bônus nos testes de resistência.
+
+Seis estrelas, no alto da frente do manto, são bem maiores que as outras. Enquanto veste o manto, você pode usar uma ação de Magia para arrancar uma delas e gastá-la para conjurar a versão de 5º círculo de _Mísseis Mágicos_. Todo dia ao anoitecer, 1d6 estrelas arrancadas reaparecem no manto.
+
+Enquanto veste o manto, você pode usar uma ação de Magia para entrar no Plano Astral junto com tudo o que veste e carrega. Você fica lá até usar uma ação de Magia para voltar ao plano onde estava. Você reaparece no último espaço que ocupou ou, se ele estiver ocupado, no espaço desocupado mais próximo.
+
+=== Robe of the Archmagi | Manto do Arquimago
+tipo: Item Maravilhoso, Lendário (exige Sintonia por um Bruxo, Feiticeiro ou Mago)
+Esta veste elegante é feita de um tecido requintado e adornada com runas.
+
+Enquanto veste o manto, você recebe estes benefícios.
+
+_Armadura._ Se não estiver usando armadura, a sua Classe de Armadura base é 15 mais o seu modificador de Destreza.
+
+_Resistência à Magia._ Você tem Vantagem nos testes de resistência contra magias e outros efeitos mágicos.
+
+_Mago de Guerra._ A CD de resistência das suas magias e o seu bônus de ataque com magia aumentam em 2 cada.
+
+=== Robe of Useful Items | Manto dos Itens Úteis
+tipo: Item Maravilhoso, Incomum
+Este manto é coberto de remendos de tecido de várias formas e cores. Enquanto o veste, você pode usar uma ação de Magia para destacar um dos remendos, que se transforma no objeto ou na criatura que representa. Quando o último remendo sai, o manto vira uma roupa comum.
+
+O manto tem dois de cada um destes remendos:
+
+- Lanterna Furta-Fogo (abastecida e acesa)
+- Adaga
+- Espelho
+- Vara
+- Corda (enrolada)
+- Saco
+
+Além disso, o manto tem 4d4 outros remendos. O Mestre escolhe os remendos ou sorteia na tabela a seguir.
+
+| 1d100 | Remendo |
+|---|---|
+| 01–08 | Bolsa com 100 PO |
+| 09–15 | Cofre de prata (30 centímetros de comprimento, 15 de largura e de altura) que vale 500 PO |
+| 16–22 | Porta de ferro (até 3 metros de largura e 3 de altura, trancada por um dos lados, à sua escolha), que você pode colocar numa abertura ao seu alcance; ela se ajusta à abertura, se fixando e criando as próprias dobradiças |
+| 23–30 | 10 gemas de 100 PO cada |
+| 31–44 | Escada de madeira (7,2 metros) |
+| 45–51 | Cavalo de Montaria com uma Sela de Montaria |
+| 52–59 | Fosso aberto (um Cubo de 3 metros), que você pode colocar no chão a até 3 metros de você |
+| 60–68 | 4 Poções de Cura |
+| 69–75 | Barco a remo (3,6 metros de comprimento) |
+| 76–83 | Pergaminho de Magia com uma magia de 1º, 2º ou 3º círculo (à sua escolha) |
+| 84–90 | 2 Mastins |
+| 91–96 | Janela (60 centímetros por 1,2 metro, até 60 centímetros de profundidade), que você pode colocar numa superfície vertical ao seu alcance |
+| 97–00 | Aríete Portátil |
+
+=== Rod of Absorption | Cetro da Absorção
+tipo: Cetro, Muito Raro (exige Sintonia)
+Enquanto segura este cetro, você pode usar uma Reação para absorver uma magia que tenha só você como alvo e não crie área de efeito. O efeito da magia absorvida é cancelado, e a energia dela (não a magia em si) fica guardada no cetro. A energia tem o mesmo círculo em que a magia foi conjurada. A magia cancelada se dissipa sem efeito, e os recursos usados para conjurá-la são perdidos. O cetro pode absorver e guardar até 50 círculos de energia ao longo de toda a existência. Depois de absorver 50 círculos, ele não absorve mais. Se você for alvo de uma magia que o cetro não consiga guardar, ele não tem efeito nela.
+
+Quando entra em Sintonia com o cetro, você sabe quantos círculos de energia ele já absorveu ao longo da existência e quantos tem guardados agora.
+
+Se você é conjurador e segura o cetro, pode converter a energia guardada em espaços de magia para conjurar magias que tenha preparadas ou conheça. Só pode criar espaços de círculo igual ou menor que os seus próprios espaços de magia, até o máximo de 5º círculo. Você usa os círculos guardados no lugar dos seus espaços, mas conjura a magia normalmente. Por exemplo, pode usar 3 círculos guardados no cetro como um espaço de magia de 3º círculo.
+
+Um cetro recém-encontrado costuma ter 1d10 círculos de energia de magia guardados. Um cetro que já não consegue absorver energia e não tem mais nenhuma guardada perde a magia.
+
+=== Rod of Alertness | Cetro do Alerta
+tipo: Cetro, Muito Raro (exige Sintonia)
+Este cetro tem as seguintes propriedades.
+
+_Alerta._ Enquanto segura o cetro, você tem Vantagem nos testes de Sabedoria (Percepção) e nas jogadas de Iniciativa.
+
+_Magias._ Enquanto segura o cetro, você pode conjurar com ele as seguintes magias:
+
+- _Detectar o Bem e o Mal_
+- _Detectar Magia_
+- _Detectar Veneno e Doença_
+- _Ver o Invisível_
+
+_Aura Protetora._ Com uma ação de Magia, você pode fincar o cabo do cetro no chão. A ponta dele passa a emitir Luz Plena num raio de 18 metros e Penumbra por mais 18 metros. Dentro dessa Luz Plena, você e seus aliados recebem +1 de bônus na Classe de Armadura e nos testes de resistência e sentem a posição de qualquer criatura Invisível que também esteja na Luz Plena.
+
+A ponta do cetro para de brilhar e o efeito termina depois de 10 minutos ou quando uma criatura usa uma ação de Magia para arrancar o cetro do chão. Depois de usada, esta propriedade só pode ser usada de novo no próximo amanhecer.
+
+=== Rod of Lordly Might | Cetro do Poder Soberano
+tipo: Cetro, Lendário (exige Sintonia)
+Este cetro tem a cabeça flangeada e funciona como uma Maça mágica que dá +3 de bônus nas jogadas de ataque e de dano feitas com ela. Ele tem propriedades ligadas a seis botões enfileirados ao longo do cabo, além de outras três propriedades, descritas abaixo.
+
+_Botões._ Você pode apertar um dos botões a seguir com uma Ação Bônus. O efeito dura até você apertar outro botão ou apertar o mesmo de novo, o que faz o cetro voltar à forma normal:
+
+**Botão 1.** Uma lâmina de fogo brota na ponta oposta à cabeça flangeada. As chamas emitem Luz Plena num raio de 12 metros e Penumbra por mais 12 metros, e a lâmina funciona como uma Espada Longa ou Espada Curta mágica (à sua escolha) que causa 2d6 de dano de fogo extra ao acertar.
+
+**Botão 2.** A cabeça flangeada se dobra e duas lâminas em forma de meia-lua saltam para fora, transformando o cetro num Machado de Batalha mágico que dá +3 de bônus nas jogadas de ataque e de dano feitas com ele.
+
+**Botão 3.** A cabeça flangeada se dobra, uma ponta de lança salta da extremidade e o cabo se alonga até 1,8 metro, transformando o cetro numa Lança mágica que dá +3 de bônus nas jogadas de ataque e de dano feitas com ela.
+
+**Botão 4.** O cetro vira uma vara de escalada de até 15 metros (você define o comprimento), mas os botões continuam ao seu alcance. Em superfícies tão duras quanto granito, um cravo embaixo e três ganchos em cima prendem a vara. Barras horizontais de 7,5 centímetros se abrem dos lados, a cada 30 centímetros, formando uma escada. A vara aguenta até 2.000 kg. Peso maior ou falta de apoio firme fazem o cetro voltar à forma normal.
+
+**Botão 5.** O cetro vira um aríete de mão e dá a quem o usa +10 de bônus nos testes de Força (Atletismo) para arrombar portas, barricadas e outras barreiras.
+
+**Botão 6.** O cetro assume ou mantém a forma normal e aponta para o norte magnético. (Nada acontece se esta função for usada num lugar sem norte magnético.) O cetro também te diz mais ou menos a que profundidade você está debaixo da terra ou a que altura está acima dela.
+
+_Drenar Vida._ Quando acerta uma criatura com um ataque corpo a corpo usando o cetro, você pode obrigar o alvo a fazer um teste de resistência de Constituição CD 17. Com uma falha, ele sofre 4d6 de dano necrótico extra, e você recupera Pontos de Vida iguais à metade desse dano necrótico. Depois de usada, esta propriedade só pode ser usada de novo no próximo amanhecer.
+
+_Paralisar._ Quando acerta uma criatura com um ataque corpo a corpo usando o cetro, você pode obrigar o alvo a fazer um teste de resistência de Constituição CD 17. Com uma falha, ele fica com a condição Paralisado por 1 minuto. O alvo repete o teste no fim de cada turno dele e encerra o efeito com um sucesso. Depois de usada, esta propriedade só pode ser usada de novo no próximo amanhecer.
+
+_Aterrorizar._ Enquanto segura o cetro, você pode usar uma ação de Magia para obrigar cada criatura que consiga ver a até 9 metros a fazer um teste de resistência de Sabedoria CD 17. Com uma falha, o alvo fica com a condição Amedrontado por 1 minuto. O alvo Amedrontado repete o teste no fim de cada turno dele e encerra o efeito em si mesmo com um sucesso. Depois de usada, esta propriedade só pode ser usada de novo no próximo amanhecer.
+
+=== Rod of Resurrection | Cetro da Ressurreição
+tipo: Cetro, Lendário (exige Sintonia)
+O cetro tem 5 cargas. Enquanto o segura, você pode conjurar com ele uma destas magias: _Cura Completa_ (gasta 1 carga) ou _Ressurreição_ (gasta 5 cargas).
+
+O cetro recupera 1 carga gasta todo dia ao amanhecer. Se você gastar a última carga, role 1d20. Com 1, o cetro desaparece num clarão inofensivo.
+
+=== Rod of Rulership | Cetro do Domínio
+tipo: Cetro, Raro (exige Sintonia)
+Você pode usar uma ação de Magia para erguer o cetro e exigir obediência de cada criatura à sua escolha que consiga ver a até 36 metros. Cada alvo precisa ser bem-sucedido em um teste de resistência de Sabedoria CD 15 ou fica com a condição Enfeitiçado por 8 horas. Enfeitiçada desse jeito, a criatura te vê como um líder de confiança. Se for ferido por você ou seus aliados, ou receber ordem de fazer algo contrário à sua natureza, o alvo deixa de estar Enfeitiçado desse jeito. Depois de usada, esta propriedade só pode ser usada de novo no próximo amanhecer.
+
+=== Rod of Security | Cetro do Refúgio
+tipo: Cetro, Muito Raro
+Enquanto segura este cetro, você pode usar uma ação de Magia para ativá-lo. O cetro então transporta na hora você e até 199 outras criaturas dispostas que você consiga ver para um semiplano. Você escolhe a forma do semiplano: um jardim tranquilo, uma taverna animada, um palácio imenso, uma ilha tropical, um carnaval fantástico ou o que mais imaginar. Seja qual for a forma, o semiplano tem água e comida suficientes para os visitantes, e o ambiente dele não pode ferir quem está lá. Tudo o mais com que se pode interagir ali só existe ali. Uma flor colhida num jardim de lá, por exemplo, some se for levada para fora do semiplano.
+
+Para cada hora passada no semiplano, um visitante recupera Pontos de Vida como se tivesse gastado 1 Dado de Pontos de Vida. Além disso, as criaturas não envelhecem lá, embora o tempo passe normalmente. Os visitantes podem ficar até 200 dias divididos pelo número de criaturas presentes (arredondado para baixo).
+
+Quando o tempo acaba ou você usa uma ação de Magia para encerrar o efeito, todos os visitantes reaparecem no lugar que ocupavam quando você ativou o cetro, ou no espaço desocupado mais próximo. Depois de usada, esta propriedade só pode ser usada de novo depois de 10 dias.
+
+=== Rope of Climbing | Corda de Escalada
+tipo: Item Maravilhoso, Incomum
+Esta corda de 18 metros aguenta até 1.500 kg. Enquanto segura uma das pontas, você pode usar uma ação de Magia para mandar a outra ponta se animar e seguir até um destino à sua escolha, a uma distância de no máximo o comprimento da corda. Essa ponta se move 3 metros no seu turno quando você dá a ordem e mais 3 metros no início de cada turno seu seguinte, até chegar ao destino ou até você mandar parar. Você também pode mandar a corda se prender firme a um objeto ou se soltar, dar nós ou desfazê-los, ou se enrolar para ser carregada.
+
+Se mandar a corda dar nós, nós grandes aparecem a cada 30 centímetros. Com os nós, a corda encolhe para 15 metros e dá Vantagem nos testes de atributo para escalar usando-a.
+
+A corda tem CA 20, 20 PV e Imunidade a dano de veneno e psíquico. Ela recupera 1 Ponto de Vida a cada 5 minutos desde que tenha pelo menos 1 Ponto de Vida. Se cair a 0 Pontos de Vida, é destruída.
+
+=== Rope of Entanglement | Corda Enredante
+tipo: Item Maravilhoso, Raro
+Esta corda tem 9 metros. Enquanto segura uma das pontas, você pode usar uma ação de Magia para mandar a outra ponta disparar e enredar uma criatura que você consiga ver a até 6 metros. O alvo precisa ser bem-sucedido em um teste de resistência de Destreza CD 15 ou fica com a condição Contido. Você pode soltar o alvo largando a sua ponta (a corda se enrola no espaço do alvo) ou usando uma Ação Bônus para repetir a ordem (a corda se enrola na sua mão).
+
+Um alvo Contido pela corda pode usar uma ação para fazer, à escolha dele, um teste de Força (Atletismo) ou de Destreza (Acrobacia) CD 15. Com um sucesso, deixa de estar Contido pela corda. Se você ainda estiver segurando a corda quando um alvo escapar, pode usar uma Reação para mandá-la se enrolar na sua mão. Se não, ela se enrola no espaço do alvo.
+
+A corda tem CA 20, 20 PV e Imunidade a dano de veneno e psíquico. Ela recupera 1 Ponto de Vida a cada 5 minutos desde que tenha pelo menos 1 Ponto de Vida. Se cair a 0 Pontos de Vida, é destruída.
+
+=== Scarab of Protection | Escaravelho de Proteção
+tipo: Item Maravilhoso, Lendário (exige Sintonia)
+Este medalhão em forma de besouro dá três benefícios enquanto está com você.
+
+_Defesa._ Você recebe +1 de bônus na Classe de Armadura.
+
+_Preservação._ O escaravelho tem 12 cargas. Se falhar em um teste de resistência contra uma magia de Necromancia ou contra um efeito nocivo vindo de um Morto-Vivo, você pode usar uma Reação para gastar 1 carga e transformar a falha em sucesso. O escaravelho vira pó e é destruído quando a última carga é gasta.
+
+_Resistência a Magias._ Você tem Vantagem nos testes de resistência contra magias.
+
+=== Scimitar of Speed | Cimitarra da Velocidade
+tipo: Arma (Cimitarra), Muito Rara (exige Sintonia)
+Você recebe +2 de bônus nas jogadas de ataque e de dano feitas com esta arma mágica. Além disso, pode fazer um ataque com ela como Ação Bônus em cada um dos seus turnos.
+
+=== Sending Stones | Pedras Mensageiras
+tipo: Item Maravilhoso, Incomum
+As _Pedras Mensageiras_ vêm em pares, cada pedra entalhada para combinar com a outra, de modo que o par é fácil de reconhecer. Enquanto toca uma das pedras, você pode conjurar _Enviar Mensagem_ com ela. O alvo é quem estiver com a outra pedra. Se ninguém estiver com ela, você sabe disso assim que usa a pedra e não conjura a magia.
+
+Depois que _Enviar Mensagem_ é conjurada com qualquer uma das pedras, elas só podem ser usadas de novo no próximo amanhecer. Se uma pedra do par for destruída, a outra perde a magia.
+
+=== Sentinel Shield | Escudo Sentinela
+tipo: Armadura (Escudo), Incomum
+Enquanto segura este Escudo, você tem Vantagem nas jogadas de Iniciativa e nos testes de Sabedoria (Percepção). O Escudo traz o desenho de um olho.
+
+=== Shield, +1, +2, or +3 | Escudo +1, +2 ou +3
+tipo: Armadura (Escudo), Incomum (+1), Raro (+2) ou Muito Raro (+3)
+Enquanto segura este Escudo, você recebe um bônus na Classe de Armadura que depende da raridade dele, somado ao bônus normal do Escudo na CA.
+
+=== Shield of Missile Attraction | Escudo Atrai-Projéteis
+tipo: Armadura (Escudo), Raro (exige Sintonia)
+Enquanto segura este Escudo, você tem Resistência a dano de ataques feitos com armas à Distância.
+
+_Maldição._ Este Escudo é amaldiçoado. Entrar em Sintonia com ele te amaldiçoa até você ser alvo da magia _Remover Maldição_ ou de magia parecida. Tirar o Escudo não acaba com a maldição. Sempre que um ataque com arma à Distância tiver como alvo uma criatura a até 3 metros de você, a maldição faz de você o alvo no lugar dela.
+
+=== Shield of the Cavalier | Escudo do Cavaleiro
+tipo: Armadura (Escudo), Muito Raro (exige Sintonia)
+Enquanto segura este Escudo, você recebe +2 de bônus na Classe de Armadura. Esse bônus se soma ao bônus normal do Escudo na CA.
+
+O Escudo tem estas propriedades adicionais, que você pode usar enquanto o segura.
+
+_Golpe Poderoso._ Quando usa a ação de Ataque, você pode fazer uma das jogadas de ataque com o Escudo contra um alvo a até 1,5 metro. Some o seu Bônus de Proficiência e o modificador de Força à jogada. Se acertar, o Escudo causa ao alvo dano de energia igual a 2d6 + 2 mais o seu modificador de Força e, se o alvo for uma criatura, você pode empurrá-la até 3 metros para longe de você em linha reta. Se a criatura for do seu tamanho ou menor, você também pode derrubá-la, deixando-a com a condição Caído.
+
+_Campo Protetor._ Com uma Reação, quando você ou um aliado que consiga ver a até 1,5 metro for alvo de um ataque ou fizer um teste de resistência contra uma área de efeito, você pode usar o Escudo para criar uma Emanação imóvel de 1,5 metro a partir de você. Quando a Emanação aparece, criaturas e objetos que não estejam inteiramente dentro dela são empurrados para os espaços desocupados mais próximos do lado de fora. O ataque ou a área de efeito que provocou a Reação não tem efeito nas criaturas e objetos dentro da Emanação, que dura enquanto você mantiver a Concentração, até 1 minuto. Nada entra nem sai da Emanação. Uma criatura ou objeto lá dentro não pode ser ferido por ataques ou efeitos vindos de fora, e nenhuma criatura lá dentro pode ferir nada do lado de fora. Depois de usada, esta propriedade só pode ser usada de novo no próximo amanhecer.
+
+=== Slippers of Spider Climbing | Sapatilhas de Escalar como Aranha
+tipo: Item Maravilhoso, Incomum (exige Sintonia)
+Enquanto calça estes sapatos leves, você pode subir, descer e atravessar superfícies verticais e andar pelo teto, com as mãos livres. Você tem Deslocamento de Escalada igual ao seu Deslocamento. Mas as sapatilhas não deixam você se mover assim em superfícies escorregadias, como as cobertas de gelo ou óleo.
+
+=== Sovereign Glue | Cola Soberana
+tipo: Item Maravilhoso, Lendário
+Esta substância viscosa e branca como leite cria uma união permanente entre dois objetos quaisquer. Ela precisa ser guardada num pote ou frasco cujo interior tenha sido untado com _Óleo Escorregadio_. Quando encontrado, o recipiente tem 1d6 + 1 doses de 30 ml.
+
+Uma dose cobre uma superfície de 30 centímetros quadrados. Aplicar uma dose de _Cola Soberana_ leva uma ação de Usar, e a cola aplicada leva 1 minuto para firmar. Depois disso, a união só se desfaz com _Solvente Universal_, com _Óleo Etéreo_ ou com a magia _Desejo_.
+
+=== Spellguard Shield | Escudo Guarda-Magia
+tipo: Armadura (Escudo), Muito Raro (exige Sintonia)
+Enquanto segura este Escudo, você tem Vantagem nos testes de resistência contra magias e outros efeitos mágicos, e as jogadas de ataque com magia contra você têm Desvantagem.
+
+=== Spell Scroll | Pergaminho de Magia
+tipo: Pergaminho, raridade varia
+Um _Pergaminho de Magia_ guarda as palavras de uma única magia, escritas numa cifra mística. Se a magia estiver na sua lista de magias, você pode ler o pergaminho e conjurá-la sem componentes Materiais. Se não estiver, o pergaminho é ininteligível. Conjurar a magia lendo o pergaminho leva o tempo de conjuração normal dela. Depois que a magia é conjurada, o pergaminho vira pó. Se a conjuração for interrompida, o pergaminho não se perde.
+
+Se a magia estiver na sua lista mas for de círculo maior do que você consegue conjurar normalmente, você faz um teste de atributo usando o seu atributo de conjuração para saber se consegue conjurá-la. A CD é 10 mais o círculo da magia. Com uma falha, a magia some do pergaminho sem nenhum outro efeito.
+
+O círculo da magia no pergaminho define a CD de resistência e o bônus de ataque dela, além da raridade do pergaminho, como mostra a tabela a seguir.
+
+| Círculo | Raridade | CD | Bônus de ataque |
+|---|---|---|---|
+| Truque | Comum | 13 | +5 |
+| 1 | Comum | 13 | +5 |
+| 2 | Incomum | 13 | +5 |
+| 3 | Incomum | 15 | +7 |
+| 4 | Raro | 15 | +7 |
+| 5 | Raro | 17 | +9 |
+| 6 | Muito Raro | 17 | +9 |
+| 7 | Muito Raro | 18 | +10 |
+| 8 | Muito Raro | 18 | +10 |
+| 9 | Lendário | 19 | +11 |
+
+_Copiar um Pergaminho num Grimório._ Uma magia de Mago num _Pergaminho de Magia_ pode ser copiada num grimório. Quem copia precisa ser bem-sucedido num teste de Inteligência (Arcanismo) com CD igual a 10 mais o círculo da magia. Com um sucesso, a magia é copiada. Com sucesso ou falha, o _Pergaminho de Magia_ é destruído.
+
+=== Sphere of Annihilation | Esfera da Aniquilação
+tipo: Item Maravilhoso, Lendário
+Esta esfera negra de 60 centímetros de diâmetro é um buraco no multiverso, pairando no espaço e estabilizada por um campo mágico em volta dela.
+
+A esfera aniquila toda matéria que atravessa e toda matéria que a atravessa. A exceção são os Artefatos. A não ser que um Artefato seja vulnerável ao dano de uma _Esfera da Aniquilação_, ele passa pela esfera intacto. Qualquer outra coisa que toque a esfera sem ser engolida e aniquilada por inteiro sofre 8d10 de dano de energia.
+
+_Controlar a Esfera._ Uma _Esfera da Aniquilação_ fica parada até alguém assumir o controle. Se estiver a até 18 metros de uma esfera, você pode usar uma ação de Magia para fazer um teste de Inteligência (Arcanismo) CD 25. Com um sucesso, você controla a esfera até o início do seu próximo turno e, se ela estava sob controle de outra criatura, essa criatura perde o controle. Com uma falha, a esfera se move 3 metros na sua direção, em linha reta.
+
+Enquanto controla a esfera, você pode usar uma Ação Bônus para movê-la numa direção à sua escolha, até 1,5 metro vezes o seu modificador de Inteligência (mínimo de 1,5 metro). Toda criatura em cujo espaço a esfera entrar precisa ser bem-sucedida em um teste de resistência de Destreza CD 19 ou é tocada por ela e sofre 8d10 de dano de energia. Uma criatura reduzida a 0 Pontos de Vida por esse dano é aniquilada e deixa para trás os seus pertences, mas nenhum outro resto físico.
+
+_Interações da Esfera._ Se a esfera entrar em contato com um portal planar (como o criado pela magia _Portal_) ou um espaço extradimensional (como o de um _Buraco Portátil_), o Mestre sorteia o que acontece na tabela a seguir.
+
+| 1d100 | Resultado |
+|---|---|
+| 01–50 | A esfera é destruída. |
+| 51–85 | A esfera atravessa o portal ou entra no espaço extradimensional. |
+| 86–00 | Uma fenda espacial manda a esfera e cada criatura e objeto a até 54 metros dela para um plano de existência aleatório. |
+
+=== Staff of Charming | Cajado do Encantamento
+tipo: Cajado, Raro (exige Sintonia por um Bardo, Bruxo, Clérigo, Druida, Feiticeiro ou Mago)
+Este cajado tem 10 cargas. Enquanto o segura, você pode usar qualquer uma das propriedades dele:
+
+**Conjurar Magia.** Você pode gastar 1 carga do cajado para conjurar com ele _Enfeitiçar Pessoa_, _Comando_ ou _Compreender Idiomas_, usando a CD de resistência das suas magias.
+
+**Refletir Encantamento.** Se for bem-sucedido num teste de resistência contra uma magia de Encantamento que tenha só você como alvo, você pode usar uma Reação para gastar 1 carga do cajado e devolver a magia a quem a conjurou, como se você a tivesse conjurado.
+
+**Resistir a Encantamento.** Se falhar num teste de resistência contra uma magia de Encantamento que tenha só você como alvo, você pode transformar a falha em sucesso. Esta propriedade só pode ser usada de novo no próximo amanhecer.
+
+_Recuperar Cargas._ O cajado recupera 1d8 + 2 cargas gastas todo dia ao amanhecer. Se você gastar a última carga, role 1d20. Com 1, o cajado vira pó e é destruído.
+
+=== Staff of Fire | Cajado do Fogo
+tipo: Cajado, Muito Raro (exige Sintonia por um Bruxo, Druida, Feiticeiro ou Mago)
+Enquanto segura este cajado, você tem Resistência a dano de fogo.
+
+_Magias._ O cajado tem 10 cargas. Enquanto o segura, você pode conjurar com ele uma das magias da tabela a seguir, usando a CD de resistência das suas magias. A tabela indica quantas cargas a magia gasta.
+
+| Magia | Cargas | Magia | Cargas |
+|---|---|---|---|
+| _Mãos Flamejantes_ | 1 | _Muralha de Fogo_ | 4 |
+| _Bola de Fogo_ | 3 |  |  |
+
+_Recuperar Cargas._ O cajado recupera 1d6 + 4 cargas gastas todo dia ao amanhecer. Se você gastar a última carga, role 1d20. Com 1, o cajado vira cinzas e é destruído.
+
+=== Staff of Frost | Cajado do Gelo
+tipo: Cajado, Muito Raro (exige Sintonia por um Bruxo, Druida, Feiticeiro ou Mago)
+Enquanto segura este cajado, você tem Resistência a dano de frio.
+
+_Magias._ O cajado tem 10 cargas. Enquanto o segura, você pode conjurar com ele uma das magias da tabela a seguir, usando a CD de resistência das suas magias. A tabela indica quantas cargas a magia gasta.
+
+| Magia | Cargas | Magia | Cargas |
+|---|---|---|---|
+| _Cone de Frio_ | 5 | _Tempestade de Gelo_ | 4 |
+| _Névoa Obscurecente_ | 1 | _Muralha de Gelo_ | 4 |
+
+_Recuperar Cargas._ O cajado recupera 1d6 + 4 cargas gastas todo dia ao amanhecer. Se você gastar a última carga, role 1d20. Com 1, o cajado vira água e é destruído.
+
+=== Staff of Healing | Cajado da Cura
+tipo: Cajado, Raro (exige Sintonia por um Bardo, Clérigo ou Druida)
+Este cajado tem 10 cargas. Enquanto o segura, você pode conjurar com ele uma das magias da tabela a seguir, usando o seu modificador de atributo de conjuração. A tabela indica quantas cargas a magia gasta.
+
+| Magia | Cargas |
+|---|---|
+| _Curar Ferimentos_ | 1 carga por círculo da magia (máximo de 4, para o 4º círculo) |
+| _Restauração Menor_ | 2 |
+| _Curar Ferimentos em Massa_ | 5 |
+
+_Recuperar Cargas._ O cajado recupera 1d6 + 4 cargas gastas todo dia ao amanhecer. Se você gastar a última carga, role 1d20. Com 1, o cajado some num clarão de luz e se perde para sempre.
+
+=== Staff of Power | Cajado do Poder
+tipo: Cajado, Muito Raro (exige Sintonia por um Bruxo, Feiticeiro ou Mago)
+Este cajado tem 20 cargas e pode ser empunhado como um Bordão mágico que dá +2 de bônus nas jogadas de ataque e de dano feitas com ele. Enquanto o segura, você recebe +2 de bônus na Classe de Armadura, nos testes de resistência e nas jogadas de ataque com magia.
+
+_Magias._ Enquanto segura o cajado, você pode conjurar com ele uma das magias da tabela a seguir, usando a CD de resistência das suas magias. A tabela indica quantas cargas a magia gasta.
+
+| Magia | Cargas |
+|---|---|
+| _Cone de Frio_ | 5 |
+| _Bola de Fogo_ (versão de 5º círculo) | 5 |
+| _Globo de Invulnerabilidade_ | 6 |
+| _Imobilizar Monstro_ | 5 |
+| _Levitação_ | 2 |
+| _Relâmpago_ (versão de 5º círculo) | 5 |
+| _Mísseis Mágicos_ | 1 |
+| _Raio do Enfraquecimento_ | 1 |
+| _Muralha de Energia_ | 5 |
+
+_Recuperar Cargas._ O cajado recupera 2d8 + 4 cargas gastas todo dia ao amanhecer. Se você gastar a última carga, role 1d20. Com 1, o cajado mantém o bônus de +2 nas jogadas de ataque e de dano, mas perde todas as outras propriedades. Com 20, o cajado recupera 1d8 + 2 cargas.
+
+_Golpe Retaliador._ Você pode usar uma ação de Magia para quebrar o cajado no joelho ou contra uma superfície sólida. O cajado é destruído e libera a magia numa explosão que preenche uma Emanação de 9 metros a partir dele. Você tem 50% de chance de viajar na hora para um plano de existência aleatório, escapando da explosão. Se não escapar, você sofre dano de energia igual a 16 vezes o número de cargas no cajado. Cada outra criatura na área faz um teste de resistência de Destreza CD 17. Com uma falha, sofre dano de energia igual a 4 vezes o número de cargas no cajado. Com um sucesso, sofre metade do dano.
+
+=== Staff of Striking | Cajado do Impacto
+tipo: Cajado, Muito Raro (exige Sintonia)
+Este cajado pode ser empunhado como um Bordão mágico que dá +3 de bônus nas jogadas de ataque e de dano feitas com ele.
+
+O cajado tem 10 cargas. Quando acerta um ataque corpo a corpo com ele, você pode gastar até 3 cargas. Para cada carga gasta, o alvo sofre 1d6 de dano de energia extra.
+
+_Recuperar Cargas._ O cajado recupera 1d6 + 4 cargas gastas todo dia ao amanhecer. Se você gastar a última carga, role 1d20. Com 1, o cajado vira um Bordão não mágico.
+
+=== Staff of Swarming Insects | Cajado dos Insetos
+tipo: Cajado, Raro (exige Sintonia por um Bardo, Bruxo, Clérigo, Druida, Feiticeiro ou Mago)
+Este cajado tem 10 cargas.
+
+_Nuvem de Insetos._ Enquanto segura o cajado, você pode usar uma ação de Magia e gastar 1 carga para fazer um enxame de insetos voadores inofensivos preencher uma Emanação de 9 metros a partir de você. Os insetos ficam por 10 minutos e deixam a área em Escuridão Densa para criaturas que não sejam você. Um vento forte (como o criado por _Lufada de Vento_) dispersa o enxame e encerra o efeito.
+
+_Magias._ Enquanto segura o cajado, você pode conjurar com ele uma das magias da tabela a seguir, usando a CD de resistência e o modificador de ataque das suas magias. A tabela indica quantas cargas a magia gasta.
+
+| Magia | Cargas |
+|---|---|
+| _Inseto Gigante_ | 4 |
+| _Praga de Insetos_ | 5 |
+
+_Recuperar Cargas._ O cajado recupera 1d6 + 4 cargas gastas todo dia ao amanhecer. Se você gastar a última carga, role 1d20. Com 1, um enxame de insetos devora e destrói o cajado e depois se dispersa.
