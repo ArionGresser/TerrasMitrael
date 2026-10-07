@@ -35,18 +35,27 @@ const FIXAS = [
     ordem: 5,
     resumo: "As 339 magias, com busca por nome, classe, círculo e escola.",
   },
+  {
+    href: "/itens/",
+    titulo: "Itens Mágicos",
+    original: "Magic Items",
+    ordem: 7,
+    resumo: "Os 258 itens mágicos, com busca por tipo, raridade e sintonia.",
+  },
 ];
 
 export default function PaginaCompendio() {
   const partes = [
     ...FIXAS,
-    ...documentosDeRegra().map((d) => ({
-      href: `/regras/${d.slug}/`,
-      titulo: d.titulo,
-      original: d.original,
-      ordem: d.ordem,
-      resumo: d.resumo,
-    })),
+    ...documentosDeRegra()
+      .filter((d) => !d.oculto)
+      .map((d) => ({
+        href: `/regras/${d.slug}/`,
+        titulo: d.titulo,
+        original: d.original,
+        ordem: d.ordem,
+        resumo: d.resumo,
+      })),
   ].sort((a, b) => a.ordem - b.ordem);
 
   return (
@@ -58,8 +67,8 @@ export default function PaginaCompendio() {
             <TituloBrasao className="mt-4">Compêndio</TituloBrasao>
             <Ornamento className="mt-6" />
             <p className="text-tinta-700 mx-auto mt-6 max-w-lg text-base leading-relaxed italic">
-              As regras que a mesa usa, em português, para criar um
-              personagem ou tirar uma dúvida no meio da sessão.
+              As regras que a mesa usa, em português, para criar um personagem
+              ou tirar uma dúvida no meio da sessão.
             </p>
           </header>
 
@@ -78,7 +87,9 @@ export default function PaginaCompendio() {
                       {p.original}
                     </span>
                   </span>
-                  <span className="text-tinta-700 mt-2 text-sm leading-relaxed">{p.resumo}</span>
+                  <span className="text-tinta-700 mt-2 text-sm leading-relaxed">
+                    {p.resumo}
+                  </span>
                 </Link>
               </li>
             ))}

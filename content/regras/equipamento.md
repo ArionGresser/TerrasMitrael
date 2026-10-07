@@ -957,7 +957,7 @@ As aventuras prometem, sem garantir, a descoberta de itens mágicos. Alguns são
 
 A magia _Identificação_ é o jeito mais rápido de revelar as propriedades de um item. Você também pode se concentrar num item mágico durante um Descanso Curto, em contato físico com ele. No fim do descanso, descobre as propriedades dele e como usá-las (mas não uma eventual maldição).
 
-Às vezes o item traz uma pista das suas propriedades. A palavra de comando para ativar um anel pode estar gravada por dentro do aro, ou um desenho de penas pode sugerir que ele é um _Anel de Queda de Pena_.
+Às vezes o item traz uma pista das suas propriedades. A palavra de comando para ativar um anel pode estar gravada por dentro do aro, ou um desenho de penas pode sugerir que ele é um _Anel da Queda Suave_.
 
 Usar ou experimentar um item também pode dar pistas. No caso das poções, um gole basta para saber o que ela faz. Outros itens pedem mais experiência. Por exemplo, se o seu personagem colocar um _Anel da Natação_, o Mestre pode dizer: "Seus movimentos parecem estranhamente fluidos". Talvez você então mergulhe num rio para ver o que acontece, e o Mestre diz que você nada surpreendentemente bem.
 

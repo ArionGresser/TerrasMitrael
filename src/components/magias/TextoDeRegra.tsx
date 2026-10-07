@@ -1,6 +1,7 @@
 import { Fragment, type ReactNode } from "react";
 import Link from "next/link";
 import { magiaPeloNome } from "@/lib/magias";
+import { itemPeloNome } from "@/lib/itens";
 
 /**
  * Transforma o texto de uma magia em HTML.
@@ -11,8 +12,8 @@ import { magiaPeloNome } from "@/lib/magias";
  * tabelas com "|". Fazer isso aqui evita carregar um interpretador de
  * markdown inteiro só para isso.
  *
- * Quando o itálico é o nome de outra magia do grimório, ele vira link para
- * a página dela.
+ * Quando o itálico é o nome de uma magia do grimório ou de um item mágico,
+ * ele vira link para a página dela.
  */
 export function TextoDeRegra({ texto }: { texto: string }) {
   const blocos = texto.trim().split(/\n\s*\n/);
@@ -71,7 +72,9 @@ function Tabela({ linhas }: { linhas: string[] }) {
 
   return (
     <div className="-mx-1 overflow-x-auto px-1">
-      <table className={`w-full border-collapse text-left ${larga ? "text-xs" : "text-sm"}`}>
+      <table
+        className={`w-full border-collapse text-left ${larga ? "text-xs" : "text-sm"}`}
+      >
         <thead>
           <tr className="border-dourado-600/50 border-b-2">
             {celulas(cabecalho).map((c, i) => (
@@ -87,9 +90,15 @@ function Tabela({ linhas }: { linhas: string[] }) {
         </thead>
         <tbody>
           {corpo.map((linha, i) => (
-            <tr key={i} className="border-dourado-600/20 border-b even:bg-pergaminho-200/30">
+            <tr
+              key={i}
+              className="border-dourado-600/20 border-b even:bg-pergaminho-200/30"
+            >
               {celulas(linha).map((c, j) => (
-                <td key={j} className={`${espaco} align-top ${larga && j !== 2 ? "whitespace-nowrap" : ""}`}>
+                <td
+                  key={j}
+                  className={`${espaco} align-top ${larga && j !== 2 ? "whitespace-nowrap" : ""}`}
+                >
                   {emLinha(c)}
                 </td>
               ))}
@@ -103,7 +112,9 @@ function Tabela({ linhas }: { linhas: string[] }) {
 
 /** Negrito, itálico e links [texto](endereço) dentro de uma linha. */
 function emLinha(texto: string): ReactNode {
-  const pedacos = texto.split(/(\[[^\]]+\]\([^)]+\)|\*\*[^*]+\*\*|_[^_]+_|\*[^*]+\*)/g);
+  const pedacos = texto.split(
+    /(\[[^\]]+\]\([^)]+\)|\*\*[^*]+\*\*|_[^_]+_|\*[^*]+\*)/g,
+  );
   return pedacos.map((p, i) => {
     const link = p.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
     if (link) {
@@ -124,17 +135,27 @@ function emLinha(texto: string): ReactNode {
         </strong>
       );
     }
-    if ((p.startsWith("_") && p.endsWith("_")) || (p.startsWith("*") && p.endsWith("*") && p.length > 2)) {
-      // Nome de magia em itálico vira link para a página dela
-      const citada = magiaPeloNome(p.slice(1, -1));
-      if (citada) {
+    if (
+      (p.startsWith("_") && p.endsWith("_")) ||
+      (p.startsWith("*") && p.endsWith("*") && p.length > 2)
+    ) {
+      // Nome de magia ou de item em itálico vira link para a página dele
+      const nome = p.slice(1, -1);
+      const magia = magiaPeloNome(nome);
+      const item = magia ? undefined : itemPeloNome(nome);
+      const destino = magia
+        ? `/magias/${magia.slug}/`
+        : item
+          ? `/itens/${item.slug}/`
+          : null;
+      if (destino) {
         return (
           <Link
             key={i}
-            href={`/magias/${citada.slug}/`}
+            href={destino}
             className="decoration-dourado-600/60 hover:text-heraldico-vermelho italic underline underline-offset-2 transition-colors"
           >
-            {citada.nome}
+            {nome}
           </Link>
         );
       }

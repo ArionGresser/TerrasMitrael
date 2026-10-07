@@ -14,6 +14,8 @@ import path from "node:path";
  *   ordem: 4              posição na lista do Compêndio
  *   resumo: ...           uma linha para o cartão do Compêndio
  *   estilo: aberto        opcional: itens abertos em vez de pergaminhos
+ *   oculto: sim           opcional: tem página, mas não aparece na lista do
+ *                         Compêndio (é aberto a partir de outra seção)
  *   ---
  *   texto de abertura
  *   # Grupo               opcional, separa os itens em grupos
@@ -34,6 +36,7 @@ export type DocumentoDeRegra = {
   ordem: number;
   resumo: string;
   estilo: "pergaminhos" | "aberto";
+  oculto: boolean;
   abertura: string;
   grupos: GrupoDeRegra[];
 };
@@ -95,6 +98,7 @@ function ler(slug: string): DocumentoDeRegra | undefined {
     ordem: Number(campos.ordem ?? 99),
     resumo: campos.resumo ?? "",
     estilo: campos.estilo === "aberto" ? "aberto" : "pergaminhos",
+    oculto: campos.oculto === "sim",
     abertura: abertura.trim(),
     grupos: grupos.map((g) => ({
       ...g,

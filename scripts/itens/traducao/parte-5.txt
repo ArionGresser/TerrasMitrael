@@ -30,17 +30,17 @@ Este unguento negro e pegajoso é grosso e pesado, mas escorre rápido quando de
 tipo: Item Maravilhoso, Incomum (exige Sintonia por um Conjurador)
 Enquanto carrega esta pérola, você pode usar uma ação de Magia para recuperar um espaço de magia gasto de 3º círculo ou menor. Depois de usada, a pérola só pode ser usada de novo no próximo amanhecer.
 
-=== Periapt of Health | Amuleto da Saúde
+=== Periapt of Health | Pingente da Saúde
 tipo: Item Maravilhoso, Incomum (exige Sintonia)
 Enquanto usa este pingente, você pode usar uma ação de Magia para recuperar 2d4 + 2 Pontos de Vida. Depois de usada, esta propriedade só pode ser usada de novo no próximo amanhecer.
 
 Além disso, enquanto usa o pingente, você tem Vantagem nos testes de resistência para evitar ou encerrar a condição Envenenado.
 
-=== Periapt of Proof against Poison | Amuleto Contra Veneno
+=== Periapt of Proof against Poison | Pingente Contra Veneno
 tipo: Item Maravilhoso, Raro (exige Sintonia)
 Esta delicada corrente de prata traz um pingente de gema negra lapidada em brilhante. Enquanto o usa, você tem Imunidade à condição Envenenado e a dano de veneno.
 
-=== Periapt of Wound Closure | Amuleto de Fechar Feridas
+=== Periapt of Wound Closure | Pingente de Fechar Feridas
 tipo: Item Maravilhoso, Incomum (exige Sintonia)
 Enquanto usa este pingente, você recebe os seguintes benefícios.
 
