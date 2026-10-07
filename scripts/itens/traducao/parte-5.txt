@@ -1,0 +1,411 @@
+=== Oathbow | Arco do Juramento
+tipo: Arma (Arco Longo ou Arco Curto), Muito Raro (exige Sintonia)
+Quando você encaixa uma flecha neste arco, ele sussurra em élfico: "Derrota ligeira aos meus inimigos". Quando usa esta arma para fazer um ataque à distância, você pode dizer ou sinalizar as palavras de comando: "Morte ligeira a ti que me fizeste mal". O alvo do ataque se torna o seu inimigo jurado até morrer ou até o amanhecer, 7 dias depois. Você só pode ter um inimigo jurado por vez. Quando ele morre, você pode escolher outro depois do próximo amanhecer.
+
+Quando faz uma jogada de ataque à distância com esta arma contra o seu inimigo jurado, você tem Vantagem na jogada. Além disso, o alvo não recebe benefício de Meia Cobertura nem de Três Quartos de Cobertura, e você não sofre Desvantagem por longo alcance. Se o ataque acertar, o inimigo jurado sofre 3d6 de dano perfurante extra.
+
+Enquanto o seu inimigo jurado viver, você tem Desvantagem nas jogadas de ataque com todas as outras armas.
+
+=== Oil of Etherealness | Óleo Etéreo
+tipo: Poção, Rara
+Um frasco deste óleo cobre uma criatura Média ou menor, junto com o equipamento que ela veste e carrega (cada categoria de tamanho acima de Média exige um frasco a mais). Aplicar o óleo leva 10 minutos. A criatura então recebe o efeito da magia _Forma Etérea_ por 1 hora.
+
+Gotas deste óleo cinza e turvo se formam do lado de fora do recipiente e evaporam depressa.
+
+=== Oil of Sharpness | Óleo de Afiação
+tipo: Poção, Muito Rara
+Um frasco deste óleo cobre uma arma Corpo a Corpo ou vinte unidades de munição, mas só afeta munição e armas Corpo a Corpo não mágicas que causem dano cortante ou perfurante. Aplicar o óleo leva 1 minuto. Depois disso o óleo penetra magicamente naquilo que cobriu, transformando a arma em uma _Arma +3_ ou a munição em _Munição +3_.
+
+Este óleo gelatinoso e transparente cintila com minúsculas lascas de prata, finíssimas.
+
+=== Oil of Slipperiness | Óleo Escorregadio
+tipo: Poção, Incomum
+Um frasco deste óleo cobre uma criatura Média ou menor, junto com o equipamento que ela veste e carrega (cada categoria de tamanho acima de Média exige um frasco a mais). Aplicar o óleo leva 10 minutos. A criatura então recebe o efeito da magia _Liberdade de Movimento_ por 8 horas.
+
+Outra opção é derramar o óleo no chão com uma ação de Magia. Ele cobre um quadrado de 3 metros e reproduz ali o efeito da magia _Área Escorregadia_ por 8 horas.
+
+Este unguento negro e pegajoso é grosso e pesado, mas escorre rápido quando derramado.
+
+=== Pearl of Power | Pérola do Poder
+tipo: Item Maravilhoso, Incomum (exige Sintonia por um Conjurador)
+Enquanto carrega esta pérola, você pode usar uma ação de Magia para recuperar um espaço de magia gasto de 3º círculo ou menor. Depois de usada, a pérola só pode ser usada de novo no próximo amanhecer.
+
+=== Periapt of Health | Amuleto da Saúde
+tipo: Item Maravilhoso, Incomum (exige Sintonia)
+Enquanto usa este pingente, você pode usar uma ação de Magia para recuperar 2d4 + 2 Pontos de Vida. Depois de usada, esta propriedade só pode ser usada de novo no próximo amanhecer.
+
+Além disso, enquanto usa o pingente, você tem Vantagem nos testes de resistência para evitar ou encerrar a condição Envenenado.
+
+=== Periapt of Proof against Poison | Amuleto Contra Veneno
+tipo: Item Maravilhoso, Raro (exige Sintonia)
+Esta delicada corrente de prata traz um pingente de gema negra lapidada em brilhante. Enquanto o usa, você tem Imunidade à condição Envenenado e a dano de veneno.
+
+=== Periapt of Wound Closure | Amuleto de Fechar Feridas
+tipo: Item Maravilhoso, Incomum (exige Sintonia)
+Enquanto usa este pingente, você recebe os seguintes benefícios.
+
+**_Preservação da Vida._** Sempre que fizer um Teste de Resistência contra a Morte, você pode trocar um resultado de 9 ou menos por 10, transformando a falha em sucesso.
+
+**_Cura Natural Reforçada._** Sempre que rolar um Dado de Pontos de Vida para recuperar Pontos de Vida, dobre a quantidade recuperada.
+
+=== Philter of Love | Filtro do Amor
+tipo: Poção, Incomum
+A primeira criatura que você vir nos 10 minutos depois de beber este filtro te encanta, e você fica com a condição Enfeitiçado por ela durante 1 hora.
+
+Este líquido rosado e efervescente guarda uma bolha fácil de não notar, em forma de coração.
+
+=== Pipes of Haunting | Flauta Assombrada
+tipo: Item Maravilhoso, Incomum
+Esta flauta tem 3 cargas e recupera 1d3 cargas gastas todo dia ao amanhecer. Você pode usar uma ação de Magia para tocá-la e gastar 1 carga, produzindo uma melodia sinistra e hipnótica. Cada criatura à sua escolha a até 9 metros precisa ser bem-sucedida em um teste de resistência de Sabedoria CD 15 ou fica com a condição Amedrontado por 1 minuto. A criatura que falhar repete o teste no fim de cada turno dela e encerra o efeito em si mesma com um sucesso. Quem for bem-sucedido fica imune ao efeito desta flauta por 24 horas.
+
+=== Pipes of the Sewers | Flauta dos Esgotos
+tipo: Item Maravilhoso, Incomum (exige Sintonia)
+Enquanto você carrega esta flauta, ratos comuns e ratos gigantes ficam Indiferentes a você e não te atacam, a não ser que você os ameace ou machuque.
+
+A flauta tem 3 cargas e recupera 1d3 cargas gastas todo dia ao amanhecer. Se tocar a flauta com uma ação de Magia, você pode usar uma Ação Bônus para gastar de 1 a 3 cargas e chamar um Enxame de Ratos por carga gasta, desde que existam ratos suficientes a até 750 metros para atender ao chamado (o Mestre decide). Se não houver ratos suficientes para formar um enxame, a carga é desperdiçada. Os enxames chamados seguem pelo caminho mais curto na direção da música, mas não ficam sob o seu controle.
+
+Sempre que um Enxame de Ratos que não esteja sob controle de outra criatura chegar a até 9 metros de você enquanto você toca a flauta, o enxame faz um teste de resistência de Sabedoria CD 15. Com um sucesso, ele age como agiria normalmente e não pode ser influenciado pela música da flauta nas próximas 24 horas. Com uma falha, o enxame é conquistado pela música e fica Amistoso com você e seus aliados enquanto você continuar tocando a flauta a cada rodada com uma ação de Magia. Um enxame Amistoso obedece às suas ordens. Se você não der ordens, ele se defende, mas não faz mais nada. Se um enxame Amistoso começar o turno a mais de 9 metros de você, o seu controle termina, e ele volta a agir normalmente e não pode ser influenciado pela música da flauta nas próximas 24 horas.
+
+=== Plate Armor of Etherealness | Armadura Etérea
+tipo: Armadura (Meia-Armadura ou Armadura de Placas), Lendária (exige Sintonia)
+Enquanto veste esta armadura, você pode usar uma ação de Magia e uma palavra de comando para receber o efeito da magia _Forma Etérea_. A magia termina na hora se você tirar a armadura ou usar uma ação de Magia para repetir a palavra de comando. Esta propriedade só pode ser usada de novo no próximo amanhecer.
+
+=== Portable Hole | Buraco Portátil
+tipo: Item Maravilhoso, Raro
+Este tecido negro e fino, macio como seda, vem dobrado do tamanho de um lenço. Aberto, vira um pano circular de 1,8 metro de diâmetro.
+
+Você pode usar uma ação de Magia para desdobrar um _Buraco Portátil_ e colocá-lo sobre ou contra uma superfície sólida. Ele então cria um buraco extradimensional de 3 metros de profundidade. O espaço cilíndrico dentro do buraco existe em outro plano de existência, então não serve para abrir passagens. Qualquer criatura dentro de um _Buraco Portátil_ aberto pode sair escalando.
+
+Você pode usar uma ação de Magia para fechar um _Buraco Portátil_, segurando as bordas do pano e dobrando-o. Dobrar o pano fecha o buraco, e qualquer criatura ou objeto lá dentro continua no espaço extradimensional. Não importa o que haja dentro, o buraco quase não pesa nada.
+
+Com o buraco dobrado, uma criatura dentro do espaço extradimensional pode usar uma ação para fazer um teste de Força (Atletismo) CD 10. Com um sucesso, ela força a saída e aparece a até 1,5 metro do _Buraco Portátil_. Um _Buraco Portátil_ fechado tem ar suficiente para 1 hora de respiração, dividida pelo número de criaturas respirando lá dentro.
+
+Colocar um _Buraco Portátil_ dentro do espaço extradimensional de uma _Bolsa Guarda-Tudo_, de uma _Mochila Prática_ ou de item parecido destrói os dois itens na hora e abre um portal para o Plano Astral. O portal surge onde um item foi colocado dentro do outro. Toda criatura a até 3 metros do portal que não esteja atrás de Cobertura Total é sugada e largada num ponto aleatório do Plano Astral. Então o portal se fecha. Ele só funciona num sentido e não pode ser reaberto.
+
+=== Potion of Animal Friendship | Poção da Amizade Animal
+tipo: Poção, Incomum
+Quando bebe esta poção, você pode conjurar a versão de 3º círculo da magia _Amizade Animal_ (CD de resistência 13).
+
+Agitar o líquido barrento da poção faz aparecerem pedacinhos: uma escama de peixe, uma pena de beija-flor, uma garra de gato ou um pelo de esquilo.
+
+=== Potion of Clairvoyance | Poção da Clarividência
+tipo: Poção, Rara
+Quando bebe esta poção, você recebe o efeito da magia _Clarividência_ (sem exigir Concentração).
+
+Um globo ocular boia no líquido amarelado desta poção, mas some quando ela é aberta.
+
+=== Potion of Climbing | Poção de Escalada
+tipo: Poção, Comum
+Quando bebe esta poção, você recebe Deslocamento de Escalada igual ao seu Deslocamento por 1 hora. Durante esse tempo, você tem Vantagem nos testes de Força (Atletismo) para escalar.
+
+Esta poção é separada em camadas marrom, prata e cinza, parecidas com faixas de pedra. Sacudir a garrafa não mistura as cores.
+
+=== Potion of Diminution | Poção de Diminuição
+tipo: Poção, Rara
+Quando bebe esta poção, você recebe o efeito "reduzir" da magia _Aumentar/Reduzir_ por 1d4 horas (sem exigir Concentração).
+
+O vermelho do líquido se contrai sem parar até virar uma gotinha e depois se expande, tingindo o líquido transparente em volta. Sacudir a garrafa não interrompe o processo.
+
+=== Potion of Flying | Poção de Voo
+tipo: Poção, Muito Rara
+Quando bebe esta poção, você recebe Deslocamento de Voo igual ao seu Deslocamento por 1 hora e pode pairar. Se estiver no ar quando o efeito acabar, você cai, a não ser que tenha outro meio de se manter no alto.
+
+O líquido transparente desta poção flutua no topo do recipiente, com impurezas brancas e turvas vagando dentro dele.
+
+=== Potion of Gaseous Form | Poção da Forma Gasosa
+tipo: Poção, Rara
+Quando bebe esta poção, você recebe o efeito da magia _Forma Gasosa_ por 1 hora (sem exigir Concentração) ou até encerrar o efeito com uma Ação Bônus.
+
+O recipiente parece guardar uma névoa que se move e escorre como água.
+
+=== Potion of Giant Strength | Poção da Força do Gigante
+tipo: Poção, raridade varia
+Quando bebe esta poção, o seu valor de Força muda por 1 hora. O tipo de gigante define o valor (veja a tabela abaixo). A poção não tem efeito se a sua Força for igual ou maior que esse valor.
+
+No líquido transparente desta poção flutua uma lasca de luz que lembra a unha de um gigante.
+
+| Poção | For | Raridade |
+|---|---|---|
+| Poção da Força do Gigante (das colinas) | 21 | Incomum |
+| Poção da Força do Gigante (do gelo ou das pedras) | 23 | Rara |
+| Poção da Força do Gigante (do fogo) | 25 | Rara |
+| Poção da Força do Gigante (das nuvens) | 27 | Muito Rara |
+| Poção da Força do Gigante (das tempestades) | 29 | Lendária |
+
+=== Potion of Growth | Poção de Crescimento
+tipo: Poção, Incomum
+Quando bebe esta poção, você recebe o efeito "aumentar" da magia _Aumentar/Reduzir_ por 10 minutos (sem exigir Concentração).
+
+O vermelho do líquido se expande sem parar a partir de uma gotinha, tinge o líquido transparente em volta e depois se contrai. Sacudir a garrafa não interrompe o processo.
+
+=== Potions of Healing | Poções de Cura
+tipo: Poção, raridade varia
+Você recupera Pontos de Vida quando bebe esta poção. A quantidade depende da raridade, como mostra a tabela abaixo.
+
+Seja qual for a potência, o líquido vermelho da poção reluz quando agitado.
+
+| Poção | PV recuperados | Raridade |
+|---|---|---|
+| Poção de Cura | 2d4 + 2 | Comum |
+| Poção de Cura (maior) | 4d4 + 4 | Incomum |
+| Poção de Cura (superior) | 8d4 + 8 | Rara |
+| Poção de Cura (suprema) | 10d4 + 20 | Muito Rara |
+
+=== Potion of Heroism | Poção de Heroísmo
+tipo: Poção, Rara
+Quando bebe esta poção, você recebe 10 Pontos de Vida Temporários que duram 1 hora. Pelo mesmo tempo, você fica sob o efeito da magia _Bênção_ (sem exigir Concentração).
+
+O líquido azul desta poção borbulha e solta vapor como se estivesse fervendo.
+
+=== Potion of Invisibility | Poção de Invisibilidade
+tipo: Poção, Rara
+O recipiente desta poção parece vazio, mas dá a sensação de conter líquido. Quando bebe a poção, você fica com a condição Invisível por 1 hora. O efeito termina antes se você fizer uma jogada de ataque, causar dano ou conjurar uma magia.
+
+=== Potion of Invulnerability | Poção de Invulnerabilidade
+tipo: Poção, Rara
+Durante 1 minuto depois de beber esta poção, você tem Resistência a todo dano.
+
+O líquido xaroposo desta poção parece ferro derretido.
+
+=== Potion of Longevity | Poção da Longevidade
+tipo: Poção, Muito Rara
+Quando bebe esta poção, a sua idade física diminui 1d6 + 6 anos, até o mínimo de 13 anos. Cada vez que você beber outra _Poção da Longevidade_ depois disso, há uma chance cumulativa de 10% de, em vez disso, você envelhecer 1d6 + 6 anos.
+
+Suspenso neste líquido âmbar há um coração minúsculo que, contra toda lógica, ainda bate. Esses ingredientes somem quando a poção é aberta.
+
+=== Potion of Mind Reading | Poção de Ler Mentes
+tipo: Poção, Rara
+Quando bebe esta poção, você recebe o efeito da magia _Detectar Pensamentos_ (CD de resistência 13) por 10 minutos (sem exigir Concentração).
+
+No líquido roxo e denso desta poção flutua uma nuvem rosada em forma de ovo.
+
+=== Potion of Poison | Poção de Veneno
+tipo: Poção, Incomum
+Esta mistura tem a aparência, o cheiro e o gosto de uma _Poção de Cura_ ou de outra poção benéfica. Na verdade, é veneno disfarçado por magia de ilusão. A magia _Identificação_ revela a verdadeira natureza dela.
+
+Se beber esta poção, você sofre 4d6 de dano de veneno e precisa ser bem-sucedido em um teste de resistência de Constituição CD 13 ou fica com a condição Envenenado por 1 hora.
+
+=== Potion of Resistance | Poção de Resistência
+tipo: Poção, Incomum
+Quando bebe esta poção, você tem Resistência a um tipo de dano por 1 hora. O Mestre escolhe o tipo ou sorteia na tabela a seguir.
+
+| 1d10 | Tipo de dano | 1d10 | Tipo de dano |
+|---|---|---|---|
+| 1 | Ácido | 6 | Necrótico |
+| 2 | Frio | 7 | Veneno |
+| 3 | Fogo | 8 | Psíquico |
+| 4 | Energia | 9 | Radiante |
+| 5 | Elétrico | 10 | Trovejante |
+
+=== Potion of Speed | Poção de Velocidade
+tipo: Poção, Muito Rara
+Quando bebe esta poção, você recebe o efeito da magia _Velocidade_ por 1 minuto (sem exigir Concentração), sem sofrer a onda de letargia que costuma vir quando o efeito acaba.
+
+O fluido amarelo desta poção tem riscos negros e gira sozinho.
+
+=== Potion of Vitality | Poção de Vitalidade
+tipo: Poção, Muito Rara
+Quando bebe esta poção, ela remove todos os seus níveis de Exaustão e encerra a condição Envenenado em você. Nas 24 horas seguintes, você recupera o máximo de Pontos de Vida em todo Dado de Pontos de Vida que gastar.
+
+O líquido carmesim desta poção pulsa em intervalos com uma luz fraca, lembrando um coração batendo.
+
+=== Potion of Water Breathing | Poção de Respirar na Água
+tipo: Poção, Incomum
+Você consegue respirar debaixo d'água por 24 horas depois de beber esta poção.
+
+O fluido verde e turvo desta poção cheira a mar e tem uma bolha parecida com uma água-viva flutuando dentro.
+
+=== Quarterstaff of the Acrobat | Bordão do Acrobata
+tipo: Arma (Bordão), Muito Rara (exige Sintonia)
+Você recebe +2 de bônus nas jogadas de ataque e de dano feitas com esta arma mágica.
+
+Enquanto segura esta arma, você pode fazê-la emitir Penumbra verde num raio de 3 metros, seja com uma Ação Bônus, seja depois de rolar Iniciativa. Também pode apagar a luz com uma Ação Bônus.
+
+Enquanto segura esta arma, você pode usar uma Ação Bônus para mudar a forma dela: um bastão de 15 centímetros (fácil de guardar), uma vara de 3 metros, ou de volta a Bordão. A arma só se alonga até onde o espaço em volta permitir.
+
+Em certas formas, a arma tem estas propriedades adicionais.
+
+_Auxílio Acrobático (só nas formas de Bordão e de vara de 3 metros)._ Enquanto segura esta arma, você tem Vantagem nos testes de Destreza (Acrobacia).
+
+_Desvio de Ataques (só na forma de Bordão)._ Quando é atingido por um ataque enquanto segura a arma, você pode usar uma Reação para girá-la em volta de si e ganhar +5 de bônus na Classe de Armadura contra aquele ataque, o que pode fazê-lo errar. Você só pode usar esta propriedade de novo depois de terminar um Descanso Curto ou Longo.
+
+_Arma à Distância (só na forma de Bordão)._ Esta arma tem a propriedade Arremesso, com alcance normal de 9 metros e alcance longo de 36 metros. Logo depois de você fazer um ataque à distância com ela, a arma volta voando para a sua mão.
+
+=== Ring of Animal Influence | Anel de Influência Animal
+tipo: Anel, Raro
+Este anel tem 3 cargas e recupera 1d3 cargas gastas todo dia ao amanhecer. Enquanto usa o anel, você pode gastar 1 carga para conjurar com ele uma das magias a seguir (CD de resistência 13):
+
+- _Amizade Animal_
+- _Medo_ (afeta apenas Feras)
+- _Falar com Animais_
+
+=== Ring of Djinni Summoning | Anel de Invocar Gênio
+tipo: Anel, Lendário (exige Sintonia)
+Enquanto usa este anel, você pode usar uma ação de Magia para invocar um **Djinni** específico do Plano Elemental do Ar. O djinni aparece num espaço desocupado à sua escolha a até 36 metros de você. Ele permanece enquanto você mantiver a Concentração, até o máximo de 1 hora, ou até cair a 0 Pontos de Vida.
+
+Enquanto invocado, o djinni é Amistoso com você e seus aliados e obedece às suas ordens. Se você não der ordens, ele se defende de quem o atacar, mas não faz mais nada.
+
+Depois que o djinni parte, ele só pode ser invocado de novo após 24 horas. Se ele morrer, o anel perde a magia.
+
+Os _Anéis de Invocar Gênio_ costumam ser criados pelos próprios djinns que invocam e dados a mortais como presente de amizade ou sinal de estima.
+
+=== Ring of Elemental Command | Anel de Comando Elemental
+tipo: Anel, Lendário (exige Sintonia)
+Cada _Anel de Comando Elemental_ está ligado a um dos quatro Planos Elementais. O Mestre escolhe ou sorteia o plano. Por exemplo, um _Anel de Comando Elemental_ (ar) está ligado ao Plano Elemental do Ar.
+
+Todo _Anel de Comando Elemental_ tem estas duas propriedades:
+
+**Ruína Elemental.** Enquanto usa o anel, você tem Vantagem nas jogadas de ataque contra Elementais, e eles têm Desvantagem nas jogadas de ataque contra você.
+
+**Compulsão Elemental.** Enquanto usa o anel, você pode usar uma ação de Magia para tentar dominar um Elemental que veja a até 18 metros. O Elemental faz um teste de resistência de Sabedoria CD 18. Com uma falha, ele fica com a condição Enfeitiçado até o início do seu próximo turno, e você decide o que ele faz com o movimento e a ação no próximo turno dele.
+
+_Foco Elemental._ Enquanto usa o anel, você recebe propriedades adicionais de acordo com o Plano Elemental ligado a ele:
+
+**Ar.** Você conhece o Auran, tem Resistência a dano elétrico e tem Deslocamento de Voo igual ao seu Deslocamento, podendo pairar.
+
+**Terra.** Você conhece o Terran e tem Resistência a dano ácido. Terreno feito de entulho, pedras ou terra não é Terreno Difícil para você. Além disso, você pode atravessar terra ou rocha sólida como se fossem Terreno Difícil, sem perturbar a matéria por onde passa. Se terminar o turno dentro de terra ou rocha sólida, você é empurrado para o último espaço desocupado em que esteve.
+
+**Fogo.** Você conhece o Ignan e tem Imunidade a dano de fogo.
+
+**Água.** Você conhece o Aquan, recebe Deslocamento de Natação de 18 metros e consegue respirar debaixo d'água.
+
+_Conjuração._ O anel tem 5 cargas e recupera 1d4 + 1 cargas gastas todo dia ao amanhecer. Enquanto usa o anel, você pode conjurar uma magia com ele. Escolha a magia na lista do Plano Elemental ligado ao anel, como mostra a tabela a seguir. A tabela indica quantas cargas a magia gasta. A CD de resistência é 18.
+
+| Plano | Magias (cargas) |
+|---|---|
+| Ar | _Relâmpago em Cadeia_ (3 cargas), _Queda Suave_ (0 cargas), _Lufada de Vento_ (2 cargas), _Muralha de Vento_ (1 carga) |
+| Terra | _Terremoto_ (5 cargas), _Moldar Rochas_ (2 cargas), _Pele de Pedra_ (3 cargas), _Muralha de Pedra_ (3 cargas) |
+| Fogo | _Mãos Flamejantes_ (1 carga), _Bola de Fogo_ (2 cargas), _Tempestade de Fogo_ (4 cargas), _Muralha de Fogo_ (3 cargas) |
+| Água | _Criar ou Destruir Água_ (1 carga), _Tempestade de Gelo_ (2 cargas), _Tsunami_ (5 cargas), _Muralha de Gelo_ (3 cargas), _Andar na Água_ (2 cargas) |
+
+=== Ring of Evasion | Anel da Evasão
+tipo: Anel, Raro (exige Sintonia)
+Este anel tem 3 cargas e recupera 1d3 cargas gastas todo dia ao amanhecer. Quando falha em um teste de resistência de Destreza enquanto usa o anel, você pode usar uma Reação para gastar 1 carga e ser bem-sucedido no teste.
+
+=== Ring of Feather Falling | Anel da Queda Suave
+tipo: Anel, Raro (exige Sintonia)
+Quando cai usando este anel, você desce 18 metros por rodada e não sofre dano da queda.
+
+=== Ring of Free Action | Anel da Ação Livre
+tipo: Anel, Raro (exige Sintonia)
+Enquanto usa este anel, Terreno Difícil não te custa movimento extra. Além disso, magia nenhuma consegue reduzir os seus Deslocamentos nem te deixar com as condições Paralisado ou Contido.
+
+=== Ring of Invisibility | Anel da Invisibilidade
+tipo: Anel, Lendário (exige Sintonia)
+Enquanto usa este anel, você pode usar uma ação de Magia para ficar com a condição Invisível. Você continua Invisível até tirar o anel ou até usar uma Ação Bônus para ficar visível de novo.
+
+=== Ring of Jumping | Anel do Salto
+tipo: Anel, Incomum (exige Sintonia)
+Enquanto usa este anel, você pode conjurar _Salto_ com ele, mas só pode ter a si mesmo como alvo.
+
+=== Ring of Mind Shielding | Anel de Proteção Mental
+tipo: Anel, Incomum (exige Sintonia)
+Enquanto usa este anel, você fica imune a magias que permitam a outras criaturas ler os seus pensamentos, saber se você está mentindo, conhecer a sua tendência ou o seu tipo de criatura. Criaturas só se comunicam telepaticamente com você se você permitir.
+
+Você pode usar uma ação de Magia para tornar o anel imperceptível até usar outra ação de Magia para torná-lo perceptível, até tirá-lo ou até morrer.
+
+Se você morrer usando o anel, a sua alma entra nele, a não ser que ele já abrigue uma alma. Você pode continuar no anel ou partir para o além. Enquanto a sua alma estiver no anel, você pode se comunicar telepaticamente com qualquer criatura que o esteja usando. Quem usa o anel não consegue impedir essa comunicação.
+
+=== Ring of Protection | Anel de Proteção
+tipo: Anel, Raro (exige Sintonia)
+Enquanto usa este anel, você recebe +1 de bônus na Classe de Armadura e nos testes de resistência.
+
+=== Ring of Regeneration | Anel da Regeneração
+tipo: Anel, Muito Raro (exige Sintonia)
+Enquanto usa este anel, você recupera 1d6 Pontos de Vida a cada 10 minutos se tiver pelo menos 1 Ponto de Vida. Se perder uma parte do corpo, o anel faz a parte crescer de novo e voltar a funcionar por completo depois de 1d6 + 1 dias, desde que você tenha pelo menos 1 Ponto de Vida o tempo todo.
+
+=== Ring of Resistance | Anel de Resistência
+tipo: Anel, Raro
+Enquanto usa este anel, você tem Resistência a um tipo de dano. A gema do anel indica o tipo, que o Mestre escolhe ou sorteia na tabela a seguir.
+
+| 1d10 | Tipo de dano | Gema |
+|---|---|---|
+| 1 | Ácido | Pérola |
+| 2 | Frio | Turmalina |
+| 3 | Fogo | Granada |
+| 4 | Energia | Safira |
+| 5 | Elétrico | Citrino |
+| 6 | Necrótico | Azeviche |
+| 7 | Veneno | Ametista |
+| 8 | Psíquico | Jade |
+| 9 | Radiante | Topázio |
+| 10 | Trovejante | Espinélio |
+
+=== Ring of Shooting Stars | Anel das Estrelas Cadentes
+tipo: Anel, Muito Raro (exige Sintonia)
+Você pode conjurar _Globos de Luz_ ou _Luz_ com o anel.
+
+O anel tem 6 cargas e recupera 1d6 cargas gastas todo dia ao amanhecer. Você pode gastar as cargas nas propriedades abaixo.
+
+**_Fogo das Fadas._** Você pode gastar 1 carga para conjurar _Fogo das Fadas_ com o anel.
+
+**_Esferas de Relâmpago._** Você pode gastar 2 cargas com uma ação de Magia para criar até quatro esferas de relâmpago de 90 centímetros de diâmetro. Cada esfera aparece num espaço desocupado que você consiga ver a até 36 metros. As esferas duram enquanto você mantiver a Concentração, até 1 minuto. Cada uma emite Penumbra num raio de 9 metros.
+
+Com uma Ação Bônus, você pode mover cada esfera até 9 metros, mas nunca a mais de 36 metros de você. Na primeira vez que uma esfera chega a até 1,5 metro de uma criatura que não seja você e não esteja atrás de Cobertura Total, ela descarrega o relâmpago nessa criatura e some. A criatura faz um teste de resistência de Destreza CD 15. Com uma falha, sofre dano elétrico de acordo com o número de esferas que você criou, como mostra a tabela a seguir. Com um sucesso, sofre metade do dano.
+
+| Esferas | Dano elétrico | Esferas | Dano elétrico |
+|---|---|---|---|
+| 1 | 4d12 | 3 | 2d6 |
+| 2 | 5d4 | 4 | 2d4 |
+
+_Estrelas Cadentes._ Você pode gastar de 1 a 3 cargas com uma ação de Magia. Para cada carga gasta, o anel lança um ponto de luz brilhante num ponto que você consiga ver a até 18 metros. Cada criatura num Cubo de 4,5 metros a partir desse ponto é banhada em faíscas e faz um teste de resistência de Destreza CD 15. Sofre 5d4 de dano radiante com uma falha, ou metade com um sucesso.
+
+=== Ring of Spell Storing | Anel de Armazenar Magias
+tipo: Anel, Raro (exige Sintonia)
+Este anel guarda as magias conjuradas nele até que quem estiver em Sintonia com ele as use. Ele armazena até 5 círculos de magias por vez. Quando encontrado, contém 1d6 − 1 círculos de magias guardadas, escolhidas pelo Mestre.
+
+Qualquer criatura pode conjurar uma magia de 1º a 5º círculo no anel, tocando-o enquanto conjura. A magia não tem outro efeito além de ficar guardada. Se o anel não tiver espaço para ela, a magia é gasta sem efeito. O círculo do espaço usado na conjuração define quanto espaço ela ocupa.
+
+Enquanto usa este anel, você pode conjurar qualquer magia guardada nele. A magia usa o círculo do espaço, a CD de resistência, o bônus de ataque e o atributo de conjuração de quem a conjurou originalmente, mas em todo o resto é tratada como se você a tivesse conjurado. A magia conjurada a partir do anel deixa de estar guardada e libera espaço.
+
+=== Ring of Spell Turning | Anel de Refletir Magias
+tipo: Anel, Lendário (exige Sintonia)
+Enquanto usa este anel, você tem Vantagem nos testes de resistência contra magias. Se for bem-sucedido no teste contra uma magia de 7º círculo ou menor, ela não tem efeito em você. Se essa magia tinha só você como alvo e não criou uma área de efeito, você pode usar uma Reação para devolvê-la a quem a conjurou. O conjurador faz um teste de resistência contra a magia usando a própria CD de resistência.
+
+=== Ring of Swimming | Anel da Natação
+tipo: Anel, Incomum
+Enquanto usa este anel, você tem Deslocamento de Natação de 12 metros.
+
+=== Ring of Telekinesis | Anel da Telecinese
+tipo: Anel, Muito Raro (exige Sintonia)
+Enquanto usa este anel, você pode conjurar _Telecinese_ com ele.
+
+=== Ring of the Ram | Anel do Carneiro
+tipo: Anel, Raro (exige Sintonia)
+Este anel tem 3 cargas e recupera 1d3 cargas gastas todo dia ao amanhecer. Enquanto o usa, você pode usar uma ação de Magia para gastar de 1 a 3 cargas e fazer um ataque mágico à distância contra uma criatura que consiga ver a até 18 metros. O anel produz uma cabeça de carneiro espectral e faz a jogada de ataque com +7 de bônus. Se acertar, para cada carga gasta, o alvo sofre 2d10 de dano de energia e é empurrado 1,5 metro para longe de você.
+
+Outra opção é gastar de 1 a 3 cargas do anel com uma ação de Magia para tentar quebrar um objeto não mágico que você consiga ver a até 18 metros e que ninguém esteja vestindo ou carregando. O anel faz um teste de Força com +5 de bônus para cada carga gasta.
+
+=== Ring of Three Wishes | Anel dos Três Desejos
+tipo: Anel, Lendário
+Enquanto usa este anel, você pode gastar 1 das 3 cargas dele para conjurar _Desejo_ com ele. O anel perde a magia quando você usa a última carga.
+
+=== Ring of Warmth | Anel do Calor
+tipo: Anel, Incomum (exige Sintonia)
+Se sofrer dano de frio enquanto usa este anel, ele reduz o dano em 2d8.
+
+Além disso, enquanto usa o anel, você e tudo o que veste e carrega não sofrem mal nenhum com temperaturas de 18 graus negativos ou menos.
+
+=== Ring of Water Walking | Anel de Andar na Água
+tipo: Anel, Incomum
+Enquanto usa este anel, você conjura _Andar na Água_ com ele, tendo só a si mesmo como alvo.
+
+=== Ring of X-ray Vision | Anel da Visão de Raio X
+tipo: Anel, Raro (exige Sintonia)
+Enquanto usa este anel, você pode usar uma ação de Magia para receber visão de raio X com alcance de 9 metros por 1 minuto. Para você, objetos sólidos nesse raio parecem transparentes e não impedem a passagem da luz. A visão atravessa 30 centímetros de pedra, 2,5 centímetros de metal comum ou até 90 centímetros de madeira ou terra. Materiais mais grossos ou uma folha fina de chumbo bloqueiam a visão.
+
+Sempre que usar o anel de novo antes de um Descanso Longo, você precisa ser bem-sucedido em um teste de resistência de Constituição CD 15 ou ganha 1 nível de Exaustão.
+
+=== Robe of Eyes | Manto dos Olhos
+tipo: Item Maravilhoso, Raro (exige Sintonia)
+Este manto é decorado com padrões que parecem olhos. Enquanto o veste, você recebe os seguintes benefícios:
+
+**Visão em Todas as Direções.** O manto te dá Vantagem nos testes de Sabedoria (Percepção) que dependam da visão.
+
+**Sentidos Especiais.** Você tem Visão no Escuro e Visão Verdadeira, ambas com alcance de 36 metros.
+
+_Desvantagens._ Uma magia _Luz_ conjurada no manto ou uma magia _Luz do Dia_ conjurada a até 1,5 metro dele te deixa com a condição Cego por 1 minuto. No fim de cada turno seu, você faz um teste de resistência de Constituição (CD 11 para _Luz_ ou CD 15 para _Luz do Dia_) e encerra a condição em si mesmo com um sucesso.
+
+=== Robe of Scintillating Colors | Manto de Cores Cintilantes
+tipo: Item Maravilhoso, Muito Raro (exige Sintonia)
+Este manto tem 3 cargas e recupera 1d3 cargas gastas todo dia ao amanhecer. Enquanto o veste, você pode usar uma ação de Magia e gastar 1 carga para fazer a roupa exibir um padrão mutante de cores ofuscantes até o fim do seu próximo turno. Durante esse tempo, o manto emite Luz Plena num raio de 9 metros e Penumbra por mais 9 metros, e criaturas que conseguem te ver têm Desvantagem nas jogadas de ataque contra você. Toda criatura na Luz Plena que consiga te ver quando o poder é ativado precisa ser bem-sucedida em um teste de resistência de Sabedoria CD 15 ou fica com a condição Atordoado até o efeito acabar.
