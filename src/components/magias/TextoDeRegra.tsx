@@ -6,7 +6,7 @@ import { magiaPeloNome } from "@/lib/magias";
  * Transforma o texto de uma magia em HTML.
  *
  * O texto das regras é curto e previsível, então basta um pedaço pequeno de
- * markdown: parágrafos, _itálico_ (o nome de cada opção, como "Aprimoramento
+ * markdown: parágrafos, [links](#ancora), _itálico_ (o nome de cada opção, como "Aprimoramento
  * de Truque."), **negrito**, listas com "- ", subtítulos com "#### " e
  * tabelas com "|". Fazer isso aqui evita carregar um interpretador de
  * markdown inteiro só para isso.
@@ -101,10 +101,22 @@ function Tabela({ linhas }: { linhas: string[] }) {
   );
 }
 
-/** Negrito e itálico dentro de uma linha. */
+/** Negrito, itálico e links [texto](endereço) dentro de uma linha. */
 function emLinha(texto: string): ReactNode {
-  const pedacos = texto.split(/(\*\*[^*]+\*\*|_[^_]+_|\*[^*]+\*)/g);
+  const pedacos = texto.split(/(\[[^\]]+\]\([^)]+\)|\*\*[^*]+\*\*|_[^_]+_|\*[^*]+\*)/g);
   return pedacos.map((p, i) => {
+    const link = p.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (link) {
+      return (
+        <Link
+          key={i}
+          href={link[2]}
+          className="decoration-dourado-600/60 hover:text-heraldico-vermelho underline underline-offset-2 transition-colors"
+        >
+          {link[1]}
+        </Link>
+      );
+    }
     if (p.startsWith("**") && p.endsWith("**")) {
       return (
         <strong key={i} className="text-tinta-900 font-semibold">
