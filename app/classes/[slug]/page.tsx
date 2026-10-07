@@ -95,6 +95,14 @@ export default async function PaginaClasse({ params }: Props) {
 
             <ListaDePatamares patamares={classe.patamares} />
 
+            {classe.extras.map((extra) => (
+              <div key={extra.titulo} className="mt-5">
+                <Dobra titulo={extra.titulo}>
+                  <TextoDeRegra texto={extra.texto} />
+                </Dobra>
+              </div>
+            ))}
+
             <Ornamento className="mt-12" />
 
             <section aria-labelledby="titulo-subclasse" className="mt-8">

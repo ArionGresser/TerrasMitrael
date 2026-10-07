@@ -14,6 +14,9 @@ import path from "node:path";
  *   ## Características de classe a tabela por nível e cada característica
  *   ## Subclasse: ...            a subclasse que o SRD traz
  *
+ * Qualquer outra parte aberta por "## " (como as opções de Invocação do
+ * Bruxo ou de Metamagia do Feiticeiro) vira um pergaminho próprio.
+ *
  * Cada característica começa com "#### Nível N: Nome". A lista de magias
  * não fica no arquivo: sai do grimório, pela classe de cada magia.
  *
@@ -53,6 +56,8 @@ export type Classe = {
   introducao: string;
   tabela: string;
   patamares: Patamar[];
+  /** Partes a mais que algumas classes têm, como as Invocações do Bruxo. */
+  extras: { titulo: string; texto: string }[];
   subclasse: {
     nome: string;
     lema: string;
@@ -95,6 +100,8 @@ function emPatamares(texto: string): { antes: string; patamares: Patamar[] } {
   }
   return { antes: antes.trim(), patamares };
 }
+
+const CONHECIDAS = ["Traços", "Tornando-se", "Características de classe", "Subclasse: "];
 
 function lerClasse(slug: string): Classe | undefined {
   const arquivo = path.join(PASTA, `${slug}.md`);
@@ -139,6 +146,9 @@ function lerClasse(slug: string): Classe | undefined {
     introducao,
     tabela,
     patamares: caracteristicas.patamares,
+    extras: Object.entries(secoes)
+      .filter(([t]) => !CONHECIDAS.some((c) => t.startsWith(c)))
+      .map(([titulo, texto]) => ({ titulo, texto })),
     subclasse: {
       nome: tituloSubclasse.replace("Subclasse: ", ""),
       lema: lema.replace(/^_|_$/g, ""),
