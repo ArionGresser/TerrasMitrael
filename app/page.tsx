@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ultimoEpisodio, chaveDaTemporada, chaveDoEpisodio } from "@/lib/contos";
-import { Cartaz } from "@/components/contos/Cartaz";
+import { novidades } from "@/lib/novidades";
 import { Pergaminho } from "@/components/ui/Pergaminho";
 import { Dobra } from "@/components/ui/Dobra";
 import { Revelar } from "@/components/ui/Revelar";
@@ -40,6 +39,14 @@ const PORTAIS = [
       "Os heróis que caminharam por estas terras, suas origens, suas escolhas e o que deixaram para trás.",
     imagem: "/images/personagens/elenco-origin-heroes.jpg",
     alt: "Os Origin Heroes reunidos numa clareira, diante de ruínas tomadas pela mata",
+  },
+  {
+    href: "/contos/",
+    nome: "Contos",
+    texto:
+      "As sessões jogadas, contadas como história. Cada sessão vira um episódio, temporada por temporada.",
+    imagem: "/images/contos/cronicas/t2e2-saida.webp",
+    alt: "A saída de uma mina na encosta de um morro, com um vilarejo lá embaixo no vale",
   },
   {
     href: "/mapa/",
@@ -129,8 +136,8 @@ export default function Home() {
           </Pergaminho>
         </Revelar>
 
-        {/* ---------- Contos: o episódio mais novo ---------- */}
-        <EmCartaz />
+        {/* ---------- Novidades ---------- */}
+        <Novidades />
 
         {/* ---------- Portais ---------- */}
         <Revelar className="mt-14">
@@ -147,6 +154,12 @@ export default function Home() {
               key={portal.href}
               atraso={(i % 2) * 0.08}
               direcao={i % 2 === 0 ? "esquerda" : "direita"}
+              // Com número ímpar de portais, o último ocupa a linha inteira
+              className={
+                i === PORTAIS.length - 1 && PORTAIS.length % 2 === 1
+                  ? "sm:col-span-2"
+                  : ""
+              }
             >
               <Pergaminho
                 variante="cartao"
@@ -154,12 +167,22 @@ export default function Home() {
                 inclinacao={i % 2 === 0 ? "esquerda" : "direita"}
                 className="flex h-full flex-col"
               >
-                <div className="border-madeira-800/25 relative aspect-[16/10] w-full overflow-hidden rounded-sm border">
+                <div
+                  className={`border-madeira-800/25 relative aspect-[16/10] w-full overflow-hidden rounded-sm border ${
+                    i === PORTAIS.length - 1 && PORTAIS.length % 2 === 1
+                      ? "sm:aspect-[21/8]"
+                      : ""
+                  }`}
+                >
                   <Image
                     src={portal.imagem}
                     alt={portal.alt}
                     fill
-                    sizes="(max-width: 640px) 100vw, 340px"
+                    sizes={
+                      i === PORTAIS.length - 1 && PORTAIS.length % 2 === 1
+                        ? "(max-width: 640px) 100vw, 700px"
+                        : "(max-width: 640px) 100vw, 340px"
+                    }
                     className="object-cover sepia-[0.12]"
                   />
                 </div>
@@ -270,55 +293,67 @@ export default function Home() {
 }
 
 /**
- * A chamada dos Contos: o cartaz da série e o episódio publicado por último,
- * para quem volta ao site achar de cara o que tem de novo.
+ * O mural de novidades: o episódio mais novo dos Contos e o que mais entrou
+ * no site por último, como personagens novos. A lista mora em
+ * src/lib/novidades.ts.
  */
-function EmCartaz() {
-  const novo = ultimoEpisodio();
-  if (!novo) return null;
-  const { serie, temporada, episodio } = novo;
-  const href = `/contos/${serie.slug}/${chaveDaTemporada(temporada)}/${chaveDoEpisodio(episodio)}/`;
+function Novidades() {
+  const itens = novidades();
+  if (itens.length === 0) return null;
 
   return (
-    <Revelar className="mt-14">
-      <section
-        aria-labelledby="titulo-em-cartaz"
-        className="border-dourado-600/30 bg-madeira-950/60 flex flex-col items-center gap-6 rounded-sm border p-5 shadow-[0_10px_30px_-12px_rgba(0,0,0,0.8)] sm:flex-row sm:items-stretch sm:p-6"
-      >
-        <div className="w-40 shrink-0 sm:w-44">
-          <Cartaz serie={serie} />
+    <section aria-labelledby="titulo-novidades" className="mt-14">
+      <Revelar>
+        <div className="text-center">
+          <TituloCapitulo as="h2" tom="claro">
+            <span id="titulo-novidades">Novidades</span>
+          </TituloCapitulo>
+          <p className="text-pergaminho-300/80 mt-1 text-sm">
+            O que chegou à mesa por último
+          </p>
         </div>
+      </Revelar>
 
-        <div className="flex min-w-0 flex-col justify-center text-center sm:text-left">
-          <p className="font-titulo text-dourado-400 text-[0.66rem] tracking-[0.25em] uppercase">
-            Contos de Mitrael · Episódio novo
-          </p>
-          <h2
-            id="titulo-em-cartaz"
-            className="font-brasao text-pergaminho-50 mt-2 text-3xl leading-tight sm:text-4xl"
-          >
-            {episodio.meta.titulo}
-          </h2>
-          <p className="text-pergaminho-300 mt-1 text-xs tracking-wide">
-            {serie.titulo} · Temporada {temporada.numero} · Episódio{" "}
-            {episodio.meta.numero}
-          </p>
-          <p className="text-pergaminho-200 mt-4 text-sm leading-relaxed sm:text-base">
-            {episodio.meta.resumo}
-          </p>
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-3 sm:justify-start">
-            <BotaoLink href={href} variante="primario">
-              Ler o episódio
-            </BotaoLink>
-            <Link
-              href="/contos/"
-              className="text-pergaminho-200 hover:text-pergaminho-50 text-sm underline decoration-dourado-600/60 underline-offset-4 transition-colors"
-            >
-              Todos os contos
-            </Link>
-          </div>
-        </div>
-      </section>
-    </Revelar>
+      <ul className="border-dourado-600/30 bg-madeira-950/60 divide-dourado-600/15 mt-6 divide-y rounded-sm border shadow-[0_10px_30px_-12px_rgba(0,0,0,0.8)]">
+        {itens.map((item, i) => (
+          <li key={item.chave}>
+            <Revelar atraso={i * 0.06}>
+              <Link
+                href={item.href}
+                className="group hover:bg-madeira-800/50 flex items-center gap-4 p-3 transition-colors sm:p-4"
+              >
+                <span className="border-dourado-600/40 relative size-16 shrink-0 overflow-hidden rounded-sm border sm:size-20">
+                  <Image
+                    src={item.imagem}
+                    alt=""
+                    fill
+                    sizes="80px"
+                    className="object-cover sepia-[0.12]"
+                    style={{ objectPosition: item.posicao ?? "center" }}
+                  />
+                </span>
+                <span className="min-w-0">
+                  <span className="font-titulo text-dourado-400 block text-[0.6rem] tracking-[0.22em] uppercase">
+                    {item.etiqueta}
+                  </span>
+                  <span className="font-titulo text-pergaminho-50 mt-0.5 block text-base leading-snug font-semibold group-hover:underline sm:text-lg">
+                    {item.titulo}
+                  </span>
+                  <span className="text-pergaminho-200/85 mt-1 line-clamp-2 block text-xs leading-relaxed sm:text-sm">
+                    {item.texto}
+                  </span>
+                </span>
+                <span
+                  aria-hidden
+                  className="text-dourado-400 ml-auto shrink-0 pl-1 transition-transform motion-safe:group-hover:translate-x-0.5"
+                >
+                  →
+                </span>
+              </Link>
+            </Revelar>
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }
