@@ -177,7 +177,9 @@ export function SeloMenu() {
                     const ativo =
                       secao.href === "/"
                         ? caminho === "/"
-                        : caminho.startsWith(secao.href);
+                        : [secao.href, ...(secao.inclui ?? [])].some((h) =>
+                            caminho.startsWith(h)
+                          );
 
                     return (
                       <motion.li

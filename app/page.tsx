@@ -49,12 +49,12 @@ const PORTAIS = [
     alt: "A saída de uma mina na encosta de um morro, com um vilarejo lá embaixo no vale",
   },
   {
-    href: "/magias/",
-    nome: "Grimório",
+    href: "/regras/",
+    nome: "Compêndio",
     texto:
-      "As magias das regras de 2024 em português, para conferir uma regra na mesa ou escolher a do próximo nível.",
+      "As regras de 2024 em português: classes, espécies, talentos e as magias do Grimório, para criar um personagem ou tirar uma dúvida na mesa.",
     imagem: "/images/book.jpg",
-    alt: "Um grimório de capa de couro, envolto em brilho arcano",
+    alt: "Um livro de capa de couro, envolto em brilho arcano",
     // A arte é pequena e quadrada: fica inteira, no centro, sobre fundo escuro
     inteira: true,
   },
