@@ -64,8 +64,34 @@ export default function Home() {
   return (
     <>
       <main className="mx-auto max-w-3xl px-4 pt-20 pb-8 sm:px-6 sm:pt-28">
-        {/* ---------- Abertura ---------- */}
-        <Pergaminho inclinacao="esquerda" borda={1}>
+        {/* ---------- Abertura ----------
+            O mapa do continente aberto na mesa, e o pergaminho de boas-vindas
+            pousado por cima dele. No celular o mapa ocupa a largura toda e
+            vem recortado em pé, mostrando o coração do continente. */}
+        <div className="relative -mx-4 aspect-[4/5] overflow-hidden shadow-[0_14px_40px_-12px_rgba(0,0,0,0.85)] sm:mx-0 sm:aspect-[16/9] sm:rounded-sm sm:border sm:border-black/40">
+          <picture>
+            <source media="(min-width: 640px)" srcSet="/images/heroi-mapa-largo.webp" />
+            <img
+              src="/images/heroi-mapa-alto.webp"
+              alt="O mapa do continente de Mitrael: as Terras de Áskar em vermelho, as Terras de Tungel ao norte, Sovara Mithr e as Terras de Mitrael a leste, e a rosa dos ventos no meio do mar"
+              width={720}
+              height={900}
+              fetchPriority="high"
+              decoding="async"
+              className="absolute inset-0 size-full object-cover"
+            />
+          </picture>
+          <div
+            aria-hidden
+            className="from-madeira-900 absolute inset-0 bg-gradient-to-t via-transparent via-45% to-black/30"
+          />
+          <div
+            aria-hidden
+            className="absolute inset-0 shadow-[inset_0_0_60px_rgba(0,0,0,0.55)]"
+          />
+        </div>
+
+        <Pergaminho inclinacao="esquerda" borda={1} className="relative -mt-24 sm:-mt-28">
           <header className="text-center">
             <Sobretitulo>Cenário autoral de RPG de mesa</Sobretitulo>
 
