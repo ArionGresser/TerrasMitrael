@@ -20,6 +20,8 @@ type Registro =
       texto: string;
       href: string;
       imagem: string;
+      /** Onde fica o assunto na imagem, quando ela é cortada. */
+      posicao?: string;
     };
 
 const REGISTRO: Registro[] = [
@@ -60,6 +62,61 @@ const REGISTRO: Registro[] = [
     texto:
       "As 339 magias das regras de 2024 em português, com busca por nome, classe, círculo e escola.",
     href: "/magias/",
+    imagem: "/images/book.jpg",
+  },
+  {
+    tipo: "aviso",
+    data: "2026-10-07T12:34-03:00",
+    titulo: "Espécies",
+    texto:
+      "Anão, draconato, elfo, gnomo, golias, humano, orc, pequenino e tiefling, com os traços de cada povo das regras de 2024.",
+    href: "/especies/",
+    imagem: "/images/personagens/elenco-origin-heroes.jpg",
+  },
+  {
+    tipo: "aviso",
+    data: "2026-10-07T12:49-03:00",
+    titulo: "Classes",
+    texto:
+      "As doze classes em português, do nível 1 ao 20, cada nível num pergaminho e cada classe com uma subclasse.",
+    href: "/classes/",
+    imagem: "/images/rarg.jpg",
+  },
+  {
+    tipo: "aviso",
+    data: "2026-10-07T16:01-03:00",
+    titulo: "Johnny de retrato novo",
+    texto:
+      "O goblin ganhou um retrato mais nítido e mais fiel a ele, na ficha, na lista de personagens e nos Contos.",
+    href: "/personagens/johnny-bling-bling/",
+    imagem: "/images/personagens/johnny-bling-bling-retrato.jpg",
+    posicao: "40% 14%",
+  },
+  {
+    tipo: "aviso",
+    data: "2026-10-07T16:13-03:00",
+    titulo: "Itens Mágicos",
+    texto:
+      "Os 258 itens mágicos das regras, com busca por tipo, raridade e sintonia, e as regras de cargas, maldições e fabricação.",
+    href: "/itens/",
+    imagem: "/images/pocao.jpg",
+  },
+  {
+    tipo: "aviso",
+    data: "2026-10-07T16:38-03:00",
+    titulo: "Bestiário",
+    texto:
+      "Os 330 monstros e animais, cada um com a ficha completa, filtros por tipo e Nível de Desafio e um guia de como ler uma ficha.",
+    href: "/monstros/",
+    imagem: "/images/loc/putrefados.jpg",
+  },
+  {
+    tipo: "aviso",
+    data: "2026-10-07T18:11-03:00",
+    titulo: "Livro do Aventureiro",
+    texto:
+      "As regras de 2024 reunidas num lugar só: classes, espécies, antecedentes, talentos, equipamento, magias, itens, monstros e o Glossário de Regras.",
+    href: "/regras/",
     imagem: "/images/book.jpg",
   },
 ];
