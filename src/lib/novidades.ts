@@ -16,6 +16,15 @@ type Registro =
 const REGISTRO: Registro[] = [
   {
     tipo: "aviso",
+    data: "2026-10-07",
+    titulo: "Grimório",
+    texto:
+      "As 339 magias das regras de 2024 em português, com busca por nome, classe, círculo e escola.",
+    href: "/magias/",
+    imagem: "/images/book.jpg",
+  },
+  {
+    tipo: "aviso",
     data: "2026-10-06",
     titulo: "Contos de Mitrael",
     texto:
@@ -50,7 +59,7 @@ export type Novidade = {
 };
 
 /** Tudo o que há de novo, do mais recente para o mais antigo. */
-export function novidades(limite = 4): Novidade[] {
+export function novidades(limite = 5): Novidade[] {
   const lista: Novidade[] = [];
 
   const novo = ultimoEpisodio();

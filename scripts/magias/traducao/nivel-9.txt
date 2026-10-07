@@ -1,0 +1,166 @@
+=== Astral Projection | Projeção Astral
+material: para cada alvo da magia, um jacinto que valha 1.000 PO ou mais e uma barra de prata que valha 100 PO ou mais, tudo consumido pela magia
+Você e até oito criaturas voluntárias dentro do alcance projetam o corpo astral no Plano Astral (a magia acaba na hora se você já estiver nesse plano). O corpo de cada alvo fica para trás em estado de animação suspensa: fica com a condição Inconsciente, não precisa de comida nem de ar e não envelhece.
+
+A forma astral de um alvo se parece com o corpo dele em quase tudo, copiando as estatísticas de jogo e os pertences. A principal diferença é um cordão prateado que sai do meio das omoplatas da forma astral. O cordão some de vista depois de 30 centímetros. Se o cordão for cortado, o que só acontece quando um efeito diz que acontece, o corpo e a forma astral do alvo morrem.
+
+A forma astral de um alvo pode viajar pelo Plano Astral. No momento em que uma forma astral sai desse plano, o corpo e os pertences do alvo viajam pelo cordão prateado, e o alvo volta a entrar no próprio corpo no plano novo.
+
+Qualquer dano ou outro efeito sobre a forma astral não afeta o corpo do alvo, e vice-versa. Se o corpo ou a forma astral de um alvo chegar a 0 Pontos de Vida, a magia acaba para esse alvo. A magia acaba para todos os alvos se você usar uma ação de Magia para dispensá-la.
+
+Quando a magia acaba para um alvo que não esteja morto, ele reaparece no próprio corpo e sai do estado de animação suspensa.
+
+=== Foresight | Presciência
+material: uma pena de beija-flor
+Você toca uma criatura voluntária e lhe dá uma capacidade limitada de enxergar o futuro imediato. Pela duração, o alvo tem Vantagem nos Testes de D20, e as outras criaturas têm Desvantagem nas jogadas de ataque contra ele. A magia acaba antes se você a conjurar de novo.
+
+=== Gate | Portal
+material: um diamante que valha 5.000 PO ou mais
+Você conjura um portal que liga um espaço desocupado que consiga ver dentro do alcance a um ponto preciso de outro plano de existência. O portal é uma abertura circular, com 1,5 a 6 metros de diâmetro, como você quiser. Você pode virar o portal para a direção que escolher. Ele dura pela duração, e o destino é visível através dele.
+
+O portal tem frente e verso em cada plano onde aparece. Só é possível atravessá-lo pela frente. Qualquer coisa que faça isso é levada na hora para o outro plano e aparece no espaço desocupado mais próximo do portal.
+
+Divindades e outros governantes de planos podem impedir que portais criados por esta magia se abram na presença deles ou em qualquer lugar dos domínios deles.
+
+Quando conjura esta magia, você pode dizer o nome de uma criatura específica (um pseudônimo, título ou apelido não funciona). Se essa criatura estiver num plano diferente do seu, o portal se abre ao lado dela e a leva para o espaço desocupado mais próximo do seu lado do portal. Você não ganha nenhum poder especial sobre a criatura, e ela fica livre para agir como o Mestre achar adequado. Pode ir embora, atacar você ou ajudar você.
+
+=== Imprisonment | Aprisionamento
+material: uma estatueta do alvo que valha 5.000 PO ou mais
+Você cria uma amarra mágica para prender uma criatura que consiga ver dentro do alcance. O alvo precisa fazer uma salvaguarda de Sabedoria. Se for bem-sucedido, não é afetado e fica imune a esta magia pelas próximas 24 horas. Se falhar, fica aprisionado. Enquanto estiver aprisionado, o alvo não precisa respirar, comer nem beber, e não envelhece. Magias de Adivinhação não conseguem localizar nem perceber o alvo aprisionado, e ele não consegue se teletransportar.
+
+Até a magia acabar, o alvo também sofre um destes efeitos, à sua escolha:
+
+**Sepultamento.** O alvo fica enterrado sob a terra, dentro de um globo oco de energia mágica do tamanho exato para contê-lo. Nada entra nem sai do globo.
+
+**Acorrentamento.** Correntes bem fincadas no chão prendem o alvo no lugar. Ele fica com a condição Contido e não pode ser movido por nenhum meio.
+
+**Prisão Cercada.** O alvo fica preso num semiplano protegido contra teletransporte e viagem entre planos. O semiplano pode ser, à sua escolha, um labirinto, uma jaula, uma torre ou algo parecido.
+
+**Contenção Mínima.** O alvo fica com 2,5 centímetros de altura e preso dentro de uma pedra preciosa indestrutível ou objeto parecido. A luz atravessa a pedra (o que deixa o alvo ver o lado de fora e as outras criaturas verem o lado de dentro), mas nada mais passa por nenhum meio.
+
+**Sono Profundo.** O alvo fica com a condição Inconsciente e não pode ser acordado.
+
+_Encerrando a Magia._ Quando conjura a magia, defina um gatilho que vai encerrá-la. Ele pode ser tão simples ou tão elaborado quanto você quiser, mas o Mestre precisa concordar que tem grande chance de acontecer na próxima década. O gatilho precisa ser uma ação observável, como alguém fazer uma certa oferenda no templo do seu deus, salvar o seu amor verdadeiro ou derrotar um monstro específico.
+
+Uma magia _Dissipar Magia_ só encerra esta magia se for conjurada com um espaço de 9º círculo, tendo como alvo a prisão ou o componente usado para criá-la.
+
+=== Mass Heal | Cura Completa em Massa
+Uma torrente de energia curativa flui de você para as criaturas à sua volta. Você restaura até 700 Pontos de Vida, divididos como quiser entre quantas criaturas quiser que você consiga ver dentro do alcance. As criaturas curadas por esta magia também se livram das condições Cego, Surdo e Envenenado.
+
+=== Meteor Swarm | Chuva de Meteoros
+Orbes de fogo em chamas despencam no chão em quatro pontos diferentes que você consiga ver dentro do alcance. Cada criatura numa Esfera de 12 metros de raio centrada em cada um desses pontos faz uma salvaguarda de Destreza. Uma criatura sofre 20d6 de dano de fogo e 20d6 de dano contundente se falhar, ou metade desse dano se for bem-sucedida. Uma criatura na área de mais de uma Esfera de fogo só é afetada uma vez.
+
+Um objeto não mágico que não esteja sendo vestido ou carregado também sofre o dano, se estiver na área da magia, e pega fogo se for inflamável.
+
+=== Power Word Heal | Palavra de Poder: Curar
+Uma onda de energia curativa envolve uma criatura que você consiga ver dentro do alcance. O alvo recupera todos os Pontos de Vida. Se a criatura estiver com a condição Enfeitiçado, Amedrontado, Paralisado, Envenenado ou Atordoado, a condição acaba. Se estiver com a condição Caído, ela pode usar a Reação para se levantar.
+
+=== Power Word Kill | Palavra de Poder: Matar
+Você obriga uma criatura que consiga ver dentro do alcance a morrer. Se o alvo tiver 100 Pontos de Vida ou menos, ele morre. Senão, sofre 12d12 de dano psíquico.
+
+=== Prismatic Wall | Muralha Prismática
+Um plano de luz cintilante e multicolorido forma uma muralha vertical e opaca, com até 27 metros de comprimento, 9 metros de altura e 2,5 centímetros de espessura, centrada num ponto dentro do alcance. Se preferir, você dá à muralha a forma de um globo de até 9 metros de diâmetro, centrado num ponto dentro do alcance. A muralha dura pela duração. Se você puser a muralha num espaço ocupado por uma criatura, a magia acaba na hora, sem efeito.
+
+A muralha emite Luz Plena a até 30 metros e Penumbra por mais 30 metros. Você e as criaturas que indicar ao conjurar a magia podem atravessar a muralha e ficar perto dela sem se ferir. Se outra criatura que consiga ver a muralha chegar a até 6 metros dela, ou começar o turno ali, precisa ser bem-sucedida numa salvaguarda de Constituição ou fica com a condição Cego por 1 minuto.
+
+A muralha é formada por sete camadas, cada uma de uma cor. Quando uma criatura enfia a mão ou atravessa a muralha, passa por todas as camadas, uma de cada vez. Cada camada obriga a criatura a fazer uma salvaguarda de Destreza, ou ela é afetada pelas propriedades dessa camada, descritas na tabela Camadas Prismáticas.
+
+A muralha, que tem CA 10, pode ser destruída uma camada de cada vez, na ordem do vermelho ao violeta, por meios específicos de cada camada. Uma camada destruída some pela duração. _Campo Antimagia_ não tem efeito na muralha, e _Dissipar Magia_ só afeta a camada violeta.
+
+**Camadas Prismáticas**
+
+| Ordem | Efeitos |
+|---|---|
+| 1 | **Vermelho.** *Falha:* 12d6 de dano de fogo. *Sucesso:* metade do dano. *Efeitos Adicionais:* ataques à distância não mágicos não atravessam esta camada, que é destruída se sofrer pelo menos 25 de dano de frio. |
+| 2 | **Laranja.** *Falha:* 12d6 de dano ácido. *Sucesso:* metade do dano. *Efeitos Adicionais:* ataques à distância mágicos não atravessam esta camada, que é destruída por um vento forte (como o criado por *Lufada de Vento*). |
+| 3 | **Amarelo.** *Falha:* 12d6 de dano elétrico. *Sucesso:* metade do dano. *Efeitos Adicionais:* a camada é destruída se sofrer pelo menos 60 de dano de energia. |
+| 4 | **Verde.** *Falha:* 12d6 de dano de veneno. *Sucesso:* metade do dano. *Efeitos Adicionais:* uma magia *Criar Passagem*, ou outra magia de círculo igual ou maior que consiga abrir um portal numa superfície sólida, destrói esta camada. |
+| 5 | **Azul.** *Falha:* 12d6 de dano de frio. *Sucesso:* metade do dano. *Efeitos Adicionais:* a camada é destruída se sofrer pelo menos 25 de dano de fogo. |
+| 6 | **Anil.** *Falha:* o alvo fica com a condição Contido e faz uma salvaguarda de Constituição no fim de cada turno dele. Se for bem-sucedido três vezes, a condição acaba. Se falhar três vezes, fica com a condição Petrificado até ser libertado por um efeito como a magia *Restauração Maior*. Os sucessos e as falhas não precisam ser seguidos: anote os dois até o alvo juntar três de um tipo. *Efeitos Adicionais:* não é possível conjurar magias através desta camada, que é destruída pela Luz Plena da magia *Luz do Dia*. |
+| 7 | **Violeta.** *Falha:* o alvo fica com a condição Cego e faz uma salvaguarda de Sabedoria no começo do seu próximo turno. Se for bem-sucedido, a condição acaba. Se falhar, a condição acaba e a criatura se teletransporta para outro plano de existência (à escolha do Mestre). *Efeitos Adicionais:* esta camada é destruída por *Dissipar Magia*. |
+
+=== Shapechange | Mudança de Forma
+material: um diadema de jade que valha 1.500 PO ou mais
+Você muda de forma para outra criatura pela duração, ou até usar uma ação de Magia para mudar para outra forma permitida. A nova forma precisa ser de uma criatura com Nível de Desafio não maior que o seu nível ou Nível de Desafio. Você precisa já ter visto esse tipo de criatura, e ela não pode ser um Constructo nem um Morto-Vivo.
+
+Quando conjura a magia, você ganha Pontos de Vida Temporários iguais aos Pontos de Vida da primeira forma que assumir. Os que sobrarem desaparecem quando a magia acaba.
+
+As suas estatísticas de jogo são substituídas pelo bloco de estatísticas da forma escolhida, mas você mantém o tipo de criatura, o alinhamento, a personalidade, os valores de Inteligência, Sabedoria e Carisma, os Pontos de Vida, os Dados de Vida, as proficiências e a capacidade de se comunicar. Se tiver a característica Conjuração, também a mantém.
+
+Ao mudar de forma, você decide se o seu equipamento cai no chão ou muda de tamanho e formato para servir na nova forma enquanto estiver nela.
+
+=== Storm of Vengeance | Tempestade da Vingança
+Uma nuvem de tempestade revolta se forma pela duração, centrada num ponto dentro do alcance e se espalhando num raio de 90 metros. Cada criatura embaixo da nuvem quando ela aparece precisa ser bem-sucedida numa salvaguarda de Constituição ou sofre 2d6 de dano trovejante e fica com a condição Surdo pela duração.
+
+No começo de cada um dos seus turnos seguintes, a tempestade produz efeitos diferentes, descritos abaixo.
+
+_Turno 2._ Cai uma chuva ácida. Cada criatura e objeto embaixo da nuvem sofre 4d6 de dano ácido.
+
+_Turno 3._ Você chama seis relâmpagos da nuvem para atingir seis criaturas ou objetos diferentes embaixo dela. Cada alvo faz uma salvaguarda de Destreza, sofrendo 10d6 de dano elétrico se falhar, ou metade desse dano se for bem-sucedido.
+
+_Turno 4._ Chove granizo. Cada criatura embaixo da nuvem sofre 2d6 de dano contundente.
+
+_Turnos 5 a 10._ Rajadas de vento e chuva congelante castigam a área embaixo da nuvem. Cada criatura ali sofre 1d6 de dano de frio. Até a magia acabar, a área é Terreno Difícil e Totalmente Obscurecida, ataques à distância com armas são impossíveis ali, e um vento forte sopra pela área.
+
+=== Time Stop | Parar o Tempo
+Você para por um instante a passagem do tempo para todos, menos para você. Não passa tempo nenhum para as outras criaturas, enquanto você faz 1d4 + 1 turnos seguidos, nos quais pode usar ações e se mover normalmente.
+
+Esta magia acaba se uma das ações que você usar nesse período, ou qualquer efeito que criar nele, afetar uma criatura que não seja você ou um objeto vestido ou carregado por outra pessoa. Além disso, a magia acaba se você se mover para um lugar a mais de 300 metros de onde a conjurou.
+
+=== True Polymorph | Metamorfose Verdadeira
+material: uma gota de mercúrio, um pouco de goma-arábica e um fiapo de fumaça
+Escolha uma criatura ou um objeto não mágico que você consiga ver dentro do alcance. A criatura muda de forma para outra criatura ou para um objeto não mágico, ou o objeto muda de forma para uma criatura (o objeto não pode estar sendo vestido nem carregado). A transformação dura pela duração, ou até o alvo morrer ou ser destruído, mas, se você mantiver a Concentração nesta magia pela duração inteira, ela dura até ser dissipada.
+
+Uma criatura que não queira ser afetada pode fazer uma salvaguarda de Sabedoria e, se for bem-sucedida, não é afetada pela magia.
+
+_Criatura em Criatura._ Se você transformar uma criatura em outro tipo de criatura, a nova forma pode ser de qualquer tipo à sua escolha com Nível de Desafio igual ou menor que o Nível de Desafio ou o nível do alvo. As estatísticas de jogo do alvo são substituídas pelo bloco de estatísticas da nova forma, mas ele mantém os Pontos de Vida, os Dados de Vida, o alinhamento e a personalidade.
+
+O alvo ganha Pontos de Vida Temporários iguais aos Pontos de Vida da nova forma. Os que sobrarem desaparecem quando a magia acaba.
+
+As ações que o alvo pode fazer ficam limitadas pela anatomia da nova forma, e ele não pode falar nem conjurar magias.
+
+O equipamento do alvo se funde à nova forma. A criatura não pode usar esse equipamento nem se beneficiar dele de nenhum jeito.
+
+_Objeto em Criatura._ Você pode transformar um objeto em qualquer tipo de criatura, desde que o tamanho da criatura não seja maior que o do objeto e que ela tenha Nível de Desafio 9 ou menor. A criatura é Amistosa com você e seus aliados. Em combate, ela age logo depois do seu turno e obedece às suas ordens.
+
+Se a magia durar mais de uma hora, você deixa de controlar a criatura. Ela pode continuar Amistosa com você, dependendo de como você a tratou.
+
+_Criatura em Objeto._ Se você transformar uma criatura num objeto, ela se transforma junto com tudo o que estiver vestindo e carregando, desde que o tamanho do objeto não seja maior que o da criatura. As estatísticas da criatura passam a ser as do objeto, e ela não se lembra do tempo que passou nessa forma depois que a magia acaba e ela volta ao normal.
+
+=== True Resurrection | Ressurreição Verdadeira
+material: diamantes que valham 25.000 PO ou mais, consumidos pela magia
+Você toca uma criatura morta há no máximo 200 anos, que tenha morrido de qualquer coisa menos de velhice. A criatura é revivida com todos os Pontos de Vida.
+
+Esta magia fecha todos os ferimentos, neutraliza qualquer veneno, cura todos os contágios mágicos e acaba com qualquer maldição que afetava a criatura quando ela morreu. A magia substitui órgãos e membros danificados ou perdidos. Se a criatura era Morta-Viva, ela volta à forma que tinha antes de ser Morta-Viva.
+
+A magia pode criar um corpo novo se o original não existir mais. Nesse caso, você precisa dizer o nome da criatura. Ela então aparece num espaço desocupado à sua escolha a até 3 metros de você.
+
+=== Weird | Sina
+Você tenta criar terrores ilusórios na mente dos outros. Cada criatura à sua escolha numa Esfera de 9 metros de raio, centrada num ponto dentro do alcance, faz uma salvaguarda de Sabedoria. Se falhar, o alvo sofre 10d10 de dano psíquico e fica com a condição Amedrontado pela duração. Se for bem-sucedido, sofre só metade do dano.
+
+Um alvo Amedrontado faz uma salvaguarda de Sabedoria no fim de cada turno dele. Se falhar, sofre 5d10 de dano psíquico. Se for bem-sucedido, a magia acaba para ele.
+
+=== Wish | Desejo
+_Desejo_ é a magia mais poderosa que um mortal pode conjurar. Só de falar em voz alta, você altera a própria realidade.
+
+O uso básico desta magia é copiar qualquer outra magia de 8º círculo ou menor. Se usá-la assim, você não precisa cumprir nenhum requisito para conjurar essa magia, inclusive componentes caros. A magia simplesmente faz efeito.
+
+Se preferir, você pode criar um dos efeitos a seguir, à sua escolha:
+
+**Criação de Objeto.** Você cria um objeto de até 25.000 PO de valor que não seja um item mágico. O objeto não pode ter mais de 90 metros em nenhuma dimensão, e aparece num espaço desocupado no chão que você consiga ver.
+
+**Saúde Instantânea.** Você faz você mesmo e até vinte criaturas que consiga ver recuperarem todos os Pontos de Vida, e encerra nelas todos os efeitos listados na magia _Restauração Maior_.
+
+**Resistência.** Você dá a até dez criaturas que consiga ver Resistência a um tipo de dano à sua escolha. Essa Resistência é permanente.
+
+**Imunidade a Magia.** Você dá a até dez criaturas que consiga ver imunidade a uma única magia ou outro efeito mágico por 8 horas.
+
+**Aprendizado Súbito.** Você troca um dos seus talentos por outro talento que possa ter. Perde todos os benefícios do talento antigo e ganha os do novo. Não pode trocar um talento que seja pré-requisito de outro talento ou característica sua.
+
+**Rolar de Novo.** Você desfaz um único acontecimento recente, obrigando a rolar de novo qualquer dado rolado na última rodada (incluindo o seu último turno). A realidade se remodela para acomodar o novo resultado. Por exemplo, uma magia _Desejo_ pode desfazer a salvaguarda falha de um aliado ou o Acerto Crítico de um inimigo. Você pode obrigar a nova rolagem a ser feita com Vantagem ou Desvantagem, e escolhe se fica com a nova rolagem ou com a original.
+
+**Remodelar a Realidade.** Você pode desejar algo que não esteja em nenhum dos outros efeitos. Para isso, diga o seu desejo ao Mestre com a maior precisão possível. O Mestre tem muita liberdade para decidir o que acontece nesse caso: quanto maior o desejo, maior a chance de alguma coisa dar errado. A magia pode simplesmente falhar, o efeito desejado pode se realizar só em parte, ou você pode sofrer uma consequência imprevista por causa de como formulou o desejo. Por exemplo, desejar que um vilão estivesse morto pode jogar você para a frente no tempo, para uma época em que esse vilão já não esteja vivo, o que na prática tira você do jogo.
+
+Do mesmo jeito, desejar um item mágico Lendário ou um Artefato pode levar você na hora para a presença do dono atual do item. Se o seu desejo for concedido e os efeitos dele tiverem consequências para uma comunidade, uma região ou um mundo inteiro, é provável que você atraia inimigos poderosos. Se o seu desejo afetar um deus, os servos divinos dele podem intervir na hora para impedi-lo ou para incentivar você a formular o desejo de um certo jeito. Se o seu desejo desfizer o próprio multiverso, ele falha.
+
+O esforço de conjurar _Desejo_ para qualquer efeito que não seja copiar outra magia enfraquece você. Depois de passar por esse esforço, cada vez que conjurar uma magia até terminar um Descanso Longo, você sofre 1d10 de dano necrótico por círculo dessa magia. Esse dano não pode ser reduzido nem evitado de nenhum jeito. Além disso, o seu valor de Força vira 3 por 2d4 dias. Para cada um desses dias que passar descansando e sem fazer mais que atividades leves, o tempo de recuperação que falta diminui em 2 dias. Por fim, há 33 por cento de chance de você nunca mais conseguir conjurar _Desejo_ se passar por esse esforço.

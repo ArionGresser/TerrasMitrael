@@ -1,6 +1,8 @@
 import Image from "next/image";
 import type { FichaAtual as Ficha } from "@/lib/personagens";
+import Link from "next/link";
 import { buscarHabilidade, type Habilidade } from "@/lib/habilidades";
+import { magiaPeloNome } from "@/lib/magias";
 import { Ornamento } from "@/components/ui/Titulo";
 import { Selo } from "@/components/ui/Selo";
 import { Secao } from "@/components/personagens/Painel";
@@ -131,6 +133,15 @@ function ListaDeHabilidades({ chaves }: { chaves: string[] }) {
                 <p className="text-tinta-500 mt-1 text-xs italic">
                   Anotado na ficha: {h.anotacao}
                 </p>
+              ) : null}
+
+              {ehMagia && magiaPeloNome(h.nome) ? (
+                <Link
+                  href={`/magias/${magiaPeloNome(h.nome)!.slug}/`}
+                  className="text-tinta-700 hover:text-heraldico-vermelho decoration-dourado-600/60 mt-1.5 inline-block text-xs underline underline-offset-2 transition-colors"
+                >
+                  Regra completa no Grimório →
+                </Link>
               ) : null}
             </div>
           </li>

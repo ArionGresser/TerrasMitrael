@@ -1,4 +1,5 @@
 import dados from "@/content/magias/magias.json";
+import { circulo, type ResumoDaMagia } from "./magias-base";
 
 /**
  * O grimório: as magias das regras de 2024, em português.
@@ -31,35 +32,17 @@ export type Magia = {
 
 export const MAGIAS = dados as Magia[];
 
-export const ESCOLAS = [
-  "Abjuração",
-  "Adivinhação",
-  "Conjuração",
-  "Encantamento",
-  "Evocação",
-  "Ilusão",
-  "Necromancia",
-  "Transmutação",
-];
+export { ESCOLAS, CLASSES, circulo, type ResumoDaMagia } from "./magias-base";
 
-export const CLASSES = [
-  "Bardo",
-  "Bruxo",
-  "Clérigo",
-  "Druida",
-  "Feiticeiro",
-  "Mago",
-  "Paladino",
-  "Patrulheiro",
-];
+const POR_NOME = new Map(MAGIAS.map((magia) => [magia.nome, magia]));
+
+/** Acha a magia pelo nome em português, como aparece nas fichas e nos textos. */
+export function magiaPeloNome(nome: string): Magia | undefined {
+  return POR_NOME.get(nome);
+}
 
 export function buscarMagia(slug: string): Magia | undefined {
   return MAGIAS.find((magia) => magia.slug === slug);
-}
-
-/** "Truque", "1º círculo", "9º círculo". */
-export function circulo(nivel: number): string {
-  return nivel === 0 ? "Truque" : `${nivel}º círculo`;
 }
 
 /** A linha de baixo do nome: "Evocação de 3º círculo", "Truque de Evocação". */
@@ -68,12 +51,6 @@ export function rotuloDaMagia(magia: Magia): string {
     ? `Truque de ${magia.escola}`
     : `${magia.escola} de ${circulo(magia.nivel)}`;
 }
-
-/** Só o que a lista precisa, para não mandar o texto de todas ao navegador. */
-export type ResumoDaMagia = Pick<
-  Magia,
-  "slug" | "nome" | "original" | "nivel" | "escola" | "classes" | "tempo" | "concentracao" | "ritual"
->;
 
 export function indiceDoGrimorio(): ResumoDaMagia[] {
   return MAGIAS.map(

@@ -1,4 +1,6 @@
 import { Fragment, type ReactNode } from "react";
+import Link from "next/link";
+import { magiaPeloNome } from "@/lib/magias";
 
 /**
  * Transforma o texto de uma magia em HTML.
@@ -8,6 +10,9 @@ import { Fragment, type ReactNode } from "react";
  * de Truque."), **negrito**, listas com "- ", subtítulos com "#### " e
  * tabelas com "|". Fazer isso aqui evita carregar um interpretador de
  * markdown inteiro só para isso.
+ *
+ * Quando o itálico é o nome de outra magia do grimório, ele vira link para
+ * a página dela.
  */
 export function TextoDeRegra({ texto }: { texto: string }) {
   const blocos = texto.trim().split(/\n\s*\n/);
@@ -104,6 +109,19 @@ function emLinha(texto: string): ReactNode {
       );
     }
     if ((p.startsWith("_") && p.endsWith("_")) || (p.startsWith("*") && p.endsWith("*") && p.length > 2)) {
+      // Nome de magia em itálico vira link para a página dela
+      const citada = magiaPeloNome(p.slice(1, -1));
+      if (citada) {
+        return (
+          <Link
+            key={i}
+            href={`/magias/${citada.slug}/`}
+            className="decoration-dourado-600/60 hover:text-heraldico-vermelho italic underline underline-offset-2 transition-colors"
+          >
+            {citada.nome}
+          </Link>
+        );
+      }
       return (
         <em key={i} className="text-tinta-900 font-semibold">
           {p.slice(1, -1)}

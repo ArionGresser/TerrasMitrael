@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import { CLASSES, ESCOLAS, circulo, type ResumoDaMagia } from "@/lib/magias";
+import { CLASSES, ESCOLAS, circulo, type ResumoDaMagia } from "@/lib/magias-base";
 
 /**
  * A lista de magias com busca e filtros.

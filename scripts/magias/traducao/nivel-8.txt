@@ -1,0 +1,155 @@
+=== Animal Shapes | Formas Animais
+Escolha quantas criaturas voluntárias quiser que você consiga ver dentro do alcance. Cada alvo muda de forma para uma Fera Grande ou menor à sua escolha, com Nível de Desafio 4 ou menor. Você pode escolher uma forma diferente para cada alvo. Nos turnos seguintes, pode usar uma ação de Magia para transformar os alvos de novo.
+
+As estatísticas de jogo do alvo são substituídas pelas da Fera escolhida, mas ele mantém o tipo de criatura, os Pontos de Vida, os Dados de Vida, o alinhamento, a capacidade de se comunicar e os valores de Inteligência, Sabedoria e Carisma. As ações do alvo ficam limitadas pela anatomia da forma de Fera, e ele não pode conjurar magias. O equipamento do alvo se funde à nova forma, e ele não pode usar nada dele enquanto estiver nela.
+
+O alvo ganha Pontos de Vida Temporários iguais aos Pontos de Vida da primeira forma que assumir. Os que sobrarem desaparecem quando a magia acaba. A transformação dura pela duração ou até o alvo encerrá-la com uma Ação Bônus.
+
+=== Antimagic Field | Campo Antimagia
+material: limalha de ferro
+Uma aura de antimagia envolve você numa Emanação de 3 metros. Ninguém pode conjurar magias, usar ações de Magia nem criar outros efeitos mágicos dentro da aura, e essas coisas não podem ter como alvo nem afetar de outro jeito nada que esteja dentro dela. As propriedades mágicas dos itens mágicos não funcionam dentro da aura nem em nada que esteja nela.
+
+Áreas de efeito criadas por magias ou outra magia não entram na aura, e ninguém pode se teletransportar para dentro ou para fora dela nem viajar entre planos ali. Os portais se fecham temporariamente dentro da aura.
+
+Magias em andamento, exceto as conjuradas por um Artefato ou por uma divindade, ficam suspensas na área. Enquanto um efeito estiver suspenso, ele não funciona, mas o tempo que passar suspenso conta na duração dele.
+
+_Dissipar Magia_ não tem efeito na aura, e as auras criadas por magias _Campo Antimagia_ diferentes não se anulam.
+
+=== Antipathy/Sympathy | Antipatia/Simpatia
+material: uma mistura de vinagre e mel
+Enquanto conjura a magia, escolha se ela cria antipatia ou simpatia, e escolha como alvo uma criatura ou um objeto Enorme ou menor. Então indique um tipo de criatura, como dragões vermelhos, goblins ou vampiros. Uma criatura do tipo escolhido faz uma salvaguarda de Sabedoria quando chega a até 36 metros do alvo. A escolha entre antipatia e simpatia define o que acontece com a criatura se ela falhar:
+
+**Antipatia.** A criatura fica com a condição Amedrontado. A criatura Amedrontada precisa usar o movimento nos turnos dela para se afastar o máximo possível do alvo, pelo caminho mais seguro.
+
+**Simpatia.** A criatura fica com a condição Enfeitiçado. A criatura Enfeitiçada precisa usar o movimento nos turnos dela para chegar o mais perto possível do alvo, pelo caminho mais seguro. Se estiver a até 1,5 metro do alvo, a criatura não consegue se afastar por vontade própria. Se o alvo causar dano à criatura Enfeitiçada, ela pode fazer uma salvaguarda de Sabedoria para encerrar o efeito, como descrito abaixo.
+
+_Encerrando o Efeito._ Se a criatura Amedrontada ou Enfeitiçada terminar o turno a mais de 36 metros do alvo, ela faz uma salvaguarda de Sabedoria. Se for bem-sucedida, deixa de ser afetada pelo alvo. Uma criatura bem-sucedida contra esse efeito fica imune a ele por 1 minuto, e depois disso pode ser afetada de novo.
+
+=== Befuddlement | Mente Embotada
+material: um chaveiro sem chaves
+Você golpeia a mente de uma criatura que consiga ver dentro do alcance. O alvo faz uma salvaguarda de Inteligência.
+
+Se falhar, o alvo sofre 10d12 de dano psíquico e não pode conjurar magias nem usar a ação de Magia. Ao fim de cada 30 dias, o alvo repete a salvaguarda, encerrando o efeito se for bem-sucedido. O efeito também pode ser encerrado pelas magias _Restauração Maior_, _Cura Completa_ ou _Desejo_.
+
+Se for bem-sucedido, o alvo sofre só metade do dano.
+
+=== Clone | Clone
+material: um diamante que valha 1.000 PO ou mais, consumido pela magia, e um recipiente que possa ser lacrado, que valha 2.000 PO ou mais e seja grande o bastante para conter a criatura clonada
+Você toca uma criatura, ou pelo menos 16 centímetros cúbicos da carne dela. Uma cópia inerte da criatura se forma dentro do recipiente usado na conjuração e termina de crescer depois de 120 dias. Você escolhe se o clone pronto tem a mesma idade da criatura ou é mais jovem. O clone continua inerte e dura indefinidamente, enquanto o recipiente não for mexido.
+
+Se a criatura original morrer depois que o clone estiver pronto, a alma dela passa para o clone, se estiver livre e quiser voltar. O clone é fisicamente idêntico ao original e tem a mesma personalidade, as mesmas memórias e as mesmas capacidades, mas nenhum equipamento do original. Os restos mortais originais da criatura, se houver, ficam inertes e não podem ser revividos, já que a alma dela está em outro lugar.
+
+=== Control Weather | Controlar o Clima
+material: incenso aceso
+Você assume o controle do clima a até 7,5 quilômetros de você pela duração. Precisa estar ao ar livre para conjurar esta magia, e ela acaba antes se você entrar num lugar fechado.
+
+Quando conjura a magia, você muda as condições do tempo atuais, que o Mestre define. Pode mudar a precipitação, a temperatura e o vento. As novas condições levam 1d4 × 10 minutos para fazer efeito. Depois disso, você pode mudá-las de novo. Quando a magia acaba, o clima volta ao normal aos poucos.
+
+Quando mudar as condições do tempo, encontre a condição atual nas tabelas abaixo e mude o estágio dela em um, para cima ou para baixo. Ao mudar o vento, você pode mudar a direção dele.
+
+**Precipitação**
+
+| Estágio | Condição |
+|---|---|
+| 1 | Céu limpo |
+| 2 | Poucas nuvens |
+| 3 | Céu encoberto ou neblina rasteira |
+| 4 | Chuva, granizo ou neve |
+| 5 | Chuva torrencial, granizo pesado ou nevasca |
+
+**Temperatura**
+
+| Estágio | Condição |
+|---|---|
+| 1 | Onda de calor |
+| 2 | Quente |
+| 3 | Morno |
+| 4 | Fresco |
+| 5 | Frio |
+| 6 | Congelante |
+
+**Vento**
+
+| Estágio | Condição |
+|---|---|
+| 1 | Calmaria |
+| 2 | Vento moderado |
+| 3 | Vento forte |
+| 4 | Ventania |
+| 5 | Tempestade |
+
+=== Demiplane | Semiplano
+Você cria uma porta sombria Média numa superfície sólida e plana que consiga ver dentro do alcance. A porta pode ser aberta e fechada, e leva a um semiplano: uma sala vazia de 9 metros em cada dimensão, feita de madeira ou de pedra (à sua escolha).
+
+Quando a magia acaba, a porta some, e os objetos que estiverem dentro do semiplano ficam lá. As criaturas lá dentro também ficam, a menos que escolham ser jogadas pela porta enquanto ela some, caindo com a condição Caído nos espaços desocupados mais próximos de onde a porta estava.
+
+Cada vez que conjurar esta magia, você pode criar um semiplano novo ou ligar a porta sombria a um semiplano que tenha criado numa conjuração anterior. Além disso, se você souber a natureza e o conteúdo de um semiplano criado por outra criatura com esta magia, pode ligar a porta sombria a esse semiplano.
+
+=== Dominate Monster | Dominar Monstro
+Uma criatura que você consiga ver dentro do alcance precisa ser bem-sucedida numa salvaguarda de Sabedoria ou fica com a condição Enfeitiçado pela duração. O alvo tem Vantagem na salvaguarda se você ou seus aliados estiverem lutando contra ele. Sempre que sofrer dano, o alvo repete a salvaguarda e, se for bem-sucedido, encerra a magia em si mesmo.
+
+Você tem uma ligação telepática com o alvo Enfeitiçado enquanto os dois estiverem no mesmo plano de existência. No seu turno, pode usar essa ligação para dar ordens ao alvo (sem gastar ação), como "Ataque aquela criatura", "Vá para lá" ou "Pegue aquele objeto". O alvo faz o possível para obedecer no turno dele. Se ele cumprir uma ordem e não receber outra, age e se move como quiser, concentrado em se proteger.
+
+Você pode mandar o alvo usar uma Reação, mas precisa usar a sua própria Reação para isso.
+
+_Usando um Espaço de Magia de Círculo Superior._ A sua Concentração pode durar mais com um espaço de 9º círculo (até 8 horas).
+
+=== Earthquake | Terremoto
+material: uma pedra rachada
+Escolha um ponto no chão que você consiga ver dentro do alcance. Pela duração, um tremor intenso rasga o chão num círculo de 30 metros de raio centrado nesse ponto. O chão ali é Terreno Difícil.
+
+Quando conjura esta magia, e no fim de cada um dos seus turnos pela duração, cada criatura no chão da área faz uma salvaguarda de Destreza. Se falhar, a criatura fica com a condição Caído, e a Concentração dela é quebrada.
+
+Você também pode provocar os efeitos abaixo.
+
+_Fendas._ No total, 1d6 fendas se abrem na área da magia no fim do turno em que você a conjura. Você escolhe onde elas ficam, mas não podem ser embaixo de construções. Cada fenda tem 1d10 × 3 metros de profundidade e 3 metros de largura, e vai de uma borda da área da magia até outra. Uma criatura no mesmo espaço de uma fenda precisa ser bem-sucedida numa salvaguarda de Destreza ou cai nela. Uma criatura que for bem-sucedida se move junto com a beirada da fenda enquanto ela se abre.
+
+_Construções._ O tremor causa 50 de dano contundente a qualquer construção em contato com o chão na área, quando você conjura a magia e no fim de cada um dos seus turnos até a magia acabar. Se uma construção chegar a 0 Pontos de Vida, ela desaba.
+
+Uma criatura que esteja a uma distância de uma construção desabando igual a metade da altura dela faz uma salvaguarda de Destreza. Se falhar, sofre 12d6 de dano contundente, fica com a condição Caído e fica soterrada nos escombros, precisando de um teste de Força (Atletismo) CD 20, com uma ação, para escapar. Se for bem-sucedida, sofre só metade do dano.
+
+=== Glibness | Lábia
+Até a magia acabar, quando você fizer um teste de Carisma, pode trocar o número rolado por 15. Além disso, não importa o que você diga, a magia que tentar descobrir se você está dizendo a verdade indica que você está sendo sincero.
+
+=== Holy Aura | Aura Sagrada
+material: um relicário que valha 1.000 PO ou mais
+Pela duração, você emite uma aura numa Emanação de 9 metros. Enquanto estiverem na aura, as criaturas à sua escolha têm Vantagem em todas as salvaguardas, e as outras criaturas têm Desvantagem nas jogadas de ataque contra elas. Além disso, quando um Ínfero ou um Morto-Vivo acerta uma criatura afetada com uma jogada de ataque corpo a corpo, o atacante precisa ser bem-sucedido numa salvaguarda de Constituição ou fica com a condição Cego até o fim do próximo turno dele.
+
+=== Incendiary Cloud | Nuvem Incendiária
+Uma nuvem rodopiante de brasas e fumaça preenche uma Esfera de 6 metros de raio centrada num ponto dentro do alcance. A área da nuvem é Totalmente Obscurecida. Ela dura pela duração ou até que um vento forte (como o criado por _Lufada de Vento_) a disperse.
+
+Quando a nuvem aparece, cada criatura nela faz uma salvaguarda de Destreza, sofrendo 10d8 de dano de fogo se falhar, ou metade desse dano se for bem-sucedida. Uma criatura também faz essa salvaguarda quando a Esfera passa para o espaço dela, e quando entra na Esfera ou termina o turno nela. Uma criatura só faz essa salvaguarda uma vez por turno.
+
+A nuvem se afasta 3 metros de você, numa direção à sua escolha, no começo de cada um dos seus turnos.
+
+=== Maze | Labirinto
+Você bane uma criatura que consiga ver dentro do alcance para um semiplano que é um labirinto. O alvo fica lá pela duração ou até escapar do labirinto.
+
+O alvo pode usar a ação de Estudo para tentar escapar. Quando faz isso, faz um teste de Inteligência (Investigação) CD 20. Se passar, escapa, e a magia acaba.
+
+Quando a magia acaba, o alvo reaparece no espaço que deixou ou, se ele estiver ocupado, no espaço desocupado mais próximo.
+
+=== Mind Blank | Mente Vazia
+Até a magia acabar, uma criatura voluntária que você toca tem Imunidade a dano psíquico e à condição Enfeitiçado. O alvo também não é afetado por nada que tente sentir as emoções ou o alinhamento dele, ler os pensamentos dele ou descobrir por magia onde ele está, e nenhuma magia, nem mesmo _Desejo_, consegue obter informações sobre o alvo, observá-lo à distância ou controlar a mente dele.
+
+=== Power Word Stun | Palavra de Poder: Atordoar
+Você sobrecarrega a mente de uma criatura que consiga ver dentro do alcance. Se o alvo tiver 150 Pontos de Vida ou menos, fica com a condição Atordoado. Senão, o Deslocamento dele vira 0 até o começo do seu próximo turno.
+
+O alvo Atordoado faz uma salvaguarda de Constituição no fim de cada turno dele, encerrando a condição em si mesmo se for bem-sucedido.
+
+=== Sunburst | Explosão Solar
+material: um pedaço de pedra do sol
+Uma luz do sol brilhante explode numa Esfera de 18 metros de raio, centrada num ponto à sua escolha dentro do alcance. Cada criatura na Esfera faz uma salvaguarda de Constituição. Se falhar, sofre 12d6 de dano radiante e fica com a condição Cego por 1 minuto. Se for bem-sucedida, sofre só metade do dano.
+
+Uma criatura Cega por esta magia faz outra salvaguarda de Constituição no fim de cada turno dela, encerrando o efeito em si mesma se for bem-sucedida.
+
+Esta magia dissipa a Escuridão criada por qualquer magia na área dela.
+
+=== Tsunami | Tsunami
+Uma muralha de água surge num ponto à sua escolha dentro do alcance. Ela pode ter até 90 metros de comprimento, 90 metros de altura e 15 metros de espessura. A muralha dura pela duração.
+
+Quando a muralha aparece, cada criatura na área dela faz uma salvaguarda de Força, sofrendo 6d10 de dano contundente se falhar, ou metade desse dano se for bem-sucedida.
+
+No começo de cada um dos seus turnos depois que a muralha aparece, ela se afasta 15 metros de você, levando junto as criaturas que estiverem nela. Qualquer criatura Enorme ou menor dentro da muralha, ou cujo espaço a muralha invadir ao se mover, precisa ser bem-sucedida numa salvaguarda de Força ou sofre 5d10 de dano contundente. Uma criatura só pode sofrer esse dano uma vez por rodada. No fim do turno, a altura da muralha diminui em 15 metros, e o dano que ela causa nas rodadas seguintes diminui em 1d10. Quando a muralha chega a 0 metros de altura, a magia acaba.
+
+Uma criatura presa na muralha pode se mover nadando. Por causa da força da onda, porém, ela precisa passar num teste de Força (Atletismo) contra a CD de salvaguarda da sua magia para conseguir se mover. Se falhar, não se move. Uma criatura que sai da muralha cai no chão.
