@@ -1,0 +1,295 @@
+=== Animate Dead | Animar os Mortos
+material: uma gota de sangue, um pedaço de carne e uma pitada de pó de osso
+Escolha uma pilha de ossos ou o cadáver de um Humanoide Médio ou Pequeno dentro do alcance. O alvo vira uma criatura Morta-Viva: um **Esqueleto**, se você escolheu ossos, ou um **Zumbi**, se escolheu um cadáver.
+
+Em cada um dos seus turnos, você pode usar uma Ação Bônus para dar uma ordem mental a qualquer criatura que tenha criado com esta magia, se ela estiver a até 18 metros de você (se controlar várias, pode dar ordem a qualquer uma delas ao mesmo tempo, com a mesma ordem para todas). Você decide que ação a criatura vai fazer e para onde vai se mover no próximo turno dela, ou dá uma ordem geral, como vigiar uma sala ou um corredor. Se você não der ordem nenhuma, a criatura usa a ação de Esquivar e só se move para evitar perigo. Depois de receber uma ordem, a criatura continua cumprindo até terminar a tarefa.
+
+A criatura fica sob o seu controle por 24 horas, e depois disso para de obedecer às ordens que você deu. Para manter o controle por mais 24 horas, você precisa conjurar esta magia de novo na criatura antes de o período atual acabar. Esse uso da magia reafirma o seu controle sobre até quatro criaturas que você animou com ela, em vez de animar uma nova.
+
+_Usando um Espaço de Magia de Círculo Superior._ Você anima, ou reafirma o controle sobre, duas criaturas Mortas-Vivas adicionais para cada círculo do espaço acima do 3º. Cada uma precisa vir de um cadáver ou pilha de ossos diferente.
+
+=== Beacon of Hope | Sinal de Esperança
+Escolha quantas criaturas quiser dentro do alcance. Pela duração, cada alvo tem Vantagem nas salvaguardas de Sabedoria e nas Salvaguardas contra Morte, e recupera o máximo de Pontos de Vida possível de qualquer cura.
+
+=== Bestow Curse | Rogar Maldição
+Você toca uma criatura, que precisa ser bem-sucedida numa salvaguarda de Sabedoria ou fica amaldiçoada pela duração. Até a maldição acabar, o alvo sofre um destes efeitos, à sua escolha:
+
+- Escolha um atributo. O alvo tem Desvantagem nos testes e nas salvaguardas desse atributo.
+- O alvo tem Desvantagem nas jogadas de ataque contra você.
+- Em combate, o alvo precisa ser bem-sucedido numa salvaguarda de Sabedoria no começo de cada turno dele, ou é obrigado a usar a ação de Esquivar naquele turno.
+- Se você causar dano ao alvo com uma jogada de ataque ou uma magia, ele sofre 1d8 de dano necrótico extra.
+
+_Usando um Espaço de Magia de Círculo Superior._ Com um espaço de 4º círculo, você pode manter a Concentração por até 10 minutos. Com um espaço de 5º círculo ou superior, a magia não exige Concentração, e a duração passa a ser de 8 horas (espaço de 5º ou 6º) ou de 24 horas (espaço de 7º ou 8º). Com um espaço de 9º círculo, a magia dura até ser dissipada.
+
+=== Blink | Piscar
+Role 1d6 no fim de cada um dos seus turnos, pela duração. Se tirar de 4 a 6, você some do plano de existência em que está e aparece no Plano Etéreo (a magia acaba na hora se você já estiver nesse plano). Enquanto estiver no Plano Etéreo, você consegue perceber o plano que deixou, todo em tons de cinza, mas não enxerga nada lá a mais de 18 metros. Você só pode afetar e ser afetado por outras criaturas no Plano Etéreo, e as criaturas do outro plano não conseguem perceber você, a menos que tenham uma habilidade especial para perceber coisas no Plano Etéreo.
+
+Você volta ao outro plano no começo do seu próximo turno, e quando a magia acaba, se estiver no Plano Etéreo. Volta para um espaço desocupado à sua escolha que consiga ver, a até 3 metros do espaço que deixou. Se não houver espaço desocupado nessa distância, você aparece no espaço desocupado mais próximo.
+
+=== Call Lightning | Convocar Relâmpagos
+Uma nuvem de tempestade aparece num ponto dentro do alcance que você consiga ver acima de você. Ela tem a forma de um Cilindro de 3 metros de altura e 18 metros de raio.
+
+Quando conjura a magia, escolha um ponto que consiga ver embaixo da nuvem. Um relâmpago dispara da nuvem até esse ponto. Cada criatura a até 1,5 metro dele faz uma salvaguarda de Destreza, sofrendo 3d10 de dano elétrico se falhar, ou metade desse dano se for bem-sucedida.
+
+Até a magia acabar, você pode usar uma ação de Magia para chamar outro relâmpago do mesmo jeito, no mesmo ponto ou em outro.
+
+Se você estiver ao ar livre, durante uma tempestade, quando conjurar esta magia, ela dá a você o controle dessa tempestade em vez de criar uma nova. Nessas condições, o dano da magia aumenta em 1d10.
+
+_Usando um Espaço de Magia de Círculo Superior._ O dano aumenta em 1d10 para cada círculo do espaço acima do 3º.
+
+=== Clairvoyance | Clarividência
+material: um foco que valha 100 PO ou mais: um chifre com joias, para ouvir, ou um olho de vidro, para ver
+Você cria um sensor Invisível dentro do alcance, num lugar que conheça (um lugar onde já esteve ou que já viu) ou num lugar óbvio que não conheça (como atrás de uma porta, depois de uma esquina ou num bosque). O sensor, intangível e invulnerável, fica parado ali pela duração.
+
+Quando conjura a magia, escolha ver ou ouvir. Você pode usar o sentido escolhido através do sensor como se estivesse no espaço dele. Com uma Ação Bônus, pode trocar entre ver e ouvir.
+
+Uma criatura que consiga ver o sensor (como uma sob o efeito de _Ver o Invisível_ ou com Visão Verdadeira) vê um orbe luminoso do tamanho do seu punho.
+
+=== Conjure Animals | Conjurar Animais
+Você conjura espíritos da natureza que aparecem como uma matilha Grande de animais espectrais e intangíveis, num espaço desocupado que você consiga ver dentro do alcance. A matilha dura pela duração, e você escolhe a forma animal dos espíritos, como lobos, serpentes ou aves.
+
+Você tem Vantagem nas salvaguardas de Força enquanto estiver a até 1,5 metro da matilha e, quando se move no seu turno, também pode mover a matilha até 9 metros, para um espaço desocupado que consiga ver.
+
+Sempre que a matilha passar a até 3 metros de uma criatura que você consiga ver, e sempre que uma criatura que você consiga ver entrar num espaço a até 3 metros da matilha ou terminar o turno ali, você pode obrigar essa criatura a fazer uma salvaguarda de Destreza. Se falhar, a criatura sofre 3d10 de dano cortante. Uma criatura só faz essa salvaguarda uma vez por turno.
+
+_Usando um Espaço de Magia de Círculo Superior._ O dano aumenta em 1d10 para cada círculo do espaço acima do 3º.
+
+=== Counterspell | Contramágica
+tempo: Reação, que você usa quando vê uma criatura a até 18 metros de você conjurando uma magia com componentes Verbais, Somáticos ou Materiais
+Você tenta interromper uma criatura no meio da conjuração de uma magia. A criatura faz uma salvaguarda de Constituição. Se falhar, a magia se desfaz sem efeito, e a ação, a Ação Bônus ou a Reação usada para conjurá-la é perdida. Se a magia foi conjurada com um espaço de magia, o espaço não é gasto.
+
+=== Create Food and Water | Criar Alimentos e Água
+Você cria 20 quilos de comida e 120 litros de água fresca no chão ou em recipientes dentro do alcance, o que ajuda a afastar os perigos da fome e da sede. A comida é sem graça, mas nutritiva, e parece um alimento à sua escolha, e a água é limpa. A comida estraga depois de 24 horas, se não for comida.
+
+=== Daylight | Luz do Dia
+Pela duração, a luz do sol se espalha a partir de um ponto dentro do alcance e preenche uma Esfera de 18 metros de raio. A área da luz do sol é de Luz Plena e emite Penumbra por mais 18 metros.
+
+Se preferir, você conjura a magia num objeto que não esteja sendo vestido ou carregado, e a luz do sol preenche uma Emanação de 18 metros a partir dele. Cobrir o objeto com algo opaco, como uma tigela ou um elmo, bloqueia a luz.
+
+Se qualquer parte da área desta magia se sobrepuser a uma área de Escuridão criada por uma magia de 3º círculo ou menor, essa outra magia é dissipada.
+
+=== Dispel Magic | Dissipar Magia
+Escolha uma criatura, um objeto ou um efeito mágico dentro do alcance. Qualquer magia em andamento de 3º círculo ou menor no alvo acaba. Para cada magia em andamento de 4º círculo ou maior no alvo, faça um teste com o seu atributo de conjuração (CD 10 mais o círculo da magia). Se passar, a magia acaba.
+
+_Usando um Espaço de Magia de Círculo Superior._ Você encerra automaticamente uma magia no alvo se o círculo dela for igual ou menor que o círculo do espaço que você usar.
+
+=== Fear | Medo
+material: uma pena branca
+Cada criatura num Cone de 9 metros precisa ser bem-sucedida numa salvaguarda de Sabedoria, ou larga o que estiver segurando e fica com a condição Amedrontado pela duração.
+
+Uma criatura Amedrontada usa a ação de Disparada e se afasta de você pelo caminho mais seguro em cada turno dela, a menos que não tenha para onde ir. Se a criatura terminar o turno num espaço de onde não tenha linha de visão até você, ela faz uma salvaguarda de Sabedoria. Se for bem-sucedida, a magia acaba para ela.
+
+=== Fireball | Bola de Fogo
+material: uma bolinha de guano de morcego e enxofre
+Um rastro brilhante dispara de você até um ponto à sua escolha dentro do alcance e desabrocha, com um ronco grave, numa explosão de fogo. Cada criatura numa Esfera de 6 metros de raio centrada nesse ponto faz uma salvaguarda de Destreza, sofrendo 8d6 de dano de fogo se falhar, ou metade desse dano se for bem-sucedida.
+
+Objetos inflamáveis na área que não estejam sendo vestidos ou carregados pegam fogo.
+
+_Usando um Espaço de Magia de Círculo Superior._ O dano aumenta em 1d6 para cada círculo do espaço acima do 3º.
+
+=== Fly | Voo
+material: uma pena
+Você toca uma criatura voluntária. Pela duração, o alvo ganha Deslocamento de Voo de 18 metros e consegue pairar. Quando a magia acaba, o alvo cai, se ainda estiver no ar, a menos que consiga impedir a queda.
+
+_Usando um Espaço de Magia de Círculo Superior._ Você pode escolher uma criatura adicional como alvo para cada círculo do espaço acima do 3º.
+
+=== Gaseous Form | Forma Gasosa
+material: um pedaço de gaze
+Uma criatura voluntária que você toca muda de forma, junto com tudo o que está vestindo e carregando, e vira uma nuvem de névoa pela duração. A magia acaba para o alvo se ele chegar a 0 Pontos de Vida ou se usar uma ação de Magia para encerrá-la em si mesmo.
+
+Nessa forma, o único jeito de o alvo se mover é com Deslocamento de Voo de 3 metros, e ele consegue pairar. O alvo pode entrar e ficar no espaço de outra criatura. Ele tem Resistência a dano contundente, perfurante e cortante, tem Imunidade à condição Caído, e tem Vantagem nas salvaguardas de Força, Destreza e Constituição. O alvo passa por aberturas estreitas, mas trata líquidos como se fossem superfícies sólidas.
+
+O alvo não pode falar nem manipular objetos, e os objetos que carregava ou segurava não podem ser largados, usados nem manuseados de outro jeito. Por fim, o alvo não pode atacar nem conjurar magias.
+
+_Usando um Espaço de Magia de Círculo Superior._ Você pode escolher uma criatura adicional como alvo para cada círculo do espaço acima do 3º.
+
+=== Glyph of Warding | Glifo de Proteção
+material: diamante em pó que valha 200 PO ou mais, consumido pela magia
+Você inscreve um glifo que depois libera um efeito mágico. Pode inscrevê-lo numa superfície (como uma mesa ou um trecho de piso) ou dentro de um objeto que possa ser fechado (como um livro ou um baú), para esconder o glifo. O glifo pode cobrir uma área de até 3 metros de diâmetro. Se a superfície ou o objeto for movido mais de 3 metros do lugar onde você conjurou a magia, o glifo se rompe, e a magia acaba sem ser ativada.
+
+O glifo é quase imperceptível, e é preciso um teste bem-sucedido de Sabedoria (Percepção) contra a CD de salvaguarda da sua magia para notá-lo.
+
+Quando inscreve o glifo, você define o gatilho e escolhe se ele é uma runa explosiva ou um glifo de magia, como explicado abaixo.
+
+_Definir o Gatilho._ Você decide o que ativa o glifo quando conjura a magia. Para glifos numa superfície, gatilhos comuns são tocar ou pisar no glifo, tirar outro objeto que o cobre, ou chegar a uma certa distância dele. Para glifos dentro de um objeto, gatilhos comuns são abrir o objeto ou ver o glifo. Depois que o glifo é ativado, a magia acaba.
+
+Você pode refinar o gatilho para que só criaturas de certos tipos o ativem (por exemplo, o glifo pode afetar só Aberrações). Também pode definir condições para criaturas que não ativam o glifo, como quem disser uma certa senha.
+
+_Runa Explosiva._ Quando ativado, o glifo explode em energia mágica numa Esfera de 6 metros de raio centrada nele. Cada criatura na área faz uma salvaguarda de Destreza. Uma criatura sofre 5d8 de dano ácido, de frio, de fogo, elétrico ou trovejante (você escolhe ao criar o glifo) se falhar, ou metade desse dano se for bem-sucedida.
+
+_Glifo de Magia._ Você pode guardar no glifo uma magia preparada de 3º círculo ou menor, conjurando-a como parte da criação do glifo. A magia precisa ter como alvo uma única criatura ou uma área. A magia guardada não tem efeito imediato quando conjurada desse jeito.
+
+Quando o glifo é ativado, a magia guardada faz efeito. Se ela tiver um alvo, o alvo é a criatura que ativou o glifo. Se afetar uma área, a área fica centrada nessa criatura. Se a magia invocar criaturas Hostis ou criar objetos ou armadilhas perigosos, eles aparecem o mais perto possível do intruso e o atacam. Se a magia exigir Concentração, ela dura até o fim da duração completa.
+
+_Usando um Espaço de Magia de Círculo Superior._ O dano da runa explosiva aumenta em 1d8 para cada círculo do espaço acima do 3º. Se você criar um glifo de magia, pode guardar qualquer magia de círculo até o mesmo do espaço usado para o _Glifo de Proteção_.
+
+=== Haste | Velocidade
+material: uma lasca de raiz de alcaçuz
+Escolha uma criatura voluntária que você consiga ver dentro do alcance. Até a magia acabar, o Deslocamento do alvo dobra, ele recebe +2 de bônus na Classe de Armadura, tem Vantagem nas salvaguardas de Destreza e ganha uma ação adicional em cada turno dele. Essa ação só pode ser usada para Atacar (um ataque só), Disparada, Desengajar, Esconder ou Usar.
+
+Quando a magia acaba, o alvo fica Incapacitado e com Deslocamento 0 até o fim do próximo turno dele, enquanto uma onda de letargia toma conta dele.
+
+=== Hypnotic Pattern | Padrão Hipnótico
+material: uma pitada de confete
+Você cria um padrão de cores que se retorcem num Cubo de 9 metros dentro do alcance. O padrão aparece por um instante e some. Cada criatura na área que consiga ver o padrão precisa ser bem-sucedida numa salvaguarda de Sabedoria ou fica com a condição Enfeitiçado pela duração. Enquanto estiver Enfeitiçada, a criatura fica com a condição Incapacitado e com Deslocamento 0.
+
+A magia acaba para uma criatura afetada se ela sofrer qualquer dano, ou se outra pessoa usar uma ação para sacudi-la e tirá-la do torpor.
+
+=== Lightning Bolt | Relâmpago
+material: um pouco de pelo e uma vareta de cristal
+Um relâmpago em forma de Linha, com 30 metros de comprimento e 1,5 metro de largura, dispara de você numa direção à sua escolha. Cada criatura na Linha faz uma salvaguarda de Destreza, sofrendo 8d6 de dano elétrico se falhar, ou metade desse dano se for bem-sucedida.
+
+_Usando um Espaço de Magia de Círculo Superior._ O dano aumenta em 1d6 para cada círculo do espaço acima do 3º.
+
+=== Magic Circle | Círculo Mágico
+material: sal e prata em pó que valham 100 PO ou mais, consumidos pela magia
+Você cria um Cilindro de energia mágica com 3 metros de raio e 6 metros de altura, centrado num ponto do chão que você consiga ver dentro do alcance. Runas brilhantes aparecem onde o Cilindro encontra o piso ou outra superfície.
+
+Escolha um ou mais destes tipos de criatura: Celestiais, Elementais, Fadas, Ínferos ou Mortos-Vivos. O círculo afeta as criaturas do tipo escolhido destes jeitos:
+
+- A criatura não consegue entrar no Cilindro por vontade própria por meios não mágicos. Se tentar entrar por teletransporte ou viagem entre planos, precisa antes ser bem-sucedida numa salvaguarda de Carisma.
+- A criatura tem Desvantagem nas jogadas de ataque contra alvos dentro do Cilindro.
+- Os alvos dentro do Cilindro não podem ser possuídos pela criatura nem receber dela as condições Enfeitiçado ou Amedrontado.
+
+Cada vez que conjurar esta magia, você pode fazê-la funcionar ao contrário, impedindo uma criatura do tipo escolhido de sair do Cilindro e protegendo os alvos do lado de fora.
+
+_Usando um Espaço de Magia de Círculo Superior._ A duração aumenta em 1 hora para cada círculo do espaço acima do 3º.
+
+=== Major Image | Imagem Maior
+material: um pouco de lã
+Você cria a imagem de um objeto, uma criatura ou outro fenômeno visível que não seja maior que um Cubo de 6 metros. A imagem aparece num ponto que você consiga ver dentro do alcance e dura pela duração. Ela parece real, com sons, cheiros e temperatura que combinem com o que representa, mas não causa dano nem condições.
+
+Se estiver dentro do alcance da ilusão, você pode usar uma ação de Magia para mover a imagem para qualquer outro ponto dentro do alcance. Enquanto ela muda de lugar, você pode alterar a aparência dela para os movimentos parecerem naturais. Por exemplo, se criar a imagem de uma criatura e movê-la, pode fazer parecer que ela está andando. Do mesmo jeito, pode fazer a ilusão produzir sons diferentes em momentos diferentes, e até manter uma conversa.
+
+Interagir fisicamente com a imagem revela que é uma ilusão, porque as coisas a atravessam. Uma criatura que usar a ação de Estudo para examinar a imagem pode perceber que é uma ilusão com um teste bem-sucedido de Inteligência (Investigação) contra a CD de salvaguarda da sua magia. Se perceber, a criatura passa a enxergar através da imagem, e as outras qualidades sensoriais dela ficam tênues para essa criatura.
+
+_Usando um Espaço de Magia de Círculo Superior._ Conjurada com um espaço de 4º círculo ou superior, a magia dura até ser dissipada, sem exigir Concentração.
+
+=== Mass Healing Word | Palavra Curativa em Massa
+Até seis criaturas à sua escolha que você consiga ver dentro do alcance recuperam Pontos de Vida iguais a 2d4 mais o modificador do seu atributo de conjuração.
+
+_Usando um Espaço de Magia de Círculo Superior._ A cura aumenta em 1d4 para cada círculo do espaço acima do 3º.
+
+=== Meld into Stone | Fundir-se às Rochas
+Você entra num objeto ou superfície de pedra grande o bastante para conter o seu corpo inteiro, fundindo-se com a pedra, junto com o seu equipamento, pela duração. Precisa tocar a pedra para isso. Nada da sua presença fica visível ou detectável por sentidos não mágicos.
+
+Enquanto estiver fundido com a pedra, você não vê o que acontece do lado de fora, e qualquer teste de Sabedoria (Percepção) para ouvir sons de fora é feito com Desvantagem. Você continua percebendo a passagem do tempo e pode conjurar magias em si mesmo enquanto estiver na pedra. Pode usar 1,5 metro de movimento para sair da pedra por onde entrou, o que encerra a magia. Fora isso, não consegue se mover.
+
+Danos físicos pequenos à pedra não ferem você, mas a destruição parcial dela, ou uma mudança no formato a ponto de você não caber mais, expulsa você e causa 6d6 de dano de energia. A destruição completa da pedra (ou a transmutação dela em outra substância) expulsa você e causa 50 de dano de energia. Se for expulso, você vai para o espaço desocupado mais próximo de onde entrou e fica com a condição Caído.
+
+=== Nondetection | Dificultar Detecção
+material: uma pitada de pó de diamante que valha 25 PO ou mais, consumida pela magia
+Pela duração, você esconde de magias de Adivinhação um alvo que toca. O alvo pode ser uma criatura voluntária, ou um lugar ou objeto de até 3 metros em qualquer dimensão. O alvo não pode ser escolhido por nenhuma magia de Adivinhação nem percebido por sensores mágicos de vidência.
+
+=== Phantom Steed | Corcel Fantasma
+Uma criatura Grande, quase real, parecida com um cavalo, aparece no chão num espaço desocupado à sua escolha dentro do alcance. Você decide a aparência dela, e ela vem com sela, freio e rédeas. Qualquer parte do equipamento criado pela magia some numa nuvem de fumaça se for levada a mais de 3 metros do corcel.
+
+Pela duração, você ou uma criatura que escolher pode montar o corcel. Ele usa o bloco de estatísticas do Cavalo de Montaria, exceto que tem Deslocamento de 30 metros e consegue viajar 20 quilômetros em uma hora. Quando a magia acaba, o corcel vai sumindo aos poucos, o que dá 1 minuto para quem o monta desmontar. A magia acaba antes se o corcel sofrer qualquer dano.
+
+=== Plant Growth | Ampliar Plantas
+tempo: Ação (Crescimento) ou 8 horas (Enriquecimento)
+Esta magia canaliza vitalidade para as plantas. O tempo de conjuração que você usar define se a magia tem o efeito Crescimento ou Enriquecimento, abaixo.
+
+_Crescimento._ Escolha um ponto dentro do alcance. Todas as plantas comuns numa Esfera de 30 metros de raio centrada nesse ponto ficam densas e crescem demais. Uma criatura que se mova pela área precisa gastar 4 metros de movimento para cada 1 metro que avançar. Você pode deixar de fora do efeito uma ou mais áreas, de qualquer tamanho, dentro da área da magia.
+
+_Enriquecimento._ Todas as plantas num raio de 750 metros, centrado num ponto dentro do alcance, ficam enriquecidas por 365 dias. Na colheita, elas rendem o dobro da comida normal. Só podem se beneficiar de uma _Ampliar Plantas_ por ano.
+
+=== Protection from Energy | Proteção contra Energia
+Pela duração, a criatura voluntária que você toca tem Resistência a um tipo de dano à sua escolha: ácido, frio, fogo, elétrico ou trovejante.
+
+=== Remove Curse | Remover Maldição
+Com o seu toque, todas as maldições que afetam uma criatura ou um objeto acabam. Se o objeto for um item mágico amaldiçoado, a maldição dele continua, mas a magia rompe a Sintonização do dono com o objeto, para que ele possa ser tirado ou descartado.
+
+=== Revivify | Revivificar
+material: um diamante que valha 300 PO ou mais, consumido pela magia
+Você toca uma criatura que morreu no último minuto. Ela volta à vida com 1 Ponto de Vida. Esta magia não revive uma criatura que morreu de velhice, nem recupera partes do corpo que faltem.
+
+=== Sending | Enviar Mensagem
+material: um fio de cobre
+Você envia uma mensagem curta, de até 25 palavras, a uma criatura que já conheceu ou que alguém que a conheceu descreveu para você. O alvo ouve a mensagem na mente, reconhece você como remetente se o conhecer, e pode responder do mesmo jeito na hora. A magia faz o alvo entender o sentido da mensagem.
+
+Você pode enviar a mensagem a qualquer distância e até para outros planos de existência, mas, se o alvo estiver num plano diferente do seu, há 5 por cento de chance de a mensagem não chegar. Você sabe se a entrega falhar.
+
+Ao receber a mensagem, uma criatura pode bloquear você de alcançá-la de novo com esta magia por 8 horas. Se tentar enviar outra mensagem nesse tempo, você descobre que está bloqueado, e a magia falha.
+
+=== Sleet Storm | Nevasca
+material: um guarda-chuva em miniatura
+Até a magia acabar, cai granizo e neve num Cilindro de 12 metros de altura e 6 metros de raio, centrado num ponto à sua escolha dentro do alcance. A área é Totalmente Obscurecida, e as chamas expostas nela se apagam.
+
+O chão dentro do Cilindro é Terreno Difícil. Na primeira vez que uma criatura entrar no Cilindro num turno, ou quando começar o turno nele, ela precisa ser bem-sucedida numa salvaguarda de Destreza ou fica com a condição Caído e perde a Concentração.
+
+=== Slow | Lentidão
+material: uma gota de melado
+Você altera o tempo em volta de até seis criaturas à sua escolha num Cubo de 12 metros dentro do alcance. Cada alvo precisa ser bem-sucedido numa salvaguarda de Sabedoria ou é afetado pela magia pela duração.
+
+O Deslocamento de um alvo afetado cai pela metade, ele sofre −2 na CA e nas salvaguardas de Destreza, e não pode usar Reações. Nos turnos dele, pode usar uma ação ou uma Ação Bônus, não as duas, e só faz um ataque se usar a ação de Atacar. Se conjurar uma magia com componente Somático, há 25 por cento de chance de a magia falhar, porque o alvo faz os gestos devagar demais.
+
+Um alvo afetado repete a salvaguarda no fim de cada turno dele e, se for bem-sucedido, encerra a magia em si mesmo.
+
+=== Speak with Dead | Falar com os Mortos
+material: incenso aceso
+Você dá uma aparência de vida a um cadáver à sua escolha dentro do alcance, para que ele responda às perguntas que você fizer. O cadáver precisa ter boca, e a magia falha se a criatura morta já era Morta-Viva quando morreu. A magia também falha se o cadáver tiver sido alvo dela nos últimos 10 dias.
+
+Até a magia acabar, você pode fazer até cinco perguntas ao cadáver. Ele só sabe o que sabia em vida, incluindo os idiomas que conhecia. As respostas costumam ser curtas, enigmáticas ou repetitivas, e o cadáver não é obrigado a dizer a verdade se você for hostil com ele ou se ele reconhecer você como inimigo. Esta magia não devolve a alma da criatura ao corpo, só o espírito que o anima. Por isso, o cadáver não aprende informações novas, não entende nada do que aconteceu depois que morreu e não consegue especular sobre o futuro.
+
+=== Speak with Plants | Falar com as Plantas
+Você dá às plantas numa Emanação imóvel de 9 metros uma consciência e um movimento limitados, e elas passam a conseguir se comunicar com você e a seguir ordens simples. Você pode perguntar às plantas sobre o que aconteceu na área da magia no último dia, obtendo informações sobre criaturas que passaram, o tempo e outras circunstâncias.
+
+Você também pode transformar Terreno Difícil causado por plantas (como matagais e vegetação rasteira) em terreno comum pela duração. Ou pode transformar terreno comum onde haja plantas em Terreno Difícil pela duração.
+
+A magia não faz as plantas se arrancarem do chão e andarem, mas elas podem mover galhos, gavinhas e caules por você.
+
+Se houver uma criatura Planta na área, você pode se comunicar com ela como se tivessem um idioma em comum.
+
+=== Spirit Guardians | Espíritos Guardiões
+material: um pergaminho de oração
+Espíritos protetores voam à sua volta numa Emanação de 4,5 metros pela duração. Se você for bom ou neutro, a forma espectral deles parece angelical ou feérica (à sua escolha). Se for mau, parecem ínferos.
+
+Quando conjura esta magia, você pode indicar criaturas que não são afetadas por ela. O Deslocamento de qualquer outra criatura cai pela metade na Emanação e, sempre que a Emanação entrar no espaço de uma criatura, e sempre que uma criatura entrar na Emanação ou terminar o turno nela, a criatura precisa fazer uma salvaguarda de Sabedoria. Se falhar, sofre 3d8 de dano radiante (se você for bom ou neutro) ou 3d8 de dano necrótico (se for mau). Se for bem-sucedida, sofre metade do dano. Uma criatura só faz essa salvaguarda uma vez por turno.
+
+_Usando um Espaço de Magia de Círculo Superior._ O dano aumenta em 1d8 para cada círculo do espaço acima do 3º.
+
+=== Stinking Cloud | Névoa Fétida
+material: um ovo podre
+Você cria uma Esfera de gás amarelo e nauseante com 6 metros de raio, centrada num ponto dentro do alcance. A nuvem é Totalmente Obscurecida. Ela fica no ar pela duração ou até que um vento forte (como o criado por _Lufada de Vento_) a disperse.
+
+Cada criatura que começar o turno na Esfera precisa ser bem-sucedida numa salvaguarda de Constituição ou fica com a condição Envenenado até o fim do turno atual. Enquanto estiver Envenenada desse jeito, a criatura não pode usar ação nem Ação Bônus.
+
+=== Tiny Hut | Pequena Cabana
+material: uma conta de cristal
+Uma Emanação de 3 metros surge à sua volta e fica parada pela duração. A magia falha quando é conjurada se a Emanação não for grande o bastante para envolver completamente todas as criaturas na área.
+
+As criaturas e os objetos que estavam dentro da Emanação quando você conjurou a magia podem atravessá-la livremente. Todas as outras criaturas e objetos ficam impedidos de passar. Magias de 3º círculo ou menor não podem ser conjuradas através dela, e os efeitos dessas magias não entram nela.
+
+O ar dentro da Emanação é confortável e seco, seja qual for o tempo lá fora. Até a magia acabar, você pode mandar o interior ficar em Penumbra ou Escuridão (sem gastar ação). A Emanação é opaca por fora, da cor que você quiser, mas transparente por dentro.
+
+A magia acaba antes se você sair da Emanação ou se a conjurar de novo.
+
+=== Tongues | Idiomas
+material: um zigurate em miniatura
+Esta magia dá à criatura que você toca a capacidade de entender qualquer idioma falado ou sinalizado que ela ouvir ou vir. Além disso, quando o alvo se comunica falando ou sinalizando, qualquer criatura que conheça pelo menos um idioma consegue entendê-lo, se puder ouvir a fala ou ver os sinais.
+
+=== Vampiric Touch | Toque Vampírico
+O toque da sua mão envolta em sombras consegue sugar a força vital dos outros para curar as suas feridas. Faça um ataque mágico corpo a corpo contra uma criatura ao seu alcance. Se acertar, o alvo sofre 3d6 de dano necrótico, e você recupera Pontos de Vida iguais à metade do dano necrótico causado.
+
+Até a magia acabar, você pode fazer o ataque de novo em cada um dos seus turnos com uma ação de Magia, contra a mesma criatura ou outra.
+
+_Usando um Espaço de Magia de Círculo Superior._ O dano aumenta em 1d6 para cada círculo do espaço acima do 3º.
+
+=== Water Breathing | Respirar na Água
+material: um caniço curto
+Esta magia dá a até dez criaturas voluntárias à sua escolha dentro do alcance a capacidade de respirar debaixo d'água até a magia acabar. As criaturas afetadas também continuam respirando do jeito normal.
+
+=== Water Walk | Andar na Água
+material: um pedaço de cortiça
+Esta magia dá a capacidade de andar sobre qualquer superfície líquida, como água, ácido, lama, neve, areia movediça ou lava, como se fosse chão sólido e seguro (criaturas atravessando lava derretida ainda podem sofrer dano pelo calor). Até dez criaturas voluntárias à sua escolha dentro do alcance ganham essa capacidade pela duração.
+
+Um alvo afetado precisa usar uma Ação Bônus para passar da superfície do líquido para dentro dele, e vice-versa, mas, se cair no líquido, atravessa a superfície e afunda.
+
+=== Wind Wall | Muralha de Vento
+material: um leque e uma pena
+Uma muralha de vento forte se ergue do chão num ponto à sua escolha dentro do alcance. Ela pode ter até 15 metros de comprimento, 4,5 metros de altura e 30 centímetros de espessura. Você pode dar a ela o formato que quiser, desde que forme um caminho contínuo pelo chão. A muralha dura pela duração.
+
+Quando a muralha aparece, cada criatura na área dela faz uma salvaguarda de Força, sofrendo 4d8 de dano contundente se falhar, ou metade desse dano se for bem-sucedida.
+
+O vento forte mantém longe a neblina, a fumaça e outros gases. Criaturas e objetos voadores Pequenos ou menores não atravessam a muralha. Materiais leves e soltos que entrarem na muralha voam para cima. Flechas, virotes e outros projéteis comuns disparados contra alvos atrás da muralha são desviados para cima e erram automaticamente. Pedras arremessadas por Gigantes ou máquinas de cerco, e projéteis parecidos, não são afetados. Criaturas em forma gasosa não conseguem atravessá-la.
