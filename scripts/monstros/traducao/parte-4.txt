@@ -1,0 +1,313 @@
+=== Gelatinous Cube
++ Cubo de Gosma
+O cubo ocupa o espaço inteiro dele e é transparente. Outras criaturas podem entrar nesse espaço, mas quem fizer isso sofre o Engolfar do cubo e tem Desvantagem no teste de resistência.
+
+Criaturas dentro do cubo têm Cobertura Total, e ele comporta ao mesmo tempo uma criatura Grande ou até quatro criaturas Médias ou Pequenas.
+
+Com uma ação, uma criatura a até 1,5 m do cubo pode puxar uma criatura ou um objeto de dentro dele com um teste de Força (Atletismo) CD 12 bem-sucedido, e quem puxa sofre 10 (3d6) de dano ácido.
++ Transparente
+Mesmo com o cubo à vista, uma criatura precisa ser bem-sucedida num teste de Sabedoria (Percepção) CD 15 para notá-lo, se não o tiver visto se mover ou agir de outro jeito.
++ Pseudópode
++ Engolfar
+O cubo se move até o seu Deslocamento sem provocar Ataques de Oportunidade. Ele pode atravessar os espaços de criaturas Grandes ou menores se tiver lugar dentro de si para contê-las (veja o traço Cubo de Gosma). _Teste de Resistência de Destreza:_ CD 12, cada criatura em cujo espaço o cubo entrar pela primeira vez durante esse movimento. _Falha:_ 10 (3d6) de dano ácido, e o alvo é engolfado. Um alvo engolfado está sufocando, não pode conjurar magias com componente Verbal, fica com a condição Contido e sofre 10 (3d6) de dano ácido no início de cada turno do cubo. Quando o cubo se move, o alvo engolfado se move junto. O alvo pode tentar escapar usando uma ação para fazer um teste de Força (Atletismo) CD 12. Com um sucesso, ele escapa e entra no espaço desocupado mais próximo. _Sucesso:_ Metade do dano, e o alvo vai para um espaço desocupado a até 1,5 m do cubo. Se não houver espaço desocupado, o alvo falha no teste.
+
+=== Ghast
++ Fedor
+_Teste de Resistência de Constituição:_ CD 10, qualquer criatura que comece o turno numa Emanação de 1,5 m a partir do lívido. _Falha:_ O alvo fica com a condição Envenenado até o início do próximo turno dele. _Sucesso:_ O alvo fica imune ao Fedor deste lívido por 24 horas.
++ Mordida
++ Garra
+_Jogada de Ataque Corpo a Corpo:_ +5, alcance 1,5 m. _Acerto:_ 10 (2d6 + 3) de dano cortante. Se o alvo for uma criatura que não seja Morto-Vivo, ele sofre o efeito a seguir. _Teste de Resistência de Constituição:_ CD 10. _Falha:_ O alvo fica com a condição Paralisado até o fim do próximo turno dele.
+
+=== Ghost
++ Visão Etérea
+O fantasma enxerga até 18 m dentro do Plano Etéreo quando está no Plano Material.
++ Movimento Incorpóreo
+O fantasma atravessa outras criaturas e objetos como se fossem Terreno Difícil. Ele sofre 5 (1d10) de dano de energia se terminar o turno dentro de um objeto.
++ Ataques Múltiplos
+O fantasma faz dois ataques de Toque Definhante.
++ Toque Definhante
++ Forma Etérea
+O fantasma conjura a magia _Forma Etérea_, sem precisar de componentes e usando Carisma como atributo de conjuração. Ele fica visível no Plano Material enquanto está na Fronteira Etérea e vice-versa, mas não pode afetar nem ser afetado por nada do outro plano.
++ Semblante Horripilante
+_Teste de Resistência de Sabedoria:_ CD 13, cada criatura num Cone de 18 m que consiga ver o fantasma e não seja Morto-Vivo. _Falha:_ 10 (2d6 + 3) de dano psíquico, e o alvo fica com a condição Amedrontado até o início do próximo turno do fantasma. _Sucesso:_ O alvo fica imune ao Semblante Horripilante deste fantasma por 24 horas.
++ Possessão (Recarga 6)
+_Teste de Resistência de Carisma:_ CD 13, um Humanoide que o fantasma consiga ver a até 1,5 m. _Falha:_ O fantasma possui o alvo: ele desaparece, e o alvo fica com a condição Incapacitado e perde o controle do corpo. Agora o fantasma controla o corpo, mas o alvo continua consciente. O fantasma não pode ser alvo de nenhum ataque, magia ou outro efeito, a não ser os que afetam especificamente Mortos-Vivos. As estatísticas de jogo do fantasma continuam as mesmas, mas ele usa o Deslocamento do alvo e os modificadores de Força, Destreza e Constituição dele.
+
+A possessão dura até o corpo cair a 0 Pontos de Vida ou até o fantasma sair com uma Ação Bônus. Quando a possessão acaba, o fantasma aparece num espaço desocupado a até 1,5 m do alvo, e o alvo fica imune à Possessão deste fantasma por 24 horas.
+
+_Sucesso:_ O alvo fica imune à Possessão deste fantasma por 24 horas.
+
+=== Ghoul
++ Ataques Múltiplos
+O carniçal faz dois ataques de Mordida.
++ Mordida
++ Garra
+_Jogada de Ataque Corpo a Corpo:_ +4, alcance 1,5 m. _Acerto:_ 4 (1d4 + 2) de dano cortante. Se o alvo for uma criatura que não seja Morto-Vivo nem elfo, ele sofre o efeito a seguir. _Teste de Resistência de Constituição:_ CD 10. _Falha:_ O alvo fica com a condição Paralisado até o fim do próximo turno dele.
+
+=== Gibbering Mouther
++ Chão Aberrante
+O chão numa Emanação de 3 m a partir da boca tagarela é Terreno Difícil.
++ Tagarelice
+A boca tagarela balbucia sem parar, desde que não esteja com a condição Incapacitado. _Teste de Resistência de Sabedoria:_ CD 10, qualquer criatura que comece o turno a até 6 m dela enquanto ela balbucia. _Falha:_ O alvo rola 1d8 para saber o que faz no turno atual:
+
+**1–4.** O alvo não faz nada.
+
+**5–6.** O alvo não faz ação nem Ação Bônus e usa todo o movimento para ir numa direção aleatória.
+
+**7–8.** O alvo faz um ataque corpo a corpo contra uma criatura sorteada ao seu alcance, ou não faz nada se não puder fazer esse ataque.
++ Mordida
+_Jogada de Ataque Corpo a Corpo:_ +2, alcance 1,5 m. _Acerto:_ 7 (2d6) de dano perfurante. Se o alvo for uma criatura Média ou menor, fica com a condição Caído. O alvo morre se for reduzido a 0 Pontos de Vida por este ataque. O corpo dele é então absorvido pela boca tagarela, que deixa para trás só o equipamento.
++ Cuspe Cegante (Recarga 5–6)
+_Teste de Resistência de Destreza:_ CD 10, cada criatura numa Esfera de 3 m de raio centrada num ponto a até 9 m. _Falha:_ 7 (2d6) de dano radiante, e o alvo fica com a condição Cego até o fim do próximo turno da boca tagarela.
+
+=== Glabrezu
++ Restauração Demoníaca
+Se o glabrezu morrer fora do Abismo, o corpo se desfaz em icor, e ele ganha um corpo novo na hora, revivendo com todos os Pontos de Vida em algum lugar do Abismo.
++ Resistência à Magia
+O glabrezu tem Vantagem nos testes de resistência contra magias e outros efeitos mágicos.
++ Ataques Múltiplos
+O glabrezu faz dois ataques de Pinça e usa Esmurrar ou Conjuração.
++ Pinça
+_Jogada de Ataque Corpo a Corpo:_ +9, alcance 3 m. _Acerto:_ 16 (2d10 + 5) de dano cortante. Se o alvo for uma criatura Média ou menor, fica com a condição Agarrado (CD 15 para escapar) por uma das duas pinças.
++ Esmurrar
+_Teste de Resistência de Destreza:_ CD 17, uma criatura Agarrada pelo glabrezu. _Falha:_ 15 (3d6 + 5) de dano contundente. _Sucesso:_ Metade do dano.
++ Conjuração
+O glabrezu conjura uma das magias a seguir, sem precisar de componentes Materiais e usando Inteligência como atributo de conjuração (CD de resistência 16):
+
+**À vontade:** _Escuridão_, _Detectar Magia_, _Dissipar Magia_
+
+**1/Dia cada:** _Confusão_, _Voo_, _Palavra de Poder: Atordoar_
+
+=== Gladiator
++ Ataques Múltiplos
+O gladiador faz três ataques de Lança. Ele pode trocar um ataque por um uso de Pancada de Escudo.
++ Lança
++ Pancada de Escudo
+_Teste de Resistência de Força:_ CD 15, uma criatura a até 1,5 m que o gladiador consiga ver. _Falha:_ 9 (2d4 + 4) de dano contundente. Se o alvo for uma criatura Média ou menor, fica com a condição Caído.
++ Aparar
+_Gatilho:_ O gladiador é atingido por uma jogada de ataque corpo a corpo enquanto segura uma arma. _Resposta:_ O gladiador soma 3 à CA contra esse ataque, o que pode fazê-lo errar.
+
+=== Gnoll Warrior
++ Dilacerar
++ Arco de Osso
++ Matança (1/Dia)
+Logo depois de causar dano a uma criatura que já esteja Sangrando, o gnoll se move até metade do Deslocamento e faz um ataque de Dilacerar.
+
+=== Goblin Minion
++ Adaga
++ Fuga Ágil
+O goblin faz a ação de Desengajar ou Esconder.
+
+=== Goblin Warrior
++ Cimitarra
+_Jogada de Ataque Corpo a Corpo:_ +4, alcance 1,5 m. _Acerto:_ 5 (1d6 + 2) de dano cortante, mais 2 (1d4) de dano cortante se a jogada de ataque teve Vantagem.
++ Arco Curto
+_Jogada de Ataque à Distância:_ +4, alcance 24/96 m. _Acerto:_ 5 (1d6 + 2) de dano perfurante, mais 2 (1d4) de dano perfurante se a jogada de ataque teve Vantagem.
++ Fuga Ágil
+O goblin faz a ação de Desengajar ou Esconder.
+
+=== Goblin Boss
++ Ataques Múltiplos
+O goblin faz dois ataques, com Cimitarra ou Arco Curto, em qualquer combinação.
++ Cimitarra
+_Jogada de Ataque Corpo a Corpo:_ +4, alcance 1,5 m. _Acerto:_ 5 (1d6 + 2) de dano cortante, mais 2 (1d4) de dano cortante se a jogada de ataque teve Vantagem.
++ Arco Curto
+_Jogada de Ataque à Distância:_ +4, alcance 24/96 m. _Acerto:_ 5 (1d6 + 2) de dano perfurante, mais 2 (1d4) de dano perfurante se a jogada de ataque teve Vantagem.
++ Fuga Ágil
+O goblin faz a ação de Desengajar ou Esconder.
++ Redirecionar Ataque
+_Gatilho:_ Uma criatura que o goblin consiga ver faz uma jogada de ataque contra ele. _Resposta:_ O goblin escolhe um aliado Pequeno ou Médio a até 1,5 m dele. Os dois trocam de lugar, e o aliado vira o alvo do ataque.
+
+=== Gold Dragon Wyrmling
++ Anfíbio
+O dragão respira ar e água.
++ Ataques Múltiplos
+O dragão faz dois ataques de Dilacerar.
++ Dilacerar
++ Sopro de Fogo (Recarga 5–6)
+_Teste de Resistência de Destreza:_ CD 13, cada criatura num Cone de 4,5 m. _Falha:_ 22 (4d10) de dano de fogo. _Sucesso:_ Metade do dano.
++ Sopro Enfraquecedor
+_Teste de Resistência de Força:_ CD 13, cada criatura num Cone de 4,5 m que não esteja sob o efeito deste sopro. _Falha:_ O alvo tem Desvantagem nos Testes de D20 de Força e subtrai 2 (1d4) das jogadas de dano. Ele repete o teste no fim de cada turno dele, encerrando o efeito em si mesmo com um sucesso. Depois de 1 minuto, é bem-sucedido automaticamente.
+
+=== Young Gold Dragon
++ Anfíbio
+O dragão respira ar e água.
++ Ataques Múltiplos
+O dragão faz três ataques de Dilacerar. Ele pode trocar um ataque por um uso de Sopro Enfraquecedor.
++ Dilacerar
++ Sopro de Fogo (Recarga 5–6)
+_Teste de Resistência de Destreza:_ CD 17, cada criatura num Cone de 9 m. _Falha:_ 55 (10d10) de dano de fogo. _Sucesso:_ Metade do dano.
++ Sopro Enfraquecedor
+_Teste de Resistência de Força:_ CD 17, cada criatura num Cone de 9 m que não esteja sob o efeito deste sopro. _Falha:_ O alvo tem Desvantagem nos Testes de D20 de Força e subtrai 3 (1d6) das jogadas de dano. Ele repete o teste no fim de cada turno dele, encerrando o efeito em si mesmo com um sucesso. Depois de 1 minuto, é bem-sucedido automaticamente.
+
+=== Adult Gold Dragon
++ Anfíbio
+O dragão respira ar e água.
++ Resistência Lendária (3/Dia, ou 4/Dia no Covil)
+Se o dragão falhar num teste de resistência, pode escolher ser bem-sucedido.
++ Ataques Múltiplos
+O dragão faz três ataques de Dilacerar. Ele pode trocar um ataque por um uso de (A) Conjuração para conjurar _Raio Guiador_ (versão de 2º círculo) ou (B) Sopro Enfraquecedor.
++ Dilacerar
++ Sopro de Fogo (Recarga 5–6)
+_Teste de Resistência de Destreza:_ CD 21, cada criatura num Cone de 18 m. _Falha:_ 66 (12d10) de dano de fogo. _Sucesso:_ Metade do dano.
++ Conjuração
+O dragão conjura uma das magias a seguir, sem precisar de componentes Materiais e usando Carisma como atributo de conjuração (CD de resistência 21, +13 para acertar com ataques mágicos):
+
+**À vontade:** _Detectar Magia_, _Raio Guiador_ (versão de 2º círculo), _Mudança de Forma_ (só formas de Fera ou Humanoide, sem ganhar Pontos de Vida Temporários da magia e sem precisar de Concentração nem de Pontos de Vida Temporários para mantê-la)
+
+**1/Dia cada:** _Coluna de Chamas_, _Zona da Verdade_
++ Sopro Enfraquecedor
+_Teste de Resistência de Força:_ CD 21, cada criatura num Cone de 18 m que não esteja sob o efeito deste sopro. _Falha:_ O alvo tem Desvantagem nos Testes de D20 de Força e subtrai 3 (1d6) das jogadas de dano. Ele repete o teste no fim de cada turno dele, encerrando o efeito em si mesmo com um sucesso. Depois de 1 minuto, é bem-sucedido automaticamente.
++ :intro
+_Usos de Ação Lendária: 3 (4 no Covil). Logo depois do turno de outra criatura, o dragão pode gastar um uso para fazer uma das ações a seguir. Ele recupera todos os usos gastos no início de cada turno seu._
++ Banir
+_Teste de Resistência de Carisma:_ CD 21, uma criatura que o dragão consiga ver a até 36 m. _Falha:_ 10 (3d6) de dano de energia, e o alvo fica com a condição Incapacitado e é levado a um semiplano inofensivo até o início do próximo turno do dragão, quando reaparece num espaço desocupado à escolha do dragão a até 36 m dele. _Falha ou Sucesso:_ O dragão só pode usar esta ação de novo no início do próximo turno dele.
++ Luz Guiadora
+O dragão usa Conjuração para conjurar _Raio Guiador_ (versão de 2º círculo).
++ Bote
+O dragão se move até metade do Deslocamento e faz um ataque de Dilacerar.
+
+=== Ancient Gold Dragon
++ Anfíbio
+O dragão respira ar e água.
++ Resistência Lendária (4/Dia, ou 5/Dia no Covil)
+Se o dragão falhar num teste de resistência, pode escolher ser bem-sucedido.
++ Ataques Múltiplos
+O dragão faz três ataques de Dilacerar. Ele pode trocar um ataque por um uso de (A) Conjuração para conjurar _Raio Guiador_ (versão de 4º círculo) ou (B) Sopro Enfraquecedor.
++ Dilacerar
+_Jogada de Ataque Corpo a Corpo:_ +17, alcance 4,5 m. _Acerto:_ 19 (2d8 + 10) de dano cortante mais 9 (2d8) de dano de fogo.
++ Sopro de Fogo (Recarga 5–6)
+_Teste de Resistência de Destreza:_ CD 24, cada criatura num Cone de 27 m. _Falha:_ 71 (13d10) de dano de fogo. _Sucesso:_ Metade do dano.
++ Conjuração
+O dragão conjura uma das magias a seguir, sem precisar de componentes Materiais e usando Carisma como atributo de conjuração (CD de resistência 24, +16 para acertar com ataques mágicos):
+
+**À vontade:** _Detectar Magia_, _Raio Guiador_ (versão de 4º círculo), _Mudança de Forma_ (só formas de Fera ou Humanoide, sem ganhar Pontos de Vida Temporários da magia e sem precisar de Concentração nem de Pontos de Vida Temporários para mantê-la)
+
+**1/Dia cada:** _Coluna de Chamas_ (versão de 6º círculo), _Palavra de Recordação_, _Zona da Verdade_
++ Sopro Enfraquecedor
+_Teste de Resistência de Força:_ CD 24, cada criatura num Cone de 27 m que não esteja sob o efeito deste sopro. _Falha:_ O alvo tem Desvantagem nos Testes de D20 de Força e subtrai 5 (1d10) das jogadas de dano. Ele repete o teste no fim de cada turno dele, encerrando o efeito em si mesmo com um sucesso. Depois de 1 minuto, é bem-sucedido automaticamente.
++ :intro
+_Usos de Ação Lendária: 3 (4 no Covil). Logo depois do turno de outra criatura, o dragão pode gastar um uso para fazer uma das ações a seguir. Ele recupera todos os usos gastos no início de cada turno seu._
++ Banir
+_Teste de Resistência de Carisma:_ CD 24, uma criatura que o dragão consiga ver a até 36 m. _Falha:_ 24 (7d6) de dano de energia, e o alvo fica com a condição Incapacitado e é levado a um semiplano inofensivo até o início do próximo turno do dragão, quando reaparece num espaço desocupado à escolha do dragão a até 36 m dele. _Falha ou Sucesso:_ O dragão só pode usar esta ação de novo no início do próximo turno dele.
++ Luz Guiadora
+O dragão usa Conjuração para conjurar _Raio Guiador_ (versão de 4º círculo).
++ Bote
+O dragão se move até metade do Deslocamento e faz um ataque de Dilacerar.
+
+=== Gorgon
++ Chifrada
+_Jogada de Ataque Corpo a Corpo:_ +8, alcance 1,5 m. _Acerto:_ 18 (2d12 + 5) de dano perfurante. Se o alvo for uma criatura Grande ou menor e a górgona tiver se movido 6 m ou mais em linha reta na direção dele logo antes do acerto, o alvo fica com a condição Caído.
++ Sopro Petrificante (Recarga 5–6)
+_Teste de Resistência de Constituição:_ CD 15, cada criatura num Cone de 9 m. _Primeira Falha:_ O alvo fica com a condição Contido e repete o teste no fim do próximo turno dele se ainda estiver Contido, encerrando o efeito em si mesmo com um sucesso. _Segunda Falha:_ O alvo fica com a condição Petrificado no lugar de Contido.
++ Pisotear
+_Teste de Resistência de Destreza:_ CD 16, uma criatura a até 1,5 m que esteja com a condição Caído. _Falha:_ 16 (2d10 + 5) de dano contundente. _Sucesso:_ Metade do dano.
+
+=== Gray Ooze
++ Amorfo
+A gosma passa por frestas de até 2,5 centímetros sem gastar movimento extra.
++ Forma Corrosiva
+Munição não mágica é destruída logo depois de acertar a gosma e causar dano. Qualquer arma não mágica sofre uma penalidade cumulativa de −1 nas jogadas de ataque logo depois de causar dano à gosma e encostar nela. A arma é destruída se a penalidade chegar a −5. A magia _Consertar_ conjurada na arma remove a penalidade.
+
+A gosma corrói metal ou madeira não mágicos de 5 centímetros de espessura em 1 rodada.
++ Pseudópode
+_Jogada de Ataque Corpo a Corpo:_ +3, alcance 1,5 m. _Acerto:_ 10 (2d8 + 1) de dano ácido. Armaduras não mágicas vestidas pelo alvo sofrem uma penalidade de −1 na CA que dão. A armadura é destruída se a penalidade reduzir a CA dela a 10. A magia _Consertar_ conjurada na armadura remove a penalidade.
+
+=== Green Dragon Wyrmling
++ Anfíbio
+O dragão respira ar e água.
++ Ataques Múltiplos
+O dragão faz dois ataques de Dilacerar.
++ Dilacerar
++ Sopro Venenoso (Recarga 5–6)
+_Teste de Resistência de Constituição:_ CD 11, cada criatura num Cone de 4,5 m. _Falha:_ 21 (6d6) de dano de veneno. _Sucesso:_ Metade do dano.
+
+=== Young Green Dragon
++ Anfíbio
+O dragão respira ar e água.
++ Ataques Múltiplos
+O dragão faz três ataques de Dilacerar.
++ Dilacerar
++ Sopro Venenoso (Recarga 5–6)
+_Teste de Resistência de Constituição:_ CD 14, cada criatura num Cone de 9 m. _Falha:_ 42 (12d6) de dano de veneno. _Sucesso:_ Metade do dano.
+
+=== Adult Green Dragon
++ Anfíbio
+O dragão respira ar e água.
++ Resistência Lendária (3/Dia, ou 4/Dia no Covil)
+Se o dragão falhar num teste de resistência, pode escolher ser bem-sucedido.
++ Ataques Múltiplos
+O dragão faz três ataques de Dilacerar. Ele pode trocar um ataque por um uso de Conjuração para conjurar _Espinho Mental_ (versão de 3º círculo).
++ Dilacerar
++ Sopro Venenoso (Recarga 5–6)
+_Teste de Resistência de Constituição:_ CD 18, cada criatura num Cone de 18 m. _Falha:_ 56 (16d6) de dano de veneno. _Sucesso:_ Metade do dano.
++ Conjuração
+O dragão conjura uma das magias a seguir, sem precisar de componentes Materiais e usando Carisma como atributo de conjuração (CD de resistência 17):
+
+**À vontade:** _Detectar Magia_, _Espinho Mental_ (versão de 3º círculo)
+
+**1/Dia:** _Missão_
++ :intro
+_Usos de Ação Lendária: 3 (4 no Covil). Logo depois do turno de outra criatura, o dragão pode gastar um uso para fazer uma das ações a seguir. Ele recupera todos os usos gastos no início de cada turno seu._
++ Invasão Mental
+O dragão usa Conjuração para conjurar _Espinho Mental_ (versão de 3º círculo).
++ Miasma Nocivo
+_Teste de Resistência de Constituição:_ CD 17, cada criatura numa Esfera de 6 m de raio centrada num ponto que o dragão consiga ver a até 27 m. _Falha:_ 7 (2d6) de dano de veneno, e o alvo sofre uma penalidade de −2 na CA até o fim do próximo turno dele. _Falha ou Sucesso:_ O dragão só pode usar esta ação de novo no início do próximo turno dele.
++ Bote
+O dragão se move até metade do Deslocamento e faz um ataque de Dilacerar.
+
+=== Ancient Green Dragon
++ Anfíbio
+O dragão respira ar e água.
++ Resistência Lendária (4/Dia, ou 5/Dia no Covil)
+Se o dragão falhar num teste de resistência, pode escolher ser bem-sucedido.
++ Ataques Múltiplos
+O dragão faz três ataques de Dilacerar. Ele pode trocar um ataque por um uso de Conjuração para conjurar _Espinho Mental_ (versão de 5º círculo).
++ Dilacerar
++ Sopro Venenoso (Recarga 5–6)
+_Teste de Resistência de Constituição:_ CD 22, cada criatura num Cone de 27 m. _Falha:_ 77 (22d6) de dano de veneno. _Sucesso:_ Metade do dano.
++ Conjuração
+O dragão conjura uma das magias a seguir, sem precisar de componentes Materiais e usando Carisma como atributo de conjuração (CD de resistência 21):
+
+**À vontade:** _Detectar Magia_, _Espinho Mental_ (versão de 5º círculo)
+
+**1/Dia cada:** _Missão_, _Modificar Memória_
++ :intro
+_Usos de Ação Lendária: 3 (4 no Covil). Logo depois do turno de outra criatura, o dragão pode gastar um uso para fazer uma das ações a seguir. Ele recupera todos os usos gastos no início de cada turno seu._
++ Invasão Mental
+O dragão usa Conjuração para conjurar _Espinho Mental_ (versão de 5º círculo).
++ Miasma Nocivo
+_Teste de Resistência de Constituição:_ CD 21, cada criatura numa Esfera de 9 m de raio centrada num ponto que o dragão consiga ver a até 27 m. _Falha:_ 17 (5d6) de dano de veneno, e o alvo sofre uma penalidade de −2 na CA até o fim do próximo turno dele. _Falha ou Sucesso:_ O dragão só pode usar esta ação de novo no início do próximo turno dele.
++ Bote
+O dragão se move até metade do Deslocamento e faz um ataque de Dilacerar.
+
+=== Green Hag
++ Anfíbia
+A bruxa respira ar e água.
++ Magia do Conciliábulo
+Enquanto estiver a até 9 m de pelo menos duas bruxas aliadas, a bruxa pode conjurar uma das magias a seguir, sem precisar de componentes Materiais, com o tempo de conjuração normal da magia e usando Inteligência como atributo de conjuração (CD de resistência 11): _Augúrio_, _Encontrar Familiar_, _Identificação_, _Localizar Objeto_, _Vidência_ ou _Servo Invisível_. A bruxa precisa terminar um Descanso Longo antes de usar este traço para conjurar a mesma magia de novo.
++ Imitação
+A bruxa imita sons de animais e vozes humanoides. Uma criatura que ouça os sons só percebe que são imitações com um teste de Sabedoria (Intuição) CD 14 bem-sucedido.
++ Ataques Múltiplos
+A bruxa faz dois ataques de Garra.
++ Garra
++ Conjuração
+A bruxa conjura uma das magias a seguir, sem precisar de componentes Materiais e usando Sabedoria como atributo de conjuração (CD de resistência 12, +4 para acertar com ataques mágicos):
+
+**À vontade:** _Globos de Luz_, _Disfarçar-se_ (duração de 24 horas), _Invisibilidade_ (só em si mesma, e ela não deixa rastros enquanto estiver Invisível), _Ilusão Menor_, _Raio Adoecedor_ (versão de 3º círculo)
+
+=== Grick
++ Ataques Múltiplos
+O grick faz um ataque de Bico e um de Tentáculos.
++ Bico
++ Tentáculos
+_Jogada de Ataque Corpo a Corpo:_ +4, alcance 1,5 m. _Acerto:_ 7 (1d10 + 2) de dano cortante. Se o alvo for uma criatura Média ou menor, fica com a condição Agarrado (CD 12 para escapar) pelos quatro tentáculos.
+
+=== Griffon
++ Ataques Múltiplos
+O grifo faz dois ataques de Dilacerar.
++ Dilacerar
+_Jogada de Ataque Corpo a Corpo:_ +6, alcance 1,5 m. _Acerto:_ 8 (1d8 + 4) de dano perfurante. Se o alvo for uma criatura Média ou menor, fica com a condição Agarrado (CD 14 para escapar) pelas duas garras dianteiras do grifo.
+
+=== Grimlock
++ Porrete de Osso
