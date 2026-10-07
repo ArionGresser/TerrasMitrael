@@ -1,0 +1,273 @@
+=== Purple Worm
++ Escavador
+O verme escava rocha sólida com metade do Deslocamento de Escavação e deixa para trás um túnel de 3 m de diâmetro.
++ Ataques Múltiplos
+O verme faz um ataque de Mordida e um de Ferrão da Cauda.
++ Mordida
+_Jogada de Ataque Corpo a Corpo:_ +14, alcance 3 m. _Acerto:_ 22 (3d8 + 9) de dano perfurante. Se o alvo for uma criatura Grande ou menor, fica com a condição Agarrado (CD 19 para escapar) e com a condição Contido até a agarrada acabar.
++ Ferrão da Cauda
++ Engolir
+_Teste de Resistência de Força:_ CD 19, uma criatura Grande ou menor Agarrada pelo verme (ele pode ter até três criaturas engolidas ao mesmo tempo). _Falha:_ O verme engole o alvo, e a condição Agarrado acaba. A criatura engolida fica com as condições Cego e Contido, tem Cobertura Total contra ataques e outros efeitos de fora do verme e sofre 17 (5d6) de dano ácido no início de cada turno do verme.
+
+Se o verme sofrer 30 de dano ou mais num único turno vindo de uma criatura dentro dele, ele precisa ser bem-sucedido num teste de resistência de Constituição CD 21 no fim desse turno ou regurgita todas as criaturas engolidas, que caem num espaço a até 1,5 m dele com a condição Caído. Se o verme morrer, as criaturas engolidas deixam de estar Contidas e podem sair do cadáver usando 6 m de movimento, saindo Caídas.
+
+=== Quasit
++ Resistência à Magia
+O quasit tem Vantagem nos testes de resistência contra magias e outros efeitos mágicos.
++ Dilacerar
+_Jogada de Ataque Corpo a Corpo:_ +5, alcance 1,5 m. _Acerto:_ 5 (1d4 + 3) de dano cortante, e o alvo fica com a condição Envenenado até o início do próximo turno do quasit.
++ Invisibilidade
+O quasit conjura _Invisibilidade_ em si mesmo, sem precisar de componentes e usando Carisma como atributo de conjuração.
++ Assustar (1/Dia)
+_Teste de Resistência de Sabedoria:_ CD 10, uma criatura a até 6 m. _Falha:_ O alvo fica com a condição Amedrontado. No fim de cada turno dele, repete o teste, encerrando o efeito em si mesmo com um sucesso. Depois de 1 minuto, ele é bem-sucedido automaticamente.
++ Mudar de Forma
+O quasit muda de forma para parecer um morcego (Deslocamento 3 m, Voo 12 m), uma centopeia (12 m, Escalada 12 m) ou um sapo (12 m, Natação 12 m), ou volta à forma verdadeira. As estatísticas de jogo dele são as mesmas em todas as formas, fora o Deslocamento. O equipamento que ele veste ou carrega não se transforma.
+
+=== Rakshasa
++ Resistência à Magia Maior
+O rakshasa é bem-sucedido automaticamente nos testes de resistência contra magias e outros efeitos mágicos, e as jogadas de ataque de magias erram automaticamente contra ele. Sem a permissão dele, nenhuma magia consegue observá-lo à distância nem detectar os pensamentos, o tipo de criatura ou a tendência dele.
++ Restauração Infernal
+Se o rakshasa morrer fora dos Nove Infernos, o corpo vira icor, e ele ganha um corpo novo na hora, revivendo com todos os Pontos de Vida em algum lugar dos Nove Infernos.
++ Ataques Múltiplos
+O rakshasa faz três ataques de Toque Amaldiçoado.
++ Toque Amaldiçoado
+_Jogada de Ataque Corpo a Corpo:_ +10, alcance 1,5 m. _Acerto:_ 12 (2d6 + 5) de dano cortante mais 19 (3d12) de dano necrótico. Se o alvo for uma criatura, fica amaldiçoado. Amaldiçoado, o alvo não recebe benefício nenhum ao terminar um Descanso Curto ou Longo.
++ Comando Funesto (Recarga 5–6)
+_Teste de Resistência de Sabedoria:_ CD 18, cada inimigo numa Emanação de 9 m a partir do rakshasa. _Falha:_ 28 (8d6) de dano psíquico, e o alvo fica com as condições Amedrontado e Incapacitado até o início do próximo turno do rakshasa.
++ Conjuração
+O rakshasa conjura uma das magias a seguir, sem precisar de componentes Materiais e usando Carisma como atributo de conjuração (CD de resistência 18):
+
+**À vontade:** _Detectar Magia_, _Detectar Pensamentos_, _Disfarçar-se_, _Mãos Mágicas_, _Ilusão Menor_
+
+**1/Dia cada:** _Voo_, _Invisibilidade_, _Imagem Maior_, _Viagem Planar_
+
+=== Red Dragon Wyrmling
++ Ataques Múltiplos
+O dragão faz dois ataques de Dilacerar.
++ Dilacerar
++ Sopro de Fogo (Recarga 5–6)
+_Teste de Resistência de Destreza:_ CD 13, cada criatura num Cone de 4,5 m. _Falha:_ 24 (7d6) de dano de fogo. _Sucesso:_ Metade do dano.
+
+=== Young Red Dragon
++ Ataques Múltiplos
+O dragão faz três ataques de Dilacerar.
++ Dilacerar
++ Sopro de Fogo (Recarga 5–6)
+_Teste de Resistência de Destreza:_ CD 17, cada criatura num Cone de 9 m. _Falha:_ 56 (16d6) de dano de fogo. _Sucesso:_ Metade do dano.
+
+=== Adult Red Dragon
++ Resistência Lendária (3/Dia, ou 4/Dia no Covil)
+Se o dragão falhar num teste de resistência, pode escolher ser bem-sucedido.
++ Ataques Múltiplos
+O dragão faz três ataques de Dilacerar. Ele pode trocar um ataque por um uso de Conjuração para conjurar _Raio Ardente_.
++ Dilacerar
++ Sopro de Fogo (Recarga 5–6)
+_Teste de Resistência de Destreza:_ CD 21, cada criatura num Cone de 18 m. _Falha:_ 59 (17d6) de dano de fogo. _Sucesso:_ Metade do dano.
++ Conjuração
+O dragão conjura uma das magias a seguir, sem precisar de componentes Materiais e usando Carisma como atributo de conjuração (CD de resistência 20, +12 para acertar com ataques mágicos):
+
+**À vontade:** _Comando_ (versão de 2º círculo), _Detectar Magia_, _Raio Ardente_
+
+**1/Dia:** _Bola de Fogo_
++ :intro
+_Usos de Ação Lendária: 3 (4 no Covil). Logo depois do turno de outra criatura, o dragão pode gastar um uso para fazer uma das ações a seguir. Ele recupera todos os usos gastos no início de cada turno seu._
++ Presença Dominante
+O dragão usa Conjuração para conjurar _Comando_ (versão de 2º círculo). Ele só pode usar esta ação de novo no início do próximo turno dele.
++ Raios Ardentes
+O dragão usa Conjuração para conjurar _Raio Ardente_. Ele só pode usar esta ação de novo no início do próximo turno dele.
++ Bote
+O dragão se move até metade do Deslocamento e faz um ataque de Dilacerar.
+
+=== Ancient Red Dragon
++ Resistência Lendária (4/Dia, ou 5/Dia no Covil)
+Se o dragão falhar num teste de resistência, pode escolher ser bem-sucedido.
++ Ataques Múltiplos
+O dragão faz três ataques de Dilacerar. Ele pode trocar um ataque por um uso de Conjuração para conjurar _Raio Ardente_ (versão de 3º círculo).
++ Dilacerar
++ Sopro de Fogo (Recarga 5–6)
+_Teste de Resistência de Destreza:_ CD 24, cada criatura num Cone de 27 m. _Falha:_ 91 (26d6) de dano de fogo. _Sucesso:_ Metade do dano.
++ Conjuração
+O dragão conjura uma das magias a seguir, sem precisar de componentes Materiais e usando Carisma como atributo de conjuração (CD de resistência 23, +15 para acertar com ataques mágicos):
+
+**À vontade:** _Comando_ (versão de 2º círculo), _Detectar Magia_, _Raio Ardente_ (versão de 3º círculo)
+
+**1/Dia cada:** _Bola de Fogo_ (versão de 6º círculo), _Vidência_
++ :intro
+_Usos de Ação Lendária: 3 (4 no Covil). Logo depois do turno de outra criatura, o dragão pode gastar um uso para fazer uma das ações a seguir. Ele recupera todos os usos gastos no início de cada turno seu._
++ Presença Dominante
+O dragão usa Conjuração para conjurar _Comando_ (versão de 2º círculo). Ele só pode usar esta ação de novo no início do próximo turno dele.
++ Raios Ardentes
+O dragão usa Conjuração para conjurar _Raio Ardente_ (versão de 3º círculo). Ele só pode usar esta ação de novo no início do próximo turno dele.
++ Bote
+O dragão se move até metade do Deslocamento e faz um ataque de Dilacerar.
+
+=== Remorhaz
++ Aura de Calor
+No fim de cada turno do remorhaz, cada criatura numa Emanação de 1,5 m a partir dele sofre 16 (3d10) de dano de fogo.
++ Mordida
+_Jogada de Ataque Corpo a Corpo:_ +11, alcance 3 m. _Acerto:_ 18 (2d10 + 7) de dano perfurante mais 14 (4d6) de dano de fogo. Se o alvo for uma criatura Grande ou menor, fica com a condição Agarrado (CD 17 para escapar) e com a condição Contido até a agarrada acabar.
++ Engolir
+_Teste de Resistência de Força:_ CD 19, uma criatura Grande ou menor Agarrada pelo remorhaz (ele pode ter até duas criaturas engolidas ao mesmo tempo). _Falha:_ O remorhaz engole o alvo, e a condição Agarrado acaba. A criatura engolida fica com as condições Cego e Contido, tem Cobertura Total contra ataques e outros efeitos de fora do remorhaz e sofre 10 (3d6) de dano ácido mais 10 (3d6) de dano de fogo no início de cada turno do remorhaz.
+
+Se o remorhaz sofrer 30 de dano ou mais num único turno vindo de uma criatura dentro dele, ele precisa ser bem-sucedido num teste de resistência de Constituição CD 15 no fim desse turno ou regurgita todas as criaturas engolidas, que caem num espaço a até 1,5 m dele com a condição Caído. Se o remorhaz morrer, as criaturas engolidas deixam de estar Contidas e podem sair do cadáver usando 4,5 m de movimento, saindo Caídas.
+
+=== Roc
++ Ataques Múltiplos
+A roca faz dois ataques de Bico. Ela pode trocar um ataque por um ataque de Garras.
++ Bico
++ Garras
+_Jogada de Ataque Corpo a Corpo:_ +13, alcance 1,5 m. _Acerto:_ 23 (4d6 + 9) de dano cortante. Se o alvo for uma criatura Enorme ou menor, fica com a condição Agarrado (CD 19 para escapar) pelas duas garras e com a condição Contido até a agarrada acabar.
++ Mergulho (Recarga 5–6)
+Se tiver uma criatura Agarrada, a roca voa até metade do Deslocamento de Voo sem provocar Ataques de Oportunidade e solta essa criatura.
+
+=== Roper
++ Patas de Aranha
+O roper escala superfícies difíceis, inclusive pelo teto, sem precisar fazer teste de atributo.
++ Ataques Múltiplos
+O roper faz dois ataques de Tentáculo, usa Puxar e faz dois ataques de Mordida.
++ Mordida
++ Tentáculo
+_Jogada de Ataque Corpo a Corpo:_ +7, alcance 18 m. _Acerto:_ O alvo fica com a condição Agarrado (CD 14 para escapar) por um dos seis tentáculos e com a condição Envenenado até a agarrada acabar.
+
+O tentáculo pode ser danificado e, quando destruído, solta a criatura que estiver Agarrando (CA 20, 10 PV, Imunidade a dano de veneno e psíquico). Danificar o tentáculo não causa dano ao roper, e um tentáculo destruído cresce de novo no início do próximo turno dele.
++ Puxar
+O roper puxa cada criatura Agarrada por ele até 9 m em linha reta na direção dele.
+
+=== Rust Monster
++ Faro de Ferro
+O monstro da ferrugem sabe exatamente onde está qualquer metal ferroso a até 9 m dele.
++ Ataques Múltiplos
+O monstro da ferrugem faz um ataque de Mordida e usa Antenas duas vezes.
++ Mordida
++ Antenas
+O monstro da ferrugem escolhe um objeto de metal não mágico (armadura ou arma) vestido ou carregado por uma criatura a até 1,5 m dele. _Teste de Resistência de Destreza:_ CD 11, a criatura com o objeto. _Falha:_ O objeto sofre uma penalidade de −1 na CA que dá (armadura) ou nas jogadas de ataque (arma). A armadura é destruída se a penalidade reduzir a CA dela a 10, e a arma é destruída se a penalidade chegar a −5. A magia _Consertar_ conjurada na armadura ou na arma remove a penalidade.
++ Destruir Metal
+O monstro da ferrugem toca um objeto de metal não mágico a até 1,5 m dele que ninguém esteja vestindo ou carregando. O toque destrói um Cubo de 30 centímetros do objeto.
++ Antenas Reflexas
+_Gatilho:_ Uma jogada de ataque acerta o monstro da ferrugem. _Resposta:_ O monstro da ferrugem usa Antenas.
+
+=== Sahuagin Warrior
++ Frenesi Sanguinário
+O sahuagin tem Vantagem nas jogadas de ataque contra qualquer criatura que não esteja com todos os Pontos de Vida.
++ Anfíbio Limitado
+O sahuagin respira ar e água, mas precisa ficar submerso pelo menos uma vez a cada 4 horas para não sufocar fora d'água.
++ Telepatia com Tubarões
+O sahuagin controla magicamente tubarões a até 36 m dele, usando uma telepatia especial.
++ Ataques Múltiplos
+O sahuagin faz dois ataques de Garra.
++ Garra
++ Investida Aquática
+O sahuagin nada até o Deslocamento de Natação em linha reta na direção de um inimigo que consiga ver.
+
+=== Salamander
++ Aura de Fogo
+No fim de cada turno da salamandra, cada criatura à escolha dela numa Emanação de 1,5 m a partir dela sofre 7 (2d6) de dano de fogo.
++ Ataques Múltiplos
+A salamandra faz dois ataques de Lança Flamejante. Ela pode trocar um ataque por um uso de Constringir.
++ Lança Flamejante
+_Jogada de Ataque Corpo a Corpo ou à Distância:_ +7, alcance 1,5 m ou 6/18 m. _Acerto:_ 13 (2d8 + 4) de dano perfurante mais 7 (2d6) de dano de fogo. _Acerto ou Erro:_ A lança volta magicamente para a mão da salamandra logo depois de um ataque à distância.
++ Constringir
+_Teste de Resistência de Força:_ CD 15, uma criatura Grande ou menor que a salamandra consiga ver a até 3 m. _Falha:_ 11 (2d6 + 4) de dano contundente mais 7 (2d6) de dano de fogo. O alvo fica com a condição Agarrado (CD 14 para escapar) e com a condição Contido até a agarrada acabar.
+
+=== Satyr
++ Resistência à Magia
+O sátiro tem Vantagem nos testes de resistência contra magias e outros efeitos mágicos.
++ Cascos
+_Jogada de Ataque Corpo a Corpo:_ +5, alcance 1,5 m. _Acerto:_ 5 (1d4 + 3) de dano contundente. Se o alvo for uma criatura Média ou menor, o sátiro o empurra até 3 m em linha reta para longe dele.
++ Zombaria
+_Teste de Resistência de Sabedoria:_ CD 12, uma criatura que o sátiro consiga ver a até 27 m. _Falha:_ 5 (1d6 + 2) de dano psíquico.
+
+=== Scout
++ Ataques Múltiplos
+O batedor faz dois ataques, com Espada Curta e Arco Longo, em qualquer combinação.
++ Espada Curta
++ Arco Longo
+
+=== Sea Hag
++ Anfíbia
+A bruxa respira ar e água.
++ Magia do Conciliábulo
+Enquanto estiver a até 9 m de pelo menos duas bruxas aliadas, a bruxa pode conjurar uma das magias a seguir, sem precisar de componentes Materiais, com o tempo de conjuração normal da magia e usando Inteligência como atributo de conjuração (CD de resistência 11): _Augúrio_, _Encontrar Familiar_, _Identificação_, _Localizar Objeto_, _Vidência_ ou _Servo Invisível_. A bruxa precisa terminar um Descanso Longo antes de usar este traço para conjurar a mesma magia de novo.
++ Aparência Vil
+_Teste de Resistência de Sabedoria:_ CD 11, qualquer Fera ou Humanoide que comece o turno a até 9 m da bruxa e consiga ver a forma verdadeira dela. _Falha:_ O alvo fica com a condição Amedrontado até o início do próximo turno dele. _Sucesso:_ O alvo fica imune à Aparência Vil desta bruxa por 24 horas.
++ Garra
++ Olhar Mortal (Recarga 5–6)
+_Teste de Resistência de Sabedoria:_ CD 11, uma criatura Amedrontada que a bruxa consiga ver a até 9 m. _Falha:_ Se o alvo tiver 20 Pontos de Vida ou menos, cai a 0 Pontos de Vida. Se tiver mais, sofre 13 (3d8) de dano psíquico.
++ Aparência Ilusória
+A bruxa conjura _Disfarçar-se_, usando Constituição como atributo de conjuração (CD de resistência 13). A magia dura 24 horas.
+
+=== Shadow
++ Amorfa
+A sombra passa por frestas de até 2,5 centímetros sem gastar movimento extra.
++ Fraqueza à Luz do Sol
+Sob a luz do sol, a sombra tem Desvantagem nos Testes de D20.
++ Golpe Drenante
+_Jogada de Ataque Corpo a Corpo:_ +4, alcance 1,5 m. _Acerto:_ 5 (1d6 + 2) de dano necrótico, e o valor de Força do alvo diminui 1d4. O alvo morre se isso reduzir o valor a 0. Se um Humanoide for morto por este ataque, uma **Sombra** se ergue do cadáver 1d4 horas depois.
++ Furtividade Sombria
+Na Penumbra ou na Escuridão, a sombra faz a ação de Esconder.
+
+=== Shambling Mound
++ Absorção Elétrica
+Sempre que sofreria dano elétrico, o monte ambulante recupera Pontos de Vida iguais ao dano elétrico causado.
++ Ataques Múltiplos
+O monte ambulante faz três ataques de Gavinha Carregada. Ele pode trocar um ataque por um uso de Engolfar.
++ Gavinha Carregada
+_Jogada de Ataque Corpo a Corpo:_ +7, alcance 3 m. _Acerto:_ 7 (1d6 + 4) de dano contundente mais 5 (2d4) de dano elétrico. Se o alvo for uma criatura Média ou menor, o monte ambulante o puxa 1,5 m em linha reta na direção dele.
++ Engolfar
+_Teste de Resistência de Força:_ CD 15, uma criatura Média ou menor a até 1,5 m. _Falha:_ O alvo é puxado para dentro do espaço do monte ambulante e fica com a condição Agarrado (CD 14 para escapar). Até a agarrada acabar, o alvo fica com as condições Cego e Contido e sofre 10 (3d6) de dano elétrico no início de cada turno dele. Quando o monte ambulante se move, o alvo Agarrado se move junto, sem custo extra de movimento. O monte ambulante só pode ter uma criatura Agarrada por esta ação de cada vez.
+
+=== Shield Guardian
++ Vinculado
+O guardião está ligado magicamente a um amuleto. Enquanto os dois estiverem no mesmo plano de existência, quem usa o amuleto pode chamar o guardião por telepatia para ir até ele, e o guardião sabe a distância e a direção do amuleto. Se o guardião estiver a até 18 m de quem usa o amuleto, metade de qualquer dano que essa pessoa sofrer (arredondado para cima) é transferida para o guardião.
++ Regeneração
+O guardião recupera 10 Pontos de Vida no início de cada turno dele se tiver pelo menos 1 Ponto de Vida.
++ Armazenar Magia
+Um conjurador que use o amuleto do guardião pode fazer o guardião armazenar uma magia de 4º círculo ou menor. Para isso, precisa conjurar a magia no guardião estando a até 1,5 m dele. A magia não tem efeito, mas fica guardada no guardião. Qualquer magia guardada antes se perde quando uma nova é armazenada. O guardião pode conjurar a magia guardada com os parâmetros definidos por quem a conjurou originalmente, sem precisar de componentes e usando o atributo de conjuração dessa pessoa. Depois disso, a magia guardada se perde.
++ Ataques Múltiplos
+O guardião faz dois ataques de Punho.
++ Punho
++ Proteção
+_Gatilho:_ Uma jogada de ataque acerta quem usa o amuleto do guardião enquanto essa pessoa está a até 1,5 m dele. _Resposta:_ Quem usa o amuleto recebe +5 de bônus na CA, inclusive contra o ataque que provocou a reação, o que pode fazê-lo errar, até o início do próximo turno do guardião.
+
+=== Silver Dragon Wyrmling
++ Ataques Múltiplos
+O dragão faz dois ataques de Dilacerar.
++ Dilacerar
++ Sopro Gélido (Recarga 5–6)
+_Teste de Resistência de Constituição:_ CD 13, cada criatura num Cone de 4,5 m. _Falha:_ 18 (4d8) de dano de frio. _Sucesso:_ Metade do dano.
++ Sopro Paralisante
+_Teste de Resistência de Constituição:_ CD 13, cada criatura num Cone de 4,5 m. _Primeira Falha:_ O alvo fica com a condição Incapacitado até o fim do próximo turno dele, quando repete o teste. _Segunda Falha:_ O alvo fica com a condição Paralisado e repete o teste no fim de cada turno dele, encerrando o efeito em si mesmo com um sucesso. Depois de 1 minuto, é bem-sucedido automaticamente.
+
+=== Young Silver Dragon
++ Ataques Múltiplos
+O dragão faz três ataques de Dilacerar. Ele pode trocar um ataque por um uso de Sopro Paralisante.
++ Dilacerar
++ Sopro Gélido (Recarga 5–6)
+_Teste de Resistência de Constituição:_ CD 17, cada criatura num Cone de 9 m. _Falha:_ 49 (11d8) de dano de frio. _Sucesso:_ Metade do dano.
++ Sopro Paralisante
+_Teste de Resistência de Constituição:_ CD 17, cada criatura num Cone de 9 m. _Primeira Falha:_ O alvo fica com a condição Incapacitado até o fim do próximo turno dele, quando repete o teste. _Segunda Falha:_ O alvo fica com a condição Paralisado e repete o teste no fim de cada turno dele, encerrando o efeito em si mesmo com um sucesso. Depois de 1 minuto, é bem-sucedido automaticamente.
+
+=== Adult Silver Dragon
++ Resistência Lendária (3/Dia, ou 4/Dia no Covil)
+Se o dragão falhar num teste de resistência, pode escolher ser bem-sucedido.
++ Ataques Múltiplos
+O dragão faz três ataques de Dilacerar. Ele pode trocar um ataque por um uso de (A) Sopro Paralisante ou (B) Conjuração para conjurar _Faca de Gelo_.
++ Dilacerar
++ Sopro Gélido (Recarga 5–6)
+_Teste de Resistência de Constituição:_ CD 20, cada criatura num Cone de 18 m. _Falha:_ 54 (12d8) de dano de frio. _Sucesso:_ Metade do dano.
++ Sopro Paralisante
+_Teste de Resistência de Constituição:_ CD 20, cada criatura num Cone de 18 m. _Primeira Falha:_ O alvo fica com a condição Incapacitado até o fim do próximo turno dele, quando repete o teste. _Segunda Falha:_ O alvo fica com a condição Paralisado e repete o teste no fim de cada turno dele, encerrando o efeito em si mesmo com um sucesso. Depois de 1 minuto, é bem-sucedido automaticamente.
++ Conjuração
+O dragão conjura uma das magias a seguir, sem precisar de componentes Materiais e usando Carisma como atributo de conjuração (CD de resistência 19, +11 para acertar com ataques mágicos):
+
+**À vontade:** _Detectar Magia_, _Imobilizar Monstro_, _Faca de Gelo_, _Mudança de Forma_ (só formas de Fera ou Humanoide, sem ganhar Pontos de Vida Temporários da magia e sem precisar de Concentração nem de Pontos de Vida Temporários para mantê-la)
+
+**1/Dia cada:** _Tempestade de Gelo_ (versão de 5º círculo), _Zona da Verdade_
++ :intro
+_Usos de Ação Lendária: 3 (4 no Covil). Logo depois do turno de outra criatura, o dragão pode gastar um uso para fazer uma das ações a seguir. Ele recupera todos os usos gastos no início de cada turno seu._
++ Calafrio
+O dragão usa Conjuração para conjurar _Imobilizar Monstro_. Ele só pode usar esta ação de novo no início do próximo turno dele.
++ Vendaval Gélido
+_Teste de Resistência de Destreza:_ CD 19, cada criatura numa Linha de 18 m de comprimento e 3 m de largura. _Falha:_ 14 (4d6) de dano de frio, e o alvo é empurrado até 9 m em linha reta para longe do dragão. _Sucesso:_ Só metade do dano. _Falha ou Sucesso:_ O dragão só pode usar esta ação de novo no início do próximo turno dele.
++ Bote
+O dragão se move até metade do Deslocamento e faz um ataque de Dilacerar.
