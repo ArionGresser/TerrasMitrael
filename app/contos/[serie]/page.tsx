@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
   SERIES_DISPONIVEIS,
@@ -7,15 +6,14 @@ import {
   chaveDaTemporada,
   contagemDeEpisodios,
 } from "@/lib/contos";
-import { Cartaz } from "@/components/contos/Cartaz";
-import { Elenco, Trilha } from "@/components/contos/Partes";
+import { Cartaz, Poster } from "@/components/contos/Cartaz";
+import { Trilha } from "@/components/contos/Partes";
 import { Pergaminho } from "@/components/ui/Pergaminho";
 import { Revelar } from "@/components/ui/Revelar";
 import { Rodape } from "@/components/Rodape";
 import {
   TituloBrasao,
   TituloSecao,
-  TituloCapitulo,
   Sobretitulo,
 } from "@/components/ui/Titulo";
 
@@ -62,44 +60,26 @@ export default async function PaginaSerie({ params }: Props) {
           </TituloSecao>
         </Revelar>
 
-        <ul className="mt-6 space-y-6">
+        <ul className="mx-auto mt-6 grid max-w-xl grid-cols-1 gap-x-6 gap-y-10 min-[420px]:grid-cols-2">
           {serie.temporadas.map((temporada, i) => (
-            <li key={temporada.numero}>
-              <Revelar atraso={i * 0.08}>
-                <Pergaminho
-                  variante="cartao"
-                  borda={((i % 3) + 1) as 1 | 2 | 3}
-                  inclinacao={i % 2 === 0 ? "esquerda" : "direita"}
-                  className="relative"
-                >
-                  <p className="font-titulo text-dourado-600 text-xs tracking-[0.25em] uppercase">
-                    Temporada {temporada.numero}
-                  </p>
-                  <TituloCapitulo className="mt-1">
-                    {/* O título inteiro do cartão é o link, e o cartão
-                        todo responde ao toque por causa do after */}
-                    <Link
-                      href={`/contos/${serie.slug}/${chaveDaTemporada(temporada)}/`}
-                      className="after:absolute after:inset-0 hover:underline"
-                    >
-                      {temporada.titulo}
-                    </Link>
-                  </TituloCapitulo>
-                  <p className="text-tinta-700 mt-3 text-sm leading-relaxed">
-                    {temporada.sinopse}
-                  </p>
-
-                  <div className="relative z-10 mt-5">
-                    <Elenco slugs={temporada.elenco} tamanho="pequeno" />
-                  </div>
-
-                  <p className="text-tinta-500 mt-4 text-center text-xs tracking-wide">
-                    {contagemDeEpisodios(temporada)}
-                    <span aria-hidden className="text-dourado-600 ml-2">
-                      →
-                    </span>
-                  </p>
-                </Pergaminho>
+            <li key={temporada.numero} className="flex flex-col">
+              <Revelar
+                atraso={i * 0.08}
+                direcao={i % 2 === 0 ? "esquerda" : "direita"}
+              >
+                <div className="mx-auto w-full max-w-[16rem]">
+                  <Poster
+                    arte={{ tipo: "mosaico", personagens: temporada.elenco }}
+                    selo={`Temporada ${temporada.numero}`}
+                    titulo={temporada.titulo}
+                    chamada={contagemDeEpisodios(temporada)}
+                    href={`/contos/${serie.slug}/${chaveDaTemporada(temporada)}/`}
+                    prioridade={i < 2}
+                  />
+                </div>
+                <p className="text-pergaminho-200/90 mx-auto mt-4 max-w-[16rem] text-center text-sm leading-relaxed">
+                  {temporada.sinopse}
+                </p>
               </Revelar>
             </li>
           ))}
