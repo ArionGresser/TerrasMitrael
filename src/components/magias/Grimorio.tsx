@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
+import { IconeDaMagia } from "./ArteDaMagia";
 import { CLASSES, ESCOLAS, circulo, type ResumoDaMagia } from "@/lib/magias-base";
 
 /**
@@ -224,8 +225,9 @@ export function Grimorio({ magias }: { magias: ResumoDaMagia[] }) {
                   <li key={m.slug} className="border-dourado-600/20 border-b border-dashed last:border-0">
                     <Link
                       href={`/magias/${m.slug}/`}
-                      className="group hover:bg-pergaminho-200/40 -mx-2 flex items-baseline gap-3 rounded-sm px-2 py-2.5 transition-colors"
+                      className="group hover:bg-pergaminho-200/40 -mx-2 flex items-center gap-3 rounded-sm px-2 py-2 transition-colors"
                     >
+                      <IconeDaMagia icone={m.icone} />
                       <span className="min-w-0 flex-1">
                         <span className="text-tinta-900 block font-semibold group-hover:underline">
                           {m.nome}

@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import { MAGIAS, buscarMagia, rotuloDaMagia } from "@/lib/magias";
 import { TextoDeRegra } from "@/components/magias/TextoDeRegra";
 import { CreditoSrd } from "@/components/magias/CreditoSrd";
+import { IconeDaMagia, IlustracoesDaMagia } from "@/components/magias/ArteDaMagia";
+import { iconeDaMagia, ilustracoesDaMagia } from "@/lib/magias-arte";
 import { Secao } from "@/components/personagens/Painel";
 import { Pergaminho } from "@/components/ui/Pergaminho";
 import { BotaoLink } from "@/components/ui/Botao";
@@ -50,6 +52,9 @@ export default async function PaginaMagia({ params }: Props) {
 
         <Pergaminho borda={1} className="mt-5">
           <header className="text-center">
+            <div className="mb-5 flex justify-center">
+              <IconeDaMagia icone={iconeDaMagia(magia.slug)} tamanho="pagina" />
+            </div>
             <Sobretitulo>{rotuloDaMagia(magia)}</Sobretitulo>
             <TituloBrasao className="mt-4">{magia.nome}</TituloBrasao>
             <p className="text-tinta-500 mt-2 text-sm italic" lang="en">
@@ -78,6 +83,13 @@ export default async function PaginaMagia({ params }: Props) {
             <div className="mt-8">
               <TextoDeRegra texto={magia.texto} />
             </div>
+
+            <section aria-label="Ilustrações" className="mt-10">
+              <IlustracoesDaMagia
+                nome={magia.nome}
+                ilustracoes={ilustracoesDaMagia(magia.slug)}
+              />
+            </section>
 
             <Ornamento className="mt-10" />
 

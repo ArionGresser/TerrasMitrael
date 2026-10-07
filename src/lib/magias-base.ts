@@ -44,4 +44,6 @@ export type ResumoDaMagia = {
   tempo: string;
   concentracao: boolean;
   ritual: boolean;
+  /** O caminho do ícone, quando a arte já chegou. */
+  icone?: string;
 };

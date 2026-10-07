@@ -1,5 +1,6 @@
 import dados from "@/content/magias/magias.json";
 import { circulo, type ResumoDaMagia } from "./magias-base";
+import { iconeDaMagia } from "./magias-arte";
 
 /**
  * O grimório: as magias das regras de 2024, em português.
@@ -64,6 +65,7 @@ export function indiceDoGrimorio(): ResumoDaMagia[] {
       tempo,
       concentracao,
       ritual,
+      icone: iconeDaMagia(slug),
     })
   );
 }
