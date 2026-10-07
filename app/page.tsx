@@ -1,4 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
+import { ultimoEpisodio, chaveDaTemporada, chaveDoEpisodio } from "@/lib/contos";
+import { Cartaz } from "@/components/contos/Cartaz";
 import { Pergaminho } from "@/components/ui/Pergaminho";
 import { Dobra } from "@/components/ui/Dobra";
 import { Revelar } from "@/components/ui/Revelar";
@@ -125,6 +128,9 @@ export default function Home() {
             </div>
           </Pergaminho>
         </Revelar>
+
+        {/* ---------- Contos: o episódio mais novo ---------- */}
+        <EmCartaz />
 
         {/* ---------- Portais ---------- */}
         <Revelar className="mt-14">
@@ -260,5 +266,59 @@ export default function Home() {
 
       <Rodape />
     </>
+  );
+}
+
+/**
+ * A chamada dos Contos: o cartaz da série e o episódio publicado por último,
+ * para quem volta ao site achar de cara o que tem de novo.
+ */
+function EmCartaz() {
+  const novo = ultimoEpisodio();
+  if (!novo) return null;
+  const { serie, temporada, episodio } = novo;
+  const href = `/contos/${serie.slug}/${chaveDaTemporada(temporada)}/${chaveDoEpisodio(episodio)}/`;
+
+  return (
+    <Revelar className="mt-14">
+      <section
+        aria-labelledby="titulo-em-cartaz"
+        className="border-dourado-600/30 bg-madeira-950/60 flex flex-col items-center gap-6 rounded-sm border p-5 shadow-[0_10px_30px_-12px_rgba(0,0,0,0.8)] sm:flex-row sm:items-stretch sm:p-6"
+      >
+        <div className="w-40 shrink-0 sm:w-44">
+          <Cartaz serie={serie} />
+        </div>
+
+        <div className="flex min-w-0 flex-col justify-center text-center sm:text-left">
+          <p className="font-titulo text-dourado-400 text-[0.66rem] tracking-[0.25em] uppercase">
+            Contos de Mitrael · Episódio novo
+          </p>
+          <h2
+            id="titulo-em-cartaz"
+            className="font-brasao text-pergaminho-50 mt-2 text-3xl leading-tight sm:text-4xl"
+          >
+            {episodio.meta.titulo}
+          </h2>
+          <p className="text-pergaminho-300 mt-1 text-xs tracking-wide">
+            {serie.titulo} · Temporada {temporada.numero} · Episódio{" "}
+            {episodio.meta.numero}
+          </p>
+          <p className="text-pergaminho-200 mt-4 text-sm leading-relaxed sm:text-base">
+            {episodio.meta.resumo}
+          </p>
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-3 sm:justify-start">
+            <BotaoLink href={href} variante="primario">
+              Ler o episódio
+            </BotaoLink>
+            <Link
+              href="/contos/"
+              className="text-pergaminho-200 hover:text-pergaminho-50 text-sm underline decoration-dourado-600/60 underline-offset-4 transition-colors"
+            >
+              Todos os contos
+            </Link>
+          </div>
+        </div>
+      </section>
+    </Revelar>
   );
 }

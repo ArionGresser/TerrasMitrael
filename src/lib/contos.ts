@@ -29,6 +29,11 @@ export type MetaEpisodio = {
   sessao?: string;
   /** Quem esteve na mesa nesta sessão, pelas chaves dos personagens. */
   elenco: string[];
+  /**
+   * A imagem larga no alto do episódio. Sem ela, o alto mostra os rostos
+   * de quem jogou a sessão, lado a lado.
+   */
+  capa?: string;
 };
 
 export type Episodio = {
@@ -201,6 +206,17 @@ export function rostosDoElenco(slugs: string[]) {
     const { nome, imagem, rosto } = personagem.meta;
     return [{ slug, nome, imagem, rosto: rosto ?? { x: 0.5, y: 0 } }];
   });
+}
+
+/** O episódio publicado por último, para a chamada da página inicial. */
+export function ultimoEpisodio() {
+  for (const serie of [...SERIES_DISPONIVEIS].reverse()) {
+    for (const temporada of [...serie.temporadas].reverse()) {
+      const episodio = temporada.episodios.at(-1);
+      if (episodio) return { serie, temporada, episodio };
+    }
+  }
+  return undefined;
 }
 
 /** "1 episódio", "3 episódios", ou o aviso de que ainda não há nenhum. */

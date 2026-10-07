@@ -1,4 +1,8 @@
 import type { Metadata } from "next";
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
+import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
   SERIES_DISPONIVEIS,
@@ -7,12 +11,16 @@ import {
   buscarTemporada,
   chaveDaTemporada,
   chaveDoEpisodio,
+  type Episodio,
+  type Serie,
+  type Temporada,
 } from "@/lib/contos";
 import { Elenco, Trilha } from "@/components/contos/Partes";
+import { Arte } from "@/components/contos/Cartaz";
 import { Pergaminho } from "@/components/ui/Pergaminho";
 import { BotaoLink } from "@/components/ui/Botao";
 import { Rodape } from "@/components/Rodape";
-import { TituloBrasao, Sobretitulo, Ornamento } from "@/components/ui/Titulo";
+import { Ornamento } from "@/components/ui/Titulo";
 
 type Props = {
   params: Promise<{ serie: string; temporada: string; episodio: string }>;
@@ -68,6 +76,30 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+/**
+ * Quanto tempo leva para ler, contado no próprio arquivo do episódio na hora
+ * de montar o site. Duzentas palavras por minuto é o ritmo de quem lê com
+ * calma, que é como uma história deve ser lida.
+ */
+function minutosDeLeitura(serie: Serie, temporada: Temporada, episodio: Episodio) {
+  const arquivo = join(
+    process.cwd(),
+    "content/contos",
+    serie.slug,
+    chaveDaTemporada(temporada),
+    `episodio-${String(episodio.meta.numero).padStart(2, "0")}.mdx`
+  );
+  try {
+    const texto = readFileSync(arquivo, "utf8")
+      .replace(/export const meta[\s\S]*?\n};/, "")
+      .replace(/<[^>]+>/g, "");
+    const palavras = texto.split(/\s+/).filter(Boolean).length;
+    return Math.max(1, Math.round(palavras / 200));
+  } catch {
+    return undefined;
+  }
+}
+
 export default async function PaginaEpisodio({ params }: Props) {
   const { serie, temporada, episodio } = await resolver(params);
   if (!serie || !temporada || !episodio) notFound();
@@ -76,10 +108,15 @@ export default async function PaginaEpisodio({ params }: Props) {
   const indice = temporada.episodios.indexOf(episodio);
   const anterior = temporada.episodios[indice - 1];
   const proximo = temporada.episodios[indice + 1];
+  const minutos = minutosDeLeitura(serie, temporada, episodio);
   const { Texto } = episodio;
 
   return (
     <>
+      {/* O quanto já foi lido, num fio dourado no alto da tela. Só CSS: em
+          navegador que não sabe fazer isso, o fio simplesmente não aparece. */}
+      <div aria-hidden className="barra-leitura" />
+
       <main className="mx-auto max-w-3xl px-4 pt-20 pb-8 sm:px-6 sm:pt-28">
         <Trilha
           passos={[
@@ -90,64 +127,155 @@ export default async function PaginaEpisodio({ params }: Props) {
           ]}
         />
 
-        <Pergaminho borda={1} className="mt-5">
-          <header className="text-center">
-            <Sobretitulo>
-              Temporada {temporada.numero} · Episódio {episodio.meta.numero}
-            </Sobretitulo>
-            <TituloBrasao className="mt-4">{episodio.meta.titulo}</TituloBrasao>
-            {episodio.meta.sessao ? (
-              <p className="text-tinta-500 mt-3 text-xs tracking-wide">
-                Jogado em {episodio.meta.sessao}
-              </p>
-            ) : null}
-            <Ornamento className="mt-6" />
-          </header>
+        {/* A capa, como a tela de abertura de um episódio de série */}
+        <header className="relative mt-5 aspect-[4/3] w-full overflow-hidden rounded-sm border border-black/40 shadow-[0_14px_40px_-12px_rgba(0,0,0,0.85)] sm:aspect-[21/9]">
+          <Capa episodio={episodio} />
+          <div
+            aria-hidden
+            className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/55 via-40% to-black/0"
+          />
+          <div className="absolute inset-x-0 bottom-0 p-4 sm:p-7">
+            <p className="font-titulo text-dourado-300 text-[0.62rem] tracking-[0.28em] uppercase drop-shadow sm:text-[0.7rem]">
+              {serie.titulo} · T{temporada.numero} · Episódio{" "}
+              {episodio.meta.numero}
+            </p>
+            <h1 className="font-brasao text-pergaminho-50 mt-2 text-3xl leading-[1.08] drop-shadow-lg sm:text-5xl">
+              {episodio.meta.titulo}
+            </h1>
+            <p className="text-pergaminho-200/90 mt-2 text-xs tracking-wide">
+              {minutos ? `${minutos} min de leitura` : null}
+              {minutos && episodio.meta.sessao ? " · " : null}
+              {episodio.meta.sessao ? `Jogado em ${episodio.meta.sessao}` : null}
+            </p>
+          </div>
+        </header>
+
+        <Pergaminho borda={1} className="-mt-2 sm:-mt-3">
+          <p className="text-tinta-700 mx-auto max-w-[34rem] text-center text-[0.95rem] leading-relaxed italic sm:text-base">
+            {episodio.meta.resumo}
+          </p>
 
           {/* Quem estava na mesa. Ninguém precisa decorar o elenco para ler:
               cada rosto leva à ficha de quem é. */}
-          <section aria-label="Personagens neste episódio" className="mt-6">
+          <section aria-label="Personagens neste episódio" className="mt-7">
             <p className="font-titulo text-tinta-500 mb-3 text-center text-[0.66rem] tracking-[0.2em] uppercase">
               Neste episódio
             </p>
             <Elenco slugs={episodio.meta.elenco} prioridade />
           </section>
 
-          <div className="mt-8 text-[0.95rem] leading-[1.8] sm:text-base">
+          <Ornamento className="mt-8" />
+
+          <div className="leitura-conto mx-auto mt-10 max-w-[38rem]">
             <Texto />
           </div>
 
-          <Ornamento className="mt-10" />
+          <Ornamento className="mt-12" />
+          <p className="font-titulo text-tinta-500 mt-4 text-center text-[0.66rem] tracking-[0.3em] uppercase">
+            Fim do episódio {episodio.meta.numero}
+          </p>
 
-          <nav
-            aria-label="Outros episódios"
-            className="mt-8 flex flex-wrap items-center justify-center gap-3"
-          >
-            {anterior ? (
-              <BotaoLink
-                href={`${base}/${chaveDoEpisodio(anterior)}/`}
-                variante="secundario"
-              >
-                ← Episódio {anterior.meta.numero}
-              </BotaoLink>
-            ) : null}
+          <nav aria-label="Outros episódios" className="mt-8">
             {proximo ? (
-              <BotaoLink
+              <ProximoEpisodio
                 href={`${base}/${chaveDoEpisodio(proximo)}/`}
-                variante="primario"
-              >
-                Episódio {proximo.meta.numero} →
-              </BotaoLink>
+                episodio={proximo}
+              />
             ) : (
-              <BotaoLink href={`${base}/`} variante="primario">
-                Voltar à temporada
-              </BotaoLink>
+              <div className="text-center">
+                <p className="text-tinta-700 text-sm italic">
+                  O próximo episódio ainda está sendo escrito.
+                </p>
+                <div className="mt-4">
+                  <BotaoLink href={`${base}/`} variante="primario">
+                    Voltar à temporada
+                  </BotaoLink>
+                </div>
+              </div>
             )}
+
+            {anterior ? (
+              <p className="mt-6 text-center text-sm">
+                <Link
+                  href={`${base}/${chaveDoEpisodio(anterior)}/`}
+                  className="text-tinta-700 hover:text-heraldico-vermelho underline decoration-dourado-600/60 underline-offset-4 transition-colors"
+                >
+                  ← Voltar ao episódio {anterior.meta.numero}:{" "}
+                  {anterior.meta.titulo}
+                </Link>
+              </p>
+            ) : null}
           </nav>
         </Pergaminho>
       </main>
 
       <Rodape />
     </>
+  );
+}
+
+/** A imagem do episódio, ou os rostos de quem jogou quando ele não tem uma. */
+function Capa({
+  episodio,
+  pequena = false,
+}: {
+  episodio: Episodio;
+  pequena?: boolean;
+}) {
+  if (episodio.meta.capa) {
+    return (
+      <Image
+        src={episodio.meta.capa}
+        alt=""
+        fill
+        priority={!pequena}
+        sizes={pequena ? "160px" : "(max-width: 768px) 100vw, 720px"}
+        className="object-cover sepia-[0.12]"
+      />
+    );
+  }
+  return (
+    <Arte
+      arte={{ tipo: "mosaico", personagens: episodio.meta.elenco }}
+      prioridade={!pequena}
+    />
+  );
+}
+
+/**
+ * O convite para o episódio seguinte, como a tela do fim de um episódio de
+ * série: a capa do próximo, o título e a primeira linha do que vem.
+ */
+function ProximoEpisodio({
+  href,
+  episodio,
+}: {
+  href: string;
+  episodio: Episodio;
+}) {
+  return (
+    <Link
+      href={href}
+      className="group bg-madeira-900 border-dourado-600/40 flex flex-col overflow-hidden rounded-sm border shadow-[0_10px_28px_-12px_rgba(0,0,0,0.8)] transition-transform sm:flex-row motion-safe:hover:-translate-y-0.5"
+    >
+      <div className="relative aspect-[16/9] w-full shrink-0 overflow-hidden sm:aspect-auto sm:w-48">
+        <Capa episodio={episodio} pequena />
+        <div aria-hidden className="absolute inset-0 bg-black/20" />
+      </div>
+      <div className="flex flex-col justify-center p-4 sm:p-5">
+        <p className="font-titulo text-dourado-400 text-[0.62rem] tracking-[0.25em] uppercase">
+          Próximo episódio
+        </p>
+        <p className="font-brasao text-pergaminho-50 mt-1.5 text-2xl leading-tight">
+          {episodio.meta.numero}. {episodio.meta.titulo}
+        </p>
+        <p className="text-pergaminho-200/90 mt-2 line-clamp-3 text-sm leading-relaxed">
+          {episodio.meta.resumo}
+        </p>
+        <p className="text-dourado-300 mt-3 text-sm group-hover:underline">
+          Continuar lendo →
+        </p>
+      </div>
+    </Link>
   );
 }

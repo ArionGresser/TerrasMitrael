@@ -122,12 +122,15 @@ export function Cartaz({
   );
 }
 
-function Arte({
+/** A arte do cartaz sozinha, sem moldura: também serve de capa larga. */
+export function Arte({
   arte,
   prioridade,
+  sizes = "(max-width: 640px) 50vw, 260px",
 }: {
   arte: ArteDoCartaz;
   prioridade: boolean;
+  sizes?: string;
 }) {
   if (arte.tipo === "imagem") {
     return (
@@ -136,7 +139,7 @@ function Arte({
         alt=""
         fill
         priority={prioridade}
-        sizes="(max-width: 640px) 50vw, 260px"
+        sizes={sizes}
         className="object-cover transition-transform duration-500 motion-safe:group-hover:scale-105"
         style={{ objectPosition: arte.posicao ?? "top" }}
       />
