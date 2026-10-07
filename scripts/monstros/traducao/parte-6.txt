@@ -1,0 +1,323 @@
+=== Medusa
++ Ataques Múltiplos
+A medusa faz dois ataques de Garra e um de Cabelo de Serpentes, ou faz três ataques de Raio Venenoso.
++ Garra
++ Cabelo de Serpentes
++ Raio Venenoso
+_Jogada de Ataque à Distância:_ +5, alcance 45 m. _Acerto:_ 11 (2d8 + 2) de dano de veneno.
++ Olhar Petrificante (Recarga 5–6)
+_Teste de Resistência de Constituição:_ CD 13, cada criatura num Cone de 9 m. Se a medusa vir o próprio reflexo no Cone, ela também precisa fazer este teste. _Primeira Falha:_ O alvo fica com a condição Contido e repete o teste no fim do próximo turno dele se ainda estiver Contido, encerrando o efeito em si mesmo com um sucesso. _Segunda Falha:_ O alvo fica com a condição Petrificado no lugar de Contido.
+
+=== Dust Mephit
++ Explosão Final
+O mefite explode quando morre. _Teste de Resistência de Destreza:_ CD 10, cada criatura numa Emanação de 1,5 m a partir do mefite. _Falha:_ 5 (2d4) de dano contundente. _Sucesso:_ Metade do dano.
++ Garra
++ Sopro Cegante (Recarga 6)
+_Teste de Resistência de Destreza:_ CD 10, cada criatura num Cone de 4,5 m. _Falha:_ O alvo fica com a condição Cego até o fim do próximo turno do mefite.
++ Sono (1/Dia)
+O mefite conjura a magia _Sono_, sem precisar de componentes e usando Carisma como atributo de conjuração (CD de resistência 10).
+
+=== Ice Mephit
++ Explosão Final
+O mefite explode quando morre. _Teste de Resistência de Constituição:_ CD 10, cada criatura numa Emanação de 1,5 m a partir do mefite. _Falha:_ 5 (2d4) de dano de frio. _Sucesso:_ Metade do dano.
++ Garra
++ Névoa Obscurecente (1/Dia)
+O mefite conjura _Névoa Obscurecente_, sem precisar de componentes e usando Carisma como atributo de conjuração.
++ Sopro Gélido (Recarga 6)
+_Teste de Resistência de Constituição:_ CD 10, cada criatura num Cone de 4,5 m. _Falha:_ 7 (3d4) de dano de frio. _Sucesso:_ Metade do dano.
+
+=== Magma Mephit
++ Explosão Final
+O mefite explode quando morre. _Teste de Resistência de Destreza:_ CD 11, cada criatura numa Emanação de 1,5 m a partir do mefite. _Falha:_ 7 (2d6) de dano de fogo. _Sucesso:_ Metade do dano.
++ Garra
++ Sopro de Fogo (Recarga 6)
+_Teste de Resistência de Destreza:_ CD 11, cada criatura num Cone de 4,5 m. _Falha:_ 7 (2d6) de dano de fogo. _Sucesso:_ Metade do dano.
+
+=== Steam Mephit
++ Forma Borrada
+As jogadas de ataque contra o mefite têm Desvantagem, a não ser que ele esteja com a condição Incapacitado.
++ Explosão Final
+O mefite explode quando morre. _Teste de Resistência de Destreza:_ CD 10, cada criatura numa Emanação de 1,5 m a partir do mefite. _Falha:_ 5 (2d4) de dano de fogo. _Sucesso:_ Metade do dano.
++ Garra
++ Sopro de Vapor (Recarga 6)
+_Teste de Resistência de Constituição:_ CD 10, cada criatura num Cone de 4,5 m. _Falha:_ 5 (2d4) de dano de fogo, e o Deslocamento do alvo diminui 3 m até o fim do próximo turno do mefite. _Sucesso:_ Só metade do dano. _Falha ou Sucesso:_ Estar debaixo d'água não dá Resistência a este dano de fogo.
+
+=== Merfolk Skirmisher
++ Anfíbio
+O tritão respira ar e água.
++ Lança Oceânica
+_Jogada de Ataque Corpo a Corpo ou à Distância:_ +2, alcance 1,5 m ou 6/18 m. _Acerto:_ 3 (1d6) de dano perfurante mais 2 (1d4) de dano de frio. Se o alvo for uma criatura, o Deslocamento dele diminui 3 m até o fim do próximo turno dele. _Acerto ou Erro:_ A lança volta magicamente para a mão do tritão logo depois de um ataque à distância.
+
+=== Merrow
++ Anfíbio
+O merrow respira ar e água.
++ Ataques Múltiplos
+O merrow faz dois ataques, com Mordida, Garra ou Arpão, em qualquer combinação.
++ Mordida
+_Jogada de Ataque Corpo a Corpo:_ +6, alcance 1,5 m. _Acerto:_ 6 (1d4 + 4) de dano perfurante, e o alvo fica com a condição Envenenado até o fim do próximo turno do merrow.
++ Garra
++ Arpão
+_Jogada de Ataque Corpo a Corpo ou à Distância:_ +6, alcance 1,5 m ou 6/18 m. _Acerto:_ 11 (2d6 + 4) de dano perfurante. Se o alvo for uma criatura Grande ou menor, o merrow o puxa até 4,5 m em linha reta na direção dele.
+
+=== Mimic
++ Adesivo (só na Forma de Objeto)
+O mímico gruda em tudo o que encosta nele. Uma criatura Enorme ou menor grudada no mímico fica com a condição Agarrado (CD 13 para escapar). Testes de atributo para escapar dessa agarrada têm Desvantagem.
++ Mordida
+_Jogada de Ataque Corpo a Corpo:_ +5 (com Vantagem se o alvo estiver Agarrado pelo mímico), alcance 1,5 m. _Acerto:_ 7 (1d8 + 3) de dano perfurante, ou 12 (2d8 + 3) de dano perfurante se o alvo estiver Agarrado pelo mímico, mais 4 (1d8) de dano ácido.
++ Pseudópode
+_Jogada de Ataque Corpo a Corpo:_ +5, alcance 1,5 m. _Acerto:_ 7 (1d8 + 3) de dano contundente mais 4 (1d8) de dano ácido. Se o alvo for uma criatura Grande ou menor, fica com a condição Agarrado (CD 13 para escapar). Testes de atributo para escapar dessa agarrada têm Desvantagem.
++ Mudar de Forma
+O mímico muda de forma para parecer um objeto Médio ou Pequeno, mantendo as estatísticas de jogo, ou volta à verdadeira forma de massa amorfa. O equipamento que ele veste ou carrega não se transforma.
+
+=== Minotaur of Baphomet
++ Glaive Abissal
++ Chifrada (Recarga 5–6)
+_Jogada de Ataque Corpo a Corpo:_ +6, alcance 1,5 m. _Acerto:_ 18 (4d6 + 4) de dano perfurante. Se o alvo for uma criatura Grande ou menor e o minotauro tiver se movido 3 m ou mais em linha reta na direção dele logo antes do acerto, o alvo sofre 10 (3d6) de dano perfurante extra e fica com a condição Caído.
+
+=== Mummy
++ Ataques Múltiplos
+A múmia faz dois ataques de Punho Apodrecido e usa Olhar Pavoroso.
++ Punho Apodrecido
+_Jogada de Ataque Corpo a Corpo:_ +5, alcance 1,5 m. _Acerto:_ 8 (1d10 + 3) de dano contundente mais 10 (3d6) de dano necrótico. Se o alvo for uma criatura, fica amaldiçoado. Amaldiçoado, o alvo não pode recuperar Pontos de Vida, o máximo de Pontos de Vida dele não volta ao normal ao terminar um Descanso Longo, e esse máximo diminui 10 (3d6) a cada 24 horas que passam. Uma criatura reduzida a 0 Pontos de Vida por este ataque morre e vira pó.
++ Olhar Pavoroso
+_Teste de Resistência de Sabedoria:_ CD 11, uma criatura que a múmia consiga ver a até 18 m. _Falha:_ O alvo fica com a condição Amedrontado até o fim do próximo turno da múmia. _Sucesso:_ O alvo fica imune ao Olhar Pavoroso desta múmia por 24 horas.
+
+=== Mummy Lord
++ Resistência Lendária (3/Dia, ou 4/Dia no Covil)
+Se a múmia falhar num teste de resistência, pode escolher ser bem-sucedida.
++ Resistência à Magia
+A múmia tem Vantagem nos testes de resistência contra magias e outros efeitos mágicos.
++ Restauração Morta-Viva
+Se for destruída, a múmia ganha um corpo novo em 24 horas, desde que o coração dela esteja intacto, e revive com todos os Pontos de Vida. O corpo novo aparece num espaço desocupado dentro do covil dela. O coração é um objeto Miúdo com CA 17, 10 PV e Imunidade a todo dano, menos o de fogo.
++ Ataques Múltiplos
+A múmia faz um ataque de Punho Apodrecido ou de Canalizar Energia Negativa e usa Olhar Pavoroso.
++ Punho Apodrecido
+_Jogada de Ataque Corpo a Corpo:_ +9, alcance 1,5 m. _Acerto:_ 15 (2d10 + 4) de dano contundente mais 10 (3d6) de dano necrótico. Se o alvo for uma criatura, fica amaldiçoado. Amaldiçoado, o alvo não pode recuperar Pontos de Vida, não recebe benefício ao terminar um Descanso Longo, e o máximo de Pontos de Vida dele diminui 10 (3d6) a cada 24 horas que passam. Uma criatura reduzida a 0 Pontos de Vida por este ataque morre e vira pó.
++ Canalizar Energia Negativa
+_Jogada de Ataque à Distância:_ +9, alcance 18 m. _Acerto:_ 25 (6d6 + 4) de dano necrótico.
++ Olhar Pavoroso
+_Teste de Resistência de Sabedoria:_ CD 17, uma criatura que a múmia consiga ver a até 18 m. _Falha:_ 25 (6d6 + 4) de dano psíquico, e o alvo fica com a condição Paralisado até o fim do próximo turno da múmia.
++ Conjuração
+A múmia conjura uma das magias a seguir, sem precisar de componentes Materiais e usando Sabedoria como atributo de conjuração (CD de resistência 17, +9 para acertar com ataques mágicos):
+
+**À vontade:** _Dissipar Magia_, _Taumaturgia_
+
+**1/Dia cada:** _Animar os Mortos_, _Ferir_, _Praga de Insetos_ (versão de 7º círculo)
++ Redemoinho de Areia
+_Gatilho:_ A múmia é atingida por uma jogada de ataque. _Resposta:_ A múmia soma 2 à CA contra o ataque, o que pode fazê-lo errar, e se teletransporta até 18 m para um espaço desocupado que consiga ver. Cada criatura à escolha dela que ela consiga ver a até 1,5 m do espaço de destino fica com a condição Cego até o fim do próximo turno da múmia.
++ :intro
+_Usos de Ação Lendária: 3 (4 no Covil). Logo depois do turno de outra criatura, a múmia pode gastar um uso para fazer uma das ações a seguir. Ela recupera todos os usos gastos no início de cada turno seu._
++ Comando Pavoroso
+A múmia conjura _Comando_ (versão de 2º círculo), usando o mesmo atributo de conjuração de Conjuração. Ela só pode usar esta ação de novo no início do próximo turno dela.
++ Olhar
+A múmia usa Olhar Pavoroso. Ela só pode usar esta ação de novo no início do próximo turno dela.
++ Golpe Necrótico
+A múmia faz um ataque de Punho Apodrecido ou de Canalizar Energia Negativa.
+
+=== Nalfeshnee
++ Restauração Demoníaca
+Se o nalfeshnee morrer fora do Abismo, o corpo se desfaz em icor, e ele ganha um corpo novo na hora, revivendo com todos os Pontos de Vida em algum lugar do Abismo.
++ Resistência à Magia
+O nalfeshnee tem Vantagem nos testes de resistência contra magias e outros efeitos mágicos.
++ Ataques Múltiplos
+O nalfeshnee faz três ataques de Dilacerar.
++ Dilacerar
++ Teletransporte
+O nalfeshnee se teletransporta até 36 m para um espaço desocupado que consiga ver.
++ Auréola de Horror (Recarga 5–6)
+_Teste de Resistência de Sabedoria:_ CD 15, cada criatura numa Emanação de 4,5 m a partir do nalfeshnee. _Falha:_ 28 (8d6) de dano psíquico, e o alvo fica com a condição Amedrontado por 1 minuto, até sofrer dano ou até terminar o turno sem linha de visão para o nalfeshnee. _Sucesso:_ O alvo fica imune à Auréola de Horror deste nalfeshnee por 24 horas.
++ Perseguição
+_Gatilho:_ Outra criatura que o nalfeshnee consiga ver termina o movimento a até 36 m dele. _Resposta:_ O nalfeshnee usa Teletransporte, mas o espaço de destino precisa estar a até 3 m da criatura que provocou a reação.
+
+=== Night Hag
++ Magia do Conciliábulo
+Enquanto estiver a até 9 m de pelo menos duas bruxas aliadas, a bruxa pode conjurar uma das magias a seguir, sem precisar de componentes Materiais, com o tempo de conjuração normal da magia e usando Inteligência como atributo de conjuração (CD de resistência 14): _Augúrio_, _Encontrar Familiar_, _Identificação_, _Localizar Objeto_, _Vidência_ ou _Servo Invisível_. A bruxa precisa terminar um Descanso Longo antes de usar este traço para conjurar a mesma magia de novo.
++ Resistência à Magia
+A bruxa tem Vantagem nos testes de resistência contra magias e outros efeitos mágicos.
++ Saco de Almas
+A bruxa tem um saco de almas. Enquanto o segura ou carrega, ela pode usar a ação Assombração de Pesadelo.
+
+O saco tem CA 15, 20 PV e Resistência a todo dano. Ele vira pó se cair a 0 Pontos de Vida. Se for destruído, as almas guardadas nele são libertadas. A bruxa pode criar um saco novo depois de 7 dias.
++ Ataques Múltiplos
+A bruxa faz dois ataques de Garra.
++ Garra
++ Assombração de Pesadelo (1/Dia; Exige o Saco de Almas)
+Enquanto estiver no Plano Etéreo, a bruxa conjura _Sonho_, usando o mesmo atributo de conjuração de Conjuração. Só a bruxa pode ser a mensageira da magia, e o alvo precisa ser uma criatura que ela consiga ver no Plano Material. A magia falha e é desperdiçada se o alvo estiver sob o efeito de _Proteção contra o Bem e o Mal_ ou dentro de um _Círculo Mágico_.
+
+Se o alvo sofrer dano da magia _Sonho_, o máximo de Pontos de Vida dele diminui numa quantidade igual a esse dano. Se a magia matar o alvo, a alma dele fica presa no saco de almas da bruxa, e ele não pode ser trazido de volta dos mortos até a alma ser libertada.
++ Conjuração
+A bruxa conjura uma das magias a seguir, sem precisar de componentes Materiais e usando Inteligência como atributo de conjuração (CD de resistência 14):
+
+**À vontade:** _Detectar Magia_, _Forma Etérea_, _Mísseis Mágicos_ (versão de 4º círculo)
+
+**2/Dia cada:** _Assassino Fantasmagórico_, _Viagem Planar_ (só em si mesma)
++ Mudar de Forma
+A bruxa muda de forma para um Humanoide Pequeno ou Médio, ou volta à forma verdadeira. Fora o tamanho, as estatísticas de jogo dela são as mesmas em todas as formas. O equipamento que ela veste ou carrega não se transforma.
+
+=== Nightmare
++ Conceder Resistência ao Fogo
+O pesadelo pode dar Resistência a dano de fogo a quem o estiver montando.
++ Iluminação
+O pesadelo emite Luz Plena num raio de 3 m e Penumbra por mais 3 m.
++ Cascos
++ Passada Etérea
+O pesadelo e até três criaturas dispostas a até 1,5 m dele se teletransportam do Plano Material para o Plano Etéreo ou vice-versa.
+
+=== Noble
++ Rapieira
++ Aparar
+_Gatilho:_ O nobre é atingido por uma jogada de ataque corpo a corpo enquanto segura uma arma. _Resposta:_ O nobre soma 2 à CA contra esse ataque, o que pode fazê-lo errar.
+
+=== Ochre Jelly
++ Amorfa
+A geleia passa por frestas de até 2,5 centímetros sem gastar movimento extra.
++ Patas de Aranha
+A geleia escala superfícies difíceis, inclusive pelo teto, sem precisar fazer teste de atributo.
++ Pseudópode
++ Divisão
+_Gatilho:_ Enquanto for Grande ou Média e tiver 10 Pontos de Vida ou mais, a geleia fica Sangrando ou sofre dano elétrico ou cortante. _Resposta:_ A geleia se divide em duas novas **Geleias Ocres**. Cada geleia nova é uma categoria de tamanho menor que a original e age na Iniciativa dela. Os Pontos de Vida da geleia original são divididos igualmente entre as novas (arredondados para baixo).
+
+=== Ogre
++ Clava Grande
++ Azagaia
+
+=== Oni
++ Regeneração
+O oni recupera 10 Pontos de Vida no início de cada turno dele se tiver pelo menos 1 Ponto de Vida.
++ Ataques Múltiplos
+O oni faz dois ataques de Garra ou de Raio de Pesadelo. Ele pode trocar um ataque por um uso de Conjuração.
++ Garra
++ Raio de Pesadelo
+_Jogada de Ataque à Distância:_ +5, alcance 18 m. _Acerto:_ 9 (2d6 + 2) de dano psíquico, e o alvo fica com a condição Amedrontado até o início do próximo turno do oni.
++ Mudar de Forma
+O oni muda de forma para um Humanoide Pequeno ou Médio ou para um Gigante Grande, ou volta à forma verdadeira. Fora o tamanho, as estatísticas de jogo dele são as mesmas em todas as formas. O equipamento que ele veste ou carrega não se transforma.
++ Conjuração
+O oni conjura uma das magias a seguir, sem precisar de componentes Materiais e usando Carisma como atributo de conjuração (CD de resistência 13):
+
+**1/Dia cada:** _Enfeitiçar Pessoa_ (versão de 2º círculo), _Escuridão_, _Forma Gasosa_, _Sono_
++ Invisibilidade
+O oni conjura _Invisibilidade_ em si mesmo, sem precisar de componentes e usando o mesmo atributo de conjuração de Conjuração.
+
+=== Otyugh
++ Ataques Múltiplos
+O otyugh faz um ataque de Mordida e dois de Tentáculo.
++ Mordida
+_Jogada de Ataque Corpo a Corpo:_ +6, alcance 1,5 m. _Acerto:_ 12 (2d8 + 3) de dano perfurante, e o alvo fica com a condição Envenenado. Sempre que o alvo Envenenado terminar um Descanso Longo, ele sofre o efeito a seguir. _Teste de Resistência de Constituição:_ CD 15. _Falha:_ O máximo de Pontos de Vida do alvo diminui 5 (1d10) e só volta ao normal quando a condição Envenenado acabar. _Sucesso:_ A condição Envenenado acaba.
++ Tentáculo
+_Jogada de Ataque Corpo a Corpo:_ +6, alcance 3 m. _Acerto:_ 12 (2d8 + 3) de dano perfurante. Se o alvo for uma criatura Média ou menor, fica com a condição Agarrado (CD 13 para escapar) por um dos dois tentáculos.
++ Pancada de Tentáculos
+_Teste de Resistência de Constituição:_ CD 14, cada criatura Agarrada pelo otyugh. _Falha:_ 16 (3d8 + 3) de dano contundente, e o alvo fica com a condição Atordoado até o início do próximo turno do otyugh. _Sucesso:_ Só metade do dano.
+
+=== Owlbear
++ Ataques Múltiplos
+O urso-coruja faz dois ataques de Dilacerar.
++ Dilacerar
+
+=== Pegasus
++ Cascos
+
+=== Phase Spider
++ Visão Etérea
+A aranha enxerga até 18 m dentro do Plano Etéreo quando está no Plano Material, e vice-versa.
++ Patas de Aranha
+A aranha escala superfícies difíceis, inclusive pelo teto, sem precisar fazer teste de atributo.
++ Andarilha das Teias
+A aranha ignora restrições de movimento causadas por teias e sabe onde está qualquer outra criatura em contato com a mesma teia.
++ Ataques Múltiplos
+A aranha faz dois ataques de Mordida.
++ Mordida
+_Jogada de Ataque Corpo a Corpo:_ +5, alcance 1,5 m. _Acerto:_ 8 (1d10 + 3) de dano perfurante mais 9 (2d8) de dano de veneno. Se esse dano reduzir o alvo a 0 Pontos de Vida, ele fica Estável e com a condição Envenenado por 1 hora. Envenenado, o alvo também fica com a condição Paralisado.
++ Salto Etéreo
+A aranha se teletransporta do Plano Material para o Plano Etéreo ou vice-versa.
+
+=== Pirate
++ Ataques Múltiplos
+O pirata faz dois ataques de Adaga. Ele pode trocar um ataque por um uso de Charme Cativante.
++ Adaga
++ Charme Cativante
+_Teste de Resistência de Sabedoria:_ CD 12, uma criatura que o pirata consiga ver a até 9 m. _Falha:_ O alvo fica com a condição Enfeitiçado até o início do próximo turno do pirata.
+
+=== Pirate Captain
++ Ataques Múltiplos
+O pirata faz três ataques, com Rapieira ou Pistola, em qualquer combinação.
++ Rapieira
+_Jogada de Ataque Corpo a Corpo:_ +7, alcance 1,5 m. _Acerto:_ 13 (2d8 + 4) de dano perfurante, e o pirata tem Vantagem na próxima jogada de ataque que fizer antes do fim deste turno.
++ Pistola
++ Charme do Capitão
+_Teste de Resistência de Sabedoria:_ CD 14, uma criatura que o pirata consiga ver a até 9 m. _Falha:_ O alvo fica com a condição Enfeitiçado até o início do próximo turno do pirata.
++ Contra-Ataque
+_Gatilho:_ O pirata é atingido por uma jogada de ataque corpo a corpo enquanto segura uma arma. _Resposta:_ O pirata soma 3 à CA contra esse ataque, o que pode fazê-lo errar. Se o ataque errar, o pirata faz um ataque de Rapieira contra a criatura que o provocou, se ela estiver ao alcance.
+
+=== Pit Fiend
++ Restauração Diabólica
+Se o diabo do fosso morrer fora dos Nove Infernos, o corpo some numa fumaça sulfurosa, e ele ganha um corpo novo na hora, revivendo com todos os Pontos de Vida em algum lugar dos Nove Infernos.
++ Aura de Medo
+O diabo do fosso emana uma aura numa Emanação de 6 m, desde que não esteja com a condição Incapacitado. _Teste de Resistência de Sabedoria:_ CD 21, qualquer inimigo que comece o turno na aura. _Falha:_ O alvo fica com a condição Amedrontado até o início do próximo turno dele. _Sucesso:_ O alvo fica imune à aura deste diabo do fosso por 24 horas.
++ Resistência Lendária (4/Dia)
+Se o diabo do fosso falhar num teste de resistência, pode escolher ser bem-sucedido.
++ Resistência à Magia
+O diabo do fosso tem Vantagem nos testes de resistência contra magias e outros efeitos mágicos.
++ Ataques Múltiplos
+O diabo do fosso faz um ataque de Mordida, dois de Garra Diabólica e um de Maça Ardente.
++ Mordida
+_Jogada de Ataque Corpo a Corpo:_ +14, alcance 3 m. _Acerto:_ 18 (3d6 + 8) de dano perfurante. Se o alvo for uma criatura, precisa fazer o teste de resistência a seguir. _Teste de Resistência de Constituição:_ CD 21. _Falha:_ O alvo fica com a condição Envenenado. Envenenado, não pode recuperar Pontos de Vida, sofre 21 (6d6) de dano de veneno no início de cada turno dele e repete o teste no fim de cada turno dele, encerrando o efeito em si mesmo com um sucesso. Depois de 1 minuto, ele é bem-sucedido automaticamente.
++ Garra Diabólica
++ Maça Ardente
++ Conjuração do Fogo Infernal (Recarga 4–6)
+O diabo do fosso conjura _Bola de Fogo_ (versão de 5º círculo) duas vezes, sem precisar de componentes Materiais e usando Carisma como atributo de conjuração (CD de resistência 21). Ele pode trocar uma _Bola de Fogo_ por _Imobilizar Monstro_ (versão de 7º círculo) ou _Muralha de Fogo_.
+
+=== Planetar
++ Percepção Divina
+O planetar sabe quando ouve uma mentira.
++ Restauração Exaltada
+Se o planetar morrer fora do Monte Celéstia, o corpo some, e ele ganha um corpo novo na hora, revivendo com todos os Pontos de Vida em algum lugar do Monte Celéstia.
++ Resistência à Magia
+O planetar tem Vantagem nos testes de resistência contra magias e outros efeitos mágicos.
++ Ataques Múltiplos
+O planetar faz três ataques de Espada Radiante ou usa Explosão Sagrada duas vezes.
++ Espada Radiante
++ Explosão Sagrada
+_Teste de Resistência de Destreza:_ CD 20, cada inimigo numa Esfera de 6 m de raio centrada num ponto que o planetar consiga ver a até 36 m. _Falha:_ 24 (7d6) de dano radiante. _Sucesso:_ Metade do dano.
++ Conjuração
+O planetar conjura uma das magias a seguir, sem precisar de componentes Materiais e usando Carisma como atributo de conjuração (CD de resistência 20):
+
+**À vontade:** _Detectar o Bem e o Mal_
+
+**1/Dia cada:** _Comunhão_, _Controlar o Clima_, _Dissipar o Bem e o Mal_, _Reviver os Mortos_
++ Auxílio Divino (2/Dia)
+O planetar conjura _Curar Ferimentos_, _Invisibilidade_, _Restauração Menor_ ou _Remover Maldição_, usando o mesmo atributo de conjuração de Conjuração.
+
+=== Priest Acolyte
++ Maça
++ Chama Radiante
+_Jogada de Ataque à Distância:_ +4, alcance 18 m. _Acerto:_ 7 (2d6) de dano radiante.
++ Conjuração
+O sacerdote conjura uma das magias a seguir, usando Sabedoria como atributo de conjuração:
+
+**À vontade:** _Luz_, _Taumaturgia_
++ Auxílio Divino (1/Dia)
+O sacerdote conjura _Bênção_, _Palavra Curativa_ ou _Santuário_, usando o mesmo atributo de conjuração de Conjuração.
+
+=== Priest
++ Ataques Múltiplos
+O sacerdote faz dois ataques, com Maça ou Chama Radiante, em qualquer combinação.
++ Maça
++ Chama Radiante
+_Jogada de Ataque à Distância:_ +5, alcance 18 m. _Acerto:_ 11 (2d10) de dano radiante.
++ Conjuração
+O sacerdote conjura uma das magias a seguir, usando Sabedoria como atributo de conjuração (CD de resistência 13):
+
+**À vontade:** _Luz_, _Taumaturgia_
+
+**1/Dia:** _Espíritos Guardiões_
++ Auxílio Divino (3/Dia)
+O sacerdote conjura _Bênção_, _Dissipar Magia_, _Palavra Curativa_ ou _Restauração Menor_, usando o mesmo atributo de conjuração de Conjuração.
+
+=== Pseudodragon
++ Resistência à Magia
+O pseudodragão tem Vantagem nos testes de resistência contra magias e outros efeitos mágicos.
++ Ataques Múltiplos
+O pseudodragão faz dois ataques de Mordida.
++ Mordida
++ Ferrão
+_Teste de Resistência de Constituição:_ CD 12, uma criatura que o pseudodragão consiga ver a até 1,5 m. _Falha:_ 5 (2d4) de dano de veneno, e o alvo fica com a condição Envenenado por 1 hora. _Falha por 5 ou Mais:_ Envenenado, o alvo também fica com a condição Inconsciente, que acaba antes se ele sofrer dano ou se uma criatura a até 1,5 m dele usar uma ação para acordá-lo.
