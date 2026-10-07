@@ -1,0 +1,342 @@
+# Palavras-chave visuais de cada magia, em inglês (as IAs de imagem entendem
+# melhor). Formato: Nome em inglês | o que desenhar. O gerador junta isto com
+# o estilo base e escreve LISTA-DE-ARTES.md e lista-de-artes.csv.
+Acid Splash | bubble of green acid bursting, corrosive droplets splashing, smoking hiss
+Chill Touch | ghostly skeletal hand of pale blue frost reaching out, necrotic mist
+Dancing Lights | four floating orbs of warm light dancing in the dark
+Druidcraft | small nature magic, budding flower blooming in a palm, falling leaves, tiny weather swirl
+Eldritch Blast | crackling beam of violet eldritch energy, otherworldly sigils
+Elementalism | four small swirls of fire, water, earth and air orbiting a hand
+Fire Bolt | streak of fire hurled from a fingertip, ember trail
+Guidance | divine glowing hand resting on a shoulder, soft golden light
+Light | object glowing with bright warm light, torch-like radiance
+Mage Hand | spectral floating hand lifting a key
+Mending | broken pottery pieces knitting back together with golden seams
+Message | whisper traveling as a glowing ribbon between two ears
+Minor Illusion | illusory crate fading at the edges, shimmering image
+Poison Spray | puff of toxic green mist sprayed from a palm
+Prestidigitation | small magic trick, sparks, a candle lighting itself, cleaned cloth
+Produce Flame | small flame dancing in an open palm
+Ray of Frost | frigid pale blue beam, ice crystals forming
+Resistance | small glowing shield sigil over a cloak, protective shimmer
+Sacred Flame | radiant pillar of holy flame falling from above
+Shillelagh | wooden club wreathed in green nature magic, glowing grain
+Shocking Grasp | hand crackling with lightning, electric arcs
+Sorcerous Burst | burst of raw chaotic sorcery, multicolored sparks
+Spare the Dying | gentle glowing hand over a fallen warrior, stabilizing light
+Starry Wisp | tiny mote of starlight shooting like a comet
+Thaumaturgy | booming voice, flickering flames, trembling ground, eyes glowing
+True Strike | glowing eye of insight over a weapon, golden aim line
+Vicious Mockery | mocking jester mask, cutting words as purple wisps
+Alarm | spectral bell over a doorway, ward rune glowing
+Animal Friendship | gentle hand reaching to a wild wolf, calm green aura
+Bane | dark sigil weakening, chains of shadow, cursed aura
+Bless | three glowing holy symbols blessing warriors, golden light
+Burning Hands | thin sheet of flames fanning from spread hands
+Charm Person | enchanting gaze, pink spiral, captivated face
+Chromatic Orb | orb shifting between fire, ice, lightning, acid colors
+Color Spray | dazzling burst of rainbow light from a hand
+Command | single shouted word of power, authoritative glowing rune
+Comprehend Languages | ancient scroll with runes translating into light
+Create or Destroy Water | water pouring from nowhere into a jug, rain drops
+Cure Wounds | glowing hand healing a wound, green-gold light
+Detect Evil and Good | glowing eyes sensing celestial and fiendish auras
+Detect Magic | glowing eye seeing magical auras around items
+Detect Poison and Disease | eye revealing green toxic auras over food
+Disguise Self | face changing like a mask, shimmering illusion
+Dissonant Whispers | twisted whispers as dark sound waves into an ear
+Divine Favor | weapon glowing with radiant divine energy
+Divine Smite | sword strike exploding with radiant holy light
+Ensnaring Strike | thorny vines sprouting from a weapon to entangle
+Entangle | grasping roots and vines bursting from the ground
+Expeditious Retreat | blurred running figure, speed lines, wind trail
+Faerie Fire | creatures outlined in glowing blue and violet fey light
+False Life | dark necrotic vitality filling a body, pale green aura
+Feather Fall | person falling slowly like a feather, floating feathers
+Find Familiar | small spirit animal (owl, cat, raven) appearing in a summoning circle
+Floating Disk | floating circular disk of force carrying chests
+Fog Cloud | thick sphere of grey fog
+Goodberry | handful of glowing magical berries
+Grease | slick puddle of grease, a figure slipping
+Guiding Bolt | flash of radiant light streaking toward a target
+Healing Word | spoken word of healing as golden letters
+Hellish Rebuke | hellish flames engulfing an attacker, fiendish
+Heroism | heroic glowing aura, courageous warrior, banner of light
+Hex | witch's curse sigil over a target, green-violet hex mark
+Hideous Laughter | creature collapsed laughing uncontrollably, comic mask
+Hunter's Mark | glowing hunter's sigil marking prey, crosshair of light
+Ice Knife | dagger of ice shattering into shards
+Identify | magnifying light revealing secrets of a magic ring
+Illusory Script | magical script shifting on parchment, secret runes
+Inflict Wounds | hand of necrotic energy draining life
+Jump | figure leaping high into the air, wind swirl at feet
+Longstrider | boots with glowing magic stride, long footsteps
+Mage Armor | translucent blue arcane armor around a robed figure
+Magic Missile | three glowing darts of force streaking forward
+Protection from Evil and Good | protective rune circle repelling demon and angel
+Purify Food and Drink | goblet of water purified by sparkling light
+Ray of Sickness | sickly green ray of poison
+Sanctuary | protective bubble of soft light around a cleric
+Searing Smite | weapon blazing with searing fire on impact
+Shield | sudden invisible barrier of force blocking an arrow
+Shield of Faith | shimmering holy shield sigil around an ally
+Silent Image | silent illusory image of a dragon shimmering
+Sleep | drowsy figures falling asleep, sparkling sand, crescent moon
+Speak with Animals | person talking with a fox and a bird, speech glow
+Thunderwave | wave of thunderous force blasting outward
+Unseen Servant | invisible servant carrying a tray, floating objects
+Aid | ally standing bolstered, golden vitality aura
+Alter Self | body transforming, gills, claws, shifting features
+Arcane Lock | door sealed by a glowing arcane lock rune
+Arcanist's Magic Aura | false magical aura disguising an item
+Augury | casting omen stones and tarot, weal and woe glyphs
+Barkskin | skin turning into tree bark armor
+Blindness/Deafness | eye and ear covered in shadow, sense blocked
+Blur | figure's outline blurred and wavering
+Calm Emotions | soothing blue aura calming an angry crowd
+Continual Flame | eternal flame burning without heat in a sconce
+Darkness | sphere of magical darkness swallowing light
+Darkvision | glowing eyes seeing in the dark, grey-green vision
+Detect Thoughts | glowing third eye reading another's thoughts
+Enhance Ability | glowing animal spirits (bull, cat, bear, eagle, fox, owl) empowering
+Enlarge/Reduce | figure growing giant and shrinking tiny side by side
+Enthrall | captivating orator, entranced listeners
+Find Steed | spectral warhorse summoned in light
+Find Traps | glowing outline revealing a hidden trap
+Flame Blade | scimitar of pure fire in a druid's hand
+Flaming Sphere | rolling ball of fire
+Gentle Repose | preserved body with protective light, frozen time
+Gust of Wind | strong line of wind blowing creatures back
+Heat Metal | glowing red-hot metal armor
+Hold Person | person frozen mid-step by glowing chains of paralysis
+Invisibility | figure fading into invisibility, translucent silhouette
+Knock | locked door bursting open with a loud knock
+Lesser Restoration | gentle light cleansing poison from a body
+Levitate | figure floating in the air
+Locate Animals or Plants | glowing trail leading to a rare flower and a deer
+Locate Object | glowing thread pointing to a lost object
+Magic Mouth | magical mouth appearing on a wall, speaking
+Magic Weapon | ordinary sword glowing with arcane runes
+Mirror Image | three illusory duplicates of a mage
+Misty Step | silvery mist teleport, figure vanishing and reappearing
+Moonbeam | silver beam of moonlight from the sky
+Pass without Trace | shadowy footprints vanishing, stealthy party in forest
+Phantasmal Force | terrifying phantasm only one mind can see
+Prayer of Healing | priest praying, healing light spreading to allies
+Protection from Poison | protective aura neutralizing green poison
+Ray of Enfeeblement | black ray draining strength from a warrior
+Rope Trick | rope rising into the air to a hidden portal
+Scorching Ray | three rays of fire
+See Invisibility | eye revealing an invisible creature's outline
+Shatter | glass and stone shattering from a sonic burst
+Silence | sphere of absolute silence, muted sound waves
+Spider Climb | person walking on a wall like a spider
+Spike Growth | ground covered in sharp hidden thorns
+Spiritual Weapon | floating spectral weapon of faith
+Suggestion | hypnotic suggestion, spiral eyes, whispered command
+Warding Bond | glowing bond linking two allies, shared protection
+Web | thick sticky spider webs filling a corridor
+Zone of Truth | circle of truth light, honest faces
+Animate Dead | skeletons rising from graves, necromantic green light
+Beacon of Hope | radiant beacon of hope over allies
+Bestow Curse | dark curse sigil branded onto a victim
+Blink | figure flickering between planes, ethereal shimmer
+Call Lightning | storm cloud calling a lightning bolt down
+Clairvoyance | floating invisible sensor eye watching a distant room
+Conjure Animals | spectral pack of wolves summoned
+Counterspell | spell unraveling into broken runes, mage blocking
+Create Food and Water | bountiful table of bread and water appearing
+Daylight | sphere of bright daylight in darkness
+Dispel Magic | magical runes dissolving into sparks
+Fear | terrified figure fleeing a looming horrific shadow
+Fireball | bead of fire blossoming into a huge explosion
+Fly | figure flying through the sky
+Gaseous Form | body turning into misty vapor
+Glyph of Warding | glowing protective glyph inscribed on a floor
+Haste | figure moving at blinding speed, speed lines
+Hypnotic Pattern | twisting rainbow hypnotic pattern in the air
+Lightning Bolt | line of lightning blasting forward
+Magic Circle | inscribed magic circle trapping a demon
+Major Image | grand illusion of a castle, shimmering
+Mass Healing Word | words of healing radiating to many allies
+Meld into Stone | person merging into a stone wall
+Nondetection | figure hidden from a scrying eye, veil
+Phantom Steed | ghostly quasi-real horse galloping
+Plant Growth | overgrown thick vegetation, fertile fields
+Protection from Energy | shield of resistance against fire, cold, lightning
+Remove Curse | curse chains breaking with holy light
+Revivify | fallen hero revived by a diamond's light
+Sending | message sent across distance as a beam of light
+Sleet Storm | freezing sleet storm, icy ground
+Slow | figures moving in slow motion, hourglass sigil
+Speak with Dead | corpse answering questions, ghostly mouth
+Speak with Plants | person talking to an ancient tree with a face
+Spirit Guardians | spectral angelic spirits circling a cleric
+Stinking Cloud | sickly yellow-green cloud of nauseating gas
+Tongues | magical tongue speaking all languages, script glyphs
+Vampiric Touch | shadowy hand draining life energy
+Water Breathing | adventurer breathing underwater with bubbles
+Water Walk | figure walking on water surface
+Wind Wall | wall of strong wind blowing arrows away
+Arcane Eye | floating invisible magical eye scouting
+Aura of Life | radiant aura of life protecting allies
+Banishment | creature banished through a planar rift
+Black Tentacles | writhing black tentacles erupting from the ground
+Blight | withering plant and creature, necrotic decay
+Compulsion | compelled figures moving against their will
+Confusion | confused figures, swirling chaotic sigils over heads
+Conjure Minor Elementals | small elemental spirits swirling around a caster
+Conjure Woodland Beings | fey woodland spirits dancing around a druid
+Control Water | water parting and rising in a whirlpool
+Death Ward | protective ward against death, glowing ankh
+Dimension Door | glowing door portal opening in the air
+Divination | divine oracle vision, glowing eye of a god
+Dominate Beast | beast with glowing eyes under mental control
+Fabricate | raw materials transforming into crafted items
+Faithful Hound | spectral guard dog of force
+Fire Shield | warm flames or chilling ice shield wrapping a body
+Freedom of Movement | figure slipping free from chains and vines
+Giant Insect | giant spider, scorpion and wasp
+Greater Invisibility | warrior fully invisible while attacking
+Guardian of Faith | large spectral guardian holding a sword
+Hallucinatory Terrain | illusory terrain, swamp disguised as meadow
+Ice Storm | hail of ice chunks raining down
+Locate Creature | glowing trail leading to a hidden creature
+Phantasmal Killer | nightmare creature formed from fear
+Polymorph | creature transforming into a beast, swirling magic
+Private Sanctum | warded room sealed by magical barriers
+Resilient Sphere | shimmering sphere of force enclosing a creature
+Secret Chest | chest vanishing into the Ethereal Plane
+Stone Shape | stone reshaping like clay in hands
+Stoneskin | skin hardening into grey stone
+Wall of Fire | towering wall of flames
+Animate Objects | swords, books and chairs animated, flying
+Antilife Shell | shimmering barrier repelling living creatures
+Arcane Hand | huge glowing hand of force
+Awaken | tree awakening with a face and eyes
+Cloudkill | creeping poisonous green-yellow cloud
+Commune | priest communing with a divine figure in light
+Commune with Nature | druid becoming one with the forest, spirit roots
+Cone of Cold | cone of freezing frost blast
+Conjure Elemental | huge elemental summoned from fire, water, earth, air
+Contact Other Plane | mind contacting a cosmic entity, alien eyes
+Contagion | magical disease spreading, sickly green plague
+Creation | object forming from shadow material
+Dispel Evil and Good | warding off a demon with holy light
+Dominate Person | person controlled by a puppeteer's glowing strings
+Dream | figure entering another's dream, dreamscape
+Flame Strike | vertical column of divine fire from the heavens
+Geas | magical oath binding a person with chains of light
+Greater Restoration | powerful restoration light removing curses
+Hallow | consecrated ground glowing with holy symbols
+Hold Monster | monster frozen by glowing chains
+Insect Plague | swarm of biting locusts
+Legend Lore | ancient legends unfolding from a glowing tome
+Mass Cure Wounds | wave of healing light over many wounded allies
+Mislead | invisible caster with an illusory double
+Modify Memory | memories altered, fragmented images over a head
+Passwall | passage opening through a stone wall
+Planar Binding | extraplanar being bound in a circle
+Raise Dead | dead hero raised from a coffin
+Reincarnate | soul reborn into a new body, cycle of life
+Scrying | crystal ball showing a distant person
+Seeming | many faces changed by illusion at once
+Telekinesis | rock lifted by telekinetic force
+Telepathic Bond | glowing mental links connecting several minds
+Teleportation Circle | glowing teleportation circle with runes
+Tree Stride | figure stepping into a tree and out of another
+Wall of Force | invisible wall of force, glimmering edges
+Wall of Stone | massive stone wall rising from the ground
+Blade Barrier | wall of whirling razor-sharp blades
+Chain Lightning | lightning bolt chaining between many targets
+Circle of Death | sphere of negative energy spreading death
+Contingency | spell held in a gemstone, triggered condition
+Create Undead | ghouls and wights created at night
+Disintegrate | thin green ray turning a target to dust
+Eyebite | glowing black eyes of a warlock, terrifying gaze
+Find the Path | glowing path through a labyrinth
+Flesh to Stone | person slowly turning to stone
+Forbiddance | sacred land forbidding teleport, warded borders
+Globe of Invulnerability | shimmering globe blocking spells
+Guards and Wards | fortress warded with magical defenses, fog, locked doors
+Harm | dark necrotic wave harming a creature
+Heal | powerful healing light restoring a warrior
+Heroes' Feast | magnificent magical feast for heroes
+Instant Summons | object appearing in a hand from a sapphire
+Irresistible Dance | figure dancing uncontrollably
+Magic Jar | soul trapped in a gem container
+Mass Suggestion | crowd influenced by hypnotic suggestion
+Move Earth | earth moving, hills reshaping
+Planar Ally | otherworldly ally answering a call
+Programmed Illusion | illusion triggered by a condition, actor
+Sunbeam | blinding beam of sunlight
+Transport via Plants | stepping through one tree to another far away
+True Seeing | eyes seeing true forms, invisible revealed
+Wall of Ice | wall of solid ice
+Wall of Thorns | thick wall of thorny brush
+Wind Walk | figures turning into clouds and drifting
+Word of Recall | cleric and allies vanishing to a sanctuary
+Conjure Celestial | radiant angelic celestial descending
+Delayed Blast Fireball | glowing bead of fire growing stronger before exploding
+Divine Word | divine word of power, terrible holy light
+Etherealness | figure becoming ethereal, ghostly plane
+Finger of Death | pointing finger unleashing negative energy
+Fire Storm | storm of fire engulfing an area
+Forcecage | invisible cage of force bars trapping a creature
+Mirage Arcane | landscape transformed by vast illusion
+Magnificent Mansion | extradimensional grand mansion behind a shimmering door
+Plane Shift | travel between planes through a tuning fork portal
+Prismatic Spray | seven rays of rainbow colored light
+Project Image | illusory projection of a mage far away
+Regenerate | limb regenerating with healing light
+Resurrection | soul returning to a body in a radiant glow
+Reverse Gravity | creatures falling upward
+Sequester | creature hidden in suspended animation
+Simulacrum | illusory duplicate made of snow
+Symbol | glowing deadly symbol inscribed on a door
+Teleport | figure teleporting in a flash of light
+Animal Shapes | allies transforming into beasts
+Antimagic Field | sphere suppressing all magic
+Antipathy/Sympathy | aura repelling and attracting creatures
+Befuddlement | mind shattered, intellect broken, spinning sigils
+Clone | clone growing in a magical vessel
+Control Weather | caster controlling the sky and storms
+Demiplane | door to a small pocket dimension
+Dominate Monster | monster under mental control, glowing eyes
+Earthquake | ground splitting from a violent earthquake
+Glibness | silver tongue, persuasive speech, charisma glow
+Holy Aura | brilliant holy aura around allies
+Incendiary Cloud | billowing cloud of burning embers
+Maze | creature trapped in an endless labyrinth
+Mind Blank | mind protected by a blank shield
+Power Word Stun | word of power stunning a creature
+Sunburst | brilliant burst of sunlight blinding all
+Tsunami | colossal wall of water crashing
+Astral Projection | astral bodies traveling through the Astral Plane
+Foresight | eye seeing the future, threads of fate
+Gate | portal to another plane opening
+Imprisonment | creature sealed in a magical prison
+Mass Heal | flood of healing light for many
+Meteor Swarm | fiery meteors raining from the sky
+Power Word Heal | word of power healing completely
+Power Word Kill | word of power killing instantly
+Prismatic Wall | shimmering wall of seven colors
+Shapechange | caster transforming into various creatures
+Storm of Vengeance | massive storm cloud with lightning and acid rain
+Time Stop | frozen world, stopped clock, caster moving
+True Polymorph | creature permanently transformed into an object
+True Resurrection | grand resurrection from a pile of ash, divine light
+Weird | nightmare illusions of each creature's fears
+Wish | glowing wish granting reality-altering power, a genie-like light
+Summon Dragon | dragon spirit summoned
+Vitriolic Sphere | sphere of acid exploding
+Arcane Sword | floating spectral sword of force
+Mind Spike | psychic spike piercing a mind
+Freezing Sphere | frigid sphere exploding with ice
+Shining Smite | weapon strike making a foe glow with light
+Acid Arrow | shimmering green arrow of acid, corrosive splash
+Animal Messenger | small bird carrying a rolled message
+Charm Monster | monster charmed, pink enchanting spiral over its head
+Conjure Fey | fey spirit stepping out of a glowing circle of mushrooms
+Dragon's Breath | caster exhaling a dragon-like cone of fire
+Tiny Hut | small translucent dome of force sheltering adventurers at night
