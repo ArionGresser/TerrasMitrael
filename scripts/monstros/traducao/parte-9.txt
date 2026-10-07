@@ -1,0 +1,288 @@
+=== Vampire Familiar
++ Conexão Vampírica
+Enquanto o familiar e o mestre vampiro dele estiverem no mesmo plano de existência, o vampiro pode se comunicar com o familiar por telepatia e perceber o mundo pelos sentidos dele.
++ Ataques Múltiplos
+O familiar faz dois ataques de Adaga Umbral.
++ Adaga Umbral
+_Jogada de Ataque Corpo a Corpo ou à Distância:_ +5, alcance 1,5 m ou 6/18 m. _Acerto:_ 5 (1d4 + 3) de dano perfurante mais 7 (3d4) de dano necrótico. Se o alvo for reduzido a 0 Pontos de Vida por este ataque, ele fica Estável, mas com a condição Envenenado por 1 hora. Enquanto estiver Envenenado, o alvo fica com a condição Paralisado.
++ Agilidade Imortal
+O familiar faz a ação de Disparada ou Desengajar.
+
+=== Vampire Spawn
++ Patas de Aranha
+O vampiro escala superfícies difíceis, inclusive pelo teto, sem precisar fazer teste de atributo.
++ Fraquezas Vampíricas
+O vampiro tem estas fraquezas:
++ Proibição
+O vampiro não pode entrar numa residência sem o convite de um morador.
++ Água Corrente
+O vampiro sofre 20 de dano ácido se terminar o turno em água corrente.
++ Estaca no Coração
+O vampiro é destruído se uma arma que cause dano perfurante for cravada no coração dele enquanto estiver com a condição Incapacitado.
++ Luz do Sol
+O vampiro sofre 20 de dano radiante se começar o turno sob a luz do sol. Sob a luz do sol, tem Desvantagem nas jogadas de ataque e nos testes de atributo.
++ Ataques Múltiplos
+O vampiro faz dois ataques de Garra e usa Mordida.
++ Garra
+_Jogada de Ataque Corpo a Corpo:_ +6, alcance 1,5 m. _Acerto:_ 8 (2d4 + 3) de dano cortante. Se o alvo for uma criatura Média ou menor, fica com a condição Agarrado (CD 13 para escapar) por uma das duas garras.
++ Mordida
+_Teste de Resistência de Constituição:_ CD 14, uma criatura a até 1,5 m que esteja disposta ou com a condição Agarrado, Incapacitado ou Contido. _Falha:_ 5 (1d4 + 3) de dano perfurante mais 10 (3d6) de dano necrótico. O máximo de Pontos de Vida do alvo diminui numa quantidade igual ao dano necrótico sofrido, e o vampiro recupera essa mesma quantidade de Pontos de Vida.
++ Agilidade Imortal
+O vampiro faz a ação de Disparada ou Desengajar.
+
+=== Vampire
++ Resistência Lendária (3/Dia, ou 4/Dia no Covil)
+Se o vampiro falhar num teste de resistência, pode escolher ser bem-sucedido.
++ Fuga em Névoa
+Se cair a 0 Pontos de Vida fora do lugar de descanso dele, o vampiro usa Mudar de Forma para virar névoa (sem gastar ação). Se não puder usar Mudar de Forma, é destruído.
+
+Com 0 Pontos de Vida na forma de névoa, ele não pode voltar à forma de vampiro e precisa chegar ao lugar de descanso em até 2 horas, ou é destruído. Lá, volta à forma de vampiro e fica com a condição Paralisado até recuperar algum Ponto de Vida, e recupera 1 Ponto de Vida depois de passar 1 hora ali.
++ Patas de Aranha
+O vampiro escala superfícies difíceis, inclusive pelo teto, sem precisar fazer teste de atributo.
++ Fraquezas Vampíricas
+O vampiro tem estas fraquezas:
++ Proibição
+O vampiro não pode entrar numa residência sem o convite de um morador.
++ Água Corrente
+O vampiro sofre 20 de dano ácido se terminar o turno em água corrente.
++ Estaca no Coração
+Se uma arma que cause dano perfurante for cravada no coração do vampiro enquanto ele estiver com a condição Incapacitado no lugar de descanso dele, ele fica com a condição Paralisado até a arma ser retirada.
++ Luz do Sol
+O vampiro sofre 20 de dano radiante se começar o turno sob a luz do sol. Sob a luz do sol, tem Desvantagem nas jogadas de ataque e nos testes de atributo.
++ Ataques Múltiplos (só na Forma de Vampiro)
+O vampiro faz dois ataques de Golpe Sepulcral e usa Mordida.
++ Golpe Sepulcral (só na Forma de Vampiro)
+_Jogada de Ataque Corpo a Corpo:_ +9, alcance 1,5 m. _Acerto:_ 8 (1d8 + 4) de dano contundente mais 7 (2d6) de dano necrótico. Se o alvo for uma criatura Grande ou menor, fica com a condição Agarrado (CD 14 para escapar) por uma das duas mãos.
++ Mordida (só na Forma de Morcego ou de Vampiro)
+_Teste de Resistência de Constituição:_ CD 17, uma criatura a até 1,5 m que esteja disposta ou com a condição Agarrado, Incapacitado ou Contido. _Falha:_ 6 (1d4 + 4) de dano perfurante mais 13 (3d8) de dano necrótico. O máximo de Pontos de Vida do alvo diminui numa quantidade igual ao dano necrótico sofrido, e o vampiro recupera essa mesma quantidade de Pontos de Vida. Um Humanoide reduzido a 0 Pontos de Vida por esse dano e depois enterrado se ergue no pôr do sol seguinte como uma **Cria Vampírica** sob o controle do vampiro.
++ Encantar (Recarga 5–6)
+O vampiro conjura _Enfeitiçar Pessoa_, sem precisar de componentes e usando Carisma como atributo de conjuração (CD de resistência 17), com duração de 24 horas. O alvo Enfeitiçado aceita de bom grado a Mordida do vampiro, e o dano dela não encerra a magia. Quando a magia acaba, o alvo não sabe que foi Enfeitiçado pelo vampiro.
++ Mudar de Forma
+Se não estiver sob a luz do sol nem em água corrente, o vampiro muda de forma para um morcego Miúdo (Deslocamento 1,5 m, Deslocamento de Voo 9 m) ou uma nuvem de névoa Média (Deslocamento 1,5 m, Deslocamento de Voo 6 m, pairar), ou volta à forma de vampiro. Tudo o que ele estiver vestindo se transforma junto.
+
+Na forma de morcego, o vampiro não consegue falar. Fora o tamanho e o Deslocamento, as estatísticas de jogo dele não mudam.
+
+Na forma de névoa, o vampiro não pode fazer ações, falar nem manipular objetos. Ele não tem peso e pode entrar no espaço de um inimigo e parar ali. Por onde o ar passa, a névoa passa, mas ela não atravessa líquidos. Ele tem Resistência a todo dano, menos ao que sofre da luz do sol.
++ :intro
+_Usos de Ação Lendária: 3 (4 no Covil). Logo depois do turno de outra criatura, o vampiro pode gastar um uso para fazer uma das ações a seguir. Ele recupera todos os usos gastos no início de cada turno seu._
++ Seduzir
+O vampiro conjura _Comando_, sem precisar de componentes e usando Carisma como atributo de conjuração (CD de resistência 17). Ele só pode usar esta ação de novo no início do próximo turno dele.
++ Golpe Imortal
+O vampiro se move até metade do Deslocamento e faz um ataque de Golpe Sepulcral.
+
+=== Vrock
++ Restauração Demoníaca
+Se o vrock morrer fora do Abismo, o corpo se desfaz em icor, e ele ganha um corpo novo na hora, revivendo com todos os Pontos de Vida em algum lugar do Abismo.
++ Resistência à Magia
+O vrock tem Vantagem nos testes de resistência contra magias e outros efeitos mágicos.
++ Ataques Múltiplos
+O vrock faz dois ataques de Retalhar.
++ Retalhar
++ Esporos (Recarga 6)
+_Teste de Resistência de Constituição:_ CD 15, cada criatura numa Emanação de 6 m a partir do vrock. _Falha:_ O alvo fica com a condição Envenenado e repete o teste no fim de cada turno dele, encerrando o efeito em si mesmo com um sucesso. Envenenado, o alvo sofre 5 (1d10) de dano de veneno no início de cada turno dele. Esvaziar um frasco de Água Benta no alvo encerra o efeito antes.
++ Guincho Atordoante (1/Dia)
+_Teste de Resistência de Constituição:_ CD 15, cada criatura numa Emanação de 6 m a partir do vrock (demônios são bem-sucedidos automaticamente). _Falha:_ 10 (3d6) de dano trovejante, e o alvo fica com a condição Atordoado até o fim do próximo turno do vrock.
+
+=== Warrior Infantry
++ Táticas de Matilha
+O guerreiro tem Vantagem numa jogada de ataque contra uma criatura se pelo menos um aliado dele estiver a até 1,5 m dela e não estiver com a condição Incapacitado.
++ Lança
+
+=== Warrior Veteran
++ Ataques Múltiplos
+O guerreiro faz dois ataques de Espada Grande ou de Besta Pesada.
++ Espada Grande
++ Besta Pesada
++ Aparar
+_Gatilho:_ O guerreiro é atingido por uma jogada de ataque corpo a corpo enquanto segura uma arma. _Resposta:_ O guerreiro soma 2 à CA contra esse ataque, o que pode fazê-lo errar.
+
+=== Water Elemental
++ Congelar
+Se o elemental sofrer dano de frio, o Deslocamento dele diminui 6 m até o fim do próximo turno dele.
++ Forma de Água
+O elemental pode entrar no espaço de um inimigo e parar ali. Ele passa por frestas de até 2,5 centímetros sem gastar movimento extra.
++ Ataques Múltiplos
+O elemental faz dois ataques de Pancada.
++ Pancada
+_Jogada de Ataque Corpo a Corpo:_ +7, alcance 1,5 m. _Acerto:_ 13 (2d8 + 4) de dano contundente. Se o alvo for uma criatura Média ou menor, fica com a condição Caído.
++ Submergir (Recarga 4–6)
+_Teste de Resistência de Força:_ CD 15, cada criatura no espaço do elemental. _Falha:_ 22 (4d8 + 4) de dano contundente. Se o alvo for uma criatura Grande ou menor, fica com a condição Agarrado (CD 14 para escapar). Até a agarrada acabar, o alvo fica com a condição Contido, está sufocando, a não ser que respire na água, e sofre 9 (2d8) de dano contundente no início de cada turno do elemental. O elemental pode agarrar com Submergir uma criatura Grande ou até duas criaturas Médias ou menores ao mesmo tempo. Com uma ação, uma criatura a até 1,5 m do elemental pode puxar uma criatura de dentro dele com um teste de Força (Atletismo) CD 14 bem-sucedido. _Sucesso:_ Só metade do dano.
+
+=== Werebear
++ Ataques Múltiplos
+O homem-urso faz dois ataques, com Machadinha ou Dilacerar, em qualquer combinação. Ele pode trocar um ataque por um ataque de Mordida.
++ Mordida (só na Forma de Urso ou Híbrida)
+_Jogada de Ataque Corpo a Corpo:_ +7, alcance 1,5 m. _Acerto:_ 17 (2d12 + 4) de dano perfurante. Se o alvo for um Humanoide, ele sofre o efeito a seguir. _Teste de Resistência de Constituição:_ CD 14. _Falha:_ O alvo fica amaldiçoado. Se o alvo amaldiçoado cair a 0 Pontos de Vida, ele vira um **Homem-Urso** sob o controle do Mestre, com 10 Pontos de Vida. _Sucesso:_ O alvo fica imune à maldição deste homem-urso por 24 horas.
++ Machadinha (só na Forma Humanoide ou Híbrida)
+_Jogada de Ataque Corpo a Corpo ou à Distância:_ +7, alcance 1,5 m ou 6/18 m. _Acerto:_ 14 (3d6 + 4) de dano cortante.
++ Dilacerar (só na Forma de Urso ou Híbrida)
++ Mudar de Forma
+O homem-urso muda de forma para um híbrido Grande de urso e humanoide ou para um urso Grande, ou volta à forma humanoide verdadeira. Fora o tamanho, as estatísticas de jogo dele são as mesmas em todas as formas. O equipamento que ele veste ou carrega não se transforma.
+
+=== Wereboar
++ Ataques Múltiplos
+O homem-javali faz dois ataques, com Azagaia ou Presa, em qualquer combinação. Ele pode trocar um ataque por um ataque de Chifrada.
++ Chifrada (só na Forma de Javali ou Híbrida)
+_Jogada de Ataque Corpo a Corpo:_ +5, alcance 1,5 m. _Acerto:_ 12 (2d8 + 3) de dano perfurante. Se o alvo for um Humanoide, ele sofre o efeito a seguir. _Teste de Resistência de Constituição:_ CD 12. _Falha:_ O alvo fica amaldiçoado. Se o alvo amaldiçoado cair a 0 Pontos de Vida, ele vira um **Homem-Javali** sob o controle do Mestre, com 10 Pontos de Vida. _Sucesso:_ O alvo fica imune à maldição deste homem-javali por 24 horas.
++ Azagaia (só na Forma Humanoide ou Híbrida)
+_Jogada de Ataque Corpo a Corpo ou à Distância:_ +5, alcance 1,5 m ou 9/36 m. _Acerto:_ 13 (3d6 + 3) de dano perfurante.
++ Presa (só na Forma de Javali ou Híbrida)
+_Jogada de Ataque Corpo a Corpo:_ +5, alcance 1,5 m. _Acerto:_ 10 (2d6 + 3) de dano perfurante. Se o alvo for uma criatura Média ou menor e o homem-javali tiver se movido 6 m ou mais em linha reta na direção dele logo antes do acerto, o alvo sofre 7 (2d6) de dano perfurante extra e fica com a condição Caído.
++ Mudar de Forma
+O homem-javali muda de forma para um híbrido Médio de javali e humanoide ou para um javali Pequeno, ou volta à forma humanoide verdadeira. Fora o tamanho, as estatísticas de jogo dele são as mesmas em todas as formas. O equipamento que ele veste ou carrega não se transforma.
+
+=== Wererat
++ Ataques Múltiplos
+O homem-rato faz dois ataques, com Arranhão ou Besta de Mão, em qualquer combinação. Ele pode trocar um ataque por um ataque de Mordida.
++ Mordida (só na Forma de Rato ou Híbrida)
+_Jogada de Ataque Corpo a Corpo:_ +5, alcance 1,5 m. _Acerto:_ 8 (2d4 + 3) de dano perfurante. Se o alvo for um Humanoide, ele sofre o efeito a seguir. _Teste de Resistência de Constituição:_ CD 11. _Falha:_ O alvo fica amaldiçoado. Se o alvo amaldiçoado cair a 0 Pontos de Vida, ele vira um **Homem-Rato** sob o controle do Mestre, com 10 Pontos de Vida. _Sucesso:_ O alvo fica imune à maldição deste homem-rato por 24 horas.
++ Arranhão
++ Besta de Mão (só na Forma Humanoide ou Híbrida)
++ Mudar de Forma
+O homem-rato muda de forma para um híbrido Médio de rato e humanoide ou para um rato Pequeno, ou volta à forma humanoide verdadeira. Fora o tamanho, as estatísticas de jogo dele são as mesmas em todas as formas. O equipamento que ele veste ou carrega não se transforma.
+
+=== Weretiger
++ Ataques Múltiplos
+O homem-tigre faz dois ataques, com Arranhão ou Arco Longo, em qualquer combinação. Ele pode trocar um ataque por um ataque de Mordida.
++ Mordida (só na Forma de Tigre ou Híbrida)
+_Jogada de Ataque Corpo a Corpo:_ +5, alcance 1,5 m. _Acerto:_ 12 (2d8 + 3) de dano perfurante. Se o alvo for um Humanoide, ele sofre o efeito a seguir. _Teste de Resistência de Constituição:_ CD 13. _Falha:_ O alvo fica amaldiçoado. Se o alvo amaldiçoado cair a 0 Pontos de Vida, ele vira um **Homem-Tigre** sob o controle do Mestre, com 10 Pontos de Vida. _Sucesso:_ O alvo fica imune à maldição deste homem-tigre por 24 horas.
++ Arranhão
++ Arco Longo (só na Forma Humanoide ou Híbrida)
++ Espreitar (só na Forma de Tigre ou Híbrida)
+O homem-tigre se move até o seu Deslocamento sem provocar Ataques de Oportunidade. No fim desse movimento, pode fazer a ação de Esconder.
++ Mudar de Forma
+O homem-tigre muda de forma para um híbrido Grande de tigre e humanoide ou para um tigre Grande, ou volta à forma humanoide verdadeira. Fora o tamanho, as estatísticas de jogo dele são as mesmas em todas as formas. O equipamento que ele veste ou carrega não se transforma.
+
+=== Werewolf
++ Táticas de Matilha
+O lobisomem tem Vantagem numa jogada de ataque contra uma criatura se pelo menos um aliado dele estiver a até 1,5 m dela e não estiver com a condição Incapacitado.
++ Ataques Múltiplos
+O lobisomem faz dois ataques, com Arranhão ou Arco Longo, em qualquer combinação. Ele pode trocar um ataque por um ataque de Mordida.
++ Mordida (só na Forma de Lobo ou Híbrida)
+_Jogada de Ataque Corpo a Corpo:_ +5, alcance 1,5 m. _Acerto:_ 12 (2d8 + 3) de dano perfurante. Se o alvo for um Humanoide, ele sofre o efeito a seguir. _Teste de Resistência de Constituição:_ CD 12. _Falha:_ O alvo fica amaldiçoado. Se o alvo amaldiçoado cair a 0 Pontos de Vida, ele vira um **Lobisomem** sob o controle do Mestre, com 10 Pontos de Vida. _Sucesso:_ O alvo fica imune à maldição deste lobisomem por 24 horas.
++ Arranhão
++ Arco Longo (só na Forma Humanoide ou Híbrida)
++ Mudar de Forma
+O lobisomem muda de forma para um híbrido Grande de lobo e humanoide ou para um lobo Médio, ou volta à forma humanoide verdadeira. Fora o tamanho, as estatísticas de jogo dele são as mesmas em todas as formas. O equipamento que ele veste ou carrega não se transforma.
+
+=== White Dragon Wyrmling
++ Andar no Gelo
+O dragão atravessa e escala superfícies geladas sem precisar fazer teste de atributo. Além disso, Terreno Difícil feito de gelo ou neve não lhe custa movimento extra.
++ Ataques Múltiplos
+O dragão faz dois ataques de Dilacerar.
++ Dilacerar
++ Sopro Gélido (Recarga 5–6)
+_Teste de Resistência de Constituição:_ CD 12, cada criatura num Cone de 4,5 m. _Falha:_ 22 (5d8) de dano de frio. _Sucesso:_ Metade do dano.
+
+=== Young White Dragon
++ Andar no Gelo
+O dragão atravessa e escala superfícies geladas sem precisar fazer teste de atributo. Além disso, Terreno Difícil feito de gelo ou neve não lhe custa movimento extra.
++ Ataques Múltiplos
+O dragão faz três ataques de Dilacerar.
++ Dilacerar
++ Sopro Gélido (Recarga 5–6)
+_Teste de Resistência de Constituição:_ CD 15, cada criatura num Cone de 9 m. _Falha:_ 40 (9d8) de dano de frio. _Sucesso:_ Metade do dano.
+
+=== Adult White Dragon
++ Andar no Gelo
+O dragão atravessa e escala superfícies geladas sem precisar fazer teste de atributo. Além disso, Terreno Difícil feito de gelo ou neve não lhe custa movimento extra.
++ Resistência Lendária (3/Dia, ou 4/Dia no Covil)
+Se o dragão falhar num teste de resistência, pode escolher ser bem-sucedido.
++ Ataques Múltiplos
+O dragão faz três ataques de Dilacerar.
++ Dilacerar
++ Sopro Gélido (Recarga 5–6)
+_Teste de Resistência de Constituição:_ CD 19, cada criatura num Cone de 18 m. _Falha:_ 54 (12d8) de dano de frio. _Sucesso:_ Metade do dano.
++ :intro
+_Usos de Ação Lendária: 3 (4 no Covil). Logo depois do turno de outra criatura, o dragão pode gastar um uso para fazer uma das ações a seguir. Ele recupera todos os usos gastos no início de cada turno seu._
++ Explosão Congelante
+_Teste de Resistência de Constituição:_ CD 14, cada criatura numa Esfera de 9 m de raio centrada num ponto que o dragão consiga ver a até 36 m. _Falha:_ 7 (2d6) de dano de frio, e o Deslocamento do alvo vira 0 até o fim do próximo turno dele. _Falha ou Sucesso:_ O dragão só pode usar esta ação de novo no início do próximo turno dele.
++ Presença Aterradora
+O dragão conjura _Medo_, sem precisar de componentes Materiais e usando Carisma como atributo de conjuração (CD de resistência 14). Ele só pode usar esta ação de novo no início do próximo turno dele.
++ Bote
+O dragão se move até metade do Deslocamento e faz um ataque de Dilacerar.
+
+=== Ancient White Dragon
++ Andar no Gelo
+O dragão atravessa e escala superfícies geladas sem precisar fazer teste de atributo. Além disso, Terreno Difícil feito de gelo ou neve não lhe custa movimento extra.
++ Resistência Lendária (4/Dia, ou 5/Dia no Covil)
+Se o dragão falhar num teste de resistência, pode escolher ser bem-sucedido.
++ Ataques Múltiplos
+O dragão faz três ataques de Dilacerar.
++ Dilacerar
++ Sopro Gélido (Recarga 5–6)
+_Teste de Resistência de Constituição:_ CD 22, cada criatura num Cone de 27 m. _Falha:_ 63 (14d8) de dano de frio. _Sucesso:_ Metade do dano.
++ :intro
+_Usos de Ação Lendária: 3 (4 no Covil). Logo depois do turno de outra criatura, o dragão pode gastar um uso para fazer uma das ações a seguir. Ele recupera todos os usos gastos no início de cada turno seu._
++ Explosão Congelante
+_Teste de Resistência de Constituição:_ CD 20, cada criatura numa Esfera de 9 m de raio centrada num ponto que o dragão consiga ver a até 36 m. _Falha:_ 14 (4d6) de dano de frio, e o Deslocamento do alvo vira 0 até o fim do próximo turno dele. _Falha ou Sucesso:_ O dragão só pode usar esta ação de novo no início do próximo turno dele.
++ Presença Aterradora
+O dragão conjura _Medo_, sem precisar de componentes Materiais e usando Carisma como atributo de conjuração (CD de resistência 18). Ele só pode usar esta ação de novo no início do próximo turno dele.
++ Bote
+O dragão se move até metade do Deslocamento e faz um ataque de Dilacerar.
+
+=== Wight
++ Sensibilidade à Luz do Sol
+Sob a luz do sol, o inumano tem Desvantagem nos testes de atributo e nas jogadas de ataque.
++ Ataques Múltiplos
+O inumano faz dois ataques, com Espada Necrótica ou Arco Necrótico, em qualquer combinação. Ele pode trocar um ataque por um uso de Dreno de Vida.
++ Espada Necrótica
++ Arco Necrótico
++ Dreno de Vida
+_Teste de Resistência de Constituição:_ CD 13, uma criatura a até 1,5 m. _Falha:_ 6 (1d8 + 2) de dano necrótico, e o máximo de Pontos de Vida do alvo diminui numa quantidade igual ao dano sofrido.
+
+Um Humanoide morto por este ataque se ergue 24 horas depois como um **Zumbi** sob o controle do inumano, a não ser que seja trazido de volta à vida ou que o corpo dele seja destruído. O inumano pode ter no máximo doze zumbis sob o controle dele ao mesmo tempo.
+
+=== Will-o'-Wisp
++ Efêmero
+O fogo-fátuo não consegue vestir nem carregar nada.
++ Iluminação
+O fogo-fátuo emite Luz Plena num raio de 6 m e Penumbra por mais 6 m.
++ Movimento Incorpóreo
+O fogo-fátuo atravessa outras criaturas e objetos como se fossem Terreno Difícil. Ele sofre 5 (1d10) de dano de energia se terminar o turno dentro de um objeto.
++ Choque
++ Consumir Vida
+_Teste de Resistência de Constituição:_ CD 10, uma criatura viva que o fogo-fátuo consiga ver a até 1,5 m e que esteja com 0 Pontos de Vida. _Falha:_ O alvo morre, e o fogo-fátuo recupera 10 (3d6) Pontos de Vida.
++ Sumir
+O fogo-fátuo e a luz dele ficam com a condição Invisível até a Concentração dele nesse efeito acabar. O efeito também acaba logo depois de ele fazer uma jogada de ataque ou usar Consumir Vida.
+
+=== Winter Wolf
++ Táticas de Matilha
+O lobo tem Vantagem numa jogada de ataque contra uma criatura se pelo menos um aliado dele estiver a até 1,5 m dela e não estiver com a condição Incapacitado.
++ Mordida
+_Jogada de Ataque Corpo a Corpo:_ +6, alcance 1,5 m. _Acerto:_ 11 (2d6 + 4) de dano perfurante. Se o alvo for uma criatura Grande ou menor, fica com a condição Caído.
++ Sopro Gélido (Recarga 5–6)
+_Teste de Resistência de Constituição:_ CD 12, cada criatura num Cone de 4,5 m. _Falha:_ 18 (4d8) de dano de frio. _Sucesso:_ Metade do dano.
+
+=== Worg
++ Mordida
+_Jogada de Ataque Corpo a Corpo:_ +5, alcance 1,5 m. _Acerto:_ 7 (1d8 + 3) de dano perfurante, e a próxima jogada de ataque feita contra o alvo antes do início do próximo turno do worg tem Vantagem.
+
+=== Wraith
++ Movimento Incorpóreo
+A aparição atravessa outras criaturas e objetos como se fossem Terreno Difícil. Ela sofre 5 (1d10) de dano de energia se terminar o turno dentro de um objeto.
++ Sensibilidade à Luz do Sol
+Sob a luz do sol, a aparição tem Desvantagem nos testes de atributo e nas jogadas de ataque.
++ Dreno de Vida
+_Jogada de Ataque Corpo a Corpo:_ +6, alcance 1,5 m. _Acerto:_ 21 (4d8 + 3) de dano necrótico. Se o alvo for uma criatura, o máximo de Pontos de Vida dele diminui numa quantidade igual ao dano sofrido.
++ Criar Espectro
+A aparição escolhe o cadáver de um Humanoide a até 3 m dela que tenha morrido há no máximo 1 minuto. O espírito do alvo se ergue como um **Espectro** no espaço do cadáver ou no espaço desocupado mais próximo. O espectro fica sob o controle da aparição, que pode ter no máximo sete espectros sob o controle dela ao mesmo tempo.
+
+=== Wyvern
++ Ataques Múltiplos
+A serpe faz um ataque de Mordida e um de Ferrão.
++ Mordida
++ Ferrão
+_Jogada de Ataque Corpo a Corpo:_ +7, alcance 3 m. _Acerto:_ 11 (2d6 + 4) de dano perfurante mais 24 (7d6) de dano de veneno, e o alvo fica com a condição Envenenado até o início do próximo turno da serpe.
+
+=== Xorn
++ Deslizar pela Terra
+O xorn escava terra e pedra não mágicas e não trabalhadas. Ao fazer isso, não perturba o material por onde passa.
++ Faro de Tesouro
+O xorn sabe exatamente onde estão metais e pedras preciosas a até 18 m dele.
++ Ataques Múltiplos
+O xorn faz um ataque de Mordida e três de Garra.
++ Mordida
++ Garra
++ Investida
+O xorn se move até o seu Deslocamento ou Deslocamento de Escavação em linha reta na direção de um inimigo que consiga perceber.
