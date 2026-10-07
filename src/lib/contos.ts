@@ -1,6 +1,8 @@
 import type { ComponentType } from "react";
 import { buscarPersonagem } from "./personagens";
 
+import * as t2e1 from "@/content/contos/cronicas/temporada-2/episodio-01.mdx";
+
 /**
  * Os Contos de Mitrael: as sessões jogadas, contadas como história.
  *
@@ -20,6 +22,8 @@ export type MetaEpisodio = {
   resumo: string;
   /** Quando a sessão foi jogada, do jeito que se fala: "agosto de 2026". */
   sessao?: string;
+  /** Quem esteve na mesa nesta sessão, pelas chaves dos personagens. */
+  elenco: string[];
 };
 
 export type Episodio = {
@@ -118,7 +122,7 @@ export const SERIES: Serie[] = [
           "vrakyr-windrose",
           "egon-vitriol",
         ],
-        episodios: episodios([]),
+        episodios: episodios([t2e1]),
       },
     ],
   },

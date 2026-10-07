@@ -50,9 +50,12 @@ export function Trilha({
 export function Elenco({
   slugs,
   tamanho = "normal",
+  prioridade = false,
 }: {
   slugs: string[];
   tamanho?: "normal" | "pequeno";
+  /** Para quando os rostos estão no alto da página e não podem demorar. */
+  prioridade?: boolean;
 }) {
   const rostos = rostosDoElenco(slugs);
   const lado = tamanho === "pequeno" ? "size-9" : "size-14";
@@ -74,6 +77,7 @@ export function Elenco({
                 alt=""
                 fill
                 sizes="56px"
+                priority={prioridade}
                 className="object-cover sepia-[0.12]"
                 style={{
                   objectPosition: `${rosto.rosto.x * 100}% ${rosto.rosto.y * 100}%`,

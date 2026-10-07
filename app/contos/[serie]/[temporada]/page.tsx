@@ -80,7 +80,7 @@ export default async function PaginaTemporada({ params }: Props) {
             <p className="font-titulo text-tinta-500 mb-3 text-center text-[0.66rem] tracking-[0.2em] uppercase">
               Na mesa
             </p>
-            <Elenco slugs={temporada.elenco} />
+            <Elenco slugs={temporada.elenco} prioridade />
           </div>
         </Pergaminho>
 
@@ -129,6 +129,11 @@ export default async function PaginaTemporada({ params }: Props) {
                       <p className="text-tinta-700 mt-2 text-sm leading-relaxed">
                         {episodio.meta.resumo}
                       </p>
+                      {/* Acima do link que cobre o cartão, para cada rosto
+                          levar à própria ficha */}
+                      <div className="relative z-10 mt-3 flex">
+                        <Elenco slugs={episodio.meta.elenco} tamanho="pequeno" />
+                      </div>
                     </div>
                   </Pergaminho>
                 </Revelar>

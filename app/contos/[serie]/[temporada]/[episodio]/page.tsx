@@ -8,7 +8,7 @@ import {
   chaveDaTemporada,
   chaveDoEpisodio,
 } from "@/lib/contos";
-import { Trilha } from "@/components/contos/Partes";
+import { Elenco, Trilha } from "@/components/contos/Partes";
 import { Pergaminho } from "@/components/ui/Pergaminho";
 import { BotaoLink } from "@/components/ui/Botao";
 import { Rodape } from "@/components/Rodape";
@@ -103,6 +103,15 @@ export default async function PaginaEpisodio({ params }: Props) {
             ) : null}
             <Ornamento className="mt-6" />
           </header>
+
+          {/* Quem estava na mesa. Ninguém precisa decorar o elenco para ler:
+              cada rosto leva à ficha de quem é. */}
+          <section aria-label="Personagens neste episódio" className="mt-6">
+            <p className="font-titulo text-tinta-500 mb-3 text-center text-[0.66rem] tracking-[0.2em] uppercase">
+              Neste episódio
+            </p>
+            <Elenco slugs={episodio.meta.elenco} prioridade />
+          </section>
 
           <div className="mt-8 text-[0.95rem] leading-[1.8] sm:text-base">
             <Texto />
