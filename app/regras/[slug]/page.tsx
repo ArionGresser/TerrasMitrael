@@ -57,21 +57,32 @@ export default async function PaginaDocumento({ params }: Props) {
               </div>
             ) : null}
 
-            {/* Com muitos itens abertos, um índice no alto leva direto a cada um */}
+            {/* Com muitos itens abertos, um índice no alto leva direto a
+                cada um, separado pelos grupos do documento */}
             {doc.estilo === "aberto" && todos.length > 12 ? (
-              <nav aria-label={`Índice de ${doc.titulo}`} className="painel-ficha mt-8 px-4 py-3">
-                <ul className="flex flex-wrap gap-x-3 gap-y-1 text-sm">
-                  {todos.map((i) => (
-                    <li key={i.id}>
-                      <a
-                        href={`#${i.id}`}
-                        className="text-tinta-700 hover:text-heraldico-vermelho inline-block py-0.5 underline-offset-2 hover:underline"
-                      >
-                        {i.titulo}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
+              <nav aria-label={`Índice de ${doc.titulo}`} className="painel-ficha mt-8 space-y-2 px-4 py-3">
+                {doc.grupos.map((grupo, g) => {
+                  const itens = grupo.itens.filter((i) => i.titulo);
+                  if (itens.length === 0) return null;
+                  return (
+                    <div key={g} className="flex flex-wrap items-baseline gap-x-3 gap-y-0.5 text-sm">
+                      {grupo.titulo ? (
+                        <span className="font-titulo text-tinta-900 text-xs font-bold tracking-wide">
+                          {grupo.titulo}
+                        </span>
+                      ) : null}
+                      {itens.map((i) => (
+                        <a
+                          key={i.id}
+                          href={`#${i.id}`}
+                          className="text-tinta-700 hover:text-heraldico-vermelho inline-block py-0.5 underline-offset-2 hover:underline"
+                        >
+                          {i.titulo}
+                        </a>
+                      ))}
+                    </div>
+                  );
+                })}
               </nav>
             ) : null}
 
