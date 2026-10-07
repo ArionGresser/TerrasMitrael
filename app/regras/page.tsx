@@ -10,12 +10,12 @@ import { Rodape } from "@/components/Rodape";
 import { TituloBrasao, Sobretitulo, Ornamento } from "@/components/ui/Titulo";
 
 export const metadata: Metadata = {
-  title: "Compêndio",
+  title: "Livro do Aventureiro",
   description:
     "As regras de 2024 de D&D em português: classes, espécies, antecedentes, talentos, magias, itens mágicos, monstros e mais. Tradução livre do SRD 5.2.1.",
 };
 
-/** As partes do Compêndio que têm página própria, fora de content/regras. */
+/** As partes do Livro do Aventureiro que têm página própria, fora de content/regras. */
 const FIXAS = [
   {
     href: "/classes/",
@@ -75,7 +75,7 @@ function imagemDaParte(href: string): string | null {
   return null;
 }
 
-export default function PaginaCompendio() {
+export default function PaginaLivroDoAventureiro() {
   const partes = [
     ...FIXAS,
     ...documentosDeRegra()
@@ -97,7 +97,7 @@ export default function PaginaCompendio() {
         <Pergaminho borda={2}>
           <header className="text-center">
             <Sobretitulo>Regras de 2024</Sobretitulo>
-            <TituloBrasao className="mt-4">Compêndio</TituloBrasao>
+            <TituloBrasao className="mt-4">Livro do Aventureiro</TituloBrasao>
             <Ornamento className="mt-6" />
             <p className="text-tinta-700 mx-auto mt-6 max-w-lg text-base leading-relaxed italic">
               As regras que a mesa usa, em português, para criar um personagem

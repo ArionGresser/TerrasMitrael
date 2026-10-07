@@ -24,7 +24,7 @@ export default function PaginaBestiario() {
             href="/regras/"
             className="text-pergaminho-300/80 hover:text-pergaminho-100 underline-offset-4 hover:underline"
           >
-            ← Compêndio
+            ← Livro do Aventureiro
           </Link>
         </nav>
 

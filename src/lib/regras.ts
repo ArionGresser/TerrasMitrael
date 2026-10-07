@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 /**
- * Os documentos de regra do Compêndio: antecedentes, talentos, glossário,
+ * Os documentos de regra do Livro do Aventureiro: antecedentes, talentos, glossário,
  * equipamento... Cada um é um arquivo em content/regras/, traduzido do SRD
  * 5.2.1 (Creative Commons Attribution 4.0).
  *
@@ -11,11 +11,11 @@ import path from "node:path";
  *   ---
  *   titulo: Talentos
  *   original: Feats
- *   ordem: 4              posição na lista do Compêndio
- *   resumo: ...           uma linha para o cartão do Compêndio
+ *   ordem: 4              posição na lista do Livro do Aventureiro
+ *   resumo: ...           uma linha para o cartão do Livro do Aventureiro
  *   estilo: aberto        opcional: itens abertos em vez de pergaminhos
  *   oculto: sim           opcional: tem página, mas não aparece na lista do
- *                         Compêndio (é aberto a partir de outra seção)
+ *                         Livro do Aventureiro (é aberto a partir de outra seção)
  *   ---
  *   texto de abertura
  *   # Grupo               opcional, separa os itens em grupos

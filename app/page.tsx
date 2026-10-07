@@ -50,9 +50,9 @@ const PORTAIS = [
   },
   {
     href: "/regras/",
-    nome: "Compêndio",
+    nome: "Livro do Aventureiro",
     texto:
-      "As regras de 2024 em português: classes, espécies, talentos e as magias do Grimório, para criar um personagem ou tirar uma dúvida na mesa.",
+      "As regras de 2024 em português: classes, espécies, magias, itens mágicos e o bestiário, para criar um personagem ou tirar uma dúvida na mesa.",
     imagem: "/images/book.jpg",
     alt: "Um livro de capa de couro, envolto em brilho arcano",
     // A arte é pequena e quadrada: fica inteira, no centro, sobre fundo escuro

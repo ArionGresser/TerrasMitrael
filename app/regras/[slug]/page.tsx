@@ -36,13 +36,13 @@ export default async function PaginaDocumento({ params }: Props) {
             href="/regras/"
             className="text-pergaminho-300/80 hover:text-pergaminho-100 underline-offset-4 hover:underline"
           >
-            ← Compêndio
+            ← Livro do Aventureiro
           </Link>
         </nav>
 
         <Pergaminho borda={1} className="mt-5">
           <header className="text-center">
-            <Sobretitulo>Compêndio · Regras de 2024</Sobretitulo>
+            <Sobretitulo>Livro do Aventureiro · Regras de 2024</Sobretitulo>
             <TituloBrasao className="mt-4">{doc.titulo}</TituloBrasao>
             <p className="text-tinta-500 mt-2 text-sm italic" lang="en">
               {doc.original}
@@ -111,7 +111,7 @@ export default async function PaginaDocumento({ params }: Props) {
 
             <div className="mt-12 text-center">
               <BotaoLink href="/regras/" variante="primario">
-                Voltar ao Compêndio
+                Voltar ao Livro do Aventureiro
               </BotaoLink>
             </div>
 
