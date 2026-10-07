@@ -1,7 +1,7 @@
 /**
  * O crédito que a licença Creative Commons pede: de onde vem o texto, sob
- * qual licença, e que ele foi modificado (traduzido). Aparece no grimório e
- * em toda página de magia.
+ * qual licença, e que ele foi modificado (traduzido). Aparece em toda página
+ * de regra: grimório, espécies e classes.
  */
 export function CreditoSrd({ className = "" }: { className?: string }) {
   return (
