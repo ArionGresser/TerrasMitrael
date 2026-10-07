@@ -1,0 +1,345 @@
+=== Guardian Naga
++ Restauração Celestial
+Se a naga morrer, ela volta à vida em 1d6 dias e recupera todos os Pontos de Vida, a não ser que _Dissipar o Bem e o Mal_ seja conjurada nos restos dela.
++ Ataques Múltiplos
+A naga faz dois ataques de Mordida. Ela pode trocar qualquer ataque por um uso de Cuspe Venenoso.
++ Mordida
++ Cuspe Venenoso
+_Teste de Resistência de Constituição:_ CD 16, uma criatura que a naga consiga ver a até 18 m. _Falha:_ 31 (7d8) de dano de veneno, e o alvo fica com a condição Cego até o início do próximo turno da naga. _Sucesso:_ Só metade do dano.
++ Conjuração
+A naga conjura uma das magias a seguir, sem precisar de componentes Somáticos nem Materiais e usando Sabedoria como atributo de conjuração (CD de resistência 16):
+
+**À vontade:** _Taumaturgia_
+
+**1/Dia cada:** _Clarividência_, _Curar Ferimentos_ (versão de 6º círculo), _Coluna de Chamas_ (versão de 6º círculo), _Missão_, _Visão da Verdade_
+
+=== Guard
++ Lança
+
+=== Guard Captain
++ Ataques Múltiplos
+O guarda faz dois ataques, com Azagaia ou Espada Longa, em qualquer combinação.
++ Azagaia
++ Espada Longa
+
+=== Half-Dragon
++ Origem Dracônica
+O meio-dragão tem parentesco com um tipo de dragão ligado a um destes tipos de dano (à escolha do Mestre): ácido, elétrico, fogo, frio ou veneno. A escolha afeta outras partes da ficha.
++ Ataques Múltiplos
+O meio-dragão faz dois ataques de Garra.
++ Garra
+_Jogada de Ataque Corpo a Corpo:_ +7, alcance 3 m. _Acerto:_ 6 (1d4 + 4) de dano cortante mais 7 (2d6) de dano do tipo escolhido no traço Origem Dracônica.
++ Sopro de Dragão (Recarga 5–6)
+_Teste de Resistência de Destreza:_ CD 14, cada criatura num Cone de 9 m. _Falha:_ 28 (8d6) de dano do tipo escolhido no traço Origem Dracônica. _Sucesso:_ Metade do dano.
++ Salto
+O meio-dragão salta até 9 m gastando 3 m de movimento.
+
+=== Harpy
++ Garra
++ Canção Sedutora
+A harpia canta uma melodia mágica, que dura até a Concentração dela na canção acabar. _Teste de Resistência de Sabedoria:_ CD 11, cada Humanoide e Gigante numa Emanação de 90 m a partir da harpia quando a canção começa. _Falha:_ O alvo fica com a condição Enfeitiçado até a canção acabar e repete o teste no fim de cada turno dele. Enfeitiçado, o alvo fica com a condição Incapacitado e ignora a Canção Sedutora de outras harpias. Se estiver a mais de 1,5 m da harpia, o alvo se move no turno dele na direção dela pelo caminho mais direto, tentando chegar a até 1,5 m. Ele não evita Ataques de Oportunidade, mas repete o teste antes de entrar em terreno perigoso (como lava ou um buraco) e sempre que sofrer dano de uma fonte que não seja a harpia. _Sucesso:_ O alvo fica imune à Canção Sedutora desta harpia por 24 horas.
+
+=== Hell Hound
++ Táticas de Matilha
+O cão tem Vantagem numa jogada de ataque contra uma criatura se pelo menos um aliado dele estiver a até 1,5 m dela e não estiver com a condição Incapacitado.
++ Ataques Múltiplos
+O cão faz dois ataques de Mordida.
++ Mordida
++ Sopro de Fogo (Recarga 5–6)
+_Teste de Resistência de Destreza:_ CD 12, cada criatura num Cone de 4,5 m. _Falha:_ 17 (5d6) de dano de fogo. _Sucesso:_ Metade do dano.
+
+=== Hezrou
++ Restauração Demoníaca
+Se o hezrou morrer fora do Abismo, o corpo se desfaz em icor, e ele ganha um corpo novo na hora, revivendo com todos os Pontos de Vida em algum lugar do Abismo.
++ Resistência à Magia
+O hezrou tem Vantagem nos testes de resistência contra magias e outros efeitos mágicos.
++ Fedor
+_Teste de Resistência de Constituição:_ CD 16, qualquer criatura que comece o turno numa Emanação de 3 m a partir do hezrou. _Falha:_ O alvo fica com a condição Envenenado até o início do próximo turno dele.
++ Ataques Múltiplos
+O hezrou faz três ataques de Dilacerar.
++ Dilacerar
++ Salto
+O hezrou salta até 9 m gastando 3 m de movimento.
+
+=== Hill Giant
++ Ataques Múltiplos
+O gigante faz dois ataques, com Clava de Árvore ou Arremessar Lixo, em qualquer combinação.
++ Clava de Árvore
+_Jogada de Ataque Corpo a Corpo:_ +8, alcance 3 m. _Acerto:_ 18 (3d8 + 5) de dano contundente. Se o alvo for uma criatura Grande ou menor, fica com a condição Caído.
++ Arremessar Lixo
+_Jogada de Ataque à Distância:_ +8, alcance 18/72 m. _Acerto:_ 16 (2d10 + 5) de dano contundente, e o alvo fica com a condição Envenenado até o fim do próximo turno dele.
+
+=== Hippogriff
++ Voo Rasante
+O hipogrifo não provoca Ataque de Oportunidade quando voa para fora do alcance de um inimigo.
++ Ataques Múltiplos
+O hipogrifo faz dois ataques de Dilacerar.
++ Dilacerar
+
+=== Hobgoblin Warrior
++ Táticas de Matilha
+O hobgoblin tem Vantagem numa jogada de ataque contra uma criatura se pelo menos um aliado dele estiver a até 1,5 m dela e não estiver com a condição Incapacitado.
++ Espada Longa
++ Arco Longo
+
+=== Hobgoblin Captain
++ Aura de Autoridade
+Dentro de uma Emanação de 3 m a partir do hobgoblin, ele e seus aliados têm Vantagem nas jogadas de ataque e nos testes de resistência, desde que o hobgoblin não esteja com a condição Incapacitado.
++ Ataques Múltiplos
+O hobgoblin faz dois ataques, com Espada Grande ou Arco Longo, em qualquer combinação.
++ Espada Grande
++ Arco Longo
+
+=== Homunculus
++ Vínculo Telepático
+Enquanto o homúnculo estiver no mesmo plano de existência que o mestre dele, os dois podem se comunicar por telepatia.
++ Mordida
+_Jogada de Ataque Corpo a Corpo:_ +4, alcance 1,5 m. _Acerto:_ 1 de dano perfurante, e o alvo sofre o efeito a seguir. _Teste de Resistência de Constituição:_ CD 12. _Falha:_ O alvo fica com a condição Envenenado até o fim do próximo turno do homúnculo. _Falha por 5 ou Mais:_ O alvo fica com a condição Envenenado por 1 minuto. Envenenado, ele também fica com a condição Inconsciente, que acaba antes se ele sofrer qualquer dano.
+
+=== Horned Devil
++ Restauração Diabólica
+Se o diabo morrer fora dos Nove Infernos, o corpo some numa fumaça sulfurosa, e ele ganha um corpo novo na hora, revivendo com todos os Pontos de Vida em algum lugar dos Nove Infernos.
++ Resistência à Magia
+O diabo tem Vantagem nos testes de resistência contra magias e outros efeitos mágicos.
++ Ataques Múltiplos
+O diabo faz três ataques, com Forcado Abrasador ou Arremessar Chamas, em qualquer combinação. Ele pode trocar um ataque por um uso de Cauda Infernal.
++ Forcado Abrasador
++ Arremessar Chamas
+_Jogada de Ataque à Distância:_ +8, alcance 45 m. _Acerto:_ 26 (5d8 + 4) de dano de fogo. Se o alvo for um objeto inflamável que ninguém esteja vestindo ou carregando, ele pega fogo.
++ Cauda Infernal
+_Teste de Resistência de Destreza:_ CD 17, uma criatura que o diabo consiga ver a até 3 m. _Falha:_ 10 (1d8 + 6) de dano necrótico, e o alvo recebe uma ferida infernal se ainda não tiver uma. Enquanto estiver ferido, perde 10 (3d6) Pontos de Vida no início de cada turno dele. A ferida se fecha depois de 1 minuto, depois que uma magia devolver Pontos de Vida ao alvo, ou depois que ele ou uma criatura a até 1,5 m usar uma ação para estancá-la, com um teste de Sabedoria (Medicina) CD 17 bem-sucedido.
+
+=== Hydra
++ Prender a Respiração
+A hidra consegue prender a respiração por 1 hora.
++ Várias Cabeças
+A hidra tem cinco cabeças. Sempre que sofre 25 de dano ou mais num único turno, uma das cabeças morre. A hidra morre se todas as cabeças morrerem. No fim de cada turno dela em que tiver pelo menos uma cabeça viva, nascem duas cabeças para cada uma que morreu desde o último turno, a não ser que ela tenha sofrido dano de fogo desde então. A hidra recupera 20 Pontos de Vida quando nascem cabeças novas.
++ Cabeças Atentas
+Para cada cabeça além da primeira, a hidra ganha uma Reação extra, que só pode ser usada em Ataques de Oportunidade.
++ Ataques Múltiplos
+A hidra faz tantos ataques de Mordida quanto o número de cabeças que tem.
++ Mordida
+
+=== Ice Devil
++ Restauração Diabólica
+Se o diabo morrer fora dos Nove Infernos, o corpo some numa fumaça sulfurosa, e ele ganha um corpo novo na hora, revivendo com todos os Pontos de Vida em algum lugar dos Nove Infernos.
++ Resistência à Magia
+O diabo tem Vantagem nos testes de resistência contra magias e outros efeitos mágicos.
++ Ataques Múltiplos
+O diabo faz três ataques de Lança de Gelo. Ele pode trocar um ataque por um ataque de Cauda.
++ Lança de Gelo
+_Jogada de Ataque Corpo a Corpo ou à Distância:_ +10, alcance 1,5 m ou 9/36 m. _Acerto:_ 14 (2d8 + 5) de dano perfurante mais 10 (3d6) de dano de frio. Até o fim do próximo turno dele, o alvo não pode usar Ação Bônus nem Reação, o Deslocamento dele diminui 3 m e, no turno dele, pode se mover ou fazer uma ação, não as duas. _Acerto ou Erro:_ A lança volta magicamente para a mão do diabo logo depois de um ataque à distância.
++ Cauda
++ Muralha de Gelo (Recarga 6)
+O diabo conjura _Muralha de Gelo_ (versão de 8º círculo), sem precisar de componentes e usando Inteligência como atributo de conjuração (CD de resistência 17).
+
+=== Imp
++ Resistência à Magia
+O diabrete tem Vantagem nos testes de resistência contra magias e outros efeitos mágicos.
++ Ferrão
++ Invisibilidade
+O diabrete conjura _Invisibilidade_ em si mesmo, sem precisar de componentes e usando Carisma como atributo de conjuração.
++ Mudar de Forma
+O diabrete muda de forma para parecer um rato (Deslocamento 6 m), um corvo (6 m, Voo 18 m) ou uma aranha (6 m, Escalada 6 m), ou volta à forma verdadeira. As estatísticas de jogo dele são as mesmas em todas as formas, fora o Deslocamento. O equipamento que ele veste ou carrega não se transforma.
+
+=== Incubus
++ Forma de Súcubo
+Quando termina um Descanso Longo, o íncubo pode mudar de forma para um **Súcubo**, passando a usar aquela ficha em vez desta. O equipamento que ele veste ou carrega não se transforma.
++ Ataques Múltiplos
+O íncubo faz dois ataques de Toque Inquietante.
++ Toque Inquietante
+_Jogada de Ataque Corpo a Corpo:_ +7, alcance 1,5 m. _Acerto:_ 15 (3d6 + 5) de dano psíquico, e o alvo fica amaldiçoado por 24 horas ou até o íncubo morrer. Até a maldição acabar, o alvo não recebe benefício nenhum ao terminar Descansos Curtos.
++ Conjuração
+O íncubo conjura uma das magias a seguir, sem precisar de componentes Materiais e usando Carisma como atributo de conjuração (CD de resistência 15):
+
+**À vontade:** _Disfarçar-se_, _Forma Etérea_
+
+**1/Dia cada:** _Sonho_, _Padrão Hipnótico_
++ Pesadelo (Recarga 6)
+_Teste de Resistência de Sabedoria:_ CD 15, uma criatura que o íncubo consiga ver a até 18 m. _Falha:_ Se o alvo tiver 20 Pontos de Vida ou menos, fica com a condição Inconsciente por 1 hora, até sofrer dano ou até uma criatura a até 1,5 m dele usar uma ação para acordá-lo. Se tiver mais, sofre 18 (4d8) de dano psíquico.
+
+=== Invisible Stalker
++ Forma de Ar
+O perseguidor pode entrar no espaço de um inimigo e parar ali. Ele passa por frestas de até 2,5 centímetros sem gastar movimento extra.
++ Invisibilidade
+O perseguidor está com a condição Invisível.
++ Ataques Múltiplos
+O perseguidor faz três ataques de Golpe de Vento. Ele pode trocar um ataque por um uso de Vórtice.
++ Golpe de Vento
++ Vórtice
+_Teste de Resistência de Constituição:_ CD 14, uma criatura Grande ou menor no espaço do perseguidor. _Falha:_ 7 (1d8 + 3) de dano trovejante, e o alvo fica com a condição Agarrado (CD 13 para escapar). Até a agarrada acabar, o alvo não pode conjurar magias com componente Verbal e sofre 7 (2d6) de dano trovejante no início de cada turno do perseguidor.
+
+=== Iron Golem
++ Absorção de Fogo
+Sempre que sofreria dano de fogo, o golem recupera Pontos de Vida iguais ao dano de fogo causado.
++ Forma Imutável
+O golem não pode mudar de forma.
++ Resistência à Magia
+O golem tem Vantagem nos testes de resistência contra magias e outros efeitos mágicos.
++ Ataques Múltiplos
+O golem faz dois ataques, com Braço de Lâmina ou Raio Flamejante, em qualquer combinação.
++ Braço de Lâmina
++ Raio Flamejante
+_Jogada de Ataque à Distância:_ +10, alcance 36 m. _Acerto:_ 36 (8d8) de dano de fogo.
++ Sopro Venenoso (Recarga 6)
+_Teste de Resistência de Constituição:_ CD 18, cada criatura num Cone de 18 m. _Falha:_ 55 (10d10) de dano de veneno. _Sucesso:_ Metade do dano.
+
+=== Knight
++ Ataques Múltiplos
+O cavaleiro faz dois ataques, com Espada Grande ou Besta Pesada, em qualquer combinação.
++ Espada Grande
++ Besta Pesada
++ Aparar
+_Gatilho:_ O cavaleiro é atingido por uma jogada de ataque corpo a corpo enquanto segura uma arma. _Resposta:_ O cavaleiro soma 2 à CA contra esse ataque, o que pode fazê-lo errar.
+
+=== Kobold Warrior
++ Táticas de Matilha
+O kobold tem Vantagem numa jogada de ataque contra uma criatura se pelo menos um aliado dele estiver a até 1,5 m dela e não estiver com a condição Incapacitado.
++ Sensibilidade à Luz do Sol
+Sob a luz do sol, o kobold tem Desvantagem nos testes de atributo e nas jogadas de ataque.
++ Adaga
+
+=== Kraken
++ Anfíbio
+O kraken respira ar e água.
++ Resistência Lendária (4/Dia, ou 5/Dia no Covil)
+Se o kraken falhar num teste de resistência, pode escolher ser bem-sucedido.
++ Monstro de Cerco
+O kraken causa dano dobrado a objetos e estruturas.
++ Ataques Múltiplos
+O kraken faz dois ataques de Tentáculo e usa Arremessar, Descarga Elétrica ou Engolir.
++ Tentáculo
+_Jogada de Ataque Corpo a Corpo:_ +17, alcance 9 m. _Acerto:_ 24 (4d6 + 10) de dano contundente. O alvo fica com a condição Agarrado (CD 20 para escapar) por um dos dez tentáculos e com a condição Contido até a agarrada acabar.
++ Arremessar
+O kraken arremessa uma criatura Grande ou menor Agarrada por ele para um espaço que consiga ver a até 18 m e que não esteja no ar. _Teste de Resistência de Destreza:_ CD 25, a criatura arremessada e cada criatura no espaço de destino. _Falha:_ 18 (4d8) de dano contundente, e o alvo fica com a condição Caído. _Sucesso:_ Só metade do dano.
++ Descarga Elétrica
+_Teste de Resistência de Destreza:_ CD 23, uma criatura que o kraken consiga ver a até 36 m. _Falha:_ 33 (6d10) de dano elétrico. _Sucesso:_ Metade do dano.
++ Engolir
+_Teste de Resistência de Destreza:_ CD 25, uma criatura Agarrada pelo kraken (ele pode ter até quatro criaturas engolidas ao mesmo tempo). _Falha:_ 23 (3d8 + 10) de dano perfurante. Se o alvo for Grande ou menor, ele é engolido e deixa de estar Agarrado. A criatura engolida fica com a condição Contido, tem Cobertura Total contra ataques e outros efeitos de fora do kraken e sofre 24 (7d6) de dano ácido no início de cada turno dela.
+
+Se o kraken sofrer 50 de dano ou mais num único turno vindo de uma criatura dentro dele, ele precisa ser bem-sucedido num teste de resistência de Constituição CD 25 no fim desse turno ou regurgita todas as criaturas engolidas, que caem num espaço a até 3 m dele com a condição Caído. Se o kraken morrer, as criaturas engolidas deixam de estar Contidas e podem sair do cadáver usando 4,5 m de movimento, saindo Caídas.
++ :intro
+_Usos de Ação Lendária: 3 (4 no Covil). Logo depois do turno de outra criatura, o kraken pode gastar um uso para fazer uma das ações a seguir. Ele recupera todos os usos gastos no início de cada turno seu._
++ Raio da Tempestade
+O kraken usa Descarga Elétrica.
++ Tinta Tóxica
+_Teste de Resistência de Constituição:_ CD 23, cada criatura numa Emanação de 4,5 m a partir do kraken, enquanto ele estiver debaixo d'água. _Falha:_ O alvo fica com as condições Cego e Envenenado até o fim do próximo turno do kraken. Então o kraken se move até o seu Deslocamento. _Falha ou Sucesso:_ O kraken só pode usar esta ação de novo no início do próximo turno dele.
+
+=== Lamia
++ Ataques Múltiplos
+A lâmia faz dois ataques de Garra. Ela pode trocar um ataque por um uso de Toque Corruptor.
++ Garra
++ Toque Corruptor
+_Teste de Resistência de Sabedoria:_ CD 13, uma criatura que a lâmia consiga ver a até 1,5 m. _Falha:_ 13 (3d8) de dano psíquico, e o alvo fica amaldiçoado por 1 hora. Até a maldição acabar, o alvo fica com as condições Enfeitiçado e Envenenado.
++ Conjuração
+A lâmia conjura uma das magias a seguir, sem precisar de componentes Materiais e usando Carisma como atributo de conjuração (CD de resistência 13):
+
+**À vontade:** _Disfarçar-se_ (pode parecer um bípede Grande ou Médio), _Ilusão Menor_
+
+**1/Dia cada:** _Missão_, _Imagem Maior_, _Vidência_
++ Salto
+A lâmia salta até 9 m gastando 3 m de movimento.
+
+=== Lemure
++ Restauração Infernal
+Se o lêmure morrer nos Nove Infernos, ele revive com todos os Pontos de Vida em 1d10 dias, a não ser que seja morto por uma criatura sob o efeito da magia _Bênção_ ou que os restos dele sejam aspergidos com Água Benta.
++ Gosma Vil
+
+=== Lich
++ Resistência Lendária (4/Dia, ou 5/Dia no Covil)
+Se o lich falhar num teste de resistência, pode escolher ser bem-sucedido.
++ Jarro Espiritual
+Se for destruído, o lich se refaz em 1d10 dias, desde que tenha um jarro espiritual, e revive com todos os Pontos de Vida. O corpo novo aparece num espaço desocupado dentro do covil do lich.
++ Ataques Múltiplos
+O lich faz três ataques, com Explosão Sobrenatural ou Toque Paralisante, em qualquer combinação.
++ Explosão Sobrenatural
+_Jogada de Ataque Corpo a Corpo ou à Distância:_ +12, alcance 1,5 m ou 36 m. _Acerto:_ 31 (4d12 + 5) de dano de energia.
++ Toque Paralisante
+_Jogada de Ataque Corpo a Corpo:_ +12, alcance 1,5 m. _Acerto:_ 15 (3d6 + 5) de dano de frio, e o alvo fica com a condição Paralisado até o início do próximo turno do lich.
++ Conjuração
+O lich conjura uma das magias a seguir, usando Inteligência como atributo de conjuração (CD de resistência 20):
+
+**À vontade:** _Detectar Magia_, _Detectar Pensamentos_, _Dissipar Magia_, _Bola de Fogo_ (versão de 5º círculo), _Invisibilidade_, _Relâmpago_ (versão de 5º círculo), _Mãos Mágicas_, _Prestidigitação_
+
+**2/Dia cada:** _Animar os Mortos_, _Porta Dimensional_, _Viagem Planar_
+
+**1/Dia cada:** _Relâmpago em Cadeia_, _Dedo da Morte_, _Palavra de Poder: Matar_, _Vidência_
++ Magia Protetora
+O lich conjura _Contramágica_ ou _Escudo Arcano_ em resposta ao gatilho da magia, usando o mesmo atributo de conjuração de Conjuração.
++ :intro
+_Usos de Ação Lendária: 3 (4 no Covil). Logo depois do turno de outra criatura, o lich pode gastar um uso para fazer uma das ações a seguir. Ele recupera todos os usos gastos no início de cada turno seu._
++ Teletransporte Mortal
+O lich se teletransporta até 18 m para um espaço desocupado que consiga ver, e cada criatura a até 3 m do espaço que ele deixou sofre 11 (2d10) de dano necrótico.
++ Romper a Vida
+_Teste de Resistência de Constituição:_ CD 20, cada criatura que não seja Morto-Vivo numa Emanação de 6 m a partir do lich. _Falha:_ 31 (9d6) de dano necrótico. _Sucesso:_ Metade do dano. _Falha ou Sucesso:_ O lich só pode usar esta ação de novo no início do próximo turno dele.
++ Olhar Aterrorizante
+O lich conjura _Medo_, usando o mesmo atributo de conjuração de Conjuração. Ele só pode usar esta ação de novo no início do próximo turno dele.
+
+=== Mage
++ Ataques Múltiplos
+O mago faz três ataques de Explosão Arcana.
++ Explosão Arcana
+_Jogada de Ataque Corpo a Corpo ou à Distância:_ +6, alcance 1,5 m ou 36 m. _Acerto:_ 16 (3d8 + 3) de dano de energia.
++ Conjuração
+O mago conjura uma das magias a seguir, usando Inteligência como atributo de conjuração (CD de resistência 14):
+
+**À vontade:** _Detectar Magia_, _Luz_, _Armadura Arcana_ (já incluída na CA), _Mãos Mágicas_, _Prestidigitação_
+
+**2/Dia cada:** _Bola de Fogo_ (versão de 4º círculo), _Invisibilidade_
+
+**1/Dia cada:** _Cone de Frio_, _Voo_
++ Passo Nebuloso (3/Dia)
+O mago conjura _Passo Nebuloso_, usando o mesmo atributo de conjuração de Conjuração.
++ Magia Protetora (3/Dia)
+O mago conjura _Contramágica_ ou _Escudo Arcano_ em resposta ao gatilho da magia, usando o mesmo atributo de conjuração de Conjuração.
+
+=== Archmage
++ Resistência à Magia
+O arquimago tem Vantagem nos testes de resistência contra magias e outros efeitos mágicos.
++ Ataques Múltiplos
+O arquimago faz quatro ataques de Explosão Arcana.
++ Explosão Arcana
+_Jogada de Ataque Corpo a Corpo ou à Distância:_ +9, alcance 1,5 m ou 45 m. _Acerto:_ 27 (4d10 + 5) de dano de energia.
++ Conjuração
+O arquimago conjura uma das magias a seguir, usando Inteligência como atributo de conjuração (CD de resistência 17):
+
+**À vontade:** _Detectar Magia_, _Detectar Pensamentos_, _Disfarçar-se_, _Invisibilidade_, _Luz_, _Armadura Arcana_ (já incluída na CA), _Mãos Mágicas_, _Prestidigitação_
+
+**2/Dia cada:** _Voo_, _Relâmpago_ (versão de 7º círculo)
+
+**1/Dia cada:** _Cone de Frio_ (versão de 9º círculo), _Mente Vazia_ (conjurada antes do combate), _Vidência_, _Teletransporte_
++ Passo Nebuloso (3/Dia)
+O arquimago conjura _Passo Nebuloso_, usando o mesmo atributo de conjuração de Conjuração.
++ Magia Protetora (3/Dia)
+O arquimago conjura _Contramágica_ ou _Escudo Arcano_ em resposta ao gatilho da magia, usando o mesmo atributo de conjuração de Conjuração.
+
+=== Magmin
++ Explosão Final
+O magmin explode quando morre. _Teste de Resistência de Destreza:_ CD 11, cada criatura numa Emanação de 3 m a partir do magmin. _Falha:_ 7 (2d6) de dano de fogo. _Sucesso:_ Metade do dano.
++ Toque
+_Jogada de Ataque Corpo a Corpo:_ +4, alcance 1,5 m. _Acerto:_ 7 (2d4 + 2) de dano de fogo. Se o alvo for uma criatura ou um objeto inflamável que ninguém esteja vestindo ou carregando, ele pega fogo.
++ Iluminação Ardente
+O magmin se incendeia ou apaga as próprias chamas. Em chamas, ele emite Luz Plena num raio de 3 m e Penumbra por mais 3 m.
+
+=== Manticore
++ Ataques Múltiplos
+A mantícora faz três ataques, com Dilacerar ou Espinho da Cauda, em qualquer combinação.
++ Dilacerar
++ Espinho da Cauda
+
+=== Marilith
++ Restauração Demoníaca
+Se a marilith morrer fora do Abismo, o corpo se desfaz em icor, e ela ganha um corpo novo na hora, revivendo com todos os Pontos de Vida em algum lugar do Abismo.
++ Resistência à Magia
+A marilith tem Vantagem nos testes de resistência contra magias e outros efeitos mágicos.
++ Reativa
+A marilith pode usar uma Reação em cada turno de combate.
++ Ataques Múltiplos
+A marilith faz seis ataques de Lâmina do Pacto e usa Constringir.
++ Lâmina do Pacto
++ Constringir
+_Teste de Resistência de Força:_ CD 17, uma criatura Média ou menor que a marilith consiga ver a até 1,5 m. _Falha:_ 15 (2d10 + 4) de dano contundente. O alvo fica com a condição Agarrado (CD 14 para escapar) e com a condição Contido até a agarrada acabar.
++ Teletransporte (Recarga 5–6)
+A marilith se teletransporta até 36 m para um espaço desocupado que consiga ver.
++ Aparar
+_Gatilho:_ A marilith é atingida por uma jogada de ataque corpo a corpo enquanto segura uma arma. _Resposta:_ A marilith soma 5 à CA contra esse ataque, o que pode fazê-la errar.
