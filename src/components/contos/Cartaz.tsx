@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { buscarPersonagem } from "@/lib/personagens";
-import type { ArteDoCartaz, Serie } from "@/lib/contos";
+import { rostosDoElenco, type ArteDoCartaz, type Serie } from "@/lib/contos";
 import { Selo } from "@/components/ui/Selo";
 
 /**
@@ -144,23 +143,25 @@ function Arte({
     );
   }
 
-  // Mosaico: uma faixa estreita de cada retrato, rosto no alto
-  const retratos = arte.personagens.flatMap((slug) => {
-    const personagem = buscarPersonagem(slug);
-    return personagem ? [personagem.meta.imagem] : [];
-  });
+  // Mosaico: uma faixa estreita de cada retrato, com o rosto no meio dela
+  const retratos = rostosDoElenco(arte.personagens);
 
   return (
     <div className="absolute inset-0 flex gap-px bg-black transition-transform duration-500 motion-safe:group-hover:scale-105">
-      {retratos.map((imagem) => (
-        <div key={imagem} className="relative h-full flex-1 overflow-hidden">
+      {retratos.map((retrato) => (
+        <div key={retrato.slug} className="relative h-full flex-1 overflow-hidden">
+          {/* O retrato ocupa a altura toda da faixa e transborda para os
+              lados. Ancorado no meio da faixa e puxado de volta pela
+              posição do rosto, deixa o rosto exatamente no centro, seja
+              qual for a largura da faixa ou do retrato. */}
           <Image
-            src={imagem}
+            src={retrato.imagem}
             alt=""
-            fill
+            width={400}
+            height={500}
             priority={prioridade}
-            sizes="(max-width: 640px) 12vw, 60px"
-            className="object-cover object-top sepia-[0.15]"
+            className="absolute top-0 left-1/2 h-full w-auto max-w-none min-w-full object-cover sepia-[0.15]"
+            style={{ transform: `translateX(-${retrato.rosto.x * 100}%)` }}
           />
         </div>
       ))}

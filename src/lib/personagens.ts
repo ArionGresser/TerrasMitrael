@@ -118,6 +118,13 @@ export type MetaPersonagem = {
   resumo: string;
   imagem: string;
   imagemAlt: string;
+  /**
+   * Onde fica o rosto no retrato, de 0 a 1 na largura e na altura.
+   * Serve a quem recorta o retrato numa faixa estreita, como o mosaico dos
+   * cartazes dos Contos: sem isso a faixa mostra o meio da imagem, e o meio
+   * quase nunca é o rosto.
+   */
+  rosto?: { x: number; y: number };
   ilustracao?: string;
   ilustracaoAlt?: string;
   /** Símbolo do clã ou da casa, em PNG ou WebP com fundo transparente. */

@@ -74,7 +74,10 @@ export function Elenco({
                 alt=""
                 fill
                 sizes="56px"
-                className="object-cover object-top sepia-[0.12]"
+                className="object-cover sepia-[0.12]"
+                style={{
+                  objectPosition: `${rosto.rosto.x * 100}% ${rosto.rosto.y * 100}%`,
+                }}
               />
             </span>
             {tamanho === "normal" ? (

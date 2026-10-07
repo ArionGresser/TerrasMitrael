@@ -189,8 +189,8 @@ export function rostosDoElenco(slugs: string[]) {
   return slugs.flatMap((slug) => {
     const personagem = buscarPersonagem(slug);
     if (!personagem) return [];
-    const { nome, imagem } = personagem.meta;
-    return [{ slug, nome, imagem }];
+    const { nome, imagem, rosto } = personagem.meta;
+    return [{ slug, nome, imagem, rosto: rosto ?? { x: 0.5, y: 0 } }];
   });
 }
 
