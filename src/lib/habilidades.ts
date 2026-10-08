@@ -1,14 +1,25 @@
+import { arte } from "./arte";
+import { magiaPeloNome } from "./magias";
+import { miniaturaDaMagia } from "./magias-arte";
+import { buscarDocumento } from "./regras";
+
 /**
  * O catálogo de magias, traços, talentos e características de classe.
  *
  * Cada coisa existe aqui uma vez só. As fichas dos personagens não copiam
  * descrição nem imagem: elas apontam para a chave daqui. Duas pessoas com
- * Dobre a Finados leem exatamente o mesmo texto, e corrigir um erro corrige
- * em todas as fichas de uma vez.
+ * Bênção leem exatamente o mesmo texto, e corrigir um erro corrige em todas
+ * as fichas de uma vez.
  *
- * Para acrescentar o ícone de uma magia, preencha `icone` com o caminho do
- * arquivo em public/images/magias/. Enquanto estiver vazio, a ficha mostra
- * um selo em branco no lugar, sem buraco no layout.
+ * E o que já existe no site vem de lá, sozinho:
+ *   - a magia que está no Grimório traz de lá o nome, o círculo, a escola,
+ *     o tempo, o alcance, a duração, o texto e o ícone. Aqui fica só o que o
+ *     jogador anotou na ficha;
+ *   - o talento que está no Livro do Aventureiro traz de lá a arte e o link
+ *     para a regra (`regra` é a âncora dele lá, quando difere da chave);
+ *   - o resto (traços, características, magias de fora do SRD) procura o
+ *     ícone em public/images/habilidades/<chave>.webp.
+ * Enquanto não há imagem, a ficha mostra o selo de "em obra" no lugar.
  */
 
 export type TipoDeHabilidade =
@@ -28,11 +39,20 @@ export type Habilidade = {
   tempo?: string;
   alcance?: string;
   duracao?: string;
-  /** Caminho da imagem em public/images/magias/, quando existir. */
-  icone?: string;
-  descricao: string;
+  /** O texto próprio, para o que não vem do Grimório. */
+  descricao?: string;
   /** O que o jogador anotou de próprio punho na ficha. */
   anotacao?: string;
+  /** No talento, a âncora dele no Livro, quando não é a própria chave. */
+  regra?: string;
+};
+
+/** A habilidade como a ficha mostra: com o que veio do Grimório e do Livro. */
+export type HabilidadeNaFicha = Habilidade & {
+  icone?: string;
+  /** O texto do Grimório, em markdown curto, quando a magia está lá. */
+  texto?: string;
+  link?: { href: string; rotulo: string };
 };
 
 export const HABILIDADES: Record<string, Habilidade> = {
@@ -41,37 +61,16 @@ export const HABILIDADES: Record<string, Habilidade> = {
   resistencia: {
     nome: "Resistência",
     tipo: "truque",
-    circulo: 0,
-    escola: "Abjuração",
-    tempo: "1 ação",
-    alcance: "Toque",
-    duracao: "Concentração, até 1 minuto",
-    descricao:
-      "Toca uma criatura disposta e a abençoa contra o que vier. Uma vez antes da magia acabar, ela pode rolar 1d4 e somar o resultado a uma salvaguarda que esteja fazendo.",
   },
 
   orientacao: {
     nome: "Orientação",
     tipo: "truque",
-    circulo: 0,
-    escola: "Adivinhação",
-    tempo: "1 ação",
-    alcance: "Toque",
-    duracao: "Concentração, até 1 minuto",
-    descricao:
-      "Toca uma criatura disposta e guia a mão dela. Uma vez antes da magia acabar, ela pode rolar 1d4 e somar o resultado a um teste de habilidade.",
   },
 
   "chama-sagrada": {
     nome: "Chama Sagrada",
     tipo: "truque",
-    circulo: 0,
-    escola: "Evocação",
-    tempo: "1 ação",
-    alcance: "18 metros",
-    duracao: "Instantânea",
-    descricao:
-      "Um clarão de fogo divino desce sobre a criatura escolhida. Ela faz uma salvaguarda de Destreza e, se falhar, sofre 1d8 de dano radiante. Cobertura não protege de uma luz que vem de cima.",
     anotacao: "1d8 radiante",
   },
 
@@ -80,7 +79,7 @@ export const HABILIDADES: Record<string, Habilidade> = {
     tipo: "truque",
     circulo: 0,
     escola: "Necromancia",
-    tempo: "1 ação",
+    tempo: "Ação",
     alcance: "18 metros",
     duracao: "Instantânea",
     descricao:
@@ -91,13 +90,6 @@ export const HABILIDADES: Record<string, Habilidade> = {
   "ilusao-menor": {
     nome: "Ilusão Menor",
     tipo: "truque",
-    circulo: 0,
-    escola: "Ilusão",
-    tempo: "1 ação",
-    alcance: "9 metros",
-    duracao: "1 minuto",
-    descricao:
-      "Cria um som ou a imagem de um objeto, do tamanho de um cubo de metro e meio. Quem desconfiar pode gastar uma ação estudando a ilusão: acertando um teste de Investigação contra a CD da magia, percebe a farsa.",
     anotacao: "1 minuto",
   },
 
@@ -106,26 +98,12 @@ export const HABILIDADES: Record<string, Habilidade> = {
   "curar-ferimentos": {
     nome: "Curar Ferimentos",
     tipo: "magia",
-    circulo: 1,
-    escola: "Abjuração",
-    tempo: "1 ação",
-    alcance: "Toque",
-    duracao: "Instantânea",
-    descricao:
-      "Toca uma criatura e fecha o que estava aberto. Ela recupera pontos de vida iguais à rolagem mais o modificador de conjuração. Não funciona em mortos-vivos nem em construtos.",
     anotacao: "1d8",
   },
 
   bencao: {
     nome: "Bênção",
     tipo: "magia",
-    circulo: 1,
-    escola: "Encantamento",
-    tempo: "1 ação",
-    alcance: "9 metros",
-    duracao: "Concentração, até 1 minuto",
-    descricao:
-      "Abençoa até três criaturas ao alcance. Enquanto durar, cada uma delas soma 1d4 às jogadas de ataque e às salvaguardas que fizer.",
   },
 
   "bracos-de-hadar": {
@@ -133,7 +111,7 @@ export const HABILIDADES: Record<string, Habilidade> = {
     tipo: "magia",
     circulo: 1,
     escola: "Conjuração",
-    tempo: "1 ação",
+    tempo: "Ação",
     alcance: "3 metros (a partir de si)",
     duracao: "Instantânea",
     descricao:
@@ -144,13 +122,6 @@ export const HABILIDADES: Record<string, Habilidade> = {
   "destruicao-divina": {
     nome: "Destruição Divina",
     tipo: "magia",
-    circulo: 1,
-    escola: "Evocação",
-    tempo: "Ação bônus, logo após acertar",
-    alcance: "Pessoal",
-    duracao: "Instantânea",
-    descricao:
-      "Logo depois de acertar uma criatura com arma corpo a corpo ou ataque desarmado, o golpe acende. O alvo sofre 2d8 de dano radiante a mais, e mais 1d8 se for corruptor ou morto-vivo. Cada círculo acima do primeiro soma outro 1d8.",
     anotacao: "Ação bônus, toque, só voz",
   },
 
@@ -159,7 +130,7 @@ export const HABILIDADES: Record<string, Habilidade> = {
     tipo: "magia",
     circulo: 1,
     escola: "Encantamento",
-    tempo: "Ação bônus",
+    tempo: "Ação Bônus",
     alcance: "9 metros",
     duracao: "Concentração, até 1 minuto",
     descricao:
@@ -396,6 +367,7 @@ export const HABILIDADES: Record<string, Habilidade> = {
   "iniciado-em-magia-clerigo": {
     nome: "Iniciado em Magia: Clérigo",
     tipo: "talento",
+    regra: "iniciado-em-magia",
     descricao:
       "Aprendeu dois truques e uma magia de 1º círculo da lista de clérigo. A magia pode ser conjurada uma vez por descanso longo sem gastar espaço.",
   },
@@ -422,20 +394,57 @@ export const HABILIDADES: Record<string, Habilidade> = {
   },
 };
 
+/** As âncoras dos talentos que o Livro do Aventureiro tem. */
+const TALENTOS_DO_LIVRO = new Set(
+  (buscarDocumento("talentos")?.grupos ?? []).flatMap((g) =>
+    g.itens.filter((i) => i.titulo).map((i) => i.id),
+  ),
+);
+
 /** Busca uma habilidade pela chave, avisando alto quando a chave não existe. */
-export function buscarHabilidade(chave: string): Habilidade {
-  const habilidade = HABILIDADES[chave];
-  if (!habilidade) {
+export function buscarHabilidade(chave: string): HabilidadeNaFicha {
+  const h = HABILIDADES[chave];
+  if (!h) {
     throw new Error(
       `A habilidade "${chave}" não existe em src/lib/habilidades.ts. Cadastre-a lá antes de usar numa ficha.`
     );
   }
-  return habilidade;
-}
 
-/** Todas as magias e truques que ainda estão sem ícone. */
-export function magiasSemIcone(): { chave: string; habilidade: Habilidade }[] {
-  return Object.entries(HABILIDADES)
-    .filter(([, h]) => !h.icone)
-    .map(([chave, habilidade]) => ({ chave, habilidade }));
+  if (h.tipo === "truque" || h.tipo === "magia") {
+    const m = magiaPeloNome(h.nome);
+    if (m) {
+      return {
+        ...h,
+        nome: m.nome,
+        circulo: m.nivel,
+        escola: m.escola,
+        // "Ação Bônus, que você usa logo depois..." vira só "Ação Bônus"
+        tempo: m.tempo.split(",")[0],
+        alcance: m.alcance,
+        duracao: m.duracao,
+        texto: m.texto,
+        icone: miniaturaDaMagia(m.slug),
+        link: { href: `/magias/${m.slug}/`, rotulo: "Regra completa no Grimório" },
+      };
+    }
+  }
+
+  if (h.tipo === "talento") {
+    const ancora = h.regra ?? chave;
+    if (TALENTOS_DO_LIVRO.has(ancora)) {
+      return {
+        ...h,
+        icone: arte("regras/talentos/mini", ancora) ?? arte("regras/talentos", ancora),
+        link: {
+          href: `/regras/talentos/#${ancora}`,
+          rotulo: "Regra completa no Livro do Aventureiro",
+        },
+      };
+    }
+  }
+
+  return {
+    ...h,
+    icone: arte("habilidades/mini", chave) ?? arte("habilidades", chave),
+  };
 }

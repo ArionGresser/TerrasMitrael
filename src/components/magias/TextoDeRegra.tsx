@@ -17,11 +17,24 @@ import { monstroPeloNome } from "@/lib/monstros";
  * ele vira link para a página dela. O negrito com o nome de uma criatura do
  * bestiário (como **Sombra**) vira link para a ficha dela.
  */
-export function TextoDeRegra({ texto }: { texto: string }) {
+export function TextoDeRegra({
+  texto,
+  compacto = false,
+}: {
+  texto: string;
+  /** Letra menor e blocos mais juntos, para caber numa ficha ou num cartão. */
+  compacto?: boolean;
+}) {
   const blocos = texto.trim().split(/\n\s*\n/);
 
   return (
-    <div className="space-y-3.5 text-[0.95rem] leading-[1.75] sm:text-base">
+    <div
+      className={
+        compacto
+          ? "space-y-2 text-sm leading-relaxed"
+          : "space-y-3.5 text-[0.95rem] leading-[1.75] sm:text-base"
+      }
+    >
       {blocos.map((bloco, i) => (
         <Bloco key={i} bloco={bloco.trim()} />
       ))}

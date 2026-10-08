@@ -277,6 +277,49 @@ def artes_das_magias():
     return icones, cenas
 
 
+ROTULO_DA_HABILIDADE = {
+    "truque": "truque fora do SRD",
+    "magia": "magia fora do SRD",
+    "talento": "talento",
+    "traco": "traço de espécie",
+    "classe": "característica de classe",
+    "invocacao": "invocação mística",
+}
+
+
+def fichas(d):
+    """O que aparece nas fichas e não tem arte em outra seção do site.
+
+    Espelha o buscarHabilidade de src/lib/habilidades.ts: a magia que está no
+    Grimório usa o ícone de lá, o talento que está no Livro usa a arte de lá,
+    e o resto procura em public/images/habilidades/<chave>.webp."""
+    texto = (RAIZ / "src/lib/habilidades.ts").read_text()
+    corpo = texto[texto.index("export const HABILIDADES") :]
+    entradas = re.findall(
+        r'\n  "?([a-z0-9-]+)"?: \{\n    nome: "([^"]+)",\n    tipo: "([a-z]+)",(.*?)\n  \},',
+        corpo,
+        re.S,
+    )
+    no_grimorio = {m["nome"] for m in json.loads((RAIZ / "content/magias/magias.json").read_text())}
+    talentos = {
+        ancora(l[3:].strip())
+        for l in (RAIZ / "content/regras/talentos.md").read_text().split("\n")
+        if l.startswith("## ")
+    }
+    linhas = []
+    for chave, nome, tipo, resto in entradas:
+        if tipo in ("truque", "magia") and nome in no_grimorio:
+            continue
+        regra = re.search(r'regra: "([^"]+)"', resto)
+        if tipo == "talento" and (regra.group(1) if regra else chave) in talentos:
+            continue
+        prompt = f"fantasy RPG ability icon, {d[('habilidades', chave)]}, {ICONE}"
+        linhas.append(
+            arte("habilidades", chave, f"{nome} ({ROTULO_DA_HABILIDADE[tipo]})", "quadrado", prompt)
+        )
+    return linhas
+
+
 SECOES = [
     ("livro", "Livro", lambda d: livro(d)),
     ("especies", "Espécies", lambda d: especies()),
@@ -286,6 +329,7 @@ SECOES = [
     ("equipamento", "Equipamento", lambda d: regras("equipamento", d)),
     ("itens", "Itens Mágicos", lambda d: itens()),
     ("monstros", "Monstros", lambda d: monstros()),
+    ("fichas", "Fichas", lambda d: fichas(d)),
 ]
 
 # O prefixo do nome de entrega, quando ele precisa de um
@@ -298,6 +342,7 @@ PREFIXO = {
     "regras/equipamento": "equipamento",
     "itens": "item",
     "monstros": "monstro",
+    "habilidades": "ficha",
 }
 
 

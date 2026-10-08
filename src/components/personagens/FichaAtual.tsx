@@ -1,8 +1,8 @@
 import Image from "next/image";
 import type { FichaAtual as Ficha } from "@/lib/personagens";
 import Link from "next/link";
-import { buscarHabilidade, type Habilidade } from "@/lib/habilidades";
-import { magiaPeloNome } from "@/lib/magias";
+import { buscarHabilidade, type HabilidadeNaFicha } from "@/lib/habilidades";
+import { TextoDeRegra } from "@/components/magias/TextoDeRegra";
 import { Ornamento } from "@/components/ui/Titulo";
 import { Selo } from "@/components/ui/Selo";
 import { Secao } from "@/components/personagens/Painel";
@@ -63,15 +63,15 @@ function CorpoDaAba({ children }: { children: React.ReactNode }) {
 }
 
 /** O selo em branco que segura o lugar do ícone que ainda não chegou. */
-function IconeDaHabilidade({ habilidade }: { habilidade: Habilidade }) {
+function IconeDaHabilidade({ habilidade }: { habilidade: HabilidadeNaFicha }) {
   if (habilidade.icone) {
     return (
       <Image
         src={habilidade.icone}
         alt=""
-        width={52}
-        height={52}
-        className="border-dourado-600/30 size-13 shrink-0 rounded-sm border object-cover"
+        width={64}
+        height={64}
+        className="border-dourado-600/40 size-16 shrink-0 rounded-sm border object-cover shadow-[0_2px_6px_-2px_rgba(0,0,0,0.5)]"
       />
     );
   }
@@ -79,7 +79,7 @@ function IconeDaHabilidade({ habilidade }: { habilidade: Habilidade }) {
   return (
     <span
       title="O ícone desta habilidade ainda está sendo desenhado"
-      className="border-dourado-600/25 bg-pergaminho-200/50 flex size-13 shrink-0 flex-col items-center justify-center gap-0.5 rounded-sm border border-dashed"
+      className="border-dourado-600/25 bg-pergaminho-200/50 flex size-16 shrink-0 flex-col items-center justify-center gap-0.5 rounded-sm border border-dashed"
     >
       <Selo variante="marca" aria-hidden className="size-6 opacity-25" />
       <span className="font-titulo text-tinta-500 text-[0.4rem] leading-none tracking-[0.08em] uppercase">
@@ -125,9 +125,15 @@ function ListaDeHabilidades({ chaves }: { chaves: string[] }) {
             </div>
 
             <div className="col-span-2 mt-2 sm:col-span-1 sm:col-start-2 sm:mt-1">
-              <p className="text-tinta-700 text-sm leading-snug">
-                {h.descricao}
-              </p>
+              {h.texto ? (
+                <div className="text-tinta-700">
+                  <TextoDeRegra texto={h.texto} compacto />
+                </div>
+              ) : (
+                <p className="text-tinta-700 text-sm leading-snug">
+                  {h.descricao}
+                </p>
+              )}
 
               {h.anotacao ? (
                 <p className="text-tinta-500 mt-1 text-xs italic">
@@ -135,12 +141,12 @@ function ListaDeHabilidades({ chaves }: { chaves: string[] }) {
                 </p>
               ) : null}
 
-              {ehMagia && magiaPeloNome(h.nome) ? (
+              {h.link ? (
                 <Link
-                  href={`/magias/${magiaPeloNome(h.nome)!.slug}/`}
+                  href={h.link.href}
                   className="text-tinta-700 hover:text-heraldico-vermelho decoration-dourado-600/60 mt-1.5 inline-block text-xs underline underline-offset-2 transition-colors"
                 >
-                  Regra completa no Grimório →
+                  {h.link.rotulo} →
                 </Link>
               ) : null}
             </div>

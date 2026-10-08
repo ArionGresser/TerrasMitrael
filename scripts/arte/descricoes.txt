@@ -134,3 +134,38 @@ tunica | a hooded robe
 vara | a long wooden pole
 vela | a lit wax candle
 veneno-basico | a vial of basic poison, dark green liquid with a skull label
+
+## habilidades
+dobre-a-finados | a spectral funeral bell tolling over a wounded creature, ripples of sickly green necrotic energy
+bracos-de-hadar | writhing tentacles of dark violet energy bursting out all around a warlock
+duelo-compelido | a glowing magenta chain of magic binding a knight to a single foe, two crossed swords
+armadura-das-sombras | a cloak of living shadows wrapping a warlock like armor, faint violet glow
+conjuracao | a spellcaster's hands weaving glowing arcane runes above an open spellbook
+ordem-divina-taumaturgo | a cleric's holy symbol radiating divine light above an open scripture
+ataque-furtivo | a dagger striking from the shadows toward an exposed back
+especialista | a master's tools crossed under a golden star of expertise
+girias-de-ladrao | secret thieves' cant symbols chalked on a stone wall, hidden coded marks
+maestria-com-armas | a warrior's hand gripping a sword with perfect technique, glowing weapon mastery runes
+defesa-sem-armadura | an unarmored warrior surrounded by a shimmering protective aura
+furia | a barbarian roaring in battle rage, wrapped in a red fury aura
+invocacoes-misticas | a warlock's pact sigils glowing in violet eldritch fire
+magia-de-pacto | a glowing infernal contract and an otherworldly eye watching from the dark
+maos-consagradas | glowing healing hands radiating golden divine light
+investida | a centaur charging forward at full gallop, dust flying behind
+cascos | powerful horse hooves stomping the ground with a shockwave
+afinidade-natural | a hand resting on a tree trunk while leaves swirl and small animals gather
+agilidade-pequenina | a small halfling nimbly slipping between the legs of a much larger creature
+coragem | a small halfling standing brave before a looming shadow, golden courage aura
+furtividade-natural | a small figure hiding behind a larger companion, half in shadow
+sorte | a four-leaf clover and a twenty-sided die glowing with golden luck
+visao-no-escuro | glowing eyes piercing pitch darkness
+furia-dos-pequenos | a small goblin striking a much larger foe with fierce determination
+fuga-agil | a goblin darting away and vanishing behind cover
+astucia-goblinoide | a cunning goblin grinning beside a clever trap
+visao-no-escuro-anao | dwarven eyes seeing through the darkness of a deep mine tunnel
+resiliencia-ana | a dwarf shrugging off a cloud of green poison
+tenacidade-ana | a sturdy dwarf standing firm as stone, glowing with extra vitality
+conhecimento-de-pedras | a dwarf touching a stone wall that ripples with waves of tremorsense
+instinto-cacador | a predator's eye locking onto its prey in the forest
+rugido-aterrador | a beastfolk warrior unleashing a frightening roar, shockwave of fear
+vigoroso | a battle-scarred warrior standing tall, a glowing red heart of vitality in the chest
