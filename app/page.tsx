@@ -25,14 +25,6 @@ const PORTAIS = [
     alt: "A floresta de Sovara Mithr",
   },
   {
-    href: "/eventos/",
-    nome: "Eventos",
-    texto:
-      "A história que moldou Mitrael, das expedições que partiram às guerras que ninguém esqueceu.",
-    imagem: "/images/story/guerra-leviana.jpg",
-    alt: "Cena da Grande Guerra Leviana",
-  },
-  {
     href: "/personagens/",
     nome: "Personagens",
     texto:
@@ -44,7 +36,7 @@ const PORTAIS = [
     href: "/contos/",
     nome: "Contos",
     texto:
-      "As sessões jogadas, contadas como história. Cada sessão vira um episódio, temporada por temporada.",
+      "As sessões jogadas, contadas episódio por episódio, e a história que moldou o continente, como a Grande Guerra Leviana.",
     imagem: "/images/contos/cronicas/t2e2-saida.webp",
     alt: "A saída de uma mina na encosta de um morro, com um vilarejo lá embaixo no vale",
   },

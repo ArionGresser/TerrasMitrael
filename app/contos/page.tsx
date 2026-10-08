@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { SERIES, type Serie } from "@/lib/contos";
-import { Cartaz } from "@/components/contos/Cartaz";
+import { SERIES } from "@/lib/contos";
+import { EVENTOS } from "@/lib/eventos";
+import { Cartaz, Poster } from "@/components/contos/Cartaz";
 import { Pergaminho } from "@/components/ui/Pergaminho";
-import { BotaoLink } from "@/components/ui/Botao";
 import { Revelar } from "@/components/ui/Revelar";
 import { Rodape } from "@/components/Rodape";
 import {
@@ -15,7 +15,7 @@ import {
 export const metadata: Metadata = {
   title: "Contos",
   description:
-    "As sessões jogadas em Terras de Mitrael, contadas como história: a campanha principal, temporada por temporada, e o que mais vier por aí.",
+    "As sessões jogadas em Terras de Mitrael, contadas como história, e os eventos que moldaram o continente, como a Grande Guerra Leviana.",
 };
 
 export default function PaginaContos() {
@@ -31,8 +31,8 @@ export default function PaginaContos() {
             <TituloBrasao className="mt-4">Contos de Mitrael</TituloBrasao>
             <Ornamento className="mt-6" />
             <p className="text-tinta-700 mx-auto mt-6 max-w-lg text-base leading-relaxed italic">
-              Cada sessão vira um episódio. Nada aqui foi inventado depois:
-              foi jogado, decidido nos dados e pago por alguém.
+              As sessões jogadas, contadas episódio por episódio, e a
+              história que o continente carregava antes delas.
             </p>
           </header>
         </Pergaminho>
@@ -43,11 +43,31 @@ export default function PaginaContos() {
           </TituloSecao>
         </Revelar>
 
-        <ul className="mt-6 space-y-6">
+        {/* A estante do que já pode ser lido: as séries e os grandes
+            eventos da história, todos no mesmo formato de cartaz */}
+        <ul className="mx-auto mt-6 grid max-w-md grid-cols-2 gap-4 sm:gap-6">
           {emCartaz.map((serie, i) => (
             <li key={serie.slug}>
               <Revelar atraso={i * 0.08}>
-                <Destaque serie={serie} prioridade={i === 0} />
+                <Cartaz serie={serie} prioridade={i === 0} />
+              </Revelar>
+            </li>
+          ))}
+          {EVENTOS.map(({ meta }, i) => (
+            <li key={meta.slug}>
+              <Revelar atraso={(emCartaz.length + i) * 0.08}>
+                <Poster
+                  arte={{
+                    tipo: "imagem",
+                    imagem: meta.imagem,
+                    alt: meta.imagemAlt,
+                    posicao: "center",
+                  }}
+                  selo="Evento histórico"
+                  titulo={meta.nome}
+                  chamada={meta.subtitulo}
+                  href={`/eventos/${meta.slug}/`}
+                />
               </Revelar>
             </li>
           ))}
@@ -80,47 +100,5 @@ export default function PaginaContos() {
 
       <Rodape />
     </>
-  );
-}
-
-/**
- * A série em cartaz ganha a faixa larga, como o destaque de um catálogo de
- * filmes: o cartaz de um lado, a sinopse e o convite do outro.
- */
-function Destaque({
-  serie,
-  prioridade,
-}: {
-  serie: Serie;
-  prioridade: boolean;
-}) {
-  const temporadas = serie.temporadas.length;
-
-  return (
-    <div className="border-dourado-600/30 bg-madeira-950/60 flex flex-col items-center gap-6 rounded-sm border p-5 shadow-[0_10px_30px_-12px_rgba(0,0,0,0.8)] sm:flex-row sm:items-stretch sm:p-6">
-      <div className="w-44 shrink-0 sm:w-52">
-        <Cartaz serie={serie} prioridade={prioridade} />
-      </div>
-
-      <div className="flex min-w-0 flex-col justify-center text-center sm:text-left">
-        <p className="font-titulo text-dourado-400 text-[0.66rem] tracking-[0.25em] uppercase">
-          {serie.selo}
-          {temporadas > 0
-            ? ` · ${temporadas} ${temporadas === 1 ? "temporada" : "temporadas"}`
-            : ""}
-        </p>
-        <h3 className="font-brasao text-pergaminho-50 mt-2 text-3xl leading-tight sm:text-4xl">
-          {serie.titulo}
-        </h3>
-        <p className="text-pergaminho-200 mt-4 text-sm leading-relaxed sm:text-base">
-          {serie.sinopse}
-        </p>
-        <div className="mt-6">
-          <BotaoLink href={`/contos/${serie.slug}/`} variante="primario">
-            Escolher a temporada
-          </BotaoLink>
-        </div>
-      </div>
-    </div>
   );
 }

@@ -9,6 +9,18 @@
 [build.environment]
   NODE_VERSION = "24"
 
+# A página de Eventos virou parte dos Contos: quem chegar pelo endereço
+# antigo cai na estante nova. A página de cada evento continua onde estava.
+[[redirects]]
+  from = "/eventos/"
+  to = "/contos/"
+  status = 301
+
+[[redirects]]
+  from = "/eventos"
+  to = "/contos/"
+  status = 301
+
 # Cabeçalhos de segurança aplicados a todas as páginas
 [[headers]]
   for = "/*"

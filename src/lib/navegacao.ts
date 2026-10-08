@@ -23,11 +23,6 @@ export const SECOES: Secao[] = [
     descricao: "As terras, cidades e florestas do continente",
   },
   {
-    href: "/eventos/",
-    nome: "Eventos",
-    descricao: "A história que moldou o mundo",
-  },
-  {
     href: "/personagens/",
     nome: "Personagens",
     descricao: "Os heróis que caminharam por estas terras",
@@ -35,7 +30,8 @@ export const SECOES: Secao[] = [
   {
     href: "/contos/",
     nome: "Contos",
-    descricao: "As sessões jogadas, contadas como história",
+    descricao: "As sessões jogadas e a história do continente",
+    inclui: ["/eventos/"],
   },
   {
     href: "/regras/",

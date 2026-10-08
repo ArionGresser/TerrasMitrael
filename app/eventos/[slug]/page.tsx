@@ -4,10 +4,16 @@ import { notFound } from "next/navigation";
 import { EVENTOS, buscarEvento } from "@/lib/eventos";
 import { Pergaminho } from "@/components/ui/Pergaminho";
 import { Capitulos } from "@/components/ui/Capitulos";
+import { LinhaDoTempo } from "@/components/LinhaDoTempo";
 import { Revelar } from "@/components/ui/Revelar";
 import { BotaoLink } from "@/components/ui/Botao";
 import { Rodape } from "@/components/Rodape";
-import { TituloBrasao, Sobretitulo, Ornamento } from "@/components/ui/Titulo";
+import {
+  TituloBrasao,
+  TituloSecao,
+  Sobretitulo,
+  Ornamento,
+} from "@/components/ui/Titulo";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -67,8 +73,27 @@ export default async function PaginaEvento({ params }: Props) {
           </div>
         </Pergaminho>
 
+        {/* A cronologia da Terceira Era, que antes morava na página de
+            Eventos: é a linha do tempo desta mesma guerra */}
         <Revelar className="mt-8">
-          <Pergaminho variante="cartao" borda={3} inclinacao="direita">
+          <Pergaminho borda={3}>
+            <div className="text-center">
+              <Sobretitulo>Terceira Era</Sobretitulo>
+              <TituloSecao className="mt-2">Cronologia</TituloSecao>
+              <p className="text-tinta-500 mx-auto mt-3 max-w-md text-sm leading-relaxed">
+                Reconstruída a partir das crônicas. Os marcos em vermelho são os
+                que mudaram o continente de vez.
+              </p>
+            </div>
+
+            <div className="mt-9">
+              <LinhaDoTempo />
+            </div>
+          </Pergaminho>
+        </Revelar>
+
+        <Revelar className="mt-8">
+          <Pergaminho variante="cartao" borda={2} inclinacao="direita">
             <p className="text-tinta-700 text-center text-sm leading-relaxed">
               Cada local de Mitrael carrega alguma marca desta guerra. Alguns
               carregam mais do que outros.
@@ -81,8 +106,8 @@ export default async function PaginaEvento({ params }: Props) {
               >
                 A Terra dos Putrefados
               </BotaoLink>
-              <BotaoLink href="/eventos/" variante="secundario" className="text-xs">
-                Voltar aos eventos
+              <BotaoLink href="/contos/" variante="secundario" className="text-xs">
+                Voltar aos Contos
               </BotaoLink>
             </div>
           </Pergaminho>
