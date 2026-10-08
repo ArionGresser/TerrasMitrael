@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import {
   MapaDeMitrael,
   type LocalNoMapa,
@@ -9,6 +8,8 @@ import { MARCADORES_LOCAIS, LUGARES_SEM_PAGINA } from "@/lib/marcadores";
 import { LOCAIS } from "@/lib/locais";
 import { REGIOES } from "@/lib/regioes";
 import { CONTORNOS } from "@/lib/regioes-do-mapa";
+import { AbrirNoMapa } from "@/components/mapa/AbrirNoMapa";
+import { Capitulos } from "@/components/ui/Capitulos";
 import { Pergaminho } from "@/components/ui/Pergaminho";
 import { Revelar } from "@/components/ui/Revelar";
 import { Rodape } from "@/components/Rodape";
@@ -17,16 +18,20 @@ import { TituloCapitulo } from "@/components/ui/Titulo";
 export const metadata: Metadata = {
   title: "Mapa",
   description:
-    "O mapa interativo do continente de Mitrael: arraste, aproxime e abra cada lugar, dos mares Bazáltico, de Qän e Leviano às Terras de Askar seladas a oeste.",
+    "O mapa interativo do continente de Mitrael: arraste, aproxime e abra cada lugar para ler a sua história, de Razavar e Sovara Mithr às Terras de Askar seladas a oeste.",
 };
 
 export default function PaginaMapa() {
-  // Cada marcador com o que o painel mostra: arte, subtítulo e resumo
+  // Cada marcador com o que o painel mostra: a arte, o subtítulo e a
+  // história inteira do lugar, que vem de content/locais/ em capítulos
   const locais: LocalNoMapa[] = MARCADORES_LOCAIS.flatMap((m) => {
     const local = LOCAIS.find((l) => l.meta.slug === m.slug);
     if (!local) return [];
-    const { nome, subtitulo, resumo, imagem, imagemAlt } = local.meta;
-    return [{ slug: m.slug, nome, subtitulo, resumo, imagem, imagemAlt, x: m.x, y: m.y, lado: m.lado }];
+    const { nome, subtitulo, resumo, chamada, imagem, imagemAlt } = local.meta;
+    const historia = <Capitulos Texto={local.Conteudo} rotuloAbrir="Ler mais" />;
+    return [
+      { slug: m.slug, nome, subtitulo, resumo, chamada, historia, imagem, imagemAlt, x: m.x, y: m.y, lado: m.lado },
+    ];
   });
 
   // Cada região com o contorno tirado do desenho e o texto do painel
@@ -52,16 +57,16 @@ export default function PaginaMapa() {
                 Locais marcados no mapa
               </TituloCapitulo>
               <p className="text-tinta-500 mx-auto mt-2 max-w-md text-center text-xs leading-relaxed">
-                Os mesmos pontos do mapa, em lista, para quem preferir navegar
-                assim
+                Os mesmos pontos do mapa, em lista: escolha um e o mapa abre
+                a história dele
               </p>
 
               <ul className="mt-5 grid gap-2 sm:grid-cols-2">
                 {locais.map((local) => (
                   <li key={local.slug}>
-                    <Link
-                      href={`/locais/${local.slug}/`}
-                      className="border-dourado-600/25 hover:bg-dourado-400/15 hover:border-dourado-600/50 flex min-h-11 items-center gap-2.5 rounded-sm border px-3 py-2 transition-colors"
+                    <AbrirNoMapa
+                      chave={local.slug}
+                      className="border-dourado-600/25 hover:bg-dourado-400/15 hover:border-dourado-600/50 flex min-h-11 w-full items-center gap-2.5 rounded-sm border px-3 py-2 text-left transition-colors"
                     >
                       <span
                         aria-hidden
@@ -75,7 +80,7 @@ export default function PaginaMapa() {
                           {local.subtitulo}
                         </span>
                       </span>
-                    </Link>
+                    </AbrirNoMapa>
                   </li>
                 ))}
               </ul>
@@ -86,7 +91,7 @@ export default function PaginaMapa() {
           <Revelar className="mt-8">
             <Pergaminho variante="cartao" borda={3} inclinacao="esquerda">
               <TituloCapitulo className="text-center">
-                Desenhados no mapa, ainda sem página
+                Desenhados no mapa, com a história por contar
               </TituloCapitulo>
               <p className="text-tinta-500 mx-auto mt-2 max-w-lg text-center text-xs leading-relaxed">
                 Lugares que aparecem nas histórias dos personagens e nas

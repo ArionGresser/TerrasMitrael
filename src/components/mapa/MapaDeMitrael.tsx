@@ -1,12 +1,12 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState, type ReactNode } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { MAPA } from "@/lib/marcadores";
 import { LARGURA_BASE, ALTURA_BASE } from "@/lib/regioes-do-mapa";
 import { tocar } from "@/lib/som";
+import { Ornamento } from "@/components/ui/Titulo";
 
 /**
  * O mapa de Mitrael como um mundo para percorrer, no espírito do mapa do
@@ -21,6 +21,9 @@ import { tocar } from "@/lib/som";
  * marcadores ficam numa camada à parte, que não escala: continuam do mesmo
  * tamanho e nítidos em qualquer zoom.
  *
+ * O painel de cada lugar traz a história inteira dele, em capítulos que
+ * se desenrolam ali mesmo: o mapa é a única porta para os locais.
+ *
  * Tudo funciona também no teclado (setas, + e −, 0 e Esc, e a lista
  * "Explorar"), e quem pediu menos movimento recebe trocas diretas, sem voo
  * nem inércia.
@@ -31,6 +34,10 @@ export type LocalNoMapa = {
   nome: string;
   subtitulo: string;
   resumo: string;
+  /** A frase de convite que abre a história. */
+  chamada: string;
+  /** A história inteira, já montada em capítulos pela página do mapa. */
+  historia: ReactNode;
   imagem: string;
   imagemAlt: string;
   x: number;
@@ -53,8 +60,12 @@ export type RegiaoNoMapa = {
 type Camera = { x: number; y: number; s: number };
 type Aberto = { tipo: "local" | "regiao"; chave: string } | null;
 
-/** A largura do painel no computador, em pixels. */
-const PAINEL = 384;
+/**
+ * A largura do painel no computador, em pixels: larga o bastante para ler a
+ * história de um lugar sem cansar, sem nunca passar da metade do mapa.
+ */
+const PAINEL = 460;
+const larguraDoPainel = (w: number) => Math.min(PAINEL, Math.round(w * 0.5));
 /** Quanto o mapa aproxima além do encaixe inicial, no máximo. */
 const ZOOM_MAXIMO = 3.2;
 /** Abaixo disto, soltar o dedo é um clique, não um arrasto. */
@@ -198,13 +209,13 @@ export function MapaDeMitrael({
   /** Abre a folga do painel, que vai aparecer à direita ou embaixo. */
   const abrirFolga = useCallback(() => {
     const { w, h } = telaRef.current;
-    folga.current = w >= 768 ? { direita: PAINEL, baixo: 0 } : { direita: 0, baixo: h * 0.62 };
+    folga.current = w >= 768 ? { direita: larguraDoPainel(w), baixo: 0 } : { direita: 0, baixo: h * 0.62 };
   }, []);
 
   const areaLivre = useCallback(() => {
     const { w, h } = telaRef.current;
     return w >= 768
-      ? { cx: (w - PAINEL) / 2, cy: h / 2, lw: w - PAINEL, lh: h }
+      ? { cx: (w - larguraDoPainel(w)) / 2, cy: h / 2, lw: w - larguraDoPainel(w), lh: h }
       : { cx: w / 2, cy: h * 0.28, lw: w, lh: h * 0.5 };
   }, []);
 
@@ -321,6 +332,21 @@ export function MapaDeMitrael({
     const consulta = p.toString();
     window.history.replaceState(null, "", consulta ? `?${consulta}` : window.location.pathname);
   }, [aberto]);
+
+  // ---------- Abrir a partir de fora ----------
+  // A lista de lugares embaixo do mapa pede para abrir um deles por um
+  // aviso (ver AbrirNoMapa.tsx): o mapa sobe para a vista e voa até lá.
+
+  useEffect(() => {
+    const ouvir = (e: Event) => {
+      const { tipo, chave } = (e as CustomEvent<{ tipo: "local" | "regiao"; chave: string }>).detail;
+      palco.current?.scrollIntoView({ behavior: reduzido ? "auto" : "smooth", block: "center" });
+      if (tipo === "regiao") abrirRegiao(chave);
+      else abrirLocal(chave);
+    };
+    window.addEventListener("mapa:abrir", ouvir);
+    return () => window.removeEventListener("mapa:abrir", ouvir);
+  }, [abrirLocal, abrirRegiao, reduzido]);
 
   // ---------- Arrastar e pinçar ----------
 
@@ -589,7 +615,7 @@ export function MapaDeMitrael({
                 key={l.slug}
                 type="button"
                 onClick={() => (ativo ? fechar() : abrirLocal(l.slug))}
-                aria-label={`${l.nome}: abrir o resumo do lugar`}
+                aria-label={`${l.nome}: abrir a história do lugar`}
                 aria-pressed={ativo}
                 className="group absolute grid size-11 -translate-x-1/2 -translate-y-1/2 place-items-center"
                 style={{ left: sx, top: sy }}
@@ -730,7 +756,7 @@ export function MapaDeMitrael({
           mexeu || aberto ? "opacity-0" : "opacity-100"
         }`}
       >
-        Arraste para explorar · role ou belisque para aproximar · clique numa região
+        Arraste para explorar · role ou belisque para aproximar · clique numa região ou num lugar
       </p>
 
       {/* O painel do que foi escolhido: à direita no computador, por baixo no celular */}
@@ -743,7 +769,8 @@ export function MapaDeMitrael({
             animate={{ opacity: 1, x: 0, y: 0 }}
             exit={{ opacity: 0, x: largo ? 40 : 0, y: largo ? 0 : 40 }}
             transition={{ duration: reduzido ? 0 : 0.35, ease: [0.22, 1, 0.36, 1] }}
-            className="textura-pergaminho borda-envelhecida folha-alta text-tinta-900 absolute inset-x-0 bottom-0 z-30 max-h-[62%] cursor-auto overflow-y-auto rounded-t-sm md:inset-x-auto md:top-0 md:right-0 md:max-h-none md:w-96 md:rounded-none"
+            style={largo ? { width: larguraDoPainel(tela.w) } : undefined}
+            className="textura-pergaminho borda-envelhecida folha-alta text-tinta-900 absolute inset-x-0 bottom-0 z-30 max-h-[62%] cursor-auto overflow-y-auto overscroll-contain rounded-t-sm md:inset-x-auto md:top-0 md:right-0 md:max-h-none md:rounded-none"
           >
             {local ? (
               <PainelDoLocal
@@ -831,26 +858,24 @@ function PainelDoLocal({
           src={local.imagem}
           alt={local.imagemAlt}
           fill
-          sizes="(max-width: 768px) 100vw, 384px"
+          sizes="(max-width: 768px) 100vw, 460px"
           className="object-cover sepia-[0.12]"
         />
         <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
         <BotaoFechar fechar={fechar} />
       </div>
 
-      <div className="px-5 pt-4 pb-5">
+      <div className="px-5 pt-4 pb-5 sm:px-6">
         <p className="font-titulo text-tinta-500 text-[0.62rem] tracking-[0.25em] uppercase">
           {local.subtitulo}
         </p>
         <h2 className="font-brasao text-tinta-900 mt-1 text-3xl leading-tight">{local.nome}</h2>
-        <p className="text-tinta-700 mt-3 text-sm leading-relaxed">{local.resumo}</p>
+        <p className="text-tinta-700 mt-3 text-sm leading-relaxed italic">{local.chamada}</p>
 
-        <Link
-          href={`/locais/${local.slug}/`}
-          className="bg-heraldico-vermelho text-pergaminho-50 hover:bg-heraldico-vermelho-claro font-titulo mt-5 inline-flex min-h-11 items-center rounded-sm px-5 text-xs font-semibold tracking-[0.12em] uppercase transition-colors"
-        >
-          Explorar o local
-        </Link>
+        <Ornamento className="mt-5" />
+
+        {/* A história inteira, com cada capítulo enrolado até ser aberto */}
+        <div className="mt-4 [&_h2]:text-2xl">{local.historia}</div>
 
         {vizinhos.length > 1 ? (
           <Vizinhos
