@@ -3,7 +3,7 @@
 Gerada por `scripts/magias/arte/gerar-lista.py`. Não edite à mão: as palavras-chave
 ficam em `palavras-chave.txt`, e o resto sai do grimório.
 
-**Ícones prontos:** 50 de 339 · **Ilustrações prontas:** 0 de 339
+**Ícones prontos:** 92 de 339 · **Ilustrações prontas:** 0 de 339
 
 ## Como entregar uma arte
 
@@ -105,54 +105,54 @@ medieval fantasy illustration of <a wizard, a cleric...> casting the spell <nome
 | I· | Escrita Ilusória | Illusory Script | Ilusão | `escrita-ilusoria` | magical script shifting on parchment, secret runes |
 | I· | Escudo Arcano | Shield | Abjuração | `escudo-arcano` | sudden invisible barrier of force blocking an arrow |
 | I· | Escudo da Fé | Shield of Faith | Abjuração | `escudo-da-fe` | shimmering holy shield sigil around an ally |
-| ·· | Faca de Gelo | Ice Knife | Conjuração | `faca-de-gelo` | dagger of ice shattering into shards |
-| ·· | Falar com Animais | Speak with Animals | Adivinhação | `falar-com-animais` | person talking with a fox and a bird, speech glow |
-| ·· | Favor Divino | Divine Favor | Transmutação | `favor-divino` | weapon glowing with radiant divine energy |
-| ·· | Fogo das Fadas | Faerie Fire | Evocação | `fogo-das-fadas` | creatures outlined in glowing blue and violet fey light |
-| ·· | Golpe Constritor | Ensnaring Strike | Conjuração | `golpe-constritor` | thorny vines sprouting from a weapon to entangle |
-| ·· | Heroísmo | Heroism | Encantamento | `heroismo` | heroic glowing aura, courageous warrior, banner of light |
-| ·· | Identificação | Identify | Adivinhação | `identificacao` | magnifying light revealing secrets of a magic ring |
-| ·· | Imagem Silenciosa | Silent Image | Ilusão | `imagem-silenciosa` | silent illusory image of a dragon shimmering |
-| ·· | Infligir Ferimentos | Inflict Wounds | Necromancia | `infligir-ferimentos` | hand of necrotic energy draining life |
-| ·· | Leque Cromático | Color Spray | Ilusão | `leque-cromatico` | dazzling burst of rainbow light from a hand |
-| ·· | Marca do Caçador | Hunter's Mark | Adivinhação | `marca-do-cacador` | glowing hunter's sigil marking prey, crosshair of light |
-| ·· | Mãos Flamejantes | Burning Hands | Evocação | `maos-flamejantes` | thin sheet of flames fanning from spread hands |
-| ·· | Mísseis Mágicos | Magic Missile | Evocação | `misseis-magicos` | three glowing darts of force streaking forward |
-| ·· | Névoa Obscurecente | Fog Cloud | Conjuração | `nevoa-obscurecente` | thick sphere of grey fog |
-| ·· | Onda Trovejante | Thunderwave | Evocação | `onda-trovejante` | wave of thunderous force blasting outward |
-| ·· | Orbe Cromático | Chromatic Orb | Evocação | `orbe-cromatico` | orb shifting between fire, ice, lightning, acid colors |
-| ·· | Palavra Curativa | Healing Word | Abjuração | `palavra-curativa` | spoken word of healing as golden letters |
-| ·· | Passos Largos | Longstrider | Transmutação | `passos-largos` | boots with glowing magic stride, long footsteps |
-| ·· | Perdição | Bane | Encantamento | `perdicao` | dark sigil weakening, chains of shadow, cursed aura |
-| ·· | Proteção contra o Bem e o Mal | Protection from Evil and Good | Abjuração | `protecao-contra-o-bem-e-o-mal` | protective rune circle repelling demon and angel |
-| ·· | Purificar Alimentos e Bebidas | Purify Food and Drink | Transmutação | `purificar-alimentos-e-bebidas` | goblet of water purified by sparkling light |
-| ·· | Queda Suave | Feather Fall | Transmutação | `queda-suave` | person falling slowly like a feather, floating feathers |
+| I· | Faca de Gelo | Ice Knife | Conjuração | `faca-de-gelo` | dagger of ice shattering into shards |
+| I· | Falar com Animais | Speak with Animals | Adivinhação | `falar-com-animais` | person talking with a fox and a bird, speech glow |
+| I· | Favor Divino | Divine Favor | Transmutação | `favor-divino` | weapon glowing with radiant divine energy |
+| I· | Fogo das Fadas | Faerie Fire | Evocação | `fogo-das-fadas` | creatures outlined in glowing blue and violet fey light |
+| I· | Golpe Constritor | Ensnaring Strike | Conjuração | `golpe-constritor` | thorny vines sprouting from a weapon to entangle |
+| I· | Heroísmo | Heroism | Encantamento | `heroismo` | heroic glowing aura, courageous warrior, banner of light |
+| I· | Identificação | Identify | Adivinhação | `identificacao` | magnifying light revealing secrets of a magic ring |
+| I· | Imagem Silenciosa | Silent Image | Ilusão | `imagem-silenciosa` | silent illusory image of a dragon shimmering |
+| I· | Infligir Ferimentos | Inflict Wounds | Necromancia | `infligir-ferimentos` | hand of necrotic energy draining life |
+| I· | Leque Cromático | Color Spray | Ilusão | `leque-cromatico` | dazzling burst of rainbow light from a hand |
+| I· | Marca do Caçador | Hunter's Mark | Adivinhação | `marca-do-cacador` | glowing hunter's sigil marking prey, crosshair of light |
+| I· | Mãos Flamejantes | Burning Hands | Evocação | `maos-flamejantes` | thin sheet of flames fanning from spread hands |
+| I· | Mísseis Mágicos | Magic Missile | Evocação | `misseis-magicos` | three glowing darts of force streaking forward |
+| I· | Névoa Obscurecente | Fog Cloud | Conjuração | `nevoa-obscurecente` | thick sphere of grey fog |
+| I· | Onda Trovejante | Thunderwave | Evocação | `onda-trovejante` | wave of thunderous force blasting outward |
+| I· | Orbe Cromático | Chromatic Orb | Evocação | `orbe-cromatico` | orb shifting between fire, ice, lightning, acid colors |
+| I· | Palavra Curativa | Healing Word | Abjuração | `palavra-curativa` | spoken word of healing as golden letters |
+| I· | Passos Largos | Longstrider | Transmutação | `passos-largos` | boots with glowing magic stride, long footsteps |
+| I· | Perdição | Bane | Encantamento | `perdicao` | dark sigil weakening, chains of shadow, cursed aura |
+| I· | Proteção contra o Bem e o Mal | Protection from Evil and Good | Abjuração | `protecao-contra-o-bem-e-o-mal` | protective rune circle repelling demon and angel |
+| I· | Purificar Alimentos e Bebidas | Purify Food and Drink | Transmutação | `purificar-alimentos-e-bebidas` | goblet of water purified by sparkling light |
+| I· | Queda Suave | Feather Fall | Transmutação | `queda-suave` | person falling slowly like a feather, floating feathers |
 | ·· | Raio Adoecedor | Ray of Sickness | Necromancia | `raio-adoecedor` | sickly green ray of poison |
-| ·· | Raio Guiador | Guiding Bolt | Evocação | `raio-guiador` | flash of radiant light streaking toward a target |
-| ·· | Recuo Acelerado | Expeditious Retreat | Transmutação | `recuo-acelerado` | blurred running figure, speed lines, wind trail |
-| ·· | Repreensão Infernal | Hellish Rebuke | Evocação | `repreensao-infernal` | hellish flames engulfing an attacker, fiendish |
-| ·· | Riso Histérico | Hideous Laughter | Encantamento | `riso-histerico` | creature collapsed laughing uncontrollably, comic mask |
-| ·· | Salto | Jump | Transmutação | `salto` | figure leaping high into the air, wind swirl at feet |
-| ·· | Santuário | Sanctuary | Abjuração | `santuario` | protective bubble of soft light around a cleric |
-| ·· | Servo Invisível | Unseen Servant | Conjuração | `servo-invisivel` | invisible servant carrying a tray, floating objects |
-| ·· | Sono | Sleep | Encantamento | `sono` | drowsy figures falling asleep, sparkling sand, crescent moon |
-| ·· | Sussurros Dissonantes | Dissonant Whispers | Encantamento | `sussurros-dissonantes` | twisted whispers as dark sound waves into an ear |
-| ·· | Vida Falsa | False Life | Necromancia | `vida-falsa` | dark necrotic vitality filling a body, pale green aura |
-| ·· | Área Escorregadia | Grease | Conjuração | `area-escorregadia` | slick puddle of grease, a figure slipping |
+| I· | Raio Guiador | Guiding Bolt | Evocação | `raio-guiador` | flash of radiant light streaking toward a target |
+| I· | Recuo Acelerado | Expeditious Retreat | Transmutação | `recuo-acelerado` | blurred running figure, speed lines, wind trail |
+| I· | Repreensão Infernal | Hellish Rebuke | Evocação | `repreensao-infernal` | hellish flames engulfing an attacker, fiendish |
+| I· | Riso Histérico | Hideous Laughter | Encantamento | `riso-histerico` | creature collapsed laughing uncontrollably, comic mask |
+| I· | Salto | Jump | Transmutação | `salto` | figure leaping high into the air, wind swirl at feet |
+| I· | Santuário | Sanctuary | Abjuração | `santuario` | protective bubble of soft light around a cleric |
+| I· | Servo Invisível | Unseen Servant | Conjuração | `servo-invisivel` | invisible servant carrying a tray, floating objects |
+| I· | Sono | Sleep | Encantamento | `sono` | drowsy figures falling asleep, sparkling sand, crescent moon |
+| I· | Sussurros Dissonantes | Dissonant Whispers | Encantamento | `sussurros-dissonantes` | twisted whispers as dark sound waves into an ear |
+| I· | Vida Falsa | False Life | Necromancia | `vida-falsa` | dark necrotic vitality filling a body, pale green aura |
+| I· | Área Escorregadia | Grease | Conjuração | `area-escorregadia` | slick puddle of grease, a figure slipping |
 
 ## 2º círculo
 
 | ✓ | Magia | Em inglês | Escola | Arquivo | Palavras-chave |
 |---|---|---|---|---|---|
-| ·· | Acalmar Emoções | Calm Emotions | Encantamento | `acalmar-emocoes` | soothing blue aura calming an angry crowd |
-| ·· | Alterar-se | Alter Self | Transmutação | `alterar-se` | body transforming, gills, claws, shifting features |
-| ·· | Aprimorar Atributo | Enhance Ability | Transmutação | `aprimorar-atributo` | glowing animal spirits (bull, cat, bear, eagle, fox, owl) empowering |
-| ·· | Arma Espiritual | Spiritual Weapon | Evocação | `arma-espiritual` | floating spectral weapon of faith |
-| ·· | Arma Mágica | Magic Weapon | Transmutação | `arma-magica` | ordinary sword glowing with arcane runes |
-| ·· | Arrombar | Knock | Transmutação | `arrombar` | locked door bursting open with a loud knock |
-| ·· | Augúrio | Augury | Adivinhação | `augurio` | casting omen stones and tarot, weal and woe glyphs |
-| ·· | Aumentar/Reduzir | Enlarge/Reduce | Transmutação | `aumentar-reduzir` | figure growing giant and shrinking tiny side by side |
-| ·· | Aura Mágica do Arcanista | Arcanist's Magic Aura | Ilusão | `aura-magica-do-arcanista` | false magical aura disguising an item |
+| I· | Acalmar Emoções | Calm Emotions | Encantamento | `acalmar-emocoes` | soothing blue aura calming an angry crowd |
+| I· | Alterar-se | Alter Self | Transmutação | `alterar-se` | body transforming, gills, claws, shifting features |
+| I· | Aprimorar Atributo | Enhance Ability | Transmutação | `aprimorar-atributo` | glowing animal spirits (bull, cat, bear, eagle, fox, owl) empowering |
+| I· | Arma Espiritual | Spiritual Weapon | Evocação | `arma-espiritual` | floating spectral weapon of faith |
+| I· | Arma Mágica | Magic Weapon | Transmutação | `arma-magica` | ordinary sword glowing with arcane runes |
+| I· | Arrombar | Knock | Transmutação | `arrombar` | locked door bursting open with a loud knock |
+| I· | Augúrio | Augury | Adivinhação | `augurio` | casting omen stones and tarot, weal and woe glyphs |
+| I· | Aumentar/Reduzir | Enlarge/Reduce | Transmutação | `aumentar-reduzir` | figure growing giant and shrinking tiny side by side |
+| I· | Aura Mágica do Arcanista | Arcanist's Magic Aura | Ilusão | `aura-magica-do-arcanista` | false magical aura disguising an item |
 | ·· | Auxílio | Aid | Abjuração | `auxilio` | ally standing bolstered, golden vitality aura |
 | ·· | Boca Encantada | Magic Mouth | Ilusão | `boca-encantada` | magical mouth appearing on a wall, speaking |
 | ·· | Cegueira/Surdez | Blindness/Deafness | Transmutação | `cegueira-surdez` | eye and ear covered in shadow, sense blocked |
