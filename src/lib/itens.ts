@@ -55,7 +55,7 @@ export function indiceDosItens(): ResumoDoItem[] {
       raridades,
       variavel,
       sintonia,
-      imagem: arte("itens", slug),
+      imagem: arte("itens/mini", slug) ?? arte("itens", slug),
     }),
   );
 }

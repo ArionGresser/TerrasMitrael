@@ -61,7 +61,7 @@ export function indiceDoBestiario(): ResumoDoMonstro[] {
       tamanho,
       nd,
       ndNumero,
-      imagem: arte("monstros", slug),
+      imagem: arte("monstros/mini", slug) ?? arte("monstros", slug),
     }),
   );
 }

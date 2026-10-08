@@ -3,15 +3,18 @@ Traz artes prontas de uma pasta qualquer para o site, já no tamanho certo.
 
     python3 scripts/arte/importar.py "/Users/.../Downloads/Artes prontas"
 
-O nome do arquivo diz o que ele é. Por enquanto, as magias do Grimório:
+O nome do arquivo diz o que ele é:
 
-    bola-de-fogo.png     → ícone (quadrado): 512 px, mais a miniatura de 128 px
+    bola-de-fogo.png     → ícone da magia: 512 px, mais a miniatura de 128 px
                             que a lista do Grimório usa
-    bola-de-fogo-1.png   → ilustração de uso (até -3): 1600 × 900
+    bola-de-fogo-1.png   → ilustração de uso da magia (até -3): 1600 × 900
+    os nomes do GUIA-DE-ARTES.html (espécies, classes, itens, monstros...):
+        16:9      → 1280 × 720, mais uma miniatura quadrada de 160 px
+        quadrada  → 512 px, mais a miniatura de 160 px
 
 Os originais ficam onde estão; o site recebe a versão em WebP, bem mais leve.
 Importar de novo um arquivo com o mesmo nome substitui a versão antiga.
-No fim, a lista de artes do Grimório é atualizada.
+No fim, a lista do Grimório e o guia de artes são atualizados.
 """
 
 import json
@@ -22,13 +25,20 @@ from pathlib import Path
 
 from PIL import Image
 
+from catalogo import catalogo
+
 RAIZ = Path(__file__).resolve().parents[2]
 ICONES = RAIZ / "public/images/magias/icones"
 MINIATURAS = ICONES / "mini"
 ILUSTRACOES = RAIZ / "public/images/magias/ilustracoes"
 ENTRADAS = {".png", ".jpg", ".jpeg", ".webp"}
 
+IMAGENS = RAIZ / "public/images"
+
 MAGIAS = {m["slug"] for m in json.loads((RAIZ / "content/magias/magias.json").read_text())}
+
+# O nome de entrega de cada arte do guia → a arte (pasta, slug, formato)
+GUIA = {a["entrega"]: a for _, _, artes in catalogo() for a in artes}
 
 
 def salvar(imagem, destino, largura, altura, qualidade):
@@ -48,7 +58,7 @@ def salvar(imagem, destino, largura, altura, qualidade):
 
 
 def importar(pasta):
-    icones, ilustracoes, desconhecidos, avisos = [], [], [], []
+    icones, ilustracoes, guia, desconhecidos, avisos = [], [], [], [], []
     for arquivo in sorted(pasta.iterdir()):
         if arquivo.suffix.lower() not in ENTRADAS:
             continue
@@ -63,6 +73,19 @@ def importar(pasta):
             salvar(imagem, ICONES / f"{nome}.webp", 512, 512, 82)
             salvar(imagem, MINIATURAS / f"{nome}.webp", 128, 128, 80)
             icones.append(nome)
+        elif nome in GUIA:
+            a = GUIA[nome]
+            pasta = IMAGENS / a["secao"]
+            if a["formato"] == "largo":
+                if w / h < 1.5:
+                    avisos.append(f"{arquivo.name}: deveria ser deitada ({w}×{h}), cortei para 16:9")
+                salvar(imagem, pasta / f"{a['slug']}.webp", 1280, 720, 80)
+            else:
+                if abs(w - h) > max(w, h) * 0.05:
+                    avisos.append(f"{arquivo.name}: deveria ser quadrada ({w}×{h}), cortei o centro")
+                salvar(imagem, pasta / f"{a['slug']}.webp", 512, 512, 82)
+            salvar(imagem, pasta / "mini" / f"{a['slug']}.webp", 160, 160, 80)
+            guia.append(nome)
         elif cena and cena.group(1) in MAGIAS:
             if w / h < 1.5:
                 avisos.append(f"{arquivo.name}: ilustração não é larga ({w}×{h}), cortei para 16:9")
@@ -71,15 +94,19 @@ def importar(pasta):
         else:
             desconhecidos.append(arquivo.name)
 
-    print(f"Ícones: {len(icones)}  ·  Ilustrações: {len(ilustracoes)}")
+    print(
+        f"Magias: {len(icones)} ícones e {len(ilustracoes)} ilustrações"
+        f"  ·  Livro do Aventureiro: {len(guia)} artes"
+    )
     for aviso in avisos:
         print("  aviso:", aviso)
     if desconhecidos:
-        print("Não reconheci estes nomes (nenhuma magia com esse endereço):")
+        print("Não reconheci estes nomes (confira no guia de artes):")
         for d in desconhecidos:
             print("  ", d)
 
     subprocess.run([sys.executable, str(RAIZ / "scripts/magias/arte/gerar-lista.py")], check=True)
+    subprocess.run([sys.executable, str(RAIZ / "scripts/arte/gerar-guia.py")], check=True)
 
 
 if __name__ == "__main__":

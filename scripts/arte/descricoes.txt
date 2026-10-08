@@ -1,0 +1,136 @@
+# O que desenhar em cada arte, em inglês (as IAs de imagem entendem melhor).
+# Uma por linha: o nome do arquivo (sem .webp) | a descrição.
+# Monstros, itens, espécies e classes não estão aqui: usam o nome original
+# em inglês, que as IAs já conhecem. Mude à vontade e rode gerar-guia.py.
+
+## compendio
+classes | twelve adventurers of different classes gathered around a campfire: barbarian, bard, cleric, druid, fighter, monk, paladin, ranger, rogue, sorcerer, warlock and wizard
+especies | a diverse group of fantasy peoples side by side: dwarf, elf, human, halfling, gnome, dragonborn, goliath, orc and tiefling
+antecedentes | a crossroads tavern where an acolyte, a criminal, a sage and a soldier share a table before setting out on adventure
+talentos | an adventurer training at dawn, surrounded by faint glowing symbols of archery, magic, swordplay and wrestling
+magias | an ancient spellbook open on a wizard's desk, arcane runes rising from its pages in swirling light
+equipamento | an adventurer's gear laid out on a wooden table: backpack, rope, lantern, sword, shield, rations, map and torch
+itens | a dragon's treasure hoard full of magic items: glowing swords, rings, wands, potions and an enchanted amulet
+monstros | a monster hunter's bestiary open on a table, with a red dragon, an owlbear and a gelatinous cube looming in the shadows behind it
+glossario | a scholar's study with an enormous leather-bound rulebook full of index tabs, quills and parchment notes
+
+## regras/antecedentes
+acolito | a young acolyte tending candles in a stone temple, holy symbol around the neck, prayer book in hand
+criminoso | a hooded criminal picking a lock in a moonlit alley, crowbar at the belt, dark clothes
+sabio | a sage surrounded by towering bookshelves and scrolls, writing by candlelight in an old library
+soldado | a soldier holding the line in a shield wall on a muddy battlefield, spear and shield, banners behind
+
+## regras/talentos
+alerta | an alert warrior springing into action first as an ambush begins, eyes sharp, weapon already drawn
+atacante-selvagem | a savage warrior delivering a brutal two-handed blow, sparks and debris flying
+habilidoso | a skilled jack-of-all-trades surrounded by tools: lute, lockpicks, herbs, map and climbing gear
+iniciado-em-magia | a novice reading a spellbook for the first time, a small spark of magic dancing above the palm
+agarrador | a muscular wrestler pinning an opponent to the ground in a tavern brawl
+aumento-no-valor-de-atributo | an adventurer growing stronger: lifting a boulder, studying a tome and meditating, shown as one scene
+arquearia | an archer releasing an arrow with perfect form, the arrow streaking toward a distant target
+combate-com-armas-grandes | a warrior swinging a massive greatsword in a wide arc
+combate-com-duas-armas | a duelist fighting with a blade in each hand, mid-spin
+defesa | a heavily armored knight standing firm behind a raised shield as arrows bounce off
+dadiva-da-memoria-arcana | an archmage effortlessly recalling a spell, glowing runes orbiting the head
+dadiva-da-proeza-em-combate | a legendary champion whose strike cannot miss, wrapped in an aura of golden power
+dadiva-da-viagem-dimensional | a hero teleporting mid-battle in a burst of violet light, leaving an afterimage behind
+dadiva-da-visao-verdadeira | a hero with glowing eyes seeing through illusions and invisible creatures
+dadiva-do-ataque-irresistivel | a godlike warrior shattering a magical barrier with a single blow
+dadiva-do-destino | a hero weaving threads of fate, glowing golden strands around the hands
+dadiva-do-espirito-noturno | a figure merging into the shadows of night, body half dissolved into darkness
+
+## regras/equipamento
+armas-simples-corpo-a-corpo | simple melee weapons on a rack: club, dagger, greatclub, handaxe, javelin, light hammer, mace, quarterstaff, sickle and spear
+armas-simples-a-distancia | simple ranged weapons on a table: light crossbow, darts, shortbow and sling
+armas-marciais-corpo-a-corpo | martial melee weapons on an armory wall: battleaxe, flail, glaive, greataxe, greatsword, halberd, lance, longsword, maul, morningstar, pike, rapier, scimitar, shortsword, trident, warhammer, war pick and whip
+armas-marciais-a-distancia | martial ranged weapons on a table: blowgun, hand crossbow, heavy crossbow, longbow, musket and pistol
+armaduras-leves | light armor on display stands: padded armor, leather armor and studded leather armor
+armaduras-medias | medium armor on display stands: hide armor, chain shirt, scale mail, breastplate and half plate
+armaduras-pesadas | heavy armor on display stands: ring mail, chain mail, splint armor and full plate armor
+escudo | a sturdy wooden shield with an iron rim and boss, leaning against an armory wall
+ferramentas-de-artesao | artisan's tools on a workbench: smith's hammer and tongs, carpenter's tools, leatherworker's tools, brewer's supplies, painter's supplies and jeweler's tools
+outras-ferramentas | specialist kits laid out on a table: thieves' tools, herbalism kit, disguise kit, forgery kit, navigator's tools, poisoner's kit, dice set and musical instruments
+montarias-e-carga | mounts and pack animals in a stable: riding horse, warhorse, mule, pony and camel
+bardas-e-selas | barding and saddles for horses in a stable: riding saddle, military saddle and plate barding
+veiculos-grandes | large vehicles at a harbor town: a sailing ship, a rowboat, a horse-drawn carriage and a wagon
+acido | a glass vial of bubbling green acid
+agua-benta | a glass flask of glowing holy water marked with a sacred symbol
+algemas | iron manacles with a chain and a key
+aljava | a leather quiver full of arrows
+antitoxina | a small vial of antitoxin, pale blue liquid
+apito-de-sinalizacao | a small brass signal whistle on a cord
+ariete-portatil | a portable iron-capped battering ram
+armadilha-de-caca | a steel-jawed hunting trap
+balde | a wooden bucket with iron bands
+barbante | a coil of thin twine string
+barril | a wooden barrel
+bau | a sturdy wooden chest with iron fittings
+bolsa | a small leather coin pouch
+bolsa-de-componentes | a spellcaster's component pouch with herbs, crystals and feathers peeking out
+cadeado | an iron padlock with a key
+caixa-de-isqueiro | a tinderbox with flint, steel and tinder
+cantil | a metal flask with a stopper
+cesto | a woven wicker basket
+cobertor | a folded wool blanket
+corda | a coil of hempen rope
+corrente | a length of heavy iron chain
+cravos-de-ferro | a bundle of iron spikes
+escada | a wooden ladder
+esferas-de-metal | a pouch spilling small steel ball bearings
+espelho | a small steel hand mirror
+estojo-de-mapas-ou-pergaminhos | a leather case for maps and scrolls
+estojo-de-virotes | a leather case full of crossbow bolts
+estrepes | a scattering of iron caltrops
+fantasia | a theatrical costume with a mask
+foco-arcano | an arcane focus: a crystal orb, a wand and a carved staff
+foco-druidico | a druidic focus: a sprig of mistletoe, a yew wand and a wooden staff
+fogo-de-alquimista | a flask of alchemist's fire, burning orange liquid
+frasco-de-vidro | an empty glass vial
+gancho-de-escalada | a grappling hook with rope
+garrafa-de-vidro | a glass bottle with a cork
+jarro | a clay jug
+kit-de-curandeiro | a healer's kit with bandages, salves and splints
+kit-de-escalada | a climber's kit with pitons, boot tips, gloves and harness
+lamparina | a small clay oil lamp, lit
+lanterna-coberta | a hooded lantern, lit
+lanterna-furta-fogo | a bullseye lantern casting a focused beam of light
+livro | a leather-bound book
+luneta | a brass spyglass
+lupa | a magnifying glass
+mapa | a parchment map of a fantasy region
+mochila | a leather adventurer's backpack
+municao | ammunition: arrows, crossbow bolts, sling bullets and firearm bullets
+odre | a leather waterskin
+oleo | a flask of lamp oil
+pa | a shovel
+pacote-de-artista | an entertainer's pack: backpack with costumes, a mirror, a bell and a lantern
+pacote-de-assaltante | a burglar's pack: backpack with ball bearings, rope, crowbar, hooded lantern and bell
+pacote-de-diplomata | a diplomat's pack: chest with fine clothes, ink, pen, paper, perfume and map cases
+pacote-de-estudioso | a scholar's pack: backpack with a book, ink, quill, parchment and a small knife
+pacote-de-explorador | an explorer's pack: backpack, bedroll, rope, rations, tinderbox, torches and waterskin
+pacote-de-explorador-de-masmorras | a dungeoneer's pack: backpack, caltrops, crowbar, rope, torches, tinderbox and rations
+pacote-de-sacerdote | a priest's pack: backpack, blanket, candles, holy water, robe and rations
+panela-de-ferro | an iron cooking pot
+papel | a stack of paper sheets
+pe-de-cabra | an iron crowbar
+pena-de-escrever | a feather quill pen
+perfume | a small ornate perfume bottle
+pergaminho | a sheet of rolled parchment
+pergaminho-de-magia | a spell scroll with glowing arcane writing
+pocao-de-cura | a potion of healing, red liquid in a round glass bottle
+racoes | travel rations: dried meat, hard bread, cheese and nuts wrapped in cloth
+rede | a weighted net
+roupas-de-viajante | traveler's clothes: boots, cloak and tunic
+roupas-finas | fine noble clothes of velvet and silk
+saco | a burlap sack
+saco-de-dormir | a rolled bedroll
+simbolo-sagrado | a holy symbol: an amulet, a reliquary and an emblem
+sino | a small brass bell
+talha-e-polia | a block and tackle pulley with rope
+tenda | a small two-person canvas tent
+tinta | a bottle of black ink
+tocha | a lit wooden torch
+tunica | a hooded robe
+vara | a long wooden pole
+vela | a lit wax candle
+veneno-basico | a vial of basic poison, dark green liquid with a skull label

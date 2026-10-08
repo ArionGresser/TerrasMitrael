@@ -51,5 +51,11 @@ export function arteDoItemDeRegra(
 ): ArteDeRegra | undefined {
   const f = formato(documento, grupo, item);
   if (!f) return undefined;
-  return { formato: f, src: arte(`regras/${documento}`, item) };
+  const pasta = `regras/${documento}`;
+  // Os objetos aparecem pequenos, ao lado do nome: vale a versão de 160 px
+  const src =
+    f === "quadrado"
+      ? (arte(`${pasta}/mini`, item) ?? arte(pasta, item))
+      : arte(pasta, item);
+  return { formato: f, src };
 }

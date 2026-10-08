@@ -12,6 +12,9 @@ import path from "node:path";
  *   public/images/monstros/dragao-vermelho-adulto.webp
  *   public/images/regras/talentos/alerta.webp
  *
+ * O scripts/arte/importar.py também gera uma versão pequena (160 px) em
+ * <pasta>/mini/, que as listas usam no lugar da grande.
+ *
  * Enquanto o arquivo não existe, a página mostra o quadro vazio no lugar.
  * Só roda no servidor, porque olha o disco.
  */
