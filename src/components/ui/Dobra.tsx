@@ -56,20 +56,41 @@ export function Dobra({
     }
   }
 
+  // O papel desenrola: a altura cresce até o fim do texto, e quem estiver
+  // embaixo (o rolo da folha, o botão) desce junto, no mesmo ritmo. O texto
+  // aparece um instante depois, como tinta que surge quando o papel abre.
   const corpo = (
-    <div
-      id={id}
-      inert={!aberto || undefined}
+    <motion.div
+      initial={false}
+      animate={{
+        height: aberto ? "auto" : previa === "nenhuma" ? 0 : ALTURA_ENROLADO,
+      }}
+      transition={{ duration: reduzido ? 0 : 0.9, ease: [0.22, 1, 0.36, 1] }}
       className={
-        aberto
-          ? "[&>*:first-child]:mt-0"
-          : previa === "nenhuma"
-            ? "hidden"
-            : "dobra-recorte max-h-24 overflow-hidden [&>*:first-child]:mt-0"
+        aberto || previa === "nenhuma"
+          ? "overflow-hidden"
+          : "dobra-recorte overflow-hidden"
       }
     >
-      {children}
-    </div>
+      <motion.div
+        id={id}
+        inert={!aberto || undefined}
+        initial={false}
+        animate={
+          previa === "nenhuma"
+            ? { opacity: aberto ? 1 : 0, y: aberto ? 0 : -10 }
+            : { opacity: 1, y: 0 }
+        }
+        transition={{
+          duration: reduzido ? 0 : 0.6,
+          delay: aberto && !reduzido ? 0.15 : 0,
+          ease: "easeOut",
+        }}
+        className="[&>*:first-child]:mt-0"
+      >
+        {children}
+      </motion.div>
+    </motion.div>
   );
 
   // Com título, o bloco vira um pergaminho enrolado: o rolo de cima leva o
