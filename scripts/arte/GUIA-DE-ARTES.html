@@ -7,12 +7,12 @@
 <style>
   :root {
     --fundo: #efe4c8; --papel: #fbf6e8; --tinta: #2b1d10; --suave: #6b5138;
-    --linha: #d9c79d; --ouro: #96741f; --vermelho: #8b1e1e; --feito: #e7efd9;
+    --linha: #d9c79d; --ouro: #96741f; --vermelho: #8b1e1e; --feito: #e7efd9; --espera: #f6e7c4; --ambar: #9a6412;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
       --fundo: #1a120b; --papel: #241a10; --tinta: #f1e6cc; --suave: #b9a27e;
-      --linha: #4a3822; --ouro: #d4ae4f; --vermelho: #e0796f; --feito: #22301a;
+      --linha: #4a3822; --ouro: #d4ae4f; --vermelho: #e0796f; --feito: #22301a; --espera: #3a2a12; --ambar: #e8b25a;
     }
   }
   * { box-sizing: border-box; }
@@ -46,6 +46,20 @@
     padding: 12px 14px; margin-bottom: 10px; }
   li.arte.feita { background: var(--feito); }
   li.arte.feita .prompt { opacity: .55; }
+  li.arte.enviada { background: var(--espera); }
+  .selo.aguardando { border-color: var(--ambar); color: var(--ambar); }
+  .falta { background: var(--papel); border: 1px solid var(--linha); border-radius: 6px;
+    padding: 10px 16px; margin-bottom: 14px; }
+  .falta summary { cursor: pointer; font-weight: bold; min-height: 32px; display: flex; align-items: center; }
+  .falta ul { margin: 6px 0 4px; }
+  .falta li { padding: 3px 0; border-bottom: 1px dashed var(--linha); font-size: .92rem; }
+  .falta li:last-child { border: 0; }
+  .falta em { color: var(--ambar); font-style: normal; }
+  .falta small { color: var(--suave); }
+  .filtros select { font: inherit; padding: 6px 8px; min-height: 40px; border: 1px solid var(--linha);
+    border-radius: 6px; background: var(--papel); color: var(--tinta); }
+  #desmarcar { font: inherit; font-size: .85rem; cursor: pointer; padding: 6px 12px; min-height: 36px;
+    border: 1px solid var(--ambar); background: transparent; color: var(--ambar); border-radius: 4px; }
   .topo { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
   .topo label { display: flex; align-items: center; gap: 10px; cursor: pointer;
     font-weight: bold; font-size: 1.05rem; flex: 1; min-width: 200px; }
@@ -87,7 +101,7 @@
     <ol>
       <li>Copie o <em>prompt</em> e gere a imagem. Se a ferramenta deixar, escolha a proporção indicada (16:9 deitada ou quadrada).</li>
       <li>Salve na pasta <code>Documents/Artes prontas</code> com o nome mostrado. Pode ser <code>.png</code> ou <code>.jpg</code>.</li>
-      <li>Marque a caixinha. A marca fica guardada neste navegador.</li>
+      <li>Marque a caixinha quando mandar para o ChatGPT: ela fica <em>enviada, aguardando</em> até a arte chegar ao site. A marca fica guardada neste navegador.</li>
       <li>Quando juntar algumas, avise o Claude para subir. As que já estão no site aparecem com o selo <em>no site</em>.</li>
     </ol>
     <p><strong>Muitas de uma vez:</strong> em cada aba, baixe a planilha com as que faltam, anexe no ChatGPT e cole a mensagem pronta. Cada linha já traz o prompt inteiro e o nome do arquivo.</p>
@@ -95,11 +109,24 @@
 
   <div class="total"><strong id="contagem"></strong><div class="barra"><span id="barra"></span></div></div>
 
+  <details class="falta" id="falta" open>
+    <summary>O que falta</summary>
+    <ul id="resumo"></ul>
+  </details>
+
   <nav id="abas" aria-label="Seções"></nav>
 
   <div class="filtros">
     <input type="search" id="busca" placeholder="Procurar pelo nome, em português ou pelo arquivo" aria-label="Procurar">
-    <label><input type="checkbox" id="esconder"> Esconder as feitas</label>
+    <label>Mostrar
+      <select id="mostrar">
+        <option value="fora" selected>Ainda não estão no site</option>
+        <option value="faltam">Só as que faltam enviar</option>
+        <option value="aguardando">Só as enviadas, aguardando</option>
+        <option value="site">Só as que estão no site</option>
+        <option value="todas">Todas</option>
+      </select>
+    </label>
   </div>
 
   <div class="planilha">
@@ -113,6 +140,7 @@
     </label>
     <button type="button" id="baixar">Baixar planilha</button>
     <button type="button" id="mensagem" class="copiar">Copiar mensagem para o ChatGPT</button>
+    <button type="button" id="desmarcar" hidden>Desmarcar as que não chegaram</button>
   </div>
 
   <ul id="lista"></ul>
@@ -133,7 +161,12 @@ let atual = SECOES[0].chave;
 try { atual = localStorage.getItem(CHAVE + ":aba") || atual; } catch {}
 if (!SECOES.some(s => s.chave === atual)) atual = SECOES[0].chave;
 
-const feita = a => a.pronta || !!marcas[a.entrega];
+// Três estados: no site (veio de verdade), enviada (marcada aqui, ainda não
+// chegou) e falta. Só as que faltam entram na planilha.
+const noSite = a => a.pronta;
+const enviada = a => !a.pronta && !!marcas[a.entrega];
+const feita = a => noSite(a) || enviada(a);
+const estado = a => noSite(a) ? "site" : enviada(a) ? "aguardando" : "faltam";
 const normalizar = t => t.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 
 async function copiar(texto, botao) {
@@ -151,9 +184,32 @@ async function copiar(texto, botao) {
 
 function contagens() {
   const todas = SECOES.flatMap(s => s.artes);
-  const feitas = todas.filter(feita).length;
-  document.getElementById("contagem").textContent = `${feitas} de ${todas.length} feitas`;
-  document.getElementById("barra").style.width = `${(feitas / todas.length) * 100}%`;
+  const site = todas.filter(noSite).length;
+  const espera = todas.filter(enviada).length;
+  document.getElementById("contagem").textContent =
+    `${site} de ${todas.length} no site` + (espera ? ` · ${espera} aguardando` : "");
+  document.getElementById("barra").style.width = `${(site / todas.length) * 100}%`;
+  resumo();
+}
+
+/** Por aba: quantas faltam e quais estão aguardando, com os nomes quando são poucas. */
+function resumo() {
+  const ul = document.getElementById("resumo");
+  ul.innerHTML = "";
+  for (const s of SECOES) {
+    const faltam = s.artes.filter(a => estado(a) === "faltam");
+    const espera = s.artes.filter(enviada);
+    if (!faltam.length && !espera.length) continue;
+    const li = document.createElement("li");
+    const nomes = l => l.map(a => a.nome.split(" (")[0]).join(", ");
+    const partes = [];
+    if (faltam.length) partes.push(`faltam ${faltam.length}` + (faltam.length <= 6 ? ` (${nomes(faltam)})` : ""));
+    if (espera.length) partes.push(`<em>aguardando ${espera.length}</em>` + (espera.length <= 6 ? ` (${nomes(espera)})` : ""));
+    li.innerHTML = `<strong></strong>: ${partes.join(" · ")} <small>de ${s.artes.length}</small>`;
+    li.querySelector("strong").textContent = s.titulo;
+    ul.appendChild(li);
+  }
+  if (!ul.children.length) ul.innerHTML = "<li>Nada faltando. Todas as artes estão no site.</li>";
 }
 
 function abas() {
@@ -163,8 +219,9 @@ function abas() {
     const b = document.createElement("button");
     b.type = "button";
     b.setAttribute("aria-pressed", s.chave === atual);
-    const feitas = s.artes.filter(feita).length;
-    b.innerHTML = `${s.titulo}<small>${feitas}/${s.artes.length}</small>`;
+    const site = s.artes.filter(noSite).length;
+    const espera = s.artes.filter(enviada).length;
+    b.innerHTML = `${s.titulo}<small>${site}/${s.artes.length}${espera ? ` · ${espera} aguardando` : ""}</small>`;
     b.onclick = () => {
       atual = s.chave;
       try { localStorage.setItem(CHAVE + ":aba", atual); } catch {}
@@ -177,25 +234,25 @@ function abas() {
 function lista() {
   const secao = SECOES.find(s => s.chave === atual);
   const busca = normalizar(document.getElementById("busca").value.trim());
-  const esconder = document.getElementById("esconder").checked;
+  const mostrar = document.getElementById("mostrar").value;
   const ul = document.getElementById("lista");
   ul.innerHTML = "";
   const artes = secao.artes.filter(a =>
     (!busca || normalizar(a.nome).includes(busca) || a.entrega.includes(busca)) &&
-    (!esconder || !feita(a)));
+    (mostrar === "todas" || estado(a) === mostrar || (mostrar === "fora" && !noSite(a))));
   if (artes.length === 0) {
     ul.innerHTML = '<li class="vazio">Nada por aqui com esse filtro.</li>';
     return;
   }
   for (const a of artes) {
     const li = document.createElement("li");
-    li.className = "arte" + (feita(a) ? " feita" : "");
+    li.className = "arte" + (noSite(a) ? " feita" : enviada(a) ? " enviada" : "");
     const id = "c-" + a.entrega;
     li.innerHTML = `
       <div class="topo">
         <label for="${id}"><input type="checkbox" id="${id}"> <span></span></label>
         <span class="selo">${a.formato === "largo" ? "16:9 deitada" : "quadrada"}</span>
-        ${a.pronta ? '<span class="selo site">no site</span>' : ""}
+        ${a.pronta ? '<span class="selo site">no site</span>' : enviada(a) ? '<span class="selo aguardando">enviada, aguardando</span>' : ""}
       </div>
       <div class="arquivo"><code></code><button type="button" class="copiar">Copiar nome</button></div>
       <div class="linha-prompt"><p class="prompt"></p><button type="button" class="copiar">Copiar prompt</button></div>`;
@@ -208,9 +265,7 @@ function lista() {
     caixa.onchange = () => {
       if (caixa.checked) marcas[a.entrega] = true; else delete marcas[a.entrega];
       salvarMarcas();
-      li.classList.toggle("feita", caixa.checked);
-      contagens(); abas(); botaoBaixar();
-      if (esconder && caixa.checked) li.remove();
+      tudo();
     };
     const [botaoNome, botaoPrompt] = li.querySelectorAll("button.copiar");
     botaoNome.onclick = () => copiar(a.entrega, botaoNome);
@@ -233,7 +288,11 @@ function pendentes() {
 }
 
 function botaoBaixar() {
-  const { todas, lote } = pendentes();
+  const { secao, todas, lote } = pendentes();
+  const espera = secao.artes.filter(enviada).length;
+  const d = document.getElementById("desmarcar");
+  d.hidden = espera === 0;
+  d.textContent = `Desmarcar as ${espera} que não chegaram`;
   const b = document.getElementById("baixar");
   b.disabled = lote.length === 0;
   b.textContent = lote.length
@@ -267,12 +326,23 @@ function baixar() {
   }
 }
 
+function desmarcar() {
+  const secao = SECOES.find(s => s.chave === atual);
+  const espera = secao.artes.filter(enviada);
+  if (!espera.length) return;
+  if (!confirm(`Desmarcar as ${espera.length} enviadas desta aba que ainda não estão no site? Elas voltam para a próxima planilha.`)) return;
+  for (const a of espera) delete marcas[a.entrega];
+  salvarMarcas();
+  tudo();
+}
+
 function tudo() { contagens(); abas(); lista(); botaoBaixar(); }
+document.getElementById("desmarcar").addEventListener("click", desmarcar);
 document.getElementById("lote").addEventListener("change", botaoBaixar);
 document.getElementById("baixar").addEventListener("click", baixar);
 document.getElementById("mensagem").addEventListener("click", e => copiar(MENSAGEM, e.currentTarget));
 document.getElementById("busca").addEventListener("input", lista);
-document.getElementById("esconder").addEventListener("change", lista);
+document.getElementById("mostrar").addEventListener("change", lista);
 tudo();
 </script>
 </body>
