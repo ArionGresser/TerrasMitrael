@@ -1,13 +1,14 @@
 """
-O catálogo de todas as artes do Livro do Aventureiro (fora o Grimório, que
-tem o catálogo dele em scripts/magias/arte): o que é cada uma, com que nome
-o arquivo deve ser salvo, para onde vai no site e o prompt para gerar.
+O catálogo de todas as artes do site: o que é cada uma, com que nome o
+arquivo deve ser salvo, para onde vai no site e o prompt para gerar.
+As magias usam as palavras-chave e os modelos de scripts/magias/arte.
 
 É usado pelo gerar-guia.py (a página com a lista) e pelo importar.py (que
 traz as artes prontas para o site). Quais itens de regra têm arte espelha
 src/lib/regras-arte.ts: mudando lá, mude aqui também.
 """
 
+import importlib.util
 import json
 import re
 import unicodedata
@@ -235,6 +236,47 @@ def monstros():
     return linhas
 
 
+def grimorio():
+    """Os modelos e as palavras-chave das magias, do gerador delas."""
+    caminho = RAIZ / "scripts/magias/arte/gerar-lista.py"
+    spec = importlib.util.spec_from_file_location("lista_das_magias", caminho)
+    modulo = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(modulo)
+    return modulo
+
+
+def artes_das_magias():
+    """Duas listas: os ícones e as ilustrações de uso, por círculo."""
+    g = grimorio()
+    chaves = g.ler_chaves()
+    todas = json.loads((RAIZ / "content/magias/magias.json").read_text())
+    icones, cenas = [], []
+    for m in sorted(todas, key=lambda m: (m["nivel"], m["nome"])):
+        circulo = "truque" if m["nivel"] == 0 else f"{m['nivel']}º círculo"
+        nome = f"{m['nome']} ({circulo})"
+        chave = chaves[m["original"]]
+        quem = g.QUEM.get(m["classes"][0], "a spellcaster") if m["classes"] else "a spellcaster"
+        icones.append(
+            arte(
+                "magias/icones",
+                m["slug"],
+                nome,
+                "quadrado",
+                g.ESTILO_ICONE.format(chave=chave, cor=g.COR[m["escola"]]),
+            )
+        )
+        cenas.append(
+            arte(
+                "magias/ilustracoes",
+                f"{m['slug']}-1",
+                nome,
+                "largo",
+                g.ESTILO_CENA.format(quem=quem, nome=m["original"], chave=chave),
+            )
+        )
+    return icones, cenas
+
+
 SECOES = [
     ("livro", "Livro", lambda d: livro(d)),
     ("especies", "Espécies", lambda d: especies()),
@@ -284,7 +326,18 @@ def catalogo():
                 a["entrega"] = a["slug"]
             a["pronta"] = existe(a["secao"], a["slug"])
 
+    # As magias entram com o próprio endereço: o ícone é "bola-de-fogo" e a
+    # ilustração, "bola-de-fogo-1", que é como o importar.py reconhece.
+    icones, cenas = artes_das_magias()
+    for a in icones + cenas:
+        a["entrega"] = a["slug"]
+        a["pronta"] = existe(a["secao"], a["slug"])
+    secoes = [
+        ("magias-icones", "Magias: ícones", icones),
+        ("magias-ilustracoes", "Magias: ilustrações", cenas),
+    ] + secoes
+
     entregas = Counter(a["entrega"] for _, _, artes in secoes for a in artes)
-    repetidas = [e for e, n in entregas.items() if n > 1 or e in magias]
+    repetidas = [e for e, n in entregas.items() if n > 1]
     assert not repetidas, f"nomes de entrega repetidos: {repetidas}"
     return secoes

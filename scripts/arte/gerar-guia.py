@@ -1,13 +1,13 @@
 """
 Monta scripts/arte/GUIA-DE-ARTES.html: uma página só, para abrir no
-navegador, com cada arte que falta, o nome do arquivo e o prompt para gerar,
-separadas por seção e com uma caixinha para marcar o que já foi feito.
+navegador, com cada arte do site (as magias inclusive), o nome do arquivo e
+o prompt para gerar, separadas por seção e com uma caixinha para marcar o
+que já foi feito.
 
     python3 scripts/arte/gerar-guia.py
 
 As artes que já estão no site saem marcadas sozinhas. Rode de novo depois
-de importar artes novas, para atualizar. As magias do Grimório ficam fora:
-elas têm a lista delas em scripts/magias/arte.
+de importar artes novas, para atualizar.
 """
 
 import json
@@ -90,7 +90,7 @@ PAGINA = """<!doctype html>
 <body>
 <main>
   <h1>Guia de Artes</h1>
-  <p class="sub">Terras de Mitrael · Livro do Aventureiro (as magias têm a lista delas)</p>
+  <p class="sub">Terras de Mitrael · todas as artes do site, das magias aos monstros</p>
 
   <div class="passos">
     <strong>Como fazer</strong>

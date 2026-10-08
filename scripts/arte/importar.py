@@ -38,7 +38,13 @@ IMAGENS = RAIZ / "public/images"
 MAGIAS = {m["slug"] for m in json.loads((RAIZ / "content/magias/magias.json").read_text())}
 
 # O nome de entrega de cada arte do guia → a arte (pasta, slug, formato)
-GUIA = {a["entrega"]: a for _, _, artes in catalogo() for a in artes}
+# (as magias têm tratamento próprio logo abaixo, por isso ficam de fora)
+GUIA = {
+    a["entrega"]: a
+    for _, _, artes in catalogo()
+    for a in artes
+    if not a["secao"].startswith("magias/")
+}
 
 
 def salvar(imagem, destino, largura, altura, qualidade):
