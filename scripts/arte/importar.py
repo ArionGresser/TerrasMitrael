@@ -6,7 +6,8 @@ Traz artes prontas de uma pasta qualquer para o site, já no tamanho certo.
 O nome do arquivo diz o que ele é:
 
     bola-de-fogo.png     → ícone da magia: 512 px, mais a miniatura de 128 px
-                            que a lista do Grimório usa
+                            que a lista do Grimório usa (um número na frente,
+                            como 106-bola-de-fogo.png, é ignorado)
     bola-de-fogo-1.png   → ilustração de uso da magia (até -3): 1600 × 900
     os nomes do GUIA-DE-ARTES.html (espécies, classes, itens, monstros...):
         16:9      → 1280 × 720, mais uma miniatura quadrada de 160 px
@@ -68,7 +69,9 @@ def importar(pasta):
     for arquivo in sorted(pasta.iterdir()):
         if arquivo.suffix.lower() not in ENTRADAS:
             continue
-        nome = arquivo.stem.strip().lower()
+        # Um número na frente, como "106-espinho-mental", só serve para
+        # ordenar a pasta: sai do nome
+        nome = re.sub(r"^\d+-", "", arquivo.stem.strip().lower())
         imagem = Image.open(arquivo).convert("RGB")
         w, h = imagem.size
         cena = re.fullmatch(r"(.+)-([123])", nome)
