@@ -110,6 +110,27 @@
   }
 }
 
+/* O anel de runas em volta de um brasão, girando devagar: uma volta a cada
+   40 segundos, lento o bastante para não distrair a leitura e rápido o
+   bastante para perceber que está vivo. */
+@keyframes girar {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.anel-girando {
+  animation: girar 40s linear infinite;
+}
+
+/* Quem pediu menos movimento vê o brasão parado. Vem depois da regra de
+   cima de propósito: dentro de um @media, só a ordem decide. */
+@media (prefers-reduced-motion: reduce) {
+  .anel-girando {
+    animation: none;
+  }
+}
+
 /* ============================================================
    Prévia de texto recolhido
    As últimas linhas do trecho visível somem aos poucos, deixando

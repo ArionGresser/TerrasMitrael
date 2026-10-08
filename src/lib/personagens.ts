@@ -129,6 +129,13 @@ export type MetaPersonagem = {
   ilustracaoAlt?: string;
   /** Símbolo do clã ou da casa, em PNG ou WebP com fundo transparente. */
   brasao?: string;
+  /**
+   * Quando o brasão tem um anel em volta (como as runas do bando Vitriol),
+   * as duas partes em separado: o centro fica parado e o anel gira devagar.
+   * O `brasao` inteiro continua valendo para quem pede menos movimento.
+   */
+  brasaoCentro?: string;
+  brasaoAnel?: string;
   brasaoAlt?: string;
   brasaoLegenda?: string;
   audio?: string;

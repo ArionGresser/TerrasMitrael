@@ -109,14 +109,33 @@ export default async function PaginaPersonagem({ params }: Props) {
 
           {meta.brasao ? (
             <figure className="mx-auto mt-10 w-44 sm:w-52">
-              <Image
-                src={meta.brasao}
-                alt={meta.brasaoAlt ?? ""}
-                width={440}
-                height={440}
-                sizes="208px"
-                className="h-auto w-full"
-              />
+              {meta.brasaoCentro && meta.brasaoAnel ? (
+                // O centro parado e o anel de runas girando por cima dele
+                <div role="img" aria-label={meta.brasaoAlt ?? ""} className="relative aspect-square w-full">
+                  <Image
+                    src={meta.brasaoCentro}
+                    alt=""
+                    fill
+                    sizes="208px"
+                  />
+                  <Image
+                    src={meta.brasaoAnel}
+                    alt=""
+                    fill
+                    sizes="208px"
+                    className="anel-girando"
+                  />
+                </div>
+              ) : (
+                <Image
+                  src={meta.brasao}
+                  alt={meta.brasaoAlt ?? ""}
+                  width={440}
+                  height={440}
+                  sizes="208px"
+                  className="h-auto w-full"
+                />
+              )}
               {meta.brasaoLegenda ? (
                 <figcaption className="text-tinta-500 mt-3 text-center text-xs italic">
                   {meta.brasaoLegenda}
