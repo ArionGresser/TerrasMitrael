@@ -39,11 +39,17 @@ export function Cabecalho() {
   );
 }
 
-export function Ferragem() {
+/**
+ * Uma tira de ferro batido com rebites. Ela estica até a altura de quem a
+ * contém, e os rebites se espalham por ela: dois na viga do topo, mais no
+ * rodapé, que é alto.
+ */
+export function Ferragem({ rebites = 2 }: { rebites?: number }) {
   return (
     <span className="ferragem flex h-full w-5 flex-col items-center justify-between py-2 sm:w-7 sm:py-2.5">
-      <span className="rebite block size-1.5 rounded-full sm:size-2" />
-      <span className="rebite block size-1.5 rounded-full sm:size-2" />
+      {Array.from({ length: rebites }, (_, i) => (
+        <span key={i} className="rebite block size-2 rounded-full sm:size-2.5" />
+      ))}
     </span>
   );
 }

@@ -16,13 +16,13 @@ export function Rodape() {
 
   return (
     <footer className="tabua-rodape relative mt-24 pt-14 pb-8 sm:pt-16">
-      {/* As ferragens que prendem a tábua, descendo da borda de cima */}
+      {/* As cintas de ferro que prendem a tábua, de cima a baixo */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 flex h-20 justify-between px-6 sm:h-24 sm:px-24"
+        className="pointer-events-none absolute inset-0 flex justify-between px-6 sm:px-24"
       >
-        <Ferragem />
-        <Ferragem />
+        <Ferragem rebites={4} />
+        <Ferragem rebites={4} />
       </div>
 
       {/* O selo de cera do império, lacrado na borda da tábua */}
@@ -32,7 +32,7 @@ export function Rodape() {
         className="absolute top-0 left-1/2 size-[4rem] -translate-x-1/2 -translate-y-1/2 drop-shadow-[0_4px_5px_rgba(0,0,0,0.6)] sm:size-[4.75rem]"
       />
 
-      <div className="relative mx-auto max-w-3xl px-4 text-center sm:px-6">
+      <div className="relative mx-auto max-w-3xl px-12 text-center sm:px-6">
         <p className="font-brasao text-pergaminho-100 text-3xl drop-shadow-[0_2px_2px_rgba(0,0,0,0.7)] sm:text-4xl">
           Terras de Mitrael
         </p>

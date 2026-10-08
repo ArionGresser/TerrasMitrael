@@ -250,30 +250,57 @@
     inset 0 -1px 0 rgb(0 0 0 / 0.5);
 }
 
-/* A ferragem de ferro que prende a viga nas pontas */
+/* A ferragem de ferro batido que prende a viga e a tábua do pé.
+   De cima para baixo, as camadas: a luz da vela no alto e a sombra no pé,
+   o chanfro das bordas (a esquerda pega luz, a direita afunda), duas
+   manchas de ferrugem e, no fundo, o grão do ferro forjado, um ruído fino
+   gerado pelo navegador em vez de uma foto. */
 .ferragem {
+  border-radius: 2px;
+  background-color: #2c2926;
   background-image:
     linear-gradient(
       to bottom,
-      rgb(255 255 255 / 0.18) 0%,
-      transparent 18%,
-      transparent 80%,
-      rgb(0 0 0 / 0.4) 100%
+      rgb(255 255 255 / 0.15) 0%,
+      transparent 12%,
+      transparent 84%,
+      rgb(0 0 0 / 0.45) 100%
     ),
-    linear-gradient(to right, #2a2724, #3b3632 45%, #23201d);
+    linear-gradient(
+      to right,
+      rgb(255 255 255 / 0.2) 0,
+      rgb(255 255 255 / 0.06) 2px,
+      transparent 4px,
+      transparent calc(100% - 4px),
+      rgb(0 0 0 / 0.35) calc(100% - 2px),
+      rgb(0 0 0 / 0.65) 100%
+    ),
+    radial-gradient(ellipse 70% 9% at 30% 38%, rgb(122 64 30 / 0.4), transparent 70%),
+    radial-gradient(ellipse 60% 7% at 72% 71%, rgb(110 56 26 / 0.34), transparent 70%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96'%3E%3Cfilter id='f' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' seed='9' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.62 0 0 0 0 0.6 0 0 0 0 0.56 0.9 0 0 0 -0.32'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)'/%3E%3C/svg%3E"),
+    linear-gradient(to right, #26231f, #3a3531 45%, #211e1b);
+  background-size: auto, auto, auto, auto, 96px 96px, auto;
   box-shadow:
-    inset 0 0 0 1px rgb(0 0 0 / 0.55),
-    0 2px 4px rgb(0 0 0 / 0.5);
+    inset 0 0 0 1px rgb(0 0 0 / 0.6),
+    inset 0 1px 0 rgb(255 255 255 / 0.12),
+    0 3px 6px rgb(0 0 0 / 0.55),
+    2px 0 4px rgb(0 0 0 / 0.25);
 }
 
+/* O rebite: cabeça abaulada, com o brilho no alto e a sombra embaixo,
+   e um aro escuro onde ele afunda no ferro */
 .rebite {
   background-image: radial-gradient(
     circle at 35% 30%,
-    #8d8478 0%,
-    #4a443d 45%,
-    #1c1a17 100%
+    #c2b8a8 0%,
+    #7a7268 28%,
+    #3b3631 62%,
+    #191714 100%
   );
-  box-shadow: 0 1px 1px rgb(0 0 0 / 0.6);
+  box-shadow:
+    0 0 0 1px rgb(0 0 0 / 0.45),
+    0 1px 2px rgb(0 0 0 / 0.75),
+    inset 0 -1px 1px rgb(0 0 0 / 0.45);
 }
 
 /* ============================================================
