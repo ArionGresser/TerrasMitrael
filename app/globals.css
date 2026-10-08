@@ -675,6 +675,36 @@
    sem imagem para baixar.
    ============================================================ */
 
+/* As camadas que fazem um rolo de papel parecer um cilindro de verdade,
+   iguais em todos os rolos do site:
+   --papel-grao      as fibras do papel, um ruído fino gerado pelo navegador
+   --rolo-cilindro   a luz da vela batendo no papel enrolado: borda escura em
+                     cima, o brilho largo, e a sombra que cresce embaixo
+   --rolo-espiral    a ponta do papel enrolado, vista de lado: os anéis de
+                     cada volta, um mais claro, um mais escuro */
+:root {
+  --papel-grao: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='p' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9 0.35' numOctaves='3' seed='5' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.45 0 0 0 0 0.32 0 0 0 0 0.16 0.55 0 0 0 -0.18'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23p)'/%3E%3C/svg%3E");
+  --rolo-cilindro: linear-gradient(
+    to bottom,
+    #7d5f33 0%,
+    #b8955c 7%,
+    #e6d2a4 19%,
+    #fbf3dc 33%,
+    #f3e5c1 45%,
+    #dcc391 62%,
+    #b8975f 80%,
+    #8a6a3a 93%,
+    #5e4422 100%
+  );
+  --rolo-espiral: repeating-radial-gradient(
+    ellipse at 50% 50%,
+    #f1e2bd 0 1.5px,
+    #a7854f 1.5px 2.5px,
+    #e3cd9c 2.5px 4px
+  );
+}
+
+/* O rolo grande, em cima e embaixo das folhas de leitura */
 .rolo {
   position: absolute;
   left: -6px;
@@ -682,46 +712,58 @@
   height: 16px;
   border-radius: 8px;
   pointer-events: none;
-  background: linear-gradient(
-    to bottom,
-    #a88a56 0%,
-    #e9d9b0 22%,
-    #f7edd2 40%,
-    #dcc597 62%,
-    #9c7c48 88%,
-    #6f5530 100%
-  );
   box-shadow:
-    0 3px 6px rgb(0 0 0 / 0.42),
-    inset 0 0 0 1px rgb(90 62 28 / 0.25);
+    0 4px 7px -1px rgb(0 0 0 / 0.5),
+    0 1px 2px rgb(0 0 0 / 0.35),
+    inset 0 0 0 1px rgb(90 62 28 / 0.3);
 }
 
-/* As pontas do eixo, de madeira torneada */
+/* As pontas do eixo, de madeira torneada: um puxador arredondado com os
+   anéis que o torno deixou */
 .rolo::before,
-.rolo::after {
+.rolo::after,
+.rolo-capitulo::before,
+.rolo-capitulo::after,
+.rolo-capitulo-base::before,
+.rolo-capitulo-base::after {
   content: "";
   position: absolute;
   top: 50%;
-  width: 7px;
-  height: 22px;
   transform: translateY(-50%);
-  border-radius: 3px;
-  background: linear-gradient(
-    to bottom,
-    var(--color-madeira-500) 0%,
-    #a06a37 30%,
-    var(--color-madeira-600) 60%,
-    var(--color-madeira-950) 100%
-  );
-  box-shadow: 0 2px 3px rgb(0 0 0 / 0.5);
+  border-radius: 45% / 30%;
+  background-image:
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0 3px,
+      rgb(0 0 0 / 0.28) 3px 4px,
+      rgb(255 255 255 / 0.12) 4px 5px
+    ),
+    radial-gradient(ellipse 60% 55% at 38% 34%, rgb(255 214 160 / 0.45), transparent 70%),
+    linear-gradient(
+      to right,
+      #3a220f 0%,
+      #7b4d25 30%,
+      #a0693a 48%,
+      #6a4120 72%,
+      #2a1708 100%
+    );
+  box-shadow:
+    0 2px 4px rgb(0 0 0 / 0.55),
+    inset 0 0 0 1px rgb(0 0 0 / 0.35);
+}
+
+.rolo::before,
+.rolo::after {
+  width: 9px;
+  height: 24px;
 }
 
 .rolo::before {
-  left: -5px;
+  left: -6px;
 }
 
 .rolo::after {
-  right: -5px;
+  right: -6px;
 }
 
 .rolo-topo {
@@ -742,16 +784,16 @@
 
   .rolo::before,
   .rolo::after {
-    width: 10px;
-    height: 30px;
+    width: 12px;
+    height: 32px;
   }
 
   .rolo::before {
-    left: -8px;
+    left: -9px;
   }
 
   .rolo::after {
-    right: -8px;
+    right: -9px;
   }
 
   .rolo-topo {
@@ -763,6 +805,34 @@
   }
 }
 
+/* As espirais do papel enrolado, nas duas pontas de cada rolo */
+.rolo,
+.rolo-capitulo,
+.rolo-capitulo-base {
+  --ponta: 10px;
+}
+
+.rolo-capitulo,
+.rolo-capitulo-base,
+.rolo {
+  background-image:
+    var(--papel-grao),
+    var(--rolo-espiral),
+    var(--rolo-espiral),
+    var(--rolo-cilindro);
+  background-size:
+    120px 120px,
+    var(--ponta) 100%,
+    var(--ponta) 100%,
+    auto;
+  background-position:
+    0 0,
+    left center,
+    right center,
+    0 0;
+  background-repeat: repeat, no-repeat, no-repeat, no-repeat;
+}
+
 /* ============================================================
    Capítulo enrolado
    Cada capítulo recolhido é um pequeno pergaminho: o rolo de
@@ -772,19 +842,11 @@
 
 .rolo-capitulo {
   position: relative;
-  border-radius: 10px;
-  background: linear-gradient(
-    to bottom,
-    #b49766 0%,
-    #ead9b1 18%,
-    #f8efd6 38%,
-    #e5d1a4 62%,
-    #b39361 86%,
-    #866639 100%
-  );
+  border-radius: 12px / 50%;
   box-shadow:
-    0 3px 7px rgb(0 0 0 / 0.3),
-    inset 0 0 0 1px rgb(90 62 28 / 0.28);
+    0 5px 9px -2px rgb(0 0 0 / 0.42),
+    0 1px 2px rgb(0 0 0 / 0.3),
+    inset 0 0 0 1px rgb(90 62 28 / 0.3);
   transition: filter 0.2s;
 }
 
@@ -795,69 +857,50 @@
 .rolo-capitulo-base {
   position: relative;
   display: block;
-  height: 12px;
-  border-radius: 6px;
-  background: linear-gradient(
-    to bottom,
-    #a88a56 0%,
-    #efe2bf 35%,
-    #d3bb8b 70%,
-    #7d6136 100%
-  );
+  height: 14px;
+  border-radius: 7px;
+  --ponta: 7px;
   box-shadow:
-    0 2px 5px rgb(0 0 0 / 0.3),
-    inset 0 0 0 1px rgb(90 62 28 / 0.25);
-}
-
-/* As pontas do eixo, dos dois lados de cada rolo */
-.rolo-capitulo::before,
-.rolo-capitulo::after,
-.rolo-capitulo-base::before,
-.rolo-capitulo-base::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  width: 6px;
-  transform: translateY(-50%);
-  border-radius: 3px;
-  background: linear-gradient(
-    to bottom,
-    var(--color-madeira-500) 0%,
-    #a06a37 30%,
-    var(--color-madeira-600) 60%,
-    var(--color-madeira-950) 100%
-  );
-  box-shadow: 0 1px 2px rgb(0 0 0 / 0.45);
+    0 4px 7px -2px rgb(0 0 0 / 0.42),
+    inset 0 0 0 1px rgb(90 62 28 / 0.3);
 }
 
 .rolo-capitulo::before,
 .rolo-capitulo::after {
-  height: 60%;
+  width: 8px;
+  height: 78%;
 }
 
 .rolo-capitulo-base::before,
 .rolo-capitulo-base::after {
-  height: 18px;
+  width: 7px;
+  height: 22px;
 }
 
 .rolo-capitulo::before,
 .rolo-capitulo-base::before {
-  left: -4px;
+  left: -6px;
 }
 
 .rolo-capitulo::after,
 .rolo-capitulo-base::after {
-  right: -4px;
+  right: -6px;
 }
 
-/* O papel que desce do rolo: mais claro, com a sombra do rolo em cima */
+/* O papel que desce do rolo: fibras, um amarelado que escurece nas bordas
+   e a sombra que cada rolo joga na folha logo abaixo e logo acima dele */
 .folha-capitulo {
   background-color: var(--color-pergaminho-50);
+  background-image:
+    var(--papel-grao),
+    radial-gradient(ellipse 120% 90% at 50% 50%, transparent 55%, rgb(150 112 52 / 0.16) 100%);
+  background-size: 120px 120px, auto;
   box-shadow:
-    inset 0 8px 10px -6px rgb(80 55 20 / 0.35),
-    inset 0 -6px 8px -6px rgb(80 55 20 / 0.3),
-    inset 1px 0 0 rgb(150 116 31 / 0.25),
-    inset -1px 0 0 rgb(150 116 31 / 0.25);
+    inset 0 12px 12px -8px rgb(70 46 16 / 0.42),
+    inset 0 -10px 10px -8px rgb(70 46 16 / 0.36),
+    inset 2px 0 3px -1px rgb(120 88 40 / 0.28),
+    inset -2px 0 3px -1px rgb(120 88 40 / 0.28),
+    0 2px 6px rgb(0 0 0 / 0.18);
 }
 
 /* ============================================================
