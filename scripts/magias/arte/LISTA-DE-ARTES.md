@@ -3,7 +3,7 @@
 Gerada por `scripts/magias/arte/gerar-lista.py`. Não edite à mão: as palavras-chave
 ficam em `palavras-chave.txt`, e o resto sai do grimório.
 
-**Ícones prontos:** 292 de 339 · **Ilustrações prontas:** 0 de 339
+**Ícones prontos:** 338 de 339 · **Ilustrações prontas:** 0 de 339
 
 ## Como entregar uma arte
 
@@ -378,61 +378,61 @@ medieval fantasy illustration of <a wizard, a cleric...> casting the spell <nome
 | I· | Forma Etérea | Etherealness | Conjuração | `forma-eterea` | figure becoming ethereal, ghostly plane |
 | I· | Inverter Gravidade | Reverse Gravity | Transmutação | `inverter-gravidade` | creatures falling upward |
 | I· | Isolamento | Sequester | Transmutação | `isolamento` | creature hidden in suspended animation |
-| ·· | Jaula de Energia | Forcecage | Evocação | `jaula-de-energia` | invisible cage of force bars trapping a creature |
-| ·· | Mansão Magnífica | Magnificent Mansion | Conjuração | `mansao-magnifica` | extradimensional grand mansion behind a shimmering door |
-| ·· | Miragem Arcana | Mirage Arcane | Ilusão | `miragem-arcana` | landscape transformed by vast illusion |
-| ·· | Palavra Divina | Divine Word | Evocação | `palavra-divina` | divine word of power, terrible holy light |
-| ·· | Projetar Imagem | Project Image | Ilusão | `projetar-imagem` | illusory projection of a mage far away |
-| ·· | Rajada Prismática | Prismatic Spray | Evocação | `rajada-prismatica` | seven rays of rainbow colored light |
-| ·· | Regeneração | Regenerate | Transmutação | `regeneracao` | limb regenerating with healing light |
-| ·· | Ressurreição | Resurrection | Necromancia | `ressurreicao` | soul returning to a body in a radiant glow |
-| ·· | Simulacro | Simulacrum | Ilusão | `simulacro` | illusory duplicate made of snow |
-| ·· | Símbolo | Symbol | Abjuração | `simbolo` | glowing deadly symbol inscribed on a door |
-| ·· | Teletransporte | Teleport | Conjuração | `teletransporte` | figure teleporting in a flash of light |
-| ·· | Tempestade de Fogo | Fire Storm | Evocação | `tempestade-de-fogo` | storm of fire engulfing an area |
-| ·· | Viagem Planar | Plane Shift | Conjuração | `viagem-planar` | travel between planes through a tuning fork portal |
+| I· | Jaula de Energia | Forcecage | Evocação | `jaula-de-energia` | invisible cage of force bars trapping a creature |
+| I· | Mansão Magnífica | Magnificent Mansion | Conjuração | `mansao-magnifica` | extradimensional grand mansion behind a shimmering door |
+| I· | Miragem Arcana | Mirage Arcane | Ilusão | `miragem-arcana` | landscape transformed by vast illusion |
+| I· | Palavra Divina | Divine Word | Evocação | `palavra-divina` | divine word of power, terrible holy light |
+| I· | Projetar Imagem | Project Image | Ilusão | `projetar-imagem` | illusory projection of a mage far away |
+| I· | Rajada Prismática | Prismatic Spray | Evocação | `rajada-prismatica` | seven rays of rainbow colored light |
+| I· | Regeneração | Regenerate | Transmutação | `regeneracao` | limb regenerating with healing light |
+| I· | Ressurreição | Resurrection | Necromancia | `ressurreicao` | soul returning to a body in a radiant glow |
+| I· | Simulacro | Simulacrum | Ilusão | `simulacro` | illusory duplicate made of snow |
+| I· | Símbolo | Symbol | Abjuração | `simbolo` | glowing deadly symbol inscribed on a door |
+| I· | Teletransporte | Teleport | Conjuração | `teletransporte` | figure teleporting in a flash of light |
+| I· | Tempestade de Fogo | Fire Storm | Evocação | `tempestade-de-fogo` | storm of fire engulfing an area |
+| I· | Viagem Planar | Plane Shift | Conjuração | `viagem-planar` | travel between planes through a tuning fork portal |
 
 ## 8º círculo
 
 | ✓ | Magia | Em inglês | Escola | Arquivo | Palavras-chave |
 |---|---|---|---|---|---|
-| ·· | Antipatia/Simpatia | Antipathy/Sympathy | Encantamento | `antipatia-simpatia` | aura repelling and attracting creatures |
-| ·· | Aura Sagrada | Holy Aura | Abjuração | `aura-sagrada` | brilliant holy aura around allies |
-| ·· | Campo Antimagia | Antimagic Field | Abjuração | `campo-antimagia` | sphere suppressing all magic |
-| ·· | Clone | Clone | Necromancia | `clone` | clone growing in a magical vessel |
-| ·· | Controlar o Clima | Control Weather | Transmutação | `controlar-o-clima` | caster controlling the sky and storms |
-| ·· | Dominar Monstro | Dominate Monster | Encantamento | `dominar-monstro` | monster under mental control, glowing eyes |
-| ·· | Explosão Solar | Sunburst | Evocação | `explosao-solar` | brilliant burst of sunlight blinding all |
-| ·· | Formas Animais | Animal Shapes | Transmutação | `formas-animais` | allies transforming into beasts |
-| ·· | Labirinto | Maze | Conjuração | `labirinto` | creature trapped in an endless labyrinth |
-| ·· | Lábia | Glibness | Encantamento | `labia` | silver tongue, persuasive speech, charisma glow |
-| ·· | Mente Embotada | Befuddlement | Encantamento | `mente-embotada` | mind shattered, intellect broken, spinning sigils |
-| ·· | Mente Vazia | Mind Blank | Abjuração | `mente-vazia` | mind protected by a blank shield |
-| ·· | Nuvem Incendiária | Incendiary Cloud | Conjuração | `nuvem-incendiaria` | billowing cloud of burning embers |
-| ·· | Palavra de Poder: Atordoar | Power Word Stun | Encantamento | `palavra-de-poder-atordoar` | word of power stunning a creature |
-| ·· | Semiplano | Demiplane | Conjuração | `semiplano` | door to a small pocket dimension |
-| ·· | Terremoto | Earthquake | Transmutação | `terremoto` | ground splitting from a violent earthquake |
-| ·· | Tsunami | Tsunami | Conjuração | `tsunami` | colossal wall of water crashing |
+| I· | Antipatia/Simpatia | Antipathy/Sympathy | Encantamento | `antipatia-simpatia` | aura repelling and attracting creatures |
+| I· | Aura Sagrada | Holy Aura | Abjuração | `aura-sagrada` | brilliant holy aura around allies |
+| I· | Campo Antimagia | Antimagic Field | Abjuração | `campo-antimagia` | sphere suppressing all magic |
+| I· | Clone | Clone | Necromancia | `clone` | clone growing in a magical vessel |
+| I· | Controlar o Clima | Control Weather | Transmutação | `controlar-o-clima` | caster controlling the sky and storms |
+| I· | Dominar Monstro | Dominate Monster | Encantamento | `dominar-monstro` | monster under mental control, glowing eyes |
+| I· | Explosão Solar | Sunburst | Evocação | `explosao-solar` | brilliant burst of sunlight blinding all |
+| I· | Formas Animais | Animal Shapes | Transmutação | `formas-animais` | allies transforming into beasts |
+| I· | Labirinto | Maze | Conjuração | `labirinto` | creature trapped in an endless labyrinth |
+| I· | Lábia | Glibness | Encantamento | `labia` | silver tongue, persuasive speech, charisma glow |
+| I· | Mente Embotada | Befuddlement | Encantamento | `mente-embotada` | mind shattered, intellect broken, spinning sigils |
+| I· | Mente Vazia | Mind Blank | Abjuração | `mente-vazia` | mind protected by a blank shield |
+| I· | Nuvem Incendiária | Incendiary Cloud | Conjuração | `nuvem-incendiaria` | billowing cloud of burning embers |
+| I· | Palavra de Poder: Atordoar | Power Word Stun | Encantamento | `palavra-de-poder-atordoar` | word of power stunning a creature |
+| I· | Semiplano | Demiplane | Conjuração | `semiplano` | door to a small pocket dimension |
+| I· | Terremoto | Earthquake | Transmutação | `terremoto` | ground splitting from a violent earthquake |
+| I· | Tsunami | Tsunami | Conjuração | `tsunami` | colossal wall of water crashing |
 
 ## 9º círculo
 
 | ✓ | Magia | Em inglês | Escola | Arquivo | Palavras-chave |
 |---|---|---|---|---|---|
-| ·· | Aprisionamento | Imprisonment | Abjuração | `aprisionamento` | creature sealed in a magical prison |
-| ·· | Chuva de Meteoros | Meteor Swarm | Evocação | `chuva-de-meteoros` | fiery meteors raining from the sky |
-| ·· | Cura Completa em Massa | Mass Heal | Abjuração | `cura-completa-em-massa` | flood of healing light for many |
-| ·· | Desejo | Wish | Conjuração | `desejo` | glowing wish granting reality-altering power, a genie-like light |
-| ·· | Metamorfose Verdadeira | True Polymorph | Transmutação | `metamorfose-verdadeira` | creature permanently transformed into an object |
-| ·· | Mudança de Forma | Shapechange | Transmutação | `mudanca-de-forma` | caster transforming into various creatures |
-| ·· | Muralha Prismática | Prismatic Wall | Abjuração | `muralha-prismatica` | shimmering wall of seven colors |
-| ·· | Palavra de Poder: Curar | Power Word Heal | Encantamento | `palavra-de-poder-curar` | word of power healing completely |
-| ·· | Palavra de Poder: Matar | Power Word Kill | Encantamento | `palavra-de-poder-matar` | word of power killing instantly |
-| ·· | Parar o Tempo | Time Stop | Transmutação | `parar-o-tempo` | frozen world, stopped clock, caster moving |
-| ·· | Portal | Gate | Conjuração | `portal` | portal to another plane opening |
-| ·· | Presciência | Foresight | Adivinhação | `presciencia` | eye seeing the future, threads of fate |
-| ·· | Projeção Astral | Astral Projection | Necromancia | `projecao-astral` | astral bodies traveling through the Astral Plane |
-| ·· | Ressurreição Verdadeira | True Resurrection | Necromancia | `ressurreicao-verdadeira` | grand resurrection from a pile of ash, divine light |
-| ·· | Sina | Weird | Ilusão | `sina` | nightmare illusions of each creature's fears |
-| ·· | Tempestade da Vingança | Storm of Vengeance | Conjuração | `tempestade-da-vinganca` | massive storm cloud with lightning and acid rain |
+| I· | Aprisionamento | Imprisonment | Abjuração | `aprisionamento` | creature sealed in a magical prison |
+| I· | Chuva de Meteoros | Meteor Swarm | Evocação | `chuva-de-meteoros` | fiery meteors raining from the sky |
+| I· | Cura Completa em Massa | Mass Heal | Abjuração | `cura-completa-em-massa` | flood of healing light for many |
+| I· | Desejo | Wish | Conjuração | `desejo` | glowing wish granting reality-altering power, a genie-like light |
+| I· | Metamorfose Verdadeira | True Polymorph | Transmutação | `metamorfose-verdadeira` | creature permanently transformed into an object |
+| I· | Mudança de Forma | Shapechange | Transmutação | `mudanca-de-forma` | caster transforming into various creatures |
+| I· | Muralha Prismática | Prismatic Wall | Abjuração | `muralha-prismatica` | shimmering wall of seven colors |
+| I· | Palavra de Poder: Curar | Power Word Heal | Encantamento | `palavra-de-poder-curar` | word of power healing completely |
+| I· | Palavra de Poder: Matar | Power Word Kill | Encantamento | `palavra-de-poder-matar` | word of power killing instantly |
+| I· | Parar o Tempo | Time Stop | Transmutação | `parar-o-tempo` | frozen world, stopped clock, caster moving |
+| I· | Portal | Gate | Conjuração | `portal` | portal to another plane opening |
+| I· | Presciência | Foresight | Adivinhação | `presciencia` | eye seeing the future, threads of fate |
+| I· | Projeção Astral | Astral Projection | Necromancia | `projecao-astral` | astral bodies traveling through the Astral Plane |
+| I· | Ressurreição Verdadeira | True Resurrection | Necromancia | `ressurreicao-verdadeira` | grand resurrection from a pile of ash, divine light |
+| I· | Sina | Weird | Ilusão | `sina` | nightmare illusions of each creature's fears |
+| I· | Tempestade da Vingança | Storm of Vengeance | Conjuração | `tempestade-da-vinganca` | massive storm cloud with lightning and acid rain |
 
 Na coluna ✓, **I** quer dizer que o ícone já chegou e **C** que a ilustração já chegou.
