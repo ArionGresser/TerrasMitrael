@@ -243,7 +243,9 @@ function Emblema({
         </svg>
         <span
           className={`font-titulo text-heraldico-vermelho absolute inset-x-0 text-center text-3xl leading-none font-bold sm:text-[2.1rem] ${
-            forma === "escudo" ? "top-[38%]" : "top-[32%]"
+            // O centro do desenho, não o da caixa: o escudo pesa em cima e
+            // afina embaixo; o coração pesa nos dois lóbulos de cima
+            forma === "escudo" ? "top-[47%]" : "top-[44%]"
           } -translate-y-1/2`}
         >
           {valor}
