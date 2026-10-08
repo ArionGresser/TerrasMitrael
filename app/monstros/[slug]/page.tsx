@@ -9,6 +9,8 @@ import { Pergaminho } from "@/components/ui/Pergaminho";
 import { BotaoLink } from "@/components/ui/Botao";
 import { Rodape } from "@/components/Rodape";
 import { TituloBrasao, Sobretitulo, Ornamento } from "@/components/ui/Titulo";
+import { QuadroDeArte } from "@/components/ui/QuadroDeArte";
+import { arte } from "@/lib/arte";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -60,6 +62,12 @@ export default async function PaginaMonstro({ params }: Props) {
           </header>
 
           <div className="mx-auto max-w-[38rem]">
+            <QuadroDeArte
+              src={arte("monstros", m.slug)}
+              alt={`Ilustração: ${m.nome}`}
+              className="mt-2"
+            />
+
             <Secao titulo="Em combate">
               <dl className="grid grid-cols-2 gap-x-4 gap-y-3 text-sm">
                 {combate.map((c) => (

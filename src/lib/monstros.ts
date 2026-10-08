@@ -1,5 +1,6 @@
 import dados from "@/content/monstros/monstros.json";
 import { TAMANHOS, type ResumoDoMonstro } from "./monstros-base";
+import { arte } from "./arte";
 
 /**
  * O bestiário: os monstros e animais das regras de 2024, em português.
@@ -60,6 +61,7 @@ export function indiceDoBestiario(): ResumoDoMonstro[] {
       tamanho,
       nd,
       ndNumero,
+      imagem: arte("monstros", slug),
     }),
   );
 }

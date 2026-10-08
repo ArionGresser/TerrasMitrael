@@ -8,6 +8,7 @@ import {
   rotuloDaRaridade,
   type ResumoDoItem,
 } from "@/lib/itens-base";
+import { Miniatura } from "@/components/ui/QuadroDeArte";
 
 /**
  * A lista de itens mágicos com busca e filtros, no mesmo molde do Grimório.
@@ -199,6 +200,7 @@ export function Tesouro({ itens }: { itens: ResumoDoItem[] }) {
                       href={`/itens/${i.slug}/`}
                       className="group hover:bg-pergaminho-200/40 -mx-2 flex items-center gap-3 rounded-sm px-2 py-2 transition-colors"
                     >
+                      <Miniatura src={i.imagem} />
                       <span className="min-w-0 flex-1">
                         <span className="text-tinta-900 block font-semibold group-hover:underline">
                           {i.nome}

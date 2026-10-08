@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { TAMANHOS, TIPOS, type ResumoDoMonstro } from "@/lib/monstros-base";
+import { Miniatura } from "@/components/ui/QuadroDeArte";
 
 /**
  * A lista do bestiário com busca e filtros, no mesmo molde do Grimório.
@@ -229,6 +230,7 @@ export function Bestiario({ monstros }: { monstros: ResumoDoMonstro[] }) {
                       href={`/monstros/${m.slug}/`}
                       className="group hover:bg-pergaminho-200/40 -mx-2 flex items-center gap-3 rounded-sm px-2 py-2 transition-colors"
                     >
+                      <Miniatura src={m.imagem} />
                       <span className="min-w-0 flex-1">
                         <span className="text-tinta-900 block font-semibold group-hover:underline">
                           {m.nome}

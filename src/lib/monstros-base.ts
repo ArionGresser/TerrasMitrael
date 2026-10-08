@@ -42,4 +42,6 @@ export type ResumoDoMonstro = {
   tamanho: string;
   nd: string;
   ndNumero: number;
+  /** A arte da criatura, quando já existe (public/images/monstros/<slug>.webp). */
+  imagem?: string;
 };

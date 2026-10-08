@@ -1,5 +1,6 @@
 import dados from "@/content/itens/itens.json";
 import type { ResumoDoItem } from "./itens-base";
+import { arte } from "./arte";
 
 /**
  * Os itens mágicos das regras de 2024, em português.
@@ -54,6 +55,7 @@ export function indiceDosItens(): ResumoDoItem[] {
       raridades,
       variavel,
       sintonia,
+      imagem: arte("itens", slug),
     }),
   );
 }

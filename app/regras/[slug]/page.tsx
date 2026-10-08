@@ -9,6 +9,8 @@ import { Dobra } from "@/components/ui/Dobra";
 import { BotaoLink } from "@/components/ui/Botao";
 import { Rodape } from "@/components/Rodape";
 import { TituloBrasao, TituloSecao, Sobretitulo, Ornamento } from "@/components/ui/Titulo";
+import { QuadroDeArte, Miniatura } from "@/components/ui/QuadroDeArte";
+import { arteDoItemDeRegra, type ArteDeRegra } from "@/lib/regras-arte";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -92,19 +94,35 @@ export default async function PaginaDocumento({ params }: Props) {
                   <TituloSecao className="mb-6 text-center">{grupo.titulo}</TituloSecao>
                 ) : null}
                 <div className={doc.estilo === "aberto" ? "space-y-7" : "space-y-5"}>
-                  {grupo.itens.map((item) =>
-                    !item.titulo ? (
-                      <TextoDeRegra key={item.id + "-abertura"} texto={item.texto} />
-                    ) : doc.estilo === "aberto" ? (
-                      <Aberto key={item.id} item={item} />
+                  {grupo.itens.map((item) => {
+                    if (!item.titulo) {
+                      return <TextoDeRegra key={item.id + "-abertura"} texto={item.texto} />;
+                    }
+                    const arte = arteDoItemDeRegra(doc.slug, grupo.titulo, item.id);
+                    return doc.estilo === "aberto" ? (
+                      <Aberto key={item.id} item={item} arte={arte} />
                     ) : (
                       <div key={item.id} id={item.id} className="scroll-mt-24">
                         <Dobra titulo={item.titulo}>
-                          <TextoDeRegra texto={item.texto} />
+                          {/* A arte flutua à direita, para o texto começar
+                              logo no alto e aparecer na prévia recolhida */}
+                          <div className="flow-root">
+                            {arte ? (
+                              <div className="float-right mb-2 ml-4 w-32 sm:w-48">
+                                <QuadroDeArte
+                                  src={arte.src}
+                                  alt={`Ilustração: ${item.titulo}`}
+                                  compacto
+                                  sizes="192px"
+                                />
+                              </div>
+                            ) : null}
+                            <TextoDeRegra texto={item.texto} />
+                          </div>
                         </Dobra>
                       </div>
-                    )
-                  )}
+                    );
+                  })}
                 </div>
               </section>
             ))}
@@ -125,12 +143,27 @@ export default async function PaginaDocumento({ params }: Props) {
   );
 }
 
-function Aberto({ item }: { item: ItemDeRegra }) {
+function Aberto({ item, arte }: { item: ItemDeRegra; arte?: ArteDeRegra }) {
+  // Os objetos (quadrado) ficam numa miniatura ao lado do nome; as
+  // prateleiras (largo) num quadro inteiro logo abaixo dele.
+  const objeto = arte?.formato === "quadrado";
   return (
     <article id={item.id} className="border-dourado-600/25 scroll-mt-24 border-b border-dashed pb-6 last:border-0">
-      <h3 className="font-titulo text-tinta-900 text-lg font-bold">{item.titulo}</h3>
-      <div className="mt-2">
-        <TextoDeRegra texto={item.texto} />
+      <div className={objeto ? "flex items-start gap-4" : ""}>
+        {objeto ? <Miniatura src={arte.src} tamanho="bloco" /> : null}
+        <div className="min-w-0 flex-1">
+          <h3 className="font-titulo text-tinta-900 text-lg font-bold">{item.titulo}</h3>
+          {arte && !objeto ? (
+            <QuadroDeArte
+              src={arte.src}
+              alt={`Ilustração: ${item.titulo}`}
+              className="mt-3 mb-1"
+            />
+          ) : null}
+          <div className="mt-2">
+            <TextoDeRegra texto={item.texto} />
+          </div>
+        </div>
       </div>
     </article>
   );

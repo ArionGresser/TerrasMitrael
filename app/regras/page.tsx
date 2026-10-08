@@ -1,9 +1,8 @@
-import { existsSync } from "node:fs";
-import path from "node:path";
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
+import { arte } from "@/lib/arte";
 import { documentosDeRegra } from "@/lib/regras";
+import { QuadroDeArte } from "@/components/ui/QuadroDeArte";
 import { CreditoSrd } from "@/components/magias/CreditoSrd";
 import { Pergaminho } from "@/components/ui/Pergaminho";
 import { Rodape } from "@/components/Rodape";
@@ -55,24 +54,9 @@ const FIXAS = [
   },
 ];
 
-/**
- * A imagem de cada cartão fica em public/images/compendio/, com o nome do
- * endereço da parte: classes.webp, magias.webp, glossario.webp... Basta pôr o
- * arquivo na pasta (webp, jpg ou png) e rodar o build. Enquanto não houver
- * arquivo, o cartão mostra só a moldura vazia, guardando o lugar.
- */
-const PASTA_DAS_IMAGENS = "images/compendio";
-const FORMATOS = ["webp", "jpg", "png"];
-
-function imagemDaParte(href: string): string | null {
-  const chave = href.split("/").filter(Boolean).pop();
-  for (const formato of FORMATOS) {
-    const arquivo = `${PASTA_DAS_IMAGENS}/${chave}.${formato}`;
-    if (existsSync(path.join(process.cwd(), "public", arquivo))) {
-      return `/${arquivo}`;
-    }
-  }
-  return null;
+/** A imagem de cada cartão: public/images/compendio/<fim do endereço>.webp */
+function imagemDaParte(href: string): string | undefined {
+  return arte("compendio", href.split("/").filter(Boolean).pop() ?? "");
 }
 
 export default function PaginaLivroDoAventureiro() {
@@ -116,33 +100,17 @@ export default function PaginaLivroDoAventureiro() {
                     href={p.href}
                     className="group painel-ficha flex h-full flex-col px-4 pt-4 pb-3.5 transition-transform motion-safe:hover:-translate-y-0.5"
                   >
-                    <span
-                      className={`border-dourado-600/30 bg-pergaminho-200/50 relative mb-3 block aspect-[16/9] w-full overflow-hidden rounded-sm border ${
-                        sozinha ? "sm:aspect-[21/7]" : ""
-                      }`}
-                    >
-                      {p.imagem ? (
-                        <Image
-                          src={p.imagem}
-                          alt=""
-                          fill
-                          sizes={
-                            sozinha
-                              ? "(max-width: 640px) 100vw, 700px"
-                              : "(max-width: 640px) 100vw, 340px"
-                          }
-                          className="object-cover sepia-[0.12]"
-                        />
-                      ) : (
-                        // Sem imagem ainda: só a moldura, com um enfeite no meio
-                        <span
-                          aria-hidden
-                          className="border-dourado-600/35 text-dourado-600/50 absolute inset-2 grid place-items-center rounded-sm border border-dashed text-2xl"
-                        >
-                          ❦
-                        </span>
-                      )}
-                    </span>
+                    <QuadroDeArte
+                      src={p.imagem}
+                      alt=""
+                      compacto
+                      sizes={
+                        sozinha
+                          ? "(max-width: 640px) 100vw, 700px"
+                          : "(max-width: 640px) 100vw, 340px"
+                      }
+                      className={`mb-3 ${sozinha ? "sm:aspect-[21/7]" : ""}`}
+                    />
                     <span className="flex items-baseline justify-between gap-3">
                       <span className="font-brasao text-tinta-900 text-2xl group-hover:underline">
                         {p.titulo}

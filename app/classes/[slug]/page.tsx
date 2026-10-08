@@ -12,6 +12,8 @@ import { Dobra } from "@/components/ui/Dobra";
 import { BotaoLink } from "@/components/ui/Botao";
 import { Rodape } from "@/components/Rodape";
 import { TituloBrasao, TituloSecao, Sobretitulo, Ornamento } from "@/components/ui/Titulo";
+import { QuadroDeArte } from "@/components/ui/QuadroDeArte";
+import { arte } from "@/lib/arte";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -66,6 +68,13 @@ export default async function PaginaClasse({ params }: Props) {
           </header>
 
           <div className="mx-auto max-w-[40rem]">
+            <QuadroDeArte
+              src={arte("classes", classe.slug)}
+              alt={`Ilustração: ${classe.nome}`}
+              sizes="(max-width: 640px) 100vw, 640px"
+              className="mt-2"
+            />
+
             <Secao titulo={`Traços do ${classe.nome}`}>
               <dl className="grid grid-cols-2 gap-x-4 gap-y-3 text-sm">
                 {classe.tracos.map((t, i) => (

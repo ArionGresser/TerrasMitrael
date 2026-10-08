@@ -36,6 +36,8 @@ export type ResumoDoItem = {
   /** Quando a raridade muda conforme a versão do item (+1, +2, +3...). */
   variavel: boolean;
   sintonia: boolean;
+  /** A arte do item, quando já existe (public/images/itens/<slug>.webp). */
+  imagem?: string;
 };
 
 /** "Raro", "Incomum a Muito Raro". */

@@ -9,6 +9,8 @@ import { Pergaminho } from "@/components/ui/Pergaminho";
 import { BotaoLink } from "@/components/ui/Botao";
 import { Rodape } from "@/components/Rodape";
 import { TituloBrasao, Sobretitulo, Ornamento } from "@/components/ui/Titulo";
+import { QuadroDeArte } from "@/components/ui/QuadroDeArte";
+import { arte } from "@/lib/arte";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -62,6 +64,12 @@ export default async function PaginaEspecie({ params }: Props) {
           </header>
 
           <div className="mx-auto max-w-[38rem]">
+            <QuadroDeArte
+              src={arte("especies", especie.slug)}
+              alt={`Ilustração: ${especie.nome}`}
+              className="mt-2"
+            />
+
             <Secao titulo="Características">
               <dl className="grid grid-cols-2 gap-x-4 gap-y-3 text-sm">
                 {ficha.map((item) => (

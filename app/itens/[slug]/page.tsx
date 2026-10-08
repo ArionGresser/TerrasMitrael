@@ -8,6 +8,8 @@ import { Pergaminho } from "@/components/ui/Pergaminho";
 import { BotaoLink } from "@/components/ui/Botao";
 import { Rodape } from "@/components/Rodape";
 import { TituloBrasao, Sobretitulo, Ornamento } from "@/components/ui/Titulo";
+import { QuadroDeArte } from "@/components/ui/QuadroDeArte";
+import { arte } from "@/lib/arte";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -54,7 +56,14 @@ export default async function PaginaItem({ params }: Props) {
           </header>
 
           <div className="mx-auto max-w-[38rem]">
-            <div className="mt-2">
+            <QuadroDeArte
+              src={arte("itens", item.slug)}
+              alt={`Ilustração: ${item.nome}`}
+              formato="quadrado"
+              className="mt-2"
+            />
+
+            <div className="mt-6">
               <TextoDeRegra texto={item.texto} />
             </div>
 

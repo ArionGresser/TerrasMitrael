@@ -5,6 +5,8 @@ import { CreditoSrd } from "@/components/magias/CreditoSrd";
 import { Pergaminho } from "@/components/ui/Pergaminho";
 import { Rodape } from "@/components/Rodape";
 import { TituloBrasao, Sobretitulo, Ornamento } from "@/components/ui/Titulo";
+import { QuadroDeArte } from "@/components/ui/QuadroDeArte";
+import { arte } from "@/lib/arte";
 
 export const metadata: Metadata = {
   title: "Classes",
@@ -37,6 +39,13 @@ export default function PaginaClasses() {
                     href={`/classes/${slug}/`}
                     className="group painel-ficha flex h-full flex-col px-4 pt-4 pb-3.5 transition-transform motion-safe:hover:-translate-y-0.5"
                   >
+                    <QuadroDeArte
+                      src={arte("classes", slug)}
+                      alt=""
+                      compacto
+                      sizes="(max-width: 640px) 100vw, 340px"
+                      className="mb-3"
+                    />
                     <Cabeca nome={nome} original={original} />
                     <span className="text-tinta-500 mt-1 text-xs">
                       {traco(classe, "Atributo principal")} ·{" "}

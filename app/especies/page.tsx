@@ -5,6 +5,8 @@ import { CreditoSrd } from "@/components/magias/CreditoSrd";
 import { Pergaminho } from "@/components/ui/Pergaminho";
 import { Rodape } from "@/components/Rodape";
 import { TituloBrasao, Sobretitulo, Ornamento } from "@/components/ui/Titulo";
+import { QuadroDeArte } from "@/components/ui/QuadroDeArte";
+import { arte } from "@/lib/arte";
 
 export const metadata: Metadata = {
   title: "Espécies",
@@ -48,6 +50,13 @@ export default function PaginaEspecies() {
                   href={`/especies/${especie.slug}/`}
                   className="group painel-ficha flex h-full flex-col px-4 pt-4 pb-3.5 transition-transform motion-safe:hover:-translate-y-0.5"
                 >
+                  <QuadroDeArte
+                    src={arte("especies", especie.slug)}
+                    alt=""
+                    compacto
+                    sizes="(max-width: 640px) 100vw, 340px"
+                    className="mb-3"
+                  />
                   <span className="flex items-baseline justify-between gap-3">
                     <span className="font-brasao text-tinta-900 text-2xl group-hover:underline">
                       {especie.nome}
