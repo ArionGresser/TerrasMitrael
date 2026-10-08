@@ -12,8 +12,8 @@ export function IconeDaMagia({
   icone?: string;
   tamanho?: "lista" | "pagina";
 }) {
-  const medida = tamanho === "lista" ? "size-10" : "size-20 sm:size-24";
-  const pixels = tamanho === "lista" ? 40 : 96;
+  const medida = tamanho === "lista" ? "size-14" : "size-32 sm:size-40";
+  const pixels = tamanho === "lista" ? 56 : 160;
 
   if (icone) {
     return (
@@ -33,7 +33,7 @@ export function IconeDaMagia({
     return (
       <span
         aria-hidden
-        className="border-dourado-600/25 bg-pergaminho-200/50 text-dourado-600/45 grid size-10 shrink-0 place-items-center rounded-sm border border-dashed text-xs"
+        className="border-dourado-600/25 bg-pergaminho-200/50 text-dourado-600/45 grid size-14 shrink-0 place-items-center rounded-sm border border-dashed text-xs"
       >
         ✦
       </span>
@@ -46,7 +46,7 @@ export function IconeDaMagia({
       title="O ícone desta magia ainda está sendo desenhado"
       className={`border-dourado-600/25 bg-pergaminho-200/50 ${medida} flex shrink-0 flex-col items-center justify-center gap-1 rounded-sm border border-dashed`}
     >
-      <Selo variante="marca" className="size-9 opacity-25 sm:size-11" />
+      <Selo variante="marca" className="size-14 opacity-25 sm:size-16" />
       <span className="font-titulo text-tinta-500 text-[0.5rem] leading-none tracking-[0.1em] uppercase">
         em obra
       </span>

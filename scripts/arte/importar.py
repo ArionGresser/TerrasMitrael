@@ -5,7 +5,7 @@ Traz artes prontas de uma pasta qualquer para o site, já no tamanho certo.
 
 O nome do arquivo diz o que ele é. Por enquanto, as magias do Grimório:
 
-    bola-de-fogo.png     → ícone (quadrado): 512 px, mais a miniatura de 96 px
+    bola-de-fogo.png     → ícone (quadrado): 512 px, mais a miniatura de 128 px
                             que a lista do Grimório usa
     bola-de-fogo-1.png   → ilustração de uso (até -3): 1600 × 900
 
@@ -61,7 +61,7 @@ def importar(pasta):
             if abs(w - h) > max(w, h) * 0.05:
                 avisos.append(f"{arquivo.name}: ícone não é quadrado ({w}×{h}), cortei o centro")
             salvar(imagem, ICONES / f"{nome}.webp", 512, 512, 82)
-            salvar(imagem, MINIATURAS / f"{nome}.webp", 96, 96, 80)
+            salvar(imagem, MINIATURAS / f"{nome}.webp", 128, 128, 80)
             icones.append(nome)
         elif cena and cena.group(1) in MAGIAS:
             if w / h < 1.5:

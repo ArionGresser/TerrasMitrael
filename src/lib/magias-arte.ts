@@ -8,7 +8,7 @@ import path from "node:path";
  * magia (o mesmo slug do endereço) e o site acha na hora de gerar as páginas:
  *
  *   public/images/magias/icones/bola-de-fogo.webp
- *   public/images/magias/icones/mini/bola-de-fogo.webp     (96 px, para a lista)
+ *   public/images/magias/icones/mini/bola-de-fogo.webp     (128 px, para a lista)
  *   public/images/magias/ilustracoes/bola-de-fogo-1.webp   (até -3)
  *
  * Enquanto o arquivo não existe, aparece o selo de "em obra" no lugar.
@@ -32,8 +32,8 @@ export function iconeDaMagia(slug: string): string | undefined {
 }
 
 /**
- * A versão pequena do ícone (96 px), para a lista do Grimório, onde ele
- * aparece com 40 px e são dezenas na tela. O scripts/arte/importar.py gera
+ * A versão pequena do ícone (128 px), para a lista do Grimório, onde ele
+ * aparece com 56 px e são dezenas na tela. O scripts/arte/importar.py gera
  * as duas; sem a pequena, a lista usa o ícone grande mesmo.
  */
 export function miniaturaDaMagia(slug: string): string | undefined {
