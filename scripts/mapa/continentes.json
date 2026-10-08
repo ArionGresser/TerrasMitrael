@@ -1,0 +1,160 @@
+{
+  "mapa": [
+    1600,
+    1132
+  ],
+  "pecas": [
+    {
+      "chave": "tundra",
+      "nome": "Os Dedos da Tundra",
+      "quadro": [
+        2048,
+        1365
+      ],
+      "escala": 2.46088,
+      "origem": [
+        6.426,
+        171.867
+      ],
+      "caixa": [
+        39,
+        25,
+        749,
+        365
+      ]
+    },
+    {
+      "chave": "tungel",
+      "nome": "Terras de Tungel",
+      "quadro": [
+        2048,
+        1365
+      ],
+      "escala": 2.39066,
+      "origem": [
+        -1078.587,
+        39.412
+      ],
+      "caixa": [
+        494,
+        52,
+        771,
+        434
+      ]
+    },
+    {
+      "chave": "marily",
+      "nome": "Marily",
+      "quadro": [
+        1365,
+        2048
+      ],
+      "escala": 4.37189,
+      "origem": [
+        -5156.154,
+        62.185
+      ],
+      "caixa": [
+        1195,
+        34,
+        281,
+        372
+      ]
+    },
+    {
+      "chave": "gtry",
+      "nome": "Reinado de Gtry",
+      "quadro": [
+        2048,
+        1365
+      ],
+      "escala": 5.38947,
+      "origem": [
+        -641.347,
+        -1637.668
+      ],
+      "caixa": [
+        138,
+        354,
+        342,
+        153
+      ]
+    },
+    {
+      "chave": "askar",
+      "nome": "Terras de Askar",
+      "quadro": [
+        2048,
+        1365
+      ],
+      "escala": 2.50204,
+      "origem": [
+        104.502,
+        -1362.915
+      ],
+      "caixa": [
+        53,
+        572,
+        629,
+        491
+      ]
+    },
+    {
+      "chave": "ilhas-leviano",
+      "nome": "Ilhas do Mar Leviano",
+      "quadro": [
+        1365,
+        2048
+      ],
+      "escala": 3.96387,
+      "origem": [
+        -2096.174,
+        -2311.597
+      ],
+      "caixa": [
+        609,
+        609,
+        184,
+        465
+      ]
+    },
+    {
+      "chave": "enclausurador",
+      "nome": "Enclausurador",
+      "quadro": [
+        2048,
+        2048
+      ],
+      "escala": 9.17015,
+      "origem": [
+        -11653.731,
+        -3400.597
+      ],
+      "caixa": [
+        1282,
+        395,
+        201,
+        175
+      ]
+    },
+    {
+      "chave": "mitrael",
+      "nome": "Terras de Mitrael",
+      "quadro": [
+        2048,
+        2048
+      ],
+      "escala": 3.09782,
+      "origem": [
+        -2605.09,
+        -1454.252
+      ],
+      "caixa": [
+        874,
+        532,
+        595,
+        536
+      ]
+    }
+  ]
+}

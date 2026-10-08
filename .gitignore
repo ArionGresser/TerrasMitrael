@@ -26,3 +26,9 @@ yarn-error.log*
 
 # Configuração local de ferramentas, não faz parte do site
 .claude/
+
+# Kit do mapa por partes (gerado por scripts/mapa/recortar-continentes.py)
+/mapa-kit/
+
+# O projeto usa o npm (package-lock.json)
+pnpm-lock.yaml

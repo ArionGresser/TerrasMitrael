@@ -158,34 +158,38 @@ def centro(m):
     return int(x), int(y)
 
 
-dados = []
-for chave, m in REGIOES.items():
-    x, y, w, hh = cv2.boundingRect(m)
-    cx, cy = centro(m)
-    dados.append(
-        {"chave": chave, "d": caminho(m), "centro": [cx, cy], "caixa": [x, y, w, hh]}
-    )
+def escrever():
+    """Escreve o arquivo .ts com os contornos."""
+    dados = []
+    for chave, m in REGIOES.items():
+        x, y, w, hh = cv2.boundingRect(m)
+        cx, cy = centro(m)
+        dados.append(
+            {"chave": chave, "d": caminho(m), "centro": [cx, cy], "caixa": [x, y, w, hh]}
+        )
 
-SAIDA.write_text(
-    "/**\n"
-    " * Gerado por scripts/mapa/gerar-regioes.py a partir de public/images/map.jpg.\n"
-    " * Não edite à mão: o contorno de cada região, em pixels da imagem de\n"
-    " * 1600 x 1132, com o centro (onde o nome cabe) e a caixa que a envolve.\n"
-    " */\n\n"
-    "export type ContornoDeRegiao = {\n"
-    "  chave: string;\n"
-    "  d: string;\n"
-    "  centro: [number, number];\n"
-    "  caixa: [number, number, number, number];\n"
-    "};\n\n"
-    f"export const LARGURA_BASE = {W};\nexport const ALTURA_BASE = {H};\n\n"
-    "export const CONTORNOS: ContornoDeRegiao[] = "
-    + json.dumps(dados, ensure_ascii=False, indent=2)
-    + ";\n"
-)
-print(SAIDA, round(SAIDA.stat().st_size / 1024), "KB")
+    SAIDA.write_text(
+        "/**\n"
+        " * Gerado por scripts/mapa/gerar-regioes.py a partir de public/images/map.jpg.\n"
+        " * Não edite à mão: o contorno de cada região, em pixels da imagem de\n"
+        " * 1600 x 1132, com o centro (onde o nome cabe) e a caixa que a envolve.\n"
+        " */\n\n"
+        "export type ContornoDeRegiao = {\n"
+        "  chave: string;\n"
+        "  d: string;\n"
+        "  centro: [number, number];\n"
+        "  caixa: [number, number, number, number];\n"
+        "};\n\n"
+        f"export const LARGURA_BASE = {W};\nexport const ALTURA_BASE = {H};\n\n"
+        "export const CONTORNOS: ContornoDeRegiao[] = "
+        + json.dumps(dados, ensure_ascii=False, indent=2)
+        + ";\n"
+    )
+    print(SAIDA, round(SAIDA.stat().st_size / 1024), "KB")
+
 
 if __name__ == "__main__":
+    escrever()
     vis = im.copy()
     for m in REGIOES.values():
         cs, _ = cv2.findContours(m, cv2.RETR_CCOMP, cv2.CHAIN_APPROX_NONE)
