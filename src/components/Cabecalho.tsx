@@ -2,7 +2,7 @@ import { Selo } from "@/components/ui/Selo";
 
 /**
  * A viga de madeira que atravessa o topo da mesa, presa por ferragens de
- * ferro nas pontas, com a marca do selo imperial queimada no meio dela.
+ * ferro nas pontas, com o selo imperial de cera lacrado no meio dela.
  *
  * Não é barra de navegação nem fica presa na tela: é adorno da mesa, então
  * sai de vista quando a pessoa rola. A navegação continua no selo de cera,
@@ -28,10 +28,11 @@ export function Cabecalho() {
           <Ferragem />
         </div>
 
-        {/* A marca do ferro quente, mordendo a viga e a mesa abaixo dela */}
+        {/* O selo de cera do império, lacrado no meio da viga */}
         <Selo
-          variante="marca"
-          className="absolute top-1/2 left-1/2 size-[3.9rem] -translate-x-1/2 -translate-y-1/2 opacity-90 sm:size-[4.75rem]"
+          variante="cera"
+          id="selo-viga"
+          className="absolute top-1/2 left-1/2 size-[3.6rem] -translate-x-1/2 -translate-y-1/2 drop-shadow-[0_4px_5px_rgba(0,0,0,0.6)] sm:size-[4.4rem]"
         />
       </div>
     </div>

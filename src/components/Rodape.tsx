@@ -8,7 +8,7 @@ const REPOSITORIO = "https://github.com/ArionGresser/TerrasMitrael";
 
 /**
  * O pé da mesa: uma tábua grossa atravessada embaixo, par da viga do topo,
- * com as mesmas ferragens nas pontas e a marca do selo queimada no meio.
+ * com as mesmas ferragens nas pontas e o selo de cera lacrado no meio.
  * Por cima dela, o nome do mundo, as seções e os caminhos da comunidade.
  */
 export function Rodape() {
@@ -25,11 +25,11 @@ export function Rodape() {
         <Ferragem />
       </div>
 
-      {/* A marca do ferro quente, mordendo a borda da tábua */}
+      {/* O selo de cera do império, lacrado na borda da tábua */}
       <Selo
-        variante="marca"
+        variante="cera"
         id="selo-rodape"
-        className="absolute top-0 left-1/2 size-[4.25rem] -translate-x-1/2 -translate-y-1/2 opacity-90 sm:size-20"
+        className="absolute top-0 left-1/2 size-[4rem] -translate-x-1/2 -translate-y-1/2 drop-shadow-[0_4px_5px_rgba(0,0,0,0.6)] sm:size-[4.75rem]"
       />
 
       <div className="relative mx-auto max-w-3xl px-4 text-center sm:px-6">
