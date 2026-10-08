@@ -783,7 +783,7 @@
   left: -6px;
   right: -6px;
   height: 16px;
-  border-radius: 8px;
+  border-radius: 3px / 50%;
   pointer-events: none;
   box-shadow:
     0 4px 7px -1px rgb(0 0 0 / 0.5),
@@ -791,8 +791,10 @@
     inset 0 0 0 1px rgb(90 62 28 / 0.3);
 }
 
-/* As pontas do eixo, de madeira torneada: um puxador arredondado com os
-   anéis que o torno deixou */
+/* As pontas do eixo: a vareta de madeira atravessa o rolo e sai pelas duas
+   pontas, terminando num puxador torneado. A vareta entra uns pixels no
+   papel, então o puxador fica preso nele, sem vão. Medidas por rolo:
+   --pino-largura e --pino-altura são do puxador; a vareta tem 7px. */
 .rolo::before,
 .rolo::after,
 .rolo-capitulo::before,
@@ -802,41 +804,57 @@
   content: "";
   position: absolute;
   top: 50%;
+  width: calc(var(--pino-largura) + 7px);
+  height: var(--pino-altura);
   transform: translateY(-50%);
-  border-radius: 45% / 30%;
-  background-image:
+  background-repeat: no-repeat;
+  filter: drop-shadow(0 2px 2px rgb(0 0 0 / 0.5));
+  /* O puxador: madeira torneada com o brilho da vela e os anéis do torno */
+  --puxador:
     repeating-linear-gradient(
       to bottom,
       transparent 0 3px,
-      rgb(0 0 0 / 0.28) 3px 4px,
-      rgb(255 255 255 / 0.12) 4px 5px
+      rgb(0 0 0 / 0.3) 3px 4px,
+      rgb(255 255 255 / 0.1) 4px 5px
     ),
-    radial-gradient(ellipse 60% 55% at 38% 34%, rgb(255 214 160 / 0.45), transparent 70%),
-    linear-gradient(
-      to right,
-      #3a220f 0%,
-      #7b4d25 30%,
-      #a0693a 48%,
-      #6a4120 72%,
-      #2a1708 100%
-    );
-  box-shadow:
-    0 2px 4px rgb(0 0 0 / 0.55),
-    inset 0 0 0 1px rgb(0 0 0 / 0.35);
+    radial-gradient(ellipse 50% 50% at 50% 50%, #9c6536 0%, #7a4b24 45%, #4a2a12 80%, #2a1708 99%, transparent 100%);
+  /* A vareta: um cilindro fino, mais claro no alto */
+  --vareta: linear-gradient(to bottom, #2a1708 0%, #8a5a30 35%, #6a4220 65%, #2a1708 100%);
 }
 
 .rolo::before,
-.rolo::after {
-  width: 9px;
-  height: 24px;
+.rolo-capitulo::before,
+.rolo-capitulo-base::before {
+  left: calc(-1 * var(--pino-largura) - 4px);
+  background-image: var(--puxador), var(--vareta);
+  background-size:
+    var(--pino-largura) 100%,
+    var(--pino-largura) 100%,
+    9px 40%;
+  background-position:
+    left center,
+    left center,
+    right center;
 }
 
-.rolo::before {
-  left: -6px;
+.rolo::after,
+.rolo-capitulo::after,
+.rolo-capitulo-base::after {
+  right: calc(-1 * var(--pino-largura) - 4px);
+  background-image: var(--puxador), var(--vareta);
+  background-size:
+    var(--pino-largura) 100%,
+    var(--pino-largura) 100%,
+    9px 40%;
+  background-position:
+    right center,
+    right center,
+    left center;
 }
 
-.rolo::after {
-  right: -6px;
+.rolo {
+  --pino-largura: 8px;
+  --pino-altura: 22px;
 }
 
 .rolo-topo {
@@ -852,21 +870,12 @@
     left: -12px;
     right: -12px;
     height: 22px;
-    border-radius: 11px;
+    border-radius: 4px / 50%;
   }
 
-  .rolo::before,
-  .rolo::after {
-    width: 12px;
-    height: 32px;
-  }
-
-  .rolo::before {
-    left: -9px;
-  }
-
-  .rolo::after {
-    right: -9px;
+  .rolo {
+    --pino-largura: 11px;
+    --pino-altura: 30px;
   }
 
   .rolo-topo {
@@ -915,7 +924,9 @@
 
 .rolo-capitulo {
   position: relative;
-  border-radius: 12px / 50%;
+  border-radius: 5px / 50%;
+  --pino-largura: 8px;
+  --pino-altura: 76%;
   box-shadow:
     0 5px 9px -2px rgb(0 0 0 / 0.42),
     0 1px 2px rgb(0 0 0 / 0.3),
@@ -931,33 +942,13 @@
   position: relative;
   display: block;
   height: 14px;
-  border-radius: 7px;
+  border-radius: 3px / 50%;
   --ponta: 7px;
+  --pino-largura: 7px;
+  --pino-altura: 20px;
   box-shadow:
     0 4px 7px -2px rgb(0 0 0 / 0.42),
     inset 0 0 0 1px rgb(90 62 28 / 0.3);
-}
-
-.rolo-capitulo::before,
-.rolo-capitulo::after {
-  width: 8px;
-  height: 78%;
-}
-
-.rolo-capitulo-base::before,
-.rolo-capitulo-base::after {
-  width: 7px;
-  height: 22px;
-}
-
-.rolo-capitulo::before,
-.rolo-capitulo-base::before {
-  left: -6px;
-}
-
-.rolo-capitulo::after,
-.rolo-capitulo-base::after {
-  right: -6px;
 }
 
 /* O papel que desce do rolo: fibras, um amarelado que escurece nas bordas
