@@ -44,7 +44,7 @@ export function FitasMudas({ chaves }: { chaves: string[] }) {
         const tag = buscarTag(chave);
 
         return (
-          <li key={chave}>
+          <li key={chave} className="fita-sombra">
             <span
               className="fita font-titulo relative flex items-center py-0.5 pr-3.5 pl-2.5 text-[0.55rem] font-bold tracking-[0.1em] uppercase"
               style={estiloDaFita(tag)}

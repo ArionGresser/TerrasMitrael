@@ -45,7 +45,7 @@ export function Fitas({
           const escolhida = aberta === chave;
 
           return (
-            <li key={chave}>
+            <li key={chave} className="fita-sombra">
               <button
                 type="button"
                 onClick={() => {
