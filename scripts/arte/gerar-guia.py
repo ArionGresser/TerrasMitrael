@@ -83,6 +83,15 @@ PAGINA = """<!doctype html>
   button.copiar.ok { background: var(--ouro); color: var(--papel); }
   .linha-prompt { display: flex; gap: 10px; align-items: flex-start; }
   .linha-prompt p { flex: 1; }
+  .planilha { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center;
+    background: var(--papel); border: 1px solid var(--linha); border-radius: 6px;
+    padding: 10px 14px; margin-bottom: 14px; }
+  .planilha select { font: inherit; padding: 4px 8px; min-height: 36px; margin-left: 6px;
+    border: 1px solid var(--linha); border-radius: 4px; background: var(--fundo); color: var(--tinta); }
+  #baixar { font: inherit; cursor: pointer; padding: 6px 16px; min-height: 40px; border-radius: 4px;
+    border: 1px solid var(--tinta); background: var(--tinta); color: var(--papel); }
+  #baixar:disabled { opacity: .5; cursor: default; }
+  .prompt { white-space: pre-line; }
   .vazio { text-align: center; color: var(--suave); font-style: italic; padding: 24px; }
   :focus-visible { outline: 2px solid var(--ouro); outline-offset: 2px; }
 </style>
@@ -96,10 +105,11 @@ PAGINA = """<!doctype html>
     <strong>Como fazer</strong>
     <ol>
       <li>Copie o <em>prompt</em> e gere a imagem. Se a ferramenta deixar, escolha a proporção indicada (16:9 deitada ou quadrada).</li>
-      <li>Salve na pasta <code>Downloads/Artes prontas</code> com o nome mostrado. Pode ser <code>.png</code> ou <code>.jpg</code>.</li>
+      <li>Salve na pasta <code>Documents/Artes prontas</code> com o nome mostrado. Pode ser <code>.png</code> ou <code>.jpg</code>.</li>
       <li>Marque a caixinha. A marca fica guardada neste navegador.</li>
       <li>Quando juntar algumas, avise o Claude para subir. As que já estão no site aparecem com o selo <em>no site</em>.</li>
     </ol>
+    <p><strong>Muitas de uma vez:</strong> em cada aba, baixe a planilha com as que faltam, anexe no ChatGPT e cole a mensagem pronta. Cada linha já traz o prompt inteiro e o nome do arquivo.</p>
   </div>
 
   <div class="total"><strong id="contagem"></strong><div class="barra"><span id="barra"></span></div></div>
@@ -109,6 +119,19 @@ PAGINA = """<!doctype html>
   <div class="filtros">
     <input type="search" id="busca" placeholder="Procurar pelo nome, em português ou pelo arquivo" aria-label="Procurar">
     <label><input type="checkbox" id="esconder"> Esconder as feitas</label>
+  </div>
+
+  <div class="planilha">
+    <label>Quantas por planilha
+      <select id="lote">
+        <option value="10">10</option>
+        <option value="20" selected>20</option>
+        <option value="50">50</option>
+        <option value="0">Todas</option>
+      </select>
+    </label>
+    <button type="button" id="baixar">Baixar planilha</button>
+    <button type="button" id="mensagem" class="copiar">Copiar mensagem para o ChatGPT</button>
   </div>
 
   <ul id="lista"></ul>
@@ -205,7 +228,7 @@ function lista() {
       if (caixa.checked) marcas[a.entrega] = true; else delete marcas[a.entrega];
       salvarMarcas();
       li.classList.toggle("feita", caixa.checked);
-      contagens(); abas();
+      contagens(); abas(); botaoBaixar();
       if (esconder && caixa.checked) li.remove();
     };
     const [botaoNome, botaoPrompt] = li.querySelectorAll("button.copiar");
@@ -215,7 +238,58 @@ function lista() {
   }
 }
 
-function tudo() { contagens(); abas(); lista(); }
+const MENSAGEM =
+  "Anexei uma planilha. Gere uma imagem para cada linha, uma de cada vez e na ordem, " +
+  "seguindo à risca o prompt da coluna \\"prompt\\" (formato, estilo e o que evitar). " +
+  "Entregue cada imagem em PNG com o nome exato da coluna \\"arquivo\\". " +
+  "Não escreva nenhum texto dentro das imagens. Se parar no meio, continue de onde parou quando eu disser \\"continue\\".";
+
+function pendentes() {
+  const secao = SECOES.find(s => s.chave === atual);
+  const todas = secao.artes.filter(a => !feita(a));
+  const lote = Number(document.getElementById("lote").value);
+  return { secao, todas, lote: lote ? todas.slice(0, lote) : todas };
+}
+
+function botaoBaixar() {
+  const { todas, lote } = pendentes();
+  const b = document.getElementById("baixar");
+  b.disabled = lote.length === 0;
+  b.textContent = lote.length
+    ? `Baixar planilha (${lote.length} de ${todas.length} que faltam)`
+    : "Nada faltando nesta aba";
+}
+
+function celula(t) { return '"' + String(t).replace(/"/g, '""') + '"'; }
+
+function baixar() {
+  const { secao, lote } = pendentes();
+  if (!lote.length) return;
+  const linhas = [["numero", "arquivo", "nome", "proporcao", "prompt"]];
+  lote.forEach((a, i) => linhas.push([
+    i + 1, a.entrega + ".png", a.nome,
+    a.formato === "largo" ? "deitada 1536x1024" : "quadrada 1024x1024", a.prompt,
+  ]));
+  // O BOM no começo faz o Excel e o Numbers lerem os acentos certo
+  const csv = "\\uFEFF" + linhas.map(l => l.map(celula).join(",")).join("\\r\\n");
+  const link = document.createElement("a");
+  link.href = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" }));
+  const data = new Date().toISOString().slice(0, 10);
+  link.download = `artes-${secao.chave}-${data}.csv`;
+  document.body.appendChild(link); link.click(); link.remove();
+  setTimeout(() => URL.revokeObjectURL(link.href), 1000);
+  // Marca como enviadas, para a próxima planilha trazer as seguintes
+  if (confirm(`Marcar estas ${lote.length} como enviadas? Assim a próxima planilha começa nas seguintes.`)) {
+    for (const a of lote) marcas[a.entrega] = true;
+    salvarMarcas();
+    tudo();
+  }
+}
+
+function tudo() { contagens(); abas(); lista(); botaoBaixar(); }
+document.getElementById("lote").addEventListener("change", botaoBaixar);
+document.getElementById("baixar").addEventListener("click", baixar);
+document.getElementById("mensagem").addEventListener("click", e => copiar(MENSAGEM, e.currentTarget));
 document.getElementById("busca").addEventListener("input", lista);
 document.getElementById("esconder").addEventListener("change", lista);
 tudo();
@@ -225,13 +299,86 @@ tudo();
 """
 
 
+# ---------- O prompt completo ----------
+# A planilha vai sozinha para o ChatGPT, então cada linha precisa trazer tudo:
+# o que é a imagem, onde ela aparece, o formato, o estilo e o que evitar.
+
+CONTEXTO = {
+    "magias-icones": (
+        "the icon of the spell \"{nome}\" for the spell list of a D&D website. It is shown "
+        "very small (128 px) in the list and at 512 px on the spell page, so it needs ONE bold "
+        "central magical symbol with a strong, simple silhouette and high contrast, glowing "
+        "against a dark background and filling about 70% of the frame. It must match the rest "
+        "of the icon set: a glowing magical emblem, painterly, on a dark vignette"
+    ),
+    "magias-ilustracoes": (
+        "the illustration at the top of the page of the spell \"{nome}\", showing the spell "
+        "being cast and its effect clearly"
+    ),
+    "livro": "the cover card of the \"{nome}\" chapter of the rules book on the website",
+    "especies": "the portrait at the top of the page of the D&D species \"{nome}\"",
+    "classes": "the cover art at the top of the page of the D&D class \"{nome}\"",
+    "antecedentes": "the illustration of the character background \"{nome}\"",
+    "talentos": "the illustration of the feat \"{nome}\"",
+    "equipamento": "the art of \"{nome}\" in the equipment chapter",
+    "itens": (
+        "the icon of the magic item \"{nome}\" for its page and for the item list, where it "
+        "is shown at 160 px, so the object must be clear and readable at that size"
+    ),
+    "monstros": "the illustration at the top of the bestiary page of \"{nome}\"",
+    "fichas": (
+        "the icon of \"{nome}\" on a character sheet, shown at 64 px, so it needs one bold, "
+        "simple symbol readable at that size"
+    ),
+}
+
+FORMATO = {
+    "quadrado": (
+        "Square 1:1, 1024 x 1024 px. One subject, centered, filling most of the frame."
+    ),
+    "largo": (
+        "Landscape, 1536 x 1024 px. It is cropped to 16:9 and also to a small centered "
+        "square thumbnail, so keep the main subject in the middle of the image and nothing "
+        "important near the edges."
+    ),
+}
+
+ESTILO = (
+    "Painterly hand-painted digital fantasy art, like a premium modern D&D sourcebook "
+    "illustration: rich colors, readable dramatic lighting, fine detail, medieval fantasy "
+    "setting. It must look like part of the same collection as the other images."
+)
+
+EVITAR = (
+    "any text, letters, numbers or runes that look like writing, captions, logos, "
+    "watermark, signature, border, frame, UI elements, collage or multiple panels. "
+    "Deliver one single image."
+)
+
+
+def completo(secao, a):
+    nome = a["nome"].split(" (")[0]
+    return (
+        f"Create ONE image for the website of the tabletop RPG setting \"Terras de Mitrael\". "
+        f"File name: {a['entrega']}.png\n"
+        f"What it is: {CONTEXTO[secao].format(nome=nome)}.\n"
+        f"Subject: {a['prompt']}.\n"
+        f"Format: {FORMATO[a['formato']]}\n"
+        f"Style: {ESTILO}\n"
+        f"Avoid: {EVITAR}"
+    )
+
+
 def gerar():
     secoes = [
         {
             "chave": chave,
             "titulo": titulo,
             "artes": [
-                {k: a[k] for k in ("nome", "entrega", "formato", "prompt", "pronta")}
+                {
+                    **{k: a[k] for k in ("nome", "entrega", "formato", "pronta")},
+                    "prompt": completo(chave, a),
+                }
                 for a in artes
             ],
         }
