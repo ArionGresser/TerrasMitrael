@@ -119,6 +119,15 @@ const REGISTRO: Registro[] = [
     href: "/regras/",
     imagem: "/images/book.jpg",
   },
+  {
+    tipo: "aviso",
+    data: "2026-10-08T14:00-03:00",
+    titulo: "Mapa interativo",
+    texto:
+      "Arraste, aproxime e clique: cada região acende e cada lugar abre a sua história inteira ali mesmo, no canto do mapa.",
+    href: "/mapa/",
+    imagem: "/images/map-cartao.jpg",
+  },
 ];
 
 export type Novidade = {

@@ -316,8 +316,8 @@ export default async function PaginaPersonagem({ params }: Props) {
               >
                 Todos os personagens
               </BotaoLink>
-              <BotaoLink href="/locais/" variante="secundario" className="text-xs">
-                Explorar os locais
+              <BotaoLink href="/mapa/" variante="secundario" className="text-xs">
+                Explorar o mapa
               </BotaoLink>
             </div>
           </Pergaminho>

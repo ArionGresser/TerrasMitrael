@@ -139,7 +139,8 @@ export function ambienteDaRota(caminho: string): Ambiente {
     return "personagens";
   }
 
-  if (partes[0] === "locais") return "locais";
+  // A faixa dos locais toca no mapa, que é onde a história de cada lugar abre
+  if (partes[0] === "mapa") return "locais";
   if (partes[0] === "eventos") return "eventos";
   return "tema";
 }

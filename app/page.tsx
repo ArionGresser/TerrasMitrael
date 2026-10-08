@@ -17,12 +17,14 @@ import {
 
 const PORTAIS = [
   {
-    href: "/locais/",
-    nome: "Locais",
+    href: "/mapa/",
+    nome: "Mapa",
     texto:
-      "As terras que formam o continente: capitais, florestas sagradas e lugares onde ninguém quer pisar.",
-    imagem: "/images/loc/sovara-mithr.jpg",
-    alt: "A floresta de Sovara Mithr",
+      "O continente inteiro diante de você: as capitais, as florestas sagradas e os lugares onde ninguém quer pisar, cada um com a sua história.",
+    // Versão reduzida: o cartão mostra o mapa a 340px, e o arquivo cheio
+    // de 1600px só faz sentido na página do mapa, onde há zoom.
+    imagem: "/images/map-cartao.jpg",
+    alt: "Mapa do continente de Mitrael",
   },
   {
     href: "/personagens/",
@@ -49,16 +51,6 @@ const PORTAIS = [
     alt: "Um livro de capa de couro, envolto em brilho arcano",
     // A arte é pequena e quadrada: fica inteira, no centro, sobre fundo escuro
     inteira: true,
-  },
-  {
-    href: "/mapa/",
-    nome: "Mapa",
-    texto:
-      "O continente inteiro diante de você: os mares, os reinos e a barreira que sela o que veio de fora.",
-    // Versão reduzida: o cartão mostra o mapa a 340px, e o arquivo cheio
-    // de 1600px só faz sentido na página do mapa, onde há zoom.
-    imagem: "/images/map-cartao.jpg",
-    alt: "Mapa do continente de Mitrael",
   },
 ];
 

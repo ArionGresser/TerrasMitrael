@@ -100,7 +100,7 @@ export default async function PaginaEvento({ params }: Props) {
             </p>
             <div className="mt-5 flex flex-wrap justify-center gap-3">
               <BotaoLink
-                href="/locais/putrefados/"
+                href="/mapa/?local=putrefados"
                 variante="primario"
                 className="text-xs"
               >

@@ -21,6 +21,18 @@
   to = "/contos/"
   status = 301
 
+# A tela de Locais virou parte do Mapa: a história de cada lugar abre no
+# painel dele. Quem chegar por um link antigo cai no mapa com o lugar aberto.
+[[redirects]]
+  from = "/locais/:slug"
+  to = "/mapa/?local=:slug"
+  status = 301
+
+[[redirects]]
+  from = "/locais"
+  to = "/mapa/"
+  status = 301
+
 # Cabeçalhos de segurança aplicados a todas as páginas
 [[headers]]
   for = "/*"

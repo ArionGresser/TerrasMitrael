@@ -34,7 +34,7 @@ export type Marcador = {
   lado?: "esquerda" | "direita";
 };
 
-/** Locais que têm página própria. */
+/** Locais com história própria, que abre no painel do mapa. */
 export const MARCADORES_LOCAIS: Marcador[] = [
   { slug: "sovara-mithr", nome: "Sovara Mithr", x: 62.2, y: 53.0 },
   { slug: "arauto", nome: "Arauto dos Feiticeiros", x: 90.2, y: 66.6, lado: "esquerda" },

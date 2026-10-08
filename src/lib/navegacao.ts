@@ -18,9 +18,9 @@ export const SECOES: Secao[] = [
     descricao: "A porta de entrada de Mitrael",
   },
   {
-    href: "/locais/",
-    nome: "Locais",
-    descricao: "As terras, cidades e florestas do continente",
+    href: "/mapa/",
+    nome: "Mapa",
+    descricao: "O continente, suas terras e a história de cada lugar",
   },
   {
     href: "/personagens/",
@@ -38,11 +38,6 @@ export const SECOES: Secao[] = [
     nome: "Livro do Aventureiro",
     descricao: "As regras de 2024 em português: classes, magias, itens e monstros",
     inclui: ["/classes/", "/especies/", "/magias/", "/itens/", "/monstros/"],
-  },
-  {
-    href: "/mapa/",
-    nome: "Mapa",
-    descricao: "O continente inteiro diante de você",
   },
 ];
 

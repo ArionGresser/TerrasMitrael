@@ -28,6 +28,10 @@ export type Local = {
  * 1. crie o arquivo em content/locais/nome-do-local.mdx
  * 2. importe-o acima
  * 3. acrescente-o à lista abaixo
+ * 4. marque o ponto dele no mapa, em src/lib/marcadores.ts
+ *
+ * A história aparece no painel do mapa, ao clicar no ponto: não existe mais
+ * uma página separada para cada local.
  *
  * A ordem de exibição vem do campo `ordem` de cada arquivo, não daqui.
  */
