@@ -24,6 +24,11 @@ const nextConfig = {
   experimental: {
     // Necessário para o Next 16 trabalhar com o TypeScript 7.
     useTypeScriptCli: true,
+    // Um processo só para montar as páginas. Com um por núcleo, num
+    // computador de 8 GB os processos emperravam em "Collecting page data"
+    // e o build parava para sempre, sem erro nenhum. Fica um pouco mais
+    // lento, mas sempre termina.
+    cpus: 1,
   },
 };
 
