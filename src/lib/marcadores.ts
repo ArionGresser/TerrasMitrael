@@ -1,4 +1,23 @@
 /**
+ * A imagem do mapa. Para trocar por uma versão melhor (maior, mais nítida),
+ * basta mudar o arquivo e as medidas aqui: como os marcadores estão em
+ * porcentagem, eles continuam no lugar se o desenho for o mesmo. Quanto
+ * maior a imagem, mais o zoom aproxima sem borrar.
+ */
+export const MAPA = {
+  src: "/images/map.jpg",
+  largura: 1600,
+  altura: 1132,
+  alt: "Mapa do continente de Mitrael, com os mares Bazáltico, de Qän e Leviano, as Terras de Askar a oeste e as Terras de Mitrael a leste",
+  credito: "Lucas Monteiro",
+  /**
+   * Este desenho já traz os nomes pintados. Com um mapa novo sem nomes,
+   * mude para true: os marcadores passam a mostrar o nome o tempo todo.
+   */
+  rotulos: false,
+};
+
+/**
  * Posição dos marcadores sobre o mapa, em porcentagem da imagem.
  * A imagem original tem 1600 x 1132 pixels.
  *
