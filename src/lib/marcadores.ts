@@ -43,18 +43,3 @@ export const MARCADORES_LOCAIS: Marcador[] = [
   { slug: "putrefados", nome: "Terra dos Putrefados", x: 59.5, y: 87.8 },
   { slug: "askar", nome: "Terras de Askar", x: 20.0, y: 70.0 },
 ];
-
-/**
- * Lugares que aparecem na lore e estão desenhados no mapa, mas ainda não
- * têm página própria. Servem de referência para futuras entradas.
- */
-export const LUGARES_SEM_PAGINA = [
-  { nome: "Os Dedos da Tundra", contexto: "Terra natal de Tyr Vidar" },
-  { nome: "Passagem Golem de Gelo", contexto: "Onde Howai passou a infância" },
-  { nome: "Pondor do Aramate", contexto: "Ilha natal de Levi, tomada pelos Orcs" },
-  { nome: "Entrerrio", contexto: "A taverna onde Levi foi criado" },
-  { nome: "Guratan", contexto: "A cidade onde Filavandrel trabalhou" },
-  { nome: "Terras de Tungel", contexto: "Povos decisivos na Grande Guerra" },
-  { nome: "Vérsia", contexto: "Os Domadores de Portais, convocados no fim da guerra" },
-  { nome: "Drakyrbon Mahur", contexto: "Reino dos dragões e dos Filhos do Fogo" },
-];

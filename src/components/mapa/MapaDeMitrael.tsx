@@ -255,6 +255,10 @@ export function MapaDeMitrael({
     const roda = (e: WheelEvent) => {
       // Sobre o painel ou a lista, a roda rola o texto, como em qualquer página
       if ((e.target as HTMLElement).closest("aside, [data-lista]")) return;
+      // Com o mapa todo afastado, rolar para baixo desce a página até o
+      // rodapé, em vez de tentar afastar mais o que já não afasta
+      const c = camRef.current;
+      if (e.deltaY > 0 && c && c.s <= escalaMinima() * 1.001) return;
       e.preventDefault();
       parar();
       const r = el.getBoundingClientRect();
@@ -264,7 +268,7 @@ export function MapaDeMitrael({
     };
     el.addEventListener("wheel", roda, { passive: false });
     return () => el.removeEventListener("wheel", roda);
-  }, [zoomEm]);
+  }, [zoomEm, escalaMinima]);
 
   // ---------- Abrir um lugar ou uma região ----------
 
@@ -332,21 +336,6 @@ export function MapaDeMitrael({
     const consulta = p.toString();
     window.history.replaceState(null, "", consulta ? `?${consulta}` : window.location.pathname);
   }, [aberto]);
-
-  // ---------- Abrir a partir de fora ----------
-  // A lista de lugares embaixo do mapa pede para abrir um deles por um
-  // aviso (ver AbrirNoMapa.tsx): o mapa sobe para a vista e voa até lá.
-
-  useEffect(() => {
-    const ouvir = (e: Event) => {
-      const { tipo, chave } = (e as CustomEvent<{ tipo: "local" | "regiao"; chave: string }>).detail;
-      palco.current?.scrollIntoView({ behavior: reduzido ? "auto" : "smooth", block: "center" });
-      if (tipo === "regiao") abrirRegiao(chave);
-      else abrirLocal(chave);
-    };
-    window.addEventListener("mapa:abrir", ouvir);
-    return () => window.removeEventListener("mapa:abrir", ouvir);
-  }, [abrirLocal, abrirRegiao, reduzido]);
 
   // ---------- Arrastar e pinçar ----------
 
@@ -502,7 +491,7 @@ export function MapaDeMitrael({
         zoomEm(e.clientX - r.left, e.clientY - r.top, 1.8, true);
         setMexeu(true);
       }}
-      className={`bg-madeira-950 focus-visible:outline-dourado-400 relative h-[calc(100dvh-6.5rem)] max-h-[960px] min-h-[440px] w-full touch-none overflow-hidden rounded-sm border border-black/50 shadow-[0_18px_50px_-18px_rgba(0,0,0,0.9)] select-none ${
+      className={`bg-madeira-950 focus-visible:outline-dourado-400 relative h-[calc(100dvh-6rem)] min-h-[420px] w-full touch-none overflow-hidden border-y border-black/60 shadow-[0_18px_50px_-18px_rgba(0,0,0,0.9)] select-none sm:h-[calc(100dvh-4.5rem)] ${
         sobre ? "cursor-pointer" : "cursor-grab active:cursor-grabbing"
       }`}
     >
@@ -655,7 +644,7 @@ export function MapaDeMitrael({
         : null}
 
       {/* O título e o crédito, no alto à esquerda */}
-      <div className="pointer-events-none absolute top-3 left-3 max-w-[60%] sm:top-4 sm:left-4">
+      <div className="pointer-events-none absolute top-7 left-4 max-w-[60%] sm:top-9 sm:left-6">
         <p className="font-titulo text-dourado-300 text-[0.58rem] tracking-[0.3em] uppercase [text-shadow:0_1px_3px_#000]">
           O continente inteiro
         </p>
