@@ -1097,3 +1097,116 @@
     inset 0 1px 0 rgb(255 255 255 / 0.08),
     0 2px 5px rgb(0 0 0 / 0.5);
 }
+
+/* ============================================================
+   O livro dos Contos
+   A temporada é um livro: capa de couro, páginas de papel e a
+   folha que vira em 3D. O texto do episódio corre em colunas do
+   tamanho exato da página, e cada coluna é uma página.
+   ============================================================ */
+
+.livro {
+  perspective: 2400px;
+}
+
+/* O couro da capa e da borda que aparece em volta das páginas */
+.couro-do-livro {
+  background-color: #4a2414;
+  background-image:
+    radial-gradient(ellipse 70% 55% at 30% 25%, rgb(255 210 160 / 0.1) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 50% at 75% 80%, rgb(0 0 0 / 0.35) 0%, transparent 70%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='c'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' seed='7'/%3E%3CfeColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.05 0 0 0 0 0.02 0 0 0 -1.6 1.1'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23c)'/%3E%3C/svg%3E");
+  box-shadow:
+    inset 0 0 0 1px rgb(0 0 0 / 0.6),
+    inset 0 2px 0 rgb(255 220 180 / 0.12),
+    0 24px 50px -16px rgb(0 0 0 / 0.9),
+    0 6px 14px rgb(0 0 0 / 0.5);
+}
+
+/* O friso dourado gravado na capa */
+.friso-da-capa {
+  box-shadow:
+    inset 0 0 0 1px rgb(226 196 106 / 0.65),
+    inset 0 0 0 5px rgb(74 36 20),
+    inset 0 0 0 6px rgb(226 196 106 / 0.4);
+}
+
+/* A página: papel um pouco mais claro que o pergaminho das outras telas */
+.pagina-livro {
+  position: relative;
+  overflow: hidden;
+  background-color: #f6ecd2;
+  background-image:
+    radial-gradient(ellipse 80% 60% at 50% 50%, transparent 55%, rgb(150 110 55 / 0.16) 100%),
+    repeating-linear-gradient(0deg, rgb(120 90 45 / 0.022) 0 1px, transparent 1px 3px);
+  color: var(--color-tinta-900);
+}
+
+/* A sombra da lombada: escurece a borda da página que fica no meio do livro */
+.pagina-livro::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.pagina-esquerda::after {
+  background: linear-gradient(to left, rgb(70 40 15 / 0.32), rgb(70 40 15 / 0.08) 5%, transparent 14%);
+}
+.pagina-direita::after {
+  background: linear-gradient(to right, rgb(70 40 15 / 0.32), rgb(70 40 15 / 0.08) 5%, transparent 14%);
+}
+.pagina-sozinha::after {
+  background: linear-gradient(to right, rgb(70 40 15 / 0.22), transparent 7%);
+}
+
+/* A folha que vira: a frente e o verso são a mesma folha, de costas uma
+   para a outra */
+.folha-que-vira {
+  transform-style: preserve-3d;
+}
+.folha-que-vira > .face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+}
+.folha-que-vira > .face-verso {
+  transform: rotateY(180deg);
+}
+
+/* O texto em colunas: cada coluna, uma página */
+.texto-do-livro {
+  column-fill: auto;
+  text-align: justify;
+  hyphens: auto;
+  font-size: 0.97rem;
+  line-height: 1.62;
+  orphans: 2;
+  widows: 2;
+}
+.texto-do-livro > :first-child {
+  margin-top: 0;
+}
+.texto-do-livro p {
+  font-size: inherit;
+  line-height: inherit;
+  margin-top: 0.7em;
+}
+.texto-do-livro h2 {
+  break-after: avoid;
+  margin-top: 1.5em;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+.texto-do-livro figure {
+  break-inside: avoid;
+  margin: 1em 0;
+}
+.texto-do-livro blockquote p {
+  margin-top: 0;
+}
+@media (max-width: 480px) {
+  .texto-do-livro {
+    font-size: 0.93rem;
+    line-height: 1.58;
+  }
+}

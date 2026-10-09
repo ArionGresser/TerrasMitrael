@@ -18,6 +18,7 @@ import {
 import { Elenco, Trilha } from "@/components/contos/Partes";
 import { Arte } from "@/components/contos/Cartaz";
 import { BarraLeitura } from "@/components/contos/BarraLeitura";
+import { Livro } from "@/components/contos/Livro";
 import { Pergaminho } from "@/components/ui/Pergaminho";
 import { BotaoLink } from "@/components/ui/Botao";
 import { Rodape } from "@/components/Rodape";
@@ -112,7 +113,19 @@ export default async function PaginaEpisodio({ params }: Props) {
   const minutos = minutosDeLeitura(serie, temporada, episodio);
   const { Texto } = episodio;
 
-  return (
+  const trilha = (
+    <Trilha
+      passos={[
+        { nome: "Contos", href: "/contos/" },
+        { nome: serie.titulo, href: `/contos/${serie.slug}/` },
+        { nome: `Temporada ${temporada.numero}`, href: `${base}/` },
+        { nome: `Episódio ${episodio.meta.numero}` },
+      ]}
+    />
+  );
+
+  // A página corrida de sempre, para quem escolhe ler sem o livro
+  const classico = (
     <>
       {/* O quanto já foi lido, num fio dourado no alto da tela. Em navegador
           que não sabe fazer isso, o fio simplesmente não aparece. */}
@@ -210,8 +223,137 @@ export default async function PaginaEpisodio({ params }: Props) {
         </Pergaminho>
       </main>
 
+    </>
+  );
+
+  return (
+    <>
+      <Livro
+        chave={`${serie.slug}/${chaveDaTemporada(temporada)}/${chaveDoEpisodio(episodio)}`}
+        titulo={`${episodio.meta.numero}. ${episodio.meta.titulo}`}
+        cabecalho={trilha}
+        antes={[
+          <AberturaDoCapitulo
+            key="abertura"
+            serie={serie}
+            temporada={temporada}
+            episodio={episodio}
+            minutos={minutos}
+          />,
+        ]}
+        texto={<Texto />}
+        depois={[
+          <FimDoCapitulo
+            key="fim"
+            base={base}
+            episodio={episodio}
+            proximo={proximo}
+            anterior={anterior}
+          />,
+        ]}
+        anterior={anterior ? `${base}/${chaveDoEpisodio(anterior)}/` : `${base}/`}
+        rotuloAnterior={anterior ? `Episódio ${anterior.meta.numero}` : "Sumário"}
+        proximo={proximo ? `${base}/${chaveDoEpisodio(proximo)}/` : undefined}
+        rotuloProximo={proximo ? `Episódio ${proximo.meta.numero}` : "Avançar"}
+        classico={classico}
+      />
       <Rodape />
     </>
+  );
+}
+
+/**
+ * A primeira página do capítulo: a arte, o número, o título, quando foi
+ * jogado e quem estava na mesa.
+ */
+function AberturaDoCapitulo({
+  serie,
+  temporada,
+  episodio,
+  minutos,
+}: {
+  serie: Serie;
+  temporada: Temporada;
+  episodio: Episodio;
+  minutos?: number;
+}) {
+  return (
+    <div className="flex min-h-full flex-col">
+      <div className="border-madeira-800/30 relative aspect-[4/3] w-full overflow-hidden rounded-sm border shadow-[0_6px_14px_-8px_rgba(0,0,0,0.6)]">
+        <Capa episodio={episodio} />
+      </div>
+      <p className="font-titulo text-dourado-600 mt-5 text-center text-[0.62rem] tracking-[0.3em] uppercase">
+        {serie.titulo} · T{temporada.numero} · Capítulo {episodio.meta.numero}
+      </p>
+      <h1 className="font-brasao text-tinta-900 mt-2 text-center text-3xl leading-tight sm:text-4xl">
+        {episodio.meta.titulo}
+      </h1>
+      <p className="text-tinta-500 mt-1.5 text-center text-xs tracking-wide">
+        {minutos ? `${minutos} min de leitura` : null}
+        {minutos && episodio.meta.sessao ? " · " : null}
+        {episodio.meta.sessao ? `Jogado em ${episodio.meta.sessao}` : null}
+      </p>
+      <Ornamento className="mt-4" />
+      <p className="text-tinta-700 mt-4 text-center text-sm leading-relaxed italic">
+        {episodio.meta.resumo}
+      </p>
+      <div className="mt-auto pt-5">
+        <p className="font-titulo text-tinta-500 mb-2 text-center text-[0.6rem] tracking-[0.2em] uppercase">
+          Neste capítulo
+        </p>
+        <div className="flex justify-center">
+          <Elenco slugs={episodio.meta.elenco} tamanho="pequeno" />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/** A última página: o fim do capítulo e o convite para o seguinte. */
+function FimDoCapitulo({
+  base,
+  episodio,
+  proximo,
+  anterior,
+}: {
+  base: string;
+  episodio: Episodio;
+  proximo?: Episodio;
+  anterior?: Episodio;
+}) {
+  return (
+    <div className="flex min-h-full flex-col justify-center text-center">
+      <Ornamento />
+      <p className="font-titulo text-tinta-500 mt-4 text-[0.66rem] tracking-[0.3em] uppercase">
+        Fim do capítulo {episodio.meta.numero}
+      </p>
+      <div className="mt-8">
+        {proximo ? (
+          <ProximoEpisodio href={`${base}/${chaveDoEpisodio(proximo)}/`} episodio={proximo} />
+        ) : (
+          <>
+            <p className="text-tinta-700 text-sm italic">
+              O próximo capítulo ainda está sendo escrito.
+            </p>
+            <div className="mt-4">
+              <BotaoLink href={`${base}/`} variante="primario">
+                Voltar ao sumário
+              </BotaoLink>
+            </div>
+          </>
+        )}
+      </div>
+      {anterior ? (
+        <p className="mt-6 text-sm">
+          <Link
+            href={`${base}/${chaveDoEpisodio(anterior)}/`}
+            className="text-tinta-700 hover:text-heraldico-vermelho decoration-dourado-600/60 underline underline-offset-4"
+          >
+            ← Capítulo {anterior.meta.numero}: {anterior.meta.titulo}
+          </Link>
+        </p>
+      ) : null}
+    </div>
   );
 }
 

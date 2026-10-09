@@ -137,6 +137,15 @@ const REGISTRO: Registro[] = [
     href: "/bau/",
     imagem: "/images/compendio/itens.webp",
   },
+  {
+    tipo: "aviso",
+    data: "2026-10-09T10:30-03:00",
+    titulo: "Os Contos viraram livro",
+    texto:
+      "Cada temporada é um livro de capa de couro: as páginas viram com o clique, as setas ou o dedo, e a fita marca onde você parou.",
+    href: "/contos/cronicas/temporada-2/",
+    imagem: "/images/contos/cronicas/t2e2-saida.webp",
+  },
 ];
 
 export type Novidade = {
