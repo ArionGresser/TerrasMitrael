@@ -1,5 +1,5 @@
 /**
- * Grava o passeio pelo site, cena por cena, nos dois formatos.
+ * Grava o passeio pelo site, cena por cena, no formato deitado (1920x1080).
  *
  * Serve a pasta out/ (o site estático do `pnpm build`) num servidor próprio,
  * abre cada tela num Chromium sem janela e filma pelo DevTools: cada quadro
@@ -10,7 +10,7 @@
  * instante em que aconteceu, para o vídeo tocar o efeito sonoro certo na
  * hora certa.
  *
- * Uso:  node gravar.mjs [vertical|horizontal] [cena...]
+ * Uso:  node gravar.mjs [horizontal] [cena...]
  * Sai:  public/gravacoes/<formato>/<cena>.mp4 e public/gravacoes/<formato>/cenas.json
  */
 
@@ -33,7 +33,6 @@ const PORTA = 4317;
 const FPS = 30;
 
 export const FORMATOS = {
-  vertical: { viewport: { width: 432, height: 768 }, escala: 2.5 },
   horizontal: { viewport: { width: 1280, height: 720 }, escala: 1.5 },
 };
 

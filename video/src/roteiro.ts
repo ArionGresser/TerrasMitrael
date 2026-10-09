@@ -1,4 +1,3 @@
-import vertical from "../public/gravacoes/vertical/cenas.json";
 import horizontal from "../public/gravacoes/horizontal/cenas.json";
 
 /**
@@ -10,7 +9,7 @@ import horizontal from "../public/gravacoes/horizontal/cenas.json";
  *
  * A música é o tema do Vrakyr. Ela cresce de vez aos 38 segundos da faixa,
  * e o encerramento entra exatamente ali: a abertura estica ou encolhe para
- * a conta fechar, em qualquer um dos dois formatos.
+ * a conta fechar.
  */
 
 export const FPS = 30;
@@ -20,7 +19,7 @@ export const MUSICA_INICIO = 0.2;
 export const MUSICA_VIRADA = 38.05;
 export const FECHO = 5.6;
 
-export type Formato = "vertical" | "horizontal";
+export type Formato = "horizontal";
 
 type Gravacao = {
   duracao: number;
@@ -106,7 +105,7 @@ export type Montagem = {
 const q = (s: number) => Math.round(s * FPS);
 
 export function montar(formato: Formato): Montagem {
-  const gravacoes = (formato === "vertical" ? vertical : horizontal) as Record<string, Gravacao>;
+  const gravacoes = horizontal as Record<string, Gravacao>;
 
   const planos = PLANOS.map((p) => {
     const g = gravacoes[p.cena];

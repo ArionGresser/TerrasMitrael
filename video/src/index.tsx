@@ -7,15 +7,6 @@ function Raiz() {
   return (
     <>
       <Composition
-        id="vertical"
-        component={Trailer}
-        defaultProps={{ formato: "vertical" as const }}
-        durationInFrames={montar("vertical").total}
-        fps={FPS}
-        width={1080}
-        height={1920}
-      />
-      <Composition
         id="horizontal"
         component={Trailer}
         defaultProps={{ formato: "horizontal" as const }}

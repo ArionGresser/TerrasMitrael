@@ -57,13 +57,12 @@ function Abertura({ formato, quadros }: { formato: Formato; quadros: number }) {
   const selo = spring({ frame: f - 8, fps, config: { damping: 12, mass: 0.8 } });
   const titulo = interpolate(f, [16, 40], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.out(Easing.cubic) });
   const sub = interpolate(f, [36, 58], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
-  const vertical = formato === "vertical";
 
   return (
     <AbsoluteFill style={{ backgroundColor: "#0d0905", opacity: opacidade }}>
       <AbsoluteFill style={{ transform: `scale(${zoom})` }}>
         <Img
-          src={staticFile(vertical ? "imagens/heroi-mapa-alto.webp" : "imagens/heroi-mapa-largo.webp")}
+          src={staticFile("imagens/heroi-mapa-largo.webp")}
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
         />
       </AbsoluteFill>
@@ -76,13 +75,13 @@ function Abertura({ formato, quadros }: { formato: Formato; quadros: number }) {
       <AbsoluteFill style={{ alignItems: "center", justifyContent: "center", textAlign: "center", padding: 80 }}>
         <Img
           src={staticFile("imagens/selo.svg")}
-          style={{ width: vertical ? 220 : 170, transform: `scale(${selo})`, filter: "drop-shadow(0 10px 18px rgba(0,0,0,0.6))" }}
+          style={{ width: 170, transform: `scale(${selo})`, filter: "drop-shadow(0 10px 18px rgba(0,0,0,0.6))" }}
         />
         <div
           style={{
             fontFamily: UNCIAL,
             color: OURO,
-            fontSize: vertical ? 132 : 128,
+            fontSize: 128,
             lineHeight: 1.02,
             marginTop: 40,
             opacity: titulo,
@@ -90,13 +89,13 @@ function Abertura({ formato, quadros }: { formato: Formato; quadros: number }) {
             textShadow: "0 4px 0 rgba(0,0,0,0.55), 0 0 40px rgba(0,0,0,0.6)",
           }}
         >
-          Terras de{vertical ? <br /> : " "}Mitrael
+          Terras de{" "}Mitrael
         </div>
         <div
           style={{
             fontFamily: CINZEL,
             color: PERGAMINHO,
-            fontSize: vertical ? 34 : 32,
+            fontSize: 32,
             letterSpacing: "0.32em",
             textTransform: "uppercase",
             marginTop: 34,
@@ -116,14 +115,13 @@ function Legenda({ bloco, formato }: { bloco: Bloco; formato: Formato }) {
   if (!bloco.legenda) return null;
   const entra = spring({ frame: f - T - 4, fps, config: { damping: 18 } });
   const sai = interpolate(f, [bloco.quadros - T - 8, bloco.quadros - T], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
-  const vertical = formato === "vertical";
 
   return (
     <AbsoluteFill style={{ justifyContent: "flex-end", pointerEvents: "none" }}>
       <div
         style={{
           background: `linear-gradient(to top, ${MADEIRA} 0%, rgba(24,16,9,0.82) 55%, rgba(24,16,9,0) 100%)`,
-          padding: vertical ? "150px 70px 230px" : "120px 120px 70px",
+          padding: "120px 120px 70px",
           opacity: entra * sai,
           transform: `translateY(${(1 - entra) * 40}px)`,
         }}
@@ -133,7 +131,7 @@ function Legenda({ bloco, formato }: { bloco: Bloco; formato: Formato }) {
             fontFamily: CINZEL,
             fontWeight: 700,
             color: OURO,
-            fontSize: vertical ? 64 : 56,
+            fontSize: 56,
             letterSpacing: "0.12em",
             textTransform: "uppercase",
             textShadow: "0 3px 0 rgba(0,0,0,0.5)",
@@ -147,9 +145,9 @@ function Legenda({ bloco, formato }: { bloco: Bloco; formato: Formato }) {
             fontFamily: LORA,
             fontStyle: "italic",
             color: PERGAMINHO,
-            fontSize: vertical ? 42 : 38,
+            fontSize: 38,
             lineHeight: 1.3,
-            maxWidth: vertical ? 900 : 1200,
+            maxWidth: 1200,
           }}
         >
           {bloco.legenda.texto}
@@ -182,7 +180,6 @@ function Cena({ bloco, formato }: { bloco: Bloco; formato: Formato }) {
 function Fecho({ formato, quadros }: { formato: Formato; quadros: number }) {
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
-  const vertical = formato === "vertical";
   const entra = interpolate(f, [0, T], [0, 1], { extrapolateRight: "clamp" });
   const apaga = interpolate(f, [quadros - 22, quadros], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   // O selo bate junto com a virada da música
@@ -199,13 +196,13 @@ function Fecho({ formato, quadros }: { formato: Formato; quadros: number }) {
       <AbsoluteFill style={{ alignItems: "center", justifyContent: "center", textAlign: "center", padding: 80 }}>
         <Img
           src={staticFile("imagens/selo.svg")}
-          style={{ width: vertical ? 240 : 180, transform: `scale(${selo})`, filter: "drop-shadow(0 12px 20px rgba(0,0,0,0.7))" }}
+          style={{ width: 180, transform: `scale(${selo})`, filter: "drop-shadow(0 12px 20px rgba(0,0,0,0.7))" }}
         />
         <div
           style={{
             fontFamily: UNCIAL,
             color: OURO,
-            fontSize: vertical ? 132 : 124,
+            fontSize: 124,
             lineHeight: 1.02,
             marginTop: 36,
             transform: `scale(${0.85 + 0.15 * titulo})`,
@@ -213,13 +210,13 @@ function Fecho({ formato, quadros }: { formato: Formato; quadros: number }) {
             textShadow: "0 4px 0 rgba(0,0,0,0.55)",
           }}
         >
-          Terras de{vertical ? <br /> : " "}Mitrael
+          Terras de{" "}Mitrael
         </div>
         <div
           style={{
             fontFamily: CINZEL,
             color: PERGAMINHO,
-            fontSize: vertical ? 32 : 30,
+            fontSize: 30,
             letterSpacing: "0.3em",
             textTransform: "uppercase",
             marginTop: 30,
@@ -233,9 +230,9 @@ function Fecho({ formato, quadros }: { formato: Formato; quadros: number }) {
             fontFamily: LORA,
             fontWeight: 600,
             color: OURO,
-            fontSize: vertical ? 50 : 46,
+            fontSize: 46,
             letterSpacing: "0.02em",
-            marginTop: vertical ? 90 : 60,
+            marginTop: 60,
             padding: "16px 40px",
             border: `2px solid ${OURO_ESCURO}`,
             borderRadius: 12,
