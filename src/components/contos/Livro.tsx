@@ -83,6 +83,7 @@ export function Livro({
   rotuloProximo = "Próximo",
   classico,
   cabecalho,
+  capitulosEmPagina = false,
 }: {
   /** Onde o marcador de página fica guardado, como "cronicas/temporada-2/episodio-03". */
   chave: string;
@@ -106,7 +107,10 @@ export function Livro({
   classico: ReactNode;
   /** O que vai acima do livro, como o caminho de volta. */
   cabecalho?: ReactNode;
+  /** Cada título do texto abre uma página nova, como capítulo de livro. */
+  capitulosEmPagina?: boolean;
 }) {
+  const classeDoTexto = `leitura-conto texto-do-livro${capitulosEmPagina ? " capitulos-em-pagina" : ""}`;
   const router = useRouter();
   const reduzido = useReducedMotion();
   const caixa = useRef<HTMLDivElement>(null);
@@ -358,7 +362,7 @@ export function Livro({
             </p>
             <div className="absolute overflow-hidden" style={{ left: lado, top: topo, width: tw, height: th }}>
               <div
-                className="leitura-conto texto-do-livro"
+                className={classeDoTexto}
                 style={{
                   width: tw,
                   height: th,
@@ -677,7 +681,7 @@ export function Livro({
         <div aria-hidden className="pointer-events-none invisible absolute top-0 left-0 overflow-hidden" style={{ width: 1, height: 1 }}>
           <div
             ref={medidor}
-            className="leitura-conto texto-do-livro"
+            className={classeDoTexto}
             style={{ width: tw, height: th, columnWidth: tw, columnGap: VAO }}
           >
             {texto}

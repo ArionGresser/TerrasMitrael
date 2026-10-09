@@ -1197,6 +1197,20 @@
   font-size: 1.25rem;
   line-height: 1.2;
 }
+/* Livro de capítulos: cada título começa no alto de uma página, e a linha
+   que separava as partes no texto corrido some, porque a folha nova já separa */
+.capitulos-em-pagina h2 {
+  break-before: column;
+  -webkit-column-break-before: always;
+  margin-top: 0;
+}
+.capitulos-em-pagina hr {
+  display: none;
+}
+/* O título já diz "Capítulo 2: ..."; a contagem de cenas dos Contos sobraria */
+.capitulos-em-pagina h2::before {
+  content: none;
+}
 .texto-do-livro figure {
   break-inside: avoid;
   margin: 1em 0;
