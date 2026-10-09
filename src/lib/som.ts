@@ -13,9 +13,14 @@ import { sintetizar, type Sintetizado } from "./sintese";
  * 3. Se um arquivo de som não existir, o site funciona normalmente e em
  *    silêncio. O áudio é enfeite, nunca requisito.
  *
+ * E uma regra de gosto: cada coisa tem o seu som, sempre o mesmo. O mesmo
+ * botão nunca soa de dois jeitos, senão o ouvido não aprende o site.
+ *
  * Os sons de papel, couro, metal e moedas são do pacote RPG Audio, do
- * Kenney (kenney.nl), em domínio público (CC0). Foram cortados no começo
- * do som e igualados em volume ao pergaminho. Os sons que não existem no
+ * Kenney (kenney.nl). O rugido, o feitiço, a fechadura e a lâmina são dos
+ * pacotes "80 CC0 RPG SFX" e "80 CC0 creature SFX", de rubberduck
+ * (opengameart.org). Todos em domínio público (CC0), cortados no começo do
+ * som e igualados em volume ao pergaminho. Os sons que não existem no
  * mundo físico, como o zoom e o brilho mágico, são montados na hora: ver
  * `sintese.ts`.
  */
@@ -27,11 +32,13 @@ type DeArquivo =
   | "marcador"
   | "capa"
   | "aba"
+  | "fivela"
   | "trinco"
   | "moedas"
-  | "tilintar"
-  | "aco"
-  | "porta";
+  | "fechadura"
+  | "lamina"
+  | "feitico"
+  | "rugido";
 
 export type Efeito = DeArquivo | Sintetizado;
 
@@ -42,11 +49,13 @@ const ARQUIVOS: Record<DeArquivo, string> = {
   marcador: "/sons/marcador.m4a",
   capa: "/sons/capa.m4a",
   aba: "/sons/aba.m4a",
+  fivela: "/sons/fivela.m4a",
   trinco: "/sons/trinco.m4a",
   moedas: "/sons/moedas.m4a",
-  tilintar: "/sons/tilintar.m4a",
-  aco: "/sons/aco.m4a",
-  porta: "/sons/porta.m4a",
+  fechadura: "/sons/fechadura.m4a",
+  lamina: "/sons/lamina.m4a",
+  feitico: "/sons/feitico.m4a",
+  rugido: "/sons/rugido.m4a",
 };
 
 /** Os que o primeiro toque já pode pedir: vêm logo. Os outros, quando sobrar tempo. */
@@ -59,14 +68,15 @@ const VOLUMES: Record<Efeito, number> = {
   marcador: 0.4,
   capa: 0.6,
   aba: 0.45,
+  fivela: 0.45,
   trinco: 0.5,
   moedas: 0.45,
-  tilintar: 0.4,
-  aco: 0.4,
-  porta: 0.45,
+  fechadura: 0.45,
+  lamina: 0.4,
+  feitico: 0.45,
+  rugido: 0.45,
   zoomPerto: 0.5,
   zoomLonge: 0.5,
-  sino: 0.6,
   brilho: 0.6,
 };
 
@@ -78,21 +88,16 @@ const VOLUMES: Record<Efeito, number> = {
  * o barulho chegava atrasado em relação ao gesto. Em vez de reeditar o áudio,
  * o tocador entra direto no ponto certo: o efeito sai junto com o toque.
  *
- * Quando há mais de um trecho, cada toque sorteia um: três folhas diferentes
- * virando cansam bem menos o ouvido do que a mesma folha cem vezes.
- *
- * Medido janela a janela na energia da onda, não no olho. Os arquivos do
- * Kenney já saíram cortados, então os trechos deles são só as variações.
+ * Medido janela a janela na energia da onda, não no olho. Os arquivos dos
+ * pacotes CC0 já entraram cortados e não precisam disso.
  */
-const TRECHOS: Partial<Record<DeArquivo, [inicio: number, duracao: number][]>> = {
-  abrirMenu: [[460, 480]],
-  fecharMenu: [[460, 480]],
-  virarPagina: [
-    [0, 450],
-    [570, 216],
-    [906, 415],
-  ],
+const ANDAMENTO: Partial<Record<DeArquivo, [inicio: number, duracao: number]>> = {
+  abrirMenu: [460, 480],
+  fecharMenu: [460, 480],
 };
+
+/** O nome do trecho dentro do arquivo, quando o efeito recorta um. */
+const TRECHO = "toque";
 
 /**
  * Para onde o efeito cai quando o arquivo dele não carrega.
@@ -107,32 +112,36 @@ const RESERVA: Partial<Record<DeArquivo, DeArquivo>> = {
   aba: "virarPagina",
 };
 
-const SINTETIZADOS: Sintetizado[] = ["zoomPerto", "zoomLonge", "sino", "brilho"];
+const SINTETIZADOS: Sintetizado[] = ["zoomPerto", "zoomLonge", "brilho"];
 const ehSintetizado = (e: Efeito): e is Sintetizado => (SINTETIZADOS as Efeito[]).includes(e);
 
 /**
- * O som de entrar em cada parte do site, pelo primeiro pedaço do endereço.
+ * O som de cada tela, pela tela de destino e por nada mais.
  *
- * Toca só ao chegar de fora: quem já está no Grimório e abre outra magia
- * ouve a página virar, não o sino de novo a cada clique.
+ * Vale para a porta de entrada de cada parte: o link para o Bestiário ruge
+ * sempre, de onde quer que se venha. Já abrir um monstro lá dentro é virar
+ * uma página do livro: cem rugidos seguidos cansariam qualquer um.
  */
-const ENTRADA: Record<string, Efeito> = {
+const TELAS: Record<string, Efeito> = {
   mapa: "abrirMenu",
   contos: "capa",
-  personagens: "aba",
+  personagens: "fivela",
   regras: "capa",
-  classes: "aco",
-  magias: "sino",
-  itens: "tilintar",
-  monstros: "porta",
-  bau: "trinco",
+  classes: "lamina",
+  magias: "feitico",
+  itens: "brilho",
+  monstros: "rugido",
+  bau: "fechadura",
 };
 
-export function efeitoDoCaminho(de: string, para: string): Efeito {
-  const secao = (c: string) => c.split("/").filter(Boolean)[0] ?? "";
-  const destino = secao(para);
-  if (destino !== secao(de) && ENTRADA[destino]) return ENTRADA[destino];
-  return "virarPagina";
+/** O brilho que abre a tela dos itens mágicos: o de um item raro. */
+const NIVEL_DA_TELA_DE_ITENS = 3;
+
+export function tocarDestino(caminho: string) {
+  const partes = caminho.split("/").filter(Boolean);
+  const efeito = partes.length === 1 ? TELAS[partes[0]] : undefined;
+  if (!efeito) return tocar("virarPagina");
+  tocar(efeito, efeito === "brilho" ? NIVEL_DA_TELA_DE_ITENS : undefined);
 }
 
 const CHAVE = "mitrael:som";
@@ -175,23 +184,19 @@ export function definirEfeitos(ligados: boolean) {
   }
 }
 
-const nomeDoTrecho = (i: number) => `t${i}`;
-
 function obter(efeito: DeArquivo): Howl | null {
   if (disponivel[efeito] === false) return null;
 
   const existente = cache.get(efeito);
   if (existente) return existente;
 
-  const trechos = TRECHOS[efeito];
+  const recorte = ANDAMENTO[efeito];
 
   const som = new Howl({
     src: [ARQUIVOS[efeito]],
     volume: VOLUMES[efeito],
     preload: false,
-    ...(trechos
-      ? { sprite: Object.fromEntries(trechos.map((t, i) => [nomeDoTrecho(i), t])) }
-      : {}),
+    ...(recorte ? { sprite: { [TRECHO]: recorte } } : {}),
     onloaderror: () => {
       // Arquivo ausente ou ilegível: desiste deste efeito em silêncio
       disponivel[efeito] = false;
@@ -227,8 +232,7 @@ export function tocar(pedido: Efeito, nivel?: number) {
   if (!som) return;
 
   if (som.state() === "unloaded") som.load();
-  const trechos = TRECHOS[efeito];
-  som.play(trechos ? nomeDoTrecho(Math.floor(Math.random() * trechos.length)) : undefined);
+  som.play(ANDAMENTO[efeito] ? TRECHO : undefined);
 }
 
 /**

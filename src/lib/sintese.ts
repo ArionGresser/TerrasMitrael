@@ -3,16 +3,15 @@
  * pela Web Audio.
  *
  * Ficam aqui os sons que não existem no mundo físico e que um arquivo não
- * faria melhor: o sopro do zoom, o sino do grimório e o brilho de um item
- * mágico. Não pesam nada no download e podem variar de tamanho, como o
+ * faria melhor: o sopro do zoom e o brilho de um item mágico. Não pesam nada no download e podem variar de tamanho, como o
  * brilho, que cresce com a raridade.
  *
  * Os ganhos foram medidos contra o pergaminho, renderizando cada efeito
  * fora do ar: o sopro fica um pouco abaixo dele, porque se repete muito,
- * e os sinos também, porque o ouvido acha nota pura mais alta do que é.
+ * e o brilho também, porque o ouvido acha nota pura mais alta do que é.
  */
 
-export type Sintetizado = "zoomPerto" | "zoomLonge" | "sino" | "brilho";
+export type Sintetizado = "zoomPerto" | "zoomLonge" | "brilho";
 
 let contexto: AudioContext | null = null;
 let ruido: AudioBuffer | null = null;
@@ -112,13 +111,6 @@ export function sintetizar(efeito: Sintetizado, volume: number, nivel = 1) {
 
   if (efeito === "zoomPerto" || efeito === "zoomLonge") {
     sopro(ctx, saida, efeito === "zoomPerto");
-    return;
-  }
-
-  if (efeito === "sino") {
-    // Dois sinos a uma quinta, o segundo logo depois: soa como algo se abrindo
-    nota(ctx, saida, 1046.5, t, 0.026, 1.4);
-    nota(ctx, saida, 1568, t + 0.09, 0.02, 1.6);
     return;
   }
 

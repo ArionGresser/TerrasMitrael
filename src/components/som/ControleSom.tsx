@@ -6,7 +6,7 @@ import {
   definirSom,
   efeitosLigados,
   definirEfeitos,
-  efeitoDoCaminho,
+  tocarDestino,
   prepararEfeitos,
   tocar,
 } from "@/lib/som";
@@ -64,7 +64,7 @@ export function ControleSom() {
       if (alvo.getAttribute("target") === "_blank") return;
 
       const destino = new URL(href, window.location.href).pathname;
-      tocar(efeitoDoCaminho(window.location.pathname, destino));
+      tocarDestino(destino);
       anteciparRota(destino);
     }
 
