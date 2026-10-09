@@ -18,6 +18,7 @@ import {
   anteciparRota,
   VOLUME_PADRAO,
 } from "@/lib/musica";
+import { TrocaCursor } from "@/components/TrocaCursor";
 
 /**
  * O controle da música de fundo, sempre visível, no canto oposto ao selo.
@@ -143,6 +144,9 @@ export function ControleSom() {
       ref={raiz}
       className="fixed right-4 bottom-4 z-50 flex items-center gap-2 sm:right-6 sm:bottom-6"
     >
+      {/* Por enquanto mora aqui: o botão de experimentar os cursores de mão */}
+      <TrocaCursor />
+
       {/* A régua, que sai de dentro do botão para a esquerda */}
       <div
         className={`border-madeira-600/70 bg-madeira-900/90 flex items-center gap-2 overflow-hidden rounded-full border py-2 shadow-lg backdrop-blur-sm transition-all duration-300 ${

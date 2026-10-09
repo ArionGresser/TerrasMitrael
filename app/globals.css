@@ -1224,3 +1224,74 @@
     line-height: 1.58;
   }
 }
+
+/* ============================================================
+   O cursor de mão. A variante vem do atributo data-cursor no <html>,
+   que o botão ao lado do som troca (src/lib/cursor.ts). Sem o atributo,
+   vale o cursor do sistema.
+   O ponto do clique é a ponta do indicador: 6 5 no desenho de 32.
+   O SVG vem primeiro; o PNG é para o navegador que não aceitar SVG.
+   ============================================================ */
+
+html[data-cursor="couro"] {
+  --cursor-mao: url("/cursores/couro-mao.svg") 6 5, url("/cursores/couro-mao.png") 6 5;
+  --cursor-toque: url("/cursores/couro-toque.svg") 6 5, url("/cursores/couro-toque.png") 6 5;
+}
+html[data-cursor="nua"] {
+  --cursor-mao: url("/cursores/nua-mao.svg") 6 5, url("/cursores/nua-mao.png") 6 5;
+  --cursor-toque: url("/cursores/nua-toque.svg") 6 5, url("/cursores/nua-toque.png") 6 5;
+}
+html[data-cursor="sem-dedos"] {
+  --cursor-mao: url("/cursores/sem-dedos-mao.svg") 6 5, url("/cursores/sem-dedos-mao.png") 6 5;
+  --cursor-toque: url("/cursores/sem-dedos-toque.svg") 6 5, url("/cursores/sem-dedos-toque.png") 6 5;
+}
+html[data-cursor="manopla"] {
+  --cursor-mao: url("/cursores/manopla-mao.svg") 6 5, url("/cursores/manopla-mao.png") 6 5;
+  --cursor-toque: url("/cursores/manopla-toque.svg") 6 5, url("/cursores/manopla-toque.png") 6 5;
+}
+
+/* O cursor é herdado: posto no <html>, vale para a página inteira */
+html[data-cursor] {
+  cursor: var(--cursor-mao), auto;
+}
+
+/* O que se clica ganha o brilho na ponta do dedo */
+html[data-cursor] :where(
+    a[href],
+    button:not(:disabled),
+    [role="button"],
+    [role="tab"],
+    summary,
+    label[for],
+    select,
+    input[type="checkbox"],
+    input[type="radio"],
+    input[type="range"],
+    .cursor-pointer
+  ) {
+  cursor: var(--cursor-toque), pointer;
+}
+
+/* Onde se escreve, a barra de texto de sempre */
+html[data-cursor] :where(
+    input:not([type]),
+    input[type="text"],
+    input[type="search"],
+    input[type="number"],
+    input[type="email"],
+    textarea,
+    [contenteditable="true"]
+  ) {
+  cursor: text;
+}
+
+/* O mapa: a mão aberta de arrastar e a de segurar viram a luva também, e o
+   painel do lugar, que pede o cursor comum, fica com a mão de sempre */
+html[data-cursor] .cursor-grab,
+html[data-cursor] .cursor-auto {
+  cursor: var(--cursor-mao), auto;
+}
+html[data-cursor] .cursor-grab:active,
+html[data-cursor] .cursor-grabbing {
+  cursor: var(--cursor-toque), grabbing;
+}
