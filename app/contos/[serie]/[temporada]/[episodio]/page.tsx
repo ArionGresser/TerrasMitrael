@@ -242,15 +242,11 @@ export default async function PaginaEpisodio({ params }: Props) {
           />,
         ]}
         texto={<Texto />}
-        depois={[
-          <FimDoCapitulo
-            key="fim"
-            base={base}
-            episodio={episodio}
-            proximo={proximo}
-            anterior={anterior}
-          />,
-        ]}
+        depois={
+          // Como num livro: o capítulo acaba e o seguinte começa na próxima
+          // folha. A página de fim só aparece no último que já foi escrito.
+          proximo ? [] : [<FimDaTemporada key="fim" base={base} episodio={episodio} />]
+        }
         anterior={anterior ? `${base}/${chaveDoEpisodio(anterior)}/` : `${base}/`}
         rotuloAnterior={anterior ? `Episódio ${anterior.meta.numero}` : "Sumário"}
         proximo={proximo ? `${base}/${chaveDoEpisodio(proximo)}/` : undefined}
@@ -309,50 +305,22 @@ function AberturaDoCapitulo({
   );
 }
 
-/** A última página: o fim do capítulo e o convite para o seguinte. */
-function FimDoCapitulo({
-  base,
-  episodio,
-  proximo,
-  anterior,
-}: {
-  base: string;
-  episodio: Episodio;
-  proximo?: Episodio;
-  anterior?: Episodio;
-}) {
+/** A última página do último capítulo escrito, que ainda não tem seguinte. */
+function FimDaTemporada({ base, episodio }: { base: string; episodio: Episodio }) {
   return (
     <div className="flex min-h-full flex-col justify-center text-center">
       <Ornamento />
       <p className="font-titulo text-tinta-500 mt-4 text-[0.66rem] tracking-[0.3em] uppercase">
         Fim do capítulo {episodio.meta.numero}
       </p>
-      <div className="mt-8">
-        {proximo ? (
-          <ProximoEpisodio href={`${base}/${chaveDoEpisodio(proximo)}/`} episodio={proximo} />
-        ) : (
-          <>
-            <p className="text-tinta-700 text-sm italic">
-              O próximo capítulo ainda está sendo escrito.
-            </p>
-            <div className="mt-4">
-              <BotaoLink href={`${base}/`} variante="primario">
-                Voltar ao sumário
-              </BotaoLink>
-            </div>
-          </>
-        )}
+      <p className="text-tinta-700 mt-8 text-sm italic">
+        O próximo capítulo ainda está sendo escrito.
+      </p>
+      <div className="mt-4">
+        <BotaoLink href={`${base}/`} variante="primario">
+          Voltar ao sumário
+        </BotaoLink>
       </div>
-      {anterior ? (
-        <p className="mt-6 text-sm">
-          <Link
-            href={`${base}/${chaveDoEpisodio(anterior)}/`}
-            className="text-tinta-700 hover:text-heraldico-vermelho decoration-dourado-600/60 underline underline-offset-4"
-          >
-            ← Capítulo {anterior.meta.numero}: {anterior.meta.titulo}
-          </Link>
-        </p>
-      ) : null}
     </div>
   );
 }

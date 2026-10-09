@@ -197,11 +197,21 @@ export function Livro({
 
   const marcador = `mitrael:livro:${chave}`;
   const jaAbriu = useRef(false);
+  /**
+   * Veio do capítulo seguinte e ainda não virou nada: fica preso à última
+   * folha. A contagem do texto pode crescer depois que fontes e imagens
+   * chegam, e sem isso o livro abria duas folhas antes do fim.
+   */
+  const noFim = useRef(false);
+  useEffect(() => {
+    if (noFim.current) setAtual(ultima);
+  }, [ultima]);
   useEffect(() => {
     if (jaAbriu.current || !pronto || !contado) return;
     jaAbriu.current = true;
     const pedido = new URLSearchParams(window.location.search).get("pagina");
     if (pedido === "fim") {
+      noFim.current = true;
       setAberto(true);
       setAtual(ultima);
       window.history.replaceState(null, "", window.location.pathname);
@@ -240,6 +250,7 @@ export function Livro({
   const virar = useCallback(
     (dir: 1 | -1) => {
       if (virada || abrindo) return;
+      noFim.current = false;
       setParou(null);
       if (!aberto) {
         setAberto(true);
@@ -274,6 +285,7 @@ export function Livro({
   );
 
   const irPara = (pagina: number) => {
+    noFim.current = false;
     setParou(null);
     setAberto(true);
     setAtual(m.duas ? pagina - (pagina % 2) : pagina);
@@ -640,11 +652,11 @@ export function Livro({
           type="button"
           onClick={() => virar(1)}
           disabled={!podeAvancar}
-          aria-label={!aberto ? "Abrir o livro" : atual >= ultima && proximo ? rotuloProximo : "Virar a página"}
+          aria-label={!aberto ? "Abrir o livro" : atual + passo > ultima && proximo ? rotuloProximo : "Virar a página"}
           className="placa-comunidade font-titulo text-pergaminho-100 hover:text-dourado-200 min-h-11 min-w-11 rounded-sm px-3 text-xs tracking-[0.12em] uppercase disabled:opacity-30"
         >
           <span className="hidden sm:inline">
-            {!aberto ? "Abrir" : atual >= ultima && proximo ? rotuloProximo : "Avançar"}
+            {!aberto ? "Abrir" : atual + passo > ultima && proximo ? rotuloProximo : "Avançar"}
           </span>{" "}
           <span aria-hidden className="text-lg leading-none">›</span>
         </button>
