@@ -7,6 +7,9 @@ Os pacotes ficam em sons-kit/pacotes/ (fora do git):
   rpg/        80 CC0 RPG SFX, de rubberduck (opengameart.org)
   criaturas/  80 CC0 creature SFX, de rubberduck (opengameart.org)
 
+E os sons que o Arion achar por fora, em Documents/Artes prontas/sons/,
+entram como código M (de "meus"), em qualquer formato de áudio.
+
 Cada som sai cortado no começo e no fim e igualado pelo volume que o ouvido
 percebe (curva A), não pela energia bruta. Pela energia, um rugido grave
 empata com uma folha de papel e some no alto-falante do notebook, que não
@@ -30,6 +33,8 @@ KIT = RAIZ / "sons-kit"
 PACOTES = KIT / "pacotes"
 TMP = KIT / "tmp"
 SR = 48000
+MEUS = Path.home() / "Documents/Artes prontas/sons"
+FORMATOS = {".mp3", ".wav", ".m4a", ".ogg", ".aiff", ".aif", ".flac", ".aac"}
 
 FONTES = [
     ("K", "kenney", "Kenney · RPG Audio"),
@@ -148,14 +153,14 @@ def volume_percebido(s: np.ndarray) -> float:
     return 10 * np.log10((espectro * peso_a(np.maximum(f, 1)) ** 2).sum() / len(s) ** 2 + 1e-12)
 
 
-def recortar(a: np.ndarray) -> np.ndarray:
+def recortar(a: np.ndarray, maximo: float = 2.5) -> np.ndarray:
     jan = int(SR * 0.005)
     n = len(a) // jan
     db = 20 * np.log10(np.sqrt((a[: n * jan].reshape(n, jan) ** 2).mean(1)) + 1e-9)
     pico = db.max()
     ini = max(0, np.argmax(db > pico - 35) - 2) * jan
     fim = min(len(a), (n - np.argmax(db[::-1] > pico - 45) + 5) * jan)
-    s = a[ini:fim].copy()[: int(SR * 2.5)]
+    s = a[ini:fim].copy()[: int(SR * maximo)]
     fi, fo = int(0.003 * SR), min(int(0.02 * SR), len(s) // 4)
     s[:fi] *= np.linspace(0, 1, fi)
     s[-fo:] *= np.linspace(1, 0, fo)
@@ -188,8 +193,8 @@ def main():
 
     sons = []
 
-    def adicionar(codigo, origem, arquivo, nome, grupo, a):
-        s = recortar(a)
+    def adicionar(codigo, origem, arquivo, nome, grupo, a, maximo=2.5):
+        s = recortar(a, maximo)
         s *= 10 ** ((alvo - volume_percebido(s)) / 20)
         pico = np.abs(s).max()
         if pico > 0.95:
@@ -210,6 +215,13 @@ def main():
         [("pergaminho-abrir.mp3", "Pergaminho abrindo"), ("pergaminho-fechar.mp3", "Pergaminho fechando")], 1
     ):
         adicionar(f"P{i}", "site", arq, nome, "Papel e livros", ler(RAIZ / "public/sons" / arq))
+
+    if MEUS.exists():
+        meus = sorted((p for p in MEUS.iterdir() if p.suffix.lower() in FORMATOS), key=lambda p: p.name.lower())
+        for i, p in enumerate(meus, 1):
+            # Até 20 segundos: aqui podem vir as vinhetas das espécies
+            adicionar(f"M{i:02d}", "seus sons", p.name, p.stem, "Seus sons", ler(p), maximo=20)
+            print(f"M{i:02d} {p.name}")
 
     for pref, pasta, origem in FONTES:
         arquivos = sorted((PACOTES / pasta).glob("*.ogg"), key=lambda p: p.name.lower())
