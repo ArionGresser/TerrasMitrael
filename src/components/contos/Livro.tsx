@@ -256,7 +256,7 @@ export function Livro({
         setAberto(true);
         if (!reduzido) {
           setAbrindo(true);
-          tocar("virarPagina");
+          tocar("capa");
           garantia.current = window.setTimeout(terminar, DURACAO * 1000 + 200);
         }
         return;

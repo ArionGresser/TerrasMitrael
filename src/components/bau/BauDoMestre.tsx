@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useReducedMotion } from "motion/react";
 import { Botao } from "@/components/ui/Botao";
-import { tocar } from "@/lib/som";
+import { tocar, NIVEL_DA_RARIDADE } from "@/lib/som";
 import {
   abrir,
   faixaDo,
@@ -192,7 +192,7 @@ export function BauDoMestre({ conteudo }: { conteudo: Conteudo }) {
     setRolado(valor);
     setSegundos({});
     setCopiado(false);
-    tocar("abrirMenu");
+    somDoBau(r);
   }
 
   function rolarPorMim() {
@@ -208,7 +208,9 @@ export function BauDoMestre({ conteudo }: { conteudo: Conteudo }) {
     if (!opcao) return;
     const vagas = resultado.vagas.map((v, j) => (j === i ? { ...v, escolhido: opcao.resolver() } : v));
     setResultado({ ...resultado, vagas });
-    tocar("marcador");
+    const achado = vagas[i].escolhido;
+    if (achado?.raridade) tocar("brilho", NIVEL_DA_RARIDADE[achado.raridade] ?? 1);
+    else tocar("marcador");
   }
 
   async function copiar() {
@@ -515,4 +517,19 @@ export function BauDoMestre({ conteudo }: { conteudo: Conteudo }) {
         ) : null}
     </div>
   );
+}
+
+/**
+ * O baú abrindo, em três tempos: o trinco na hora do toque, as moedas logo
+ * depois, se vieram, e o brilho do melhor item mágico por último, maior
+ * quanto mais raro.
+ */
+function somDoBau(r: Resultado) {
+  tocar("trinco");
+  if (r.moedas.some((m) => m.quantidade > 0)) setTimeout(() => tocar("moedas"), 260);
+  const nivel = Math.max(
+    0,
+    ...r.vagas.map((v) => (v.escolhido?.raridade ? (NIVEL_DA_RARIDADE[v.escolhido.raridade] ?? 1) : 0)),
+  );
+  if (nivel > 0) setTimeout(() => tocar("brilho", nivel), 620);
 }

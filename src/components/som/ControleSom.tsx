@@ -1,7 +1,15 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { somLigado, definirSom, prepararEfeitos, tocar } from "@/lib/som";
+import {
+  somLigado,
+  definirSom,
+  efeitosLigados,
+  definirEfeitos,
+  efeitoDoCaminho,
+  prepararEfeitos,
+  tocar,
+} from "@/lib/som";
 import {
   pausarMusica,
   retomarMusica,
@@ -15,7 +23,8 @@ import {
  * O controle da música de fundo, sempre visível, no canto oposto ao selo.
  *
  * Manda na trilha, não nos efeitos: o roçar do pergaminho responde ao toque
- * de quem está ali e continua valendo com a música desligada.
+ * de quem está ali e continua valendo com a música desligada. Os efeitos têm
+ * o próprio interruptor, a varinha na ponta da régua.
  *
  * O botão redondo abre uma régua de volume ao lado, com o mudo na ponta.
  * Quem chega pela primeira vez entra com a régua em pouco mais de um terço,
@@ -28,6 +37,7 @@ import {
 export function ControleSom() {
   const [ligado, setLigado] = useState(false);
   const [volume, setVolume] = useState(VOLUME_PADRAO);
+  const [efeitos, setEfeitos] = useState(true);
   const [aberto, setAberto] = useState(false);
   const [montado, setMontado] = useState(false);
   const raiz = useRef<HTMLDivElement>(null);
@@ -35,6 +45,7 @@ export function ControleSom() {
   useEffect(() => {
     setLigado(somLigado());
     setVolume(fracaoDoVolume());
+    setEfeitos(efeitosLigados());
     setMontado(true);
     prepararEfeitos();
   }, []);
@@ -52,8 +63,9 @@ export function ControleSom() {
       if (!href || !href.startsWith("/")) return;
       if (alvo.getAttribute("target") === "_blank") return;
 
-      tocar("virarPagina");
-      anteciparRota(new URL(href, window.location.href).pathname);
+      const destino = new URL(href, window.location.href).pathname;
+      tocar(efeitoDoCaminho(window.location.pathname, destino));
+      anteciparRota(destino);
     }
 
     document.addEventListener("click", aoClicar);
@@ -96,6 +108,17 @@ export function ControleSom() {
     }
   }
 
+  function alternarEfeitos() {
+    const novo = !efeitos;
+    setEfeitos(novo);
+    definirEfeitos(novo);
+    // Quem liga ouve o que ligou; quem desliga já não ouve nada
+    if (novo) {
+      prepararEfeitos();
+      tocar("brilho", 2);
+    }
+  }
+
   function mudarVolume(fracao: number) {
     setVolume(fracao);
     definirVolumeDaMusica(fracao);
@@ -124,7 +147,7 @@ export function ControleSom() {
       <div
         className={`border-madeira-600/70 bg-madeira-900/90 flex items-center gap-2 overflow-hidden rounded-full border py-2 shadow-lg backdrop-blur-sm transition-all duration-300 ${
           aberto
-            ? "max-w-56 pr-3 pl-2 opacity-100"
+            ? "max-w-72 pr-2 pl-2 opacity-100"
             : "pointer-events-none max-w-0 border-transparent px-0 opacity-0"
         }`}
         inert={!aberto || undefined}
@@ -150,6 +173,21 @@ export function ControleSom() {
           className="regua-volume w-28 shrink-0"
           style={{ "--preenchido": `${volume * 100}%` } as React.CSSProperties}
         />
+
+        <span aria-hidden className="bg-madeira-600/60 h-5 w-px shrink-0" />
+
+        <button
+          type="button"
+          onClick={alternarEfeitos}
+          aria-pressed={montado ? efeitos : undefined}
+          aria-label="Efeitos sonoros"
+          title={efeitos ? "Desligar os efeitos" : "Ligar os efeitos"}
+          className={`grid size-8 shrink-0 place-items-center rounded-full transition-colors ${
+            efeitos ? "text-dourado-400 hover:text-pergaminho-50" : "text-pergaminho-300/50 hover:text-pergaminho-100"
+          }`}
+        >
+          <IconeEfeitos ligados={efeitos} className="size-4" />
+        </button>
       </div>
 
       <button
@@ -159,8 +197,8 @@ export function ControleSom() {
           tocar("marcador");
         }}
         aria-expanded={montado ? aberto : undefined}
-        aria-label="Controle da música de fundo"
-        title="Música de fundo"
+        aria-label="Controle do som"
+        title="Música e efeitos"
         className={`border-madeira-600/70 grid size-12 shrink-0 place-items-center rounded-full border shadow-lg backdrop-blur-sm transition-colors ${
           ligado
             ? "bg-heraldico-verde/90 text-pergaminho-50"
@@ -170,6 +208,31 @@ export function ControleSom() {
         <IconeSom ligado={ligado} className="size-5" />
       </button>
     </div>
+  );
+}
+
+/** Uma varinha com faíscas; riscada quando os efeitos estão desligados. */
+function IconeEfeitos({
+  ligados,
+  className,
+}: {
+  ligados: boolean;
+  className?: string;
+}) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={className}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.8}
+      strokeLinecap="round"
+      aria-hidden
+    >
+      <path d="M4 20 14 10" />
+      <path d="M16 3v3M16 10v1M19.5 6.5H22M10 6.5h2M18.5 4l1.5-1.5M18.5 9l1.5 1.5" />
+      {ligados ? null : <path d="M3 3l18 18" />}
+    </svg>
   );
 }
 

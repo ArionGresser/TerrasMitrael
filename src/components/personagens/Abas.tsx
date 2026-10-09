@@ -81,7 +81,7 @@ export function Abas({
     precisaVoltar.current = topo < 0;
 
     setAtiva(indice);
-    tocar("virarPagina");
+    tocar("aba");
 
     if (comFoco) botoes.current[indice]?.focus({ preventScroll: true });
   }

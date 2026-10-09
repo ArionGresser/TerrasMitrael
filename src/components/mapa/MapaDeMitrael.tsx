@@ -5,7 +5,7 @@ import Image from "next/image";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { MAPA } from "@/lib/marcadores";
 import { LARGURA_BASE, ALTURA_BASE } from "@/lib/regioes-do-mapa";
-import { tocar } from "@/lib/som";
+import { tocar, somDeZoom } from "@/lib/som";
 import { Ornamento } from "@/components/ui/Titulo";
 
 /**
@@ -195,6 +195,7 @@ export function MapaDeMitrael({
       const min = escalaMinima();
       const s = Math.min(Math.max(c.s * fator, min), min * ZOOM_MAXIMO);
       const k = s / c.s;
+      if (Math.abs(k - 1) > 0.002) somDeZoom(k > 1);
       const destino = { s, x: px - (px - c.x) * k, y: py - (py - c.y) * k };
       if (animado) voar(destino, 450);
       else aplicar(destino);
@@ -394,6 +395,7 @@ export function MapaDeMitrael({
     const min = escalaMinima();
     const s = Math.min(Math.max(c.s * (depois / Math.max(antes, 1)), min), min * ZOOM_MAXIMO);
     const k = s / c.s;
+    if (Math.abs(k - 1) > 0.002) somDeZoom(k > 1);
     aplicar({
       s,
       x: meioDepois.x - (meioAntes.x - c.x) * k,
