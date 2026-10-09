@@ -138,6 +138,7 @@ def livro(d):
         ("itens", "Itens Mágicos"),
         ("monstros", "Bestiário"),
         ("glossario", "Glossário de Regras"),
+        ("bau", "Baú do Mestre"),
     ]
     return [
         arte("compendio", chave, nome, "largo", prompt_cena(d[("compendio", chave)]))

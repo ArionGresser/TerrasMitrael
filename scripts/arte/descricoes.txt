@@ -12,6 +12,7 @@ magias | an ancient spellbook open on a wizard's desk, arcane runes rising from 
 equipamento | an adventurer's gear laid out on a wooden table: backpack, rope, lantern, sword, shield, rations, map and torch
 itens | a dragon's treasure hoard full of magic items: glowing swords, rings, wands, potions and an enchanted amulet
 monstros | a monster hunter's bestiary open on a table, with a red dragon, an owlbear and a gelatinous cube looming in the shadows behind it
+bau | a game master's hand lifting the lid of an old iron-banded treasure chest in a dungeon, gold coins, a glowing sword hilt, potions and a ring spilling out in warm candlelight
 glossario | a scholar's study with an enormous leather-bound rulebook full of index tabs, quills and parchment notes
 
 ## regras/antecedentes
