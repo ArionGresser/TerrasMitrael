@@ -128,6 +128,15 @@ const REGISTRO: Registro[] = [
     href: "/mapa/",
     imagem: "/images/map-cartao.jpg",
   },
+  {
+    tipo: "aviso",
+    data: "2026-10-09T09:00-03:00",
+    titulo: "Baú do Mestre",
+    texto:
+      "Na hora do saque: o mestre escolhe o baú e o que pode ter, o jogador rola o d20 e saem moedas, equipamento e itens mágicos do Livro.",
+    href: "/bau/",
+    imagem: "/images/compendio/itens.webp",
+  },
 ];
 
 export type Novidade = {

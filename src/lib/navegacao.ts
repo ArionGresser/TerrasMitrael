@@ -37,7 +37,7 @@ export const SECOES: Secao[] = [
     href: "/regras/",
     nome: "Livro do Aventureiro",
     descricao: "As regras de 2024 em português: classes, magias, itens e monstros",
-    inclui: ["/classes/", "/especies/", "/magias/", "/itens/", "/monstros/"],
+    inclui: ["/classes/", "/especies/", "/magias/", "/itens/", "/monstros/", "/bau/"],
   },
 ];
 

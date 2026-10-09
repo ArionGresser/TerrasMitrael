@@ -52,6 +52,14 @@ const FIXAS = [
     resumo:
       "Os 330 monstros e animais, com busca por tipo, Nível de Desafio e tamanho.",
   },
+  {
+    href: "/bau/",
+    titulo: "Baú do Mestre",
+    original: "Loot",
+    ordem: 20,
+    resumo:
+      "Na hora do saque: escolha o baú e o que pode ter, o jogador rola o d20 e o site tira moedas, equipamento e itens mágicos.",
+  },
 ];
 
 /** A imagem de cada cartão: public/images/compendio/<fim do endereço>.webp */
