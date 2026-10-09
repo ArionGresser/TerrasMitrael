@@ -30,6 +30,16 @@ const MADEIRA = "rgba(24, 16, 9, 0.9)";
 
 const T = Math.round(TRANSICAO * FPS);
 
+/**
+ * A mistura. Medida no vídeo pronto, janela a janela: a música fica cheia,
+ * cada efeito sai uns 6 dB acima dela no instante do gesto. O rugido, que
+ * é quase todo grave e encorpado, e os cliques secos da aba, do trinco e
+ * das moedas pedem menos que os outros para não estourar por cima dela.
+ */
+const MUSICA = 1.25;
+const EFEITOS = 1.5;
+const AJUSTE: Record<string, number> = { rugido: 0.26, aba: 0.6, trinco: 0.6, moedas: 0.75 };
+
 /** Entra e sai em esmaecimento, para as cenas se cruzarem. */
 function useEsmaecer(quadros: number) {
   const f = useCurrentFrame();
@@ -262,7 +272,7 @@ export function Trailer({ formato }: { formato: Formato }) {
         src={staticFile("musica/vrakyr-tema.m4a")}
         trimBefore={Math.round(MUSICA_INICIO * FPS)}
         volume={(f) =>
-          interpolate(f, [0, 12, m.total - 60, m.total], [0, 0.55, 0.55, 0], {
+          interpolate(f, [0, 12, m.total - 60, m.total], [0, MUSICA, MUSICA, 0], {
             extrapolateLeft: "clamp",
             extrapolateRight: "clamp",
           })
@@ -271,7 +281,7 @@ export function Trailer({ formato }: { formato: Formato }) {
 
       {m.sons.map((s, i) => (
         <Sequence key={i} from={s.quadro} durationInFrames={FPS * 2}>
-          <Audio src={staticFile(`sons/${s.efeito}.wav`)} volume={0.9} />
+          <Audio src={staticFile(`sons/${s.efeito}.wav`)} volume={EFEITOS * (AJUSTE[s.efeito] ?? 1)} />
         </Sequence>
       ))}
     </AbsoluteFill>
