@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mesa de Sons</title>
+<style>
+:root {
+  --fundo: #f4ecd8; --papel: #fbf6ea; --tinta: #2b2118; --suave: #6f5f4b;
+  --linha: #d8c8a4; --ouro: #a8801f; --vermelho: #8e2a1f; --ativo: #fff3c9;
+  --verde: #3d6b3a;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fundo: #17130f; --papel: #211b15; --tinta: #efe4cc; --suave: #b3a284;
+    --linha: #3d3226; --ouro: #d6ad48; --vermelho: #e0715f; --ativo: #3a3020;
+    --verde: #8cc488;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--fundo); color: var(--tinta); font: 15px/1.45 Georgia, "Times New Roman", serif; }
+header { padding: 20px 16px 12px; max-width: 1280px; margin: 0 auto; }
+h1 { margin: 0; font-size: 1.7rem; letter-spacing: .02em; }
+.explica { color: var(--suave); max-width: 760px; margin: 6px 0 0; }
+.barra { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 12px; }
+button { font: inherit; cursor: pointer; border: 1px solid var(--linha); background: var(--papel); color: var(--tinta); border-radius: 8px; padding: 6px 12px; }
+button:hover { border-color: var(--ouro); }
+button.forte { background: var(--vermelho); border-color: var(--vermelho); color: #fff; }
+button:disabled { opacity: .45; cursor: default; }
+.contagem { color: var(--suave); font-size: .9rem; }
+main { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; max-width: 1280px; margin: 0 auto; padding: 0 16px 40px; }
+@media (max-width: 860px) { main { grid-template-columns: 1fr; } .biblioteca { position: static !important; max-height: none !important; } }
+section h2 { font-size: .78rem; letter-spacing: .18em; text-transform: uppercase; color: var(--ouro); margin: 22px 0 8px; }
+.lugar { background: var(--papel); border: 1px solid var(--linha); border-radius: 10px; padding: 10px 12px; margin-bottom: 8px; cursor: pointer; }
+.lugar.ativo { outline: 2px solid var(--ouro); background: var(--ativo); }
+.lugar .topo { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
+.lugar .nome { font-weight: bold; }
+.lugar .chave { font-family: ui-monospace, Menlo, monospace; font-size: .75rem; color: var(--suave); }
+.lugar .desc { color: var(--suave); font-size: .85rem; }
+.escolha { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 8px; }
+.chip { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--linha); border-radius: 999px; padding: 2px 10px 2px 4px; font-size: .9rem; }
+.chip.vazio { padding-left: 10px; color: var(--suave); font-style: italic; }
+.mudou { color: var(--verde); font-size: .75rem; font-weight: bold; }
+.tocar { width: 30px; height: 30px; padding: 0; border-radius: 50%; display: inline-grid; place-items: center; font-size: .8rem; }
+.codigo { font-family: ui-monospace, Menlo, monospace; font-weight: bold; }
+.volume { display: inline-flex; align-items: center; gap: 6px; font-size: .85rem; color: var(--suave); }
+.volume input { width: 110px; accent-color: var(--ouro); }
+.biblioteca { position: sticky; top: 8px; max-height: calc(100vh - 16px); display: flex; flex-direction: column; background: var(--papel); border: 1px solid var(--linha); border-radius: 12px; padding: 12px; margin-top: 22px; }
+.para { font-size: .95rem; margin-bottom: 8px; }
+.para strong { color: var(--vermelho); }
+.filtros { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+.filtros button { padding: 3px 10px; font-size: .85rem; border-radius: 999px; }
+.filtros button.sim { background: var(--tinta); color: var(--papel); border-color: var(--tinta); }
+input[type=search] { font: inherit; width: 100%; padding: 6px 10px; border: 1px solid var(--linha); border-radius: 8px; background: var(--fundo); color: var(--tinta); margin-bottom: 8px; }
+.lista { overflow-y: auto; flex: 1; }
+.som { display: grid; grid-template-columns: 34px 52px 1fr auto; gap: 8px; align-items: center; padding: 5px 4px; border-bottom: 1px solid var(--linha); }
+.som.atual { background: var(--ativo); }
+.som .origem { color: var(--suave); font-size: .75rem; }
+.som .dur { color: var(--suave); font-size: .75rem; margin-left: 6px; }
+.aviso { position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%); background: var(--tinta); color: var(--papel); padding: 8px 16px; border-radius: 8px; opacity: 0; transition: opacity .2s; pointer-events: none; }
+.aviso.ver { opacity: 1; }
+@media (prefers-reduced-motion: reduce) { .aviso { transition: none; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>Mesa de Sons · Terras de Mitrael</h1>
+  <p class="explica">
+    À esquerda, cada tela e ação do site, com o som que ela tem hoje. Clique numa delas,
+    ouça os sons à direita e aperte <b>Usar</b> no que combinar. O volume de cada lugar
+    se ajusta na própria régua. No fim, <b>Copiar escolhas</b> e cole na conversa com o Claude.
+    Os sons já estão igualados pelo volume que o ouvido percebe, então o que você ouve aqui é o que vai para o site.
+    Suas escolhas ficam salvas neste navegador.
+  </p>
+  <div class="barra">
+    <button class="forte" id="copiar">Copiar escolhas</button>
+    <button id="desfazer">Voltar tudo ao som de hoje</button>
+    <span class="contagem" id="contagem"></span>
+  </div>
+</header>
+<main>
+  <section id="lugares"></section>
+  <aside class="biblioteca" aria-label="Biblioteca de sons">
+    <div class="para" id="para">Escolha um lugar à esquerda.</div>
+    <div class="filtros" id="filtros"></div>
+    <input type="search" id="busca" placeholder="Buscar por nome ou código (ex.: rugido, C45)">
+    <div class="lista" id="lista"></div>
+  </aside>
+</main>
+<div class="aviso" id="aviso" role="status"></div>
+
+<script>
+const SONS = __SONS__;
+
+// Os sons que o site monta na hora, sem arquivo
+const SINTETIZADOS = [
+  { codigo: "S1", ref: "zoomPerto", nome: "Sopro subindo (zoom aproximando)" },
+  { codigo: "S2", ref: "zoomLonge", nome: "Sopro descendo (zoom afastando)" },
+  { codigo: "S3", ref: "brilho1", nome: "Brilho mágico, 1 nota" },
+  { codigo: "S4", ref: "brilho2", nome: "Brilho mágico, 2 notas" },
+  { codigo: "S5", ref: "brilho3", nome: "Brilho mágico, 3 notas" },
+  { codigo: "S6", ref: "brilho4", nome: "Brilho mágico, 4 notas" },
+  { codigo: "S7", ref: "brilho5", nome: "Brilho mágico, 5 notas e cintilação" },
+];
+SINTETIZADOS.forEach((s) => SONS.push({ ...s, origem: "sintetizado no site", grupo: "Sintetizados", dur: s.ref.startsWith("zoom") ? 0.36 : 1.2 }));
+
+const FOLHA = "K:bookFlip1.ogg", PERG_A = "P:pergaminho-abrir.mp3", PERG_F = "P:pergaminho-fechar.mp3", MARCADOR = "K:bookPlace3.ogg";
+
+// null em "atual" quer dizer: usa o som de "Virar página e seguir links"
+const LUGARES = [
+  { grupo: "Gestos do site inteiro", itens: [
+    { chave: "folha", nome: "Virar página e seguir links", desc: "Todo link que não leva a uma tela com som próprio.", atual: FOLHA, sug: "Papel e livros" },
+    { chave: "menu-abrir", nome: "Abrir o menu (o selo)", atual: PERG_A, sug: "Papel e livros" },
+    { chave: "menu-fechar", nome: "Fechar o menu", atual: PERG_F, sug: "Papel e livros" },
+    { chave: "dobra-abrir", nome: "Abrir um bloco que desdobra (e o glossário)", atual: PERG_A, sug: "Papel e livros" },
+    { chave: "dobra-fechar", nome: "Fechar um bloco que desdobra", atual: PERG_F, sug: "Papel e livros" },
+    { chave: "botao-som", nome: "Botão da música", atual: MARCADOR },
+    { chave: "efeitos-ligar", nome: "Ligar os efeitos (a varinha)", atual: "S:brilho2", sug: "Sintetizados" },
+  ]},
+  { grupo: "Telas: o link que leva até elas", itens: [
+    { chave: "inicio", nome: "Início", atual: null },
+    { chave: "mapa", nome: "Mapa", atual: PERG_A },
+    { chave: "contos", nome: "Contos", atual: "K:bookOpen.ogg", sug: "Papel e livros" },
+    { chave: "personagens", nome: "Personagens", atual: "K:beltHandle1.ogg" },
+    { chave: "eventos", nome: "Eventos", atual: null },
+    { chave: "novidades", nome: "Novidades", atual: null },
+    { chave: "regras", nome: "Livro do Aventureiro", atual: "K:bookOpen.ogg", sug: "Papel e livros" },
+    { chave: "classes", nome: "Classes", atual: "R:blade_02.ogg", sug: "Metal e armas" },
+    { chave: "especies", nome: "Espécies", atual: null, sug: "Criaturas" },
+    { chave: "magias", nome: "Grimório", atual: "R:spell_02.ogg", sug: "Magia" },
+    { chave: "itens", nome: "Itens Mágicos", atual: "S:brilho3", sug: "Sintetizados" },
+    { chave: "monstros", nome: "Bestiário", atual: "R:creature_roar_02.ogg", sug: "Criaturas" },
+    { chave: "bau", nome: "Baú do Mestre", atual: "R:lock_01.ogg", sug: "Metal e armas" },
+  ]},
+  { grupo: "Livro do Aventureiro: capítulos", itens: [
+    { chave: "regras/antecedentes", nome: "Antecedentes", atual: null },
+    { chave: "regras/como-ler-uma-ficha", nome: "Como ler uma ficha", atual: null },
+    { chave: "regras/equipamento", nome: "Equipamento", atual: null, sug: "Metal e armas" },
+    { chave: "regras/glossario", nome: "Glossário", atual: null },
+    { chave: "regras/itens-magicos", nome: "Itens mágicos (regras)", atual: null },
+    { chave: "regras/talentos", nome: "Talentos", atual: null },
+  ]},
+  { grupo: "Classes, uma a uma", itens: [
+    "Bárbaro:barbaro", "Bardo:bardo", "Bruxo:bruxo", "Clérigo:clerigo", "Druida:druida", "Feiticeiro:feiticeiro",
+    "Guerreiro:guerreiro", "Ladino:ladino", "Mago:mago", "Monge:monge", "Paladino:paladino", "Patrulheiro:patrulheiro",
+  ].map((t) => { const [nome, slug] = t.split(":"); return { chave: "classes/" + slug, nome, atual: null }; }) },
+  { grupo: "Espécies, uma a uma (até chegarem as vinhetas)", itens: [
+    "Anão:anao", "Draconato:draconato", "Elfo:elfo", "Gnomo:gnomo", "Golias:golias",
+    "Humano:humano", "Orc:orc", "Pequenino:pequenino", "Tiefling:tiefling",
+  ].map((t) => { const [nome, slug] = t.split(":"); return { chave: "especies/" + slug, nome, atual: null, sug: "Criaturas" }; }) },
+  { grupo: "Mapa", itens: [
+    { chave: "mapa/aproximar", nome: "Zoom aproximando", desc: "Toca uma vez por gesto.", atual: "S:zoomPerto", sug: "Sintetizados" },
+    { chave: "mapa/afastar", nome: "Zoom afastando", atual: "S:zoomLonge", sug: "Sintetizados" },
+    { chave: "mapa/ponto", nome: "Clicar num lugar ou região", atual: MARCADOR },
+    { chave: "mapa/fechar", nome: "Fechar o painel do lugar", atual: PERG_F },
+  ]},
+  { grupo: "Personagens", itens: [
+    { chave: "personagens/aba", nome: "Trocar de aba na ficha", atual: "K:handleSmallLeather.ogg", sug: "Couro e pano" },
+    { chave: "personagens/fita", nome: "Tocar uma narração (fita)", atual: MARCADOR },
+  ]},
+  { grupo: "Contos (o livro)", itens: [
+    { chave: "contos/capa", nome: "Abrir a capa da temporada", atual: "K:bookOpen.ogg", sug: "Papel e livros" },
+    { chave: "contos/folha", nome: "Virar uma folha do livro", atual: FOLHA, sug: "Papel e livros" },
+  ]},
+  { grupo: "Baú do Mestre", itens: [
+    { chave: "bau/abrir", nome: "Abrir o baú (gerar)", atual: "K:metalLatch.ogg", sug: "Metal e armas" },
+    { chave: "bau/moedas", nome: "Saíram moedas", atual: "K:handleCoins.ogg", sug: "Moedas e pedras" },
+    { chave: "bau/comum", nome: "Saiu item mágico comum", atual: "S:brilho1", sug: "Sintetizados" },
+    { chave: "bau/incomum", nome: "Saiu item mágico incomum", atual: "S:brilho2", sug: "Sintetizados" },
+    { chave: "bau/raro", nome: "Saiu item mágico raro", atual: "S:brilho3", sug: "Sintetizados" },
+    { chave: "bau/muito-raro", nome: "Saiu item mágico muito raro", atual: "S:brilho4", sug: "Sintetizados" },
+    { chave: "bau/lendario", nome: "Saiu item mágico lendário", atual: "S:brilho5", sug: "Sintetizados" },
+    { chave: "bau/segundo-dado", nome: "Escolher pelo segundo dado (item comum)", atual: MARCADOR },
+    { chave: "bau/copiar", nome: "Copiar o resultado", atual: null, desc: "Hoje não tem som." },
+  ]},
+];
+
+// ---------- Códigos ----------
+const porCodigo = new Map(SONS.map((s) => [s.codigo, s]));
+function resolver(ref) {
+  if (!ref) return null;
+  const [p, nome] = ref.split(":");
+  if (p === "S") return SINTETIZADOS.find((s) => s.ref === nome)?.codigo ?? null;
+  const s = SONS.find((x) => x.codigo.startsWith(p) && x.arquivo === nome);
+  return s ? s.codigo : null;
+}
+const TODOS = LUGARES.flatMap((g) => g.itens);
+const ORIGINAL = Object.fromEntries(TODOS.map((l) => [l.chave, { codigo: resolver(l.atual), vol: 100 }]));
+
+// ---------- Estado salvo ----------
+const CHAVE = "mitrael:mesa-de-sons";
+let escolhas = {};
+try { escolhas = JSON.parse(localStorage.getItem(CHAVE) || "{}"); } catch { escolhas = {}; }
+const estado = (chave) => escolhas[chave] ?? ORIGINAL[chave];
+function salvar() { try { localStorage.setItem(CHAVE, JSON.stringify(escolhas)); } catch {} }
+const mudou = (chave) => {
+  const a = estado(chave), o = ORIGINAL[chave];
+  return a.codigo !== o.codigo || a.vol !== o.vol;
+};
+
+// ---------- Áudio ----------
+let ctx = null;
+const decodificados = new Map();
+const BASE = 0.55;
+function contexto() {
+  if (!ctx) ctx = new (window.AudioContext || window.webkitAudioContext)();
+  if (ctx.state === "suspended") ctx.resume();
+  return ctx;
+}
+async function tocar(codigo, vol = 100) {
+  if (!codigo) return;
+  const c = contexto();
+  const som = porCodigo.get(codigo);
+  const saida = c.createGain();
+  saida.gain.value = BASE * (vol / 100);
+  saida.connect(c.destination);
+  if (som.ref) return sintetizar(c, saida, som.ref);
+  let buf = decodificados.get(codigo);
+  if (!buf) {
+    const bytes = Uint8Array.from(atob(som.dados), (ch) => ch.charCodeAt(0));
+    buf = await c.decodeAudioData(bytes.buffer);
+    decodificados.set(codigo, buf);
+  }
+  const f = c.createBufferSource();
+  f.buffer = buf;
+  f.connect(saida);
+  f.start();
+}
+
+// Cópia do src/lib/sintese.ts, para soar igual ao site
+let ruido = null;
+function obterRuido(c) {
+  if (ruido) return ruido;
+  ruido = c.createBuffer(1, c.sampleRate, c.sampleRate);
+  const d = ruido.getChannelData(0);
+  for (let i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1;
+  return ruido;
+}
+function nota(c, saida, freq, q, forca, dura) {
+  for (const [r, p, qd] of [[1, 1, 1], [2.76, .45, .55], [5.4, .22, .35], [8.93, .1, .2]]) {
+    const o = c.createOscillator(); o.frequency.value = freq * r;
+    const g = c.createGain(); const fim = q + dura * qd;
+    g.gain.setValueAtTime(0.0001, q); g.gain.exponentialRampToValueAtTime(forca * p, q + 0.006);
+    g.gain.exponentialRampToValueAtTime(0.0001, fim);
+    o.connect(g).connect(saida); o.start(q); o.stop(fim + 0.02);
+  }
+}
+const PENTA = [1046.5, 1174.7, 1318.5, 1568, 1760, 2093];
+function sintetizar(c, saida, ref) {
+  const t = c.currentTime + 0.005;
+  if (ref.startsWith("zoom")) {
+    const perto = ref === "zoomPerto";
+    const f = c.createBufferSource(); f.buffer = obterRuido(c);
+    const fl = c.createBiquadFilter(); fl.type = "bandpass"; fl.Q.value = 1.4;
+    fl.frequency.setValueAtTime(perto ? 320 : 1500, t); fl.frequency.exponentialRampToValueAtTime(perto ? 1500 : 320, t + 0.32);
+    const g = c.createGain(); g.gain.setValueAtTime(0.0001, t);
+    g.gain.exponentialRampToValueAtTime(0.6, t + 0.07); g.gain.exponentialRampToValueAtTime(0.0001, t + 0.36);
+    f.connect(fl).connect(g).connect(saida); f.start(t); f.stop(t + 0.4);
+    return;
+  }
+  const n = Number(ref.slice(-1));
+  for (let i = 0; i < n; i++) nota(c, saida, PENTA[i + (n >= 4 ? 1 : 0)], t + i * 0.075, 0.02, 0.9);
+  if (n === 5) {
+    const f = c.createBufferSource(); f.buffer = obterRuido(c);
+    const fl = c.createBiquadFilter(); fl.type = "highpass"; fl.frequency.value = 6000;
+    const g = c.createGain(); const i0 = t + 0.3;
+    g.gain.setValueAtTime(0.0001, i0); g.gain.exponentialRampToValueAtTime(0.04, i0 + 0.25);
+    g.gain.exponentialRampToValueAtTime(0.0001, i0 + 1.1);
+    f.connect(fl).connect(g).connect(saida); f.start(i0); f.stop(i0 + 1.15);
+  }
+}
+
+// ---------- Tela ----------
+let ativo = null;
+let filtro = "Todos";
+const el = (tag, props = {}, ...filhos) => {
+  const e = Object.assign(document.createElement(tag), props);
+  filhos.flat().forEach((f) => f != null && e.append(f));
+  return e;
+};
+const rotulo = (codigo) => { const s = porCodigo.get(codigo); return s ? s.nome : ""; };
+
+function desenharLugares() {
+  const raiz = document.getElementById("lugares");
+  raiz.replaceChildren();
+  for (const g of LUGARES) {
+    raiz.append(el("h2", { textContent: g.grupo }));
+    for (const l of g.itens) {
+      const e = estado(l.chave);
+      const efetivo = e.codigo ?? (l.atual === null && !escolhas[l.chave] ? estado("folha").codigo : null);
+      const caixa = el("div", { className: "lugar" + (ativo === l.chave ? " ativo" : ""), tabIndex: 0 });
+      caixa.onclick = () => escolherLugar(l.chave);
+      caixa.onkeydown = (ev) => { if (ev.key === "Enter" && ev.target === caixa) escolherLugar(l.chave); };
+
+      const tocarBtn = el("button", { className: "tocar", textContent: "▶", title: "Ouvir", ariaLabel: "Ouvir o som de " + l.nome });
+      tocarBtn.onclick = (ev) => { ev.stopPropagation(); tocar(efetivo, e.vol); };
+
+      let chip;
+      if (e.codigo) chip = el("span", { className: "chip" }, tocarBtn, el("span", { className: "codigo", textContent: e.codigo }), rotulo(e.codigo));
+      else if (l.atual === null && !escolhas[l.chave]) chip = el("span", { className: "chip" }, tocarBtn, el("span", { textContent: "igual a Virar página" }));
+      else chip = el("span", { className: "chip vazio", textContent: "sem som" });
+
+      const regua = el("input", { type: "range", min: 25, max: 200, step: 5, value: e.vol, ariaLabel: "Volume de " + l.nome });
+      const pct = el("span", { textContent: e.vol + "%" });
+      regua.onclick = (ev) => ev.stopPropagation();
+      regua.oninput = () => { pct.textContent = regua.value + "%"; };
+      regua.onchange = () => { escolhas[l.chave] = { ...estado(l.chave), vol: Number(regua.value) }; salvar(); tocar(efetivo, Number(regua.value)); atualizarContagem(); desenharLugares(); };
+
+      const semSom = el("button", { textContent: "Sem som" });
+      semSom.onclick = (ev) => { ev.stopPropagation(); escolhas[l.chave] = { codigo: null, vol: e.vol }; salvar(); desenharLugares(); atualizarContagem(); };
+
+      caixa.append(
+        el("div", { className: "topo" }, el("span", { className: "nome", textContent: l.nome }), el("span", { className: "chave", textContent: l.chave })),
+        l.desc ? el("div", { className: "desc", textContent: l.desc }) : null,
+        el("div", { className: "escolha" }, chip, el("label", { className: "volume" }, "volume", regua, pct), semSom,
+          mudou(l.chave) ? el("span", { className: "mudou", textContent: "mudou" }) : null),
+      );
+      raiz.append(caixa);
+    }
+  }
+}
+
+function escolherLugar(chave) {
+  ativo = chave;
+  const l = TODOS.find((x) => x.chave === chave);
+  if (l.sug) filtro = l.sug;
+  desenharLugares();
+  desenharFiltros();
+  desenharLista();
+  const e = estado(chave);
+  document.getElementById("para").replaceChildren("Escolhendo para: ", el("strong", { textContent: l.nome }), e.codigo ? ` (hoje: ${e.codigo})` : "");
+}
+
+const GRUPOS = ["Todos", ...new Set(SONS.map((s) => s.grupo))];
+function desenharFiltros() {
+  const raiz = document.getElementById("filtros");
+  raiz.replaceChildren(...GRUPOS.map((g) => {
+    const b = el("button", { textContent: g, className: g === filtro ? "sim" : "" });
+    b.setAttribute("aria-pressed", g === filtro);
+    b.onclick = () => { filtro = g; desenharFiltros(); desenharLista(); };
+    return b;
+  }));
+}
+
+function desenharLista() {
+  const termo = document.getElementById("busca").value.trim().toLowerCase();
+  const atual = ativo ? estado(ativo).codigo : null;
+  const lista = SONS.filter((s) =>
+    (filtro === "Todos" || s.grupo === filtro) &&
+    (!termo || s.nome.toLowerCase().includes(termo) || s.codigo.toLowerCase() === termo || (s.arquivo || "").toLowerCase().includes(termo)));
+  document.getElementById("lista").replaceChildren(...lista.map((s) => {
+    const ouvir = el("button", { className: "tocar", textContent: "▶", ariaLabel: "Ouvir " + s.nome });
+    ouvir.onclick = () => tocar(s.codigo, ativo ? estado(ativo).vol : 100);
+    const usar = el("button", { textContent: s.codigo === atual ? "Em uso" : "Usar", disabled: !ativo || s.codigo === atual });
+    usar.onclick = () => {
+      escolhas[ativo] = { codigo: s.codigo, vol: estado(ativo).vol };
+      salvar(); desenharLugares(); desenharLista(); atualizarContagem();
+      avisar(`${s.codigo} vai para ${TODOS.find((x) => x.chave === ativo).nome}`);
+    };
+    return el("div", { className: "som" + (s.codigo === atual ? " atual" : "") },
+      ouvir, el("span", { className: "codigo", textContent: s.codigo }),
+      el("div", {}, el("span", { textContent: s.nome }), el("span", { className: "dur", textContent: s.dur + " s" }), el("div", { className: "origem", textContent: s.origem })),
+      usar);
+  }));
+}
+
+function atualizarContagem() {
+  const n = TODOS.filter((l) => mudou(l.chave)).length;
+  document.getElementById("contagem").textContent = `${n} ${n === 1 ? "lugar mudou" : "lugares mudaram"} · ${SONS.length} sons na mesa`;
+}
+
+function avisar(texto) {
+  const a = document.getElementById("aviso");
+  a.textContent = texto; a.classList.add("ver");
+  clearTimeout(avisar.t); avisar.t = setTimeout(() => a.classList.remove("ver"), 1600);
+}
+
+document.getElementById("busca").oninput = desenharLista;
+
+document.getElementById("copiar").onclick = async () => {
+  const mudados = TODOS.filter((l) => mudou(l.chave));
+  if (!mudados.length) return avisar("Nada mudou ainda");
+  const linhas = mudados.map((l) => {
+    const e = estado(l.chave);
+    const som = e.codigo ? `${e.codigo} (${rotulo(e.codigo)}${porCodigo.get(e.codigo).arquivo ? ", " + porCodigo.get(e.codigo).arquivo : ""})` : "sem som";
+    return `${l.chave} | ${l.nome}: ${som}, volume ${e.vol}%`;
+  });
+  const texto = "Mesa de Sons, minhas escolhas:\n" + linhas.join("\n");
+  try { await navigator.clipboard.writeText(texto); avisar("Copiado! Cole na conversa"); }
+  catch { prompt("Copie o texto:", texto); }
+};
+
+document.getElementById("desfazer").onclick = () => {
+  if (!confirm("Voltar todos os lugares ao som de hoje?")) return;
+  escolhas = {}; salvar(); desenharLugares(); desenharLista(); atualizarContagem();
+};
+
+desenharLugares(); desenharFiltros(); desenharLista(); atualizarContagem();
+</script>
+</body>
+</html>
