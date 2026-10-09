@@ -33,3 +33,7 @@ yarn-error.log*
 # O projeto usa o npm (package-lock.json)
 pnpm-lock.yaml
 /sons-kit/
+/video/node_modules/
+/video/tmp/
+/video/public/
+/video/out/

@@ -1,0 +1,20 @@
+{
+  "name": "terras-de-mitrael-video",
+  "private": true,
+  "description": "Vídeo de apresentação do site: o passeio gravado pelo Playwright e montado no Remotion",
+  "scripts": {
+    "preparar": "mkdir -p public/imagens public/musica && cp ../public/images/mesa.webp ../public/images/heroi-mapa-alto.webp ../public/images/heroi-mapa-largo.webp public/imagens/ && cp ../app/icon.svg public/imagens/selo.svg && cp ../public/musicas/vrakyr-tema.m4a public/musica/ && /tmp/venv-arte/bin/python preparar-sons.py",
+    "gravar": "node gravar.mjs",
+    "estudio": "remotion studio src/index.tsx",
+    "render": "remotion render src/index.tsx vertical out/terras-de-mitrael-vertical.mp4 --crf=18 && remotion render src/index.tsx horizontal out/terras-de-mitrael-horizontal.mp4 --crf=18"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.534",
+    "@remotion/google-fonts": "4.0.534",
+    "@remotion/media-utils": "^4.0.534",
+    "playwright": "^1.64.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "remotion": "^4.0.534"
+  }
+}
