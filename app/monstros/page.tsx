@@ -6,6 +6,7 @@ import { CreditoSrd } from "@/components/magias/CreditoSrd";
 import { Pergaminho } from "@/components/ui/Pergaminho";
 import { Rodape } from "@/components/Rodape";
 import { TituloBrasao, Sobretitulo, Ornamento } from "@/components/ui/Titulo";
+import { SeloDeVolta } from "@/components/navegacao/SeloDeVolta";
 
 export const metadata: Metadata = {
   title: "Bestiário",
@@ -19,14 +20,7 @@ export default function PaginaBestiario() {
   return (
     <>
       <main className="mx-auto max-w-3xl px-4 pt-20 pb-8 sm:px-6 sm:pt-28">
-        <nav aria-label="Caminho" className="text-center text-xs">
-          <Link
-            href="/regras/"
-            className="text-pergaminho-300/80 hover:text-pergaminho-100 underline-offset-4 hover:underline"
-          >
-            ← Livro do Aventureiro
-          </Link>
-        </nav>
+        <SeloDeVolta href="/regras/" rotulo="Livro do Aventureiro" />
 
         <Pergaminho borda={2} className="mt-5">
           <header className="text-center">

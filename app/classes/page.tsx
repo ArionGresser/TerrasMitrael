@@ -7,6 +7,7 @@ import { Rodape } from "@/components/Rodape";
 import { TituloBrasao, Sobretitulo, Ornamento } from "@/components/ui/Titulo";
 import { QuadroDeArte } from "@/components/ui/QuadroDeArte";
 import { arte } from "@/lib/arte";
+import { SeloDeVolta } from "@/components/navegacao/SeloDeVolta";
 
 export const metadata: Metadata = {
   title: "Classes",
@@ -20,7 +21,9 @@ export default function PaginaClasses() {
   return (
     <>
       <main className="mx-auto max-w-3xl px-4 pt-20 pb-8 sm:px-6 sm:pt-28">
-        <Pergaminho borda={2}>
+        <SeloDeVolta href="/regras/" rotulo="Livro do Aventureiro" />
+
+        <Pergaminho borda={2} className="mt-5">
           <header className="text-center">
             <Sobretitulo>Regras de 2024</Sobretitulo>
             <TituloBrasao className="mt-4">Classes</TituloBrasao>

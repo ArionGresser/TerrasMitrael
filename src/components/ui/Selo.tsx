@@ -52,13 +52,22 @@ const CERA = contornoDeCera(46.5);
 
 type Variante = "cera" | "marca";
 
+/**
+ * A seta de voltar, gravada na cera no lugar do M: o caminho faz a curva e
+ * aponta para trás. Traço grosso e pontas redondas, como o ferro deixa.
+ */
+const SETA_DE_VOLTA = "M65 63V53.5a12.5 12.5 0 0 0-12.5-12.5H35 M44 31 33.5 41 44 51";
+
 export function Selo({
   variante = "cera",
+  emblema = "brasao",
   pressionado = false,
   className = "",
   id = "selo",
 }: {
   variante?: Variante;
+  /** O que o ferro gravou: o M do brasão, ou a seta do selo de voltar. */
+  emblema?: "brasao" | "voltar";
   /** Ferro apertado até o fim, como fica com o menu aberto. */
   pressionado?: boolean;
   className?: string;
@@ -243,12 +252,21 @@ export function Selo({
       />
 
       {/* O brasão em relevo: luz em cima, sombra embaixo, cor da cera */}
-      <g transform={POSICAO_DO_M}>
-        <path d={M_DO_BRASAO} transform="translate(45 60)" fill="#2a060b" fillOpacity="0.7" />
-        <path d={M_DO_BRASAO} transform="translate(-35 -45)" fill="#e07a85" fillOpacity="0.7" />
-        <path d={M_DO_BRASAO} fill={`url(#${id}-relevo)`} />
-        <path d={M_DO_BRASAO} fill="#e9c27a" fillOpacity="0.12" />
-      </g>
+      {emblema === "voltar" ? (
+        <g fill="none" strokeWidth="6.5" strokeLinecap="round" strokeLinejoin="round">
+          <path d={SETA_DE_VOLTA} transform="translate(0.9 1.2)" stroke="#2a060b" strokeOpacity="0.7" />
+          <path d={SETA_DE_VOLTA} transform="translate(-0.7 -0.9)" stroke="#e07a85" strokeOpacity="0.7" />
+          <path d={SETA_DE_VOLTA} stroke="#8e2430" />
+          <path d={SETA_DE_VOLTA} stroke="#e9c27a" strokeOpacity="0.12" />
+        </g>
+      ) : (
+        <g transform={POSICAO_DO_M}>
+          <path d={M_DO_BRASAO} transform="translate(45 60)" fill="#2a060b" fillOpacity="0.7" />
+          <path d={M_DO_BRASAO} transform="translate(-35 -45)" fill="#e07a85" fillOpacity="0.7" />
+          <path d={M_DO_BRASAO} fill={`url(#${id}-relevo)`} />
+          <path d={M_DO_BRASAO} fill="#e9c27a" fillOpacity="0.12" />
+        </g>
+      )}
 
       {/* O reflexo por cima de tudo */}
       <path d={CERA} fill={`url(#${id}-brilho)`} />

@@ -1,44 +1,25 @@
 import Image from "next/image";
 import Link from "next/link";
 import { rostosDoElenco } from "@/lib/contos";
+import { SeloDeVolta } from "@/components/navegacao/SeloDeVolta";
 
 /**
  * Peças pequenas que as páginas dos Contos dividem entre si.
  */
 
-/** O caminho de volta, do episódio até a estante. */
+/**
+ * O caminho de volta: o selo carimbado no canto do papel, que leva um
+ * degrau acima (do episódio para a temporada, da temporada para a série).
+ * Os degraus mais altos ficam no menu, a um toque do selo do topo.
+ */
 export function Trilha({
   passos,
 }: {
   passos: { nome: string; href?: string }[];
 }) {
-  return (
-    <nav aria-label="Caminho">
-      <ol className="text-pergaminho-300/80 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-xs">
-        {passos.map((passo, i) => (
-          <li key={passo.nome} className="flex items-center gap-2">
-            {i > 0 ? (
-              <span aria-hidden className="text-dourado-600">
-                ›
-              </span>
-            ) : null}
-            {passo.href ? (
-              <Link
-                href={passo.href}
-                className="hover:text-pergaminho-100 underline-offset-4 transition-colors hover:underline"
-              >
-                {passo.nome}
-              </Link>
-            ) : (
-              <span aria-current="page" className="text-pergaminho-100">
-                {passo.nome}
-              </span>
-            )}
-          </li>
-        ))}
-      </ol>
-    </nav>
-  );
+  const acima = [...passos].reverse().find((p) => p.href);
+  if (!acima?.href) return null;
+  return <SeloDeVolta href={acima.href} rotulo={acima.nome} />;
 }
 
 /**

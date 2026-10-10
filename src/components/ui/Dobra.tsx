@@ -7,6 +7,9 @@ import { tocar } from "@/lib/som";
 /** Quanto do capítulo aparece com o pergaminho ainda enrolado, em pixels. */
 const ALTURA_ENROLADO = 96;
 
+/** O respiro acima do pergaminho quando a tela volta para ele (o selo do menu fica ali). */
+const MARGEM_DO_TOPO = 80;
+
 /**
  * Texto longo recolhido, com botão para abrir.
  *
@@ -45,15 +48,19 @@ export function Dobra({
 
   function alternar() {
     const abrindo = !aberto;
-    setAberto(abrindo);
     tocar(abrindo ? "abrirMenu" : "fecharMenu");
 
-    // Ao recolher um capítulo comprido, o topo dele costuma ficar acima da
-    // tela e a pessoa acaba olhando para o bloco seguinte sem entender.
+    // Ao recolher um pergaminho comprido lido até o fim, o começo dele está
+    // lá em cima, fora da tela. Antes, a página rolava suave até ele enquanto
+    // o papel encolhia, e os dois movimentos brigavam (o navegador ainda
+    // tentava segurar a tela no lugar por conta própria): a pessoa caía no
+    // meio do bloco seguinte. Agora a tela vai de uma vez para o começo do
+    // pergaminho e só então ele enrola, à vista, de volta ao tamanho fechado.
     if (!abrindo && raiz.current) {
       const topo = raiz.current.getBoundingClientRect().top;
-      if (topo < 0) raiz.current.scrollIntoView({ block: "start" });
+      if (topo < 0) window.scrollTo({ top: window.scrollY + topo - MARGEM_DO_TOPO, behavior: "instant" });
     }
+    setAberto(abrindo);
   }
 
   // O papel desenrola: a altura cresce até o fim do texto, e quem estiver
@@ -98,7 +105,7 @@ export function Dobra({
   // o rolo de baixo junto.
   if (titulo) {
     return (
-      <section ref={raiz} className={`scroll-mt-20 ${className}`}>
+      <section ref={raiz} className={`scroll-mt-20 [overflow-anchor:none] ${className}`}>
         <button
           type="button"
           onClick={alternar}
@@ -162,7 +169,7 @@ export function Dobra({
 
   // Sem título, o bloco é só a continuação de um texto que já começou.
   return (
-    <div ref={raiz} className={`scroll-mt-20 ${className}`}>
+    <div ref={raiz} className={`scroll-mt-20 [overflow-anchor:none] ${className}`}>
       {corpo}
       <div className={aberto ? "mt-6 text-center" : "mt-4 text-center"}>
         <button
