@@ -75,18 +75,24 @@ export function Miniatura({
   tamanho = "lista",
 }: {
   src?: string;
-  tamanho?: "lista" | "bloco";
+  /** "larga" mostra a arte deitada inteira (16:9), como no Bestiário. */
+  tamanho?: "lista" | "bloco" | "larga";
 }) {
-  const medida = tamanho === "lista" ? "size-10" : "size-16 sm:size-20";
-  const pixels = tamanho === "lista" ? 40 : 80;
+  const medida = {
+    lista: "size-10",
+    bloco: "size-16 sm:size-20",
+    larga: "aspect-video h-auto w-28 sm:w-40",
+  }[tamanho];
+  const [largura, altura] = tamanho === "larga" ? [160, 90] : tamanho === "lista" ? [40, 40] : [80, 80];
 
   if (src) {
     return (
       <Image
         src={src}
         alt=""
-        width={pixels}
-        height={pixels}
+        width={largura}
+        height={altura}
+        sizes={tamanho === "larga" ? "(max-width: 640px) 112px, 160px" : undefined}
         className={`border-dourado-600/40 ${medida} shrink-0 rounded-sm border object-cover shadow-[0_2px_6px_-2px_rgba(0,0,0,0.5)]`}
       />
     );

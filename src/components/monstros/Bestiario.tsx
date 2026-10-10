@@ -228,9 +228,9 @@ export function Bestiario({ monstros }: { monstros: ResumoDoMonstro[] }) {
                   >
                     <Link
                       href={`/monstros/${m.slug}/`}
-                      className="group hover:bg-pergaminho-200/40 -mx-2 flex items-center gap-3 rounded-sm px-2 py-2 transition-colors"
+                      className="group hover:bg-pergaminho-200/40 -mx-2 flex items-center gap-3 rounded-sm px-2 py-2.5 transition-colors sm:gap-4"
                     >
-                      <Miniatura src={m.imagem} />
+                      <Miniatura src={m.imagem} tamanho="larga" />
                       <span className="min-w-0 flex-1">
                         <span className="text-tinta-900 block font-semibold group-hover:underline">
                           {m.nome}
