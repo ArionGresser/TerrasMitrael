@@ -1,0 +1,204 @@
+ROTEIRO 2: TRAILER TERRAS DE MITRAEL
+Duração total: cerca de 78 segundos
+Formato: computador, deitado (1920x1080). Sem versão de celular.
+Música: a escolher. O roteiro foi montado em volta do AUGE dela, como
+        no primeiro vídeo com o tema do Vrakyr: tudo vai acelerando até
+        o auge, e o selo do encerramento bate exatamente nele.
+        Os tempos abaixo contam com o auge em 1:10 (70,0s). Quando a
+        música estiver escolhida, eu encaixo cada cena de novo nela.
+
+(Escreva por cima do que quiser: riscar, trocar, reordenar, cenas novas.)
+
+SOBRE OS SONS
+  Todo lugar que pede um som leva o MESMO marcador, um "tic" curto e
+  neutro, para você ouvir onde cada um cai e trocar depois.
+  Do lado de cada um vai a sugestão do tipo de som (Hit, Swoosh, Zoom...)
+  e a lista completa fica no fim deste arquivo, numerada.
+  O som de folha do vídeo antigo saiu.
+
+A MÃO NA TELA
+  Desta vez o cursor aparece no vídeo: a luva do site, andando e
+  clicando de verdade. Começa com a Luva de couro, a de sempre, e troca
+  para a Manopla de aço na cena da mesa.
+
+
+CENA 1: ABERTURA (0,0s a 5,9s)
+  Igual ao primeiro vídeo.
+  Imagem: o mapa do herói, se aproximando devagar, com as bordas escuras
+  Acontece: o selo de cera cai no centro, o título sobe e aparece
+  Texto: "Terras de Mitrael"
+         "Cenário autoral de RPG de mesa"
+  SFX 01 (0,4s): Hit grave, o selo caindo
+  SFX 02 (1,2s): Swoosh suave, o título subindo
+
+
+CENA 2: PÁGINA INICIAL (5,6s a 10,8s)
+  Acontece: a página inicial rolando para baixo, passando pelos três
+            cartões com as artes novas (o grupo reunido em Personagens,
+            as Crônicas e o Livro do Aventureiro) até as Novidades, com
+            a Saga de Mitrael no topo da lista
+  Velocidade: 1,25x
+  Legenda: nenhuma
+  SFX 03 (5,8s): Swoosh leve, a rolagem começando
+
+
+CENA 3: A MESA (10,4s a 21,0s)
+  Acontece: a luva vai até a bandeja de dados na lateral esquerda,
+            pega o d20 e joga. O dado quica pela tela, por cima da
+            folha, e para mostrando 20. O número aparece na madeira.
+            Desce o lacre dourado: "Vinte natural", com o prêmio
+            "Dado Esmeralda".
+            A luva abre a troca de dados (no canto de baixo), escolhe o
+            Esmeralda e joga de novo: agora rola o d20 verde.
+            Por último abre a troca de luvas e veste a Manopla de aço,
+            que segue para o mapa.
+  Velocidade: 1x (o dado precisa parecer de verdade)
+  Legenda: A MESA
+           "Role o d20, ganhe conquistas e libere dados e luvas novos"
+  SFX 04 (11,6s): Swoosh, o arremesso
+  SFX 05 (12,2s): Dice roll, o dado quicando
+  SFX 06 (13,6s): Hit seco, o dado parando no 20
+  SFX 07 (14,2s): Chime ou Shimmer, o lacre da conquista descendo
+  SFX 08 (16,6s): Click, escolhendo o Esmeralda
+  SFX 09 (17,6s): Swoosh + Dice roll, o d20 verde rolando
+  SFX 10 (19,8s): Click metálico, vestindo a manopla
+
+
+CENA 4: MAPA (20,6s a 31,0s)
+  Acontece: a manopla passeia pelo mapa e cada região acende quando ela
+            passa: a Tundra, depois Askar, e para em cima de Terras de
+            Mitrael, que fica acesa. Clique: o mapa voa até ela e
+            enquadra a região, e o painel abre com a história.
+            Depois a manopla clica no marcador de Sovara Mithr e o
+            painel troca para "A Sagrada Árvore".
+  Legenda: MAPA
+           "Passe a mão pelo continente e abra a história de cada lugar"
+  SFX 11 (21,4s): Swoosh bem leve, a região acendendo (uma vez só)
+  SFX 12 (24,6s): Zoom, o mapa voando até Terras de Mitrael
+  SFX 13 (27,4s): Pin ou Click, o marcador de Sovara Mithr
+
+
+CENA 5: PERSONAGENS (30,6s a 43,0s)
+  Acontece: a capa de Personagens, o grupo reunido com o título por
+            cima, se aproximando devagar. Rola pela lista com os doze
+            retratos novos e clica no Egon.
+            Na ficha: o retrato, o nome "Egon Vitriol, O Paladino
+            Leonino" e, na aba História, a runa do bando Vitriol girando.
+            Rola até o retrato pintado pela ilustradora.
+            Clica na aba Ficha e depois na Mochila.
+            A aba Poderes fica de fora, porque ainda não tem imagem.
+  Velocidade: 1,3x na rolagem da lista
+  Legenda: PERSONAGENS
+           "Cada herói com o seu retrato, a sua história e a sua ficha"
+  SFX 14 (30,8s): Hit leve, a capa aparecendo
+  SFX 15 (35,0s): Click, escolhendo o Egon
+  SFX 16 (36,4s): Shimmer suave, a runa girando
+  SFX 17 (40,2s): Click (couro), aba Ficha
+  SFX 18 (41,8s): Click (couro), aba Mochila
+
+
+CENA 6: CRÔNICAS (42,6s a 53,0s)
+  Acontece: a capa das Crônicas com o título por cima. Desce até o
+            cartaz da Saga de Mitrael, com a capa nova, e entra nela:
+            aparecem as capas da Temporada 1 e da Temporada 2.
+            Clica na Temporada 2: o livro de couro abre, vira para
+            "O novo elenco" e vira para o Sumário.
+  Legenda: CRÔNICAS
+           "Cada sessão jogada vira episódio, temporada por temporada"
+  SFX 19 (42,8s): Hit leve, a capa aparecendo
+  SFX 20 (47,6s): Hit, a capa do livro abrindo
+  SFX 21 (49,2s): Swoosh, a folha virando
+  SFX 22 (50,8s): Swoosh, a segunda folha virando
+
+
+CENA 7: LIVRO DO AVENTUREIRO (52,6s a 60,0s)
+  Acontece: a capa do Livro do Aventureiro com o título por cima, desce
+            pelos cartões dos capítulos com as artes e clica no
+            Bestiário: a lista de monstros com as artes grandes rolando.
+  Velocidade: 1,4x na rolagem
+  Legenda: LIVRO DO AVENTUREIRO
+           "339 magias, 330 monstros e 258 itens mágicos, em português"
+  SFX 23 (52,8s): Hit leve, a capa aparecendo
+  SFX 24 (56,4s): Click, o cartão do Bestiário
+
+
+CENA 8: TEM MAIS A CAMINHO (59,6s a 64,0s)
+  Acontece: a tela de Novidades, na parte "A caminho da mesa": a Conta
+            de jogador, as Conquistas no celular e as Mais artes, uma
+            de cada vez.
+  Legenda: EM BREVE
+           "E tem muito mais por vir"
+  SFX 25 (59,8s): Swoosh leve, a entrada da tela
+
+
+CENA 9: MONTAGEM ATÉ O AUGE (64,0s a 70,0s)
+  Acontece: cortes rápidos, cada um mais curto que o anterior, no ritmo
+            da música, subindo até o auge:
+              a capa da Saga (1,0s)
+              o retrato do Vrakyr (0,8s)
+              o Dragão Vermelho Ancião do Bestiário (0,7s)
+              o Baú do Mestre com o resultado Lendário (0,7s)
+              os ícones do Grimório rolando (0,6s)
+              o retrato do Johnny (0,5s)
+              a capa da Temporada 1 (0,5s)
+              o retrato do Tyr (0,4s)
+              o d20 Esmeralda parando no 20 (0,4s)
+              e um último piscar do mapa (0,4s)
+  Legenda: nenhuma
+  SFX 26 (64,0s a 70,0s): Riser, subindo até o auge e cortando seco nele
+
+
+CENA 10: ENCERRAMENTO (70,0s a 78,0s)
+  Imagem: a mesa de madeira do site
+  Acontece: no AUGE da música o selo bate, o título aparece, depois o
+            resto, uma linha de cada vez; tudo escurece no último segundo
+  Texto: "Terras de Mitrael"
+         "Cenário autoral de RPG de mesa · desde 2020"
+         "Muito mais por vir."
+         "terrasmitrael.netlify.app"
+  SFX 27 (70,0s): Hit grande (Impact), o selo batendo junto com o auge
+  Depois só a música, abaixando até o fim
+
+
+LISTA DOS SONS
+  Nº   Tempo    Sugestão              Onde
+  01   0,4s     Hit grave             selo caindo na abertura
+  02   1,2s     Swoosh suave          título subindo
+  03   5,8s     Swoosh leve           rolagem da página inicial
+  04   11,6s    Swoosh                arremesso do d20
+  05   12,2s    Dice roll             d20 quicando
+  06   13,6s    Hit seco              d20 parando no 20
+  07   14,2s    Chime ou Shimmer      lacre da conquista
+  08   16,6s    Click                 escolhendo o dado Esmeralda
+  09   17,6s    Swoosh + Dice roll    d20 verde rolando
+  10   19,8s    Click metálico        vestindo a manopla
+  11   21,4s    Swoosh bem leve       região do mapa acendendo
+  12   24,6s    Zoom                  mapa voando até Terras de Mitrael
+  13   27,4s    Pin ou Click          marcador de Sovara Mithr
+  14   30,8s    Hit leve              capa de Personagens
+  15   35,0s    Click                 escolhendo o Egon
+  16   36,4s    Shimmer suave         runa do bando Vitriol
+  17   40,2s    Click (couro)         aba Ficha
+  18   41,8s    Click (couro)         aba Mochila
+  19   42,8s    Hit leve              capa das Crônicas
+  20   47,6s    Hit                   capa do livro abrindo
+  21   49,2s    Swoosh                folha virando
+  22   50,8s    Swoosh                segunda folha virando
+  23   52,8s    Hit leve              capa do Livro do Aventureiro
+  24   56,4s    Click                 cartão do Bestiário
+  25   59,8s    Swoosh leve           tela de Novidades
+  26   64,0s    Riser                 montagem subindo até o auge
+  27   70,0s    Hit grande (Impact)   selo batendo no auge
+
+
+NOTAS DA GRAVAÇÃO (para mim, quando for gravar)
+  - O navegador da gravação não filma o cursor do sistema: a luva é
+    desenhada por cima do vídeo, seguindo a mão de verdade.
+  - O 20 da cena 3 é acertado só na gravação; no site o dado continua
+    sorteando de verdade.
+  - A gravação começa com as conquistas zeradas, menos a do primeiro
+    dado, para descer só o lacre do Vinte natural (os dois juntos
+    ocupariam mais de 10 segundos). A Manopla de aço, que no site pede
+    300 batidas na mesa, já vem liberada.
+  - A mesa 3D só aparece em tela de 1280 px ou mais, que é o tamanho da
+    gravação.
