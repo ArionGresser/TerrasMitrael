@@ -116,6 +116,9 @@ const FATOR_ABAFADO = 0.18;
 const TRANSICAO = 1.2;
 const ENTRADA = 0.35;
 const ABAFAMENTO = 0.4;
+/** O vídeo de apresentação cala a música: sai em quase um segundo e volta com calma. */
+const SAIDA_PARA_O_VIDEO = 0.8;
+const VOLTA_DO_VIDEO = 1.6;
 
 const CHAVE_VOLUME = "mitrael:volume";
 
@@ -129,6 +132,8 @@ const indisponivel = new Set<Ambiente>();
 let contexto: AudioContext | null = null;
 let atual: Ambiente | null = null;
 let abafado = false;
+/** Calada de vez, enquanto um vídeo do site toca. */
+let calado = false;
 let esperandoGesto = false;
 let houveGesto = false;
 let vigia: number | null = null;
@@ -189,6 +194,7 @@ export function definirVolumeDaMusica(fracao: number) {
 }
 
 function volumeAlvo(): number {
+  if (calado) return 0;
   const base = fracaoDoVolume() * VOLUME_MAXIMO;
   return abafado ? base * FATOR_ABAFADO : base;
 }
@@ -535,4 +541,19 @@ export function abafarMusica(abaixar: boolean) {
   const faixa = cache.get(atual);
   if (!faixa || faixa.elemento.paused) return;
   levar(faixa, volumeAlvo(), ABAFAMENTO);
+}
+
+/**
+ * Cala a música enquanto um vídeo do site toca, e devolve quando ele pausa
+ * ou acaba. Diferente da narração, aqui ela some de vez: o vídeo tem a
+ * trilha dele, e duas músicas juntas viram barulho. A faixa segue tocando
+ * em silêncio, então volta do ponto em que estaria.
+ */
+export function calarMusica(calar: boolean) {
+  if (calado === calar) return;
+  calado = calar;
+  if (!atual) return;
+  const faixa = cache.get(atual);
+  if (!faixa || faixa.elemento.paused) return;
+  levar(faixa, volumeAlvo(), calar ? SAIDA_PARA_O_VIDEO : VOLTA_DO_VIDEO);
 }
