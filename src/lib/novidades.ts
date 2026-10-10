@@ -216,7 +216,7 @@ export const EM_BREVE: { titulo: string; texto: string; icone: Icone }[] = [
   {
     titulo: "Mais artes",
     texto:
-      "As ilustrações grandes das 339 magias, as artes dos antecedentes e dos talentos e as três classes que ainda estão sem pintura.",
+      "As ilustrações grandes das 339 magias, uma cena de cada feitiço em uso, para ver o que ele faz na mesa.",
     icone: "livro",
   },
 ];
