@@ -9,7 +9,6 @@ export const MAPA = {
   largura: 1600,
   altura: 1132,
   alt: "Mapa do continente de Mitrael, com os mares Bazáltico, de Qän e Leviano, as Terras de Askar a oeste e as Terras de Mitrael a leste",
-  credito: "Lucas Monteiro",
   /**
    * Este desenho já traz os nomes pintados. Com um mapa novo sem nomes,
    * mude para true: os marcadores passam a mostrar o nome o tempo todo.

@@ -648,7 +648,7 @@ export function MapaDeMitrael({
           })
         : null}
 
-      {/* O título e o crédito, no alto à esquerda */}
+      {/* O título, no alto à esquerda */}
       <div className="pointer-events-none absolute top-7 left-4 max-w-[60%] sm:top-9 sm:left-6">
         <p className="font-titulo text-dourado-300 text-[0.58rem] tracking-[0.3em] uppercase [text-shadow:0_1px_3px_#000]">
           O continente inteiro
@@ -656,9 +656,6 @@ export function MapaDeMitrael({
         <h1 className="font-brasao text-pergaminho-50 mt-0.5 text-2xl leading-none [text-shadow:0_2px_6px_#000] sm:text-4xl">
           Mapa de Mitrael
         </h1>
-        <p className="text-pergaminho-300/80 mt-1.5 text-[0.62rem] [text-shadow:0_1px_3px_#000]">
-          Mapa por {MAPA.credito}
-        </p>
       </div>
 
       {/* À direita: a lista para explorar e os controles de zoom */}
