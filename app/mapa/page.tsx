@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import { preload } from "react-dom";
 import {
   MapaDeMitrael,
   type LocalNoMapa,
   type RegiaoNoMapa,
 } from "@/components/mapa/MapaDeMitrael";
-import { MARCADORES_LOCAIS } from "@/lib/marcadores";
+import { MAPA, MARCADORES_LOCAIS } from "@/lib/marcadores";
 import { LOCAIS } from "@/lib/locais";
 import { REGIOES } from "@/lib/regioes";
 import { CONTORNOS } from "@/lib/regioes-do-mapa";
@@ -18,6 +19,11 @@ export const metadata: Metadata = {
 };
 
 export default function PaginaMapa() {
+  // O desenho só entra na tela depois que o JavaScript mede o espaço, mas o
+  // download não precisa esperar: o aviso vai no HTML, e no 3G o mapa
+  // aparecia aos 12 segundos porque só começava a baixar aos 7
+  preload(MAPA.src, { as: "image", fetchPriority: "high" });
+
   // Cada marcador com o que o painel mostra: a arte, o subtítulo e a
   // história inteira do lugar, que vem de content/locais/ em capítulos
   const locais: LocalNoMapa[] = MARCADORES_LOCAIS.flatMap((m) => {

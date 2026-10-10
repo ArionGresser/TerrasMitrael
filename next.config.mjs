@@ -12,10 +12,14 @@ const nextConfig = {
   trailingSlash: true,
 
   images: {
-    // A otimização automática de imagens do Next precisa de servidor.
-    // Como o site é estático, otimizamos os arquivos antes (WebP) e
-    // servimos direto.
-    unoptimized: true,
+    // A otimização automática de imagens do Next precisa de servidor. Como
+    // o site é estático, as versões menores são feitas antes
+    // (scripts/imagens/gerar-tamanhos.py) e este carregador escolhe a certa
+    // para cada tela. As larguras batem com as cópias que o script grava.
+    loader: "custom",
+    loaderFile: "./src/lib/carregador-de-imagem.ts",
+    deviceSizes: [480, 828, 1280, 1920],
+    imageSizes: [128, 256, 384],
   },
 
   // Permite que páginas sejam escritas em .mdx (texto formatado), além de .tsx
