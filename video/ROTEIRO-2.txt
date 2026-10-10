@@ -22,15 +22,24 @@ O PLANO
   tela fica calma e mostra o que vem por aí. No auge, o selo bate.
 
 SOBRE OS SONS
-  A música já é cheia de som, então o vídeo sai só com ela. A única
-  exceção é a entrada no Grimório (cena 7), com o feitiço do site.
-  Mesmo assim, cada cena lista o que acontece nela e se o site já tem
-  um som para aquilo, para você decidir se quer ligar algum:
+  A música já é cheia de som, então o vídeo leva poucos efeitos, todos
+  baixados pelo Arion (em Documents/Artes prontas/sons/video/) ou do
+  próprio site:
+    o hit grave no selo da abertura (0,88s, a primeira batida);
+    um whoosh em cada troca de cena, com a música abrindo espaço por um
+    instante para ele passar;
+    o brilho do site quando desce o lacre do Vinte natural;
+    o feitiço do site no clique do Grimório;
+    o riser na freada, chegando no topo exatamente no auge;
+    o subdrop e o impact juntos no auge (67,3s), quando o selo bate.
+  O som final fica em -14 LUFS (a altura do YouTube e do Instagram), com
+  um limitador segurando os picos em -1,5 dB.
+  As listas "Sons:" de cada cena abaixo dizem o que o site já toca em
+  cada gesto, para quando quiser ligar mais algum:
     [tem som: nome]  o site já toca esse som nesse momento. No vídeo
                      ele fica DESLIGADO, a não ser que você escreva
                      LIGAR do lado.
-    [sem som]        o site não tem som para isso. Se quiser um, a
-                     gente escolhe da Mesa de Sons ou você manda.
+    [sem som]        o site não tem som para isso.
 
 A MÃO NA TELA
   O cursor aparece no vídeo: a luva do site, andando e clicando de
@@ -160,13 +169,11 @@ CENA 8: MONTAGEM ATÉ A FREADA (56,0s a 63,3s)
   Acontece: cortes rápidos, cada um numa batida, cada vez mais curtos,
             e o último termina junto com a freada da música:
               a capa da Saga (2 batidas)
-              o retrato do Vrakyr (2 batidas)
-              o Dragão Vermelho Ancião no Bestiário (2 batidas)
+              o Dragão Vermelho Ancião do Bestiário (2 batidas)
               o Baú do Mestre com o resultado Lendário (1 batida)
-              o retrato do Johnny (1 batida)
-              a capa da Temporada 1 (1 batida)
-              o retrato do Tyr (1 batida)
-              o d20 Esmeralda parando no 20 (meia batida)
+              o Pyhmm, o Johnny, a Lily, o Egon e o Vrakyr (1 batida cada)
+              o d20 parando no 20 (meia batida)
+              e o mapa voando até Terras de Mitrael, até a freada
   Legenda: nenhuma
   Sons: só a música. São cortes, não cliques.
 
