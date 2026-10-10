@@ -1228,26 +1228,60 @@
 /* ============================================================
    O cursor de mão. A variante vem do atributo data-cursor no <html>,
    que o botão ao lado do som troca (src/lib/cursor.ts). Sem o atributo,
-   vale o cursor do sistema.
-   O ponto do clique é a ponta do indicador: 6 5 no desenho de 32.
-   O SVG vem primeiro; o PNG é para o navegador que não aceitar SVG.
+   vale o cursor do sistema. Os desenhos saem de
+   scripts/cursores/gerar-cursores.py.
+   O ponto do clique é a ponta do indicador (ou da garra): 7 7 no
+   desenho de 40. O SVG vem primeiro; o PNG, de 32 (ponto em 6 5), é
+   para o navegador que não aceitar SVG ou cursor grande perto da borda.
    ============================================================ */
 
 html[data-cursor="couro"] {
-  --cursor-mao: url("/cursores/couro-mao.svg") 6 5, url("/cursores/couro-mao.png") 6 5;
-  --cursor-toque: url("/cursores/couro-toque.svg") 6 5, url("/cursores/couro-toque.png") 6 5;
+  --cursor-mao: url("/cursores/couro-mao.svg") 7 7, url("/cursores/couro-mao.png") 6 5;
+  --cursor-toque: url("/cursores/couro-toque.svg") 7 7, url("/cursores/couro-toque.png") 6 5;
+  --cursor-aperta: url("/cursores/couro-aperta.svg") 7 7, url("/cursores/couro-aperta.png") 6 5;
+  --cursor-pinca: url("/cursores/couro-pinca.svg") 9 15, url("/cursores/couro-pinca.png") 7 12;
 }
 html[data-cursor="nua"] {
-  --cursor-mao: url("/cursores/nua-mao.svg") 6 5, url("/cursores/nua-mao.png") 6 5;
-  --cursor-toque: url("/cursores/nua-toque.svg") 6 5, url("/cursores/nua-toque.png") 6 5;
+  --cursor-mao: url("/cursores/nua-mao.svg") 7 7, url("/cursores/nua-mao.png") 6 5;
+  --cursor-toque: url("/cursores/nua-toque.svg") 7 7, url("/cursores/nua-toque.png") 6 5;
+  --cursor-aperta: url("/cursores/nua-aperta.svg") 7 7, url("/cursores/nua-aperta.png") 6 5;
+  --cursor-pinca: url("/cursores/nua-pinca.svg") 9 15, url("/cursores/nua-pinca.png") 7 12;
 }
 html[data-cursor="sem-dedos"] {
-  --cursor-mao: url("/cursores/sem-dedos-mao.svg") 6 5, url("/cursores/sem-dedos-mao.png") 6 5;
-  --cursor-toque: url("/cursores/sem-dedos-toque.svg") 6 5, url("/cursores/sem-dedos-toque.png") 6 5;
+  --cursor-mao: url("/cursores/sem-dedos-mao.svg") 7 7, url("/cursores/sem-dedos-mao.png") 6 5;
+  --cursor-toque: url("/cursores/sem-dedos-toque.svg") 7 7, url("/cursores/sem-dedos-toque.png") 6 5;
+  --cursor-aperta: url("/cursores/sem-dedos-aperta.svg") 7 7, url("/cursores/sem-dedos-aperta.png") 6 5;
+  --cursor-pinca: url("/cursores/sem-dedos-pinca.svg") 9 15, url("/cursores/sem-dedos-pinca.png") 7 12;
 }
 html[data-cursor="manopla"] {
-  --cursor-mao: url("/cursores/manopla-mao.svg") 6 5, url("/cursores/manopla-mao.png") 6 5;
-  --cursor-toque: url("/cursores/manopla-toque.svg") 6 5, url("/cursores/manopla-toque.png") 6 5;
+  --cursor-mao: url("/cursores/manopla-mao.svg") 7 7, url("/cursores/manopla-mao.png") 6 5;
+  --cursor-toque: url("/cursores/manopla-toque.svg") 7 7, url("/cursores/manopla-toque.png") 6 5;
+  --cursor-aperta: url("/cursores/manopla-aperta.svg") 7 7, url("/cursores/manopla-aperta.png") 6 5;
+  --cursor-pinca: url("/cursores/manopla-pinca.svg") 9 15, url("/cursores/manopla-pinca.png") 7 12;
+}
+html[data-cursor="goblin"] {
+  --cursor-mao: url("/cursores/goblin-mao.svg") 7 7, url("/cursores/goblin-mao.png") 6 5;
+  --cursor-toque: url("/cursores/goblin-toque.svg") 7 7, url("/cursores/goblin-toque.png") 6 5;
+  --cursor-aperta: url("/cursores/goblin-aperta.svg") 7 7, url("/cursores/goblin-aperta.png") 6 5;
+  --cursor-pinca: url("/cursores/goblin-pinca.svg") 9 15, url("/cursores/goblin-pinca.png") 7 12;
+}
+html[data-cursor="esqueleto"] {
+  --cursor-mao: url("/cursores/esqueleto-mao.svg") 7 7, url("/cursores/esqueleto-mao.png") 6 5;
+  --cursor-toque: url("/cursores/esqueleto-toque.svg") 7 7, url("/cursores/esqueleto-toque.png") 6 5;
+  --cursor-aperta: url("/cursores/esqueleto-aperta.svg") 7 7, url("/cursores/esqueleto-aperta.png") 6 5;
+  --cursor-pinca: url("/cursores/esqueleto-pinca.svg") 9 15, url("/cursores/esqueleto-pinca.png") 7 12;
+}
+html[data-cursor="draconato"] {
+  --cursor-mao: url("/cursores/draconato-mao.svg") 7 7, url("/cursores/draconato-mao.png") 6 5;
+  --cursor-toque: url("/cursores/draconato-toque.svg") 7 7, url("/cursores/draconato-toque.png") 6 5;
+  --cursor-aperta: url("/cursores/draconato-aperta.svg") 7 7, url("/cursores/draconato-aperta.png") 6 5;
+  --cursor-pinca: url("/cursores/draconato-pinca.svg") 9 15, url("/cursores/draconato-pinca.png") 7 12;
+}
+html[data-cursor="mago"] {
+  --cursor-mao: url("/cursores/mago-mao.svg") 7 7, url("/cursores/mago-mao.png") 6 5;
+  --cursor-toque: url("/cursores/mago-toque.svg") 7 7, url("/cursores/mago-toque.png") 6 5;
+  --cursor-aperta: url("/cursores/mago-aperta.svg") 7 7, url("/cursores/mago-aperta.png") 6 5;
+  --cursor-pinca: url("/cursores/mago-pinca.svg") 9 15, url("/cursores/mago-pinca.png") 7 12;
 }
 
 /* O cursor é herdado: posto no <html>, vale para a página inteira */
@@ -1272,6 +1306,20 @@ html[data-cursor] :where(
   cursor: var(--cursor-toque), pointer;
 }
 
+/* Enquanto o botão do mouse está apertado, a mão empurra o dedo, em
+   qualquer lugar (a classe vem de src/components/MaoNaMesa.tsx) */
+html[data-cursor].apertando,
+html[data-cursor].apertando * {
+  cursor: var(--cursor-aperta), auto !important;
+}
+
+/* Segurando o dado ou uma moeda da mesa 3D: a mão fecha em pinça
+   (a classe vem de src/lib/mesa3d/cena.ts) */
+html[data-cursor].pincando,
+html[data-cursor].pincando * {
+  cursor: var(--cursor-pinca), grabbing !important;
+}
+
 /* Onde se escreve, a barra de texto de sempre */
 html[data-cursor] :where(
     input:not([type]),
@@ -1294,4 +1342,171 @@ html[data-cursor] .cursor-auto {
 html[data-cursor] .cursor-grab:active,
 html[data-cursor] .cursor-grabbing {
   cursor: var(--cursor-toque), grabbing;
+}
+
+/* ============================================================
+   A batida na madeira: onde o clique cai no tampo da mesa, uma onda curta
+   e umas lascas pulando. Montada por src/components/MaoNaMesa.tsx.
+   ============================================================ */
+
+.batida-madeira {
+  position: fixed;
+  z-index: 70;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.batida-madeira::before {
+  content: "";
+  position: absolute;
+  left: -18px;
+  top: -18px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid rgb(244 234 210 / 0.55);
+  box-shadow: 0 0 10px rgb(255 190 110 / 0.25);
+  animation: onda-madeira 420ms ease-out forwards;
+}
+
+.batida-madeira .lasca {
+  position: absolute;
+  left: -1.5px;
+  top: -4px;
+  width: 3px;
+  height: 8px;
+  border-radius: 1px;
+  background: linear-gradient(to bottom, #d9a66b, #8a5a2e);
+  box-shadow: 0 1px 1px rgb(0 0 0 / 0.5);
+  animation: lasca-pula 520ms cubic-bezier(0.2, 0.7, 0.4, 1) forwards;
+}
+
+/* No ferro, em vez de lascas, faíscas: curtas, claras e quentes */
+.batida-ferro::before {
+  border-color: rgb(255 236 190 / 0.7);
+  box-shadow: 0 0 12px rgb(255 200 120 / 0.55);
+}
+.batida-ferro .lasca {
+  width: 2px;
+  height: 6px;
+  border-radius: 2px;
+  background: linear-gradient(to bottom, #fff6d0, #ffb347);
+  box-shadow: 0 0 4px rgb(255 190 90 / 0.9);
+  animation-duration: 380ms;
+}
+
+@keyframes onda-madeira {
+  from {
+    transform: scale(0.2);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.15);
+    opacity: 0;
+  }
+}
+
+@keyframes lasca-pula {
+  0% {
+    transform: rotate(var(--ang)) translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(var(--ang)) translateY(calc(var(--dist) * -1)) rotate(var(--giro));
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .batida-madeira .lasca {
+    display: none;
+  }
+  .batida-madeira::before {
+    animation: none;
+    opacity: 0;
+  }
+}
+
+/* ============================================================
+   O resultado do d20 da mesa 3D (src/components/mesa/Mesa3D.tsx): o
+   número sobe do dado, segura um pouco e some.
+   ============================================================ */
+
+.resultado-dado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: resultado-sobe 2.8s ease-out forwards;
+}
+.resultado-dado .numero {
+  font-family: var(--font-titulo);
+  font-weight: 700;
+  font-size: 2.6rem;
+  line-height: 1;
+  color: #f3d982;
+  text-shadow:
+    0 2px 0 rgb(0 0 0 / 0.7),
+    0 0 14px rgb(0 0 0 / 0.6);
+}
+.resultado-dado .numero.divino {
+  font-size: 3.4rem;
+  color: #fff3c4;
+  text-shadow:
+    0 2px 0 rgb(0 0 0 / 0.6),
+    0 0 18px rgb(255 214 110 / 0.95),
+    0 0 42px rgb(255 190 70 / 0.8);
+}
+.resultado-dado .numero.falha {
+  color: #e58a7a;
+}
+.resultado-dado .legenda {
+  margin-top: 0.3rem;
+  font-family: var(--font-titulo);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: #f3d982;
+  text-shadow: 0 1px 2px rgb(0 0 0 / 0.9);
+}
+.resultado-dado .legenda.falha {
+  color: #e58a7a;
+}
+@keyframes resultado-sobe {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 14px) scale(0.7);
+  }
+  12% {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1.08);
+  }
+  20% {
+    transform: translate(-50%, 0) scale(1);
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -26px) scale(1);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .resultado-dado {
+    animation: resultado-some 2.8s linear forwards;
+  }
+  @keyframes resultado-some {
+    0%,
+    75% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
 }

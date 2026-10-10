@@ -2,6 +2,10 @@ import { Cabecalho } from "@/components/Cabecalho";
 import { SeloMenu } from "@/components/navegacao/SeloMenu";
 import { ControleSom } from "@/components/som/ControleSom";
 import { AmbienteSonoro } from "@/components/som/AmbienteSonoro";
+import { MaoNaMesa } from "@/components/MaoNaMesa";
+import { Mesa3D } from "@/components/mesa/Mesa3D";
+import { AvisoDeConquista } from "@/components/conquistas/AvisoDeConquista";
+import { MemoriaDaRolagem } from "@/components/navegacao/MemoriaDaRolagem";
 
 /**
  * A mesa de madeira sobre a qual todo o site acontece:
@@ -19,6 +23,9 @@ export function Mesa({ children }: { children: React.ReactNode }) {
         className="pointer-events-none fixed inset-0 z-0 bg-[radial-gradient(ellipse_70%_55%_at_50%_36%,rgba(255,170,90,0.13),transparent_70%)]"
       />
 
+      {/* O que está em cima da mesa, nas laterais que sobram no computador */}
+      <Mesa3D />
+
       {/* Vinheta: a luz de vela cai no centro da mesa e some nas bordas */}
       <div
         aria-hidden
@@ -28,6 +35,9 @@ export function Mesa({ children }: { children: React.ReactNode }) {
       <SeloMenu />
       <ControleSom />
       <AmbienteSonoro />
+      <MaoNaMesa />
+      <AvisoDeConquista />
+      <MemoriaDaRolagem />
 
       {/* Atalho para quem navega por teclado pular direto ao conteúdo */}
       <a

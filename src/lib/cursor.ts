@@ -13,6 +13,10 @@ export const CURSORES: Cursor[] = [
   { chave: "nua", nome: "Sem luva" },
   { chave: "sem-dedos", nome: "Luva sem dedos" },
   { chave: "manopla", nome: "Manopla de aço" },
+  { chave: "goblin", nome: "Mão de goblin" },
+  { chave: "esqueleto", nome: "Mão de esqueleto" },
+  { chave: "draconato", nome: "Garra de draconato" },
+  { chave: "mago", nome: "Luva de mago" },
   { chave: "sistema", nome: "Cursor normal" },
 ];
 

@@ -7,6 +7,7 @@ import { MAPA } from "@/lib/marcadores";
 import { LARGURA_BASE, ALTURA_BASE } from "@/lib/regioes-do-mapa";
 import { tocar, somDeZoom } from "@/lib/som";
 import { Ornamento } from "@/components/ui/Titulo";
+import { marcar } from "@/lib/conquistas";
 
 /**
  * O mapa de Mitrael como um mundo para percorrer, no espírito do mapa do
@@ -278,6 +279,7 @@ export function MapaDeMitrael({
       const local = locais.find((l) => l.slug === slug);
       if (!local) return;
       tocar("marcador");
+      marcar("explorador", slug);
       abrirFolga();
       setAberto({ tipo: "local", chave: slug });
       setLista(false);
@@ -294,6 +296,7 @@ export function MapaDeMitrael({
       const r = regioes.find((g) => g.chave === chave);
       if (!r) return;
       tocar("marcador");
+      marcar("explorador", `regiao:${chave}`);
       abrirFolga();
       setAberto({ tipo: "regiao", chave });
       setLista(false);

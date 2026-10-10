@@ -1,4 +1,4 @@
-import { somLigado } from "./som";
+import { somLigado, conexaoFolgada } from "./som";
 
 /**
  * A música de fundo: uma faixa por seção do site, e uma própria para o
@@ -306,29 +306,20 @@ function criarElemento(ambiente: Ambiente): HTMLAudioElement {
   return elemento;
 }
 
-/** Conexão em que cada megabyte pesa: aí a faixa só vem quando pedida. */
-function conexaoEconomica(): boolean {
-  const conexao = (
-    navigator as Navigator & {
-      connection?: { saveData?: boolean; effectiveType?: string };
-    }
-  ).connection;
-  if (!conexao) return false;
-  return Boolean(conexao.saveData) || /2g$/.test(conexao.effectiveType ?? "");
-}
-
 /**
  * Começa a baixar a faixa da página antes do primeiro toque.
  *
  * O navegador não deixa tocar antes disso, mas deixa baixar. Sem isto, o
  * primeiro toque disparava o download do zero e a música chegava segundos
  * depois. Espera o site terminar de carregar e o navegador ficar ocioso,
- * para nunca atrasar texto ou imagem.
+ * para nunca atrasar texto ou imagem, e só acontece em conexão folgada.
  */
 function preaquecer(ambiente: Ambiente) {
   if (typeof window === "undefined") return;
   if (indisponivel.has(ambiente) || cache.has(ambiente)) return;
-  if (aquecidas.has(ambiente) || conexaoEconomica()) return;
+  // Só no computador com rede folgada: no celular a faixa (de 2 a 5 MB)
+  // vem quando a pessoa tocar, e não disputa o 3G com a página
+  if (aquecidas.has(ambiente) || !conexaoFolgada()) return;
 
   const agir = () => {
     if (houveGesto || atual !== ambiente || !somLigado()) return;

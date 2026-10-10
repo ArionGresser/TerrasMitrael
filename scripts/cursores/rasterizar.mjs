@@ -18,7 +18,8 @@ const browser = await chromium.launch();
 const page = await browser.newPage({ viewport: { width: 32, height: 32 } });
 for (const arquivo of fs.readdirSync(PASTA).filter((a) => a.endsWith(".svg"))) {
   const svg = fs.readFileSync(path.join(PASTA, arquivo), "utf8");
-  await page.setContent(`<body style="margin:0;background:transparent">${svg}</body>`);
+  // A cópia em PNG sai sempre com 32, o maior que o Chrome aceita em toda a tela
+  await page.setContent(`<body style="margin:0;background:transparent"><style>svg{width:32px;height:32px;display:block}</style>${svg}</body>`);
   await page.screenshot({ path: path.join(PASTA, arquivo.replace(".svg", ".png")), omitBackground: true });
 }
 await browser.close();

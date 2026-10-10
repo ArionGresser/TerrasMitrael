@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState, type ReactNode } from "react"
 import { useRouter } from "next/navigation";
 import { motion, useReducedMotion } from "motion/react";
 import { tocar } from "@/lib/som";
+import { marcar } from "@/lib/conquistas";
 
 /**
  * A temporada dos Contos como um livro de verdade.
@@ -278,6 +279,9 @@ export function Livro({
         return;
       }
       tocar("virarPagina");
+      // Virou até a última folha com as próprias mãos (e não chegou nela
+      // voltando do capítulo seguinte): leu o livro até o fim
+      if (para + passo > ultima && ultima > 2) marcar("leitor", chave);
       if (reduzido) {
         setAtual(para);
         return;

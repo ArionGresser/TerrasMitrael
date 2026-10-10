@@ -6,6 +6,7 @@ import Link from "next/link";
 import { motion, useReducedMotion } from "motion/react";
 import { Botao } from "@/components/ui/Botao";
 import { tocar, NIVEL_DA_RARIDADE } from "@/lib/som";
+import { conquistar } from "@/lib/conquistas";
 import {
   abrir,
   faixaDo,
@@ -199,6 +200,7 @@ export function BauDoMestre({ conteudo }: { conteudo: Conteudo }) {
     const valor = 1 + Math.floor(Math.random() * 20);
     setD20(String(valor));
     abrirOBau(valor);
+    if (valor === 20) conquistar("bau-vinte");
   }
 
   function escolherPeloDado(i: number, valor: number) {

@@ -17,15 +17,17 @@ import { sintetizar, type Sintetizado } from "./sintese";
  * botão nunca soa de dois jeitos, senão o ouvido não aprende o site.
  *
  * Os sons de papel, couro, metal e moedas são do pacote RPG Audio, do
- * Kenney (kenney.nl). O rugido, o feitiço, a fechadura e a lâmina são dos
+ * Kenney (kenney.nl). O rugido, o feitiço, a fechadura, a lâmina e a
+ * batida na madeira são dos
  * pacotes "80 CC0 RPG SFX" e "80 CC0 creature SFX", de rubberduck
  * (opengameart.org). Todos em domínio público (CC0), cortados no começo do
  * som e igualados em volume ao pergaminho. Os sons que não existem no
  * mundo físico, como o zoom e o brilho mágico, são montados na hora: ver
- * `sintese.ts`.
+ * `sintese.ts`. O "tiiim" das ferragens de ferro também é montado, mas uma
+ * vez só, em arquivo: um ferro batido limpo não existia nos pacotes.
  */
 
-type DeArquivo =
+export type DeArquivo =
   | "abrirMenu"
   | "fecharMenu"
   | "virarPagina"
@@ -38,7 +40,9 @@ type DeArquivo =
   | "fechadura"
   | "lamina"
   | "feitico"
-  | "rugido";
+  | "rugido"
+  | "madeira"
+  | "metal";
 
 export type Efeito = DeArquivo | Sintetizado;
 
@@ -56,6 +60,8 @@ const ARQUIVOS: Record<DeArquivo, string> = {
   lamina: "/sons/lamina.m4a",
   feitico: "/sons/feitico.m4a",
   rugido: "/sons/rugido.m4a",
+  madeira: "/sons/madeira.m4a",
+  metal: "/sons/metal.m4a",
 };
 
 /** Os que o primeiro toque já pode pedir: vêm logo. Os outros, quando sobrar tempo. */
@@ -75,9 +81,12 @@ const VOLUMES: Record<Efeito, number> = {
   lamina: 0.4,
   feitico: 0.45,
   rugido: 0.45,
+  madeira: 0.55,
+  metal: 0.5,
   zoomPerto: 0.5,
   zoomLonge: 0.5,
   brilho: 0.6,
+  divino: 0.7,
 };
 
 /**
@@ -112,7 +121,7 @@ const RESERVA: Partial<Record<DeArquivo, DeArquivo>> = {
   aba: "virarPagina",
 };
 
-const SINTETIZADOS: Sintetizado[] = ["zoomPerto", "zoomLonge", "brilho"];
+const SINTETIZADOS: Sintetizado[] = ["zoomPerto", "zoomLonge", "brilho", "divino"];
 const ehSintetizado = (e: Efeito): e is Sintetizado => (SINTETIZADOS as Efeito[]).includes(e);
 
 /**
@@ -132,6 +141,7 @@ const TELAS: Record<string, Efeito> = {
   itens: "brilho",
   monstros: "rugido",
   bau: "fechadura",
+  conquistas: "moedas",
 };
 
 /** O brilho que abre a tela dos itens mágicos: o de um item raro. */
@@ -236,6 +246,21 @@ export function tocar(pedido: Efeito, nivel?: number) {
 }
 
 /**
+ * Toca um efeito de arquivo com força e altura próprias, sem mexer no
+ * padrão dele: o d20 quicando bate mais forte ou mais fraco conforme o
+ * impacto, e um pouco mais agudo que a mão batendo na mesa, porque é menor.
+ */
+export function tocarComo(pedido: DeArquivo, { volume = 1, velocidade = 1 }: { volume?: number; velocidade?: number }) {
+  if (!efeitosLigados()) return;
+  const som = obter(pedido);
+  if (!som) return;
+  if (som.state() === "unloaded") som.load();
+  const id = som.play(ANDAMENTO[pedido] ? TRECHO : undefined);
+  som.volume(VOLUMES[pedido] * Math.min(1, Math.max(0, volume)), id);
+  som.rate(velocidade, id);
+}
+
+/**
  * O sopro do zoom, uma vez por gesto.
  *
  * A rodinha do mouse e a pinça disparam dezenas de passos por segundo. O
@@ -264,24 +289,69 @@ export const NIVEL_DA_RARIDADE: Record<string, number> = {
 };
 
 /**
- * Deixa os efeitos prontos na memória, para o primeiro toque não atrasar.
- *
- * Os do dia a dia vêm logo; os de cada seção esperam o navegador ficar
- * à toa. Quem pediu economia de dados ou desligou os efeitos não baixa nada.
+ * Conexão em que vale baixar antes de pedir: computador (ou rede rápida
+ * declarada) e sem economia de dados. No celular com 3G, cada megabyte
+ * baixado à toa disputa a banda com o texto e as imagens da página.
  */
-export function prepararEfeitos() {
-  if (!efeitosLigados()) return;
-  const conexao = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection;
-  if (conexao?.saveData) return;
+export function conexaoFolgada(): boolean {
+  if (typeof window === "undefined") return false;
+  const conexao = (navigator as Navigator & { connection?: { saveData?: boolean; effectiveType?: string } }).connection;
+  if (conexao?.saveData) return false;
+  if (conexao?.effectiveType) return conexao.effectiveType === "4g" && window.matchMedia("(pointer: fine)").matches;
+  return window.matchMedia("(pointer: fine)").matches;
+}
 
+let houveToque = false;
+let esperandoToque = false;
+
+/** Monta os efeitos: os do dia a dia logo, os de cada seção quando sobrar tempo. */
+function montarEfeitos() {
   const carregar = (efeito: DeArquivo) => {
     const som = obter(efeito);
     if (som && som.state() === "unloaded") som.load();
   };
   ESSENCIAIS.forEach(carregar);
-
   const resto = () =>
     (Object.keys(ARQUIVOS) as DeArquivo[]).filter((e) => !ESSENCIAIS.includes(e)).forEach(carregar);
   if ("requestIdleCallback" in window) window.requestIdleCallback(resto, { timeout: 5000 });
   else setTimeout(resto, 3000);
+}
+
+/**
+ * Deixa os efeitos prontos, sem pesar na abertura da página.
+ *
+ * Antes do primeiro toque o navegador não deixa tocar som nenhum, então
+ * até lá nada é montado. Montar o primeiro som acorda o motor de áudio do
+ * navegador, e isso, feito ao abrir a página, travava o celular por mais
+ * de um segundo (medido no 3G com processador de celular). Agora acontece
+ * no primeiro toque, que é quando o som passa a ser possível.
+ *
+ * Em conexão folgada, os arquivos do dia a dia já vêm antes para o cache
+ * do navegador, com prioridade baixa, para o primeiro som não esperar
+ * download. Quem desligou os efeitos não baixa nada.
+ */
+export function prepararEfeitos() {
+  if (typeof window === "undefined" || !efeitosLigados()) return;
+  if (houveToque) return montarEfeitos();
+  if (esperandoToque) return;
+  esperandoToque = true;
+
+  const GESTOS = ["pointerdown", "keydown", "touchstart"];
+  const tocou = () => {
+    for (const g of GESTOS) document.removeEventListener(g, tocou, true);
+    houveToque = true;
+    esperandoToque = false;
+    if (efeitosLigados()) montarEfeitos();
+  };
+  for (const g of GESTOS) document.addEventListener(g, tocou, { capture: true, passive: true });
+
+  if (!conexaoFolgada()) return;
+  const adiantar = () => {
+    if (houveToque) return;
+    for (const efeito of ESSENCIAIS) fetch(ARQUIVOS[efeito], { priority: "low" } as RequestInit).catch(() => {});
+  };
+  const quandoOcioso = () =>
+    "requestIdleCallback" in window ? window.requestIdleCallback(adiantar, { timeout: 4000 }) : setTimeout(adiantar, 2000);
+  if (document.readyState === "complete") quandoOcioso();
+  else window.addEventListener("load", quandoOcioso, { once: true });
 }

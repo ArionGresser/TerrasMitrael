@@ -39,6 +39,11 @@ export const SECOES: Secao[] = [
     descricao: "As regras de 2024 em português: classes, magias, itens e monstros",
     inclui: ["/classes/", "/especies/", "/magias/", "/itens/", "/monstros/", "/bau/"],
   },
+  {
+    href: "/conquistas/",
+    nome: "Conquistas",
+    descricao: "Os feitos que você já realizou pela mesa",
+  },
 ];
 
 export const COMUNIDADE = {

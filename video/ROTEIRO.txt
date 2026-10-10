@@ -1,0 +1,77 @@
+ROTEIRO: TRAILER TERRAS DE MITRAEL
+Duração total: 43 segundos
+Formato: deitado (1920x1080)
+Música: tema do Vrakyr, desde o começo da faixa. Ela cresce aos 38s,
+        e o encerramento entra exatamente nesse ponto.
+
+(Escreva por cima do que quiser: riscar, trocar, reordenar, cenas novas.
+ Para um som, diga qual da Mesa de Sons ou o nome do arquivo que você mandar.)
+
+CENA 1: ABERTURA (0,0s a 5,9s)
+  Imagem: o mapa do herói, se aproximando devagar, com as bordas escuras
+  Acontece: o selo de cera cai no centro, o título sobe e aparece
+  Texto: "Terras de Mitrael"
+         "Cenário autoral de RPG de mesa"
+  Som: pergaminho abrindo (0,4s)
+
+CENA 2: PÁGINA INICIAL (5,6s a 9,2s)
+  Acontece: a página inicial rolando para baixo, passando por
+            "Um mundo vivo" até as Novidades
+  Velocidade: 1,25x
+  Legenda: nenhuma
+  Som: nenhum
+
+CENA 3: MAPA (8,8s a 13,8s)
+  Acontece: zoom no mapa em cima de Sovara Mithr, clique no lugar,
+            o painel abre com a história
+  Legenda: MAPA
+           "O continente, suas terras e a história de cada lugar"
+  Som: sopro do zoom (9,2s), marcador no clique (10,7s)
+
+CENA 4: CONTOS (13,5s a 18,5s)
+  Acontece: a capa da Temporada 2 abre, vira para "O novo elenco",
+            vira para o Sumário
+  Legenda: CONTOS
+           "As sessões jogadas e a história do continente"
+  Som: capa abrindo (13,9s), folha virando (15,4s e 16,8s)
+
+CENA 5: PERSONAGENS (18,1s a 23,7s)
+  Acontece: a ficha do Vrakyr Windrose, rola até as abas,
+            clica em Ficha e depois em Poderes
+  Velocidade: 1,3x
+  Legenda: PERSONAGENS
+           "Os heróis que caminharam por estas terras"
+  Som: aba de couro (21,4s e 22,8s)
+
+CENA 6: GRIMÓRIO (23,3s a 28,1s)
+  Acontece: no Livro do Aventureiro, clica no cartão do Grimório,
+            a lista de magias com os ícones rolando
+  Velocidade: 1,25x
+  Legenda: GRIMÓRIO
+           "As 339 magias, com busca por nome, classe, círculo e escola"
+  Som: feitiço (23,6s)
+
+CENA 7: BESTIÁRIO (27,8s a 32,2s)
+  Acontece: no Livro do Aventureiro, clica no cartão do Bestiário,
+            a lista de monstros rolando
+  Velocidade: 1,3x
+  Legenda: BESTIÁRIO
+           "Os 330 monstros e animais, com busca por tipo, Nível de Desafio e tamanho"
+  Som: rugido (28,1s)
+
+CENA 8: BAÚ DO MESTRE (31,9s a 37,9s)
+  Acontece: o mestre digita 20 no d20, clica em "Abrir o baú",
+            desce até o resultado: Lendário, 889 PO, Manto de
+            Resistência à Magia e outros itens
+  Legenda: BAÚ DO MESTRE
+           "O jogador rola o d20 e o site tira moedas, equipamento e itens mágicos"
+  Som: trinco (32,4s), moedas (32,7s), brilho de item raro (33,1s)
+
+CENA 9: ENCERRAMENTO (37,5s a 43,1s)
+  Imagem: a mesa de madeira do site
+  Acontece: o selo bate junto com a virada da música, o título aparece,
+            depois o resto; tudo escurece no último segundo
+  Texto: "Terras de Mitrael"
+         "Cenário autoral de RPG de mesa · desde 2020"
+         "terrasmitrael.netlify.app"
+  Som: só a música, que vai abaixando até o fim
