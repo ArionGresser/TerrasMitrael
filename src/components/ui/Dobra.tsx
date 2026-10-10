@@ -1,6 +1,6 @@
 "use client";
 
-import { useId, useRef, useState, type ReactNode } from "react";
+import { useEffect, useId, useRef, useState, type ReactNode } from "react";
 import { motion, useReducedMotion } from "motion/react";
 import { tocar } from "@/lib/som";
 
@@ -30,6 +30,8 @@ export function Dobra({
   previa = "recorte",
   rotuloAbrir = "Leia mais",
   rotuloFechar = "Recolher",
+  ancora,
+  abrir = false,
   className = "",
 }: {
   /** Quando existe, vira o cabeçalho clicável do bloco. */
@@ -39,12 +41,30 @@ export function Dobra({
   previa?: Previa;
   rotuloAbrir?: string;
   rotuloFechar?: string;
+  /** O id do bloco: um link para ele (#corda) já chega com o pergaminho aberto. */
+  ancora?: string;
+  /** Abre o pergaminho quando passa a valer true (a busca achou algo lá dentro). */
+  abrir?: boolean;
   className?: string;
 }) {
   const [aberto, setAberto] = useState(false);
   const reduzido = useReducedMotion();
   const id = useId();
   const raiz = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (abrir) setAberto(true);
+  }, [abrir]);
+
+  useEffect(() => {
+    if (!ancora) return;
+    const conferir = () => {
+      if (window.location.hash === `#${ancora}`) setAberto(true);
+    };
+    conferir();
+    window.addEventListener("hashchange", conferir);
+    return () => window.removeEventListener("hashchange", conferir);
+  }, [ancora]);
 
   function alternar() {
     const abrindo = !aberto;

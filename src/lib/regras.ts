@@ -14,6 +14,8 @@ import path from "node:path";
  *   ordem: 4              posição na lista do Livro do Aventureiro
  *   resumo: ...           uma linha para o cartão do Livro do Aventureiro
  *   estilo: aberto        opcional: itens abertos em vez de pergaminhos
+ *   estilo: recolhido     opcional: pergaminhos com busca por nome no alto,
+ *                         para documentos longos como o Equipamento
  *   oculto: sim           opcional: tem página, mas não aparece na lista do
  *                         Livro do Aventureiro (é aberto a partir de outra seção)
  *   ---
@@ -35,7 +37,7 @@ export type DocumentoDeRegra = {
   original: string;
   ordem: number;
   resumo: string;
-  estilo: "pergaminhos" | "aberto";
+  estilo: "pergaminhos" | "aberto" | "recolhido";
   oculto: boolean;
   abertura: string;
   grupos: GrupoDeRegra[];
@@ -97,7 +99,10 @@ function ler(slug: string): DocumentoDeRegra | undefined {
     original: campos.original,
     ordem: Number(campos.ordem ?? 99),
     resumo: campos.resumo ?? "",
-    estilo: campos.estilo === "aberto" ? "aberto" : "pergaminhos",
+    estilo:
+      campos.estilo === "aberto" || campos.estilo === "recolhido"
+        ? campos.estilo
+        : "pergaminhos",
     oculto: campos.oculto === "sim",
     abertura: abertura.trim(),
     grupos: grupos.map((g) => ({
@@ -117,4 +122,26 @@ export function documentosDeRegra(): DocumentoDeRegra[] {
 
 export function buscarDocumento(slug: string): DocumentoDeRegra | undefined {
   return ler(slug);
+}
+
+/**
+ * Os nomes que a busca de um documento acha dentro de um item: o título, a
+ * primeira coluna das tabelas ("Espada Longa" mora na tabela de armas
+ * marciais) e os nomes em negrito no começo de um parágrafo, como
+ * "**Kit de Herbalismo (5 PO).**" nas ferramentas.
+ */
+export function nomesDoItem(item: ItemDeRegra): string[] {
+  const nomes = [item.titulo];
+  const linhas = item.texto.split("\n");
+  linhas.forEach((linha, i) => {
+    // O cabeçalho da tabela (a linha antes do "|---") não é nome de nada
+    const celula = linha.match(/^\|\s*([^|]+?)\s*\|/);
+    if (celula) {
+      if (!linha.startsWith("|---") && !linhas[i + 1]?.startsWith("|---")) nomes.push(celula[1]);
+      return;
+    }
+    const negrito = linha.match(/^\*\*([^*(]+?)\s*(?:\([^)]*\))?\.?\*\*/);
+    if (negrito) nomes.push(negrito[1]);
+  });
+  return nomes;
 }

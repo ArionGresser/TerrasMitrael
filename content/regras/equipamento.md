@@ -2,7 +2,7 @@
 titulo: Equipamento
 original: Equipment
 ordem: 6
-estilo: aberto
+estilo: recolhido
 resumo: Moedas, armas e maestrias, armaduras, ferramentas e o equipamento de aventura.
 ---
 
