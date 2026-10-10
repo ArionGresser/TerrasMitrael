@@ -25,6 +25,8 @@ export type Ambiente =
   | "tema"
   | "locais"
   | "eventos"
+  | "cronicas"
+  | "livro"
   | "personagens"
   | "johnny"
   | "vrakyr"
@@ -35,6 +37,8 @@ const ARQUIVOS: Record<Ambiente, string> = {
   tema: "/musicas/tema.m4a",
   locais: "/musicas/locais.m4a",
   eventos: "/musicas/eventos.m4a",
+  cronicas: "/musicas/cronicas-tema.m4a",
+  livro: "/musicas/livro-tema.m4a",
   personagens: "/musicas/personagens.m4a",
   johnny: "/musicas/johnny-tema.m4a",
   vrakyr: "/musicas/vrakyr-tema.m4a",
@@ -63,7 +67,7 @@ const RESERVA: Ambiente = "tema";
  * O trecho que vale dentro de cada arquivo, em segundos.
  *
  * `inicio` é onde a primeira nota entra. As faixas vêm com silêncio antes
- * dela, dois segundos e meio no caso do tema, e tocadas do zero a música
+ * dela, dois segundos e meio no caso do tema antigo, e tocadas do zero a música
  * demorava a começar depois que a página abria.
  *
  * `fim` é onde o último som morre, e não onde a música ainda está cheia.
@@ -78,7 +82,12 @@ const RESERVA: Ambiente = "tema";
  * quem olhou o gráfico e achou que estava baixo.
  */
 const TRECHO: Partial<Record<Ambiente, { inicio: number; fim: number }>> = {
-  tema: { inicio: 2.3, fim: 256.8 },
+  tema: { inicio: 0.7, fim: 255.15 },
+  cronicas: { inicio: 0.25, fim: 234.05 },
+  livro: { inicio: 0.2, fim: 273.3 },
+  personagens: { inicio: 0.5, fim: 254.0 },
+  // O tema antigo, que agora toca só no mapa
+  locais: { inicio: 2.3, fim: 256.8 },
   johnny: { inicio: 0.2, fim: 233.3 },
   vrakyr: { inicio: 0.2, fim: 313.6 },
   pyhmm: { inicio: 0.55, fim: 131.3 },
@@ -124,6 +133,9 @@ let esperandoGesto = false;
 let houveGesto = false;
 let vigia: number | null = null;
 
+/** Os endereços do Livro do Aventureiro: a capa e cada capítulo dele. */
+const CAPITULOS_DO_LIVRO = new Set(["regras", "classes", "especies", "magias", "itens", "monstros", "bau"]);
+
 /**
  * Qual faixa pertence a cada endereço do site.
  *
@@ -142,6 +154,10 @@ export function ambienteDaRota(caminho: string): Ambiente {
   // A faixa dos locais toca no mapa, que é onde a história de cada lugar abre
   if (partes[0] === "mapa") return "locais";
   if (partes[0] === "eventos") return "eventos";
+  // As Crônicas inteiras, da capa ao último capítulo, têm uma faixa só
+  if (partes[0] === "contos") return "cronicas";
+  // Os mesmos endereços do `inclui` do Livro em navegacao.ts
+  if (partes[0] && CAPITULOS_DO_LIVRO.has(partes[0])) return "livro";
   return "tema";
 }
 
