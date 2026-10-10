@@ -1,5 +1,6 @@
 import { buscarPersonagem } from "./personagens";
 import { SERIES_DISPONIVEIS, chaveDaTemporada, chaveDoEpisodio } from "./contos";
+import type { Icone } from "./conquistas";
 
 /**
  * O mural de novidades: tudo o que entrou no site, do mais novo para o mais
@@ -19,7 +20,9 @@ type Registro =
       titulo: string;
       texto: string;
       href: string;
-      imagem: string;
+      /** Sem imagem, a miniatura mostra o `icone` gravado na madeira. */
+      imagem?: string;
+      icone?: Icone;
       /** Onde fica o assunto na imagem, quando ela é cortada. */
       posicao?: string;
     };
@@ -44,7 +47,7 @@ const REGISTRO: Registro[] = [
     texto:
       "Uma aba nova, onde cada sessão jogada vira episódio, temporada por temporada.",
     href: "/contos/",
-    imagem: "/images/contos/cronicas/t2e2-saida.webp",
+    imagem: "/images/contos/cronicas-cartao.webp",
   },
   {
     tipo: "aviso",
@@ -62,7 +65,7 @@ const REGISTRO: Registro[] = [
     texto:
       "As 339 magias das regras de 2024 em português, com busca por nome, classe, círculo e escola.",
     href: "/magias/",
-    imagem: "/images/book.jpg",
+    imagem: "/images/compendio/magias.webp",
   },
   {
     tipo: "aviso",
@@ -71,7 +74,7 @@ const REGISTRO: Registro[] = [
     texto:
       "Anão, draconato, elfo, gnomo, golias, humano, orc, pequenino e tiefling, com os traços de cada povo das regras de 2024.",
     href: "/especies/",
-    imagem: "/images/personagens/elenco-origin-heroes.jpg",
+    imagem: "/images/compendio/especies.webp",
   },
   {
     tipo: "aviso",
@@ -80,7 +83,7 @@ const REGISTRO: Registro[] = [
     texto:
       "As doze classes em português, do nível 1 ao 20, cada nível num pergaminho e cada classe com uma subclasse.",
     href: "/classes/",
-    imagem: "/images/rarg.jpg",
+    imagem: "/images/compendio/classes.webp",
   },
   {
     tipo: "aviso",
@@ -99,7 +102,7 @@ const REGISTRO: Registro[] = [
     texto:
       "Os 258 itens mágicos das regras, com busca por tipo, raridade e sintonia, e as regras de cargas, maldições e fabricação.",
     href: "/itens/",
-    imagem: "/images/pocao.jpg",
+    imagem: "/images/compendio/itens.webp",
   },
   {
     tipo: "aviso",
@@ -108,7 +111,7 @@ const REGISTRO: Registro[] = [
     texto:
       "Os 330 monstros e animais, cada um com a ficha completa, filtros por tipo e Nível de Desafio e um guia de como ler uma ficha.",
     href: "/monstros/",
-    imagem: "/images/loc/putrefados.jpg",
+    imagem: "/images/compendio/monstros.webp",
   },
   {
     tipo: "aviso",
@@ -117,7 +120,7 @@ const REGISTRO: Registro[] = [
     texto:
       "As regras de 2024 reunidas num lugar só: classes, espécies, antecedentes, talentos, equipamento, magias, itens, monstros e o Glossário de Regras.",
     href: "/regras/",
-    imagem: "/images/book.jpg",
+    imagem: "/images/livro-cartao.webp",
   },
   {
     tipo: "aviso",
@@ -135,7 +138,7 @@ const REGISTRO: Registro[] = [
     texto:
       "Na hora do saque: o mestre escolhe o baú e o que pode ter, o jogador rola o d20 e saem moedas, equipamento e itens mágicos do Livro.",
     href: "/bau/",
-    imagem: "/images/compendio/itens.webp",
+    imagem: "/images/regras/equipamento/bau.webp",
   },
   {
     tipo: "aviso",
@@ -144,7 +147,77 @@ const REGISTRO: Registro[] = [
     texto:
       "Cada temporada é um livro de capa de couro: as páginas viram com o clique, as setas ou o dedo, e a fita marca onde você parou.",
     href: "/contos/cronicas/temporada-2/",
-    imagem: "/images/contos/cronicas/t2e2-saida.webp",
+    imagem: "/images/contos/cronicas/t2-capa.webp",
+  },
+  {
+    tipo: "aviso",
+    data: "2026-10-10T00:05-03:00",
+    titulo: "A mesa ganhou vida",
+    texto:
+      "No computador, as laterais da página viraram mesa de verdade: role o d20 na bandeja, jogue moedas pela madeira e bata nela para ouvir o toc.",
+    href: "/conquistas/",
+    icone: "vela",
+  },
+  {
+    tipo: "aviso",
+    data: "2026-10-10T00:07-03:00",
+    titulo: "Conquistas",
+    texto:
+      "26 feitos para cumprir pelo site, em bronze, prata e ouro. Os mais difíceis liberam 7 luvas novas para o cursor e 6 d20 novos para a mesa.",
+    href: "/conquistas/",
+    icone: "mao",
+  },
+  {
+    tipo: "aviso",
+    data: "2026-10-10T00:47-03:00",
+    titulo: "Bestiário e equipamento ilustrados",
+    texto:
+      "Os 330 monstros ganharam arte, cada um na própria ficha e na lista, e as 94 peças de equipamento também.",
+    href: "/monstros/",
+    imagem: "/images/monstros/dragao-vermelho-anciao.webp",
+  },
+  {
+    tipo: "aviso",
+    data: "2026-10-10T02:20-03:00",
+    titulo: "Retratos novos para todos",
+    texto:
+      "Os doze personagens, dos atuais à primeira geração, no mesmo estilo de pintura. E na ficha, setas para passar ao anterior e ao próximo.",
+    href: "/personagens/",
+    imagem: "/images/personagens/elenco-reunido.webp",
+  },
+  {
+    tipo: "aviso",
+    data: "2026-10-10T02:25-03:00",
+    titulo: "A Saga de Mitrael",
+    texto:
+      "Os Contos agora se chamam Crônicas, a série principal virou A Saga de Mitrael e ela e cada temporada ganharam capa própria.",
+    href: "/contos/cronicas/",
+    imagem: "/images/contos/cronicas/saga-capa.webp",
+  },
+];
+
+/**
+ * O que ainda está a caminho. Aparece no topo de /novidades/, sem link e
+ * sem data, e sai daqui quando vira novidade de verdade no REGISTRO.
+ */
+export const EM_BREVE: { titulo: string; texto: string; icone: Icone }[] = [
+  {
+    titulo: "Conta de jogador",
+    texto:
+      "Entrar com a sua conta para levar conquistas, luvas e dados para qualquer aparelho. Hoje eles ficam guardados só no navegador onde foram conquistados.",
+    icone: "chave",
+  },
+  {
+    titulo: "Conquistas no celular",
+    texto:
+      "15 dos 26 feitos pedem a mesa, que por enquanto só aparece no computador. A ideia é o celular também poder rolar o d20 e jogar moedas.",
+    icone: "dado",
+  },
+  {
+    titulo: "Mais artes",
+    texto:
+      "As ilustrações grandes das 339 magias, as artes dos antecedentes e dos talentos e as três classes que ainda estão sem pintura.",
+    icone: "livro",
   },
 ];
 
@@ -154,7 +227,9 @@ export type Novidade = {
   titulo: string;
   texto: string;
   href: string;
-  imagem: string;
+  imagem?: string;
+  /** Sem imagem, a miniatura mostra este desenho. */
+  icone?: Icone;
   /** Onde fica o rosto na imagem, quando é retrato. */
   posicao?: string;
   /** Data e hora com fuso, como "2026-10-07T11:36-03:00". */

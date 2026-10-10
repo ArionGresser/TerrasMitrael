@@ -11,6 +11,7 @@ const TRACOS: Record<Icone, string> = {
   bau: "M3.5 11h17v9.5h-17Z M3.5 11a8.5 6 0 0 1 17 0 M10.4 13.6h3.2v3.4h-3.2Z M8 5.6V11 M16 5.6V11",
   martelo: "M13.2 3.5 20.5 10.8l-2.3 2.3-7.3-7.3Z M14.8 9.2 4.5 19.5",
   adaga: "M20.5 3.5 10.6 13.4l1.9 1.9 9.9-9.9V3.5Z M7.6 12.2l6.2 6.2 M10.2 14.9 5.5 19.6 M4.6 20.5h0",
+  chave: "M7.5 8.5a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z M11.5 12.5h9 M17.5 12.5v3.2 M20.5 12.5v2.4",
 };
 
 export function IconeConquista({ icone, className = "" }: { icone: Icone; className?: string }) {

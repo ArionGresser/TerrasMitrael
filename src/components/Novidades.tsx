@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { quando, type Novidade } from "@/lib/novidades";
+import { quando, EM_BREVE, type Novidade } from "@/lib/novidades";
+import type { Icone } from "@/lib/conquistas";
+import { IconeConquista } from "@/components/conquistas/IconeConquista";
 import { Revelar } from "@/components/ui/Revelar";
 
 /**
@@ -18,16 +20,7 @@ export function ListaDeNovidades({ itens }: { itens: Novidade[] }) {
               href={item.href}
               className="group hover:bg-madeira-800/50 flex items-center gap-4 p-3 transition-colors sm:p-4"
             >
-              <span className="border-dourado-600/40 relative size-16 shrink-0 overflow-hidden rounded-sm border sm:size-20">
-                <Image
-                  src={item.imagem}
-                  alt=""
-                  fill
-                  sizes="80px"
-                  className="object-cover sepia-[0.12]"
-                  style={{ objectPosition: item.posicao ?? "center" }}
-                />
-              </span>
+              <Miniatura imagem={item.imagem} icone={item.icone} posicao={item.posicao} />
               <span className="min-w-0 flex-1">
                 <span className="flex flex-wrap items-baseline justify-between gap-x-3">
                   <span className="font-titulo text-dourado-400 text-[0.6rem] tracking-[0.22em] uppercase">
@@ -55,6 +48,56 @@ export function ListaDeNovidades({ itens }: { itens: Novidade[] }) {
               </span>
             </Link>
           </Revelar>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+/**
+ * O quadradinho do começo da linha: a arte, quando a novidade tem uma, ou
+ * o desenho dela gravado em dourado na madeira, quando ainda não tem.
+ */
+function Miniatura({ imagem, icone, posicao, apagada = false }: { imagem?: string; icone?: Icone; posicao?: string; apagada?: boolean }) {
+  return (
+    <span
+      className={`relative grid size-16 shrink-0 place-items-center overflow-hidden rounded-sm border sm:size-20 ${
+        apagada ? "border-dourado-600/40 bg-madeira-900/60 border-dashed" : "border-dourado-600/40 bg-madeira-800/70"
+      }`}
+    >
+      {imagem ? (
+        <Image
+          src={imagem}
+          alt=""
+          fill
+          sizes="80px"
+          className="object-cover sepia-[0.12]"
+          style={{ objectPosition: posicao ?? "center" }}
+        />
+      ) : icone ? (
+        <IconeConquista icone={icone} className={`size-8 sm:size-9 ${apagada ? "text-dourado-500/70" : "text-dourado-400"}`} />
+      ) : null}
+    </span>
+  );
+}
+
+/**
+ * O que ainda está a caminho, no topo do mural: as mesmas linhas, mas sem
+ * link, sem data e com a moldura tracejada, de coisa que ainda não chegou.
+ */
+export function ListaEmBreve() {
+  return (
+    <ul className="border-dourado-600/30 bg-madeira-950/40 divide-dourado-600/15 divide-y rounded-sm border border-dashed">
+      {EM_BREVE.map((item) => (
+        <li key={item.titulo} className="flex items-center gap-4 p-3 sm:p-4">
+          <Miniatura icone={item.icone} apagada />
+          <span className="min-w-0 flex-1">
+            <span className="font-titulo text-dourado-400/80 text-[0.6rem] tracking-[0.22em] uppercase">Em breve</span>
+            <span className="font-titulo text-pergaminho-100 mt-0.5 block text-base leading-snug font-semibold sm:text-lg">
+              {item.titulo}
+            </span>
+            <span className="text-pergaminho-200/75 mt-1 block text-xs leading-relaxed sm:text-sm">{item.texto}</span>
+          </span>
         </li>
       ))}
     </ul>

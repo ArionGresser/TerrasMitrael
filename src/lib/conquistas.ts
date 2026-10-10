@@ -26,7 +26,7 @@
  * saber de nada disso.
  */
 
-export type Icone = "dado" | "moeda" | "vela" | "mao" | "livro" | "mapa" | "bau" | "martelo" | "adaga";
+export type Icone = "dado" | "moeda" | "vela" | "mao" | "livro" | "mapa" | "bau" | "martelo" | "adaga" | "chave";
 export type Nivel = "bronze" | "prata" | "ouro";
 export type Premio = { tipo: "mao" | "dado"; chave: string };
 

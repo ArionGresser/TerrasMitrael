@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { todasAsNovidades } from "@/lib/novidades";
-import { ListaDeNovidades } from "@/components/Novidades";
+import { ListaDeNovidades, ListaEmBreve } from "@/components/Novidades";
 import { Pergaminho } from "@/components/ui/Pergaminho";
 import { BotaoLink } from "@/components/ui/Botao";
 import { Rodape } from "@/components/Rodape";
@@ -33,9 +33,19 @@ export default function PaginaNovidades() {
           </header>
         </Pergaminho>
 
-        <div className="mt-10">
+        <section aria-labelledby="em-breve" className="mt-10">
+          <h2 id="em-breve" className="font-titulo text-dourado-400 mb-3 text-center text-xs tracking-[0.3em] uppercase">
+            A caminho da mesa
+          </h2>
+          <ListaEmBreve />
+        </section>
+
+        <section aria-labelledby="ja-chegou" className="mt-10">
+          <h2 id="ja-chegou" className="font-titulo text-dourado-400 mb-3 text-center text-xs tracking-[0.3em] uppercase">
+            Já chegou
+          </h2>
           <ListaDeNovidades itens={itens} />
-        </div>
+        </section>
 
         <div className="mt-8 text-center">
           <BotaoLink href="/" variante="primario">
