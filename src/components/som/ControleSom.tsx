@@ -20,6 +20,7 @@ import {
 } from "@/lib/musica";
 import { TrocaCursor } from "@/components/TrocaCursor";
 import { TrocaDado } from "@/components/TrocaDado";
+import { DadoNoCelular } from "@/components/mesa/DadoNoCelular";
 
 /**
  * O controle da música de fundo, sempre visível, no canto oposto ao selo.
@@ -145,9 +146,14 @@ export function ControleSom() {
       ref={raiz}
       className="fixed right-4 bottom-4 z-50 flex items-center gap-2 sm:right-6 sm:bottom-6"
     >
-      {/* As coleções que as conquistas liberam: o dado da mesa e a mão do cursor */}
+      {/* As coleções que as conquistas liberam: o dado da mesa e a mão do
+          cursor. Sem a mesa do computador, o d20 abre a mesa em tela cheia;
+          no toque não existe cursor, então a manopla sai */}
       <TrocaDado />
-      <TrocaCursor />
+      <DadoNoCelular />
+      <div className="pointer-coarse:hidden">
+        <TrocaCursor />
+      </div>
 
       {/* A régua, que sai de dentro do botão para a esquerda */}
       <div

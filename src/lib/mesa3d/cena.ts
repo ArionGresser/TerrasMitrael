@@ -45,6 +45,8 @@ export type MesaAPI = {
   apertar(x: number, y: number, naMadeira: boolean): string | null;
   /** Onde o dado está na tela agora (serve para testar a mesa). */
   ondeEstaODado(): { x: number; y: number } | null;
+  /** Joga o dado de onde ele está, numa direção sorteada (o botão "Jogar"). */
+  jogar(): void;
   reconstruir(): void;
   destruir(): void;
 };
@@ -88,7 +90,19 @@ function semente(texto: string) {
   };
 }
 
-export function criarMesa(canvas: HTMLCanvasElement, avisos: Avisos, reduzido: boolean): MesaAPI {
+/**
+ * "mesa" é a do computador: as peças nas laterais da página e o d20 na
+ * bandeja. "dado" é a do celular: a tela inteira vira mesa só para o d20,
+ * que cai do alto ao abrir e se joga com o dedo.
+ */
+export type ModoDaMesa = "mesa" | "dado";
+
+/** No celular a câmera chega mais perto: o dado fica maior que o de 60 px do computador. */
+const PERTO_NO_CELULAR = 1.6;
+/** O espaço que os botões da mesa do celular ocupam embaixo. */
+const BOTOES_NO_CELULAR = 104;
+
+export function criarMesa(canvas: HTMLCanvasElement, avisos: Avisos, reduzido: boolean, modo: ModoDaMesa = "mesa"): MesaAPI {
   // ---------- O palco ----------
 
   const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
@@ -112,7 +126,9 @@ export function criarMesa(canvas: HTMLCanvasElement, avisos: Avisos, reduzido: b
   cena.add(new THREE.HemisphereLight(0xffe2b8, 0x3a2412, 0.9));
   const sol = new THREE.DirectionalLight(0xffe2b8, 2.4);
   sol.castShadow = true;
-  sol.shadow.mapSize.set(2048, 2048);
+  // No celular, uma sombra menor: o dado sozinho não precisa de mais
+  const mapa = modo === "dado" ? 1024 : 2048;
+  sol.shadow.mapSize.set(mapa, mapa);
   sol.shadow.bias = -0.0004;
   sol.shadow.normalBias = 0.6;
   sol.shadow.radius = 4;
@@ -451,6 +467,10 @@ export function criarMesa(canvas: HTMLCanvasElement, avisos: Avisos, reduzido: b
 
   function montar() {
     limpar();
+    if (modo === "dado") {
+      montarSoODado();
+      return;
+    }
     const cols = colunas();
     if (!cols.length) return;
     const sorte = semente(location.pathname);
@@ -480,6 +500,28 @@ export function criarMesa(canvas: HTMLCanvasElement, avisos: Avisos, reduzido: b
       criarDado(xb, 640);
       encher(esq, 250, fim - 40, ["pocoes", "soltas", "livros", "flecha", "pilha", "adaga", "pocoes", "soltas", "livros", "adaga", "flecha", "pilha"], sorte, [640 - fora - 40, 640 + fora + 40]);
     }
+    sincronizar();
+  }
+
+  /**
+   * A mesa do celular: só o d20, que cai do alto no meio da tela, girando,
+   * como quem solta o dado da mão. A queda já é uma jogada e dá resultado.
+   */
+  function montarSoODado() {
+    cercar();
+    const vw = document.documentElement.clientWidth;
+    criarDado(vw / 2, window.scrollY + window.innerHeight * 0.45);
+    if (!dado) return;
+    const b = dado.body;
+    const giro = new THREE.Quaternion().setFromEuler(
+      new THREE.Euler(Math.random() * 6.28, Math.random() * 6.28, Math.random() * 6.28),
+    );
+    b.quaternion.set(giro.x, giro.y, giro.z, giro.w);
+    b.position.z = 420;
+    b.velocity.set((Math.random() - 0.5) * 500, (Math.random() - 0.5) * 500, -200);
+    b.angularVelocity.set((Math.random() - 0.5) * 22, (Math.random() - 0.5) * 22, (Math.random() - 0.5) * 10);
+    lancado = true;
+    parado = 0;
     sincronizar();
   }
 
@@ -1121,11 +1163,25 @@ export function criarMesa(canvas: HTMLCanvasElement, avisos: Avisos, reduzido: b
     for (const b of paredes) mundo.removeBody(b);
     paredes = [];
     const vw = document.documentElement.clientWidth;
-    const topo = window.scrollY + 76;
-    const base = window.scrollY + window.innerHeight - 24;
+    let esquerda = 16;
+    let direita = vw - 16;
+    let topo = window.scrollY + 76;
+    let base = window.scrollY + window.innerHeight - 24;
+    if (modo === "dado") {
+      // Com a câmera mais perto, a tela mostra menos mesa: as paredes vão
+      // para as bordas do que se vê, e a de baixo fica acima dos botões
+      const cx = vw / 2;
+      const cy = window.scrollY + window.innerHeight / 2;
+      const meiaL = vw / 2 / PERTO_NO_CELULAR;
+      const meiaA = window.innerHeight / 2 / PERTO_NO_CELULAR;
+      esquerda = cx - meiaL + 10;
+      direita = cx + meiaL - 10;
+      topo = cy - meiaA + 50 / PERTO_NO_CELULAR;
+      base = cy + meiaA - BOTOES_NO_CELULAR / PERTO_NO_CELULAR;
+    }
     const lados: [CANNON.Vec3, CANNON.Quaternion][] = [
-      [new CANNON.Vec3(16, 0, 0), new CANNON.Quaternion().setFromEuler(0, Math.PI / 2, 0)],
-      [new CANNON.Vec3(vw - 16, 0, 0), new CANNON.Quaternion().setFromEuler(0, -Math.PI / 2, 0)],
+      [new CANNON.Vec3(esquerda, 0, 0), new CANNON.Quaternion().setFromEuler(0, Math.PI / 2, 0)],
+      [new CANNON.Vec3(direita, 0, 0), new CANNON.Quaternion().setFromEuler(0, -Math.PI / 2, 0)],
       [new CANNON.Vec3(0, -topo, 0), new CANNON.Quaternion().setFromEuler(Math.PI / 2, 0, 0)],
       [new CANNON.Vec3(0, -base, 0), new CANNON.Quaternion().setFromEuler(-Math.PI / 2, 0, 0)],
     ];
@@ -1293,7 +1349,16 @@ export function criarMesa(canvas: HTMLCanvasElement, avisos: Avisos, reduzido: b
     if (!dado) return;
     const valor = leitura();
     const p = dado.body.position;
-    avisos.resultado({ valor, x: p.x, y: -p.y });
+    if (modo === "dado") {
+      const t = new THREE.Vector3(p.x, p.y, p.z).project(camera);
+      avisos.resultado({
+        valor,
+        x: ((t.x + 1) / 2) * window.innerWidth,
+        y: ((1 - t.y) / 2) * window.innerHeight + window.scrollY,
+      });
+    } else {
+      avisos.resultado({ valor, x: p.x, y: -p.y });
+    }
     contar("rolador");
     if (valor === 20) contar("vintes");
     if (valor === 1) contar("uns");
@@ -1319,7 +1384,7 @@ export function criarMesa(canvas: HTMLCanvasElement, avisos: Avisos, reduzido: b
     if (vw !== largura || vh !== altura) {
       renderer.setSize(vw, vh, false);
       camera.aspect = vw / vh;
-      const d = vh / 2 / Math.tan(THREE.MathUtils.degToRad(FOV / 2));
+      const d = vh / 2 / Math.tan(THREE.MathUtils.degToRad(FOV / 2)) / (modo === "dado" ? PERTO_NO_CELULAR : 1);
       camera.position.z = d;
       camera.near = d - 600;
       camera.far = d + 100;
@@ -1425,7 +1490,7 @@ export function criarMesa(canvas: HTMLCanvasElement, avisos: Avisos, reduzido: b
     }, 250);
   };
   const vigiaAltura = new ResizeObserver(refazer);
-  vigiaAltura.observe(document.body);
+  if (modo === "mesa") vigiaAltura.observe(document.body);
   window.addEventListener("resize", refazer);
 
   ajustar();
@@ -1468,6 +1533,20 @@ export function criarMesa(canvas: HTMLCanvasElement, avisos: Avisos, reduzido: b
         conquistar("adaga");
       }
       return tipo;
+    },
+    jogar() {
+      if (!dado || segurando) return;
+      cercar();
+      const b = dado.body;
+      const ang = Math.random() * Math.PI * 2;
+      const forca = 600 + Math.random() * 500;
+      b.type = CANNON.Body.DYNAMIC;
+      b.position.z = Math.max(b.position.z, 90);
+      b.velocity.set(Math.cos(ang) * forca, Math.sin(ang) * forca, 380);
+      b.angularVelocity.set((Math.random() - 0.5) * 24, (Math.random() - 0.5) * 24, (Math.random() - 0.5) * 10);
+      b.wakeUp();
+      lancado = true;
+      parado = 0;
     },
     ondeEstaODado() {
       if (!dado) return null;

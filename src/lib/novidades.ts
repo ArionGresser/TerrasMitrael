@@ -151,6 +151,15 @@ const REGISTRO: Registro[] = [
   },
   {
     tipo: "aviso",
+    data: "2026-10-10T16:00-03:00",
+    titulo: "O d20 no celular",
+    texto:
+      "No celular, o botão do dado no canto abre a mesa em tela cheia: escolha o seu d20, arraste com o dedo e solte para jogar. As rolagens contam para as conquistas.",
+    href: "/conquistas/",
+    icone: "dado",
+  },
+  {
+    tipo: "aviso",
     data: "2026-10-10T00:05-03:00",
     titulo: "A mesa ganhou vida",
     texto:
@@ -210,7 +219,7 @@ export const EM_BREVE: { titulo: string; texto: string; icone: Icone }[] = [
   {
     titulo: "Conquistas no celular",
     texto:
-      "15 dos 26 feitos pedem a mesa, que por enquanto só aparece no computador. A ideia é o celular também poder rolar o d20 e jogar moedas.",
+      "O d20 já rola no celular, e as conquistas dele valem lá também. Faltam as moedas, a vela, a adaga e a bandeja: 7 dos 26 feitos ainda só saem na mesa do computador.",
     icone: "dado",
   },
   {

@@ -8,7 +8,7 @@ import { Vitrine } from "@/components/escolhas/Vitrine";
 import { useConquistas } from "@/components/TrocaCursor";
 
 /** O d20 visto de frente, pintado nas cores do estilo. */
-function DesenhoDoDado({ estilo, tamanho = 40 }: { estilo: EstiloDeDado; tamanho?: number }) {
+export function DesenhoDoDado({ estilo, tamanho = 40 }: { estilo: EstiloDeDado; tamanho?: number }) {
   const tinta = estilo.tinta[1];
   return (
     <svg viewBox="0 0 40 40" width={tamanho} height={tamanho} aria-hidden>

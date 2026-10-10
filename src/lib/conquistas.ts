@@ -42,7 +42,8 @@ export type Conquista = {
   alvo?: number;
   /** O degrau anterior: este só aparece depois dele. */
   requer?: string;
-  /** Só dá para fazer na mesa das laterais, que existe no computador. */
+  /** Só dá para fazer na mesa das laterais, que existe no computador. O
+   *  d20 não entra aqui: ele também rola na mesa do celular. */
   mesa?: boolean;
   premio?: Premio;
 };
@@ -54,18 +55,18 @@ export const CONQUISTAS: Conquista[] = [
   { chave: "batidas-ouro", nome: "Marceneiro", descricao: "Bata na madeira da mesa 300 vezes.", icone: "mao", nivel: "ouro", contador: "batidas", alvo: 300, requer: "batidas", premio: { tipo: "mao", chave: "manopla" } },
 
   // Rolar o d20
-  { chave: "primeiro-dado", nome: "Os dados estão lançados", descricao: "Role o d20 da mesa.", icone: "dado", nivel: "bronze", contador: "rolador", alvo: 1, mesa: true },
-  { chave: "rolador", nome: "Rolador compulsivo", descricao: "Role o d20 da mesa 25 vezes.", icone: "dado", nivel: "prata", contador: "rolador", alvo: 25, requer: "primeiro-dado", mesa: true, premio: { tipo: "dado", chave: "osso" } },
-  { chave: "rolador-ouro", nome: "Viciado em dados", descricao: "Role o d20 da mesa 100 vezes.", icone: "dado", nivel: "ouro", contador: "rolador", alvo: 100, requer: "rolador", mesa: true, premio: { tipo: "dado", chave: "ametista" } },
+  { chave: "primeiro-dado", nome: "Os dados estão lançados", descricao: "Role o d20 da mesa.", icone: "dado", nivel: "bronze", contador: "rolador", alvo: 1 },
+  { chave: "rolador", nome: "Rolador compulsivo", descricao: "Role o d20 da mesa 25 vezes.", icone: "dado", nivel: "prata", contador: "rolador", alvo: 25, requer: "primeiro-dado", premio: { tipo: "dado", chave: "osso" } },
+  { chave: "rolador-ouro", nome: "Viciado em dados", descricao: "Role o d20 da mesa 100 vezes.", icone: "dado", nivel: "ouro", contador: "rolador", alvo: 100, requer: "rolador", premio: { tipo: "dado", chave: "ametista" } },
 
   // Vinte natural
-  { chave: "vinte-natural", nome: "Vinte natural", descricao: "Tire 20 no d20 da mesa.", icone: "dado", nivel: "bronze", contador: "vintes", alvo: 1, mesa: true, premio: { tipo: "dado", chave: "esmeralda" } },
-  { chave: "vinte-natural-prata", nome: "Abençoado", descricao: "Tire 20 no d20 da mesa 3 vezes.", icone: "dado", nivel: "prata", contador: "vintes", alvo: 3, requer: "vinte-natural", mesa: true },
-  { chave: "vinte-natural-ouro", nome: "Escolhido do destino", descricao: "Tire 20 no d20 da mesa 10 vezes.", icone: "dado", nivel: "ouro", contador: "vintes", alvo: 10, requer: "vinte-natural-prata", mesa: true, premio: { tipo: "dado", chave: "magma" } },
+  { chave: "vinte-natural", nome: "Vinte natural", descricao: "Tire 20 no d20 da mesa.", icone: "dado", nivel: "bronze", contador: "vintes", alvo: 1, premio: { tipo: "dado", chave: "esmeralda" } },
+  { chave: "vinte-natural-prata", nome: "Abençoado", descricao: "Tire 20 no d20 da mesa 3 vezes.", icone: "dado", nivel: "prata", contador: "vintes", alvo: 3, requer: "vinte-natural" },
+  { chave: "vinte-natural-ouro", nome: "Escolhido do destino", descricao: "Tire 20 no d20 da mesa 10 vezes.", icone: "dado", nivel: "ouro", contador: "vintes", alvo: 10, requer: "vinte-natural-prata", premio: { tipo: "dado", chave: "magma" } },
 
   // Falha crítica
-  { chave: "falha-critica", nome: "Falha crítica", descricao: "Tire 1 no d20 da mesa. Acontece com os melhores.", icone: "dado", nivel: "bronze", contador: "uns", alvo: 1, mesa: true },
-  { chave: "falha-critica-prata", nome: "Amaldiçoado", descricao: "Tire 1 no d20 da mesa 5 vezes.", icone: "dado", nivel: "prata", contador: "uns", alvo: 5, requer: "falha-critica", mesa: true, premio: { tipo: "mao", chave: "esqueleto" } },
+  { chave: "falha-critica", nome: "Falha crítica", descricao: "Tire 1 no d20 da mesa. Acontece com os melhores.", icone: "dado", nivel: "bronze", contador: "uns", alvo: 1 },
+  { chave: "falha-critica-prata", nome: "Amaldiçoado", descricao: "Tire 1 no d20 da mesa 5 vezes.", icone: "dado", nivel: "prata", contador: "uns", alvo: 5, requer: "falha-critica", premio: { tipo: "mao", chave: "esqueleto" } },
 
   // Jogar moedas
   { chave: "moedas-bronze", nome: "Cara ou coroa", descricao: "Pegue uma moeda da mesa e jogue.", icone: "moeda", nivel: "bronze", contador: "moedas", alvo: 1, mesa: true },
