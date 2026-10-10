@@ -337,7 +337,7 @@ function Capa({
     return (
       <Image
         src={episodio.meta.capa}
-        alt=""
+        alt={pequena ? "" : (episodio.meta.capaAlt ?? "")}
         fill
         priority={!pequena}
         sizes={pequena ? "160px" : "(max-width: 768px) 100vw, 720px"}
