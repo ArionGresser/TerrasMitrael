@@ -37,3 +37,6 @@ pnpm-lock.yaml
 /video/tmp/
 /video/public/
 /video/out/
+
+# Cache do Python, gerado ao rodar os scripts
+__pycache__/
