@@ -212,53 +212,20 @@ export default function Home() {
           ))}
         </div>
 
-        {/* ---------- A Grande Guerra Leviana ---------- */}
-        <Revelar className="mt-14">
-          <Pergaminho borda={3} inclinacao="direita">
-            <Sobretitulo className="text-center">
-              O evento que define tudo
-            </Sobretitulo>
-
-            <TituloSecao className="mt-3 text-center">
-              A Grande Guerra Leviana
-            </TituloSecao>
-
-            <p className="mt-6 text-[0.95rem] leading-[1.8] sm:text-base">
-              Começou com uma expedição científica no ano 614 e terminou trinta
-              e seis anos depois, com um domo mágico selando um continente
-              inteiro. Entre um ponto e outro, Mitrael perdeu territórios,
-              gerações e a certeza de que estava sozinha no mundo. Não existe
-              uma única história neste cenário que não passe por ela.
-            </p>
-
-            <blockquote className="border-dourado-600/50 mt-7 border-l-2 pl-4">
-              <p className="text-tinta-700 text-[0.95rem] leading-relaxed italic">
-                Treze mil trezentos e trinta e três dias de guerra. Ao fim, a
-                vitória custou uma terra inteira, e ela ainda apodrece onde
-                caiu.
-              </p>
-            </blockquote>
-
-            <div className="mt-7 text-center">
-              <BotaoLink href="/eventos/guerra-leviana/" variante="primario">
-                Ler a história completa
-              </BotaoLink>
-            </div>
-          </Pergaminho>
-        </Revelar>
-
-        {/* ---------- Trailer ---------- */}
+        {/* ---------- O vídeo de apresentação ---------- */}
         <Revelar className="mt-14">
           <Pergaminho variante="cartao" borda={1}>
             <TituloCapitulo className="text-center">
-              Trailer da Primeira Temporada
+              Conheça Terras de Mitrael
             </TituloCapitulo>
             <p className="text-tinta-500 mt-1 mb-4 text-center text-xs">
-              Um registro dos primeiros anos de mesa
+              A mesa, o mapa, os personagens e as Crônicas em pouco mais de um minuto
             </p>
             <Trailer
-              idVideo="1LHHXE8YNrE"
-              titulo="Trailer da Primeira Temporada de Terras de Mitrael"
+              video="/video/conheca-terras-de-mitrael.mp4"
+              capa="/video/conheca-terras-de-mitrael-capa.webp"
+              titulo="Conheça Terras de Mitrael"
+              duracao="1:16"
             />
           </Pergaminho>
         </Revelar>

@@ -58,6 +58,12 @@ type Variante = "cera" | "marca";
  */
 const SETA_DE_VOLTA = "M65 63V53.5a12.5 12.5 0 0 0-12.5-12.5H35 M44 31 33.5 41 44 51";
 
+/**
+ * O play, gravado na cera do selo do vídeo. Um pouco à direita do centro,
+ * porque o triângulo pesa do lado reto e, no meio exato, parece torto.
+ */
+const PLAY = "M42.5 35 64.5 50 42.5 65Z";
+
 export function Selo({
   variante = "cera",
   emblema = "brasao",
@@ -66,8 +72,8 @@ export function Selo({
   id = "selo",
 }: {
   variante?: Variante;
-  /** O que o ferro gravou: o M do brasão, ou a seta do selo de voltar. */
-  emblema?: "brasao" | "voltar";
+  /** O que o ferro gravou: o M do brasão, a seta do selo de voltar ou o play do vídeo. */
+  emblema?: "brasao" | "voltar" | "play";
   /** Ferro apertado até o fim, como fica com o menu aberto. */
   pressionado?: boolean;
   className?: string;
@@ -258,6 +264,13 @@ export function Selo({
           <path d={SETA_DE_VOLTA} transform="translate(-0.7 -0.9)" stroke="#e07a85" strokeOpacity="0.7" />
           <path d={SETA_DE_VOLTA} stroke="#8e2430" />
           <path d={SETA_DE_VOLTA} stroke="#e9c27a" strokeOpacity="0.12" />
+        </g>
+      ) : emblema === "play" ? (
+        <g strokeWidth="5" strokeLinejoin="round">
+          <path d={PLAY} transform="translate(0.9 1.2)" fill="#2a060b" stroke="#2a060b" opacity="0.7" />
+          <path d={PLAY} transform="translate(-0.7 -0.9)" fill="#e07a85" stroke="#e07a85" opacity="0.7" />
+          <path d={PLAY} fill="#8e2430" stroke="#8e2430" />
+          <path d={PLAY} fill="#e9c27a" fillOpacity="0.12" />
         </g>
       ) : (
         <g transform={POSICAO_DO_M}>
