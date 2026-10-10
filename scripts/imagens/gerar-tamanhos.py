@@ -36,6 +36,12 @@ MINIMA = 300
 QUALIDADE = 78
 # As miniaturas dos itens já são pequenas de propósito
 PULAR = {"mini"}
+# Os retratos dos personagens são desenho a nanquim, de traço fino: na
+# qualidade de sempre a compressão borra as linhas e enche de blocos. Saem
+# com mais qualidade e ganham também a cópia de 828 px, para a lista no
+# computador não precisar baixar a de 1024.
+NITIDAS = {"personagens"}
+QUALIDADE_NITIDA = 88
 
 
 def main() -> None:
@@ -59,9 +65,11 @@ def main() -> None:
 
             relativo = original.relative_to(ORIGEM)
             ehwebp = nome.lower().endswith(".webp")
+            nitida = relativo.parts[0] in NITIDAS
+            qualidade = QUALIDADE_NITIDA if nitida else QUALIDADE
             # Só vale a cópia que fica bem menor: 480 px de uma arte de 512 quase
             # não economiza e só ocupa espaço
-            alvos = [w for w in LARGURAS if w <= largura * 0.8]
+            alvos = [w for w in LARGURAS if w <= largura * (0.82 if nitida else 0.8)]
             if not ehwebp:
                 alvos.append(largura)
             if not alvos:
@@ -75,7 +83,7 @@ def main() -> None:
                     copia = imagem.convert("RGBA" if imagem.mode in ("RGBA", "LA", "P") else "RGB")
                     if w != largura:
                         copia = copia.resize((w, round(altura * w / largura)), Image.LANCZOS)
-                    copia.save(saida, "WEBP", quality=QUALIDADE, method=6)
+                    copia.save(saida, "WEBP", quality=qualidade, method=6)
                     feitas += 1
             antes += original.stat().st_size
             depois += min((DESTINO / relativo.parent / f"{relativo.stem}.w{w}.webp").stat().st_size for w in alvos)

@@ -127,6 +127,13 @@ export type MetaPersonagem = {
   rosto?: { x: number; y: number };
   ilustracao?: string;
   ilustracaoAlt?: string;
+  /**
+   * Mostra a ilustração inteira, num quadro quadrado, em vez de cortá-la
+   * na faixa larga. Para arte quadrada que não pode perder as bordas, como
+   * um retrato encomendado.
+   */
+  ilustracaoQuadrada?: boolean;
+  ilustracaoLegenda?: string;
   /** Símbolo do clã ou da casa, em PNG ou WebP com fundo transparente. */
   brasao?: string;
   /**
@@ -217,6 +224,21 @@ export const PERSONAGENS_ATUAIS = PERSONAGENS.filter(
 
 /** Fora das duas categorias: o Mestre. */
 export const FORA_DE_CATEGORIA = PERSONAGENS.filter((p) => p.meta.mestre);
+
+/**
+ * Quem vem antes e depois na ficha, na mesma ordem da lista: os atuais, a
+ * primeira geração e o Mestre. As pontas dão a volta, para os dois botões
+ * da ficha sempre levarem a alguém.
+ */
+export function vizinhos(slug: string): { anterior: Personagem; proximo: Personagem } | undefined {
+  const ordem = [...PERSONAGENS_ATUAIS, ...ORIGIN_HEROES, ...FORA_DE_CATEGORIA];
+  const i = ordem.findIndex((p) => p.meta.slug === slug);
+  if (i < 0 || ordem.length < 2) return undefined;
+  return {
+    anterior: ordem[(i - 1 + ordem.length) % ordem.length],
+    proximo: ordem[(i + 1) % ordem.length],
+  };
+}
 
 export function buscarPersonagem(slug: string): Personagem | undefined {
   return PERSONAGENS.find((p) => p.meta.slug === slug);
