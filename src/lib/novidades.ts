@@ -5,7 +5,7 @@ import { SERIES_DISPONIVEIS, chaveDaTemporada, chaveDoEpisodio } from "./contos"
  * O mural de novidades: tudo o que entrou no site, do mais novo para o mais
  * antigo. A página inicial mostra as primeiras; /novidades/ mostra todas.
  *
- * Os episódios dos Contos entram sozinhos, pela data `publicado` da meta de
+ * Os episódios das Crônicas entram sozinhos, pela data `publicado` da meta de
  * cada um. O resto (personagens, abas novas) vai em REGISTRO, com data e
  * hora no fuso de Brasília. A ordem do arquivo não importa: a lista sai
  * sempre ordenada pela data.
@@ -40,7 +40,7 @@ const REGISTRO: Registro[] = [
   {
     tipo: "aviso",
     data: "2026-10-06T20:47-03:00",
-    titulo: "Contos de Mitrael",
+    titulo: "Crônicas de Mitrael",
     texto:
       "Uma aba nova, onde cada sessão jogada vira episódio, temporada por temporada.",
     href: "/contos/",
@@ -87,7 +87,7 @@ const REGISTRO: Registro[] = [
     data: "2026-10-07T16:01-03:00",
     titulo: "Johnny de retrato novo",
     texto:
-      "O goblin ganhou um retrato mais nítido e mais fiel a ele, na ficha, na lista de personagens e nos Contos.",
+      "O goblin ganhou um retrato mais nítido e mais fiel a ele, na ficha, na lista de personagens e nas Crônicas.",
     href: "/personagens/johnny-bling-bling/",
     imagem: "/images/personagens/johnny-bling-bling-retrato.jpg",
     posicao: "40% 14%",
@@ -140,7 +140,7 @@ const REGISTRO: Registro[] = [
   {
     tipo: "aviso",
     data: "2026-10-09T10:30-03:00",
-    titulo: "Os Contos viraram livro",
+    titulo: "As Crônicas viraram livro",
     texto:
       "Cada temporada é um livro de capa de couro: as páginas viram com o clique, as setas ou o dedo, e a fita marca onde você parou.",
     href: "/contos/cronicas/temporada-2/",

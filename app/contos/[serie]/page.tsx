@@ -36,9 +36,9 @@ export default async function PaginaSerie({ params }: Props) {
   return (
     <>
       <main className="mx-auto max-w-3xl px-4 pt-20 pb-8 sm:px-6 sm:pt-28">
-        <Trilha passos={[{ nome: "Contos", href: "/contos/" }, { nome: serie.titulo }]} />
+        <Pergaminho borda={1}>
+          <Trilha passos={[{ nome: "Crônicas", href: "/contos/" }, { nome: serie.titulo }]} lugar="papel" />
 
-        <Pergaminho borda={1} className="mt-5">
           <div className="flex flex-col items-center gap-7 sm:flex-row sm:items-start sm:gap-8">
             <div className="w-40 shrink-0 sm:w-48">
               <Cartaz serie={{ ...serie, disponivel: true }} prioridade />
@@ -69,7 +69,7 @@ export default async function PaginaSerie({ params }: Props) {
               >
                 <div className="mx-auto w-full max-w-[16rem]">
                   <Poster
-                    arte={{ tipo: "mosaico", personagens: temporada.elenco }}
+                    arte={temporada.arte ?? { tipo: "mosaico", personagens: temporada.elenco }}
                     selo={temporada.titulo}
                     titulo={`Temporada ${temporada.numero}`}
                     chamada={contagemDeEpisodios(temporada)}

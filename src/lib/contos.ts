@@ -9,7 +9,7 @@ import * as t2e5 from "@/content/contos/cronicas/temporada-2/episodio-05.mdx";
 import * as t2e6 from "@/content/contos/cronicas/temporada-2/episodio-06.mdx";
 
 /**
- * Os Contos de Mitrael: as sessões jogadas, contadas como história.
+ * As Crônicas de Mitrael: as sessões jogadas, contadas como história.
  *
  * Organizado como uma estante de séries. Cada série tem temporadas, cada
  * temporada tem episódios, e cada episódio é uma sessão de mesa reescrita.
@@ -57,6 +57,8 @@ export type Temporada = {
   sinopse: string;
   /** Chaves dos personagens em src/lib/personagens.ts, na ordem de cena. */
   elenco: string[];
+  /** A capa da temporada. Sem ela, o cartaz mostra os rostos do elenco. */
+  arte?: ArteDoCartaz;
   episodios: Episodio[];
 };
 
@@ -98,20 +100,15 @@ function episodios(modulos: { meta: unknown; default: unknown }[]): Episodio[] {
 export const SERIES: Serie[] = [
   {
     slug: "cronicas",
-    titulo: "Crônicas de Mitrael",
+    titulo: "A Saga de Mitrael",
     selo: "Campanha principal",
     chamada: "Tudo o que aconteceu na mesa, sessão a sessão",
     sinopse:
       "A campanha principal de Terras de Mitrael, contada episódio por episódio. O que está escrito aqui foi jogado: as escolhas, os dados e o preço de cada um.",
     arte: {
-      tipo: "mosaico",
-      personagens: [
-        "lily-bouvardia",
-        "pyhmm-phylimm",
-        "egon-vitriol",
-        "johnny-bling-bling",
-        "vrakyr-windrose",
-      ],
+      tipo: "imagem",
+      imagem: "/images/contos/cronicas/saga-capa.webp",
+      alt: "As duas gerações: os cinco do novo elenco numa estrada rumo às montanhas, e os sete da primeira geração no céu dourado, olhando por eles",
     },
     disponivel: true,
     temporadas: [
@@ -120,6 +117,11 @@ export const SERIES: Serie[] = [
         titulo: "A primeira geração",
         sinopse:
           "As sessões do elenco antigo, jogadas sob o sistema de regras da casa, do primeiro ano de mesa em diante. Foi aqui que boa parte do mapa ganhou nome.",
+        arte: {
+          tipo: "imagem",
+          imagem: "/images/contos/cronicas/t1-capa.webp",
+          alt: "Os sete da primeira geração no alto de um morro ao nascer do sol, olhando uma terra de florestas, rios e montanhas",
+        },
         elenco: [
           "howai",
           "levi",
@@ -136,6 +138,11 @@ export const SERIES: Serie[] = [
         titulo: "O novo elenco",
         sinopse:
           "Cinco desconhecidos, já sob as regras de 2024: uma clériga centaura, um pequenino arqueólogo, um goblin bruxo, um anão mineiro e um paladino leonino.",
+        arte: {
+          tipo: "imagem",
+          imagem: "/images/contos/cronicas/t2-capa.webp",
+          alt: "Os cinco do novo elenco saindo da boca de uma mina ao pôr do sol, com um vilarejo no vale lá embaixo",
+        },
         elenco: [
           "lily-bouvardia",
           "pyhmm-phylimm",
@@ -171,7 +178,7 @@ export const SERIES: Serie[] = [
       "As fórmulas, os experimentos e as explosões de Filavandrel, página por página.",
     arte: {
       tipo: "imagem",
-      imagem: "/images/filvandrel.jpg",
+      imagem: "/images/personagens/filavandrel-retrato.jpg",
       alt: "Filavandrel",
     },
     disponivel: false,

@@ -2,18 +2,15 @@ import type { Metadata } from "next";
 import { SERIES } from "@/lib/contos";
 import { EVENTOS } from "@/lib/eventos";
 import { Cartaz, Poster } from "@/components/contos/Cartaz";
-import { Pergaminho } from "@/components/ui/Pergaminho";
 import { Revelar } from "@/components/ui/Revelar";
 import { Rodape } from "@/components/Rodape";
+import { Capa } from "@/components/ui/Capa";
 import {
-  TituloBrasao,
   TituloSecao,
-  Sobretitulo,
-  Ornamento,
 } from "@/components/ui/Titulo";
 
 export const metadata: Metadata = {
-  title: "Contos",
+  title: "Crônicas",
   description:
     "As sessões jogadas em Terras de Mitrael, contadas como história, e os eventos que moldaram o continente, como a Grande Guerra Leviana.",
 };
@@ -25,17 +22,16 @@ export default function PaginaContos() {
   return (
     <>
       <main className="mx-auto max-w-3xl px-4 pt-20 pb-8 sm:px-6 sm:pt-28">
-        <Pergaminho inclinacao="direita" borda={2}>
-          <header className="text-center">
-            <Sobretitulo>O que aconteceu na mesa</Sobretitulo>
-            <TituloBrasao className="mt-4">Contos de Mitrael</TituloBrasao>
-            <Ornamento className="mt-6" />
-            <p className="text-tinta-700 mx-auto mt-6 max-w-lg text-base leading-relaxed italic">
-              As sessões jogadas, contadas episódio por episódio, e a
-              história que o continente carregava antes delas.
-            </p>
-          </header>
-        </Pergaminho>
+        <Capa
+          imagem="/images/contos/cronicas-cartao.webp"
+          sobretitulo="O que aconteceu na mesa"
+          titulo="Crônicas de Mitrael"
+        >
+          <p>
+            As sessões jogadas, contadas episódio por episódio, e a história
+            que o continente carregava antes delas.
+          </p>
+        </Capa>
 
         <Revelar className="mt-14">
           <TituloSecao tom="claro" className="text-center">

@@ -14,12 +14,15 @@ import { SeloDeVolta } from "@/components/navegacao/SeloDeVolta";
  */
 export function Trilha({
   passos,
+  lugar = "livro",
 }: {
   passos: { nome: string; href?: string }[];
+  /** "livro" por cima do livro de couro; "papel" dentro de uma folha. */
+  lugar?: "livro" | "papel";
 }) {
   const acima = [...passos].reverse().find((p) => p.href);
   if (!acima?.href) return null;
-  return <SeloDeVolta href={acima.href} rotulo={acima.nome} />;
+  return <SeloDeVolta href={acima.href} rotulo={acima.nome} lugar={lugar} />;
 }
 
 /**

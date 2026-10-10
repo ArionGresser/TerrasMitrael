@@ -7,7 +7,7 @@ import { PainelDeConquistas } from "@/components/conquistas/PainelDeConquistas";
 export const metadata: Metadata = {
   title: "Conquistas",
   description:
-    "Os pequenos feitos que dá para realizar pelo site: rolar um 20 natural na mesa, deixar uma moeda em pé, ler um livro dos Contos até o fim.",
+    "Os pequenos feitos que dá para realizar pelo site: rolar um 20 natural na mesa, deixar uma moeda em pé, ler um livro das Crônicas até o fim.",
 };
 
 export default function PaginaConquistas() {
@@ -20,7 +20,7 @@ export default function PaginaConquistas() {
             <TituloBrasao className="mt-4">Conquistas</TituloBrasao>
             <Ornamento className="mt-6" />
             <p className="text-tinta-700 mx-auto mt-6 max-w-lg text-base leading-relaxed italic">
-              Role os dados, jogue as moedas, leia os Contos e explore o mapa. Alguns feitos acontecem sem querer,
+              Role os dados, jogue as moedas, leia as Crônicas e explore o mapa. Alguns feitos acontecem sem querer,
               outros pedem paciência.
             </p>
           </header>

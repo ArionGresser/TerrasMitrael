@@ -19,7 +19,7 @@
  * - `conquistar(chave)`: o feito é um instante (rolar o dado na bandeja);
  * - `contar(contador)`: o feito é repetir até o alvo (rolar 25 vezes);
  * - `marcar(contador, item)`: o feito é juntar coisas diferentes até o alvo
- *   (abrir 5 lugares do mapa, ler 3 livros dos Contos).
+ *   (abrir 5 lugares do mapa, ler 3 livros das Crônicas).
  *
  * Quem conquista avisa a página com o evento `mitrael:conquista`, e o aviso
  * na tela (AvisoDeConquista) mostra e toca o som. Quem chama não precisa
@@ -73,9 +73,9 @@ export const CONQUISTAS: Conquista[] = [
   { chave: "moedas-ouro", nome: "Chuva de ouro", descricao: "Jogue 100 moedas pela mesa.", icone: "moeda", nivel: "ouro", contador: "moedas", alvo: 100, requer: "moedas", mesa: true, premio: { tipo: "dado", chave: "rubi" } },
 
   // Ler os Contos
-  { chave: "leitor", nome: "Até a última página", descricao: "Leia um livro dos Contos até a última página.", icone: "livro", nivel: "bronze", contador: "leitor", alvo: 1 },
-  { chave: "leitor-prata", nome: "Rato de biblioteca", descricao: "Leia 3 livros dos Contos até a última página.", icone: "livro", nivel: "prata", contador: "leitor", alvo: 3, requer: "leitor", premio: { tipo: "dado", chave: "safira" } },
-  { chave: "leitor-ouro", nome: "Cronista de Mitrael", descricao: "Leia 6 livros dos Contos até a última página.", icone: "livro", nivel: "ouro", contador: "leitor", alvo: 6, requer: "leitor-prata" },
+  { chave: "leitor", nome: "Até a última página", descricao: "Leia um livro das Crônicas até a última página.", icone: "livro", nivel: "bronze", contador: "leitor", alvo: 1 },
+  { chave: "leitor-prata", nome: "Rato de biblioteca", descricao: "Leia 3 livros das Crônicas até a última página.", icone: "livro", nivel: "prata", contador: "leitor", alvo: 3, requer: "leitor", premio: { tipo: "dado", chave: "safira" } },
+  { chave: "leitor-ouro", nome: "Cronista de Mitrael", descricao: "Leia 6 livros das Crônicas até a última página.", icone: "livro", nivel: "ouro", contador: "leitor", alvo: 6, requer: "leitor-prata" },
 
   // Explorar o mapa
   { chave: "explorador-bronze", nome: "Primeiro passo", descricao: "Abra um lugar ou uma região no mapa.", icone: "mapa", nivel: "bronze", contador: "explorador", alvo: 1 },

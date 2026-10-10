@@ -29,7 +29,7 @@ export const SECOES: Secao[] = [
   },
   {
     href: "/contos/",
-    nome: "Contos",
+    nome: "Crônicas",
     descricao: "As sessões jogadas e a história do continente",
     inclui: ["/eventos/"],
   },

@@ -44,7 +44,7 @@ export default async function PaginaEvento({ params }: Props) {
   const { meta, Conteudo } = evento;
 
   const trilha = (
-    <Trilha passos={[{ nome: "Contos", href: "/contos/" }, { nome: meta.nome }]} />
+    <Trilha passos={[{ nome: "Crônicas", href: "/contos/" }, { nome: meta.nome }]} />
   );
 
   // A capa de couro: a cena da guerra num quadro, e o nome gravado em ouro
@@ -92,7 +92,7 @@ export default async function PaginaEvento({ params }: Props) {
           A Terra dos Putrefados
         </BotaoLink>
         <BotaoLink href="/contos/" variante="secundario" className="text-xs">
-          Voltar aos Contos
+          Voltar às Crônicas
         </BotaoLink>
       </div>
     </div>
@@ -166,7 +166,7 @@ export default async function PaginaEvento({ params }: Props) {
                 A Terra dos Putrefados
               </BotaoLink>
               <BotaoLink href="/contos/" variante="secundario" className="text-xs">
-                Voltar aos Contos
+                Voltar às Crônicas
               </BotaoLink>
             </div>
           </Pergaminho>
@@ -191,7 +191,7 @@ export default async function PaginaEvento({ params }: Props) {
         }
         depois={[<Fragment key="fim">{fim}</Fragment>]}
         anterior="/contos/"
-        rotuloAnterior="Contos"
+        rotuloAnterior="Crônicas"
         capitulosEmPagina
         classico={classico}
       />

@@ -58,7 +58,7 @@ export default async function PaginaTemporada({ params }: Props) {
   const trilha = (
     <Trilha
       passos={[
-        { nome: "Contos", href: "/contos/" },
+        { nome: "Crônicas", href: "/contos/" },
         { nome: serie.titulo, href: `/contos/${serie.slug}/` },
         { nome: `Temporada ${temporada.numero}` },
       ]}
@@ -76,7 +76,11 @@ export default async function PaginaTemporada({ params }: Props) {
         Temporada {temporada.numero}
       </p>
       <div className="border-dourado-400/60 relative mt-6 aspect-[4/5] w-3/4 overflow-hidden rounded-sm border-2 shadow-[0_6px_16px_rgba(0,0,0,0.6)]">
-        <Arte arte={{ tipo: "mosaico", personagens: temporada.elenco }} prioridade sizes="300px" />
+        <Arte
+          arte={temporada.arte ?? { tipo: "mosaico", personagens: temporada.elenco }}
+          prioridade
+          sizes="300px"
+        />
       </div>
       <p className="font-brasao text-dourado-200 mt-6 text-2xl leading-tight [text-shadow:0_1px_0_rgb(0_0_0/0.6)]">
         {temporada.titulo}

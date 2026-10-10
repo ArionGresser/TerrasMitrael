@@ -116,7 +116,7 @@ export default async function PaginaEpisodio({ params }: Props) {
   const trilha = (
     <Trilha
       passos={[
-        { nome: "Contos", href: "/contos/" },
+        { nome: "Crônicas", href: "/contos/" },
         { nome: serie.titulo, href: `/contos/${serie.slug}/` },
         { nome: `Temporada ${temporada.numero}`, href: `${base}/` },
         { nome: `Episódio ${episodio.meta.numero}` },
@@ -134,7 +134,7 @@ export default async function PaginaEpisodio({ params }: Props) {
       <main className="mx-auto max-w-3xl px-4 pt-20 pb-8 sm:px-6 sm:pt-28">
         <Trilha
           passos={[
-            { nome: "Contos", href: "/contos/" },
+            { nome: "Crônicas", href: "/contos/" },
             { nome: serie.titulo, href: `/contos/${serie.slug}/` },
             { nome: `Temporada ${temporada.numero}`, href: `${base}/` },
             { nome: `Episódio ${episodio.meta.numero}` },

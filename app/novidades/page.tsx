@@ -10,7 +10,7 @@ import { SeloDeVolta } from "@/components/navegacao/SeloDeVolta";
 export const metadata: Metadata = {
   title: "Novidades",
   description:
-    "Tudo o que entrou em Terras de Mitrael, do mais novo para o mais antigo: episódios dos Contos, personagens, abas e mudanças no site.",
+    "Tudo o que entrou em Terras de Mitrael, do mais novo para o mais antigo: episódios das Crônicas, personagens, abas e mudanças no site.",
 };
 
 export default function PaginaNovidades() {
@@ -19,9 +19,9 @@ export default function PaginaNovidades() {
   return (
     <>
       <main className="mx-auto max-w-3xl px-4 pt-20 pb-8 sm:px-6 sm:pt-28">
-        <SeloDeVolta href="/" rotulo="Início" />
+        <Pergaminho borda={2}>
+          <SeloDeVolta href="/" rotulo="Início" />
 
-        <Pergaminho borda={2} className="mt-5">
           <header className="text-center">
             <Sobretitulo>O mural da taverna</Sobretitulo>
             <TituloBrasao className="mt-4">Novidades</TituloBrasao>

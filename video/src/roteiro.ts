@@ -50,7 +50,7 @@ const PLANOS: Plano[] = [
     tela: 5.0,
     inicio: 0.4,
     velocidade: 1,
-    legenda: { nome: "Contos", texto: "As sessões jogadas e a história do continente" },
+    legenda: { nome: "Crônicas", texto: "As sessões jogadas e a história do continente" },
   },
   {
     cena: "personagem",
