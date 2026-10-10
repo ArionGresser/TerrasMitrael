@@ -1558,3 +1558,73 @@ html[data-cursor] .cursor-grabbing {
     }
   }
 }
+
+/* ============================================================
+   Cartas (src/components/cartas)
+   O texto das regras dentro do painel da carta: tudo na medida da
+   largura da carta (cqw), para ser a mesma carta na tela e no papel.
+   --escala encolhe o texto quando ele não cabe na impressão.
+   ============================================================ */
+
+.carta-texto {
+  --escala: 1;
+  font-size: calc(3.5cqw * var(--escala));
+  line-height: 1.32;
+  color: var(--color-tinta-900);
+  scrollbar-width: thin;
+}
+
+.carta-texto :is(p, li, td, th, div, span, a, strong, em, h3, h4) {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* Os espaços entre blocos do texto das regras, na medida da carta */
+.carta-texto [class*="space-y"] > :not(:last-child) {
+  margin-block-end: 0.5em;
+}
+
+.carta-texto table {
+  font-size: 0.86em;
+}
+
+.carta-texto h3 {
+  padding-top: 0.3em;
+  font-size: 1.05em;
+}
+
+.carta-ficha {
+  font-size: 0.86em;
+  line-height: 1.25;
+  color: var(--color-tinta-700);
+}
+
+/* A impressão de uma carta: só ela, no tamanho de carta de baralho */
+#area-de-impressao {
+  display: none;
+}
+
+@media print {
+  html.imprimindo body > *:not(#area-de-impressao) {
+    display: none !important;
+  }
+
+  html.imprimindo #area-de-impressao {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4mm;
+  }
+
+  html.imprimindo #area-de-impressao .carta {
+    width: 63mm;
+    break-inside: avoid;
+  }
+
+  html.imprimindo #area-de-impressao .carta-texto {
+    overflow: hidden;
+  }
+
+  @page {
+    margin: 10mm;
+  }
+}

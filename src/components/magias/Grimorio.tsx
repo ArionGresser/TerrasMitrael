@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { ArteDoCartao, CARTAO_COM_ARTE, GRADE_DE_CARTOES } from "@/components/ui/QuadroDeArte";
+import { JanelaDaCarta, cliqueSimples, useCartaDaPagina } from "@/components/cartas/JanelaDaCarta";
 import { CLASSES, ESCOLAS, circulo, type ResumoDaMagia } from "@/lib/magias-base";
 
 /**
@@ -40,6 +41,7 @@ function normalizar(texto: string): string {
 }
 
 export function Grimorio({ magias }: { magias: ResumoDaMagia[] }) {
+  const carta = useCartaDaPagina();
   const [filtros, setFiltros] = useState<Filtros>(VAZIO);
 
   // Lê os filtros do endereço ao abrir a página
@@ -107,6 +109,14 @@ export function Grimorio({ magias }: { magias: ResumoDaMagia[] }) {
 
   return (
     <div>
+      <JanelaDaCarta
+        aberta={!!carta.pagina}
+        tipo="magia"
+        pagina={carta.pagina ?? undefined}
+        aoFechar={carta.fechar}
+      >
+        {carta.conteudo}
+      </JanelaDaCarta>
       <div className="painel-ficha mt-4 px-3 pt-6 pb-4 [color-scheme:light] sm:px-5">
         <h2 className="placa-painel font-titulo text-tinta-900 absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 text-[0.66rem] leading-none font-bold tracking-[0.2em] whitespace-nowrap uppercase">
           Procurar
@@ -223,7 +233,16 @@ export function Grimorio({ magias }: { magias: ResumoDaMagia[] }) {
               <ul className={`mt-3 ${GRADE_DE_CARTOES}`}>
                 {lista.map((m) => (
                   <li key={m.slug}>
-                    <Link href={`/magias/${m.slug}/`} className={CARTAO_COM_ARTE}>
+                    <Link
+                      href={`/magias/${m.slug}/`}
+                      className={CARTAO_COM_ARTE}
+                      onClick={(e) => {
+                        // Toque comum abre a carta; Ctrl+clique ainda abre a página
+                        if (!cliqueSimples(e)) return;
+                        e.preventDefault();
+                        carta.abrir(`/magias/${m.slug}/`);
+                      }}
+                    >
                       <ArteDoCartao src={m.icone} />
                       <span className="min-w-0 flex-1">
                         <span className="text-tinta-900 block leading-snug font-semibold group-hover:underline">

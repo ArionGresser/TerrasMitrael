@@ -5,17 +5,13 @@ import {
   useContext,
   useEffect,
   useMemo,
-  useRef,
   useState,
   type ReactNode,
 } from "react";
 import { Dobra } from "@/components/ui/Dobra";
-import {
-  ArteDoCartao,
-  CARTAO_COM_ARTE,
-  QuadroDeArte,
-} from "@/components/ui/QuadroDeArte";
-import { tocar } from "@/lib/som";
+import { ArteDoCartao, CARTAO_COM_ARTE } from "@/components/ui/QuadroDeArte";
+import { Carta } from "@/components/cartas/Carta";
+import { JanelaDaCarta } from "@/components/cartas/JanelaDaCarta";
 
 /**
  * As peças de um documento de regra comprido, como o Equipamento: as
@@ -168,8 +164,8 @@ export function TopicoRecolhido({
 
 /**
  * Um objeto do equipamento de aventura num cartão, com a arte grande e o
- * nome. Ao tocar, abre uma janela com a pintura maior, o preço e a regra.
- * Um link para o item (#corda) já chega com a janela aberta.
+ * nome. Ao tocar, abre a carta do equipamento, que também se imprime.
+ * Um link para o item (#corda) já chega com a carta aberta.
  */
 export function ItemComArte({
   id,
@@ -185,39 +181,20 @@ export function ItemComArte({
   arte?: string;
   children: ReactNode;
 }) {
-  const janela = useRef<HTMLDialogElement>(null);
+  const [aberta, setAberta] = useState(false);
 
   useEffect(() => {
-    const conferir = () => {
-      const d = janela.current;
-      if (!d) return;
-      if (window.location.hash === `#${id}`) {
-        if (!d.open) d.showModal();
-      } else if (d.open) d.close();
-    };
+    const conferir = () => setAberta(window.location.hash === `#${id}`);
     conferir();
     window.addEventListener("hashchange", conferir);
     return () => window.removeEventListener("hashchange", conferir);
   }, [id]);
 
-  function abrir() {
-    tocar("abrirMenu");
-    janela.current?.showModal();
-  }
-
-  function fechar() {
-    janela.current?.close();
-  }
-
   // Ao fechar, o # sai do endereço, para o mesmo link poder abrir de novo
   function aoFechar() {
-    tocar("fecharMenu");
+    setAberta(false);
     if (window.location.hash === `#${id}`) {
-      window.history.replaceState(
-        null,
-        "",
-        window.location.pathname + window.location.search,
-      );
+      window.history.replaceState(null, "", window.location.pathname + window.location.search);
     }
   }
 
@@ -225,7 +202,7 @@ export function ItemComArte({
     <div id={id} className="h-full scroll-mt-24">
       <button
         type="button"
-        onClick={abrir}
+        onClick={() => setAberta(true)}
         aria-haspopup="dialog"
         className={CARTAO_COM_ARTE}
       >
@@ -242,44 +219,17 @@ export function ItemComArte({
         </span>
       </button>
 
-      <dialog
-        ref={janela}
-        onClose={aoFechar}
-        // Tocar fora do papel fecha a janela
-        onClick={(e) => {
-          if (e.target === e.currentTarget) fechar();
-        }}
-        aria-labelledby={`${id}-titulo`}
-        className="m-auto max-h-[calc(100dvh-2rem)] w-[min(34rem,calc(100%-2rem))] overflow-visible bg-transparent p-0 backdrop:bg-black/70"
-      >
-        <div className="textura-pergaminho borda-envelhecida pergaminho-borda-1 text-tinta-900 relative max-h-[calc(100dvh-2rem)] overflow-y-auto px-5 pt-12 pb-7 sm:px-8">
-          <button
-            type="button"
-            onClick={fechar}
-            aria-label="Fechar"
-            className="text-tinta-700 hover:text-heraldico-vermelho absolute top-2 right-2 grid size-11 place-items-center text-xl"
-          >
-            <span aria-hidden>✕</span>
-          </button>
-          <QuadroDeArte
-            src={arte}
-            alt={`Ilustração: ${titulo}`}
-            formato="quadrado"
-          />
-          <h3
-            id={`${id}-titulo`}
-            className="font-titulo text-tinta-900 mt-5 text-center text-2xl font-bold"
-          >
-            {titulo}
-          </h3>
-          {detalhe ? (
-            <p className="text-tinta-500 mt-1 text-center text-sm italic">
-              {detalhe}
-            </p>
-          ) : null}
-          <div className="mt-5 [&>*:first-child]:mt-0">{children}</div>
-        </div>
-      </dialog>
+      <JanelaDaCarta aberta={aberta} tipo="equipamento" aoFechar={aoFechar}>
+        <Carta
+          tipo="equipamento"
+          nome={titulo}
+          arte={arte}
+          linhaDeTipo="Equipamento de aventura"
+          rodape={detalhe}
+        >
+          {children}
+        </Carta>
+      </JanelaDaCarta>
     </div>
   );
 }

@@ -81,7 +81,9 @@ def salvar_carta(imagem, destino, avisos, nome):
         imagem.putdata([(0, 0, 0, 0) if m else px for m, px in zip(magenta, imagem.getdata())])
     if imagem.getextrema()[3][0] == 255:
         avisos.append(f"{nome}: veio sem transparência nem magenta; a janela da arte vai precisar de recorte")
-    caixa = imagem.getbbox()
+    # O recorte olha só o que é carta de verdade: em volta costuma sobrar um
+    # resto quase invisível de pintura, que não deve contar como carta
+    caixa = imagem.getchannel("A").point(lambda a: 255 if a > 40 else 0).getbbox()
     if caixa:
         imagem = imagem.crop(caixa)
     w, h = imagem.size

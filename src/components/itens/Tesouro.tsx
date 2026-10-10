@@ -9,6 +9,7 @@ import {
   type ResumoDoItem,
 } from "@/lib/itens-base";
 import { ArteDoCartao, CARTAO_COM_ARTE, GRADE_DE_CARTOES } from "@/components/ui/QuadroDeArte";
+import { JanelaDaCarta, cliqueSimples, useCartaDaPagina } from "@/components/cartas/JanelaDaCarta";
 
 /**
  * A lista de itens mágicos com busca e filtros, no mesmo molde do Grimório.
@@ -36,6 +37,7 @@ function inicial(nome: string): string {
 }
 
 export function Tesouro({ itens }: { itens: ResumoDoItem[] }) {
+  const carta = useCartaDaPagina();
   const [filtros, setFiltros] = useState<Filtros>(VAZIO);
 
   useEffect(() => {
@@ -96,6 +98,14 @@ export function Tesouro({ itens }: { itens: ResumoDoItem[] }) {
 
   return (
     <div>
+      <JanelaDaCarta
+        aberta={!!carta.pagina}
+        tipo="item-magico"
+        pagina={carta.pagina ?? undefined}
+        aoFechar={carta.fechar}
+      >
+        {carta.conteudo}
+      </JanelaDaCarta>
       <div className="painel-ficha mt-4 px-3 pt-6 pb-4 [color-scheme:light] sm:px-5">
         <h2 className="placa-painel font-titulo text-tinta-900 absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 text-[0.66rem] leading-none font-bold tracking-[0.2em] whitespace-nowrap uppercase">
           Procurar
@@ -193,7 +203,16 @@ export function Tesouro({ itens }: { itens: ResumoDoItem[] }) {
               <ul className={`mt-3 ${GRADE_DE_CARTOES}`}>
                 {lista.map((i) => (
                   <li key={i.slug}>
-                    <Link href={`/itens/${i.slug}/`} className={CARTAO_COM_ARTE}>
+                    <Link
+                      href={`/itens/${i.slug}/`}
+                      className={CARTAO_COM_ARTE}
+                      onClick={(e) => {
+                        // Toque comum abre a carta; Ctrl+clique ainda abre a página
+                        if (!cliqueSimples(e)) return;
+                        e.preventDefault();
+                        carta.abrir(`/itens/${i.slug}/`);
+                      }}
+                    >
                       <ArteDoCartao src={i.imagem} />
                       <span className="min-w-0 flex-1">
                         <span className="text-tinta-900 block leading-snug font-semibold group-hover:underline">

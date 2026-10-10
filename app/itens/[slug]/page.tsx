@@ -11,6 +11,9 @@ import { TituloBrasao, Sobretitulo, Ornamento } from "@/components/ui/Titulo";
 import { QuadroDeArte } from "@/components/ui/QuadroDeArte";
 import { arte } from "@/lib/arte";
 import { SeloDeVolta } from "@/components/navegacao/SeloDeVolta";
+import { Dobra } from "@/components/ui/Dobra";
+import { CartaDoItem } from "@/components/cartas/CartasDoLivro";
+import { BotaoImprimirCarta } from "@/components/cartas/JanelaDaCarta";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -59,6 +62,19 @@ export default async function PaginaItem({ params }: Props) {
 
             <div className="mt-6">
               <TextoDeRegra texto={item.texto} />
+            </div>
+
+            {/* A carta do item: é daqui que a lista tira a carta que abre por
+                cima dela */}
+            <div data-com-carta className="mt-10">
+              <Dobra titulo="A carta">
+                <div className="mx-auto w-full max-w-[22rem]">
+                  <CartaDoItem item={item} arte={arte("itens", item.slug)} />
+                </div>
+                <div className="mt-5 text-center">
+                  <BotaoImprimirCarta />
+                </div>
+              </Dobra>
             </div>
 
             <Ornamento className="mt-10" />

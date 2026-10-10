@@ -12,6 +12,9 @@ import { BotaoLink } from "@/components/ui/Botao";
 import { Rodape } from "@/components/Rodape";
 import { TituloBrasao, Sobretitulo, Ornamento } from "@/components/ui/Titulo";
 import { SeloDeVolta } from "@/components/navegacao/SeloDeVolta";
+import { Dobra } from "@/components/ui/Dobra";
+import { CartaDaMagia } from "@/components/cartas/CartasDoLivro";
+import { BotaoImprimirCarta } from "@/components/cartas/JanelaDaCarta";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -76,6 +79,22 @@ export default async function PaginaMagia({ params }: Props) {
 
             <div className="mt-8">
               <TextoDeRegra texto={magia.texto} />
+            </div>
+
+            {/* A carta da magia: é daqui que o Grimório tira a carta que abre
+                por cima da lista */}
+            <div data-com-carta className="mt-10">
+              <Dobra titulo="A carta">
+                <div className="mx-auto w-full max-w-[22rem]">
+                  <CartaDaMagia
+                    magia={magia}
+                    arte={ilustracoesDaMagia(magia.slug)[0] ?? iconeDaMagia(magia.slug)}
+                  />
+                </div>
+                <div className="mt-5 text-center">
+                  <BotaoImprimirCarta />
+                </div>
+              </Dobra>
             </div>
 
             <section aria-label="Ilustrações" className="mt-10">
