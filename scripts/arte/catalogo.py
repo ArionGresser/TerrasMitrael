@@ -15,6 +15,9 @@ import unicodedata
 from collections import Counter
 from pathlib import Path
 
+import cartas
+import historias
+
 RAIZ = Path(__file__).resolve().parents[2]
 AQUI = Path(__file__).resolve().parent
 PUBLICO = RAIZ / "public"
@@ -382,6 +385,20 @@ def catalogo():
         ("magias-icones", "Magias: ícones", icones),
         ("magias-ilustracoes", "Magias: ilustrações", cenas),
     ] + secoes
+
+    # As histórias (Saga, Guerra, locais): o nome de entrega é o próprio
+    # endereço, que já nasce único ("t2e1-capa", "razavar-feira")
+    for chave, titulo, pasta, lista in historias.secoes() + cartas.secoes():
+        artes = []
+        for c in lista:
+            a = arte(pasta, c["slug"], c["nome"], c["formato"], historias.assunto_completo(c))
+            a["entrega"] = c["slug"]
+            a["pronta"] = existe(pasta, c["slug"])
+            a["onde"] = c["onde"]
+            a["anexar"] = historias.anexos(c)
+            a["contexto"] = c["contexto"]
+            artes.append(a)
+        secoes.append((chave, titulo, artes))
 
     entregas = Counter(a["entrega"] for _, _, artes in secoes for a in artes)
     repetidas = [e for e, n in entregas.items() if n > 1]

@@ -11,6 +11,8 @@ O nome do arquivo diz o que ele é:
     bola-de-fogo-1.png   → ilustração de uso da magia (até -3): 1600 × 900
     os nomes do GUIA-DE-ARTES.html (espécies, classes, itens, monstros...):
         16:9      → 1280 × 720, mais uma miniatura quadrada de 160 px
+        cena      → 1600 × 900 (Saga, Guerra e locais), mais a miniatura
+        carta     → 1400 de altura em WebP, com a transparência (molduras das cartas)
         quadrada  → 512 px, mais a miniatura de 160 px
 
 Os originais ficam onde estão; o site recebe a versão em WebP, bem mais leve.
@@ -64,6 +66,31 @@ def salvar(imagem, destino, largura, altura, qualidade):
     )
 
 
+def salvar_carta(imagem, destino, avisos, nome):
+    """A moldura de carta: tira a sobra transparente em volta e guarda em
+    WebP com a transparência da janela da arte, com 1400 px de altura.
+
+    A proporção fica a que veio, sem esticar (esticar deixa os medalhões
+    ovais). O ChatGPT costuma entregar 2:3, que impresso com 88 mm de altura
+    dá uma carta de 59 mm de largura, e ainda cabe no sleeve comum."""
+    imagem = imagem.convert("RGBA")
+    # Sem transparência, o prompt pede a janela da arte em magenta puro:
+    # o que for magenta (e o fundo, se também vier assim) vira transparente
+    magenta = [(r > 190 and g < 90 and b > 190) for r, g, b, _ in imagem.getdata()]
+    if any(magenta):
+        imagem.putdata([(0, 0, 0, 0) if m else px for m, px in zip(magenta, imagem.getdata())])
+    if imagem.getextrema()[3][0] == 255:
+        avisos.append(f"{nome}: veio sem transparência nem magenta; a janela da arte vai precisar de recorte")
+    caixa = imagem.getbbox()
+    if caixa:
+        imagem = imagem.crop(caixa)
+    w, h = imagem.size
+    destino.parent.mkdir(parents=True, exist_ok=True)
+    imagem.resize((round(w * 1400 / h), 1400), Image.LANCZOS).save(
+        destino.with_suffix(".webp"), "WEBP", quality=90, method=6
+    )
+
+
 def importar(pasta):
     icones, ilustracoes, guia, desconhecidos, avisos = [], [], [], [], []
     for arquivo in sorted(pasta.iterdir()):
@@ -72,7 +99,8 @@ def importar(pasta):
         # Um número na frente, como "106-espinho-mental", só serve para
         # ordenar a pasta: sai do nome
         nome = re.sub(r"^\d+-", "", arquivo.stem.strip().lower())
-        imagem = Image.open(arquivo).convert("RGB")
+        original = Image.open(arquivo)
+        imagem = original.convert("RGB")
         w, h = imagem.size
         cena = re.fullmatch(r"(.+)-([123])", nome)
 
@@ -82,13 +110,18 @@ def importar(pasta):
             salvar(imagem, ICONES / f"{nome}.webp", 512, 512, 82)
             salvar(imagem, MINIATURAS / f"{nome}.webp", 128, 128, 80)
             icones.append(nome)
+        elif nome in GUIA and GUIA[nome]["formato"] == "carta":
+            salvar_carta(original, IMAGENS / GUIA[nome]["secao"] / f"{GUIA[nome]['slug']}.png", avisos, arquivo.name)
+            guia.append(nome)
         elif nome in GUIA:
             a = GUIA[nome]
             pasta = IMAGENS / a["secao"]
-            if a["formato"] == "largo":
+            if a["formato"] in ("largo", "cena"):
                 if w / h < 1.5:
                     avisos.append(f"{arquivo.name}: deveria ser deitada ({w}×{h}), cortei para 16:9")
-                salvar(imagem, pasta / f"{a['slug']}.webp", 1280, 720, 80)
+                # As cenas das histórias ocupam a largura do texto: vão maiores
+                largura, altura = (1600, 900) if a["formato"] == "cena" else (1280, 720)
+                salvar(imagem, pasta / f"{a['slug']}.webp", largura, altura, 80)
             else:
                 if abs(w - h) > max(w, h) * 0.05:
                     avisos.append(f"{arquivo.name}: deveria ser quadrada ({w}×{h}), cortei o centro")

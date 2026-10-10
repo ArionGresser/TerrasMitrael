@@ -3,7 +3,7 @@
 Gerada por `scripts/magias/arte/gerar-lista.py`. Não edite à mão: as palavras-chave
 ficam em `palavras-chave.txt`, e o resto sai do grimório.
 
-**Ícones prontos:** 338 de 339 · **Ilustrações prontas:** 0 de 339
+**Ícones prontos:** 339 de 339 · **Ilustrações prontas:** 0 de 339
 
 ## Como entregar uma arte
 
@@ -127,7 +127,7 @@ medieval fantasy illustration of <a wizard, a cleric...> casting the spell <nome
 | I· | Proteção contra o Bem e o Mal | Protection from Evil and Good | Abjuração | `protecao-contra-o-bem-e-o-mal` | protective rune circle repelling demon and angel |
 | I· | Purificar Alimentos e Bebidas | Purify Food and Drink | Transmutação | `purificar-alimentos-e-bebidas` | goblet of water purified by sparkling light |
 | I· | Queda Suave | Feather Fall | Transmutação | `queda-suave` | person falling slowly like a feather, floating feathers |
-| ·· | Raio Adoecedor | Ray of Sickness | Necromancia | `raio-adoecedor` | sickly green ray of poison |
+| I· | Raio Adoecedor | Ray of Sickness | Necromancia | `raio-adoecedor` | sickly green ray of poison |
 | I· | Raio Guiador | Guiding Bolt | Evocação | `raio-guiador` | flash of radiant light streaking toward a target |
 | I· | Recuo Acelerado | Expeditious Retreat | Transmutação | `recuo-acelerado` | blurred running figure, speed lines, wind trail |
 | I· | Repreensão Infernal | Hellish Rebuke | Evocação | `repreensao-infernal` | hellish flames engulfing an attacker, fiendish |
