@@ -6,7 +6,7 @@ import { Selo } from "@/components/ui/Selo";
  * com o selo, segurando o lugar dela na página até a pintura chegar.
  *
  * "largo" é 16:9 (cenas, retratos de povo, monstros); "quadrado" é para
- * objetos, como os itens. "compacto" tira o aviso escrito, para cartões
+ * objetos, como os itens, grande o bastante para ver os detalhes da pintura. "compacto" tira o aviso escrito, para cartões
  * pequenos, onde o selo sozinho já basta.
  */
 export function QuadroDeArte({
@@ -27,7 +27,7 @@ export function QuadroDeArte({
   const medida =
     formato === "largo"
       ? "aspect-[16/9] w-full"
-      : "mx-auto aspect-square w-44 sm:w-52";
+      : "mx-auto aspect-square w-64 max-w-full sm:w-80";
 
   if (!src) {
     return (
@@ -58,7 +58,7 @@ export function QuadroDeArte({
         fill
         sizes={
           sizes ??
-          (formato === "largo" ? "(max-width: 640px) 100vw, 608px" : "208px")
+          (formato === "largo" ? "(max-width: 640px) 100vw, 608px" : "(max-width: 640px) 256px, 320px")
         }
         className="object-cover"
       />
@@ -104,6 +104,38 @@ export function Miniatura({
       className={`border-dourado-600/25 bg-pergaminho-200/50 text-dourado-600/45 grid ${medida} shrink-0 place-items-center rounded-sm border border-dashed text-xs`}
     >
       ✦
+    </span>
+  );
+}
+
+/**
+ * As listas com arte em duas colunas (Grimório, Itens Mágicos, Equipamento
+ * de Aventura). No celular a arte ocupa a largura do cartão, em cima do
+ * nome; do sm para cima ela fica ao lado dele, com 144 px. A arte vem numa
+ * moldura de madeira (.moldura-madeira, no globals.css).
+ */
+export const GRADE_DE_CARTOES = "grid grid-cols-2 gap-2 sm:gap-3";
+
+export const CARTAO_COM_ARTE =
+  "group hover:bg-pergaminho-200/50 flex h-full w-full flex-col gap-2.5 rounded-md p-2 text-left transition-colors sm:flex-row sm:items-center sm:gap-4";
+
+export function ArteDoCartao({ src }: { src?: string }) {
+  return (
+    <span className="moldura-madeira aspect-square w-full sm:w-36 sm:shrink-0">
+      {src ? (
+        <Image
+          src={src}
+          alt=""
+          width={144}
+          height={144}
+          sizes="(max-width: 640px) 45vw, 144px"
+          className="size-full rounded-[4px] object-cover"
+        />
+      ) : (
+        <span aria-hidden className="bg-pergaminho-200 grid size-full place-items-center rounded-[4px]">
+          <Selo variante="marca" className="size-10 opacity-20" />
+        </span>
+      )}
     </span>
   );
 }

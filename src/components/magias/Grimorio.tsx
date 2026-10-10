@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import { IconeDaMagia } from "./ArteDaMagia";
+import { ArteDoCartao, CARTAO_COM_ARTE, GRADE_DE_CARTOES } from "@/components/ui/QuadroDeArte";
 import { CLASSES, ESCOLAS, circulo, type ResumoDaMagia } from "@/lib/magias-base";
 
 /**
@@ -220,28 +220,27 @@ export function Grimorio({ magias }: { magias: ResumoDaMagia[] }) {
                   {lista.length}
                 </span>
               </h2>
-              <ul>
+              <ul className={`mt-3 ${GRADE_DE_CARTOES}`}>
                 {lista.map((m) => (
-                  <li key={m.slug} className="border-dourado-600/20 border-b border-dashed last:border-0">
-                    <Link
-                      href={`/magias/${m.slug}/`}
-                      className="group hover:bg-pergaminho-200/40 -mx-2 flex items-center gap-3 rounded-sm px-2 py-2 transition-colors"
-                    >
-                      <IconeDaMagia icone={m.icone} />
+                  <li key={m.slug}>
+                    <Link href={`/magias/${m.slug}/`} className={CARTAO_COM_ARTE}>
+                      <ArteDoCartao src={m.icone} />
                       <span className="min-w-0 flex-1">
-                        <span className="text-tinta-900 block font-semibold group-hover:underline">
+                        <span className="text-tinta-900 block leading-snug font-semibold group-hover:underline">
                           {m.nome}
                         </span>
-                        <span className="text-tinta-500 block text-xs">
+                        <span className="text-tinta-500 mt-0.5 block text-xs">
                           {m.escola} · {m.tempo}
-                          <span className="italic"> · {m.original}</span>
                         </span>
-                      </span>
-                      <span className="flex shrink-0 gap-1">
-                        {m.concentracao ? (
-                          <Marca titulo="Exige concentração">C</Marca>
+                        <span className="text-tinta-500 hidden text-xs italic sm:block">{m.original}</span>
+                        {m.concentracao || m.ritual ? (
+                          <span className="mt-1.5 flex gap-1">
+                            {m.concentracao ? (
+                              <Marca titulo="Exige concentração">C</Marca>
+                            ) : null}
+                            {m.ritual ? <Marca titulo="Pode ser ritual">R</Marca> : null}
+                          </span>
                         ) : null}
-                        {m.ritual ? <Marca titulo="Pode ser ritual">R</Marca> : null}
                       </span>
                     </Link>
                   </li>

@@ -8,7 +8,7 @@ import {
   rotuloDaRaridade,
   type ResumoDoItem,
 } from "@/lib/itens-base";
-import { Miniatura } from "@/components/ui/QuadroDeArte";
+import { ArteDoCartao, CARTAO_COM_ARTE, GRADE_DE_CARTOES } from "@/components/ui/QuadroDeArte";
 
 /**
  * A lista de itens mágicos com busca e filtros, no mesmo molde do Grimório.
@@ -190,35 +190,29 @@ export function Tesouro({ itens }: { itens: ResumoDoItem[] }) {
                   {lista.length}
                 </span>
               </h2>
-              <ul>
+              <ul className={`mt-3 ${GRADE_DE_CARTOES}`}>
                 {lista.map((i) => (
-                  <li
-                    key={i.slug}
-                    className="border-dourado-600/20 border-b border-dashed last:border-0"
-                  >
-                    <Link
-                      href={`/itens/${i.slug}/`}
-                      className="group hover:bg-pergaminho-200/40 -mx-2 flex items-center gap-3 rounded-sm px-2 py-2 transition-colors"
-                    >
-                      <Miniatura src={i.imagem} />
+                  <li key={i.slug}>
+                    <Link href={`/itens/${i.slug}/`} className={CARTAO_COM_ARTE}>
+                      <ArteDoCartao src={i.imagem} />
                       <span className="min-w-0 flex-1">
-                        <span className="text-tinta-900 block font-semibold group-hover:underline">
+                        <span className="text-tinta-900 block leading-snug font-semibold group-hover:underline">
                           {i.nome}
                         </span>
-                        <span className="text-tinta-500 block text-xs">
+                        <span className="text-tinta-500 mt-0.5 block text-xs">
                           {i.categoria} · {rotuloDaRaridade(i)}
-                          <span className="italic"> · {i.original}</span>
                         </span>
+                        <span className="text-tinta-500 hidden text-xs italic sm:block">{i.original}</span>
+                        {i.sintonia ? (
+                          <span
+                            title="Exige Sintonia"
+                            className="border-dourado-600/50 font-titulo text-tinta-700 mt-1.5 grid size-6 place-items-center rounded-full border text-[0.65rem] font-bold"
+                          >
+                            <span aria-hidden>S</span>
+                            <span className="sr-only">Exige Sintonia</span>
+                          </span>
+                        ) : null}
                       </span>
-                      {i.sintonia ? (
-                        <span
-                          title="Exige Sintonia"
-                          className="border-dourado-600/50 font-titulo text-tinta-700 grid size-6 shrink-0 place-items-center rounded-full border text-[0.65rem] font-bold"
-                        >
-                          <span aria-hidden>S</span>
-                          <span className="sr-only">Exige Sintonia</span>
-                        </span>
-                      ) : null}
                     </Link>
                   </li>
                 ))}
