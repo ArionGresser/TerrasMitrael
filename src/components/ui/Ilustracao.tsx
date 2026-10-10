@@ -10,6 +10,7 @@ export function Ilustracao({
   legenda,
   quadrada = false,
   emPe = false,
+  pequena = false,
 }: {
   src: string;
   alt: string;
@@ -18,20 +19,26 @@ export function Ilustracao({
   quadrada?: boolean;
   /** Inteira num quadro em pé (11:16), para desenho de corpo inteiro. */
   emPe?: boolean;
+  /** Um emblema pequeno e quadrado no meio do texto, como um brasão. */
+  pequena?: boolean;
 }) {
-  const inteira = quadrada || emPe;
+  const inteira = quadrada || emPe || pequena;
   return (
-    <figure className={emPe ? "mx-auto my-8 max-w-xs sm:max-w-sm" : quadrada ? "mx-auto my-8 max-w-md" : "my-8"}>
+    <figure
+      className={
+        pequena ? "mx-auto my-6 w-36" : emPe ? "mx-auto my-8 max-w-xs sm:max-w-sm" : quadrada ? "mx-auto my-8 max-w-md" : "my-8"
+      }
+    >
       <div
         className={`border-madeira-800/25 shadow-pergaminho relative w-full overflow-hidden rounded-sm border ${
-          emPe ? "aspect-[11/16]" : quadrada ? "aspect-square" : "aspect-[16/9]"
+          emPe ? "aspect-[11/16]" : quadrada || pequena ? "aspect-square" : "aspect-[16/9]"
         }`}
       >
         <Image
           src={src}
           alt={alt}
           fill
-          sizes={inteira ? "(max-width: 768px) 100vw, 448px" : "(max-width: 768px) 100vw, 700px"}
+          sizes={pequena ? "144px" : inteira ? "(max-width: 768px) 100vw, 448px" : "(max-width: 768px) 100vw, 700px"}
           className={inteira ? "object-cover" : "object-cover sepia-[0.16]"}
         />
       </div>
