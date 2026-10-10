@@ -3,6 +3,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { PERSONAGENS, buscarPersonagem, tagsDe } from "@/lib/personagens";
 import { Fitas } from "@/components/personagens/Fitas";
+import { AnotacoesNaMargem } from "@/components/personagens/AnotacoesNaMargem";
 import {
   Abas,
   CabecalhoDaAba,
@@ -109,40 +110,57 @@ export default async function PaginaPersonagem({ params }: Props) {
           )}
 
           {meta.brasao ? (
-            <figure className="mx-auto mt-10 w-44 sm:w-52">
-              {meta.brasaoCentro && meta.brasaoAnel ? (
-                // O centro parado e o anel de runas girando por cima dele
-                <div role="img" aria-label={meta.brasaoAlt ?? ""} className="relative aspect-square w-full">
+            <div
+              className={
+                meta.brasaoTracos
+                  ? "mt-10 flex items-center justify-center gap-4 sm:gap-6"
+                  : ""
+              }
+            >
+              <figure
+                className={
+                  meta.brasaoTracos
+                    ? "w-40 shrink-0 sm:w-52"
+                    : "mx-auto mt-10 w-44 sm:w-52"
+                }
+              >
+                {meta.brasaoCentro && meta.brasaoAnel ? (
+                  // O centro parado e o anel de runas girando por cima dele
+                  <div
+                    role="img"
+                    aria-label={meta.brasaoAlt ?? ""}
+                    className="relative aspect-square w-full"
+                  >
+                    <Image src={meta.brasaoCentro} alt="" fill sizes="208px" />
+                    <Image
+                      src={meta.brasaoAnel}
+                      alt=""
+                      fill
+                      sizes="208px"
+                      className="anel-girando"
+                    />
+                  </div>
+                ) : (
                   <Image
-                    src={meta.brasaoCentro}
-                    alt=""
-                    fill
+                    src={meta.brasao}
+                    alt={meta.brasaoAlt ?? ""}
+                    width={440}
+                    height={440}
                     sizes="208px"
+                    className="h-auto w-full"
                   />
-                  <Image
-                    src={meta.brasaoAnel}
-                    alt=""
-                    fill
-                    sizes="208px"
-                    className="anel-girando"
-                  />
-                </div>
-              ) : (
-                <Image
-                  src={meta.brasao}
-                  alt={meta.brasaoAlt ?? ""}
-                  width={440}
-                  height={440}
-                  sizes="208px"
-                  className="h-auto w-full"
-                />
-              )}
-              {meta.brasaoLegenda ? (
-                <figcaption className="text-tinta-500 mt-3 text-center text-xs italic">
-                  {meta.brasaoLegenda}
-                </figcaption>
+                )}
+                {meta.brasaoLegenda ? (
+                  <figcaption className="text-tinta-500 mt-3 text-center text-xs italic">
+                    {meta.brasaoLegenda}
+                  </figcaption>
+                ) : null}
+              </figure>
+              {meta.brasaoTracos ? (
+                // As anotações na margem, escritas à mão ao lado do carimbo
+                <AnotacoesNaMargem palavras={meta.brasaoTracos} />
               ) : null}
-            </figure>
+            </div>
           ) : null}
 
           {meta.ilustracao ? (
@@ -151,6 +169,7 @@ export default async function PaginaPersonagem({ params }: Props) {
               alt={meta.ilustracaoAlt ?? ""}
               legenda={meta.ilustracaoLegenda}
               quadrada={meta.ilustracaoQuadrada}
+              emPe={meta.ilustracaoEmPe}
             />
           ) : null}
 

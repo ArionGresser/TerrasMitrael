@@ -133,6 +133,8 @@ export type MetaPersonagem = {
    * um retrato encomendado.
    */
   ilustracaoQuadrada?: boolean;
+  /** Mostra a ilustração inteira num quadro em pé, como um desenho de corpo inteiro. */
+  ilustracaoEmPe?: boolean;
   ilustracaoLegenda?: string;
   /** Símbolo do clã ou da casa, em PNG ou WebP com fundo transparente. */
   brasao?: string;
@@ -145,6 +147,11 @@ export type MetaPersonagem = {
   brasaoAnel?: string;
   brasaoAlt?: string;
   brasaoLegenda?: string;
+  /**
+   * Palavras que vão ao lado do brasão, numa coluna separada por um traço,
+   * como as anotações na margem de um diário ("Astuto · Caótico...").
+   */
+  brasaoTracos?: string[];
   audio?: string;
   /** Chaves de src/lib/tags.ts. Viram fitas costuradas na ficha. */
   tags?: string[];

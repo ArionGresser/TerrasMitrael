@@ -9,26 +9,30 @@ export function Ilustracao({
   alt,
   legenda,
   quadrada = false,
+  emPe = false,
 }: {
   src: string;
   alt: string;
   legenda?: string;
   /** Inteira num quadro quadrado, em vez de cortada na faixa 16:9. */
   quadrada?: boolean;
+  /** Inteira num quadro em pé (11:16), para desenho de corpo inteiro. */
+  emPe?: boolean;
 }) {
+  const inteira = quadrada || emPe;
   return (
-    <figure className={quadrada ? "mx-auto my-8 max-w-md" : "my-8"}>
+    <figure className={emPe ? "mx-auto my-8 max-w-xs sm:max-w-sm" : quadrada ? "mx-auto my-8 max-w-md" : "my-8"}>
       <div
         className={`border-madeira-800/25 shadow-pergaminho relative w-full overflow-hidden rounded-sm border ${
-          quadrada ? "aspect-square" : "aspect-[16/9]"
+          emPe ? "aspect-[11/16]" : quadrada ? "aspect-square" : "aspect-[16/9]"
         }`}
       >
         <Image
           src={src}
           alt={alt}
           fill
-          sizes={quadrada ? "(max-width: 768px) 100vw, 448px" : "(max-width: 768px) 100vw, 700px"}
-          className={quadrada ? "object-cover" : "object-cover sepia-[0.16]"}
+          sizes={inteira ? "(max-width: 768px) 100vw, 448px" : "(max-width: 768px) 100vw, 700px"}
+          className={inteira ? "object-cover" : "object-cover sepia-[0.16]"}
         />
       </div>
       {legenda ? (
