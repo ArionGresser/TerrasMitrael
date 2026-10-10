@@ -1,35 +1,55 @@
 ROTEIRO 2: TRAILER TERRAS DE MITRAEL
-Duração total: cerca de 78 segundos
+Duração total: cerca de 76 segundos
 Formato: computador, deitado (1920x1080). Sem versão de celular.
-Música: a escolher. O roteiro foi montado em volta do AUGE dela, como
-        no primeiro vídeo com o tema do Vrakyr: tudo vai acelerando até
-        o auge, e o selo do encerramento bate exatamente nele.
-        Os tempos abaixo contam com o auge em 1:10 (70,0s). Quando a
-        música estiver escolhida, eu encaixo cada cena de novo nela.
+Música: GTA V, Welcome To Los Santos (versão medieval, Beedle The Bardcore)
 
-(Escreva por cima do que quiser: riscar, trocar, reordenar, cenas novas.)
+A MÚSICA, MEDIDA
+  Ela anda a cerca de 88 batidas por minuto: uma batida a cada 0,68s.
+  0,7s        a primeira nota
+  0,7s a 28s  a abertura, um pouco mais leve
+  28s a 60s   a parte cheia: entra mais coisa e ela fica mais alta
+  63,3s       a música freia de repente e quase some
+  67,3s       AUGE: ela volta com tudo
+  O vídeo segue a música até um pouco depois do auge e termina com ela
+  abaixando. Os tempos abaixo são os tempos da própria música, e cada
+  corte vai cair numa batida quando eu montar.
+
+O PLANO
+  Até os 28s o site se apresenta: abertura, página inicial, a mesa e o
+  mapa. Quando a música enche, entram os personagens, que são a maior
+  novidade. Daí em diante tudo vai acelerando até uma montagem de
+  cortes rápidos, que para junto com a freada da música. Na freada, a
+  tela fica calma e mostra o que vem por aí. No auge, o selo bate.
 
 SOBRE OS SONS
-  Todo lugar que pede um som leva o MESMO marcador, um "tic" curto e
-  neutro, para você ouvir onde cada um cai e trocar depois.
-  Do lado de cada um vai a sugestão do tipo de som (Hit, Swoosh, Zoom...)
-  e a lista completa fica no fim deste arquivo, numerada.
-  O som de folha do vídeo antigo saiu.
+  A música já é cheia de som, então o vídeo sai só com ela. A única
+  exceção é a entrada no Grimório (cena 7), com o feitiço do site.
+  Mesmo assim, cada cena lista o que acontece nela e se o site já tem
+  um som para aquilo, para você decidir se quer ligar algum:
+    [tem som: nome]  o site já toca esse som nesse momento. No vídeo
+                     ele fica DESLIGADO, a não ser que você escreva
+                     LIGAR do lado.
+    [sem som]        o site não tem som para isso. Se quiser um, a
+                     gente escolhe da Mesa de Sons ou você manda.
 
 A MÃO NA TELA
-  Desta vez o cursor aparece no vídeo: a luva do site, andando e
-  clicando de verdade. Começa com a Luva de couro, a de sempre, e troca
-  para a Manopla de aço na cena da mesa.
+  O cursor aparece no vídeo: a luva do site, andando e clicando de
+  verdade. Começa com a Luva de couro, a de sempre, e troca para a
+  Manopla de aço na cena da mesa.
 
 
-CENA 1: ABERTURA (0,0s a 5,9s)
+CENA 1: ABERTURA (0,0s a 6,0s)
   Igual ao primeiro vídeo.
   Imagem: o mapa do herói, se aproximando devagar, com as bordas escuras
-  Acontece: o selo de cera cai no centro, o título sobe e aparece
+  Acontece: o selo de cera cai no centro junto com a primeira nota
+            (0,7s), o título sobe e aparece
   Texto: "Terras de Mitrael"
          "Cenário autoral de RPG de mesa"
-  SFX 01 (0,4s): Hit grave, o selo caindo
-  SFX 02 (1,2s): Swoosh suave, o título subindo
+  Sons:
+    o selo caindo ........................ [sem som] (no vídeo antigo
+                                           era o pergaminho abrindo, que
+                                           você não gostou)
+    o título subindo ..................... [sem som]
 
 
 CENA 2: PÁGINA INICIAL (5,6s a 10,8s)
@@ -39,10 +59,11 @@ CENA 2: PÁGINA INICIAL (5,6s a 10,8s)
             a Saga de Mitrael no topo da lista
   Velocidade: 1,25x
   Legenda: nenhuma
-  SFX 03 (5,8s): Swoosh leve, a rolagem começando
+  Sons:
+    a página rolando ..................... [sem som]
 
 
-CENA 3: A MESA (10,4s a 21,0s)
+CENA 3: A MESA (10,4s a 20,8s)
   Acontece: a luva vai até a bandeja de dados na lateral esquerda,
             pega o d20 e joga. O dado quica pela tela, por cima da
             folha, e para mostrando 20. O número aparece na madeira.
@@ -55,16 +76,20 @@ CENA 3: A MESA (10,4s a 21,0s)
   Velocidade: 1x (o dado precisa parecer de verdade)
   Legenda: A MESA
            "Role o d20, ganhe conquistas e libere dados e luvas novos"
-  SFX 04 (11,6s): Swoosh, o arremesso
-  SFX 05 (12,2s): Dice roll, o dado quicando
-  SFX 06 (13,6s): Hit seco, o dado parando no 20
-  SFX 07 (14,2s): Chime ou Shimmer, o lacre da conquista descendo
-  SFX 08 (16,6s): Click, escolhendo o Esmeralda
-  SFX 09 (17,6s): Swoosh + Dice roll, o d20 verde rolando
-  SFX 10 (19,8s): Click metálico, vestindo a manopla
+  Sons:
+    o arremesso do d20 ................... [sem som]
+    o d20 quicando ....................... [tem som: as batidas da mesa,
+                                           madeira e metal, uma por
+                                           quique]
+    o d20 parando no 20 .................. [tem som: divino]
+    o lacre da conquista descendo ........ [tem som: brilho]
+    abrir a troca de dados ............... [tem som: marcador]
+    escolher o Esmeralda ................. [tem som: madeira]
+    abrir a troca de luvas ............... [tem som: marcador]
+    vestir a manopla ..................... [tem som: aba]
 
 
-CENA 4: MAPA (20,6s a 31,0s)
+CENA 4: MAPA (20,4s a 28,0s)
   Acontece: a manopla passeia pelo mapa e cada região acende quando ela
             passa: a Tundra, depois Askar, e para em cima de Terras de
             Mitrael, que fica acesa. Clique: o mapa voa até ela e
@@ -73,12 +98,16 @@ CENA 4: MAPA (20,6s a 31,0s)
             painel troca para "A Sagrada Árvore".
   Legenda: MAPA
            "Passe a mão pelo continente e abra a história de cada lugar"
-  SFX 11 (21,4s): Swoosh bem leve, a região acendendo (uma vez só)
-  SFX 12 (24,6s): Zoom, o mapa voando até Terras de Mitrael
-  SFX 13 (27,4s): Pin ou Click, o marcador de Sovara Mithr
+  Sons:
+    entrar no mapa ....................... [tem som: pergaminho abrindo]
+    a região acendendo ao passar a mão ... [sem som]
+    o clique em Terras de Mitrael ........ [tem som: marcador]
+    o mapa voando até a região (zoom) .... [sem som]
+    o clique em Sovara Mithr ............. [tem som: marcador]
 
 
-CENA 5: PERSONAGENS (30,6s a 43,0s)
+CENA 5: PERSONAGENS (28,0s a 40,0s)
+  Começa exatamente quando a música enche (28s).
   Acontece: a capa de Personagens, o grupo reunido com o título por
             cima, se aproximando devagar. Rola pela lista com os doze
             retratos novos e clica no Egon.
@@ -90,14 +119,14 @@ CENA 5: PERSONAGENS (30,6s a 43,0s)
   Velocidade: 1,3x na rolagem da lista
   Legenda: PERSONAGENS
            "Cada herói com o seu retrato, a sua história e a sua ficha"
-  SFX 14 (30,8s): Hit leve, a capa aparecendo
-  SFX 15 (35,0s): Click, escolhendo o Egon
-  SFX 16 (36,4s): Shimmer suave, a runa girando
-  SFX 17 (40,2s): Click (couro), aba Ficha
-  SFX 18 (41,8s): Click (couro), aba Mochila
+  Sons:
+    entrar em Personagens ................ [tem som: fivela]
+    abrir a ficha do Egon ................ [tem som: folha virando]
+    a runa girando ....................... [sem som]
+    as abas Ficha e Mochila .............. [tem som: aba]
 
 
-CENA 6: CRÔNICAS (42,6s a 53,0s)
+CENA 6: CRÔNICAS (39,6s a 48,4s)
   Acontece: a capa das Crônicas com o título por cima. Desce até o
             cartaz da Saga de Mitrael, com a capa nova, e entra nela:
             aparecem as capas da Temporada 1 e da Temporada 2.
@@ -105,90 +134,67 @@ CENA 6: CRÔNICAS (42,6s a 53,0s)
             "O novo elenco" e vira para o Sumário.
   Legenda: CRÔNICAS
            "Cada sessão jogada vira episódio, temporada por temporada"
-  SFX 19 (42,8s): Hit leve, a capa aparecendo
-  SFX 20 (47,6s): Hit, a capa do livro abrindo
-  SFX 21 (49,2s): Swoosh, a folha virando
-  SFX 22 (50,8s): Swoosh, a segunda folha virando
+  Sons:
+    entrar nas Crônicas .................. [tem som: capa]
+    entrar na Saga ....................... [tem som: folha virando]
+    o livro de couro abrindo ............. [tem som: capa]
+    as folhas virando .................... [tem som: folha virando]
 
 
-CENA 7: LIVRO DO AVENTUREIRO (52,6s a 60,0s)
+CENA 7: LIVRO DO AVENTUREIRO E GRIMÓRIO (48,0s a 56,0s)
   Acontece: a capa do Livro do Aventureiro com o título por cima, desce
             pelos cartões dos capítulos com as artes e clica no
-            Bestiário: a lista de monstros com as artes grandes rolando.
+            Grimório. A capa do Grimório aparece e a lista de magias
+            rola com os ícones.
   Velocidade: 1,4x na rolagem
   Legenda: LIVRO DO AVENTUREIRO
            "339 magias, 330 monstros e 258 itens mágicos, em português"
-  SFX 23 (52,8s): Hit leve, a capa aparecendo
-  SFX 24 (56,4s): Click, o cartão do Bestiário
+  Sons:
+    entrar no Livro do Aventureiro ....... [tem som: capa]
+    o clique no Grimório ................. [tem som: feitiço] LIGAR
+                                           (cerca de 51,0s, o único
+                                           ligado no vídeo)
 
 
-CENA 8: TEM MAIS A CAMINHO (59,6s a 64,0s)
-  Acontece: a tela de Novidades, na parte "A caminho da mesa": a Conta
-            de jogador, as Conquistas no celular e as Mais artes, uma
-            de cada vez.
+CENA 8: MONTAGEM ATÉ A FREADA (56,0s a 63,3s)
+  Acontece: cortes rápidos, cada um numa batida, cada vez mais curtos,
+            e o último termina junto com a freada da música:
+              a capa da Saga (2 batidas)
+              o retrato do Vrakyr (2 batidas)
+              o Dragão Vermelho Ancião no Bestiário (2 batidas)
+              o Baú do Mestre com o resultado Lendário (1 batida)
+              o retrato do Johnny (1 batida)
+              a capa da Temporada 1 (1 batida)
+              o retrato do Tyr (1 batida)
+              o d20 Esmeralda parando no 20 (meia batida)
+  Legenda: nenhuma
+  Sons: só a música. São cortes, não cliques.
+
+
+CENA 9: A FREADA: TEM MAIS A CAMINHO (63,3s a 67,3s)
+  A música quase some aqui, então a tela também acalma.
+  Acontece: a tela de Novidades, na parte "A caminho da mesa", descendo
+            devagar: a Conta de jogador, as Conquistas no celular e as
+            Mais artes.
   Legenda: EM BREVE
            "E tem muito mais por vir"
-  SFX 25 (59,8s): Swoosh leve, a entrada da tela
+  Sons:
+    entrar em Novidades .................. [tem som: folha virando]
 
 
-CENA 9: MONTAGEM ATÉ O AUGE (64,0s a 70,0s)
-  Acontece: cortes rápidos, cada um mais curto que o anterior, no ritmo
-            da música, subindo até o auge:
-              a capa da Saga (1,0s)
-              o retrato do Vrakyr (0,8s)
-              o Dragão Vermelho Ancião do Bestiário (0,7s)
-              o Baú do Mestre com o resultado Lendário (0,7s)
-              os ícones do Grimório rolando (0,6s)
-              o retrato do Johnny (0,5s)
-              a capa da Temporada 1 (0,5s)
-              o retrato do Tyr (0,4s)
-              o d20 Esmeralda parando no 20 (0,4s)
-              e um último piscar do mapa (0,4s)
-  Legenda: nenhuma
-  SFX 26 (64,0s a 70,0s): Riser, subindo até o auge e cortando seco nele
-
-
-CENA 10: ENCERRAMENTO (70,0s a 78,0s)
+CENA 10: ENCERRAMENTO NO AUGE (67,3s a 76,0s)
   Imagem: a mesa de madeira do site
-  Acontece: no AUGE da música o selo bate, o título aparece, depois o
-            resto, uma linha de cada vez; tudo escurece no último segundo
+  Acontece: no AUGE (67,3s) o selo bate junto com a volta da música, o
+            título aparece, depois o resto, uma linha de cada vez.
+            A música começa a abaixar aos 73s e tudo escurece no último
+            segundo.
   Texto: "Terras de Mitrael"
          "Cenário autoral de RPG de mesa · desde 2020"
          "Muito mais por vir."
          "terrasmitrael.netlify.app"
-  SFX 27 (70,0s): Hit grande (Impact), o selo batendo junto com o auge
-  Depois só a música, abaixando até o fim
-
-
-LISTA DOS SONS
-  Nº   Tempo    Sugestão              Onde
-  01   0,4s     Hit grave             selo caindo na abertura
-  02   1,2s     Swoosh suave          título subindo
-  03   5,8s     Swoosh leve           rolagem da página inicial
-  04   11,6s    Swoosh                arremesso do d20
-  05   12,2s    Dice roll             d20 quicando
-  06   13,6s    Hit seco              d20 parando no 20
-  07   14,2s    Chime ou Shimmer      lacre da conquista
-  08   16,6s    Click                 escolhendo o dado Esmeralda
-  09   17,6s    Swoosh + Dice roll    d20 verde rolando
-  10   19,8s    Click metálico        vestindo a manopla
-  11   21,4s    Swoosh bem leve       região do mapa acendendo
-  12   24,6s    Zoom                  mapa voando até Terras de Mitrael
-  13   27,4s    Pin ou Click          marcador de Sovara Mithr
-  14   30,8s    Hit leve              capa de Personagens
-  15   35,0s    Click                 escolhendo o Egon
-  16   36,4s    Shimmer suave         runa do bando Vitriol
-  17   40,2s    Click (couro)         aba Ficha
-  18   41,8s    Click (couro)         aba Mochila
-  19   42,8s    Hit leve              capa das Crônicas
-  20   47,6s    Hit                   capa do livro abrindo
-  21   49,2s    Swoosh                folha virando
-  22   50,8s    Swoosh                segunda folha virando
-  23   52,8s    Hit leve              capa do Livro do Aventureiro
-  24   56,4s    Click                 cartão do Bestiário
-  25   59,8s    Swoosh leve           tela de Novidades
-  26   64,0s    Riser                 montagem subindo até o auge
-  27   70,0s    Hit grande (Impact)   selo batendo no auge
+  Sons:
+    o selo batendo no auge ............... [sem som] (a volta da música
+                                           já faz a batida)
 
 
 NOTAS DA GRAVAÇÃO (para mim, quando for gravar)
@@ -202,3 +208,5 @@ NOTAS DA GRAVAÇÃO (para mim, quando for gravar)
     300 batidas na mesa, já vem liberada.
   - A mesa 3D só aparece em tela de 1280 px ou mais, que é o tamanho da
     gravação.
+  - Os cortes da montagem e o selo do auge vão alinhados pela batida
+    medida no arquivo, não no olho.
