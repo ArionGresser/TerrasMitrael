@@ -4,10 +4,9 @@ import { ESPECIES } from "@/lib/especies";
 import { CreditoSrd } from "@/components/magias/CreditoSrd";
 import { Pergaminho } from "@/components/ui/Pergaminho";
 import { Rodape } from "@/components/Rodape";
-import { TituloBrasao, Sobretitulo, Ornamento } from "@/components/ui/Titulo";
 import { QuadroDeArte } from "@/components/ui/QuadroDeArte";
 import { arte } from "@/lib/arte";
-import { SeloDeVolta } from "@/components/navegacao/SeloDeVolta";
+import { Capa } from "@/components/ui/Capa";
 
 export const metadata: Metadata = {
   title: "Espécies",
@@ -19,20 +18,20 @@ export default function PaginaEspecies() {
   return (
     <>
       <main className="mx-auto max-w-3xl px-4 pt-20 pb-8 sm:px-6 sm:pt-28">
-        <SeloDeVolta href="/regras/" rotulo="Livro do Aventureiro" />
+        <Capa
+          imagem="/images/compendio/especies.webp"
+          sobretitulo="Regras de 2024"
+          titulo="Espécies"
+          volta={{ href: "/regras/", rotulo: "Livro do Aventureiro" }}
+        >
+          <p>
+            Os povos que as regras trazem prontos para criar um personagem.
+            Mitrael tem muitos outros, mas é por estes que a ficha começa.
+          </p>
+        </Capa>
 
-        <Pergaminho borda={2} className="mt-5">
-          <header className="text-center">
-            <Sobretitulo>Regras de 2024</Sobretitulo>
-            <TituloBrasao className="mt-4">Espécies</TituloBrasao>
-            <Ornamento className="mt-6" />
-            <p className="text-tinta-700 mx-auto mt-6 max-w-lg text-base leading-relaxed italic">
-              Os povos que as regras trazem prontos para criar um personagem.
-              Mitrael tem muitos outros, mas é por estes que a ficha começa.
-            </p>
-          </header>
-
-          <div className="text-tinta-900 mx-auto mt-8 max-w-[38rem] space-y-3.5 text-[0.95rem] leading-[1.75] sm:text-base">
+        <Pergaminho borda={2} className="mt-8">
+          <div className="text-tinta-900 mx-auto max-w-[38rem] space-y-3.5 text-[0.95rem] leading-[1.75] sm:text-base">
             <p>
               A espécie define o tipo de criatura, o tamanho, o Deslocamento e
               os traços especiais do personagem, que vêm do corpo ou da magia

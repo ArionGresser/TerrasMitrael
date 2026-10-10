@@ -45,9 +45,9 @@ export default async function PaginaEspecie({ params }: Props) {
   return (
     <>
       <main className="mx-auto max-w-3xl px-4 pt-20 pb-8 sm:px-6 sm:pt-28">
-        <SeloDeVolta href="/especies/" rotulo="Espécies" />
+        <Pergaminho borda={1}>
+          <SeloDeVolta href="/especies/" rotulo="Espécies" />
 
-        <Pergaminho borda={1} className="mt-5">
           <header className="text-center">
             <Sobretitulo>Espécie · Regras de 2024</Sobretitulo>
             <TituloBrasao className="mt-4">{especie.nome}</TituloBrasao>

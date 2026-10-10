@@ -42,9 +42,9 @@ export default async function PaginaMonstro({ params }: Props) {
   return (
     <>
       <main className="mx-auto max-w-3xl px-4 pt-20 pb-8 sm:px-6 sm:pt-28">
-        <SeloDeVolta href="/monstros/" rotulo="Bestiário" />
+        <Pergaminho borda={1}>
+          <SeloDeVolta href="/monstros/" rotulo="Bestiário" />
 
-        <Pergaminho borda={1} className="mt-5">
           <header className="text-center">
             <Sobretitulo>Nível de Desafio {m.nd}</Sobretitulo>
             <TituloBrasao className="mt-4">{m.nome}</TituloBrasao>

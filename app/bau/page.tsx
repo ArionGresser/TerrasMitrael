@@ -18,9 +18,9 @@ export default function PaginaBau() {
   return (
     <>
       <main className="mx-auto max-w-3xl px-4 pt-20 pb-8 sm:px-6 sm:pt-28">
-        <SeloDeVolta href="/regras/" rotulo="Livro do Aventureiro" />
+        <Pergaminho borda={3}>
+          <SeloDeVolta href="/regras/" rotulo="Livro do Aventureiro" />
 
-        <Pergaminho borda={3} className="mt-5">
           <header className="text-center">
             <Sobretitulo>Ferramenta do mestre</Sobretitulo>
             <TituloBrasao className="mt-4">Baú do Mestre</TituloBrasao>

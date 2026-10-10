@@ -33,7 +33,7 @@ import { BotaoLink } from "@/components/ui/Botao";
 import { Ilustracao } from "@/components/ui/Ilustracao";
 import { Rodape } from "@/components/Rodape";
 import { TituloBrasao, Sobretitulo, Ornamento } from "@/components/ui/Titulo";
-import { SeloDeVolta } from "@/components/navegacao/SeloDeVolta";
+import { NavegacaoDaFicha } from "@/components/personagens/NavegacaoDaFicha";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -146,7 +146,12 @@ export default async function PaginaPersonagem({ params }: Props) {
           ) : null}
 
           {meta.ilustracao ? (
-            <Ilustracao src={meta.ilustracao} alt={meta.ilustracaoAlt ?? ""} />
+            <Ilustracao
+              src={meta.ilustracao}
+              alt={meta.ilustracaoAlt ?? ""}
+              legenda={meta.ilustracaoLegenda}
+              quadrada={meta.ilustracaoQuadrada}
+            />
           ) : null}
 
           {meta.citacoes.length > 0 ? (
@@ -277,9 +282,9 @@ export default async function PaginaPersonagem({ params }: Props) {
       <main className="mx-auto max-w-3xl px-4 pt-20 pb-8 sm:px-6 sm:pt-28">
         {/* A folha de rosto do dossiê: retrato, nome e fitas. Curta de
             propósito, para as abas caberem na primeira tela. */}
-        <SeloDeVolta href="/personagens/" rotulo="Personagens" />
+        <Pergaminho borda={1}>
+          <NavegacaoDaFicha slug={meta.slug} />
 
-        <Pergaminho borda={1} className="mt-5">
           <div className="flex flex-col items-center gap-7 sm:flex-row sm:items-start sm:gap-8">
             <div className="border-madeira-800/25 shadow-pergaminho relative aspect-[4/5] w-full max-w-[14rem] shrink-0 overflow-hidden rounded-sm border sm:w-56 sm:max-w-none">
               <Image

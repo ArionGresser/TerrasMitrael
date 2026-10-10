@@ -6,7 +6,7 @@ import { QuadroDeArte } from "@/components/ui/QuadroDeArte";
 import { CreditoSrd } from "@/components/magias/CreditoSrd";
 import { Pergaminho } from "@/components/ui/Pergaminho";
 import { Rodape } from "@/components/Rodape";
-import { TituloBrasao, Sobretitulo, Ornamento } from "@/components/ui/Titulo";
+import { Capa } from "@/components/ui/Capa";
 
 export const metadata: Metadata = {
   title: "Livro do Aventureiro",
@@ -86,18 +86,19 @@ export default function PaginaLivroDoAventureiro() {
   return (
     <>
       <main className="mx-auto max-w-3xl px-4 pt-20 pb-8 sm:px-6 sm:pt-28">
-        <Pergaminho borda={2}>
-          <header className="text-center">
-            <Sobretitulo>Regras de 2024</Sobretitulo>
-            <TituloBrasao className="mt-4">Livro do Aventureiro</TituloBrasao>
-            <Ornamento className="mt-6" />
-            <p className="text-tinta-700 mx-auto mt-6 max-w-lg text-base leading-relaxed italic">
-              As regras que a mesa usa, em português, para criar um personagem
-              ou tirar uma dúvida no meio da sessão.
-            </p>
-          </header>
+        <Capa
+          imagem="/images/livro-cartao.webp"
+          sobretitulo="Regras de 2024"
+          titulo="Livro do Aventureiro"
+        >
+          <p>
+            As regras que a mesa usa, em português, para criar um personagem
+            ou tirar uma dúvida no meio da sessão.
+          </p>
+        </Capa>
 
-          <ul className="mt-9 grid gap-4 sm:grid-cols-2">
+        <Pergaminho borda={2} className="mt-8">
+          <ul className="grid gap-4 sm:grid-cols-2">
             {partes.map((p, i) => {
               // Com número ímpar de partes, a última ocupa a linha inteira
               const sozinha =

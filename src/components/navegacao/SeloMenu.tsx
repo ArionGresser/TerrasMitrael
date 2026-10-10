@@ -163,15 +163,12 @@ export function SeloMenu() {
               exit={{ scaleY: 0, opacity: 0 }}
               transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
               style={{ transformOrigin: "top center" }}
-              className="fixed top-20 left-4 z-50 w-[min(20rem,calc(100vw-2rem))] origin-top sm:top-24 sm:left-6"
+              className="fixed top-20 left-6 z-50 w-[min(20rem,calc(100vw-3rem))] origin-top sm:top-24 sm:left-9"
             >
-              {/* O rolo de madeira no topo do pergaminho */}
-              <div
-                aria-hidden
-                className="from-madeira-700 via-madeira-500 to-madeira-700 h-2.5 w-full rounded-full bg-gradient-to-b shadow-md"
-              />
-
-              <nav className="textura-pergaminho borda-envelhecida folha-alta pergaminho-borda-2 px-2 py-3">
+              {/* Os mesmos rolos das folhas de leitura: o papel enrolado nas
+                  pontas e a vareta saindo num puxador de madeira torneada */}
+              <nav className="textura-pergaminho borda-envelhecida folha-alta pergaminho-borda-2 relative px-2 py-5">
+                <span aria-hidden className="rolo rolo-topo" />
                 <ul>
                   {SECOES.map((secao, i) => {
                     const ativo =
@@ -218,13 +215,8 @@ export function SeloMenu() {
                     );
                   })}
                 </ul>
+                <span aria-hidden className="rolo rolo-base" />
               </nav>
-
-              {/* O rolo de madeira na base */}
-              <div
-                aria-hidden
-                className="from-madeira-700 via-madeira-500 to-madeira-700 h-2.5 w-full rounded-full bg-gradient-to-b shadow-md"
-              />
             </motion.div>
           </>
         )}

@@ -13,12 +13,10 @@ import { Pergaminho } from "@/components/ui/Pergaminho";
 import { Revelar } from "@/components/ui/Revelar";
 import { BotaoLink } from "@/components/ui/Botao";
 import { Rodape } from "@/components/Rodape";
+import { Capa } from "@/components/ui/Capa";
 import {
-  TituloBrasao,
   TituloSecao,
   TituloCapitulo,
-  Sobretitulo,
-  Ornamento,
 } from "@/components/ui/Titulo";
 
 export const metadata: Metadata = {
@@ -146,17 +144,16 @@ export default function PaginaPersonagens() {
   return (
     <>
       <main className="mx-auto max-w-3xl px-4 pt-20 pb-8 sm:px-6 sm:pt-28">
-        <Pergaminho inclinacao="esquerda" borda={1}>
-          <header className="text-center">
-            <Sobretitulo>Quem caminhou por Mitrael</Sobretitulo>
-            <TituloBrasao className="mt-4">Personagens</TituloBrasao>
-            <Ornamento className="mt-6" />
-            <p className="text-tinta-700 mx-auto mt-6 max-w-lg text-base leading-relaxed italic">
-              Cada um deles chegou aqui por um caminho diferente. Nenhum chegou
-              inteiro.
-            </p>
-          </header>
-        </Pergaminho>
+        <Capa
+          imagem="/images/personagens/elenco-reunido.webp"
+          sobretitulo="Quem caminhou por Mitrael"
+          titulo="Personagens"
+        >
+          <p>
+            Cada um deles chegou aqui por um caminho diferente. Nenhum chegou
+            inteiro.
+          </p>
+        </Capa>
 
         {/* O glossário das fitas, antes dos cartazes: quem chega aprende a
             ler as fitas primeiro e depois reconhece cada uma nos murais */}

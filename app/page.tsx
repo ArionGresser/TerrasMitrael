@@ -31,26 +31,24 @@ const PORTAIS = [
     nome: "Personagens",
     texto:
       "Os heróis que caminharam por estas terras, suas origens, suas escolhas e o que deixaram para trás.",
-    imagem: "/images/personagens/elenco-origin-heroes.jpg",
-    alt: "Os Origin Heroes reunidos numa clareira, diante de ruínas tomadas pela mata",
+    imagem: "/images/personagens/elenco-reunido.webp",
+    alt: "Os doze personagens, do elenco antigo e do novo, descansando juntos entre ruínas cobertas de musgo numa clareira ensolarada",
   },
   {
     href: "/contos/",
-    nome: "Contos",
+    nome: "Crônicas",
     texto:
       "As sessões jogadas, contadas episódio por episódio, e a história que moldou o continente, como a Grande Guerra Leviana.",
-    imagem: "/images/contos/cronicas/t2e2-saida.webp",
-    alt: "A saída de uma mina na encosta de um morro, com um vilarejo lá embaixo no vale",
+    imagem: "/images/contos/cronicas-cartao.webp",
+    alt: "Uma crônica aberta sobre a mesa à luz de vela, com desenhos de aventureiros, de um castelo e de uma taverna nas páginas e um d20 preto e dourado em cima",
   },
   {
     href: "/regras/",
     nome: "Livro do Aventureiro",
     texto:
       "As regras de 2024 em português: classes, espécies, magias, itens mágicos e o bestiário, para criar um personagem ou tirar uma dúvida na mesa.",
-    imagem: "/images/book.jpg",
-    alt: "Um livro de capa de couro, envolto em brilho arcano",
-    // A arte é pequena e quadrada: fica inteira, no centro, sobre fundo escuro
-    inteira: true,
+    imagem: "/images/livro-cartao.webp",
+    alt: "Um livro aberto sobre a mesa, de onde sobem, feitos de luz azul, uma espada, um escudo, um círculo de magia, uma poção, um anel e um dragão",
   },
 ];
 

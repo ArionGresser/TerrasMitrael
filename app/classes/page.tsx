@@ -4,10 +4,9 @@ import { TODAS_AS_CLASSES, buscarClasse, traco } from "@/lib/classes";
 import { CreditoSrd } from "@/components/magias/CreditoSrd";
 import { Pergaminho } from "@/components/ui/Pergaminho";
 import { Rodape } from "@/components/Rodape";
-import { TituloBrasao, Sobretitulo, Ornamento } from "@/components/ui/Titulo";
 import { QuadroDeArte } from "@/components/ui/QuadroDeArte";
 import { arte } from "@/lib/arte";
-import { SeloDeVolta } from "@/components/navegacao/SeloDeVolta";
+import { Capa } from "@/components/ui/Capa";
 
 export const metadata: Metadata = {
   title: "Classes",
@@ -21,20 +20,20 @@ export default function PaginaClasses() {
   return (
     <>
       <main className="mx-auto max-w-3xl px-4 pt-20 pb-8 sm:px-6 sm:pt-28">
-        <SeloDeVolta href="/regras/" rotulo="Livro do Aventureiro" />
+        <Capa
+          imagem="/images/compendio/classes.webp"
+          sobretitulo="Regras de 2024"
+          titulo="Classes"
+          volta={{ href: "/regras/", rotulo: "Livro do Aventureiro" }}
+        >
+          <p>
+            O que cada aventureiro sabe fazer, do primeiro ao vigésimo nível.
+            Cada classe traz uma subclasse das regras.
+          </p>
+        </Capa>
 
-        <Pergaminho borda={2} className="mt-5">
-          <header className="text-center">
-            <Sobretitulo>Regras de 2024</Sobretitulo>
-            <TituloBrasao className="mt-4">Classes</TituloBrasao>
-            <Ornamento className="mt-6" />
-            <p className="text-tinta-700 mx-auto mt-6 max-w-lg text-base leading-relaxed italic">
-              O que cada aventureiro sabe fazer, do primeiro ao vigésimo
-              nível. Cada classe traz uma subclasse das regras.
-            </p>
-          </header>
-
-          <ul className="mt-9 grid gap-4 sm:grid-cols-2">
+        <Pergaminho borda={2} className="mt-8">
+          <ul className="grid gap-4 sm:grid-cols-2">
             {classes.map(({ slug, nome, original, classe }) => (
               <li key={slug}>
                 {classe ? (

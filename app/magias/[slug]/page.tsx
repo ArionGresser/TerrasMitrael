@@ -42,9 +42,9 @@ export default async function PaginaMagia({ params }: Props) {
   return (
     <>
       <main className="mx-auto max-w-3xl px-4 pt-20 pb-8 sm:px-6 sm:pt-28">
-        <SeloDeVolta href="/magias/" rotulo="Grimório" />
+        <Pergaminho borda={1}>
+          <SeloDeVolta href="/magias/" rotulo="Grimório" />
 
-        <Pergaminho borda={1} className="mt-5">
           <header className="text-center">
             <div className="mb-5 flex justify-center">
               <IconeDaMagia icone={iconeDaMagia(magia.slug)} tamanho="pagina" />

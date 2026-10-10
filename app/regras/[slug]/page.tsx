@@ -11,6 +11,8 @@ import { TituloBrasao, TituloSecao, Sobretitulo, Ornamento } from "@/components/
 import { QuadroDeArte, Miniatura } from "@/components/ui/QuadroDeArte";
 import { arteDoItemDeRegra, type ArteDeRegra } from "@/lib/regras-arte";
 import { SeloDeVolta } from "@/components/navegacao/SeloDeVolta";
+import { Capa } from "@/components/ui/Capa";
+import { arte } from "@/lib/arte";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -29,21 +31,36 @@ export default async function PaginaDocumento({ params }: Props) {
   if (!doc) notFound();
 
   const todos = doc.grupos.flatMap((g) => g.itens).filter((i) => i.titulo);
+  // A arte do cartão no Livro do Aventureiro vira a capa, quando existe
+  const capa = arte("compendio", doc.slug);
 
   return (
     <>
       <main className="mx-auto max-w-3xl px-4 pt-20 pb-8 sm:px-6 sm:pt-28">
-        <SeloDeVolta href="/regras/" rotulo="Livro do Aventureiro" />
+        {capa ? (
+          <Capa
+            imagem={capa}
+            sobretitulo="Livro do Aventureiro · Regras de 2024"
+            titulo={doc.titulo}
+            original={doc.original}
+            volta={{ href: "/regras/", rotulo: "Livro do Aventureiro" }}
+          />
+        ) : null}
 
-        <Pergaminho borda={1} className="mt-5">
-          <header className="text-center">
-            <Sobretitulo>Livro do Aventureiro · Regras de 2024</Sobretitulo>
-            <TituloBrasao className="mt-4">{doc.titulo}</TituloBrasao>
-            <p className="text-tinta-500 mt-2 text-sm italic" lang="en">
-              {doc.original}
-            </p>
-            <Ornamento className="mt-6" />
-          </header>
+        <Pergaminho borda={1} className={capa ? "mt-8" : ""}>
+          {capa ? null : (
+            <>
+              <SeloDeVolta href="/regras/" rotulo="Livro do Aventureiro" />
+              <header className="text-center">
+                <Sobretitulo>Livro do Aventureiro · Regras de 2024</Sobretitulo>
+                <TituloBrasao className="mt-4">{doc.titulo}</TituloBrasao>
+                <p className="text-tinta-500 mt-2 text-sm italic" lang="en">
+                  {doc.original}
+                </p>
+                <Ornamento className="mt-6" />
+              </header>
+            </>
+          )}
 
           <div className="mx-auto max-w-[40rem]">
             {doc.abertura ? (
