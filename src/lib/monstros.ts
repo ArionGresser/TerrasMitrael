@@ -1,6 +1,7 @@
 import dados from "@/content/monstros/monstros.json";
 import { TAMANHOS, type ResumoDoMonstro } from "./monstros-base";
 import { arte } from "./arte";
+import { lerDadosDePv, lerNumero, type CriaturaDeCombate } from "./encontros";
 
 /**
  * O bestiário: os monstros e animais das regras de 2024, em português.
@@ -65,4 +66,22 @@ export function indiceDoBestiario(): ResumoDoMonstro[] {
       imagem: arte("monstros", slug) ?? arte("monstros/mini", slug),
     }),
   );
+}
+
+/** As criaturas com o que o gerador de encontros e o combate precisam. */
+export function criaturasDeCombate(): CriaturaDeCombate[] {
+  return MONSTROS.map((m) => ({
+    slug: m.slug,
+    nome: m.nome,
+    tipo: m.tipo,
+    fonte: m.fonte,
+    nd: m.nd,
+    ndNumero: m.ndNumero,
+    xp: lerNumero(m.xp),
+    ca: lerNumero(m.ca),
+    pv: lerNumero(m.pv),
+    pvDados: lerDadosDePv(m.pv),
+    iniciativa: lerNumero(m.iniciativa),
+    imagem: arte("monstros/mini", m.slug) ?? arte("monstros", m.slug),
+  }));
 }

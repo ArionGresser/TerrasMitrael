@@ -43,15 +43,8 @@ export type DocumentoDeRegra = {
   grupos: GrupoDeRegra[];
 };
 
-/** "Dádiva do Destino" → "dadiva-do-destino", para os endereços com #. */
-export function ancora(texto: string): string {
-  return texto
-    .normalize("NFD")
-    .replace(/[̀-ͯ]/g, "")
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-|-$/g, "");
-}
+export { ancora } from "./regras-ancora";
+import { ancora } from "./regras-ancora";
 
 function ler(slug: string): DocumentoDeRegra | undefined {
   const arquivo = path.join(PASTA, `${slug}.md`);

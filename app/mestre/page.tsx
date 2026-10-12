@@ -26,7 +26,7 @@ export default function PaginaMestre() {
             <TituloBrasao className="mt-4">Painel do Mestre</TituloBrasao>
             <Ornamento className="mt-6" />
             <p className="text-tinta-700 mx-auto mt-6 max-w-lg text-sm leading-relaxed">
-              Aprove os pedidos dos jogadores, ligue cada conta à ficha do personagem e crie uma senha nova para quem esqueceu a dele.
+              A mesa ao vivo, os pedidos dos jogadores, o gerador de encontros e o combate. Mais embaixo, as contas: ligue cada uma ao personagem e crie senha nova para quem esqueceu.
             </p>
           </header>
           <div className="mt-8">

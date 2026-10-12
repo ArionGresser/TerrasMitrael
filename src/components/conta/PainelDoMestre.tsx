@@ -76,6 +76,15 @@ export function PainelDoMestre({ personagens }: { personagens: PersonagemDoMestr
 
   return (
     <div>
+      <nav aria-label="Ferramentas do Mestre" className="mb-8 grid gap-2 sm:grid-cols-2">
+        <Link href="/mestre/encontros/" className={`${BOTAO} w-full`}>
+          Gerador de encontros
+        </Link>
+        <Link href="/mestre/combate/" className={`${BOTAO} w-full`}>
+          Combate
+        </Link>
+      </nav>
+
       <MesaAoVivo personagens={personagens} />
 
       <div className="mt-10">

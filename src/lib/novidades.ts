@@ -160,6 +160,15 @@ const REGISTRO: Registro[] = [
   },
   {
     tipo: "aviso",
+    data: "2026-10-12T23:30-03:00",
+    titulo: "Combate na mesa",
+    texto:
+      "Quando o Mestre começa um combate, quem está com a conta aberta vê no alto da tela a rodada e de quem é a vez. Toque para ver a ordem de iniciativa e como cada criatura está. Na sua vez, a faixa fica vermelha.",
+    href: "/conta/",
+    icone: "adaga",
+  },
+  {
+    tipo: "aviso",
     data: "2026-10-12T22:00-03:00",
     titulo: "A ficha viva",
     texto:
