@@ -15,6 +15,7 @@ import {
   type Pedido,
 } from "@/lib/ficha-viva";
 import { BOTAO, BOTAO_CHEIO, CAMPO } from "@/components/conta/MinhaConta";
+import { XP_DO_NIVEL } from "@/lib/xp";
 import { BotaoDeRegra, Janela } from "./Janela";
 
 type Resposta = Promise<string | null>;
@@ -26,8 +27,19 @@ export type AcoesDaFicha = {
   pedirItem: (item: string, quantidade: number, motivo: string) => Resposta;
   pedirMoedas: (moedas: Moedas, motivo: string) => Resposta;
   desistir: (id: number) => Resposta;
-  /** Só o Mestre recebe esta. */
+  /** Só o Mestre recebe estas. */
   resolver?: (id: number, aprovar: boolean, resposta: string) => Resposta;
+  mestre?: MaosDoMestre;
+};
+
+/** O que só o Mestre faz na ficha. Cada uma avisa o jogador. */
+export type MaosDoMestre = {
+  pv: (delta: number) => Resposta;
+  item: (nome: string, quantidade: number) => Resposta;
+  moedas: (moedas: Moedas) => Resposta;
+  xp: (xp: number) => Resposta;
+  inspiracao: (tem: boolean) => Resposta;
+  recado: (texto: string) => Resposta;
 };
 
 /** As regras do glossário já formatadas, pela âncora ("descanso-curto"). */
@@ -108,6 +120,8 @@ export function PainelDaFicha({
         </div>
       </div>
 
+      <Experiencia ficha={ficha} base={base} fazer={fazer} acoes={acoes} ocupado={ocupado} />
+
       {Object.keys(base.espacos).length ? (
         <EspacosDeMagia ficha={ficha} base={base} fazer={fazer} acoes={acoes} ocupado={ocupado} />
       ) : null}
@@ -117,6 +131,8 @@ export function PainelDaFicha({
       <Bolsa ficha={ficha} fazer={fazer} acoes={acoes} ocupado={ocupado} />
 
       <Pedidos pedidos={pedidos} fazer={fazer} acoes={acoes} ocupado={ocupado} mestre={mestre} />
+
+      {acoes.mestre ? <Recado fazer={fazer} acoes={acoes} ocupado={ocupado} /> : null}
     </section>
   );
 }
@@ -149,6 +165,10 @@ function PontosDeVida({ ficha, base, regras, ocupado, fazer, acoes }: Comum & { 
 
   async function dano() {
     if (!quanto) return;
+    if (acoes.mestre) {
+      if (await fazer(() => acoes.mestre!.pv(-quanto), `${quanto} de dano. O jogador foi avisado.`)) setValor("");
+      return;
+    }
     // O dano tira primeiro dos PV temporários
     const dosTemporarios = Math.min(ficha.pv_temporarios, quanto);
     const pv = Math.max(0, ficha.pv - (quanto - dosTemporarios));
@@ -161,6 +181,10 @@ function PontosDeVida({ ficha, base, regras, ocupado, fazer, acoes }: Comum & { 
 
   async function cura() {
     if (!quanto) return;
+    if (acoes.mestre) {
+      if (await fazer(() => acoes.mestre!.pv(quanto), `+${quanto} PV. O jogador foi avisado.`)) setValor("");
+      return;
+    }
     const pv = Math.min(base.pvMaximo, ficha.pv + quanto);
     const ok = await fazer(() => acoes.mudar({ pv }), `+${pv - ficha.pv} PV.`);
     if (ok) setValor("");
@@ -380,7 +404,12 @@ function Inspiracao({ ficha, mestre, fazer, acoes, ocupado, regra }: Comum & { f
           <button
             type="button"
             disabled={ocupado}
-            onClick={() => void fazer(() => acoes.mudar({ inspiracao: true }), "Inspiração Heroica dada.")}
+            onClick={() =>
+              void fazer(
+                () => (acoes.mestre ? acoes.mestre.inspiracao(true) : acoes.mudar({ inspiracao: true })),
+                "Inspiração Heroica dada."
+              )
+            }
             className={BOTAO}
           >
             Dar (Mestre)
@@ -523,7 +552,11 @@ function Mochila({
         ) : (
           <p className="text-tinta-500 text-sm italic">A mochila está vazia.</p>
         )}
-        <p className="text-tinta-500 mt-2 text-xs">Para pôr um item na mochila, peça ao Mestre lá embaixo.</p>
+        {acoes.mestre ? (
+          <PorNaMochila fazer={fazer} acoes={acoes} ocupado={ocupado} />
+        ) : (
+          <p className="text-tinta-500 mt-2 text-xs">Para pôr um item na mochila, peça ao Mestre lá embaixo.</p>
+        )}
       </Bloco>
 
       <Janela aberta={Boolean(tirando)} aoFechar={() => setTirando(null)} titulo="Tirar da mochila">
@@ -622,7 +655,8 @@ function Bolsa({ ficha, fazer, acoes, ocupado }: Comum & { ficha: FichaViva }) {
             </li>
           ))}
         </ul>
-        {gastando ? (
+        {acoes.mestre ? <MexerNaBolsa fazer={fazer} acoes={acoes} ocupado={ocupado} /> : null}
+        {acoes.mestre ? null : gastando ? (
           <form onSubmit={gastar} className="mt-3">
             <CamposDeMoedas valores={valores} mudar={setValores} />
             <div className="mt-3 flex flex-wrap gap-2">
@@ -805,5 +839,157 @@ export function LinhaDoPedido({
         ) : null
       ) : null}
     </li>
+  );
+}
+
+// ---------- Só do Mestre ----------
+
+function Experiencia({ ficha, base, fazer, acoes, ocupado }: Comum & { ficha: FichaViva; base: BaseDaFicha }) {
+  const [valor, setValor] = useState("");
+  const id = useId();
+  const total = base.experiencia + (ficha.experiencia_ganha ?? 0);
+  // O começo da barra é o XP do nível atual
+  const anterior = XP_DO_NIVEL[base.nivel - 1] ?? 0;
+  const fracao = base.proximoNivel ? Math.min(1, Math.max(0, (total - anterior) / (base.proximoNivel - anterior))) : 1;
+  const quanto = Math.floor(Number(valor) || 0);
+
+  return (
+    <div className="mt-6">
+      <Bloco titulo="Experiência">
+        <p className="text-tinta-700 text-sm">
+          <strong className="font-titulo text-tinta-900 text-lg tabular-nums">{total.toLocaleString("pt-BR")} XP</strong>
+          {base.proximoNivel ? (
+            total >= base.proximoNivel ? (
+              <span className="text-dourado-600 ml-2 font-semibold">Pronto para o nível {base.nivel + 1}!</span>
+            ) : (
+              <span className="ml-2">
+                faltam {(base.proximoNivel - total).toLocaleString("pt-BR")} para o nível {base.nivel + 1}
+              </span>
+            )
+          ) : (
+            <span className="ml-2">nível máximo</span>
+          )}
+        </p>
+        <div className="bg-madeira-800/15 mt-2 h-2 overflow-hidden rounded-full" aria-hidden>
+          <div className="bg-dourado-600 h-full rounded-full" style={{ width: `${fracao * 100}%` }} />
+        </div>
+        {acoes.mestre ? (
+          <div className="mt-3 flex items-end gap-2">
+            <label htmlFor={id} className="text-tinta-700 flex-1 text-xs">
+              XP (negativo tira)
+              <input id={id} type="number" inputMode="numeric" value={valor} onChange={(e) => setValor(e.target.value)} className={`${CAMPO} mt-1`} />
+            </label>
+            <button
+              type="button"
+              disabled={ocupado || !quanto}
+              onClick={async () => {
+                if (await fazer(() => acoes.mestre!.xp(quanto), `${quanto > 0 ? "+" : ""}${quanto} XP.`)) setValor("");
+              }}
+              className={BOTAO}
+            >
+              Dar XP
+            </button>
+          </div>
+        ) : null}
+      </Bloco>
+    </div>
+  );
+}
+
+
+function PorNaMochila({ fazer, acoes, ocupado }: Comum) {
+  const [nome, setNome] = useState("");
+  const [quantidade, setQuantidade] = useState(1);
+  const id = useId();
+
+  async function por(e: FormEvent) {
+    e.preventDefault();
+    if (await fazer(() => acoes.mestre!.item(nome, quantidade), `Na mochila: ${quantidade}× ${nome.trim()}.`)) {
+      setNome("");
+      setQuantidade(1);
+    }
+  }
+
+  return (
+    <form onSubmit={por} className="border-dourado-600/30 mt-3 grid grid-cols-[1fr_4.5rem] items-end gap-2 rounded-sm border p-3">
+      <label htmlFor={`${id}-nome`} className="text-tinta-700 text-xs">
+        Pôr na mochila (Mestre)
+        <input id={`${id}-nome`} value={nome} maxLength={80} onChange={(e) => setNome(e.target.value)} className={`${CAMPO} mt-1`} />
+      </label>
+      <label htmlFor={`${id}-qtd`} className="text-tinta-700 text-xs">
+        Quantos
+        <input
+          id={`${id}-qtd`}
+          type="number"
+          min={1}
+          max={999}
+          value={quantidade}
+          onChange={(e) => setQuantidade(Math.max(1, Math.min(999, Math.floor(Number(e.target.value) || 1))))}
+          className={`${CAMPO} mt-1`}
+        />
+      </label>
+      <button type="submit" disabled={ocupado || !nome.trim()} className={`${BOTAO_CHEIO} col-span-2`}>
+        Pôr na mochila
+      </button>
+    </form>
+  );
+}
+
+function MexerNaBolsa({ fazer, acoes, ocupado }: Comum) {
+  const [valores, setValores] = useState<Moedas>({});
+
+  async function mexer(sinal: 1 | -1) {
+    const deltas = Object.fromEntries(Object.entries(valores).map(([k, v]) => [k, (v ?? 0) * sinal])) as Moedas;
+    const texto = `${sinal > 0 ? "Posto na bolsa" : "Tirado da bolsa"}: ${moedasPorExtenso(valores)}.`;
+    if (await fazer(() => acoes.mestre!.moedas(deltas), texto)) setValores({});
+  }
+
+  const vazio = !Object.values(valores).some((v) => (v ?? 0) > 0);
+  return (
+    <div className="border-dourado-600/30 mt-3 rounded-sm border p-3">
+      <p className="text-tinta-700 mb-1 text-xs">Mexer na bolsa (Mestre)</p>
+      <CamposDeMoedas valores={valores} mudar={setValores} />
+      <div className="mt-3 grid grid-cols-2 gap-2">
+        <button type="button" disabled={ocupado || vazio} onClick={() => void mexer(1)} className={BOTAO_CHEIO}>
+          Pôr
+        </button>
+        <button type="button" disabled={ocupado || vazio} onClick={() => void mexer(-1)} className={BOTAO}>
+          Tirar
+        </button>
+      </div>
+    </div>
+  );
+}
+
+function Recado({ fazer, acoes, ocupado }: Comum) {
+  const [texto, setTexto] = useState("");
+  const id = useId();
+  return (
+    <div className="mt-6">
+      <Bloco titulo="Recado para o jogador">
+        <form
+          onSubmit={async (e) => {
+            e.preventDefault();
+            if (await fazer(() => acoes.mestre!.recado(texto), "Recado enviado.")) setTexto("");
+          }}
+          className="flex items-end gap-2"
+        >
+          <label htmlFor={id} className="sr-only">
+            Recado
+          </label>
+          <input
+            id={id}
+            value={texto}
+            maxLength={260}
+            onChange={(e) => setTexto(e.target.value)}
+            placeholder="Aparece na tela dele na hora"
+            className={`${CAMPO} flex-1`}
+          />
+          <button type="submit" disabled={ocupado || !texto.trim()} className={BOTAO}>
+            Enviar
+          </button>
+        </form>
+      </Bloco>
+    </div>
   );
 }

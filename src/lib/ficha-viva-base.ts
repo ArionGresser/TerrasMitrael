@@ -1,5 +1,6 @@
 import { buscarClasse, traco } from "@/lib/classes";
 import { ancora } from "@/lib/regras";
+import { XP_DO_NIVEL } from "@/lib/xp";
 import type { FichaAtual } from "@/lib/personagens";
 
 /**
@@ -16,6 +17,11 @@ export type Moedas = Partial<Record<"pc" | "pp" | "ce" | "po" | "pl", number>>;
 
 export type BaseDaFicha = {
   pvMaximo: number;
+  nivel: number;
+  /** O XP da ficha do site (o ganho na mesa soma por cima, no banco). */
+  experiencia: number;
+  /** O XP do próximo nível, ou null no 20. */
+  proximoNivel: number | null;
   /** O lado do Dado de Vida da classe: 8 para d8. */
   dadoDeVida: number;
   dadosDeVida: number;
@@ -75,6 +81,7 @@ function itemDaLinha(linha: string, i: number): ItemDaMochila {
   };
 }
 
+
 export function baseDaFicha(ficha: FichaAtual): BaseDaFicha {
   const nivel = Math.max(1, numero(ficha.nivel));
   const classe = buscarClasse(ancora(ficha.classe));
@@ -91,6 +98,9 @@ export function baseDaFicha(ficha: FichaAtual): BaseDaFicha {
 
   return {
     pvMaximo,
+    nivel,
+    experiencia: numero(ficha.experiencia),
+    proximoNivel: XP_DO_NIVEL[nivel] ?? null,
     dadoDeVida,
     dadosDeVida: nivel,
     modConstituicao: numero(constituicao?.modificador),

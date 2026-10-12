@@ -20,6 +20,8 @@ export type FichaViva = {
   inspiracao: boolean;
   inventario: ItemDaMochila[];
   moedas: Moedas;
+  /** XP ganho jogando, por cima do XP da ficha do site. */
+  experiencia_ganha: number;
   atualizada_em: string;
 };
 
@@ -173,4 +175,112 @@ export function curaDaPocao(nome: string): string | null {
   if (n.includes("superior")) return "8d4+8";
   if (n.includes("maior")) return "4d4+4";
   return "2d4+2";
+}
+
+// ---------- As mãos do Mestre ----------
+// Cada uma também deixa um aviso para o jogador (ver supabase/0003-mesa-ao-vivo.sql).
+
+async function chamar(funcao: string, args: Record<string, unknown>): Promise<string | null> {
+  const sb = await cliente();
+  const { error } = await sb.rpc(funcao, args);
+  return erroLegivel(error);
+}
+
+export const mestre = {
+  darItem: (personagem: string, nome: string, quantidade: number) => {
+    if (!nome.trim()) return Promise.resolve("Escreva o nome do item.");
+    return chamar("mestre_dar_item", { p_personagem: personagem, p_nome: nome.trim(), p_quantidade: quantidade });
+  },
+  /** Números positivos põem, negativos tiram: {"po": 50, "pp": -2}. */
+  moedas: (personagem: string, moedas: Moedas) => {
+    const limpas = Object.fromEntries(Object.entries(moedas).filter(([, n]) => n));
+    if (!Object.keys(limpas).length) return Promise.resolve("Escreva quantas moedas.");
+    return chamar("mestre_moedas", { p_personagem: personagem, p_moedas: limpas });
+  },
+  xp: (personagem: string, xp: number) => chamar("mestre_xp", { p_personagem: personagem, p_xp: xp }),
+  /** Negativo é dano, positivo é cura. */
+  pv: (personagem: string, delta: number, pvMaximo: number) =>
+    chamar("mestre_pv", { p_personagem: personagem, p_delta: delta, p_pv_maximo: pvMaximo }),
+  inspiracao: (personagem: string, tem: boolean) => chamar("mestre_inspiracao", { p_personagem: personagem, p_tem: tem }),
+  recado: (personagem: string, texto: string) => chamar("mestre_recado", { p_personagem: personagem, p_texto: texto }),
+};
+
+export async function lerTodasAsFichas(): Promise<FichaViva[]> {
+  const sb = await cliente();
+  const { data } = await sb.from("fichas").select("*");
+  return (data as FichaViva[] | null) ?? [];
+}
+
+// ---------- Avisos ----------
+
+export type Aviso = { id: number; personagem: string; texto: string; criado_em: string };
+
+export async function lerAvisos(personagem: string, depoisDe = 0): Promise<Aviso[]> {
+  const sb = await cliente();
+  const { data } = await sb
+    .from("avisos")
+    .select("*")
+    .eq("personagem", personagem)
+    .gt("id", depoisDe)
+    .order("id", { ascending: false })
+    .limit(5);
+  return ((data as Aviso[] | null) ?? []).reverse();
+}
+
+// ---------- Na hora ----------
+
+/**
+ * Fica ouvindo as tabelas e chama `aoMudar` a cada mudança que chega. Sem
+ * `personagem`, ouve todas as fichas que a conta pode ver (o Mestre, todas).
+ * Devolve a função que para de ouvir.
+ */
+export function ouvirMesa(
+  aoMudar: (tabela: "fichas" | "pedidos" | "avisos", linha: Record<string, unknown>) => void,
+  personagem?: string,
+  tabelas: ("fichas" | "pedidos" | "avisos")[] = ["fichas", "pedidos"]
+): () => void {
+  let parar = () => {};
+  let parado = false;
+  void cliente().then((sb) => {
+    if (parado) return;
+    let canal = sb.channel(`mesa-${personagem ?? "toda"}-${tabelas.join("-")}-${Math.random().toString(36).slice(2, 8)}`);
+    for (const tabela of tabelas) {
+      canal = canal.on(
+        "postgres_changes",
+        { event: "*", schema: "public", table: tabela, ...(personagem ? { filter: `personagem=eq.${personagem}` } : {}) },
+        (mudanca) => aoMudar(tabela, (mudanca.new ?? {}) as Record<string, unknown>)
+      );
+    }
+    canal.subscribe();
+    parar = () => void sb.removeChannel(canal);
+  });
+  return () => {
+    parado = true;
+    parar();
+  };
+}
+
+// ---------- Sugestões ----------
+
+export type Sugestao = { id: number; conta: string; texto: string; lida: boolean; criado_em: string };
+
+export async function mandarSugestao(texto: string): Promise<string | null> {
+  const limpo = texto.trim();
+  if (!limpo) return "Escreva a sugestão.";
+  if (limpo.length > 1000) return "A sugestão pode ter no máximo 1000 letras.";
+  const sb = await cliente();
+  const { error } = await sb.from("sugestoes").insert({ texto: limpo });
+  return erroLegivel(error);
+}
+
+export async function listarSugestoes(): Promise<Sugestao[]> {
+  const sb = await cliente();
+  const { data } = await sb.from("sugestoes").select("*").order("criado_em", { ascending: false }).limit(100);
+  return (data as Sugestao[] | null) ?? [];
+}
+
+export async function marcarSugestao(id: number, lida: boolean): Promise<string | null> {
+  const sb = await cliente();
+  const { error } = await sb.from("sugestoes").update({ lida }).eq("id", id);
+  return erroLegivel(error);
 }

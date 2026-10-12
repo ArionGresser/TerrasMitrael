@@ -7,6 +7,7 @@ import { motion, useReducedMotion } from "motion/react";
 import { Botao } from "@/components/ui/Botao";
 import { tocar, NIVEL_DA_RARIDADE } from "@/lib/som";
 import { conquistar } from "@/lib/conquistas";
+import { MandarDoBau } from "@/components/ficha-viva/MandarDoBau";
 import {
   abrir,
   faixaDo,
@@ -153,7 +154,7 @@ function CartaoDoAchado({ achado }: { achado: Achado }) {
   );
 }
 
-export function BauDoMestre({ conteudo }: { conteudo: Conteudo }) {
+export function BauDoMestre({ conteudo, nomes = {} }: { conteudo: Conteudo; nomes?: Record<string, string> }) {
   const [e, setE] = useState<Escolhas>(PADRAO);
   const [d20, setD20] = useState("");
   const [resultado, setResultado] = useState<Resultado | null>(null);
@@ -503,6 +504,8 @@ export function BauDoMestre({ conteudo }: { conteudo: Conteudo }) {
             ) : !resultado.moedas.length ? (
               <p className="text-tinta-700 mt-5 text-sm italic">Nada. Só poeira e um cheiro de mofo.</p>
             ) : null}
+
+            <MandarDoBau resultado={resultado} nomes={nomes} />
 
             <div className="mt-6 flex flex-wrap gap-3">
               <Botao onClick={copiar}>{copiado ? "Copiado" : "Copiar para o Discord"}</Botao>

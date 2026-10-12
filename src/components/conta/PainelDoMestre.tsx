@@ -4,7 +4,17 @@ import { useCallback, useEffect, useId, useState, type FormEvent } from "react";
 import Link from "next/link";
 import { iniciarConta, listarContas, redefinirSenha, vincularPersonagem, type Perfil } from "@/lib/conta";
 import { BOTAO, CAMPO, type PersonagemDaLista } from "./MinhaConta";
-import { criarFicha, listarPedidos, resolverPedido, type Pedido } from "@/lib/ficha-viva";
+import {
+  criarFicha,
+  listarPedidos,
+  listarSugestoes,
+  marcarSugestao,
+  ouvirMesa,
+  resolverPedido,
+  type Pedido,
+  type Sugestao,
+} from "@/lib/ficha-viva";
+import { MesaAoVivo } from "@/components/ficha-viva/MesaAoVivo";
 import type { BaseDaFicha } from "@/lib/ficha-viva-base";
 import { LinhaDoPedido } from "@/components/ficha-viva/PainelDaFicha";
 
@@ -39,7 +49,12 @@ export function PainelDoMestre({ personagens }: { personagens: PersonagemDoMestr
   }, []);
 
   useEffect(() => {
-    if (ehMestre) void recarregar();
+    if (!ehMestre) return;
+    void recarregar();
+    // Pedido novo de um jogador aparece na hora
+    return ouvirMesa((tabela) => {
+      if (tabela === "pedidos") void recarregar();
+    }, undefined, ["pedidos"]);
   }, [ehMestre, recarregar]);
 
   if (conta.fase === "carregando") {
@@ -61,7 +76,15 @@ export function PainelDoMestre({ personagens }: { personagens: PersonagemDoMestr
 
   return (
     <div>
-      <PedidosPendentes pedidos={pedidos} personagens={personagens} aoMudar={recarregar} />
+      <MesaAoVivo personagens={personagens} />
+
+      <div className="mt-10">
+        <PedidosPendentes pedidos={pedidos} personagens={personagens} aoMudar={recarregar} />
+      </div>
+
+      <div className="mt-10">
+        <CaixaDeSugestoes contas={lista.contas} />
+      </div>
 
       <p className="text-tinta-700 mt-8 text-center text-sm">
         {lista.contas.length === 1 ? "1 conta" : `${lista.contas.length} contas`} no livro.
@@ -251,6 +274,48 @@ function PedidosPendentes({
         </ul>
       ) : (
         <p className="text-tinta-500 text-center text-sm italic">Nenhum pedido esperando.</p>
+      )}
+    </section>
+  );
+}
+
+function CaixaDeSugestoes({ contas }: { contas: Perfil[] }) {
+  const [sugestoes, setSugestoes] = useState<Sugestao[] | null>(null);
+
+  const ler = useCallback(async () => setSugestoes(await listarSugestoes()), []);
+  useEffect(() => {
+    void ler();
+  }, [ler]);
+
+  const novas = (sugestoes ?? []).filter((s) => !s.lida).length;
+  return (
+    <section aria-labelledby="titulo-sugestoes">
+      <h2 id="titulo-sugestoes" className="font-titulo text-tinta-900 text-center text-lg font-bold">
+        Caixa de sugestões{novas ? ` (${novas} ${novas === 1 ? "nova" : "novas"})` : ""}
+      </h2>
+      {!sugestoes ? null : sugestoes.length ? (
+        <ul className="mt-3 space-y-2">
+          {sugestoes.map((s) => (
+            <li key={s.id} className={`rounded-sm border px-3 py-2 text-sm ${s.lida ? "border-dourado-600/15 opacity-70" : "border-dourado-600/40"}`}>
+              <p className="text-tinta-500 text-xs">
+                {contas.find((c) => c.id === s.conta)?.nome ?? "Alguém"} · {new Date(s.criado_em).toLocaleDateString("pt-BR")}
+              </p>
+              <p className="text-tinta-900 mt-1 whitespace-pre-line">{s.texto}</p>
+              <button
+                type="button"
+                onClick={async () => {
+                  await marcarSugestao(s.id, !s.lida);
+                  await ler();
+                }}
+                className="text-tinta-700 mt-1 min-h-8 text-xs underline"
+              >
+                {s.lida ? "Marcar como nova" : "Marcar como lida"}
+              </button>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p className="text-tinta-500 text-center text-sm italic">Nenhuma sugestão ainda.</p>
       )}
     </section>
   );

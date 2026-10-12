@@ -160,6 +160,15 @@ const REGISTRO: Registro[] = [
   },
   {
     tipo: "aviso",
+    data: "2026-10-12T22:00-03:00",
+    titulo: "A ficha viva",
+    texto:
+      "Com a conta ligada ao seu personagem, a aba Ficha ganha os PV, os descansos, os espaços de magia, a mochila e a bolsa, tudo mudando na hora. O que o Mestre mandar aparece como aviso na sua tela.",
+    href: "/conta/",
+    icone: "chave",
+  },
+  {
+    tipo: "aviso",
     data: "2026-10-12T20:00-03:00",
     titulo: "Agora dá para criar a sua conta",
     texto:

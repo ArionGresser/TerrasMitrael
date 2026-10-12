@@ -4,6 +4,7 @@ import { useEffect, useId, useState, type FormEvent, type ReactNode } from "reac
 import Link from "next/link";
 import { criarConta, entrar, iniciarConta, problemaNoNome, sair, trocarNome, trocarSenha, usuarioDe } from "@/lib/conta";
 import { CONQUISTAS, EVENTO_JUNTADAS, conquistadas } from "@/lib/conquistas";
+import { mandarSugestao } from "@/lib/ficha-viva";
 import { useConta } from "./useConta";
 
 export type PersonagemDaLista = { slug: string; nome: string };
@@ -81,6 +82,7 @@ export function MinhaConta({ personagens }: { personagens: PersonagemDaLista[] }
       <div className="space-y-3">
         <Troca titulo="Trocar o nome que aparece" rotulo="Nome novo" valorInicial={perfil.nome} enviar={trocarNome} ok="Nome trocado." />
         <Troca titulo="Trocar a senha" rotulo="Senha nova" tipo="password" enviar={trocarSenha} ok="Senha trocada." />
+        {perfil.papel !== "mestre" ? <Sugestao /> : null}
       </div>
 
       <div className="text-center">
@@ -298,6 +300,52 @@ function Troca({
           {aviso.texto}
         </p>
       ) : null}
+    </details>
+  );
+}
+
+/** A caixa de sugestões: uma ideia, um pedido de regra, um elogio ao Mestre. */
+function Sugestao() {
+  const [texto, setTexto] = useState("");
+  const [aviso, setAviso] = useState<{ erro: boolean; texto: string } | null>(null);
+  const [enviando, setEnviando] = useState(false);
+  const id = useId();
+
+  async function enviar(e: FormEvent) {
+    e.preventDefault();
+    setEnviando(true);
+    const problema = await mandarSugestao(texto);
+    setEnviando(false);
+    setAviso(problema ? { erro: true, texto: problema } : { erro: false, texto: "Sugestão entregue ao Mestre. Valeu!" });
+    if (!problema) setTexto("");
+  }
+
+  return (
+    <details className="border-dourado-600/30 rounded-sm border">
+      <summary className="font-titulo text-tinta-900 min-h-11 cursor-pointer px-4 py-3 text-sm font-semibold">
+        Caixa de sugestões
+      </summary>
+      <form onSubmit={enviar} className="px-4 pb-4">
+        <label htmlFor={id} className="text-tinta-700 text-xs">
+          Uma ideia para o site ou para a mesa. Só o Mestre lê.
+        </label>
+        <textarea
+          id={id}
+          value={texto}
+          maxLength={1000}
+          rows={4}
+          onChange={(e) => setTexto(e.target.value)}
+          className={`${CAMPO} mt-1 py-2`}
+        />
+        <button type="submit" disabled={enviando || !texto.trim()} className={`${BOTAO} mt-2`}>
+          Enviar
+        </button>
+        {aviso ? (
+          <p role="status" className={`mt-2 text-sm ${aviso.erro ? "text-heraldico-vermelho" : "text-tinta-700"}`}>
+            {aviso.texto}
+          </p>
+        ) : null}
+      </form>
     </details>
   );
 }

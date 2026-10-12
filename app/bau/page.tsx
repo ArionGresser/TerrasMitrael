@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { conteudoDoBau } from "@/lib/bau";
 import { BauDoMestre } from "@/components/bau/BauDoMestre";
+import { PERSONAGENS } from "@/lib/personagens";
 import { Pergaminho } from "@/components/ui/Pergaminho";
 import { Rodape } from "@/components/Rodape";
 import { TituloBrasao, Sobretitulo, Ornamento } from "@/components/ui/Titulo";
@@ -37,7 +38,7 @@ export default function PaginaBau() {
           </header>
 
           <div className="mt-6">
-            <BauDoMestre conteudo={conteudo} />
+            <BauDoMestre conteudo={conteudo} nomes={Object.fromEntries(PERSONAGENS.map((p) => [p.meta.slug, p.meta.nome]))} />
           </div>
         </Pergaminho>
       </main>

@@ -8,7 +8,9 @@ import {
   gastarMoedas,
   lerFicha,
   listarPedidos,
+  mestre as maosDoMestre,
   mudarFicha,
+  ouvirMesa,
   pedirItem,
   pedirMoedas,
   resolverPedido,
@@ -24,8 +26,9 @@ import { PainelDaFicha, type AcoesDaFicha, type RegrasDaFicha } from "./PainelDa
  * A ficha viva na página do personagem. Só aparece para a conta ligada a
  * ele e para o Mestre; para o resto do mundo a página fica como sempre foi.
  *
- * Lê a ficha ao abrir e de novo quando a pessoa volta para a aba (assim um
- * pedido aprovado pelo Mestre aparece sem recarregar).
+ * Lê a ficha ao abrir e fica ouvindo o banco: o que o Mestre muda aparece
+ * na hora. Ao voltar para a aba, lê de novo, para o caso de a conexão ter
+ * caído enquanto o celular dormia.
  */
 export function FichaVivaDoPersonagem({
   slug,
@@ -58,8 +61,12 @@ export function FichaVivaDoPersonagem({
       if (document.visibilityState === "visible") void recarregar();
     };
     document.addEventListener("visibilitychange", aoVoltar);
-    return () => document.removeEventListener("visibilitychange", aoVoltar);
-  }, [pode, recarregar]);
+    const pararDeOuvir = ouvirMesa(() => void recarregar(), slug);
+    return () => {
+      document.removeEventListener("visibilitychange", aoVoltar);
+      pararDeOuvir();
+    };
+  }, [pode, recarregar, slug]);
 
   const acoes = useMemo<AcoesDaFicha>(() => {
     /** Faz a ação no banco e lê tudo de novo (o banco tem a última palavra). */
@@ -80,8 +87,18 @@ export function FichaVivaDoPersonagem({
       pedirMoedas: (m, mot) => e(() => pedirMoedas(slug, m, mot))(),
       desistir: (id) => e(() => desistirDoPedido(id))(),
       resolver: mestre ? (id, ok, r) => e(() => resolverPedido(id, ok, r))() : undefined,
+      mestre: mestre
+        ? {
+            pv: (delta) => e(() => maosDoMestre.pv(slug, delta, base.pvMaximo))(),
+            item: (nome, q) => e(() => maosDoMestre.darItem(slug, nome, q))(),
+            moedas: (m) => e(() => maosDoMestre.moedas(slug, m))(),
+            xp: (xp) => e(() => maosDoMestre.xp(slug, xp))(),
+            inspiracao: (tem) => e(() => maosDoMestre.inspiracao(slug, tem))(),
+            recado: (texto) => e(() => maosDoMestre.recado(slug, texto))(),
+          }
+        : undefined,
     };
-  }, [slug, mestre, recarregar]);
+  }, [slug, mestre, recarregar, base.pvMaximo]);
 
   if (!pode || ficha === undefined) return null;
 
