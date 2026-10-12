@@ -44,6 +44,12 @@ export const SECOES: Secao[] = [
     nome: "Conquistas",
     descricao: "Os feitos que você já realizou pela mesa",
   },
+  {
+    href: "/conta/",
+    nome: "Minha conta",
+    descricao: "Entre para guardar as conquistas em qualquer aparelho",
+    inclui: ["/mestre/"],
+  },
 ];
 
 export const COMUNIDADE = {

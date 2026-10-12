@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Pergaminho } from "@/components/ui/Pergaminho";
 import { Rodape } from "@/components/Rodape";
 import { TituloBrasao, Sobretitulo, Ornamento } from "@/components/ui/Titulo";
@@ -26,7 +27,6 @@ export default function PaginaConquistas() {
           </header>
         </Pergaminho>
 
-        {/* O login ainda não existe: o painel já está aqui, mas desligado */}
         <aside
           aria-labelledby="titulo-entrar"
           className="border-madeira-600/70 bg-madeira-900/80 mt-10 flex flex-col items-center gap-4 rounded-lg border p-5 text-center sm:flex-row sm:text-left"
@@ -36,19 +36,16 @@ export default function PaginaConquistas() {
               Leve suas conquistas com você
             </h2>
             <p className="text-pergaminho-300 mt-1 text-sm leading-relaxed">
-              Por enquanto elas ficam guardadas só neste navegador. Em breve vai dar para entrar com uma conta e
-              encontrar tudo em qualquer aparelho.
+              Elas ficam guardadas neste navegador. Com uma conta, vão junto para qualquer aparelho, e entrar pela
+              primeira vez já vale uma conquista.
             </p>
           </div>
-          <button
-            type="button"
-            disabled
-            aria-disabled
-            title="O login ainda está sendo preparado"
-            className="font-titulo border-madeira-500/60 text-pergaminho-300/70 shrink-0 rounded-md border border-dashed px-5 py-2.5 text-sm tracking-[0.12em] uppercase"
+          <Link
+            href="/conta/"
+            className="font-titulo border-dourado-400/70 text-pergaminho-50 hover:bg-dourado-400/15 inline-flex min-h-11 shrink-0 items-center rounded-md border px-5 text-sm tracking-[0.12em] uppercase transition-colors"
           >
-            Entrar <span className="text-xs normal-case italic">(em breve)</span>
-          </button>
+            Minha conta
+          </Link>
         </aside>
 
         <div className="mt-10">

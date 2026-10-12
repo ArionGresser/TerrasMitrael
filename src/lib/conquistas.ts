@@ -1,9 +1,9 @@
 /**
  * As conquistas: pequenos feitos que dá para realizar pelo site.
  *
- * Por enquanto tudo fica guardado só neste navegador (localStorage). Quando
- * existir conta, é daqui que as conquistas sobem para ela: a lista e as
- * datas já estão no formato de levar.
+ * Tudo fica guardado neste navegador (localStorage). Com a conta aberta,
+ * src/lib/conta.ts junta o que está aqui com o que está na conta, nos dois
+ * sentidos (ver `retrato` e `juntar`), e sobe cada feito novo.
  *
  * Muitas vêm em degraus, bronze, prata e ouro: bater na madeira uma vez,
  * depois 30, depois 300. Os degraus de um feito dividem o mesmo contador
@@ -90,6 +90,9 @@ export const CONQUISTAS: Conquista[] = [
   { chave: "ferro", nome: "Ferro batido", descricao: "Bata numa das ferragens de ferro da mesa.", icone: "martelo", nivel: "bronze" },
   { chave: "bau-vinte", nome: "Sorte de saqueador", descricao: "Tire 20 no Baú do Mestre com o botão de rolar.", icone: "bau", nivel: "prata", premio: { tipo: "mao", chave: "goblin" } },
   { chave: "moeda-em-pe", nome: "Equilíbrio impossível", descricao: "Deixe uma moeda parada em pé, de lado, na mesa.", icone: "moeda", nivel: "ouro", mesa: true, premio: { tipo: "mao", chave: "mago" } },
+
+  // A conta
+  { chave: "conta", nome: "Nome no livro", descricao: "Entre no site com a sua conta.", icone: "chave", nivel: "prata", premio: { tipo: "dado", chave: "ambar" } },
 ];
 
 /** O que todo mundo tem desde o começo, sem conquista nenhuma. */
@@ -99,6 +102,10 @@ const CHAVE_FEITAS = "mitrael:conquistas";
 const CHAVE_CONTAS = "mitrael:contadores";
 const CHAVE_MARCAS = "mitrael:marcas";
 export const EVENTO = "mitrael:conquista";
+/** Um contador andou (para a conta guardar o progresso). */
+export const EVENTO_PROGRESSO = "mitrael:progresso";
+/** As conquistas da conta chegaram a este navegador (sem aviso na tela). */
+export const EVENTO_JUNTADAS = "mitrael:conquistas-juntadas";
 
 function ler<T>(chave: string, vazio: T): T {
   try {
@@ -176,6 +183,7 @@ export function contar(contador: string) {
   const contas = ler<Record<string, number>>(CHAVE_CONTAS, {});
   contas[contador] = (contas[contador] ?? 0) + 1;
   gravar(CHAVE_CONTAS, contas);
+  window.dispatchEvent(new Event(EVENTO_PROGRESSO));
   conferir(contador, contas[contador]);
 }
 
@@ -187,6 +195,50 @@ export function marcar(contador: string, item: string) {
     lista.push(item);
     marcas[contador] = lista;
     gravar(CHAVE_MARCAS, marcas);
+    window.dispatchEvent(new Event(EVENTO_PROGRESSO));
   }
   conferir(contador, lista.length);
+}
+
+/** Tudo o que este navegador sabe: o formato que sobe para a conta. */
+export type Retrato = {
+  feitas: Record<string, string>;
+  contadores: Record<string, number>;
+  marcas: Record<string, string[]>;
+};
+
+export function retrato(): Retrato {
+  return {
+    feitas: conquistadas(),
+    contadores: ler<Record<string, number>>(CHAVE_CONTAS, {}),
+    marcas: ler<Record<string, string[]>>(CHAVE_MARCAS, {}),
+  };
+}
+
+/**
+ * Junta o que veio da conta com o que já está aqui, sem perder nada dos
+ * dois lados: o feito fica com a data mais antiga, o contador com o maior
+ * número e as marcas com todas. Grava no navegador, avisa as telas abertas
+ * (sem o aviso de conquista, que é só para feito novo) e devolve o resultado.
+ */
+export function juntar(da: Partial<Retrato>): Retrato {
+  const aqui = retrato();
+  const feitas = { ...aqui.feitas };
+  for (const [chave, quando] of Object.entries(da.feitas ?? {})) {
+    if (!CONQUISTAS.some((c) => c.chave === chave)) continue;
+    if (!feitas[chave] || quando < feitas[chave]) feitas[chave] = quando;
+  }
+  const contadores = { ...aqui.contadores };
+  for (const [chave, n] of Object.entries(da.contadores ?? {})) {
+    if (typeof n === "number" && n > (contadores[chave] ?? 0)) contadores[chave] = n;
+  }
+  const marcas = { ...aqui.marcas };
+  for (const [chave, lista] of Object.entries(da.marcas ?? {})) {
+    if (Array.isArray(lista)) marcas[chave] = [...new Set([...(marcas[chave] ?? []), ...lista])];
+  }
+  gravar(CHAVE_FEITAS, feitas);
+  gravar(CHAVE_CONTAS, contadores);
+  gravar(CHAVE_MARCAS, marcas);
+  window.dispatchEvent(new Event(EVENTO_JUNTADAS));
+  return { feitas, contadores, marcas };
 }

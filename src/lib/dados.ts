@@ -29,6 +29,7 @@ export const DADOS: EstiloDeDado[] = [
   { chave: "safira", nome: "Safira e prata", fundo: "#0e1f4a", fumaca: ["60,110,220", "20,50,120"], tinta: ["#ffffff", "#d4dbe6", "#7d8796"], metal: true },
   { chave: "rubi", nome: "Sangue de rubi", fundo: "#4a0710", fumaca: ["190,30,50", "110,10,25"], tinta: ["#ffffff", "#d4dbe6", "#7d8796"], metal: true },
   { chave: "ametista", nome: "Ametista arcana", fundo: "#2a0d45", fumaca: ["150,70,230", "80,30,140"], tinta: ["#fff1b8", "#e6bd55", "#8f6a1c"], metal: true },
+  { chave: "ambar", nome: "Âmbar antigo", fundo: "#5a3108", fumaca: ["230,150,40", "140,70,10"], tinta: ["#fff7e0", "#f3d9a0", "#a8763a"], metal: false },
   { chave: "magma", nome: "Coração de magma", fundo: "#100605", fumaca: ["160,40,10", "60,20,15"], tinta: ["#fff2a0", "#ff9a2a", "#c2410c"], metal: false, brilho: "#ff7a1a" },
 ];
 

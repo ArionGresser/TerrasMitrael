@@ -13,6 +13,7 @@
     "@mdx-js/loader": "^3.1.1",
     "@mdx-js/react": "^3.1.1",
     "@next/mdx": "^16.2.12",
+    "@supabase/supabase-js": "^2.117.3",
     "@tailwindcss/postcss": "^4.3.3",
     "cannon-es": "^0.20.0",
     "howler": "^2.2.4",

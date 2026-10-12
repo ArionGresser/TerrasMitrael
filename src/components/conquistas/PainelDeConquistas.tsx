@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { CONQUISTAS, EVENTO, conquistadas, progresso, visivel } from "@/lib/conquistas";
+import { CONQUISTAS, EVENTO, EVENTO_JUNTADAS, conquistadas, progresso, visivel } from "@/lib/conquistas";
 import { COR_DO_NIVEL, NOME_DO_NIVEL, nomeDoPremio } from "./premios";
 import { IconeConquista } from "./IconeConquista";
 
@@ -29,9 +29,11 @@ export function PainelDeConquistas() {
     const atualizar = () => setEstado(ler());
     atualizar();
     window.addEventListener(EVENTO, atualizar);
+    window.addEventListener(EVENTO_JUNTADAS, atualizar);
     window.addEventListener("storage", atualizar);
     return () => {
       window.removeEventListener(EVENTO, atualizar);
+      window.removeEventListener(EVENTO_JUNTADAS, atualizar);
       window.removeEventListener("storage", atualizar);
     };
   }, []);
