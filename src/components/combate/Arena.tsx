@@ -688,7 +688,7 @@ export function AtalhosDoMestre(p: {
       </div>
 
       <details className="mt-2" onToggle={(e) => (e.currentTarget as HTMLDetailsElement).open && void carregarCriaturas()}>
-        <summary className="text-tinta-700 min-h-9 cursor-pointer text-xs">Mais: acrescentar criatura, ficha, tirar do combate</summary>
+        <summary className="text-tinta-700 min-h-9 cursor-pointer text-xs">Mais: acrescentar criatura (do Bestiário ou da casa), ficha, tirar do combate</summary>
         <form
           onSubmit={(e) => {
             e.preventDefault();
@@ -713,6 +713,7 @@ export function AtalhosDoMestre(p: {
             Acrescentar
           </button>
         </form>
+        <CriaturaDaCasa acrescentar={p.acrescentar} />
         <div className="mt-2 flex flex-wrap gap-2">
           <button type="button" disabled={!p.verFicha} onClick={p.verFicha} className={`${BOTAO} px-3 text-xs`}>
             Ver a ficha do escolhido
@@ -822,5 +823,66 @@ function SemCombate({ ehMestre }: { ehMestre: boolean }) {
         <p className="text-tinta-500 mt-2 text-sm">Quando o Mestre começar um, a faixa aparece no alto da tela.</p>
       )}
     </div>
+  );
+}
+
+/**
+ * Uma criatura que não está no Bestiário (o coveiro da aventura, um chefe
+ * feito para a mesa): nome, CA, PV, bônus de iniciativa e XP, e ela entra
+ * no combate como qualquer outra.
+ */
+function CriaturaDaCasa({ acrescentar }: { acrescentar: (c: CriaturaDeCombate) => void }) {
+  const [c, setC] = useState({ nome: "", ca: 12, pv: 10, iniciativa: 0, xp: 50 });
+  const numero = (campo: "ca" | "pv" | "iniciativa" | "xp", rotulo: string, min = 0) => (
+    <label className="text-tinta-700 text-xs">
+      {rotulo}
+      <input
+        type="number"
+        inputMode="numeric"
+        min={min}
+        value={c[campo]}
+        onChange={(e) => setC({ ...c, [campo]: Math.floor(Number(e.target.value) || 0) })}
+        className={`${CAMPO} mt-1 px-1 text-center`}
+      />
+    </label>
+  );
+  return (
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        const nome = c.nome.trim();
+        if (!nome) return;
+        acrescentar({
+          slug: `da-casa-${nome.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`,
+          nome,
+          tipo: "Da casa",
+          fonte: "monstro",
+          nd: "–",
+          ndNumero: 0,
+          xp: Math.max(0, c.xp),
+          ca: Math.max(1, c.ca),
+          pv: Math.max(1, c.pv),
+          pvDados: "",
+          iniciativa: c.iniciativa,
+        });
+        setC({ ...c, nome: "" });
+      }}
+      className="border-dourado-600/30 mt-3 rounded-sm border p-2"
+    >
+      <p className="text-tinta-700 text-xs font-semibold">Criatura da casa (fora do Bestiário)</p>
+      <label className="text-tinta-700 mt-1 block text-xs">
+        Nome que os jogadores veem
+        <input value={c.nome} maxLength={40} onChange={(e) => setC({ ...c, nome: e.target.value })} className={`${CAMPO} mt-1`} />
+      </label>
+      <div className="mt-2 grid grid-cols-4 gap-2">
+        {numero("ca", "CA", 1)}
+        {numero("pv", "PV", 1)}
+        {numero("iniciativa", "Inic. +", -5)}
+        {numero("xp", "XP")}
+      </div>
+      <button type="submit" disabled={!c.nome.trim()} className={`${BOTAO} mt-2 w-full`}>
+        Pôr no combate
+      </button>
+    </form>
   );
 }
