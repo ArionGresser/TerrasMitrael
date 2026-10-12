@@ -163,8 +163,8 @@ const REGISTRO: Registro[] = [
     data: "2026-10-12T23:30-03:00",
     titulo: "Combate na mesa",
     texto:
-      "Quando o Mestre começa um combate, quem está com a conta aberta vê no alto da tela a rodada e de quem é a vez. Toque para ver a ordem de iniciativa e como cada criatura está. Na sua vez, a faixa fica vermelha.",
-    href: "/conta/",
+      "Quando o Mestre começa um combate, quem está com a conta aberta vê no alto da tela a rodada e de quem é a vez. Toque na faixa para abrir a arena: os aventureiros de um lado, os inimigos do outro, a ordem de iniciativa e o histórico. Dali você rola a sua iniciativa, abre a sua ficha e pede coisas ao Mestre.",
+    href: "/combate/",
     icone: "adaga",
   },
   {

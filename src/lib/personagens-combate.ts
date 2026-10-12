@@ -12,5 +12,6 @@ export function personagensDoCombate(): PersonagemDoCombate[] {
     ca: numero(meta.ficha!.combate.ca),
     iniciativa: numero(meta.ficha!.combate.iniciativa),
     pvMaximo: numero(meta.ficha!.combate.pv),
+    imagem: meta.imagem,
   }));
 }

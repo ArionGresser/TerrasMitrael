@@ -12,11 +12,14 @@ export function Janela({
   aberta,
   aoFechar,
   titulo,
+  larga = false,
   children,
 }: {
   aberta: boolean;
   aoFechar: () => void;
   titulo: string;
+  /** Para caber uma ficha inteira. */
+  larga?: boolean;
   children: ReactNode;
 }) {
   const janela = useRef<HTMLDialogElement>(null);
@@ -39,7 +42,7 @@ export function Janela({
         if (e.target === e.currentTarget) janela.current?.close();
       }}
       aria-label={titulo}
-      className="m-auto w-[min(92vw,30rem)] max-w-none bg-transparent p-0 backdrop:bg-black/70"
+      className={`m-auto ${larga ? "w-[min(96vw,46rem)]" : "w-[min(92vw,30rem)]"} max-w-none bg-transparent p-0 backdrop:bg-black/70`}
     >
       <div className="textura-pergaminho borda-envelhecida pergaminho-borda-2 max-h-[85dvh] overflow-y-auto px-5 py-6 sm:px-7">
         <div className="flex items-start justify-between gap-4">

@@ -26,18 +26,28 @@ export type Lutador = {
   imagem?: string;
 };
 
+/** Uma linha do histórico: a rodada, o texto completo e o que os jogadores leem. */
+export type Registro = { rodada: number; texto: string; publico: string };
+
 export type EstadoDoCombate = {
+  /** Quantos combates já houve, contando este. */
+  numero?: number;
   rodada: number;
   /** O id de quem está agindo, ou null antes de começar. */
   vez: string | null;
   lutadores: Lutador[];
   dificuldade?: string;
+  historico?: Registro[];
 };
 
 /** O que os jogadores veem. */
 export type MesaDoCombate = {
+  numero?: number;
   rodada: number;
   vez: string | null;
+  historico?: { rodada: number; texto: string }[];
+  /** Ao terminar: o que aconteceu, para a lista dos combates passados. */
+  resumo?: ResumoDoCombate;
   ordem: {
     id: string;
     tipo: Lutador["tipo"];
@@ -47,7 +57,20 @@ export type MesaDoCombate = {
     estado: string;
     condicoes: string[];
     imagem?: string;
+    /** Só dos personagens: os aliados veem os PV uns dos outros. */
+    pv?: number;
+    pvMaximo?: number;
+    ca?: number;
   }[];
+};
+
+export type ResumoDoCombate = {
+  data: string;
+  rodadas: number;
+  inimigos: string[];
+  personagens: string[];
+  xpPorCabeca: number;
+  tesouro?: string;
 };
 
 export type CombateAtivo = { id: number; estado: EstadoDoCombate };
@@ -87,8 +110,10 @@ export function ordenar(lutadores: Lutador[]): Lutador[] {
  */
 export function versaoDaMesa(estado: EstadoDoCombate, pvDosPersonagens: Record<string, [number, number]>): MesaDoCombate {
   return {
+    numero: estado.numero,
     rodada: estado.rodada,
     vez: estado.vez,
+    historico: (estado.historico ?? []).slice(-60).map((r) => ({ rodada: r.rodada, texto: r.publico })),
     ordem: ordenar(estado.lutadores).map((l) => {
       const [pv, max] = l.tipo === "personagem" ? (pvDosPersonagens[l.slug] ?? [1, 1]) : [l.pv, l.pvMaximo];
       return {
@@ -100,9 +125,15 @@ export function versaoDaMesa(estado: EstadoDoCombate, pvDosPersonagens: Record<s
         estado: estadoDosPv(pv, max),
         condicoes: l.condicoes,
         imagem: l.imagem,
+        ...(l.tipo === "personagem" ? { pv, pvMaximo: max, ca: l.ca } : {}),
       };
     }),
   };
+}
+
+/** Acrescenta uma linha ao histórico (fica com as últimas 150). */
+export function registrar(estado: EstadoDoCombate, texto: string, publico = texto): Registro[] {
+  return [...(estado.historico ?? []), { rodada: estado.rodada, texto, publico }].slice(-150);
 }
 
 function erro(e: { message?: string } | null): string | null {
@@ -136,10 +167,64 @@ export async function salvarCombate(id: number, estado: EstadoDoCombate, mesa: M
   return erro(a.error) ?? erro(b.error);
 }
 
-export async function terminarCombate(id: number): Promise<string | null> {
+/** Termina, guardando o resumo na mesa (para a lista dos combates passados). */
+export async function terminarCombate(id: number, mesa: MesaDoCombate): Promise<string | null> {
   const sb = await cliente();
-  const { error } = await sb.from("combates").update({ ativo: false }).eq("id", id);
+  const { error } = await sb.from("combates").update({ ativo: false, mesa }).eq("id", id);
   return erro(error);
+}
+
+/** Quantos combates já houve (o próximo leva este número + 1). Só o Mestre conta todos. */
+export async function quantosCombates(): Promise<number> {
+  const sb = await cliente();
+  const { count } = await sb.from("combates").select("id", { count: "exact", head: true });
+  return count ?? 0;
+}
+
+export async function combatesPassados(): Promise<{ id: number; mesa: MesaDoCombate; criado_em: string }[]> {
+  const sb = await cliente();
+  const { data } = await sb
+    .from("combates")
+    .select("id, mesa, criado_em")
+    .eq("ativo", false)
+    .order("id", { ascending: false })
+    .limit(30);
+  return (data as { id: number; mesa: MesaDoCombate; criado_em: string }[] | null) ?? [];
+}
+
+// ---------- A iniciativa que o jogador rola ----------
+
+export async function rolarMinhaIniciativa(valor: number): Promise<string | null> {
+  const sb = await cliente();
+  const { error } = await sb.rpc("rolar_minha_iniciativa", { p_valor: valor });
+  return erro(error);
+}
+
+export async function iniciativasDosJogadores(combate: number): Promise<{ personagem: string; valor: number }[]> {
+  const sb = await cliente();
+  const { data } = await sb.from("combate_iniciativas").select("personagem, valor").eq("combate", combate);
+  return (data as { personagem: string; valor: number }[] | null) ?? [];
+}
+
+/** O Mestre ouve as iniciativas que os jogadores rolam. */
+export function ouvirIniciativas(aoChegar: (personagem: string, valor: number, combate: number) => void): () => void {
+  let parar = () => {};
+  let parado = false;
+  void cliente().then((sb) => {
+    if (parado) return;
+    const canal = sb
+      .channel(`iniciativas-${Math.random().toString(36).slice(2, 8)}`)
+      .on("postgres_changes", { event: "*", schema: "public", table: "combate_iniciativas" }, (m) => {
+        const l = m.new as { personagem?: string; valor?: number; combate?: number };
+        if (l?.personagem && typeof l.valor === "number" && l.combate) aoChegar(l.personagem, l.valor, l.combate);
+      })
+      .subscribe();
+    parar = () => void sb.removeChannel(canal);
+  });
+  return () => {
+    parado = true;
+    parar();
+  };
 }
 
 /** Para os jogadores: a mesa do combate ativo, ou null. */

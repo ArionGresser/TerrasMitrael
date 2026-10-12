@@ -15,7 +15,7 @@ import {
   type Filtros,
   type Grupo,
 } from "@/lib/encontros";
-import { comecarCombate, rolarDados, versaoDaMesa, type EstadoDoCombate, type Lutador } from "@/lib/combate";
+import { comecarCombate, quantosCombates, registrar, rolarDados, versaoDaMesa, type EstadoDoCombate, type Lutador } from "@/lib/combate";
 import { iniciarConta } from "@/lib/conta";
 import { lerTodasAsFichas } from "@/lib/ficha-viva";
 import { useConta } from "@/components/conta/useConta";
@@ -28,6 +28,7 @@ export type PersonagemDoCombate = {
   ca: number;
   iniciativa: number;
   pvMaximo: number;
+  imagem?: string;
 };
 
 const ND_MAXIMOS = [0.25, 0.5, 1, 2, 3, 4, 5, 6, 8, 10, 12, 15, 20, 30];
@@ -144,7 +145,10 @@ export function GeradorDeEncontros({
         condicoes: [],
       });
     }
-    const estado: EstadoDoCombate = { rodada: 1, vez: null, lutadores, dificuldade: real.nome };
+    const numero = (await quantosCombates()) + 1;
+    const inicio: EstadoDoCombate = { numero, rodada: 1, vez: null, lutadores, dificuldade: real.nome };
+    const inimigos = grupos.map((g) => (g.quantas > 1 ? `${g.quantas} ${g.criatura.nome}` : g.criatura.nome)).join(", ");
+    const estado = { ...inicio, historico: registrar(inicio, `O combate começou: ${inimigos}.`) };
     const fichas = await lerTodasAsFichas();
     const pvs = Object.fromEntries(
       fichas.map((f) => [f.personagem, [f.pv, personagens.find((p) => p.slug === f.personagem)?.pvMaximo ?? f.pv] as [number, number]])
@@ -152,7 +156,7 @@ export function GeradorDeEncontros({
     const problema = await comecarCombate(estado, versaoDaMesa(estado, pvs));
     setComecando(false);
     if (problema) setAviso(problema);
-    else router.push("/mestre/combate/");
+    else router.push("/combate/");
   }
 
   return (

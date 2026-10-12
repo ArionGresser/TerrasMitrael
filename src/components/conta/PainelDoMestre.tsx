@@ -80,8 +80,8 @@ export function PainelDoMestre({ personagens }: { personagens: PersonagemDoMestr
         <Link href="/mestre/encontros/" className={`${BOTAO} w-full`}>
           Gerador de encontros
         </Link>
-        <Link href="/mestre/combate/" className={`${BOTAO} w-full`}>
-          Combate
+        <Link href="/combate/" className={`${BOTAO} w-full`}>
+          A arena do combate
         </Link>
       </nav>
 

@@ -709,7 +709,7 @@ function Pedidos({ pedidos, fazer, acoes, ocupado, mestre }: Comum & { pedidos: 
   }
 
   return (
-    <div className="mt-6">
+    <div id="pedidos-ao-mestre" className="mt-6 scroll-mt-4">
       <Bloco titulo="Pedidos ao Mestre">
         {!mestre ? (
           <form onSubmit={pedir} className="border-dourado-600/30 space-y-3 rounded-sm border p-3">

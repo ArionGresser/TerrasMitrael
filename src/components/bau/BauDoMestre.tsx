@@ -1,13 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useReducedMotion } from "motion/react";
 import { Botao } from "@/components/ui/Botao";
 import { tocar, NIVEL_DA_RARIDADE } from "@/lib/som";
 import { conquistar } from "@/lib/conquistas";
-import { MandarDoBau } from "@/components/ficha-viva/MandarDoBau";
+import { DistribuirTesouro, tesouroDoBau } from "@/components/ficha-viva/DistribuirTesouro";
 import {
   abrir,
   faixaDo,
@@ -505,7 +505,7 @@ export function BauDoMestre({ conteudo, nomes = {} }: { conteudo: Conteudo; nome
               <p className="text-tinta-700 mt-5 text-sm italic">Nada. Só poeira e um cheiro de mofo.</p>
             ) : null}
 
-            <MandarDoBau resultado={resultado} nomes={nomes} />
+            <TesouroDoResultado resultado={resultado} nomes={nomes} />
 
             <div className="mt-6 flex flex-wrap gap-3">
               <Botao onClick={copiar}>{copiado ? "Copiado" : "Copiar para o Discord"}</Botao>
@@ -537,4 +537,10 @@ function somDoBau(r: Resultado) {
     ...r.vagas.map((v) => (v.escolhido?.raridade ? (NIVEL_DA_RARIDADE[v.escolhido.raridade] ?? 1) : 0)),
   );
   if (nivel > 0) setTimeout(() => tocar("brilho", nivel), 620);
+}
+
+/** O que saiu, repartido entre os personagens (só aparece para o Mestre). */
+function TesouroDoResultado({ resultado, nomes }: { resultado: Resultado; nomes: Record<string, string> }) {
+  const { moedas, itens } = useMemo(() => tesouroDoBau(resultado), [resultado]);
+  return <DistribuirTesouro moedas={moedas} itens={itens} nomes={nomes} />;
 }
