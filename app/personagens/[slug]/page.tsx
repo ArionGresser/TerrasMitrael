@@ -21,7 +21,6 @@ import {
   temMochilaAntiga,
 } from "@/components/personagens/FichaAntiga";
 import {
-  FichaAtualNumeros,
   FichaAtualPoderes,
   FichaAtualMochila,
   temPoderes,
@@ -36,6 +35,7 @@ import { Rodape } from "@/components/Rodape";
 import { TituloBrasao, Sobretitulo, Ornamento } from "@/components/ui/Titulo";
 import { NavegacaoDaFicha } from "@/components/personagens/NavegacaoDaFicha";
 import { FichaVivaDoPersonagem } from "@/components/ficha-viva/FichaVivaDoPersonagem";
+import { NumerosDaFicha } from "@/components/ficha-viva/NumerosDaFicha";
 import { baseDaFicha } from "@/lib/ficha-viva-base";
 import { regrasDaFicha } from "@/lib/regras-da-ficha";
 
@@ -214,7 +214,7 @@ export default async function PaginaPersonagem({ params }: Props) {
             legenda={resumoDaFicha(meta.ficha)}
           />
           <FichaVivaDoPersonagem slug={meta.slug} base={baseDaFicha(meta.ficha)} regras={regrasDaFicha()} />
-          <FichaAtualNumeros ficha={meta.ficha} />
+          <NumerosDaFicha slug={meta.slug} ficha={meta.ficha} />
         </>
       ),
     });

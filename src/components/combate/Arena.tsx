@@ -124,7 +124,7 @@ export function Arena({
   const pvs = useMemo(
     () =>
       Object.fromEntries(
-        fichas.map((f) => [f.personagem, [f.pv, bases[f.personagem]?.pvMaximo ?? f.pv] as [number, number]])
+        fichas.map((f) => [f.personagem, [f.pv, f.ajustes?.pv_maximo ?? bases[f.personagem]?.pvMaximo ?? f.pv] as [number, number]])
       ),
     [fichas, bases]
   );

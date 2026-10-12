@@ -8,6 +8,7 @@
 
 import { cliente } from "@/lib/conta";
 import type { BaseDaFicha, ItemDaMochila, Moedas } from "@/lib/ficha-viva-base";
+import type { AjustesDaFicha } from "@/lib/ajustes-da-ficha";
 
 export type { ItemDaMochila, Moedas };
 
@@ -22,12 +23,14 @@ export type FichaViva = {
   moedas: Moedas;
   /** XP ganho jogando, por cima do XP da ficha do site. */
   experiencia_ganha: number;
+  /** PV máximo e atributos mudados na mesa (ver ajustes-da-ficha.ts). */
+  ajustes?: AjustesDaFicha;
   atualizada_em: string;
 };
 
 /** O que o jogador muda direto, sem pedir. */
 export type MudancaNaFicha = Partial<
-  Pick<FichaViva, "pv" | "pv_temporarios" | "dados_de_vida_gastos" | "espacos_gastos" | "inspiracao">
+  Pick<FichaViva, "pv" | "pv_temporarios" | "dados_de_vida_gastos" | "espacos_gastos" | "inspiracao" | "ajustes">
 >;
 
 export type Pedido = {

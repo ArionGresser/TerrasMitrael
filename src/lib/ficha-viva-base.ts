@@ -26,6 +26,8 @@ export type BaseDaFicha = {
   dadoDeVida: number;
   dadosDeVida: number;
   modConstituicao: number;
+  /** Os valores de atributo da ficha do site, para a mesa poder ajustar. */
+  atributos: { nome: string; valor: number }[];
   /** Espaços de magia por círculo: {"1": 2}. Vazio para quem não conjura. */
   espacos: Record<string, number>;
   /** Magia de Pacto (Bruxo): os espaços voltam também no Descanso Curto. */
@@ -104,6 +106,7 @@ export function baseDaFicha(ficha: FichaAtual): BaseDaFicha {
     dadoDeVida,
     dadosDeVida: nivel,
     modConstituicao: numero(constituicao?.modificador),
+    atributos: ficha.atributos.map((a) => ({ nome: a.nome, valor: numero(a.valor) })),
     espacos,
     pacto,
     inicial: {

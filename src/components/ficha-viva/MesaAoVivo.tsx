@@ -4,6 +4,7 @@ import { useCallback, useEffect, useId, useState } from "react";
 import Link from "next/link";
 import { lerTodasAsFichas, mestre, moedasPorExtenso, ouvirMesa, TIPOS_DE_MOEDA, type FichaViva, type Moedas } from "@/lib/ficha-viva";
 import type { BaseDaFicha } from "@/lib/ficha-viva-base";
+import { ajustarBase } from "@/lib/ajustes-da-ficha";
 import { BOTAO, BOTAO_CHEIO, CAMPO } from "@/components/conta/MinhaConta";
 
 type Personagem = { slug: string; nome: string; base?: BaseDaFicha };
@@ -32,7 +33,9 @@ export function MesaAoVivo({ personagens }: { personagens: Personagem[] }) {
 
   const naMesa = (fichas ?? [])
     .map((f) => ({ ficha: f, p: personagens.find((p) => p.slug === f.personagem) }))
-    .filter((x): x is { ficha: FichaViva; p: Personagem & { base: BaseDaFicha } } => Boolean(x.p?.base));
+    .filter((x): x is { ficha: FichaViva; p: Personagem & { base: BaseDaFicha } } => Boolean(x.p?.base))
+    // O PV máximo e a Constituição ajustados na mesa valem aqui também
+    .map((x) => ({ ...x, p: { ...x.p, base: ajustarBase(x.p.base, x.ficha.ajustes) } }));
 
   /** Faz a mesma coisa em cada ficha marcada e conta quantas deram certo. */
   async function paraAsMarcadas(nome: string, acao: (slug: string, base: BaseDaFicha) => Promise<string | null>) {

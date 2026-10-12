@@ -18,6 +18,7 @@ import {
   type FichaViva,
   type Pedido,
 } from "@/lib/ficha-viva";
+import { anunciarAjustes, ajustarBase } from "@/lib/ajustes-da-ficha";
 import { useConta } from "@/components/conta/useConta";
 import { BOTAO_CHEIO } from "@/components/conta/MinhaConta";
 import { PainelDaFicha, type AcoesDaFicha, type RegrasDaFicha } from "./PainelDaFicha";
@@ -32,7 +33,7 @@ import { PainelDaFicha, type AcoesDaFicha, type RegrasDaFicha } from "./PainelDa
  */
 export function FichaVivaDoPersonagem({
   slug,
-  base,
+  base: baseDoSite,
   regras,
 }: {
   slug: string;
@@ -47,6 +48,11 @@ export function FichaVivaDoPersonagem({
   const [ficha, setFicha] = useState<FichaViva | null | undefined>(undefined);
   const [pedidos, setPedidos] = useState<Pedido[]>([]);
   const [erro, setErro] = useState<string | null>(null);
+  const ajustes = ficha?.ajustes;
+  const base = useMemo(() => ajustarBase(baseDoSite, ajustes), [baseDoSite, ajustes]);
+
+  // Os números da ficha do site, mais abaixo na página, seguem os ajustes
+  useEffect(() => anunciarAjustes(slug, ajustes), [slug, ajustes]);
 
   const recarregar = useCallback(async () => {
     const [f, p] = await Promise.all([lerFicha(slug), listarPedidos(slug)]);
@@ -114,7 +120,7 @@ export function FichaVivaDoPersonagem({
             <button
               type="button"
               onClick={async () => {
-                const problema = await criarFicha(slug, base);
+                const problema = await criarFicha(slug, baseDoSite);
                 if (problema) setErro(problema);
                 await recarregar();
               }}

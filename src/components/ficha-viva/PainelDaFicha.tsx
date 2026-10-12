@@ -16,6 +16,7 @@ import {
 } from "@/lib/ficha-viva";
 import { BOTAO, BOTAO_CHEIO, CAMPO } from "@/components/conta/MinhaConta";
 import { XP_DO_NIVEL } from "@/lib/xp";
+import { comSinal, modificador, temAjustes, type AjustesDaFicha } from "@/lib/ajustes-da-ficha";
 import { BotaoDeRegra, Janela } from "./Janela";
 
 type Resposta = Promise<string | null>;
@@ -121,6 +122,8 @@ export function PainelDaFicha({
       </div>
 
       <Experiencia ficha={ficha} base={base} fazer={fazer} acoes={acoes} ocupado={ocupado} />
+
+      <AjustarFicha key={JSON.stringify(ficha.ajustes ?? {})} ficha={ficha} base={base} fazer={fazer} acoes={acoes} ocupado={ocupado} />
 
       {Object.keys(base.espacos).length ? (
         <EspacosDeMagia ficha={ficha} base={base} fazer={fazer} acoes={acoes} ocupado={ocupado} />
@@ -991,5 +994,118 @@ function Recado({ fazer, acoes, ocupado }: Comum) {
         </form>
       </Bloco>
     </div>
+  );
+}
+
+/**
+ * Subiu de nível, achou um cinto de força de gigante, levou uma maldição:
+ * o PV máximo e os valores de atributo mudam aqui, por cima da ficha do
+ * site. Os números da ficha (modificadores, salvaguardas, perícias,
+ * iniciativa, conjuração) acompanham sozinhos.
+ */
+function AjustarFicha({ ficha, base, fazer, acoes, ocupado }: Comum & { ficha: FichaViva; base: BaseDaFicha }) {
+  const id = useId();
+  const doSite = (nome: string) => base.atributos.find((a) => a.nome === nome)?.valor ?? 10;
+  // A ficha viva começa com o PV máximo do site: é o mesmo número
+  const pvDoSite = base.inicial.pv;
+  const [pvMaximo, setPvMaximo] = useState(String(base.pvMaximo));
+  const [valores, setValores] = useState<Record<string, string>>(() =>
+    Object.fromEntries(base.atributos.map((a) => [a.nome, String(ficha.ajustes?.atributos?.[a.nome] ?? a.valor)]))
+  );
+  const ajustado = temAjustes(ficha.ajustes);
+
+  async function salvar(e: FormEvent) {
+    e.preventDefault();
+    const max = Number.parseInt(pvMaximo, 10);
+    if (!Number.isFinite(max) || max < 1 || max > 999) return;
+    const atributos: Record<string, number> = {};
+    for (const a of base.atributos) {
+      const v = Number.parseInt(valores[a.nome] ?? "", 10);
+      if (!Number.isFinite(v) || v < 1 || v > 30) return;
+      if (v !== a.valor) atributos[a.nome] = v;
+    }
+    const ajustes: AjustesDaFicha = {};
+    if (max !== pvDoSite) ajustes.pv_maximo = max;
+    if (Object.keys(atributos).length) ajustes.atributos = atributos;
+    // Ganhar PV máximo ganha os mesmos PV atuais; perder só corta o que passar
+    const delta = max - base.pvMaximo;
+    const pv = delta > 0 ? ficha.pv + delta : Math.min(ficha.pv, max);
+    await fazer(
+      () => acoes.mudar({ ajustes, pv }),
+      delta > 0 ? `Ajustes salvos. +${delta} PV máximo, e os PV atuais subiram junto.` : "Ajustes salvos."
+    );
+  }
+
+  async function voltarAoSite() {
+    await fazer(() => acoes.mudar({ ajustes: {}, pv: Math.min(ficha.pv, pvDoSite) }), "Voltou aos números da ficha do site.");
+  }
+
+  return (
+    <details className="border-dourado-600/30 mt-5 rounded-sm border">
+      <summary className="font-titulo text-tinta-900 min-h-11 cursor-pointer px-4 py-3 text-sm font-semibold">
+        Ajustar PV máximo e atributos{ajustado ? <span className="text-heraldico-vermelho ml-2 text-xs font-normal">ajustada na mesa</span> : null}
+      </summary>
+      <form onSubmit={salvar} className="space-y-3 px-4 pb-4">
+        <p className="text-tinta-700 text-xs leading-relaxed">
+          Para subida de nível, item mágico ou maldição. Os modificadores, salvaguardas, perícias, iniciativa e conjuração da ficha
+          acompanham sozinhos.
+        </p>
+        <div>
+          <label htmlFor={`${id}-pv`} className="font-titulo text-tinta-900 text-xs font-semibold">
+            PV máximo
+          </label>
+          <input
+            id={`${id}-pv`}
+            type="number"
+            inputMode="numeric"
+            min={1}
+            max={999}
+            value={pvMaximo}
+            onChange={(e) => setPvMaximo(e.target.value)}
+            className={`${CAMPO} mt-1 max-w-32`}
+          />
+          <p className="text-tinta-500 mt-1 text-xs">
+            Aumentar soma a diferença nos PV atuais também.{Number.parseInt(pvMaximo, 10) !== pvDoSite ? ` Na ficha do site: ${pvDoSite}.` : ""}
+          </p>
+        </div>
+        <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
+          {base.atributos.map((a) => {
+            const v = Number.parseInt(valores[a.nome] ?? "", 10);
+            const mudou = Number.isFinite(v) && v !== a.valor;
+            return (
+              <div key={a.nome}>
+                <label htmlFor={`${id}-${a.nome}`} className="font-titulo text-tinta-900 text-xs font-semibold">
+                  {a.nome}
+                </label>
+                <div className="mt-1 flex items-center gap-2">
+                  <input
+                    id={`${id}-${a.nome}`}
+                    type="number"
+                    inputMode="numeric"
+                    min={1}
+                    max={30}
+                    value={valores[a.nome] ?? ""}
+                    onChange={(e) => setValores((x) => ({ ...x, [a.nome]: e.target.value }))}
+                    className={`${CAMPO} w-20`}
+                  />
+                  <span className="text-tinta-700 text-sm">{Number.isFinite(v) ? comSinal(modificador(v)) : "–"}</span>
+                </div>
+                {mudou ? <p className="text-tinta-500 mt-0.5 text-[0.7rem]">na ficha do site: {doSite(a.nome)}</p> : null}
+              </div>
+            );
+          })}
+        </div>
+        <div className="flex flex-wrap gap-2">
+          <button type="submit" disabled={ocupado} className={BOTAO_CHEIO}>
+            Salvar ajustes
+          </button>
+          {ajustado ? (
+            <button type="button" disabled={ocupado} onClick={() => void voltarAoSite()} className={BOTAO}>
+              Voltar aos números do site
+            </button>
+          ) : null}
+        </div>
+      </form>
+    </details>
   );
 }
