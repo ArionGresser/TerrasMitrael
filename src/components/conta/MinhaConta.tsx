@@ -18,8 +18,8 @@ export const BOTAO_CHEIO =
 
 /**
  * A tela da conta: sem conta aberta, o formulário de entrar ou de criar;
- * com ela, o nome, o personagem ligado, as conquistas e as trocas de nome
- * e senha. O Mestre ganha o atalho para o painel dele.
+ * com ela, o nome, os atalhos (ficha, mochila, arena, mapa, anotações,
+ * conquistas) e as trocas de nome e senha. O Mestre ganha os atalhos dele.
  */
 export function MinhaConta({ personagens }: { personagens: PersonagemDaLista[] }) {
   const conta = useConta();
@@ -48,45 +48,34 @@ export function MinhaConta({ personagens }: { personagens: PersonagemDaLista[] }
         </p>
       </div>
 
-      <dl className="grid gap-4 sm:grid-cols-2">
-        <Quadro titulo="Personagem">
+      {personagem ? null : (
+        <p className="border-dourado-600/30 text-tinta-700 rounded-sm border p-4 text-center text-sm">
+          Nenhum personagem ligado ainda. O Mestre liga a sua ficha à sua conta pelo painel dele.
+        </p>
+      )}
+
+      <nav aria-label="Atalhos">
+        <h2 className="font-titulo text-tinta-500 mb-2 text-xs tracking-[0.14em] uppercase">Atalhos</h2>
+        <ul className="grid grid-cols-2 gap-2 sm:grid-cols-3">
+          {perfil.papel === "mestre" ? (
+            <>
+              <Atalho href="/mestre/" icone="♛" titulo="Painel do Mestre" texto="Mesa ao vivo, pedidos, sugestões" destaque />
+              <Atalho href="/mestre/encontros/" icone="⚄" titulo="Encontros" texto="Sortear e montar combates" />
+            </>
+          ) : null}
           {personagem ? (
             <>
-              <Link href={`/personagens/${personagem.slug}/`} className="text-heraldico-vermelho font-semibold underline">
-                {personagem.nome}
-              </Link>
-              <span className="text-tinta-700 block text-xs">A ficha viva fica na aba Ficha.</span>
+              <Atalho href={`/personagens/${personagem.slug}/#ficha`} icone="⛨" titulo="Minha ficha" texto={`${personagem.nome}: PV, magias, pedidos`} destaque />
+              <Atalho href={`/personagens/${personagem.slug}/#mochila`} icone="⚖" titulo="Mochila" texto="Itens e moedas" />
+              <Atalho href={`/personagens/${personagem.slug}/#historia`} icone="❦" titulo="História" texto={`A lore de ${personagem.nome}`} />
             </>
-          ) : (
-            <span className="text-tinta-700">
-              Nenhum ainda. O Mestre liga a sua ficha à sua conta pelo painel dele.
-            </span>
-          )}
-        </Quadro>
-        <Quadro titulo="Conquistas">
-          <ContagemDeConquistas />{" "}
-          <Link href="/conquistas/" className="text-heraldico-vermelho underline">
-            ver todas
-          </Link>
-        </Quadro>
-      </dl>
-
-      <div className="flex flex-wrap justify-center gap-2">
-        <Link href="/combate/" className={BOTAO}>
-          A arena do combate
-        </Link>
-        <Link href="/mapa-da-mesa/" className={BOTAO}>
-          Mapa da mesa
-        </Link>
-      </div>
-
-      {perfil.papel === "mestre" ? (
-        <div className="text-center">
-          <Link href="/mestre/" className={BOTAO_CHEIO}>
-            Abrir o painel do Mestre
-          </Link>
-        </div>
-      ) : null}
+          ) : null}
+          <Atalho href="/combate/" icone="⚔" titulo="Arena" texto="O combate ao vivo" />
+          <Atalho href="/mapa-da-mesa/" icone="✣" titulo="Mapa da mesa" texto="Onde o grupo está" />
+          <Atalho href="/anotacoes/" icone="✎" titulo="Anotações" texto="O seu caderno" />
+          <Atalho href="/conquistas/" icone="✦" titulo="Conquistas" texto={<ContagemDeConquistas />} />
+        </ul>
+      </nav>
 
       <div className="space-y-3">
         <Troca titulo="Trocar o nome que aparece" rotulo="Nome novo" valorInicial={perfil.nome} enviar={trocarNome} ok="Nome trocado." />
@@ -104,12 +93,24 @@ export function MinhaConta({ personagens }: { personagens: PersonagemDaLista[] }
   );
 }
 
-function Quadro({ titulo, children }: { titulo: string; children: ReactNode }) {
+function Atalho({ href, icone, titulo, texto, destaque = false }: { href: string; icone: string; titulo: string; texto: ReactNode; destaque?: boolean }) {
   return (
-    <div className="border-dourado-600/30 rounded-sm border p-4">
-      <dt className="font-titulo text-tinta-500 text-xs tracking-[0.14em] uppercase">{titulo}</dt>
-      <dd className="text-tinta-900 mt-1 text-sm leading-relaxed">{children}</dd>
-    </div>
+    <li>
+      <Link
+        href={href}
+        className={`flex h-full min-h-16 items-start gap-3 rounded-sm border p-3 transition-colors ${
+          destaque ? "border-heraldico-vermelho/50 bg-heraldico-vermelho/5 hover:bg-heraldico-vermelho/10" : "border-dourado-600/30 hover:bg-dourado-400/15"
+        }`}
+      >
+        <span aria-hidden className="text-dourado-600 font-titulo text-xl leading-none">
+          {icone}
+        </span>
+        <span className="min-w-0">
+          <span className="font-titulo text-tinta-900 block text-sm font-semibold">{titulo}</span>
+          <span className="text-tinta-700 block text-xs leading-snug">{texto}</span>
+        </span>
+      </Link>
+    </li>
   );
 }
 
@@ -123,7 +124,7 @@ function ContagemDeConquistas() {
   }, []);
   return (
     <span>
-      {quantas ?? "…"} de {CONQUISTAS.length}.
+      {quantas ?? "…"} de {CONQUISTAS.length}
     </span>
   );
 }

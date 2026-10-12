@@ -83,8 +83,11 @@ export function PainelDoMestre({ personagens }: { personagens: PersonagemDoMestr
         <Link href="/combate/" className={`${BOTAO} w-full`}>
           A arena do combate
         </Link>
-        <Link href="/mapa-da-mesa/" className={`${BOTAO} w-full sm:col-span-2`}>
+        <Link href="/mapa-da-mesa/" className={`${BOTAO} w-full`}>
           Mapa da mesa
+        </Link>
+        <Link href="/anotacoes/" className={`${BOTAO} w-full`}>
+          Anotações
         </Link>
       </nav>
 

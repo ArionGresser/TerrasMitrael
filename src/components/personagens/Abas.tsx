@@ -74,6 +74,26 @@ export function Abas({
     raiz.current?.scrollIntoView({ block: "start" });
   }, [ativa]);
 
+  /**
+   * Um atalho como /personagens/fulano/#mochila já chega com a aba certa
+   * aberta e rolada para a vista.
+   */
+  useEffect(() => {
+    function peloEndereco() {
+      const chave = decodeURIComponent(window.location.hash.slice(1));
+      const indice = abas.findIndex((a) => a.chave === chave);
+      if (indice < 0) return;
+      setAtiva(indice);
+      // Espera o roteador terminar de acertar a rolagem da página nova
+      setTimeout(() => raiz.current?.scrollIntoView({ block: "start", behavior: "instant" }), 150);
+    }
+    peloEndereco();
+    window.addEventListener("hashchange", peloEndereco);
+    return () => window.removeEventListener("hashchange", peloEndereco);
+    // As chaves das abas não mudam depois de a página montar
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   function escolher(indice: number, comFoco = false) {
     if (indice === ativa) return;
 
