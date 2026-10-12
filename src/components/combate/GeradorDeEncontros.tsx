@@ -18,6 +18,8 @@ import {
 import { comecarCombate, quantosCombates, registrar, rolarDados, versaoDaMesa, type EstadoDoCombate, type Lutador } from "@/lib/combate";
 import { iniciarConta } from "@/lib/conta";
 import { lerTodasAsFichas } from "@/lib/ficha-viva";
+import { abrir, CATEGORIAS_MAGICAS, MOEDAS, type Conteudo } from "@/lib/bau-sorteio";
+import { tesouroDoBau } from "@/components/ficha-viva/DistribuirTesouro";
 import { useConta } from "@/components/conta/useConta";
 import { BOTAO, BOTAO_CHEIO, CAMPO } from "@/components/conta/MinhaConta";
 
@@ -59,6 +61,7 @@ export function GeradorDeEncontros({
   const [grupos, setGrupos] = useState<Grupo[]>([]);
   const [busca, setBusca] = useState("");
   const [rolarPv, setRolarPv] = useState(false);
+  const [loot, setLoot] = useState({ ligado: true, qualidade: 0, moedas: ["PC", "PP", "PO"], comuns: true, magicos: false });
   const [aviso, setAviso] = useState<string | null>(null);
   const [comecando, setComecando] = useState(false);
   const id = useId();
@@ -110,6 +113,34 @@ export function GeradorDeEncontros({
 
   async function comecar() {
     setComecando(true);
+    // O loot de cada inimigo, pelas faixas do Baú (o d20 é a qualidade)
+    let conteudo: Conteudo | null = null;
+    if (loot.ligado) {
+      try {
+        conteudo = (await (await fetch("/bau/conteudo.json")).json()) as Conteudo;
+      } catch {
+        conteudo = null;
+      }
+    }
+    const nivelMedio = niveis.length ? niveis.reduce((a, b) => a + b, 0) / niveis.length : 1;
+    const patamar = nivelMedio <= 4 ? "1-4" : nivelMedio <= 10 ? "5-10" : nivelMedio <= 16 ? "11-16" : "17-20";
+    const lootDe = () => {
+      if (!conteudo) return undefined;
+      const r = abrir(
+        {
+          recipiente: "algibeira",
+          moedas: loot.moedas,
+          comuns: loot.comuns ? ["arma", "armadura", "aventura", "ferramenta"] : [],
+          magicos: loot.magicos ? [...CATEGORIAS_MAGICAS] : [],
+          nivel: patamar,
+          d20: loot.qualidade || 1 + Math.floor(Math.random() * 20),
+        },
+        conteudo,
+        true
+      );
+      const t = tesouroDoBau(r);
+      return { moedas: t.moedas, itens: t.itens.map((nome) => ({ nome })) };
+    };
     const lutadores: Lutador[] = [];
     for (const g of grupos) {
       for (let i = 1; i <= g.quantas; i++) {
@@ -127,6 +158,7 @@ export function GeradorDeEncontros({
           xp: g.criatura.xp,
           condicoes: [],
           imagem: g.criatura.imagem,
+          loot: lootDe(),
         });
       }
     }
@@ -383,7 +415,56 @@ export function GeradorDeEncontros({
             <input type="checkbox" checked={rolarPv} onChange={(e) => setRolarPv(e.target.checked)} className="accent-heraldico-vermelho size-4" />
             Rolar os PV de cada criatura (em vez da média)
           </label>
-          <button type="button" disabled={comecando} onClick={() => void comecar()} className={`${BOTAO_CHEIO} mt-2 w-full`}>
+          <fieldset className="border-dourado-600/30 mt-3 rounded-sm border p-3 text-left">
+            <legend className="font-titulo text-tinta-900 px-1 text-sm font-bold">Loot dos inimigos</legend>
+            <label className="text-tinta-700 flex min-h-11 items-center gap-2 text-sm">
+              <input type="checkbox" checked={loot.ligado} onChange={(e) => setLoot({ ...loot, ligado: e.target.checked })} className="accent-heraldico-vermelho size-4" />
+              Cada inimigo carrega o próprio loot
+            </label>
+            {loot.ligado ? (
+              <div className="mt-2 space-y-3">
+                <label className="text-tinta-700 block text-xs">
+                  Qualidade (o d20 das faixas do Baú)
+                  <select value={loot.qualidade} onChange={(e) => setLoot({ ...loot, qualidade: Number(e.target.value) })} className={`${CAMPO} mt-1`}>
+                    <option value={0}>Rolar um d20 para cada inimigo</option>
+                    {Array.from({ length: 20 }, (_, i) => i + 1).map((n) => (
+                      <option key={n} value={n}>
+                        {n}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+                <div>
+                  <p className="text-tinta-700 text-xs">Moedas</p>
+                  <div className="mt-1 flex flex-wrap gap-1.5">
+                    {MOEDAS.map((m) => {
+                      const ligado = loot.moedas.includes(m.chave);
+                      return (
+                        <button
+                          key={m.chave}
+                          type="button"
+                          aria-pressed={ligado}
+                          onClick={() => setLoot({ ...loot, moedas: ligado ? loot.moedas.filter((x) => x !== m.chave) : [...loot.moedas, m.chave] })}
+                          className={`min-h-9 rounded-full border px-3 text-xs ${ligado ? "border-madeira-800 bg-madeira-800 text-pergaminho-50" : "border-dourado-600/40 text-tinta-700"}`}
+                        >
+                          {m.chave} · {m.nome}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+                <label className="text-tinta-700 flex min-h-9 items-center gap-2 text-sm">
+                  <input type="checkbox" checked={loot.comuns} onChange={(e) => setLoot({ ...loot, comuns: e.target.checked })} className="accent-heraldico-vermelho size-4" />
+                  Pode ter equipamento comum
+                </label>
+                <label className="text-tinta-700 flex min-h-9 items-center gap-2 text-sm">
+                  <input type="checkbox" checked={loot.magicos} onChange={(e) => setLoot({ ...loot, magicos: e.target.checked })} className="accent-heraldico-vermelho size-4" />
+                  Pode ter item mágico
+                </label>
+              </div>
+            ) : null}
+          </fieldset>
+          <button type="button" disabled={comecando} onClick={() => void comecar()} className={`${BOTAO_CHEIO} mt-3 w-full`}>
             {comecando ? "Arrumando a mesa…" : "Começar o combate"}
           </button>
           <p className="text-tinta-500 mt-2 text-xs">

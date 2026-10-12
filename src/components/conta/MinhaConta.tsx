@@ -71,6 +71,15 @@ export function MinhaConta({ personagens }: { personagens: PersonagemDaLista[] }
         </Quadro>
       </dl>
 
+      <div className="flex flex-wrap justify-center gap-2">
+        <Link href="/combate/" className={BOTAO}>
+          A arena do combate
+        </Link>
+        <Link href="/mapa-da-mesa/" className={BOTAO}>
+          Mapa da mesa
+        </Link>
+      </div>
+
       {perfil.papel === "mestre" ? (
         <div className="text-center">
           <Link href="/mestre/" className={BOTAO_CHEIO}>

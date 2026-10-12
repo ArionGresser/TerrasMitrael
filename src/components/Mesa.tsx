@@ -9,6 +9,7 @@ import { MemoriaDaRolagem } from "@/components/navegacao/MemoriaDaRolagem";
 import { ContaNoFundo } from "@/components/conta/ContaNoFundo";
 import { AvisosDaMesa } from "@/components/ficha-viva/AvisosDaMesa";
 import { CombateNaMesa } from "@/components/combate/CombateNaMesa";
+import { Sininho } from "@/components/ficha-viva/Sininho";
 
 /**
  * A mesa de madeira sobre a qual todo o site acontece:
@@ -44,6 +45,7 @@ export function Mesa({ children }: { children: React.ReactNode }) {
       <ContaNoFundo />
       <AvisosDaMesa />
       <CombateNaMesa />
+      <Sininho />
 
       {/* Atalho para quem navega por teclado pular direto ao conteúdo */}
       <a

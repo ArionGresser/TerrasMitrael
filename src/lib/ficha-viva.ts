@@ -215,7 +215,7 @@ export async function lerTodasAsFichas(): Promise<FichaViva[]> {
 
 export type Aviso = { id: number; personagem: string; texto: string; criado_em: string };
 
-export async function lerAvisos(personagem: string, depoisDe = 0): Promise<Aviso[]> {
+export async function lerAvisos(personagem: string, depoisDe = 0, quantos = 5): Promise<Aviso[]> {
   const sb = await cliente();
   const { data } = await sb
     .from("avisos")
@@ -223,7 +223,7 @@ export async function lerAvisos(personagem: string, depoisDe = 0): Promise<Aviso
     .eq("personagem", personagem)
     .gt("id", depoisDe)
     .order("id", { ascending: false })
-    .limit(5);
+    .limit(quantos);
   return ((data as Aviso[] | null) ?? []).reverse();
 }
 

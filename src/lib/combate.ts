@@ -24,6 +24,18 @@ export type Lutador = {
   xp: number;
   condicoes: string[];
   imagem?: string;
+  /** Quantas vezes cada habilidade limitada já foi usada ("Fuga Ossuária": 1). */
+  usos?: Record<string, number>;
+  /** O que a criatura carrega: cai no chão se ela for vencida, some se ela fugir. */
+  loot?: LootDaCriatura;
+  fugiu?: boolean;
+};
+
+export type LootDaCriatura = {
+  moedas: Partial<Record<"pc" | "pp" | "ce" | "po" | "pl", number>>;
+  itens: { nome: string; destruido?: boolean }[];
+  /** Quem levou (o slug do personagem), depois de lootear. */
+  levadoPor?: string;
 };
 
 /** Uma linha do histórico: a rodada, o texto completo e o que os jogadores leem. */
