@@ -35,6 +35,31 @@ import { Ilustracao } from "@/components/ui/Ilustracao";
 import { Rodape } from "@/components/Rodape";
 import { TituloBrasao, Sobretitulo, Ornamento } from "@/components/ui/Titulo";
 import { NavegacaoDaFicha } from "@/components/personagens/NavegacaoDaFicha";
+import { FichaVivaDoPersonagem } from "@/components/ficha-viva/FichaVivaDoPersonagem";
+import { TextoDeRegra } from "@/components/magias/TextoDeRegra";
+import { baseDaFicha } from "@/lib/ficha-viva-base";
+import { buscarDocumento } from "@/lib/regras";
+
+/** As regras que a ficha viva abre no "?", já formatadas aqui no servidor. */
+const REGRAS_DA_FICHA = [
+  "pontos-de-vida",
+  "pontos-de-vida-temporarios",
+  "dados-de-vida",
+  "descanso-curto",
+  "descanso-longo",
+  "inspiracao-heroica",
+];
+
+function regrasDaFicha() {
+  const itens = buscarDocumento("glossario")?.grupos.flatMap((g) => g.itens) ?? [];
+  return Object.fromEntries(
+    REGRAS_DA_FICHA.flatMap((id) => {
+      const item = itens.find((i) => i.id === id);
+      // Os links do glossário apontam para âncoras da página dele
+      return item ? [[id, <TextoDeRegra key={id} texto={item.texto.replaceAll("](#", "](/regras/glossario/#")} compacto />]] : [];
+    })
+  );
+}
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -209,6 +234,7 @@ export default async function PaginaPersonagem({ params }: Props) {
             titulo="Ficha de aventura"
             legenda={resumoDaFicha(meta.ficha)}
           />
+          <FichaVivaDoPersonagem slug={meta.slug} base={baseDaFicha(meta.ficha)} regras={regrasDaFicha()} />
           <FichaAtualNumeros ficha={meta.ficha} />
         </>
       ),

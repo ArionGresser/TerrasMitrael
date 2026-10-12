@@ -4,6 +4,7 @@ import { Rodape } from "@/components/Rodape";
 import { TituloBrasao, Sobretitulo, Ornamento } from "@/components/ui/Titulo";
 import { PainelDoMestre } from "@/components/conta/PainelDoMestre";
 import { PERSONAGENS } from "@/lib/personagens";
+import { baseDaFicha } from "@/lib/ficha-viva-base";
 
 export const metadata: Metadata = {
   title: "Painel do Mestre",
@@ -11,7 +12,11 @@ export const metadata: Metadata = {
 };
 
 export default function PaginaMestre() {
-  const personagens = PERSONAGENS.filter((p) => !p.meta.mestre).map((p) => ({ slug: p.meta.slug, nome: p.meta.nome }));
+  const personagens = PERSONAGENS.filter((p) => !p.meta.mestre).map((p) => ({
+    slug: p.meta.slug,
+    nome: p.meta.nome,
+    base: p.meta.ficha ? baseDaFicha(p.meta.ficha) : undefined,
+  }));
   return (
     <>
       <main className="mx-auto max-w-3xl px-4 pt-20 pb-8 sm:px-6 sm:pt-28">
@@ -21,7 +26,7 @@ export default function PaginaMestre() {
             <TituloBrasao className="mt-4">Painel do Mestre</TituloBrasao>
             <Ornamento className="mt-6" />
             <p className="text-tinta-700 mx-auto mt-6 max-w-lg text-sm leading-relaxed">
-              Ligue cada conta à ficha do personagem e crie uma senha nova para quem esqueceu a dele.
+              Aprove os pedidos dos jogadores, ligue cada conta à ficha do personagem e crie uma senha nova para quem esqueceu a dele.
             </p>
           </header>
           <div className="mt-8">

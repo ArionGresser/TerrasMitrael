@@ -50,9 +50,12 @@ export function MinhaConta({ personagens }: { personagens: PersonagemDaLista[] }
       <dl className="grid gap-4 sm:grid-cols-2">
         <Quadro titulo="Personagem">
           {personagem ? (
-            <Link href={`/personagens/${personagem.slug}/`} className="text-heraldico-vermelho font-semibold underline">
-              {personagem.nome}
-            </Link>
+            <>
+              <Link href={`/personagens/${personagem.slug}/`} className="text-heraldico-vermelho font-semibold underline">
+                {personagem.nome}
+              </Link>
+              <span className="text-tinta-700 block text-xs">A ficha viva fica na aba Ficha.</span>
+            </>
           ) : (
             <span className="text-tinta-700">
               Nenhum ainda. O Mestre liga a sua ficha à sua conta pelo painel dele.

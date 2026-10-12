@@ -4,6 +4,12 @@ import { useCallback, useEffect, useId, useState, type FormEvent } from "react";
 import Link from "next/link";
 import { iniciarConta, listarContas, redefinirSenha, vincularPersonagem, type Perfil } from "@/lib/conta";
 import { BOTAO, CAMPO, type PersonagemDaLista } from "./MinhaConta";
+import { criarFicha, listarPedidos, resolverPedido, type Pedido } from "@/lib/ficha-viva";
+import type { BaseDaFicha } from "@/lib/ficha-viva-base";
+import { LinhaDoPedido } from "@/components/ficha-viva/PainelDaFicha";
+
+/** Na lista do Mestre, quem tem ficha de 2024 traz a base da ficha viva. */
+export type PersonagemDoMestre = PersonagemDaLista & { base?: BaseDaFicha };
 import { useConta } from "./useConta";
 
 /**
@@ -11,9 +17,10 @@ import { useConta } from "./useConta";
  * de senha para quem esqueceu. Quem não é Mestre vê só um aviso: o banco
  * também não entregaria as contas dos outros (ver supabase/0001-contas.sql).
  */
-export function PainelDoMestre({ personagens }: { personagens: PersonagemDaLista[] }) {
+export function PainelDoMestre({ personagens }: { personagens: PersonagemDoMestre[] }) {
   const conta = useConta();
   const [lista, setLista] = useState<{ contas: Perfil[]; conquistas: Record<string, number> } | null>(null);
+  const [pedidos, setPedidos] = useState<Pedido[]>([]);
   const [erro, setErro] = useState<string | null>(null);
   const ehMestre = conta.fase === "dentro" && conta.perfil.papel === "mestre";
 
@@ -23,7 +30,9 @@ export function PainelDoMestre({ personagens }: { personagens: PersonagemDaLista
 
   const recarregar = useCallback(async () => {
     try {
-      setLista(await listarContas());
+      const [contas, todos] = await Promise.all([listarContas(), listarPedidos()]);
+      setLista(contas);
+      setPedidos(todos.filter((p) => p.estado === "pendente"));
     } catch {
       setErro("Não deu para buscar as contas. Confira a internet e recarregue a página.");
     }
@@ -52,7 +61,9 @@ export function PainelDoMestre({ personagens }: { personagens: PersonagemDaLista
 
   return (
     <div>
-      <p className="text-tinta-700 text-center text-sm">
+      <PedidosPendentes pedidos={pedidos} personagens={personagens} aoMudar={recarregar} />
+
+      <p className="text-tinta-700 mt-8 text-center text-sm">
         {lista.contas.length === 1 ? "1 conta" : `${lista.contas.length} contas`} no livro.
       </p>
       <ul className="mt-6 space-y-4">
@@ -80,7 +91,7 @@ function LinhaDaConta({
 }: {
   conta: Perfil;
   conquistas: number;
-  personagens: PersonagemDaLista[];
+  personagens: PersonagemDoMestre[];
   ocupados: Set<string>;
   aoMudar: () => Promise<void>;
 }) {
@@ -97,8 +108,14 @@ function LinhaDaConta({
       setAviso({ erro: true, texto: problema });
       return;
     }
-    const nome = personagens.find((p) => p.slug === slug)?.nome;
-    setAviso({ erro: false, texto: nome ? `Ligada a ${nome}.` : "Personagem desligado." });
+    const escolhido = personagens.find((p) => p.slug === slug);
+    // A ficha viva abre junto (se já existia, fica como estava)
+    const semFicha = escolhido?.base ? await criarFicha(slug, escolhido.base) : null;
+    setAviso(
+      semFicha
+        ? { erro: true, texto: `Ligada a ${escolhido!.nome}, mas a ficha viva não abriu: ${semFicha}` }
+        : { erro: false, texto: escolhido ? `Ligada a ${escolhido.nome}.` : "Personagem desligado." }
+    );
     await aoMudar();
   }
 
@@ -177,5 +194,64 @@ function LinhaDaConta({
         </p>
       ) : null}
     </li>
+  );
+}
+
+function PedidosPendentes({
+  pedidos,
+  personagens,
+  aoMudar,
+}: {
+  pedidos: Pedido[];
+  personagens: PersonagemDoMestre[];
+  aoMudar: () => Promise<void>;
+}) {
+  const [ocupado, setOcupado] = useState(false);
+  const [aviso, setAviso] = useState<string | null>(null);
+
+  async function fazer(acao: () => Promise<string | null>, sucesso?: string) {
+    setOcupado(true);
+    const erro = await acao();
+    setOcupado(false);
+    setAviso(erro ?? sucesso ?? null);
+    if (!erro) await aoMudar();
+    return !erro;
+  }
+
+  const sem = async () => null;
+  return (
+    <section aria-labelledby="titulo-pedidos">
+      <h2 id="titulo-pedidos" className="font-titulo text-tinta-900 text-center text-lg font-bold">
+        Pedidos esperando você
+      </h2>
+      <p aria-live="polite" className="text-tinta-700 min-h-5 text-center text-sm">
+        {aviso}
+      </p>
+      {pedidos.length ? (
+        <ul className="mt-2 space-y-2">
+          {pedidos.map((p) => (
+            <LinhaDoPedido
+              key={p.id}
+              pedido={p}
+              quem={personagens.find((x) => x.slug === p.personagem)?.nome ?? p.personagem}
+              mestre
+              ocupado={ocupado}
+              fazer={fazer}
+              acoes={{
+                mudar: sem,
+                tirar: sem,
+                gastar: sem,
+                pedirItem: sem,
+                pedirMoedas: sem,
+                desistir: sem,
+                resolver: resolverPedido,
+              }}
+            />
+          ))}
+        </ul>
+      ) : (
+        <p className="text-tinta-500 text-center text-sm italic">Nenhum pedido esperando.</p>
+      )}
+    </section>
   );
 }
