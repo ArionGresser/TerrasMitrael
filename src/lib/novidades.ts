@@ -160,6 +160,15 @@ const REGISTRO: Registro[] = [
   },
   {
     tipo: "aviso",
+    data: "2026-10-12T20:00-03:00",
+    titulo: "Agora dá para criar a sua conta",
+    texto:
+      "Em Minha conta, no menu do selo, você entra só com nome e senha, sem e-mail. As conquistas vão junto para qualquer aparelho, e entrar pela primeira vez libera o d20 Âmbar antigo.",
+    href: "/conta/",
+    icone: "chave",
+  },
+  {
+    tipo: "aviso",
     data: "2026-10-10T00:05-03:00",
     titulo: "A mesa ganhou vida",
     texto:
