@@ -73,16 +73,69 @@ export type CriaturaDeCombate = {
   pvDados: string;
   iniciativa: number;
   imagem?: string;
+  /**
+   * Se a criatura carrega coisas (✦ regra da casa): quem tem Equipamento na
+   * ficha ou pensa (Inteligência 5 ou mais, fora feras, enxames, gosmas e
+   * plantas) leva moedas e itens; o resto só vale o XP. Um lobo não tem bolso.
+   */
+  carrega?: boolean;
 };
 
 export type Filtros = {
   tipos: string[];
+  /** Uma família (ver FAMILIAS): só esqueletos, só o que é do fogo. */
+  familia?: string;
+  /** Um pedaço do nome: "zumbi", "dragão vermelho". */
+  nomeContem?: string;
   /** Só monstros, só animais ou os dois. */
   fonte: "todos" | "monstro" | "animal";
   ndMaximo: number;
   /** Quantas criaturas, no máximo. */
   maximo: number;
 };
+
+/**
+ * Famílias de criaturas que atravessam os tipos do Bestiário: dentro de
+ * Morto-Vivo há esqueletos, zumbis e espíritos; "do fogo" junta elemental,
+ * salamandra, efreeti e magmin. Pelo nome, para valer em qualquer tipo.
+ */
+export const FAMILIAS: { nome: string; padrao: RegExp }[] = [
+  { nome: "Esqueletos", padrao: /Esqueleto/ },
+  { nome: "Zumbis", padrao: /Zumbi/ },
+  { nome: "Vampiros", padrao: /Vampir/ },
+  { nome: "Múmias", padrao: /Múmia/ },
+  { nome: "Espíritos", padrao: /Aparição|Espectro|Fantasma|Sombra|Fogo-Fátuo/ },
+  { nome: "Carniçais", padrao: /Carniçal|Lívido/ },
+  { nome: "Do fogo", padrao: /Fogo|Magma|Magmin|Salamandra|Efreeti|Azer|Infernal|Vermelho/ },
+  { nome: "Do gelo", padrao: /Gelo|Inverno|Branco/ },
+  { nome: "Da água", padrao: /Água|Vapor|Tritão|Mar\b|Sahuagin|Merrow|Kraken/ },
+  { nome: "Do ar", padrao: /Elemental do Ar|Djinni|Perseguidor Invisível|Mefite do Pó|Azul/ },
+  { nome: "Da terra", padrao: /Terra|Gárgula|Xorn|Pedra/ },
+  { nome: "Diabos", padrao: /Diabo|Diabrete|Lêmure|Erínia/ },
+  { nome: "Demônios", padrao: /Balor|Dretch|Glabrezu|Hezrou|Marilith|Nalfeshnee|Quasit|Vrock/ },
+  { nome: "Dragões", padrao: /Dragão|Serpe/ },
+  { nome: "Goblinoides", padrao: /Goblin|Bugbear/ },
+  { nome: "Gigantes e trolls", padrao: /Gigante|Troll|Ogro|Ettin/ },
+  { nome: "Golens e animados", padrao: /Golem|Animad|Guardião Escudo/ },
+  { nome: "Licantropos", padrao: /Homem-|Lobisomem/ },
+  { nome: "Bandidos e piratas", padrao: /Bandido|Pirata|Brutamontes/ },
+  { nome: "Cultistas", padrao: /Cultista|Sacerdote/ },
+  { nome: "Soldados e guardas", padrao: /Guarda|Cavaleiro|Infantaria|Veterano|Gladiador|Soldado/ },
+  { nome: "Lobos", padrao: /Lobo|Worg|Chacal/ },
+  { nome: "Aranhas e insetos", padrao: /Aranha|Escorpião|Centopeia|Vespa|Besouro|Ettercap|Drider/ },
+  { nome: "Ursos", padrao: /Urso/ },
+  { nome: "Serpentes", padrao: /Serpente|Cobra|Víbora|Naga/ },
+];
+
+const normal = (s: string) => s.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase();
+
+/** Se a criatura passa no filtro de família e de nome. */
+export function passaNoNome(c: { nome: string }, filtros: Pick<Filtros, "familia" | "nomeContem">): boolean {
+  const familia = filtros.familia ? FAMILIAS.find((f) => f.nome === filtros.familia) : undefined;
+  if (familia && !familia.padrao.test(c.nome)) return false;
+  const pedaco = filtros.nomeContem?.trim();
+  return !pedaco || normal(c.nome).includes(normal(pedaco));
+}
 
 /** Uma linha do encontro: a criatura e quantas vêm. */
 export type Grupo = { criatura: CriaturaDeCombate; quantas: number };
@@ -104,7 +157,8 @@ export function sortearEncontro(todas: CriaturaDeCombate[], limite: number, filt
       c.xp <= limite &&
       c.ndNumero <= filtros.ndMaximo &&
       (filtros.fonte === "todos" || c.fonte === filtros.fonte) &&
-      (!filtros.tipos.length || filtros.tipos.includes(c.tipo))
+      (!filtros.tipos.length || filtros.tipos.includes(c.tipo)) &&
+      passaNoNome(c, filtros)
   );
   if (!cabem.length || limite <= 0) return [];
 
@@ -126,8 +180,9 @@ export function sortearEncontro(todas: CriaturaDeCombate[], limite: number, filt
     // Acompanhantes, se sobrar orçamento e couber mais gente
     for (let i = 0; i < 2 && total < filtros.maximo; i++) {
       // Do mesmo tipo da principal: mortos-vivos andam com mortos-vivos
+      // Com família escolhida, a família já manda: esqueletos andam com esqueletos
       const menores = cabem.filter(
-        (c) => c.xp <= resto && c.slug !== principal.slug && c.xp < principal.xp && c.tipo === principal.tipo
+        (c) => c.xp <= resto && c.slug !== principal.slug && c.xp < principal.xp && (filtros.familia || c.tipo === principal.tipo)
       );
       if (!menores.length || resto < limite * 0.15 || Math.random() < 0.4) break;
       const c = algum(menores);
