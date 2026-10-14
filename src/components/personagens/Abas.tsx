@@ -32,7 +32,7 @@ export function CabecalhoDaAba({
   legenda,
 }: {
   titulo: string;
-  legenda?: string;
+  legenda?: ReactNode;
 }) {
   return (
     <header className="text-center">

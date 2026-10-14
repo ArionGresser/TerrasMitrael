@@ -1,6 +1,9 @@
 import { buscarClasse, traco } from "@/lib/classes";
 import { ancora } from "@/lib/regras";
 import { XP_DO_NIVEL } from "@/lib/xp";
+import { HABILIDADES } from "@/lib/habilidades";
+import { MAGIAS } from "@/lib/magias";
+import { danoDaMagia, type MagiaDaClasse } from "@/lib/subir-de-nivel";
 import type { FichaAtual } from "@/lib/personagens";
 
 /**
@@ -32,6 +35,19 @@ export type BaseDaFicha = {
   espacos: Record<string, number>;
   /** Magia de Pacto (Bruxo): os espaços voltam também no Descanso Curto. */
   pacto: boolean;
+  /** Os espaços de magia de cada nível, do 1 ao 20, para a subida de nível. */
+  espacosPorNivel: { espacos: Record<string, number>; pacto: boolean }[];
+  /** A classe pelo endereço ("bruxo"), ou null se não for do SRD. */
+  classe: string | null;
+  especie: string;
+  /** As chaves de magias e características da ficha do site. */
+  conhecidas: string[];
+  /** As magias da ficha que não estão no Grimório (fora do SRD), para a subida contar com elas. */
+  proprias: MagiaDaClasse[];
+  /** A CA da ficha do site (a mesa pode calcular pelas regras, em ajustes.ca). */
+  ca: number;
+  /** O equipamento da ficha do site, para achar a armadura. */
+  equipamento: string[];
   inicial: { pv: number; pvTemporarios: number; inventario: ItemDaMochila[]; moedas: Moedas };
 };
 
@@ -109,6 +125,18 @@ export function baseDaFicha(ficha: FichaAtual): BaseDaFicha {
     atributos: ficha.atributos.map((a) => ({ nome: a.nome, valor: numero(a.valor) })),
     espacos,
     pacto,
+    espacosPorNivel: classe ? Array.from({ length: 20 }, (_, i) => espacosDaClasse(classe.tabela, i + 1)) : [],
+    classe: classe?.slug ?? null,
+    especie: ficha.especie,
+    conhecidas: [...ficha.magias, ...ficha.caracteristicas, ...ficha.talentos],
+    ca: numero(ficha.combate.ca),
+    equipamento: ficha.equipamento,
+    proprias: ficha.magias.flatMap((slug) => {
+      const h = HABILIDADES[slug];
+      if (!h || MAGIAS.some((m) => m.slug === slug) || (h.tipo !== "truque" && h.tipo !== "magia")) return [];
+      const texto = h.descricao ?? "";
+      return [{ slug, nome: h.nome, nivel: h.circulo ?? (h.tipo === "truque" ? 0 : 1), ...danoDaMagia(texto) }];
+    }),
     inicial: {
       pv: pvMaximo,
       pvTemporarios: numero(ficha.combate.pvTemporarios),

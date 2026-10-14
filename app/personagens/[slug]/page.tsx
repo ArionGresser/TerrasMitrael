@@ -35,6 +35,7 @@ import { Rodape } from "@/components/Rodape";
 import { TituloBrasao, Sobretitulo, Ornamento } from "@/components/ui/Titulo";
 import { NavegacaoDaFicha } from "@/components/personagens/NavegacaoDaFicha";
 import { FichaVivaDoPersonagem } from "@/components/ficha-viva/FichaVivaDoPersonagem";
+import { LegendaDaFicha } from "@/components/ficha-viva/LegendaDaFicha";
 import { NumerosDaFicha } from "@/components/ficha-viva/NumerosDaFicha";
 import { baseDaFicha } from "@/lib/ficha-viva-base";
 import { regrasDaFicha } from "@/lib/regras-da-ficha";
@@ -211,9 +212,9 @@ export default async function PaginaPersonagem({ params }: Props) {
         <>
           <CabecalhoDaAba
             titulo="Ficha de aventura"
-            legenda={resumoDaFicha(meta.ficha)}
+            legenda={<LegendaDaFicha slug={meta.slug} texto={resumoDaFicha(meta.ficha)} />}
           />
-          <FichaVivaDoPersonagem slug={meta.slug} base={baseDaFicha(meta.ficha)} regras={regrasDaFicha()} />
+          <FichaVivaDoPersonagem slug={meta.slug} base={baseDaFicha(meta.ficha)} regras={regrasDaFicha()} fechada />
           <NumerosDaFicha slug={meta.slug} ficha={meta.ficha} />
         </>
       ),

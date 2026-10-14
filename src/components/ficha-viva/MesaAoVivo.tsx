@@ -69,7 +69,7 @@ export function MesaAoVivo({ personagens }: { personagens: Personagem[] }) {
       </h2>
       {naMesa.length === 0 ? (
         <p className="text-tinta-500 mt-2 text-center text-sm italic">
-          Nenhuma ficha viva aberta ainda. Ligue um personagem a uma conta lá embaixo, ou abra a ficha viva na página dele.
+          Nenhuma ficha liberada ainda. Ligue um personagem a uma conta lá embaixo, ou libere a edição na página dele.
         </p>
       ) : (
         <>

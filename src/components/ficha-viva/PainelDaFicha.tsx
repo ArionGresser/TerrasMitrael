@@ -16,8 +16,10 @@ import {
 } from "@/lib/ficha-viva";
 import { BOTAO, BOTAO_CHEIO, CAMPO } from "@/components/conta/MinhaConta";
 import { XP_DO_NIVEL } from "@/lib/xp";
-import { comSinal, modificador, temAjustes, type AjustesDaFicha } from "@/lib/ajustes-da-ficha";
+import { atributoDasSubidas, comSinal, modificador, pvDasSubidas, type AjustesDaFicha } from "@/lib/ajustes-da-ficha";
 import { BotaoDeRegra, Janela } from "./Janela";
+import { NivelDaFicha } from "./SubirDeNivel";
+import { CaDaFicha } from "./CaDaFicha";
 
 type Resposta = Promise<string | null>;
 
@@ -90,7 +92,7 @@ export function PainelDaFicha({
     >
       <div className="flex flex-wrap items-baseline justify-between gap-2">
         <h3 id="titulo-ficha-viva" className="font-titulo text-tinta-900 text-xl font-bold">
-          Ficha viva
+          Editando a ficha
         </h3>
         <p className="text-tinta-500 text-xs">
           {mestre ? "Você está vendo como Mestre" : "Só você e o Mestre veem esta parte"}
@@ -123,7 +125,11 @@ export function PainelDaFicha({
 
       <Experiencia ficha={ficha} base={base} fazer={fazer} acoes={acoes} ocupado={ocupado} />
 
+      <NivelDaFicha ficha={ficha} base={base} mestre={mestre} fazer={fazer} acoes={acoes} ocupado={ocupado} />
+
       <AjustarFicha key={JSON.stringify(ficha.ajustes ?? {})} ficha={ficha} base={base} fazer={fazer} acoes={acoes} ocupado={ocupado} />
+
+      <CaDaFicha key={`ca-${JSON.stringify(ficha.ajustes?.ca ?? null)}`} ficha={ficha} base={base} fazer={fazer} acoes={acoes} ocupado={ocupado} />
 
       {Object.keys(base.espacos).length ? (
         <EspacosDeMagia ficha={ficha} base={base} fazer={fazer} acoes={acoes} ocupado={ocupado} />
@@ -1009,10 +1015,13 @@ function AjustarFicha({ ficha, base, fazer, acoes, ocupado }: Comum & { ficha: F
   // A ficha viva começa com o PV máximo do site: é o mesmo número
   const pvDoSite = base.inicial.pv;
   const [pvMaximo, setPvMaximo] = useState(String(base.pvMaximo));
+  // O que as subidas de nível deram fica por cima, e não é mexido aqui
+  const daSubida = (nome: string) => atributoDasSubidas(ficha.ajustes, nome);
+  const pvDaSubida = pvDasSubidas(ficha.ajustes);
   const [valores, setValores] = useState<Record<string, string>>(() =>
-    Object.fromEntries(base.atributos.map((a) => [a.nome, String(ficha.ajustes?.atributos?.[a.nome] ?? a.valor)]))
+    Object.fromEntries(base.atributos.map((a) => [a.nome, String((ficha.ajustes?.atributos?.[a.nome] ?? a.valor) + daSubida(a.nome))]))
   );
-  const ajustado = temAjustes(ficha.ajustes);
+  const ajustado = ficha.ajustes?.pv_maximo !== undefined || Object.keys(ficha.ajustes?.atributos ?? {}).length > 0;
 
   async function salvar(e: FormEvent) {
     e.preventDefault();
@@ -1022,10 +1031,13 @@ function AjustarFicha({ ficha, base, fazer, acoes, ocupado }: Comum & { ficha: F
     for (const a of base.atributos) {
       const v = Number.parseInt(valores[a.nome] ?? "", 10);
       if (!Number.isFinite(v) || v < 1 || v > 30) return;
-      if (v !== a.valor) atributos[a.nome] = v;
+      const aMao = v - daSubida(a.nome);
+      if (aMao !== a.valor) atributos[a.nome] = aMao;
     }
-    const ajustes: AjustesDaFicha = {};
-    if (max !== pvDoSite) ajustes.pv_maximo = max;
+    // Guarda as subidas e a liberação; troca só o que é ajuste à mão
+    const { pv_maximo: _pv, atributos: _at, ...resto } = ficha.ajustes ?? {};
+    const ajustes: AjustesDaFicha = resto;
+    if (max - pvDaSubida !== pvDoSite) ajustes.pv_maximo = max - pvDaSubida;
     if (Object.keys(atributos).length) ajustes.atributos = atributos;
     // Ganhar PV máximo ganha os mesmos PV atuais; perder só corta o que passar
     const delta = max - base.pvMaximo;
@@ -1037,7 +1049,11 @@ function AjustarFicha({ ficha, base, fazer, acoes, ocupado }: Comum & { ficha: F
   }
 
   async function voltarAoSite() {
-    await fazer(() => acoes.mudar({ ajustes: {}, pv: Math.min(ficha.pv, pvDoSite) }), "Voltou aos números da ficha do site.");
+    const { pv_maximo: _pv, atributos: _at, ...resto } = ficha.ajustes ?? {};
+    await fazer(
+      () => acoes.mudar({ ajustes: resto, pv: Math.min(ficha.pv, pvDoSite + pvDaSubida) }),
+      pvDaSubida ? "Voltou aos números do site, com as subidas de nível." : "Voltou aos números da ficha do site."
+    );
   }
 
   return (

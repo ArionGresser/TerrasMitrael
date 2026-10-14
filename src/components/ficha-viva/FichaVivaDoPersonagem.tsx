@@ -35,10 +35,13 @@ export function FichaVivaDoPersonagem({
   slug,
   base: baseDoSite,
   regras,
+  fechada = false,
 }: {
   slug: string;
   base: BaseDaFicha;
   regras: RegrasDaFicha;
+  /** Na página do personagem: começa fechada, atrás do botão ✎ Editar. */
+  fechada?: boolean;
 }) {
   const conta = useConta();
   const mestre = conta.fase === "dentro" && conta.perfil.papel === "mestre";
@@ -48,6 +51,7 @@ export function FichaVivaDoPersonagem({
   const [ficha, setFicha] = useState<FichaViva | null | undefined>(undefined);
   const [pedidos, setPedidos] = useState<Pedido[]>([]);
   const [erro, setErro] = useState<string | null>(null);
+  const [aberta, setAberta] = useState(!fechada);
   const ajustes = ficha?.ajustes;
   const base = useMemo(() => ajustarBase(baseDoSite, ajustes), [baseDoSite, ajustes]);
 
@@ -111,11 +115,11 @@ export function FichaVivaDoPersonagem({
   if (ficha === null) {
     return (
       <div className="border-heraldico-vermelho/30 mb-8 rounded-sm border-2 border-dashed p-4 text-center sm:p-6">
-        <p className="font-titulo text-tinta-900 text-lg font-bold">Ficha viva</p>
+        <p className="font-titulo text-tinta-900 text-lg font-bold">Editar ficha</p>
         {mestre ? (
           <>
             <p className="text-tinta-700 mt-1 text-sm">
-              Este personagem ainda não tem ficha viva. Ela começa com os PV cheios e com a mochila e a bolsa desta ficha.
+              Este personagem ainda não pode ser editado na mesa. Ao liberar, a ficha começa com os PV cheios e com a mochila e a bolsa daqui.
             </p>
             <button
               type="button"
@@ -126,7 +130,7 @@ export function FichaVivaDoPersonagem({
               }}
               className={`${BOTAO_CHEIO} mt-3`}
             >
-              Abrir a ficha viva
+              Liberar a edição da ficha
             </button>
             {erro ? (
               <p role="alert" className="text-heraldico-vermelho mt-2 text-sm">
@@ -136,7 +140,7 @@ export function FichaVivaDoPersonagem({
           </>
         ) : (
           <p className="text-tinta-700 mt-1 text-sm">
-            O Mestre ainda não abriu a sua ficha viva. Quando abrir, aqui vão aparecer os seus PV, os espaços de magia, a
+            O Mestre ainda não liberou a edição da sua ficha. Quando liberar, aqui vão aparecer os seus PV, os espaços de magia, a
             mochila e a bolsa.
           </p>
         )}
@@ -144,5 +148,33 @@ export function FichaVivaDoPersonagem({
     );
   }
 
-  return <PainelDaFicha ficha={ficha} base={base} pedidos={pedidos} acoes={acoes} regras={regras} mestre={mestre} />;
+  const pendentes = pedidos.filter((p) => p.estado === "pendente").length;
+  return (
+    <>
+      {fechada ? (
+        <div className="border-heraldico-vermelho/30 bg-pergaminho-50/70 mb-6 flex flex-wrap items-center justify-between gap-3 rounded-sm border-2 px-4 py-3">
+          <p className="text-tinta-700 text-sm">
+            <strong className="text-tinta-900 tabular-nums">
+              {ficha.pv}/{base.pvMaximo} PV
+            </strong>
+            {ficha.pv_temporarios ? ` · +${ficha.pv_temporarios} temporários` : ""}
+            {pendentes ? ` · ${pendentes} ${pendentes === 1 ? "pedido esperando" : "pedidos esperando"}` : ""}
+            <span className="text-tinta-500 block text-xs">{mestre ? "Você está vendo como Mestre." : "Só você e o Mestre veem isto."}</span>
+          </p>
+          <button
+            type="button"
+            aria-expanded={aberta}
+            onClick={() => setAberta((a) => !a)}
+            className={`font-titulo inline-flex min-h-11 items-center gap-2 rounded-sm px-5 text-sm font-semibold tracking-wide shadow-sm transition-colors ${
+              aberta ? "border-dourado-600/60 text-tinta-900 hover:bg-dourado-400/20 border" : "bg-heraldico-vermelho text-pergaminho-50 hover:bg-heraldico-vermelho/90"
+            }`}
+          >
+            <span aria-hidden>{aberta ? "✓" : "✎"}</span>
+            {aberta ? "Terminar de editar" : "Editar"}
+          </button>
+        </div>
+      ) : null}
+      {aberta ? <PainelDaFicha ficha={ficha} base={base} pedidos={pedidos} acoes={acoes} regras={regras} mestre={mestre} /> : null}
+    </>
+  );
 }
