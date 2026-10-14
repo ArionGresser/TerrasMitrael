@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useId, useState, type FormEvent } from "react";
 import Link from "next/link";
 import { iniciarConta, listarContas, redefinirSenha, vincularPersonagem, type Perfil } from "@/lib/conta";
-import { BOTAO, CAMPO, type PersonagemDaLista } from "./MinhaConta";
+import { BOTAO_CHEIO, BOTAO, CAMPO, type PersonagemDaLista } from "./MinhaConta";
 import {
   criarFicha,
   listarPedidos,
@@ -77,14 +77,23 @@ export function PainelDoMestre({ personagens }: { personagens: PersonagemDoMestr
   return (
     <div>
       <nav aria-label="Ferramentas do Mestre" className="mb-8 grid gap-2 sm:grid-cols-2">
+        <Link href="/sessao/" className={`${BOTAO_CHEIO} w-full sm:col-span-2`}>
+          Sessão de hoje
+        </Link>
         <Link href="/mestre/encontros/" className={`${BOTAO} w-full`}>
           Gerador de encontros
+        </Link>
+        <Link href="/mestre/nomes/" className={`${BOTAO} w-full`}>
+          Gerador de nomes
         </Link>
         <Link href="/combate/" className={`${BOTAO} w-full`}>
           A arena do combate
         </Link>
         <Link href="/mapa-da-mesa/" className={`${BOTAO} w-full`}>
           Mapa da mesa
+        </Link>
+        <Link href="/mestre/pintar-mapa/" className={`${BOTAO} w-full`}>
+          Pintar o mapa (para a IA)
         </Link>
         <Link href="/anotacoes/" className={`${BOTAO} w-full`}>
           Anotações
@@ -151,7 +160,7 @@ function LinhaDaConta({
     const semFicha = escolhido?.base ? await criarFicha(slug, escolhido.base) : null;
     setAviso(
       semFicha
-        ? { erro: true, texto: `Ligada a ${escolhido!.nome}, mas a ficha viva não abriu: ${semFicha}` }
+        ? { erro: true, texto: `Ligada a ${escolhido!.nome}, mas a edição da ficha não foi liberada: ${semFicha}` }
         : { erro: false, texto: escolhido ? `Ligada a ${escolhido.nome}.` : "Personagem desligado." }
     );
     await aoMudar();
