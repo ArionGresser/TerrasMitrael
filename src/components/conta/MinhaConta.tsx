@@ -57,15 +57,16 @@ export function MinhaConta({ personagens }: { personagens: PersonagemDaLista[] }
       <nav aria-label="Atalhos">
         <h2 className="font-titulo text-tinta-500 mb-2 text-xs tracking-[0.14em] uppercase">Atalhos</h2>
         <ul className="grid grid-cols-2 gap-2 sm:grid-cols-3">
+          <Atalho href="/sessao/" icone="☀" titulo="Sessão de hoje" texto="Mesa, mapa, combate" destaque />
           {perfil.papel === "mestre" ? (
             <>
-              <Atalho href="/mestre/" icone="♛" titulo="Painel do Mestre" texto="Mesa ao vivo, pedidos, sugestões" destaque />
+              <Atalho href="/mestre/" icone="♛" titulo="Painel do Mestre" texto="Mesa ao vivo, pedidos, sugestões" />
               <Atalho href="/mestre/encontros/" icone="⚄" titulo="Encontros" texto="Sortear e montar combates" />
             </>
           ) : null}
           {personagem ? (
             <>
-              <Atalho href={`/personagens/${personagem.slug}/#ficha`} icone="⛨" titulo="Minha ficha" texto={`${personagem.nome}: PV, magias, pedidos`} destaque />
+              <Atalho href={`/personagens/${personagem.slug}/#ficha`} icone="⛨" titulo="Minha ficha" texto={`${personagem.nome}: PV, magias, pedidos`} />
               <Atalho href={`/personagens/${personagem.slug}/#mochila`} icone="⚖" titulo="Mochila" texto="Itens e moedas" />
               <Atalho href={`/personagens/${personagem.slug}/#historia`} icone="❦" titulo="História" texto={`A lore de ${personagem.nome}`} />
             </>
