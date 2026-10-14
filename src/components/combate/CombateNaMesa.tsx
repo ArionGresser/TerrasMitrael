@@ -59,8 +59,9 @@ export function CombateNaMesa() {
       >
         <span aria-hidden>⚔</span>
         <span className="truncate">
-          {mesa.numero ? `Combate nº ${mesa.numero} · ` : ""}Rodada {mesa.rodada}
-          {minhaVez ? " · Sua vez!" : daVez ? ` · Vez de ${daVez.nome}` : " · Rolando iniciativa"}
+          {mesa.numero ? `Combate nº ${mesa.numero} · ` : ""}
+          {mesa.rodada === 0 ? "Role a iniciativa!" : `Rodada ${mesa.rodada}`}
+          {mesa.rodada === 0 ? "" : minhaVez ? " · Sua vez!" : daVez ? ` · Vez de ${daVez.nome}` : " · Rolando iniciativa"}
         </span>
         <span aria-hidden>›</span>
       </Link>

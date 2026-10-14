@@ -69,6 +69,16 @@ export function indiceDoBestiario(): ResumoDoMonstro[] {
 }
 
 /** As criaturas com o que o gerador de encontros e o combate precisam. */
+const SEM_BOLSO = ["Fera", "Enxame", "Gosma", "Planta"];
+
+/** Ver CriaturaDeCombate.carrega. */
+function carrega(m: (typeof MONSTROS)[number]): boolean {
+  if (m.campos.some((c) => c.rotulo === "Equipamento")) return true;
+  if (SEM_BOLSO.includes(m.tipo)) return false;
+  const int = m.atributos.find((a) => a.sigla.toUpperCase() === "INT")?.valor ?? 10;
+  return int >= 5;
+}
+
 export function criaturasDeCombate(): CriaturaDeCombate[] {
   return MONSTROS.map((m) => ({
     slug: m.slug,
@@ -83,5 +93,6 @@ export function criaturasDeCombate(): CriaturaDeCombate[] {
     pvDados: lerDadosDePv(m.pv),
     iniciativa: lerNumero(m.iniciativa),
     imagem: arte("monstros/mini", m.slug) ?? arte("monstros", m.slug),
+    carrega: carrega(m),
   }));
 }

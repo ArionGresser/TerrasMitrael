@@ -3,8 +3,8 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { abrir, CATEGORIAS_MAGICAS, type Conteudo, type Resultado } from "@/lib/bau-sorteio";
-import { terminarCombate, versaoDaMesa, type CombateAtivo } from "@/lib/combate";
-import { mestre, moedasPorExtenso } from "@/lib/ficha-viva";
+import { gravarEventos, retratoDaMesa, terminarCombate, versaoDaMesa, type CombateAtivo } from "@/lib/combate";
+import { mestre, moedasPorExtenso, TIPOS_DE_MOEDA, type Moedas } from "@/lib/ficha-viva";
 import { BOTAO, BOTAO_CHEIO } from "@/components/conta/MinhaConta";
 import { Janela } from "@/components/ficha-viva/Janela";
 import { DistribuirTesouro, tesouroDoBau } from "@/components/ficha-viva/DistribuirTesouro";
@@ -25,9 +25,10 @@ function patamarDo(nivelMedio: number) {
 
 /**
  * O fim do combate: o XP das criaturas vencidas dividido entre os
- * personagens, o tesouro (sorteado pelas regras do Baú do Mestre, pelo
- * nível do grupo e pela dificuldade) repartido entre eles, e o resumo
- * guardado na lista dos combates.
+ * personagens, o espólio (o que cada inimigo caído carregava: cada item
+ * para quem o Mestre escolher, as moedas divididas igual ou à mão), um
+ * tesouro a mais do Baú se quiser, e o resumo guardado na lista dos
+ * combates. O fim também entra na gravação.
  */
 export function FimDoCombate({
   aberta,
@@ -36,6 +37,7 @@ export function FimDoCombate({
   pvs,
   nomes,
   niveis,
+  marcarEspolio,
   aoTerminar,
 }: {
   aberta: boolean;
@@ -44,6 +46,8 @@ export function FimDoCombate({
   pvs: Record<string, [number, number]>;
   nomes: Record<string, string>;
   niveis: Record<string, number>;
+  /** Marca o loot destes inimigos como já repartido. */
+  marcarEspolio: (ids: string[]) => void;
   aoTerminar: () => void;
 }) {
   const estado = combate.estado;
@@ -63,6 +67,18 @@ export function FimDoCombate({
   }, [aberta, chave]);
 
   const contam = criaturas.filter((c) => todas || c.pv <= 0);
+
+  // O espólio: o que os inimigos caídos carregavam (quem fugiu levou o dele)
+  const comEspolio = criaturas.filter((c) => c.pv <= 0 && !c.fugiu && c.loot && !c.loot.levadoPor);
+  const moedasDoEspolio: Moedas = {};
+  for (const c of comEspolio) {
+    for (const { chave } of TIPOS_DE_MOEDA) {
+      const n = c.loot!.moedas[chave] ?? 0;
+      if (n) moedasDoEspolio[chave] = (moedasDoEspolio[chave] ?? 0) + n;
+    }
+  }
+  const itensDoEspolio = comEspolio.flatMap((c) => c.loot!.itens.filter((i) => !i.destruido).map((i) => i.nome));
+  const temEspolio = itensDoEspolio.length > 0 || Object.keys(moedasDoEspolio).length > 0;
   const total = contam.reduce((s, c) => s + c.xp, 0);
   const porCabeca = quem.size ? Math.floor(total / quem.size) : 0;
 
@@ -112,8 +128,14 @@ export function FimDoCombate({
     const textoDoTesouro = t
       ? [Object.keys(t.moedas).length ? moedasPorExtenso(t.moedas) : "", ...t.itens].filter(Boolean).join(", ")
       : undefined;
+    // A última cena da gravação
+    const versao = versaoDaMesa(estado, pvs);
+    const seq = Math.max(0, ...(estado.historico ?? []).map((r) => r.seq ?? 0)) + 1;
+    const fim = `O combate terminou em ${estado.rodada} ${estado.rodada === 1 ? "rodada" : "rodadas"}${comXp && porCabeca ? `: ${porCabeca} XP para cada um` : ""}.`;
+    await gravarEventos(combate.id, [{ seq, rodada: estado.rodada, texto: fim, vez: null, ordem: retratoDaMesa(versao) }]);
     const e = await terminarCombate(combate.id, {
-      ...versaoDaMesa(estado, pvs),
+      ...versao,
+      historico: [...(versao.historico ?? []), { rodada: estado.rodada, texto: fim }],
       resumo: {
         data: new Date().toISOString(),
         rodadas: estado.rodada,
@@ -169,9 +191,40 @@ export function FimDoCombate({
       </section>
 
       <section className="border-dourado-600/30 mt-5 border-t pt-4">
-        <h3 className="font-titulo text-tinta-900 font-bold">Tesouro</h3>
+        <h3 className="font-titulo text-tinta-900 font-bold">Espólio dos inimigos</h3>
+        {temEspolio ? (
+          <>
+            <ul className="text-tinta-700 mt-1 space-y-1 text-sm">
+              {comEspolio.map((c) => {
+                const itens = c.loot!.itens.filter((i) => !i.destruido).map((i) => i.nome);
+                const moedas = Object.values(c.loot!.moedas).some((n) => (n ?? 0) > 0) ? moedasPorExtenso(c.loot!.moedas as Moedas) : "";
+                return (
+                  <li key={c.id}>
+                    <strong className="text-tinta-900">{c.nome}:</strong> {[moedas, ...itens].filter(Boolean).join(", ") || "nada"}
+                  </li>
+                );
+              })}
+            </ul>
+            <p className="text-tinta-500 mt-1 text-xs">Escolha para quem vai cada item. As moedas dividem igual ou do jeito que você quiser.</p>
+            <DistribuirTesouro
+              moedas={moedasDoEspolio}
+              itens={itensDoEspolio}
+              nomes={nomes}
+              participantes={personagens.map((p) => p.slug)}
+              aoMandar={() => marcarEspolio(comEspolio.map((c) => c.id))}
+            />
+          </>
+        ) : (
+          <p className="text-tinta-500 mt-1 text-sm italic">
+            {criaturas.some((c) => c.loot?.levadoPor) ? "Já repartido." : "Ninguém caído carregava nada (ou quem carregava fugiu)."}
+          </p>
+        )}
+      </section>
+
+      <section className="border-dourado-600/30 mt-5 border-t pt-4">
+        <h3 className="font-titulo text-tinta-900 font-bold">Tesouro a mais</h3>
         <p className="text-tinta-700 mt-1 text-sm">
-          Sorteado pelo Baú do Mestre, pelo nível do grupo e pela dificuldade do encontro.
+          Um baú no covil, além do que os inimigos carregavam: sorteado pelo Baú do Mestre, pelo nível do grupo e pela dificuldade.
         </p>
         <button type="button" onClick={() => void sortearTesouro()} className={`${BOTAO} mt-2`}>
           {tesouro ? "Sortear outro tesouro" : "Ver o tesouro do combate"}

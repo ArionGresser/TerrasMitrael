@@ -32,7 +32,7 @@ export default function PaginaArena() {
   );
   return (
     <>
-      <main className="mx-auto max-w-4xl px-3 pt-20 pb-8 sm:px-6 sm:pt-28">
+      <main className="mx-auto max-w-6xl px-3 pt-20 pb-8 sm:px-6 sm:pt-28">
         <Pergaminho borda={3}>
           <header className="text-center">
             <TituloBrasao>A arena</TituloBrasao>
