@@ -3,7 +3,7 @@
 Gerada por `scripts/magias/arte/gerar-lista.py`. Não edite à mão: as palavras-chave
 ficam em `palavras-chave.txt`, e o resto sai do grimório.
 
-**Ícones prontos:** 339 de 339 · **Ilustrações prontas:** 0 de 339
+**Ícones prontos:** 339 de 339 · **Ilustrações prontas:** 40 de 339
 
 ## Como entregar uma arte
 
@@ -50,51 +50,51 @@ medieval fantasy illustration of <a wizard, a cleric...> casting the spell <nome
 
 | ✓ | Magia | Em inglês | Escola | Arquivo | Palavras-chave |
 |---|---|---|---|---|---|
-| I· | Arte Druídica | Druidcraft | Transmutação | `arte-druidica` | small nature magic, budding flower blooming in a palm, falling leaves, tiny weather swirl |
-| I· | Bordão Místico | Shillelagh | Transmutação | `bordao-mistico` | wooden club wreathed in green nature magic, glowing grain |
-| I· | Centelha Estelar | Starry Wisp | Evocação | `centelha-estelar` | tiny mote of starlight shooting like a comet |
-| I· | Chama Sagrada | Sacred Flame | Evocação | `chama-sagrada` | radiant pillar of holy flame falling from above |
-| I· | Consertar | Mending | Transmutação | `consertar` | broken pottery pieces knitting back together with golden seams |
-| I· | Elementalismo | Elementalism | Transmutação | `elementalismo` | four small swirls of fire, water, earth and air orbiting a hand |
-| I· | Explosão Feiticeira | Sorcerous Burst | Evocação | `explosao-feiticeira` | burst of raw chaotic sorcery, multicolored sparks |
-| I· | Globos de Luz | Dancing Lights | Ilusão | `globos-de-luz` | four floating orbs of warm light dancing in the dark |
-| I· | Golpe Certeiro | True Strike | Adivinhação | `golpe-certeiro` | glowing eye of insight over a weapon, golden aim line |
-| I· | Ilusão Menor | Minor Illusion | Ilusão | `ilusao-menor` | illusory crate fading at the edges, shimmering image |
-| I· | Luz | Light | Evocação | `luz` | object glowing with bright warm light, torch-like radiance |
-| I· | Mensagem | Message | Transmutação | `mensagem` | whisper traveling as a glowing ribbon between two ears |
-| I· | Mãos Mágicas | Mage Hand | Conjuração | `maos-magicas` | spectral floating hand lifting a key |
-| I· | Orientação | Guidance | Adivinhação | `orientacao` | divine glowing hand resting on a shoulder, soft golden light |
-| I· | Poupar os Moribundos | Spare the Dying | Necromancia | `poupar-os-moribundos` | gentle glowing hand over a fallen warrior, stabilizing light |
-| I· | Prestidigitação | Prestidigitation | Transmutação | `prestidigitacao` | small magic trick, sparks, a candle lighting itself, cleaned cloth |
-| I· | Produzir Chama | Produce Flame | Conjuração | `produzir-chama` | small flame dancing in an open palm |
-| I· | Raio de Fogo | Fire Bolt | Evocação | `raio-de-fogo` | streak of fire hurled from a fingertip, ember trail |
-| I· | Raio de Gelo | Ray of Frost | Evocação | `raio-de-gelo` | frigid pale blue beam, ice crystals forming |
-| I· | Rajada Mística | Eldritch Blast | Evocação | `rajada-mistica` | crackling beam of violet eldritch energy, otherworldly sigils |
-| I· | Rajada de Veneno | Poison Spray | Necromancia | `rajada-de-veneno` | puff of toxic green mist sprayed from a palm |
-| I· | Resistência | Resistance | Abjuração | `resistencia` | small glowing shield sigil over a cloak, protective shimmer |
-| I· | Respingo Ácido | Acid Splash | Evocação | `respingo-acido` | bubble of green acid bursting, corrosive droplets splashing, smoking hiss |
-| I· | Taumaturgia | Thaumaturgy | Transmutação | `taumaturgia` | booming voice, flickering flames, trembling ground, eyes glowing |
-| I· | Toque Arrepiante | Chill Touch | Necromancia | `toque-arrepiante` | ghostly skeletal hand of pale blue frost reaching out, necrotic mist |
-| I· | Toque Chocante | Shocking Grasp | Evocação | `toque-chocante` | hand crackling with lightning, electric arcs |
-| I· | Zombaria Viciosa | Vicious Mockery | Encantamento | `zombaria-viciosa` | mocking jester mask, cutting words as purple wisps |
+| IC | Arte Druídica | Druidcraft | Transmutação | `arte-druidica` | small nature magic, budding flower blooming in a palm, falling leaves, tiny weather swirl |
+| IC | Bordão Místico | Shillelagh | Transmutação | `bordao-mistico` | wooden club wreathed in green nature magic, glowing grain |
+| IC | Centelha Estelar | Starry Wisp | Evocação | `centelha-estelar` | tiny mote of starlight shooting like a comet |
+| IC | Chama Sagrada | Sacred Flame | Evocação | `chama-sagrada` | radiant pillar of holy flame falling from above |
+| IC | Consertar | Mending | Transmutação | `consertar` | broken pottery pieces knitting back together with golden seams |
+| IC | Elementalismo | Elementalism | Transmutação | `elementalismo` | four small swirls of fire, water, earth and air orbiting a hand |
+| IC | Explosão Feiticeira | Sorcerous Burst | Evocação | `explosao-feiticeira` | burst of raw chaotic sorcery, multicolored sparks |
+| IC | Globos de Luz | Dancing Lights | Ilusão | `globos-de-luz` | four floating orbs of warm light dancing in the dark |
+| IC | Golpe Certeiro | True Strike | Adivinhação | `golpe-certeiro` | glowing eye of insight over a weapon, golden aim line |
+| IC | Ilusão Menor | Minor Illusion | Ilusão | `ilusao-menor` | illusory crate fading at the edges, shimmering image |
+| IC | Luz | Light | Evocação | `luz` | object glowing with bright warm light, torch-like radiance |
+| IC | Mensagem | Message | Transmutação | `mensagem` | whisper traveling as a glowing ribbon between two ears |
+| IC | Mãos Mágicas | Mage Hand | Conjuração | `maos-magicas` | spectral floating hand lifting a key |
+| IC | Orientação | Guidance | Adivinhação | `orientacao` | divine glowing hand resting on a shoulder, soft golden light |
+| IC | Poupar os Moribundos | Spare the Dying | Necromancia | `poupar-os-moribundos` | gentle glowing hand over a fallen warrior, stabilizing light |
+| IC | Prestidigitação | Prestidigitation | Transmutação | `prestidigitacao` | small magic trick, sparks, a candle lighting itself, cleaned cloth |
+| IC | Produzir Chama | Produce Flame | Conjuração | `produzir-chama` | small flame dancing in an open palm |
+| IC | Raio de Fogo | Fire Bolt | Evocação | `raio-de-fogo` | streak of fire hurled from a fingertip, ember trail |
+| IC | Raio de Gelo | Ray of Frost | Evocação | `raio-de-gelo` | frigid pale blue beam, ice crystals forming |
+| IC | Rajada Mística | Eldritch Blast | Evocação | `rajada-mistica` | crackling beam of violet eldritch energy, otherworldly sigils |
+| IC | Rajada de Veneno | Poison Spray | Necromancia | `rajada-de-veneno` | puff of toxic green mist sprayed from a palm |
+| IC | Resistência | Resistance | Abjuração | `resistencia` | small glowing shield sigil over a cloak, protective shimmer |
+| IC | Respingo Ácido | Acid Splash | Evocação | `respingo-acido` | bubble of green acid bursting, corrosive droplets splashing, smoking hiss |
+| IC | Taumaturgia | Thaumaturgy | Transmutação | `taumaturgia` | booming voice, flickering flames, trembling ground, eyes glowing |
+| IC | Toque Arrepiante | Chill Touch | Necromancia | `toque-arrepiante` | ghostly skeletal hand of pale blue frost reaching out, necrotic mist |
+| IC | Toque Chocante | Shocking Grasp | Evocação | `toque-chocante` | hand crackling with lightning, electric arcs |
+| IC | Zombaria Viciosa | Vicious Mockery | Encantamento | `zombaria-viciosa` | mocking jester mask, cutting words as purple wisps |
 
 ## 1º círculo
 
 | ✓ | Magia | Em inglês | Escola | Arquivo | Palavras-chave |
 |---|---|---|---|---|---|
-| I· | Alarme | Alarm | Abjuração | `alarme` | spectral bell over a doorway, ward rune glowing |
-| I· | Amizade Animal | Animal Friendship | Encantamento | `amizade-animal` | gentle hand reaching to a wild wolf, calm green aura |
-| I· | Armadura Arcana | Mage Armor | Abjuração | `armadura-arcana` | translucent blue arcane armor around a robed figure |
-| I· | Bom Fruto | Goodberry | Conjuração | `bom-fruto` | handful of glowing magical berries |
-| I· | Bruxaria | Hex | Encantamento | `bruxaria` | witch's curse sigil over a target, green-violet hex mark |
-| I· | Bênção | Bless | Encantamento | `bencao` | three glowing holy symbols blessing warriors, golden light |
-| I· | Comando | Command | Encantamento | `comando` | single shouted word of power, authoritative glowing rune |
-| I· | Compreender Idiomas | Comprehend Languages | Adivinhação | `compreender-idiomas` | ancient scroll with runes translating into light |
-| I· | Constrição | Entangle | Conjuração | `constricao` | grasping roots and vines bursting from the ground |
-| I· | Criar ou Destruir Água | Create or Destroy Water | Transmutação | `criar-ou-destruir-agua` | water pouring from nowhere into a jug, rain drops |
-| I· | Curar Ferimentos | Cure Wounds | Abjuração | `curar-ferimentos` | glowing hand healing a wound, green-gold light |
-| I· | Destruição Divina | Divine Smite | Evocação | `destruicao-divina` | sword strike exploding with radiant holy light |
-| I· | Destruição Lancinante | Searing Smite | Evocação | `destruicao-lancinante` | weapon blazing with searing fire on impact |
+| IC | Alarme | Alarm | Abjuração | `alarme` | spectral bell over a doorway, ward rune glowing |
+| IC | Amizade Animal | Animal Friendship | Encantamento | `amizade-animal` | gentle hand reaching to a wild wolf, calm green aura |
+| IC | Armadura Arcana | Mage Armor | Abjuração | `armadura-arcana` | translucent blue arcane armor around a robed figure |
+| IC | Bom Fruto | Goodberry | Conjuração | `bom-fruto` | handful of glowing magical berries |
+| IC | Bruxaria | Hex | Encantamento | `bruxaria` | witch's curse sigil over a target, green-violet hex mark |
+| IC | Bênção | Bless | Encantamento | `bencao` | three glowing holy symbols blessing warriors, golden light |
+| IC | Comando | Command | Encantamento | `comando` | single shouted word of power, authoritative glowing rune |
+| IC | Compreender Idiomas | Comprehend Languages | Adivinhação | `compreender-idiomas` | ancient scroll with runes translating into light |
+| IC | Constrição | Entangle | Conjuração | `constricao` | grasping roots and vines bursting from the ground |
+| IC | Criar ou Destruir Água | Create or Destroy Water | Transmutação | `criar-ou-destruir-agua` | water pouring from nowhere into a jug, rain drops |
+| IC | Curar Ferimentos | Cure Wounds | Abjuração | `curar-ferimentos` | glowing hand healing a wound, green-gold light |
+| IC | Destruição Divina | Divine Smite | Evocação | `destruicao-divina` | sword strike exploding with radiant holy light |
+| IC | Destruição Lancinante | Searing Smite | Evocação | `destruicao-lancinante` | weapon blazing with searing fire on impact |
 | I· | Detectar Magia | Detect Magic | Adivinhação | `detectar-magia` | glowing eye seeing magical auras around items |
 | I· | Detectar Veneno e Doença | Detect Poison and Disease | Adivinhação | `detectar-veneno-e-doenca` | eye revealing green toxic auras over food |
 | I· | Detectar o Bem e o Mal | Detect Evil and Good | Adivinhação | `detectar-o-bem-e-o-mal` | glowing eyes sensing celestial and fiendish auras |
