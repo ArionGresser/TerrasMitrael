@@ -1,5 +1,38 @@
 # Músicas por episódio e por lugar
 
+## O que está ligado (15/10/2026)
+
+As músicas foram escolhidas pelo Arion e tocam por **cena**: uma música e,
+às vezes, um ambiente por baixo. A troca acontece na folha do livro em que
+a história muda de lugar (marcadores `<Cena nome="..." />` no texto), com
+3 segundos de fade cruzado, e cada faixa dá a volta cruzando 4 segundos,
+sem corte. O código está em `src/lib/musica.ts`.
+
+| Cena | Música | Ambiente | Onde |
+|---|---|---|---|
+| masmorra | Silent Footsteps | rio de ácido (river flow) | Ep. 1 e 2, até a saída da mina |
+| estrada | Far Horizons | rio do vale (sound-effect-2443) | Ep. 2 "O vale" e começo do Ep. 3 |
+| vilarejo | Secunda | – | andando pelo vilarejo e arredores, de dia |
+| noite | Secunda | grilos e uma coruja de vez em quando | Ep. 3 chegada e telhado, Ep. 6 praça e moinho |
+| taverna | A Tavern on the Riverbank | – | taverna calma (café do Ep. 4, taverna vazia do Ep. 6) |
+| taverna-cheia | A Tavern on the Riverbank | Crowded Tavern (3 min de 1 h) | Ep. 3 "Hidromel e bêbados", Ep. 5 "A taverna" |
+| guerra-mar | medieval black flag | navio em alto-mar (4 min de 1 h) | Guerra: começo, volta dos navios e "O que a vitória custou" |
+| guerra-batalha | Battle With Magic (4 min de 1 h) | – | Guerra: ataque à frota e do desembarque dos orcs ao fim do Cap. 5 |
+| mapa | What a Wonderful World (Bardcore) | – | mapa aberto |
+| local-vernaculo | City Temple (a 1ª música, 4:15) | – | Vernáculo aberto no mapa |
+| local-razavar | Large City (a 1ª música, 2:55) | City Ambience (3 min) | Razavar |
+| local-sovara-mithr | Mystic Forest (a 1ª música, 6:40) | Twilight Forest (3 min) | Sovara Mithr |
+| local-arauto | Mage's Tower (4 min de 1 h) | – | Arauto dos Feiticeiros |
+| local-putrefados | Cultist Hideout (4:30 de 1 h) | – | Terra dos Putrefados |
+| local-askar | Orkforge | – | Terras de Askar |
+
+Os arquivos estão em `public/musicas/` e `public/sons/ambiente/`, em AAC
+(96 kbps as músicas, 64 kbps os ambientes), com o volume igualado ao tema.
+
+---
+
+## A lista de sugestões de 14/10 (antes da escolha)
+
 Lista de 14/10/2026. Complementa o `MUSICAS-NECESSARIAS.md`, que trata das
 faixas por seção (essas já existem: tema, locais, Crônicas, Livro,
 personagens e os temas de cada herói).

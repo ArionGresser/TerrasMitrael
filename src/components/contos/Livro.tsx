@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { motion, useReducedMotion } from "motion/react";
 import { tocar } from "@/lib/som";
 import { marcar } from "@/lib/conquistas";
+import { cenaDaPagina, ehCena, type Ambiente } from "@/lib/musica";
 
 /**
  * A temporada dos Contos como um livro de verdade.
@@ -25,6 +26,9 @@ import { marcar } from "@/lib/conquistas";
  *
  * O texto inteiro continua na página o tempo todo: os buscadores leem tudo, e
  * o leitor de tela recebe o episódio corrido, sem os cortes das páginas.
+ *
+ * A música acompanha a leitura: cada `<Cena>` do texto marca onde a história
+ * muda de lugar, e quando a folha que vira chega nela, a música troca junto.
  */
 
 /** Altura sobre largura de cada página. */
@@ -130,6 +134,8 @@ export function Livro({
   const [abrindo, setAbrindo] = useState(false);
   const [virada, setVirada] = useState<Virada | null>(null);
   const [parou, setParou] = useState<number | null>(null);
+  /** Em que página do texto cai cada troca de cena. */
+  const [marcas, setMarcas] = useState<{ k: number; cena: Ambiente }[]>([]);
 
   const { lado, topo, pe, tw, th } = margens(m);
 
@@ -185,6 +191,22 @@ export function Livro({
       const n = Math.max(1, Math.round((el.scrollWidth + VAO) / (tw + VAO)));
       setPaginasDeTexto(n);
       setContado(true);
+      // A coluna de cada marcador é a página dele
+      const esquerda = el.getBoundingClientRect().left;
+      const achadas: { k: number; cena: Ambiente }[] = [];
+      el.querySelectorAll<HTMLElement>("[data-cena]").forEach((s) => {
+        const cena = s.dataset.cena ?? "";
+        if (!ehCena(cena)) {
+          if (process.env.NODE_ENV !== "production") console.warn(`Cena desconhecida no texto: ${cena}`);
+          return;
+        }
+        achadas.push({ k: Math.floor((s.getBoundingClientRect().left - esquerda + 1) / (tw + VAO)), cena });
+      });
+      setMarcas((antigas) =>
+        antigas.length === achadas.length && antigas.every((a, i) => a.k === achadas[i].k && a.cena === achadas[i].cena)
+          ? antigas
+          : achadas,
+      );
     };
     contar();
     // A fonte do título chega depois e pode empurrar o texto
@@ -239,6 +261,45 @@ export function Livro({
       // Navegação privada
     }
   }, [atual, aberto, marcador]);
+
+  // ---------- A música da folha aberta ----------
+
+  // A cena vale a partir da folha em que o marcador cai. Conta a folha para
+  // onde a página está virando, e não a de onde saiu: a música muda junto
+  // com o papel, e não depois que ele assenta.
+  const destino = virada?.para ?? atual;
+  useEffect(() => {
+    if (modo !== "livro" || marcas.length === 0) return;
+    const k = destino + (m.duas ? 1 : 0) - antes.length;
+    let cena = marcas[0].cena;
+    for (const marca of marcas) if (marca.k <= k) cena = marca.cena;
+    cenaDaPagina(cena);
+  }, [modo, marcas, destino, m.duas, antes.length]);
+
+  // Lendo sem o livro, vale o último marcador que já subiu até o meio da tela
+  useEffect(() => {
+    if (modo !== "texto" || !texto) return;
+    let quadro = 0;
+    const conferir = () => {
+      quadro = 0;
+      const todas = [...document.querySelectorAll<HTMLElement>("[data-cena]")].filter(
+        (s) => !medidor.current?.contains(s) && !s.closest(".sr-only") && ehCena(s.dataset.cena ?? ""),
+      );
+      if (todas.length === 0) return;
+      let cena = todas[0].dataset.cena as Ambiente;
+      for (const s of todas) if (s.getBoundingClientRect().top < window.innerHeight * 0.6) cena = s.dataset.cena as Ambiente;
+      cenaDaPagina(cena);
+    };
+    const aoRolar = () => {
+      if (!quadro) quadro = window.requestAnimationFrame(conferir);
+    };
+    conferir();
+    window.addEventListener("scroll", aoRolar, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", aoRolar);
+      if (quadro) window.cancelAnimationFrame(quadro);
+    };
+  }, [modo, texto]);
 
   // ---------- Virar ----------
 

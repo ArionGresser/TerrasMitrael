@@ -30,6 +30,16 @@ export function SeparadorDeTexto() {
   return <Ornamento className="my-9" />;
 }
 
+/**
+ * Onde a história muda de lugar, para a música mudar junto: um marcador
+ * invisível, sem altura, que o livro procura nas páginas (ver Livro.tsx e
+ * as cenas em src/lib/musica.ts). Vai logo depois do título da parte, para
+ * a troca cair na folha em que a parte começa.
+ */
+export function Cena({ nome }: { nome: string }) {
+  return <span data-cena={nome} aria-hidden className="block h-0 overflow-hidden" />;
+}
+
 export function useMDXComponents(componentes: MDXComponents): MDXComponents {
   return {
     h2: TituloDeCapitulo,
@@ -61,6 +71,7 @@ export function useMDXComponents(componentes: MDXComponents): MDXComponents {
     hr: SeparadorDeTexto,
     // Disponível dentro dos arquivos .mdx sem precisar de import
     Ilustracao,
+    Cena,
     a: ({ href, children }) => (
       <a
         href={href}

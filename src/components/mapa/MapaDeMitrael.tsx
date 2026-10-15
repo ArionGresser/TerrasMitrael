@@ -8,6 +8,7 @@ import { LARGURA_BASE, ALTURA_BASE } from "@/lib/regioes-do-mapa";
 import { tocar, somDeZoom } from "@/lib/som";
 import { Ornamento } from "@/components/ui/Titulo";
 import { marcar } from "@/lib/conquistas";
+import { cenaDaPagina, ehCena } from "@/lib/musica";
 
 /**
  * O mapa de Mitrael como um mundo para percorrer, no espírito do mapa do
@@ -339,6 +340,16 @@ export function MapaDeMitrael({
     if (aberto) p.set(aberto.tipo, aberto.chave);
     const consulta = p.toString();
     window.history.replaceState(null, "", consulta ? `?${consulta}` : window.location.pathname);
+  }, [aberto]);
+
+  // ---------- A música do lugar aberto ----------
+  // Cada lugar com faixa própria toca a dele enquanto está aberto; fechou,
+  // volta a música do mapa. Uma região com o mesmo nome de um lugar (Askar)
+  // toca a mesma.
+
+  useEffect(() => {
+    const cena = aberto ? `local-${aberto.chave}` : "";
+    cenaDaPagina(ehCena(cena) ? cena : null);
   }, [aberto]);
 
   // ---------- Arrastar e pinçar ----------

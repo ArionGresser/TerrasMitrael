@@ -2,20 +2,21 @@
 
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { ambienteDaRota, tocarAmbiente, abafarMusica, calarMusica } from "@/lib/musica";
+import { tocarRota, abafarMusica, calarMusica } from "@/lib/musica";
 
 /**
  * Liga a música de fundo à seção em que a pessoa está.
  *
  * Não desenha nada na tela. Fica no layout justamente para sobreviver à
  * troca de página: o site troca de tela sem recarregar, então a faixa
- * continua tocando de Locais para Locais e só muda ao mudar de seção.
+ * continua tocando de Locais para Locais e só muda ao mudar de seção (ou
+ * de cena, quando a página pede uma: ver `cenaDaPagina`).
  */
 export function AmbienteSonoro() {
   const caminho = usePathname();
 
   useEffect(() => {
-    tocarAmbiente(ambienteDaRota(caminho));
+    tocarRota(caminho);
     // Quem sai da página com o vídeo tocando não dispara "pause": a música
     // volta aqui, se nenhum vídeo da tela nova estiver tocando
     if (!algumVideoTocando()) calarMusica(false);
