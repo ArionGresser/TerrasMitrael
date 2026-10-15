@@ -89,6 +89,7 @@ export default async function PaginaMagia({ params }: Props) {
                   <CartaDaMagia
                     magia={magia}
                     arte={ilustracoesDaMagia(magia.slug)[0] ?? iconeDaMagia(magia.slug)}
+                    encaixe={ilustracoesDaMagia(magia.slug)[0] ? "cobrir" : "inteira"}
                   />
                 </div>
                 <div className="mt-5 text-center">

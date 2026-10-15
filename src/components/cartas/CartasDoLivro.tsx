@@ -10,13 +10,26 @@ import { COR_DA_RARIDADE } from "@/lib/cartas";
  * de lá quando alguém toca no cartão.
  */
 
-export function CartaDaMagia({ magia, arte }: { magia: Magia; arte?: string }) {
+/**
+ * A arte da carta (3:2) preenche a janela; sem ela, vai o ícone quadrado
+ * inteiro, com ele mesmo desfocado atrás.
+ */
+export function CartaDaMagia({
+  magia,
+  arte,
+  encaixe = "inteira",
+}: {
+  magia: Magia;
+  arte?: string;
+  encaixe?: "inteira" | "cobrir";
+}) {
   const marcas = [magia.concentracao && "Concentração", magia.ritual && "Ritual"].filter(Boolean).join(" · ");
   return (
     <Carta
       tipo="magia"
       nome={magia.nome}
       arte={arte}
+      encaixe={encaixe}
       linhaDeTipo={rotuloDaMagia(magia)}
       medalhao={magia.nivel === 0 ? "T" : magia.nivel}
       rodape={marcas || undefined}

@@ -17,6 +17,7 @@ from pathlib import Path
 
 import cartas
 import historias
+import mapa
 
 RAIZ = Path(__file__).resolve().parents[2]
 AQUI = Path(__file__).resolve().parent
@@ -259,7 +260,6 @@ def artes_das_magias():
         circulo = "truque" if m["nivel"] == 0 else f"{m['nivel']}º círculo"
         nome = f"{m['nome']} ({circulo})"
         chave = chaves[m["original"]]
-        quem = g.QUEM.get(m["classes"][0], "a spellcaster") if m["classes"] else "a spellcaster"
         icones.append(
             arte(
                 "magias/icones",
@@ -269,13 +269,14 @@ def artes_das_magias():
                 g.ESTILO_ICONE.format(chave=chave, cor=g.COR[m["escola"]]),
             )
         )
+        # A arte da carta, que também abre a página da magia
         cenas.append(
             arte(
                 "magias/ilustracoes",
                 f"{m['slug']}-1",
                 nome,
-                "largo",
-                g.ESTILO_CENA.format(quem=quem, nome=m["original"], chave=chave),
+                "carta-larga",
+                f"the spell {m['original']}: {chave}, with a {g.COR[m['escola']]} magical glow",
             )
         )
     return icones, cenas
@@ -383,7 +384,7 @@ def catalogo():
         a["pronta"] = existe(a["secao"], a["slug"])
     secoes = [
         ("magias-icones", "Magias: ícones", icones),
-        ("magias-ilustracoes", "Magias: ilustrações", cenas),
+        ("magias-ilustracoes", "Magias: arte da carta (3:2)", cenas),
     ] + secoes
 
     # As histórias (Saga, Guerra, locais): o nome de entrega é o próprio
@@ -399,6 +400,14 @@ def catalogo():
             a["contexto"] = c["contexto"]
             artes.append(a)
         secoes.append((chave, titulo, artes))
+
+    # O mapa novo: os prompts já vêm inteiros, com o estilo próprio de mapa
+    artes = []
+    for slug, nome, formato, onde, prompt in mapa.ARTES:
+        a = arte(mapa.PASTA, slug, nome, formato, prompt)
+        a.update(entrega=slug, pronta=existe(mapa.PASTA, slug), onde=onde, cru=True)
+        artes.append(a)
+    secoes.append(("mapa-novo", "Mapa novo", artes))
 
     entregas = Counter(a["entrega"] for _, _, artes in secoes for a in artes)
     repetidas = [e for e, n in entregas.items() if n > 1]

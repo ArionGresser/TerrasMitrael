@@ -8,12 +8,15 @@ O nome do arquivo diz o que ele é:
     bola-de-fogo.png     → ícone da magia: 512 px, mais a miniatura de 128 px
                             que a lista do Grimório usa (um número na frente,
                             como 106-bola-de-fogo.png, é ignorado)
-    bola-de-fogo-1.png   → ilustração de uso da magia (até -3): 1600 × 900
+    bola-de-fogo-1.png   → a arte da carta e da página da magia (até -3): 1536 × 1024 (3:2)
     os nomes do GUIA-DE-ARTES.html (espécies, classes, itens, monstros...):
         16:9      → 1280 × 720, mais uma miniatura quadrada de 160 px
         cena      → 1600 × 900 (Saga, Guerra e locais), mais a miniatura
         carta     → 1400 de altura em WebP, com a transparência (molduras das cartas)
         quadrada  → 512 px, mais a miniatura de 160 px
+        mapa novo → só uma prévia de 2048 px, que marca a arte como pronta no
+                    guia: o original, em resolução cheia, fica na pasta de
+                    entrega, de onde sai a montagem do mapa em ladrilhos
 
 Os originais ficam onde estão; o site recebe a versão em WebP, bem mais leve.
 Importar de novo um arquivo com o mesmo nome substitui a versão antiga.
@@ -112,6 +115,14 @@ def importar(pasta):
             salvar(imagem, ICONES / f"{nome}.webp", 512, 512, 82)
             salvar(imagem, MINIATURAS / f"{nome}.webp", 128, 128, 80)
             icones.append(nome)
+        elif nome in GUIA and GUIA[nome]["secao"] == "mapa/novo":
+            previa = original.convert("RGBA")
+            previa.thumbnail((2048, 2048), Image.LANCZOS)
+            destino = IMAGENS / "mapa/novo" / f"{nome}.webp"
+            destino.parent.mkdir(parents=True, exist_ok=True)
+            previa.save(destino, "WEBP", quality=80, method=6)
+            avisos.append(f"{arquivo.name}: mapa ({w}×{h}); o original fica na pasta para a montagem")
+            guia.append(nome)
         elif nome in GUIA and GUIA[nome]["formato"] == "carta":
             salvar_carta(original, IMAGENS / GUIA[nome]["secao"] / f"{GUIA[nome]['slug']}.png", avisos, arquivo.name)
             guia.append(nome)
@@ -131,9 +142,9 @@ def importar(pasta):
             salvar(imagem, pasta / "mini" / f"{a['slug']}.webp", 160, 160, 80)
             guia.append(nome)
         elif cena and cena.group(1) in MAGIAS:
-            if w / h < 1.5:
-                avisos.append(f"{arquivo.name}: ilustração não é larga ({w}×{h}), cortei para 16:9")
-            salvar(imagem, ILUSTRACOES / f"{nome}.webp", 1600, 900, 80)
+            if abs(w / h - 1.5) > 0.08:
+                avisos.append(f"{arquivo.name}: a arte da carta deveria ser 3:2 ({w}×{h}), cortei o centro")
+            salvar(imagem, ILUSTRACOES / f"{nome}.webp", 1536, 1024, 80)
             ilustracoes.append(nome)
         else:
             desconhecidos.append(arquivo.name)

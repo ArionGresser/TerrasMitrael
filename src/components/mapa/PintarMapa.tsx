@@ -29,6 +29,7 @@ export const TERRENOS = [
   { chave: "maldita", nome: "Terra maldita", cor: "#5a3a4a", ingles: "cursed, blighted wasteland with dead trees" },
   { chave: "vulcao", nome: "Vulcânica", cor: "#b5402a", ingles: "volcanic land, ash fields and lava" },
   { chave: "estrada", nome: "Estrada", cor: "#d9b38c", ingles: "roads and trade routes" },
+  { chave: "muro", nome: "Muro", cor: "#e64980", ingles: "a colossal fortified stone wall with watchtowers" },
 ] as const;
 
 export const MARCAS = [

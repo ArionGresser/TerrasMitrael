@@ -67,7 +67,7 @@ export function IlustracoesDaMagia({
 }) {
   if (ilustracoes.length === 0) {
     return (
-      <div className="border-dourado-600/30 bg-pergaminho-200/40 flex aspect-[16/9] flex-col items-center justify-center gap-3 rounded-sm border border-dashed px-6 text-center">
+      <div className="border-dourado-600/30 bg-pergaminho-200/40 flex aspect-[3/2] flex-col items-center justify-center gap-3 rounded-sm border border-dashed px-6 text-center">
         <Selo variante="marca" className="size-14 opacity-20" />
         <p className="text-tinta-500 text-sm italic">
           A ilustração desta magia ainda está sendo pintada.
@@ -93,7 +93,7 @@ export function IlustracoesDaMagia({
 
 function Quadro({ src, alt, grande = false }: { src: string; alt: string; grande?: boolean }) {
   return (
-    <figure className="border-dourado-600/40 relative aspect-[16/9] overflow-hidden rounded-sm border shadow-[0_8px_20px_-10px_rgba(0,0,0,0.7)]">
+    <figure className="border-dourado-600/40 relative aspect-[3/2] overflow-hidden rounded-sm border shadow-[0_8px_20px_-10px_rgba(0,0,0,0.7)]">
       <Image
         src={src}
         alt={alt}

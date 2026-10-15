@@ -16,6 +16,7 @@ from pathlib import Path
 
 import cartas
 import historias
+import mapa
 from catalogo import catalogo
 
 SAIDA = Path(__file__).resolve().parent / "GUIA-DE-ARTES.html"
@@ -167,6 +168,7 @@ PAGINA = """<!doctype html>
   <p class="legenda-cores"><span class="c-verde">tudo no site</span><span class="c-ambar">faltam algumas</span><span class="c-vermelho">nenhuma ainda</span></p>
 
   <div class="referencias" id="referencias" hidden></div>
+  <div class="passos" id="explica" hidden></div>
 
   <div class="filtros">
     <input type="search" id="busca" placeholder="Procurar pelo nome, em português ou pelo arquivo" aria-label="Procurar">
@@ -203,6 +205,17 @@ const SECOES = __DADOS__;
 const REFS = __REFS__;
 const PACOTES = __PACOTES__;
 const CHAVE = "terras-mitrael-guia-de-artes";
+const ROTULO = {
+  quadrado: "quadrada", carta: "carta em pé (5:7)", "carta-larga": "3:2 deitada (carta)",
+  mapa: "mapa 3:2, fundo magenta", textura: "quadrada, sem emenda",
+  transparente: "3:2, fundo transparente", "transparente-quadrado": "quadrada, fundo transparente",
+};
+const PLANILHA = {
+  quadrado: "quadrada 1024x1024", carta: "em pe 1024x1536, fundo transparente",
+  "carta-larga": "deitada 1536x1024 (3:2)", mapa: "deitada 1536x1024, fundo magenta #FF00FF",
+  textura: "quadrada 1024x1024, sem emenda", transparente: "deitada 1536x1024, fundo transparente",
+  "transparente-quadrado": "quadrada 1024x1024, fundo transparente",
+};
 
 function lerMarcas() {
   try { return JSON.parse(localStorage.getItem(CHAVE)) || {}; } catch { return {}; }
@@ -288,6 +301,9 @@ function abas() {
 
 function lista() {
   const secao = SECOES.find(s => s.chave === atual);
+  const explica = document.getElementById("explica");
+  explica.innerHTML = secao.explica || "";
+  explica.hidden = !secao.explica;
   const busca = normalizar(document.getElementById("busca").value.trim());
   const mostrar = document.getElementById("mostrar").value;
   const ul = document.getElementById("lista");
@@ -306,7 +322,7 @@ function lista() {
     li.innerHTML = `
       <div class="topo">
         <label for="${id}"><input type="checkbox" id="${id}"> <span></span></label>
-        <span class="selo">${a.formato === "quadrado" ? "quadrada" : a.formato === "carta" ? "carta em pé (5:7)" : "16:9 deitada"}</span>
+        <span class="selo">${ROTULO[a.formato] || "16:9 deitada"}</span>
         ${a.pronta ? '<span class="selo site">no site</span>' : enviada(a) ? '<span class="selo aguardando">enviada, aguardando</span>' : ""}
       </div>
       <div class="arquivo"><code></code><button type="button" class="copiar">Copiar nome</button></div>
@@ -377,7 +393,7 @@ function baixar() {
   const linhas = [["numero", "arquivo", "nome", "proporcao", "prompt"].concat(comAnexos ? ["referencias"] : [])];
   lote.forEach((a, i) => linhas.push([
     i + 1, a.entrega + ".png", a.nome,
-    a.formato === "quadrado" ? "quadrada 1024x1024" : a.formato === "carta" ? "em pe 1024x1536, fundo transparente" : "deitada 1536x1024", a.prompt,
+    PLANILHA[a.formato] || "deitada 1536x1024", a.prompt,
   ].concat(comAnexos ? [(a.anexar || []).join(", ")] : [])));
   // O BOM no começo faz o Excel e o Numbers lerem os acentos certo
   const csv = "\\uFEFF" + linhas.map(l => l.map(celula).join(",")).join("\\r\\n");
@@ -469,8 +485,9 @@ CONTEXTO = {
         "of the icon set: a glowing magical emblem, painterly, on a dark vignette"
     ),
     "magias-ilustracoes": (
-        "the illustration at the top of the page of the spell \"{nome}\", showing the spell "
-        "being cast and its effect clearly"
+        "the art of the spell \"{nome}\". It fills the wide art window of the spell's printable "
+        "card and also opens the spell page, so the magical effect must be the clear hero of the "
+        "image, readable at card size"
     ),
     "livro": "the cover card of the \"{nome}\" chapter of the rules book on the website",
     "especies": "the portrait at the top of the page of the D&D species \"{nome}\"",
@@ -525,6 +542,11 @@ FORMATO = {
         "Landscape, 1536 x 1024 px. It is cropped to 16:9, so keep the faces and the main "
         "action away from the top and bottom edges."
     ),
+    "carta-larga": (
+        "Landscape 3:2, 1536 x 1024 px, shown whole inside the art window of a card. An ornate "
+        "frame covers a little of every edge, so keep the subject inside the central 70%, and "
+        "let a dark, atmospheric background reach every edge."
+    ),
     "carta": (
         "Portrait, 1024 x 1536 px, PNG with a transparent background. The card itself is 5:7, "
         "centered, with transparent space around it. It will be printed at 63 x 88 mm, so the "
@@ -574,6 +596,8 @@ EVITAR = (
 
 
 def completo(secao, a):
+    if a.get("cru"):
+        return a["prompt"]
     nome = a["nome"].split(" (")[0]
     papel = (
         "the cover painting at the top"
@@ -618,6 +642,10 @@ def completo(secao, a):
     return "\n".join(linhas)
 
 
+# O texto que abre uma aba, quando ela pede mais que copiar e colar
+EXPLICA = {"mapa-novo": mapa.EXPLICA}
+
+
 def preparar_pacotes(secoes):
     """Copia, para uma pasta por aba, as referências que vão junto com a
     planilha, para dar para arrastar tudo de uma vez para o ChatGPT."""
@@ -641,6 +669,7 @@ def gerar():
         {
             "chave": chave,
             "titulo": titulo,
+            "explica": EXPLICA.get(chave, ""),
             "artes": [
                 {
                     **{k: a[k] for k in ("nome", "entrega", "formato", "pronta")},
