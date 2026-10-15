@@ -3,7 +3,7 @@
 Gerada por `scripts/magias/arte/gerar-lista.py`. Não edite à mão: as palavras-chave
 ficam em `palavras-chave.txt`, e o resto sai do grimório.
 
-**Ícones prontos:** 339 de 339 · **Ilustrações prontas:** 111 de 339
+**Ícones prontos:** 339 de 339 · **Ilustrações prontas:** 339 de 339
 
 ## Como entregar uma arte
 
@@ -171,268 +171,268 @@ medieval fantasy illustration of <a wizard, a cleric...> casting the spell <nome
 | IC | Flecha Ácida | Acid Arrow | Evocação | `flecha-acida` | shimmering green arrow of acid, corrosive splash |
 | IC | Força Fantasmagórica | Phantasmal Force | Ilusão | `forca-fantasmagorica` | terrifying phantasm only one mind can see |
 | IC | Imagem Espelhada | Mirror Image | Ilusão | `imagem-espelhada` | three illusory duplicates of a mage |
-| I· | Imobilizar Pessoa | Hold Person | Encantamento | `imobilizar-pessoa` | person frozen mid-step by glowing chains of paralysis |
-| I· | Invisibilidade | Invisibility | Ilusão | `invisibilidade` | figure fading into invisibility, translucent silhouette |
-| I· | Levitação | Levitate | Transmutação | `levitacao` | figure floating in the air |
-| I· | Localizar Animais ou Plantas | Locate Animals or Plants | Adivinhação | `localizar-animais-ou-plantas` | glowing trail leading to a rare flower and a deer |
-| I· | Localizar Objeto | Locate Object | Adivinhação | `localizar-objeto` | glowing thread pointing to a lost object |
-| I· | Lufada de Vento | Gust of Wind | Evocação | `lufada-de-vento` | strong line of wind blowing creatures back |
-| I· | Lâmina Flamejante | Flame Blade | Evocação | `lamina-flamejante` | scimitar of pure fire in a druid's hand |
-| I· | Mensageiro Animal | Animal Messenger | Encantamento | `mensageiro-animal` | small bird carrying a rolled message |
-| I· | Nublar | Blur | Ilusão | `nublar` | figure's outline blurred and wavering |
-| I· | Oração Curativa | Prayer of Healing | Abjuração | `oracao-curativa` | priest praying, healing light spreading to allies |
-| I· | Passo Nebuloso | Misty Step | Conjuração | `passo-nebuloso` | silvery mist teleport, figure vanishing and reappearing |
-| I· | Passos sem Pegadas | Pass without Trace | Abjuração | `passos-sem-pegadas` | shadowy footprints vanishing, stealthy party in forest |
-| I· | Patas de Aranha | Spider Climb | Transmutação | `patas-de-aranha` | person walking on a wall like a spider |
-| I· | Pele de Árvore | Barkskin | Transmutação | `pele-de-arvore` | skin turning into tree bark armor |
-| I· | Proteção contra Veneno | Protection from Poison | Abjuração | `protecao-contra-veneno` | protective aura neutralizing green poison |
-| I· | Raio Ardente | Scorching Ray | Evocação | `raio-ardente` | three rays of fire |
-| I· | Raio Lunar | Moonbeam | Evocação | `raio-lunar` | silver beam of moonlight from the sky |
-| I· | Raio do Enfraquecimento | Ray of Enfeeblement | Necromancia | `raio-do-enfraquecimento` | black ray draining strength from a warrior |
-| I· | Repouso Tranquilo | Gentle Repose | Necromancia | `repouso-tranquilo` | preserved body with protective light, frozen time |
-| I· | Restauração Menor | Lesser Restoration | Abjuração | `restauracao-menor` | gentle light cleansing poison from a body |
-| I· | Silêncio | Silence | Ilusão | `silencio` | sphere of absolute silence, muted sound waves |
-| I· | Sopro de Dragão | Dragon's Breath | Transmutação | `sopro-de-dragao` | caster exhaling a dragon-like cone of fire |
-| I· | Sugestão | Suggestion | Encantamento | `sugestao` | hypnotic suggestion, spiral eyes, whispered command |
-| I· | Teia | Web | Conjuração | `teia` | thick sticky spider webs filling a corridor |
-| I· | Tranca Arcana | Arcane Lock | Abjuração | `tranca-arcana` | door sealed by a glowing arcane lock rune |
-| I· | Truque de Corda | Rope Trick | Transmutação | `truque-de-corda` | rope rising into the air to a hidden portal |
-| I· | Ver o Invisível | See Invisibility | Adivinhação | `ver-o-invisivel` | eye revealing an invisible creature's outline |
-| I· | Visão no Escuro | Darkvision | Transmutação | `visao-no-escuro` | glowing eyes seeing in the dark, grey-green vision |
-| I· | Vínculo Protetor | Warding Bond | Abjuração | `vinculo-protetor` | glowing bond linking two allies, shared protection |
-| I· | Zona da Verdade | Zone of Truth | Encantamento | `zona-da-verdade` | circle of truth light, honest faces |
+| IC | Imobilizar Pessoa | Hold Person | Encantamento | `imobilizar-pessoa` | person frozen mid-step by glowing chains of paralysis |
+| IC | Invisibilidade | Invisibility | Ilusão | `invisibilidade` | figure fading into invisibility, translucent silhouette |
+| IC | Levitação | Levitate | Transmutação | `levitacao` | figure floating in the air |
+| IC | Localizar Animais ou Plantas | Locate Animals or Plants | Adivinhação | `localizar-animais-ou-plantas` | glowing trail leading to a rare flower and a deer |
+| IC | Localizar Objeto | Locate Object | Adivinhação | `localizar-objeto` | glowing thread pointing to a lost object |
+| IC | Lufada de Vento | Gust of Wind | Evocação | `lufada-de-vento` | strong line of wind blowing creatures back |
+| IC | Lâmina Flamejante | Flame Blade | Evocação | `lamina-flamejante` | scimitar of pure fire in a druid's hand |
+| IC | Mensageiro Animal | Animal Messenger | Encantamento | `mensageiro-animal` | small bird carrying a rolled message |
+| IC | Nublar | Blur | Ilusão | `nublar` | figure's outline blurred and wavering |
+| IC | Oração Curativa | Prayer of Healing | Abjuração | `oracao-curativa` | priest praying, healing light spreading to allies |
+| IC | Passo Nebuloso | Misty Step | Conjuração | `passo-nebuloso` | silvery mist teleport, figure vanishing and reappearing |
+| IC | Passos sem Pegadas | Pass without Trace | Abjuração | `passos-sem-pegadas` | shadowy footprints vanishing, stealthy party in forest |
+| IC | Patas de Aranha | Spider Climb | Transmutação | `patas-de-aranha` | person walking on a wall like a spider |
+| IC | Pele de Árvore | Barkskin | Transmutação | `pele-de-arvore` | skin turning into tree bark armor |
+| IC | Proteção contra Veneno | Protection from Poison | Abjuração | `protecao-contra-veneno` | protective aura neutralizing green poison |
+| IC | Raio Ardente | Scorching Ray | Evocação | `raio-ardente` | three rays of fire |
+| IC | Raio Lunar | Moonbeam | Evocação | `raio-lunar` | silver beam of moonlight from the sky |
+| IC | Raio do Enfraquecimento | Ray of Enfeeblement | Necromancia | `raio-do-enfraquecimento` | black ray draining strength from a warrior |
+| IC | Repouso Tranquilo | Gentle Repose | Necromancia | `repouso-tranquilo` | preserved body with protective light, frozen time |
+| IC | Restauração Menor | Lesser Restoration | Abjuração | `restauracao-menor` | gentle light cleansing poison from a body |
+| IC | Silêncio | Silence | Ilusão | `silencio` | sphere of absolute silence, muted sound waves |
+| IC | Sopro de Dragão | Dragon's Breath | Transmutação | `sopro-de-dragao` | caster exhaling a dragon-like cone of fire |
+| IC | Sugestão | Suggestion | Encantamento | `sugestao` | hypnotic suggestion, spiral eyes, whispered command |
+| IC | Teia | Web | Conjuração | `teia` | thick sticky spider webs filling a corridor |
+| IC | Tranca Arcana | Arcane Lock | Abjuração | `tranca-arcana` | door sealed by a glowing arcane lock rune |
+| IC | Truque de Corda | Rope Trick | Transmutação | `truque-de-corda` | rope rising into the air to a hidden portal |
+| IC | Ver o Invisível | See Invisibility | Adivinhação | `ver-o-invisivel` | eye revealing an invisible creature's outline |
+| IC | Visão no Escuro | Darkvision | Transmutação | `visao-no-escuro` | glowing eyes seeing in the dark, grey-green vision |
+| IC | Vínculo Protetor | Warding Bond | Abjuração | `vinculo-protetor` | glowing bond linking two allies, shared protection |
+| IC | Zona da Verdade | Zone of Truth | Encantamento | `zona-da-verdade` | circle of truth light, honest faces |
 
 ## 3º círculo
 
 | ✓ | Magia | Em inglês | Escola | Arquivo | Palavras-chave |
 |---|---|---|---|---|---|
-| I· | Ampliar Plantas | Plant Growth | Transmutação | `ampliar-plantas` | overgrown thick vegetation, fertile fields |
-| I· | Andar na Água | Water Walk | Transmutação | `andar-na-agua` | figure walking on water surface |
-| I· | Animar os Mortos | Animate Dead | Necromancia | `animar-os-mortos` | skeletons rising from graves, necromantic green light |
-| I· | Bola de Fogo | Fireball | Evocação | `bola-de-fogo` | bead of fire blossoming into a huge explosion |
-| I· | Clarividência | Clairvoyance | Adivinhação | `clarividencia` | floating invisible sensor eye watching a distant room |
-| I· | Conjurar Animais | Conjure Animals | Conjuração | `conjurar-animais` | spectral pack of wolves summoned |
-| I· | Contramágica | Counterspell | Abjuração | `contramagica` | spell unraveling into broken runes, mage blocking |
-| I· | Convocar Relâmpagos | Call Lightning | Conjuração | `convocar-relampagos` | storm cloud calling a lightning bolt down |
-| I· | Corcel Fantasma | Phantom Steed | Ilusão | `corcel-fantasma` | ghostly quasi-real horse galloping |
-| I· | Criar Alimentos e Água | Create Food and Water | Conjuração | `criar-alimentos-e-agua` | bountiful table of bread and water appearing |
-| I· | Círculo Mágico | Magic Circle | Abjuração | `circulo-magico` | inscribed magic circle trapping a demon |
-| I· | Dificultar Detecção | Nondetection | Abjuração | `dificultar-deteccao` | figure hidden from a scrying eye, veil |
-| I· | Dissipar Magia | Dispel Magic | Abjuração | `dissipar-magia` | magical runes dissolving into sparks |
-| I· | Enviar Mensagem | Sending | Adivinhação | `enviar-mensagem` | message sent across distance as a beam of light |
-| I· | Espíritos Guardiões | Spirit Guardians | Conjuração | `espiritos-guardioes` | spectral angelic spirits circling a cleric |
-| I· | Falar com as Plantas | Speak with Plants | Transmutação | `falar-com-as-plantas` | person talking to an ancient tree with a face |
-| I· | Falar com os Mortos | Speak with Dead | Necromancia | `falar-com-os-mortos` | corpse answering questions, ghostly mouth |
-| I· | Forma Gasosa | Gaseous Form | Transmutação | `forma-gasosa` | body turning into misty vapor |
-| I· | Fundir-se às Rochas | Meld into Stone | Transmutação | `fundir-se-as-rochas` | person merging into a stone wall |
-| I· | Glifo de Proteção | Glyph of Warding | Abjuração | `glifo-de-protecao` | glowing protective glyph inscribed on a floor |
-| I· | Idiomas | Tongues | Adivinhação | `idiomas` | magical tongue speaking all languages, script glyphs |
-| I· | Imagem Maior | Major Image | Ilusão | `imagem-maior` | grand illusion of a castle, shimmering |
-| I· | Lentidão | Slow | Transmutação | `lentidao` | figures moving in slow motion, hourglass sigil |
-| I· | Luz do Dia | Daylight | Evocação | `luz-do-dia` | sphere of bright daylight in darkness |
-| I· | Medo | Fear | Ilusão | `medo` | terrified figure fleeing a looming horrific shadow |
-| I· | Muralha de Vento | Wind Wall | Evocação | `muralha-de-vento` | wall of strong wind blowing arrows away |
-| I· | Nevasca | Sleet Storm | Conjuração | `nevasca` | freezing sleet storm, icy ground |
-| I· | Névoa Fétida | Stinking Cloud | Conjuração | `nevoa-fetida` | sickly yellow-green cloud of nauseating gas |
-| I· | Padrão Hipnótico | Hypnotic Pattern | Ilusão | `padrao-hipnotico` | twisting rainbow hypnotic pattern in the air |
-| I· | Palavra Curativa em Massa | Mass Healing Word | Abjuração | `palavra-curativa-em-massa` | words of healing radiating to many allies |
-| I· | Pequena Cabana | Tiny Hut | Evocação | `pequena-cabana` | small translucent dome of force sheltering adventurers at night |
-| I· | Piscar | Blink | Transmutação | `piscar` | figure flickering between planes, ethereal shimmer |
-| I· | Proteção contra Energia | Protection from Energy | Abjuração | `protecao-contra-energia` | shield of resistance against fire, cold, lightning |
-| I· | Relâmpago | Lightning Bolt | Evocação | `relampago` | line of lightning blasting forward |
-| I· | Remover Maldição | Remove Curse | Abjuração | `remover-maldicao` | curse chains breaking with holy light |
-| I· | Respirar na Água | Water Breathing | Transmutação | `respirar-na-agua` | adventurer breathing underwater with bubbles |
-| I· | Revivificar | Revivify | Necromancia | `revivificar` | fallen hero revived by a diamond's light |
-| I· | Rogar Maldição | Bestow Curse | Necromancia | `rogar-maldicao` | dark curse sigil branded onto a victim |
-| I· | Sinal de Esperança | Beacon of Hope | Abjuração | `sinal-de-esperanca` | radiant beacon of hope over allies |
-| I· | Toque Vampírico | Vampiric Touch | Necromancia | `toque-vampirico` | shadowy hand draining life energy |
-| I· | Velocidade | Haste | Transmutação | `velocidade` | figure moving at blinding speed, speed lines |
-| I· | Voo | Fly | Transmutação | `voo` | figure flying through the sky |
+| IC | Ampliar Plantas | Plant Growth | Transmutação | `ampliar-plantas` | overgrown thick vegetation, fertile fields |
+| IC | Andar na Água | Water Walk | Transmutação | `andar-na-agua` | figure walking on water surface |
+| IC | Animar os Mortos | Animate Dead | Necromancia | `animar-os-mortos` | skeletons rising from graves, necromantic green light |
+| IC | Bola de Fogo | Fireball | Evocação | `bola-de-fogo` | bead of fire blossoming into a huge explosion |
+| IC | Clarividência | Clairvoyance | Adivinhação | `clarividencia` | floating invisible sensor eye watching a distant room |
+| IC | Conjurar Animais | Conjure Animals | Conjuração | `conjurar-animais` | spectral pack of wolves summoned |
+| IC | Contramágica | Counterspell | Abjuração | `contramagica` | spell unraveling into broken runes, mage blocking |
+| IC | Convocar Relâmpagos | Call Lightning | Conjuração | `convocar-relampagos` | storm cloud calling a lightning bolt down |
+| IC | Corcel Fantasma | Phantom Steed | Ilusão | `corcel-fantasma` | ghostly quasi-real horse galloping |
+| IC | Criar Alimentos e Água | Create Food and Water | Conjuração | `criar-alimentos-e-agua` | bountiful table of bread and water appearing |
+| IC | Círculo Mágico | Magic Circle | Abjuração | `circulo-magico` | inscribed magic circle trapping a demon |
+| IC | Dificultar Detecção | Nondetection | Abjuração | `dificultar-deteccao` | figure hidden from a scrying eye, veil |
+| IC | Dissipar Magia | Dispel Magic | Abjuração | `dissipar-magia` | magical runes dissolving into sparks |
+| IC | Enviar Mensagem | Sending | Adivinhação | `enviar-mensagem` | message sent across distance as a beam of light |
+| IC | Espíritos Guardiões | Spirit Guardians | Conjuração | `espiritos-guardioes` | spectral angelic spirits circling a cleric |
+| IC | Falar com as Plantas | Speak with Plants | Transmutação | `falar-com-as-plantas` | person talking to an ancient tree with a face |
+| IC | Falar com os Mortos | Speak with Dead | Necromancia | `falar-com-os-mortos` | corpse answering questions, ghostly mouth |
+| IC | Forma Gasosa | Gaseous Form | Transmutação | `forma-gasosa` | body turning into misty vapor |
+| IC | Fundir-se às Rochas | Meld into Stone | Transmutação | `fundir-se-as-rochas` | person merging into a stone wall |
+| IC | Glifo de Proteção | Glyph of Warding | Abjuração | `glifo-de-protecao` | glowing protective glyph inscribed on a floor |
+| IC | Idiomas | Tongues | Adivinhação | `idiomas` | magical tongue speaking all languages, script glyphs |
+| IC | Imagem Maior | Major Image | Ilusão | `imagem-maior` | grand illusion of a castle, shimmering |
+| IC | Lentidão | Slow | Transmutação | `lentidao` | figures moving in slow motion, hourglass sigil |
+| IC | Luz do Dia | Daylight | Evocação | `luz-do-dia` | sphere of bright daylight in darkness |
+| IC | Medo | Fear | Ilusão | `medo` | terrified figure fleeing a looming horrific shadow |
+| IC | Muralha de Vento | Wind Wall | Evocação | `muralha-de-vento` | wall of strong wind blowing arrows away |
+| IC | Nevasca | Sleet Storm | Conjuração | `nevasca` | freezing sleet storm, icy ground |
+| IC | Névoa Fétida | Stinking Cloud | Conjuração | `nevoa-fetida` | sickly yellow-green cloud of nauseating gas |
+| IC | Padrão Hipnótico | Hypnotic Pattern | Ilusão | `padrao-hipnotico` | twisting rainbow hypnotic pattern in the air |
+| IC | Palavra Curativa em Massa | Mass Healing Word | Abjuração | `palavra-curativa-em-massa` | words of healing radiating to many allies |
+| IC | Pequena Cabana | Tiny Hut | Evocação | `pequena-cabana` | small translucent dome of force sheltering adventurers at night |
+| IC | Piscar | Blink | Transmutação | `piscar` | figure flickering between planes, ethereal shimmer |
+| IC | Proteção contra Energia | Protection from Energy | Abjuração | `protecao-contra-energia` | shield of resistance against fire, cold, lightning |
+| IC | Relâmpago | Lightning Bolt | Evocação | `relampago` | line of lightning blasting forward |
+| IC | Remover Maldição | Remove Curse | Abjuração | `remover-maldicao` | curse chains breaking with holy light |
+| IC | Respirar na Água | Water Breathing | Transmutação | `respirar-na-agua` | adventurer breathing underwater with bubbles |
+| IC | Revivificar | Revivify | Necromancia | `revivificar` | fallen hero revived by a diamond's light |
+| IC | Rogar Maldição | Bestow Curse | Necromancia | `rogar-maldicao` | dark curse sigil branded onto a victim |
+| IC | Sinal de Esperança | Beacon of Hope | Abjuração | `sinal-de-esperanca` | radiant beacon of hope over allies |
+| IC | Toque Vampírico | Vampiric Touch | Necromancia | `toque-vampirico` | shadowy hand draining life energy |
+| IC | Velocidade | Haste | Transmutação | `velocidade` | figure moving at blinding speed, speed lines |
+| IC | Voo | Fly | Transmutação | `voo` | figure flying through the sky |
 
 ## 4º círculo
 
 | ✓ | Magia | Em inglês | Escola | Arquivo | Palavras-chave |
 |---|---|---|---|---|---|
-| I· | Adivinhação | Divination | Adivinhação | `adivinhacao` | divine oracle vision, glowing eye of a god |
-| I· | Assassino Fantasmagórico | Phantasmal Killer | Ilusão | `assassino-fantasmagorico` | nightmare creature formed from fear |
-| I· | Aura de Vida | Aura of Life | Abjuração | `aura-de-vida` | radiant aura of life protecting allies |
-| I· | Banimento | Banishment | Abjuração | `banimento` | creature banished through a planar rift |
-| I· | Baú Secreto | Secret Chest | Conjuração | `bau-secreto` | chest vanishing into the Ethereal Plane |
-| I· | Compulsão | Compulsion | Encantamento | `compulsao` | compelled figures moving against their will |
-| I· | Confusão | Confusion | Encantamento | `confusao` | confused figures, swirling chaotic sigils over heads |
-| I· | Conjurar Elementais Menores | Conjure Minor Elementals | Conjuração | `conjurar-elementais-menores` | small elemental spirits swirling around a caster |
-| I· | Conjurar Seres da Floresta | Conjure Woodland Beings | Conjuração | `conjurar-seres-da-floresta` | fey woodland spirits dancing around a druid |
-| I· | Controlar a Água | Control Water | Transmutação | `controlar-a-agua` | water parting and rising in a whirlpool |
-| I· | Cão Fiel | Faithful Hound | Conjuração | `cao-fiel` | spectral guard dog of force |
-| I· | Dominar Fera | Dominate Beast | Encantamento | `dominar-fera` | beast with glowing eyes under mental control |
-| I· | Enfeitiçar Monstro | Charm Monster | Encantamento | `enfeiticar-monstro` | monster charmed, pink enchanting spiral over its head |
-| I· | Escudo de Fogo | Fire Shield | Evocação | `escudo-de-fogo` | warm flames or chilling ice shield wrapping a body |
-| I· | Esfera Resiliente | Resilient Sphere | Abjuração | `esfera-resiliente` | shimmering sphere of force enclosing a creature |
-| I· | Esfera Vitriólica | Vitriolic Sphere | Evocação | `esfera-vitriolica` | sphere of acid exploding |
-| I· | Fabricar | Fabricate | Transmutação | `fabricar` | raw materials transforming into crafted items |
-| I· | Guardião da Fé | Guardian of Faith | Conjuração | `guardiao-da-fe` | large spectral guardian holding a sword |
-| I· | Inseto Gigante | Giant Insect | Conjuração | `inseto-gigante` | giant spider, scorpion and wasp |
-| I· | Invisibilidade Maior | Greater Invisibility | Ilusão | `invisibilidade-maior` | warrior fully invisible while attacking |
-| I· | Liberdade de Movimento | Freedom of Movement | Abjuração | `liberdade-de-movimento` | figure slipping free from chains and vines |
-| I· | Localizar Criatura | Locate Creature | Adivinhação | `localizar-criatura` | glowing trail leading to a hidden creature |
-| I· | Metamorfose | Polymorph | Transmutação | `metamorfose` | creature transforming into a beast, swirling magic |
-| I· | Moldar Rochas | Stone Shape | Transmutação | `moldar-rochas` | stone reshaping like clay in hands |
-| I· | Muralha de Fogo | Wall of Fire | Evocação | `muralha-de-fogo` | towering wall of flames |
-| I· | Olho Arcano | Arcane Eye | Adivinhação | `olho-arcano` | floating invisible magical eye scouting |
-| I· | Pele de Pedra | Stoneskin | Transmutação | `pele-de-pedra` | skin hardening into grey stone |
-| I· | Porta Dimensional | Dimension Door | Conjuração | `porta-dimensional` | glowing door portal opening in the air |
-| I· | Praga | Blight | Necromancia | `praga` | withering plant and creature, necrotic decay |
-| I· | Proteção contra a Morte | Death Ward | Abjuração | `protecao-contra-a-morte` | protective ward against death, glowing ankh |
-| I· | Santuário Particular | Private Sanctum | Abjuração | `santuario-particular` | warded room sealed by magical barriers |
-| I· | Tempestade de Gelo | Ice Storm | Evocação | `tempestade-de-gelo` | hail of ice chunks raining down |
-| I· | Tentáculos Negros | Black Tentacles | Conjuração | `tentaculos-negros` | writhing black tentacles erupting from the ground |
-| I· | Terreno Alucinógeno | Hallucinatory Terrain | Ilusão | `terreno-alucinogeno` | illusory terrain, swamp disguised as meadow |
+| IC | Adivinhação | Divination | Adivinhação | `adivinhacao` | divine oracle vision, glowing eye of a god |
+| IC | Assassino Fantasmagórico | Phantasmal Killer | Ilusão | `assassino-fantasmagorico` | nightmare creature formed from fear |
+| IC | Aura de Vida | Aura of Life | Abjuração | `aura-de-vida` | radiant aura of life protecting allies |
+| IC | Banimento | Banishment | Abjuração | `banimento` | creature banished through a planar rift |
+| IC | Baú Secreto | Secret Chest | Conjuração | `bau-secreto` | chest vanishing into the Ethereal Plane |
+| IC | Compulsão | Compulsion | Encantamento | `compulsao` | compelled figures moving against their will |
+| IC | Confusão | Confusion | Encantamento | `confusao` | confused figures, swirling chaotic sigils over heads |
+| IC | Conjurar Elementais Menores | Conjure Minor Elementals | Conjuração | `conjurar-elementais-menores` | small elemental spirits swirling around a caster |
+| IC | Conjurar Seres da Floresta | Conjure Woodland Beings | Conjuração | `conjurar-seres-da-floresta` | fey woodland spirits dancing around a druid |
+| IC | Controlar a Água | Control Water | Transmutação | `controlar-a-agua` | water parting and rising in a whirlpool |
+| IC | Cão Fiel | Faithful Hound | Conjuração | `cao-fiel` | spectral guard dog of force |
+| IC | Dominar Fera | Dominate Beast | Encantamento | `dominar-fera` | beast with glowing eyes under mental control |
+| IC | Enfeitiçar Monstro | Charm Monster | Encantamento | `enfeiticar-monstro` | monster charmed, pink enchanting spiral over its head |
+| IC | Escudo de Fogo | Fire Shield | Evocação | `escudo-de-fogo` | warm flames or chilling ice shield wrapping a body |
+| IC | Esfera Resiliente | Resilient Sphere | Abjuração | `esfera-resiliente` | shimmering sphere of force enclosing a creature |
+| IC | Esfera Vitriólica | Vitriolic Sphere | Evocação | `esfera-vitriolica` | sphere of acid exploding |
+| IC | Fabricar | Fabricate | Transmutação | `fabricar` | raw materials transforming into crafted items |
+| IC | Guardião da Fé | Guardian of Faith | Conjuração | `guardiao-da-fe` | large spectral guardian holding a sword |
+| IC | Inseto Gigante | Giant Insect | Conjuração | `inseto-gigante` | giant spider, scorpion and wasp |
+| IC | Invisibilidade Maior | Greater Invisibility | Ilusão | `invisibilidade-maior` | warrior fully invisible while attacking |
+| IC | Liberdade de Movimento | Freedom of Movement | Abjuração | `liberdade-de-movimento` | figure slipping free from chains and vines |
+| IC | Localizar Criatura | Locate Creature | Adivinhação | `localizar-criatura` | glowing trail leading to a hidden creature |
+| IC | Metamorfose | Polymorph | Transmutação | `metamorfose` | creature transforming into a beast, swirling magic |
+| IC | Moldar Rochas | Stone Shape | Transmutação | `moldar-rochas` | stone reshaping like clay in hands |
+| IC | Muralha de Fogo | Wall of Fire | Evocação | `muralha-de-fogo` | towering wall of flames |
+| IC | Olho Arcano | Arcane Eye | Adivinhação | `olho-arcano` | floating invisible magical eye scouting |
+| IC | Pele de Pedra | Stoneskin | Transmutação | `pele-de-pedra` | skin hardening into grey stone |
+| IC | Porta Dimensional | Dimension Door | Conjuração | `porta-dimensional` | glowing door portal opening in the air |
+| IC | Praga | Blight | Necromancia | `praga` | withering plant and creature, necrotic decay |
+| IC | Proteção contra a Morte | Death Ward | Abjuração | `protecao-contra-a-morte` | protective ward against death, glowing ankh |
+| IC | Santuário Particular | Private Sanctum | Abjuração | `santuario-particular` | warded room sealed by magical barriers |
+| IC | Tempestade de Gelo | Ice Storm | Evocação | `tempestade-de-gelo` | hail of ice chunks raining down |
+| IC | Tentáculos Negros | Black Tentacles | Conjuração | `tentaculos-negros` | writhing black tentacles erupting from the ground |
+| IC | Terreno Alucinógeno | Hallucinatory Terrain | Ilusão | `terreno-alucinogeno` | illusory terrain, swamp disguised as meadow |
 
 ## 5º círculo
 
 | ✓ | Magia | Em inglês | Escola | Arquivo | Palavras-chave |
 |---|---|---|---|---|---|
-| I· | Animar Objetos | Animate Objects | Transmutação | `animar-objetos` | swords, books and chairs animated, flying |
-| I· | Caminhar em Árvores | Tree Stride | Conjuração | `caminhar-em-arvores` | figure stepping into a tree and out of another |
-| I· | Coluna de Chamas | Flame Strike | Evocação | `coluna-de-chamas` | vertical column of divine fire from the heavens |
-| I· | Comunhão | Commune | Adivinhação | `comunhao` | priest communing with a divine figure in light |
-| I· | Comunhão com a Natureza | Commune with Nature | Adivinhação | `comunhao-com-a-natureza` | druid becoming one with the forest, spirit roots |
-| I· | Concha Antivida | Antilife Shell | Abjuração | `concha-antivida` | shimmering barrier repelling living creatures |
-| I· | Cone de Frio | Cone of Cold | Evocação | `cone-de-frio` | cone of freezing frost blast |
-| I· | Conhecimento Lendário | Legend Lore | Adivinhação | `conhecimento-lendario` | ancient legends unfolding from a glowing tome |
-| I· | Conjurar Elemental | Conjure Elemental | Conjuração | `conjurar-elemental` | huge elemental summoned from fire, water, earth, air |
-| I· | Consagrar | Hallow | Abjuração | `consagrar` | consecrated ground glowing with holy symbols |
-| I· | Contatar Outro Plano | Contact Other Plane | Adivinhação | `contatar-outro-plano` | mind contacting a cosmic entity, alien eyes |
-| I· | Contágio | Contagion | Necromancia | `contagio` | magical disease spreading, sickly green plague |
-| I· | Criar Passagem | Passwall | Transmutação | `criar-passagem` | passage opening through a stone wall |
-| I· | Criação | Creation | Ilusão | `criacao` | object forming from shadow material |
-| I· | Curar Ferimentos em Massa | Mass Cure Wounds | Abjuração | `curar-ferimentos-em-massa` | wave of healing light over many wounded allies |
-| I· | Círculo de Teletransporte | Teleportation Circle | Conjuração | `circulo-de-teletransporte` | glowing teleportation circle with runes |
-| I· | Despertar | Awaken | Transmutação | `despertar` | tree awakening with a face and eyes |
-| I· | Despistar | Mislead | Ilusão | `despistar` | invisible caster with an illusory double |
-| I· | Dissipar o Bem e o Mal | Dispel Evil and Good | Abjuração | `dissipar-o-bem-e-o-mal` | warding off a demon with holy light |
-| I· | Dominar Pessoa | Dominate Person | Encantamento | `dominar-pessoa` | person controlled by a puppeteer's glowing strings |
-| I· | Elo Telepático | Telepathic Bond | Adivinhação | `elo-telepatico` | glowing mental links connecting several minds |
-| I· | Imobilizar Monstro | Hold Monster | Encantamento | `imobilizar-monstro` | monster frozen by glowing chains |
-| I· | Invocar Dragão | Summon Dragon | Conjuração | `invocar-dragao` | dragon spirit summoned |
-| I· | Ligação Planar | Planar Binding | Abjuração | `ligacao-planar` | extraplanar being bound in a circle |
-| I· | Missão | Geas | Encantamento | `missao` | magical oath binding a person with chains of light |
-| I· | Modificar Memória | Modify Memory | Encantamento | `modificar-memoria` | memories altered, fragmented images over a head |
-| I· | Muralha de Energia | Wall of Force | Evocação | `muralha-de-energia` | invisible wall of force, glimmering edges |
-| I· | Muralha de Pedra | Wall of Stone | Evocação | `muralha-de-pedra` | massive stone wall rising from the ground |
-| I· | Mão Arcana | Arcane Hand | Evocação | `mao-arcana` | huge glowing hand of force |
-| I· | Névoa Mortal | Cloudkill | Conjuração | `nevoa-mortal` | creeping poisonous green-yellow cloud |
-| I· | Praga de Insetos | Insect Plague | Conjuração | `praga-de-insetos` | swarm of biting locusts |
-| I· | Reencarnação | Reincarnate | Necromancia | `reencarnacao` | soul reborn into a new body, cycle of life |
-| I· | Restauração Maior | Greater Restoration | Abjuração | `restauracao-maior` | powerful restoration light removing curses |
-| I· | Reviver os Mortos | Raise Dead | Necromancia | `reviver-os-mortos` | dead hero raised from a coffin |
-| I· | Semelhança | Seeming | Ilusão | `semelhanca` | many faces changed by illusion at once |
-| I· | Sonho | Dream | Ilusão | `sonho` | figure entering another's dream, dreamscape |
-| I· | Telecinese | Telekinesis | Transmutação | `telecinese` | rock lifted by telekinetic force |
-| I· | Vidência | Scrying | Adivinhação | `videncia` | crystal ball showing a distant person |
+| IC | Animar Objetos | Animate Objects | Transmutação | `animar-objetos` | swords, books and chairs animated, flying |
+| IC | Caminhar em Árvores | Tree Stride | Conjuração | `caminhar-em-arvores` | figure stepping into a tree and out of another |
+| IC | Coluna de Chamas | Flame Strike | Evocação | `coluna-de-chamas` | vertical column of divine fire from the heavens |
+| IC | Comunhão | Commune | Adivinhação | `comunhao` | priest communing with a divine figure in light |
+| IC | Comunhão com a Natureza | Commune with Nature | Adivinhação | `comunhao-com-a-natureza` | druid becoming one with the forest, spirit roots |
+| IC | Concha Antivida | Antilife Shell | Abjuração | `concha-antivida` | shimmering barrier repelling living creatures |
+| IC | Cone de Frio | Cone of Cold | Evocação | `cone-de-frio` | cone of freezing frost blast |
+| IC | Conhecimento Lendário | Legend Lore | Adivinhação | `conhecimento-lendario` | ancient legends unfolding from a glowing tome |
+| IC | Conjurar Elemental | Conjure Elemental | Conjuração | `conjurar-elemental` | huge elemental summoned from fire, water, earth, air |
+| IC | Consagrar | Hallow | Abjuração | `consagrar` | consecrated ground glowing with holy symbols |
+| IC | Contatar Outro Plano | Contact Other Plane | Adivinhação | `contatar-outro-plano` | mind contacting a cosmic entity, alien eyes |
+| IC | Contágio | Contagion | Necromancia | `contagio` | magical disease spreading, sickly green plague |
+| IC | Criar Passagem | Passwall | Transmutação | `criar-passagem` | passage opening through a stone wall |
+| IC | Criação | Creation | Ilusão | `criacao` | object forming from shadow material |
+| IC | Curar Ferimentos em Massa | Mass Cure Wounds | Abjuração | `curar-ferimentos-em-massa` | wave of healing light over many wounded allies |
+| IC | Círculo de Teletransporte | Teleportation Circle | Conjuração | `circulo-de-teletransporte` | glowing teleportation circle with runes |
+| IC | Despertar | Awaken | Transmutação | `despertar` | tree awakening with a face and eyes |
+| IC | Despistar | Mislead | Ilusão | `despistar` | invisible caster with an illusory double |
+| IC | Dissipar o Bem e o Mal | Dispel Evil and Good | Abjuração | `dissipar-o-bem-e-o-mal` | warding off a demon with holy light |
+| IC | Dominar Pessoa | Dominate Person | Encantamento | `dominar-pessoa` | person controlled by a puppeteer's glowing strings |
+| IC | Elo Telepático | Telepathic Bond | Adivinhação | `elo-telepatico` | glowing mental links connecting several minds |
+| IC | Imobilizar Monstro | Hold Monster | Encantamento | `imobilizar-monstro` | monster frozen by glowing chains |
+| IC | Invocar Dragão | Summon Dragon | Conjuração | `invocar-dragao` | dragon spirit summoned |
+| IC | Ligação Planar | Planar Binding | Abjuração | `ligacao-planar` | extraplanar being bound in a circle |
+| IC | Missão | Geas | Encantamento | `missao` | magical oath binding a person with chains of light |
+| IC | Modificar Memória | Modify Memory | Encantamento | `modificar-memoria` | memories altered, fragmented images over a head |
+| IC | Muralha de Energia | Wall of Force | Evocação | `muralha-de-energia` | invisible wall of force, glimmering edges |
+| IC | Muralha de Pedra | Wall of Stone | Evocação | `muralha-de-pedra` | massive stone wall rising from the ground |
+| IC | Mão Arcana | Arcane Hand | Evocação | `mao-arcana` | huge glowing hand of force |
+| IC | Névoa Mortal | Cloudkill | Conjuração | `nevoa-mortal` | creeping poisonous green-yellow cloud |
+| IC | Praga de Insetos | Insect Plague | Conjuração | `praga-de-insetos` | swarm of biting locusts |
+| IC | Reencarnação | Reincarnate | Necromancia | `reencarnacao` | soul reborn into a new body, cycle of life |
+| IC | Restauração Maior | Greater Restoration | Abjuração | `restauracao-maior` | powerful restoration light removing curses |
+| IC | Reviver os Mortos | Raise Dead | Necromancia | `reviver-os-mortos` | dead hero raised from a coffin |
+| IC | Semelhança | Seeming | Ilusão | `semelhanca` | many faces changed by illusion at once |
+| IC | Sonho | Dream | Ilusão | `sonho` | figure entering another's dream, dreamscape |
+| IC | Telecinese | Telekinesis | Transmutação | `telecinese` | rock lifted by telekinetic force |
+| IC | Vidência | Scrying | Adivinhação | `videncia` | crystal ball showing a distant person |
 
 ## 6º círculo
 
 | ✓ | Magia | Em inglês | Escola | Arquivo | Palavras-chave |
 |---|---|---|---|---|---|
-| I· | Aliado Planar | Planar Ally | Conjuração | `aliado-planar` | otherworldly ally answering a call |
-| I· | Banquete dos Heróis | Heroes' Feast | Conjuração | `banquete-dos-herois` | magnificent magical feast for heroes |
-| I· | Barreira de Lâminas | Blade Barrier | Evocação | `barreira-de-laminas` | wall of whirling razor-sharp blades |
-| I· | Caminhar no Vento | Wind Walk | Transmutação | `caminhar-no-vento` | figures turning into clouds and drifting |
-| I· | Carne para Pedra | Flesh to Stone | Transmutação | `carne-para-pedra` | person slowly turning to stone |
-| I· | Conjurar Fada | Conjure Fey | Conjuração | `conjurar-fada` | fey spirit stepping out of a glowing circle of mushrooms |
-| I· | Contingência | Contingency | Abjuração | `contingencia` | spell held in a gemstone, triggered condition |
-| I· | Convocação Instantânea | Instant Summons | Conjuração | `convocacao-instantanea` | object appearing in a hand from a sapphire |
-| I· | Criar Mortos-Vivos | Create Undead | Necromancia | `criar-mortos-vivos` | ghouls and wights created at night |
-| I· | Cura Completa | Heal | Abjuração | `cura-completa` | powerful healing light restoring a warrior |
-| I· | Círculo da Morte | Circle of Death | Necromancia | `circulo-da-morte` | sphere of negative energy spreading death |
-| I· | Dança Irresistível | Irresistible Dance | Encantamento | `danca-irresistivel` | figure dancing uncontrollably |
-| I· | Desintegrar | Disintegrate | Transmutação | `desintegrar` | thin green ray turning a target to dust |
-| I· | Encontrar o Caminho | Find the Path | Adivinhação | `encontrar-o-caminho` | glowing path through a labyrinth |
-| I· | Esfera Congelante | Freezing Sphere | Evocação | `esfera-congelante` | frigid sphere exploding with ice |
-| I· | Ferir | Harm | Necromancia | `ferir` | dark necrotic wave harming a creature |
-| I· | Globo de Invulnerabilidade | Globe of Invulnerability | Abjuração | `globo-de-invulnerabilidade` | shimmering globe blocking spells |
-| I· | Guardas e Proteções | Guards and Wards | Abjuração | `guardas-e-protecoes` | fortress warded with magical defenses, fog, locked doors |
-| I· | Ilusão Programada | Programmed Illusion | Ilusão | `ilusao-programada` | illusion triggered by a condition, actor |
-| I· | Mau-Olhado | Eyebite | Necromancia | `mau-olhado` | glowing black eyes of a warlock, terrifying gaze |
-| I· | Mover Terra | Move Earth | Transmutação | `mover-terra` | earth moving, hills reshaping |
-| I· | Muralha de Espinhos | Wall of Thorns | Conjuração | `muralha-de-espinhos` | thick wall of thorny brush |
-| I· | Muralha de Gelo | Wall of Ice | Evocação | `muralha-de-gelo` | wall of solid ice |
-| I· | Palavra de Recordação | Word of Recall | Conjuração | `palavra-de-recordacao` | cleric and allies vanishing to a sanctuary |
-| I· | Proibição | Forbiddance | Abjuração | `proibicao` | sacred land forbidding teleport, warded borders |
-| I· | Raio de Sol | Sunbeam | Evocação | `raio-de-sol` | blinding beam of sunlight |
-| I· | Recipiente Arcano | Magic Jar | Necromancia | `recipiente-arcano` | soul trapped in a gem container |
-| I· | Relâmpago em Cadeia | Chain Lightning | Evocação | `relampago-em-cadeia` | lightning bolt chaining between many targets |
-| I· | Sugestão em Massa | Mass Suggestion | Encantamento | `sugestao-em-massa` | crowd influenced by hypnotic suggestion |
-| I· | Transporte pelas Plantas | Transport via Plants | Conjuração | `transporte-pelas-plantas` | stepping through one tree to another far away |
-| I· | Visão da Verdade | True Seeing | Adivinhação | `visao-da-verdade` | eyes seeing true forms, invisible revealed |
+| IC | Aliado Planar | Planar Ally | Conjuração | `aliado-planar` | otherworldly ally answering a call |
+| IC | Banquete dos Heróis | Heroes' Feast | Conjuração | `banquete-dos-herois` | magnificent magical feast for heroes |
+| IC | Barreira de Lâminas | Blade Barrier | Evocação | `barreira-de-laminas` | wall of whirling razor-sharp blades |
+| IC | Caminhar no Vento | Wind Walk | Transmutação | `caminhar-no-vento` | figures turning into clouds and drifting |
+| IC | Carne para Pedra | Flesh to Stone | Transmutação | `carne-para-pedra` | person slowly turning to stone |
+| IC | Conjurar Fada | Conjure Fey | Conjuração | `conjurar-fada` | fey spirit stepping out of a glowing circle of mushrooms |
+| IC | Contingência | Contingency | Abjuração | `contingencia` | spell held in a gemstone, triggered condition |
+| IC | Convocação Instantânea | Instant Summons | Conjuração | `convocacao-instantanea` | object appearing in a hand from a sapphire |
+| IC | Criar Mortos-Vivos | Create Undead | Necromancia | `criar-mortos-vivos` | ghouls and wights created at night |
+| IC | Cura Completa | Heal | Abjuração | `cura-completa` | powerful healing light restoring a warrior |
+| IC | Círculo da Morte | Circle of Death | Necromancia | `circulo-da-morte` | sphere of negative energy spreading death |
+| IC | Dança Irresistível | Irresistible Dance | Encantamento | `danca-irresistivel` | figure dancing uncontrollably |
+| IC | Desintegrar | Disintegrate | Transmutação | `desintegrar` | thin green ray turning a target to dust |
+| IC | Encontrar o Caminho | Find the Path | Adivinhação | `encontrar-o-caminho` | glowing path through a labyrinth |
+| IC | Esfera Congelante | Freezing Sphere | Evocação | `esfera-congelante` | frigid sphere exploding with ice |
+| IC | Ferir | Harm | Necromancia | `ferir` | dark necrotic wave harming a creature |
+| IC | Globo de Invulnerabilidade | Globe of Invulnerability | Abjuração | `globo-de-invulnerabilidade` | shimmering globe blocking spells |
+| IC | Guardas e Proteções | Guards and Wards | Abjuração | `guardas-e-protecoes` | fortress warded with magical defenses, fog, locked doors |
+| IC | Ilusão Programada | Programmed Illusion | Ilusão | `ilusao-programada` | illusion triggered by a condition, actor |
+| IC | Mau-Olhado | Eyebite | Necromancia | `mau-olhado` | glowing black eyes of a warlock, terrifying gaze |
+| IC | Mover Terra | Move Earth | Transmutação | `mover-terra` | earth moving, hills reshaping |
+| IC | Muralha de Espinhos | Wall of Thorns | Conjuração | `muralha-de-espinhos` | thick wall of thorny brush |
+| IC | Muralha de Gelo | Wall of Ice | Evocação | `muralha-de-gelo` | wall of solid ice |
+| IC | Palavra de Recordação | Word of Recall | Conjuração | `palavra-de-recordacao` | cleric and allies vanishing to a sanctuary |
+| IC | Proibição | Forbiddance | Abjuração | `proibicao` | sacred land forbidding teleport, warded borders |
+| IC | Raio de Sol | Sunbeam | Evocação | `raio-de-sol` | blinding beam of sunlight |
+| IC | Recipiente Arcano | Magic Jar | Necromancia | `recipiente-arcano` | soul trapped in a gem container |
+| IC | Relâmpago em Cadeia | Chain Lightning | Evocação | `relampago-em-cadeia` | lightning bolt chaining between many targets |
+| IC | Sugestão em Massa | Mass Suggestion | Encantamento | `sugestao-em-massa` | crowd influenced by hypnotic suggestion |
+| IC | Transporte pelas Plantas | Transport via Plants | Conjuração | `transporte-pelas-plantas` | stepping through one tree to another far away |
+| IC | Visão da Verdade | True Seeing | Adivinhação | `visao-da-verdade` | eyes seeing true forms, invisible revealed |
 
 ## 7º círculo
 
 | ✓ | Magia | Em inglês | Escola | Arquivo | Palavras-chave |
 |---|---|---|---|---|---|
-| I· | Bola de Fogo Controlável | Delayed Blast Fireball | Evocação | `bola-de-fogo-controlavel` | glowing bead of fire growing stronger before exploding |
-| I· | Conjurar Celestial | Conjure Celestial | Conjuração | `conjurar-celestial` | radiant angelic celestial descending |
-| I· | Dedo da Morte | Finger of Death | Necromancia | `dedo-da-morte` | pointing finger unleashing negative energy |
-| I· | Espada Arcana | Arcane Sword | Evocação | `espada-arcana` | floating spectral sword of force |
-| I· | Forma Etérea | Etherealness | Conjuração | `forma-eterea` | figure becoming ethereal, ghostly plane |
-| I· | Inverter Gravidade | Reverse Gravity | Transmutação | `inverter-gravidade` | creatures falling upward |
-| I· | Isolamento | Sequester | Transmutação | `isolamento` | creature hidden in suspended animation |
-| I· | Jaula de Energia | Forcecage | Evocação | `jaula-de-energia` | invisible cage of force bars trapping a creature |
-| I· | Mansão Magnífica | Magnificent Mansion | Conjuração | `mansao-magnifica` | extradimensional grand mansion behind a shimmering door |
-| I· | Miragem Arcana | Mirage Arcane | Ilusão | `miragem-arcana` | landscape transformed by vast illusion |
-| I· | Palavra Divina | Divine Word | Evocação | `palavra-divina` | divine word of power, terrible holy light |
-| I· | Projetar Imagem | Project Image | Ilusão | `projetar-imagem` | illusory projection of a mage far away |
-| I· | Rajada Prismática | Prismatic Spray | Evocação | `rajada-prismatica` | seven rays of rainbow colored light |
-| I· | Regeneração | Regenerate | Transmutação | `regeneracao` | limb regenerating with healing light |
-| I· | Ressurreição | Resurrection | Necromancia | `ressurreicao` | soul returning to a body in a radiant glow |
-| I· | Simulacro | Simulacrum | Ilusão | `simulacro` | illusory duplicate made of snow |
-| I· | Símbolo | Symbol | Abjuração | `simbolo` | glowing deadly symbol inscribed on a door |
-| I· | Teletransporte | Teleport | Conjuração | `teletransporte` | figure teleporting in a flash of light |
-| I· | Tempestade de Fogo | Fire Storm | Evocação | `tempestade-de-fogo` | storm of fire engulfing an area |
-| I· | Viagem Planar | Plane Shift | Conjuração | `viagem-planar` | travel between planes through a tuning fork portal |
+| IC | Bola de Fogo Controlável | Delayed Blast Fireball | Evocação | `bola-de-fogo-controlavel` | glowing bead of fire growing stronger before exploding |
+| IC | Conjurar Celestial | Conjure Celestial | Conjuração | `conjurar-celestial` | radiant angelic celestial descending |
+| IC | Dedo da Morte | Finger of Death | Necromancia | `dedo-da-morte` | pointing finger unleashing negative energy |
+| IC | Espada Arcana | Arcane Sword | Evocação | `espada-arcana` | floating spectral sword of force |
+| IC | Forma Etérea | Etherealness | Conjuração | `forma-eterea` | figure becoming ethereal, ghostly plane |
+| IC | Inverter Gravidade | Reverse Gravity | Transmutação | `inverter-gravidade` | creatures falling upward |
+| IC | Isolamento | Sequester | Transmutação | `isolamento` | creature hidden in suspended animation |
+| IC | Jaula de Energia | Forcecage | Evocação | `jaula-de-energia` | invisible cage of force bars trapping a creature |
+| IC | Mansão Magnífica | Magnificent Mansion | Conjuração | `mansao-magnifica` | extradimensional grand mansion behind a shimmering door |
+| IC | Miragem Arcana | Mirage Arcane | Ilusão | `miragem-arcana` | landscape transformed by vast illusion |
+| IC | Palavra Divina | Divine Word | Evocação | `palavra-divina` | divine word of power, terrible holy light |
+| IC | Projetar Imagem | Project Image | Ilusão | `projetar-imagem` | illusory projection of a mage far away |
+| IC | Rajada Prismática | Prismatic Spray | Evocação | `rajada-prismatica` | seven rays of rainbow colored light |
+| IC | Regeneração | Regenerate | Transmutação | `regeneracao` | limb regenerating with healing light |
+| IC | Ressurreição | Resurrection | Necromancia | `ressurreicao` | soul returning to a body in a radiant glow |
+| IC | Simulacro | Simulacrum | Ilusão | `simulacro` | illusory duplicate made of snow |
+| IC | Símbolo | Symbol | Abjuração | `simbolo` | glowing deadly symbol inscribed on a door |
+| IC | Teletransporte | Teleport | Conjuração | `teletransporte` | figure teleporting in a flash of light |
+| IC | Tempestade de Fogo | Fire Storm | Evocação | `tempestade-de-fogo` | storm of fire engulfing an area |
+| IC | Viagem Planar | Plane Shift | Conjuração | `viagem-planar` | travel between planes through a tuning fork portal |
 
 ## 8º círculo
 
 | ✓ | Magia | Em inglês | Escola | Arquivo | Palavras-chave |
 |---|---|---|---|---|---|
-| I· | Antipatia/Simpatia | Antipathy/Sympathy | Encantamento | `antipatia-simpatia` | aura repelling and attracting creatures |
-| I· | Aura Sagrada | Holy Aura | Abjuração | `aura-sagrada` | brilliant holy aura around allies |
-| I· | Campo Antimagia | Antimagic Field | Abjuração | `campo-antimagia` | sphere suppressing all magic |
-| I· | Clone | Clone | Necromancia | `clone` | clone growing in a magical vessel |
-| I· | Controlar o Clima | Control Weather | Transmutação | `controlar-o-clima` | caster controlling the sky and storms |
-| I· | Dominar Monstro | Dominate Monster | Encantamento | `dominar-monstro` | monster under mental control, glowing eyes |
-| I· | Explosão Solar | Sunburst | Evocação | `explosao-solar` | brilliant burst of sunlight blinding all |
-| I· | Formas Animais | Animal Shapes | Transmutação | `formas-animais` | allies transforming into beasts |
-| I· | Labirinto | Maze | Conjuração | `labirinto` | creature trapped in an endless labyrinth |
-| I· | Lábia | Glibness | Encantamento | `labia` | silver tongue, persuasive speech, charisma glow |
-| I· | Mente Embotada | Befuddlement | Encantamento | `mente-embotada` | mind shattered, intellect broken, spinning sigils |
-| I· | Mente Vazia | Mind Blank | Abjuração | `mente-vazia` | mind protected by a blank shield |
-| I· | Nuvem Incendiária | Incendiary Cloud | Conjuração | `nuvem-incendiaria` | billowing cloud of burning embers |
-| I· | Palavra de Poder: Atordoar | Power Word Stun | Encantamento | `palavra-de-poder-atordoar` | word of power stunning a creature |
-| I· | Semiplano | Demiplane | Conjuração | `semiplano` | door to a small pocket dimension |
-| I· | Terremoto | Earthquake | Transmutação | `terremoto` | ground splitting from a violent earthquake |
-| I· | Tsunami | Tsunami | Conjuração | `tsunami` | colossal wall of water crashing |
+| IC | Antipatia/Simpatia | Antipathy/Sympathy | Encantamento | `antipatia-simpatia` | aura repelling and attracting creatures |
+| IC | Aura Sagrada | Holy Aura | Abjuração | `aura-sagrada` | brilliant holy aura around allies |
+| IC | Campo Antimagia | Antimagic Field | Abjuração | `campo-antimagia` | sphere suppressing all magic |
+| IC | Clone | Clone | Necromancia | `clone` | clone growing in a magical vessel |
+| IC | Controlar o Clima | Control Weather | Transmutação | `controlar-o-clima` | caster controlling the sky and storms |
+| IC | Dominar Monstro | Dominate Monster | Encantamento | `dominar-monstro` | monster under mental control, glowing eyes |
+| IC | Explosão Solar | Sunburst | Evocação | `explosao-solar` | brilliant burst of sunlight blinding all |
+| IC | Formas Animais | Animal Shapes | Transmutação | `formas-animais` | allies transforming into beasts |
+| IC | Labirinto | Maze | Conjuração | `labirinto` | creature trapped in an endless labyrinth |
+| IC | Lábia | Glibness | Encantamento | `labia` | silver tongue, persuasive speech, charisma glow |
+| IC | Mente Embotada | Befuddlement | Encantamento | `mente-embotada` | mind shattered, intellect broken, spinning sigils |
+| IC | Mente Vazia | Mind Blank | Abjuração | `mente-vazia` | mind protected by a blank shield |
+| IC | Nuvem Incendiária | Incendiary Cloud | Conjuração | `nuvem-incendiaria` | billowing cloud of burning embers |
+| IC | Palavra de Poder: Atordoar | Power Word Stun | Encantamento | `palavra-de-poder-atordoar` | word of power stunning a creature |
+| IC | Semiplano | Demiplane | Conjuração | `semiplano` | door to a small pocket dimension |
+| IC | Terremoto | Earthquake | Transmutação | `terremoto` | ground splitting from a violent earthquake |
+| IC | Tsunami | Tsunami | Conjuração | `tsunami` | colossal wall of water crashing |
 
 ## 9º círculo
 
 | ✓ | Magia | Em inglês | Escola | Arquivo | Palavras-chave |
 |---|---|---|---|---|---|
-| I· | Aprisionamento | Imprisonment | Abjuração | `aprisionamento` | creature sealed in a magical prison |
-| I· | Chuva de Meteoros | Meteor Swarm | Evocação | `chuva-de-meteoros` | fiery meteors raining from the sky |
-| I· | Cura Completa em Massa | Mass Heal | Abjuração | `cura-completa-em-massa` | flood of healing light for many |
-| I· | Desejo | Wish | Conjuração | `desejo` | glowing wish granting reality-altering power, a genie-like light |
-| I· | Metamorfose Verdadeira | True Polymorph | Transmutação | `metamorfose-verdadeira` | creature permanently transformed into an object |
-| I· | Mudança de Forma | Shapechange | Transmutação | `mudanca-de-forma` | caster transforming into various creatures |
-| I· | Muralha Prismática | Prismatic Wall | Abjuração | `muralha-prismatica` | shimmering wall of seven colors |
-| I· | Palavra de Poder: Curar | Power Word Heal | Encantamento | `palavra-de-poder-curar` | word of power healing completely |
-| I· | Palavra de Poder: Matar | Power Word Kill | Encantamento | `palavra-de-poder-matar` | word of power killing instantly |
-| I· | Parar o Tempo | Time Stop | Transmutação | `parar-o-tempo` | frozen world, stopped clock, caster moving |
-| I· | Portal | Gate | Conjuração | `portal` | portal to another plane opening |
-| I· | Presciência | Foresight | Adivinhação | `presciencia` | eye seeing the future, threads of fate |
-| I· | Projeção Astral | Astral Projection | Necromancia | `projecao-astral` | astral bodies traveling through the Astral Plane |
-| I· | Ressurreição Verdadeira | True Resurrection | Necromancia | `ressurreicao-verdadeira` | grand resurrection from a pile of ash, divine light |
-| I· | Sina | Weird | Ilusão | `sina` | nightmare illusions of each creature's fears |
-| I· | Tempestade da Vingança | Storm of Vengeance | Conjuração | `tempestade-da-vinganca` | massive storm cloud with lightning and acid rain |
+| IC | Aprisionamento | Imprisonment | Abjuração | `aprisionamento` | creature sealed in a magical prison |
+| IC | Chuva de Meteoros | Meteor Swarm | Evocação | `chuva-de-meteoros` | fiery meteors raining from the sky |
+| IC | Cura Completa em Massa | Mass Heal | Abjuração | `cura-completa-em-massa` | flood of healing light for many |
+| IC | Desejo | Wish | Conjuração | `desejo` | glowing wish granting reality-altering power, a genie-like light |
+| IC | Metamorfose Verdadeira | True Polymorph | Transmutação | `metamorfose-verdadeira` | creature permanently transformed into an object |
+| IC | Mudança de Forma | Shapechange | Transmutação | `mudanca-de-forma` | caster transforming into various creatures |
+| IC | Muralha Prismática | Prismatic Wall | Abjuração | `muralha-prismatica` | shimmering wall of seven colors |
+| IC | Palavra de Poder: Curar | Power Word Heal | Encantamento | `palavra-de-poder-curar` | word of power healing completely |
+| IC | Palavra de Poder: Matar | Power Word Kill | Encantamento | `palavra-de-poder-matar` | word of power killing instantly |
+| IC | Parar o Tempo | Time Stop | Transmutação | `parar-o-tempo` | frozen world, stopped clock, caster moving |
+| IC | Portal | Gate | Conjuração | `portal` | portal to another plane opening |
+| IC | Presciência | Foresight | Adivinhação | `presciencia` | eye seeing the future, threads of fate |
+| IC | Projeção Astral | Astral Projection | Necromancia | `projecao-astral` | astral bodies traveling through the Astral Plane |
+| IC | Ressurreição Verdadeira | True Resurrection | Necromancia | `ressurreicao-verdadeira` | grand resurrection from a pile of ash, divine light |
+| IC | Sina | Weird | Ilusão | `sina` | nightmare illusions of each creature's fears |
+| IC | Tempestade da Vingança | Storm of Vengeance | Conjuração | `tempestade-da-vinganca` | massive storm cloud with lightning and acid rain |
 
 Na coluna ✓, **I** quer dizer que o ícone já chegou e **C** que a ilustração já chegou.
