@@ -375,6 +375,76 @@ SAGA_T2 = [
         "necklace; Egon the paladin and Lily the centaur stare at him, uneasy",
         quem=("johnny", "egon", "lily", "pyhmm"), roupa=COM_EQUIPAMENTO,
     ),
+    # Episódio 7: Os Sinos de Altavela
+    cena(
+        "t2e7-capa", "Ep. 7 · capa: o construto de Altavela", "capa do episódio 7",
+        "dusk in a big merchant city: the roof of a magic shop has opened and a huge brass and "
+        "stone construct, about five meters tall, rises out of it with glowing eyes; all along "
+        "the street, merchants lock their shops and ring small handbells; in the foreground "
+        "Johnny and Egon run away down the street, Egon holding a gleaming, beautiful sword",
+        quem=("johnny", "egon"), roupa=COM_EQUIPAMENTO,
+    ),
+    cena(
+        "t2e7-moinho", "Ep. 7 · o combate no moinho", "seção \"O combate no moinho\"",
+        "inside an old wooden watermill, skeletons burst through the broken front door; Lily "
+        "the centaur takes cover behind a tipped-over table with an arrow stuck halfway through "
+        "it; Egon the leonine paladin smashes a skeleton to pieces against the floor with a "
+        "heavy club; a goblin eye peeks out through a hole in a wooden barrel",
+        quem=("lily", "egon", "johnny"), roupa=COM_EQUIPAMENTO,
+    ),
+    cena(
+        "t2e7-salto", "Ep. 7 · o salto de Pyhmm", "seção \"O combate no moinho\", depois do porrete",
+        "outside a riverside mill, Pyhmm the halfling leaps silently from an upper window "
+        "straight onto a skeleton, shattering it; its skull flies off and grazes the skeleton "
+        "beside it; another skeleton with a crossbow stands further back",
+        quem=("pyhmm",), roupa=COM_EQUIPAMENTO,
+    ),
+    cena(
+        "t2e7-campos", "Ep. 7 · os campos mortos", "seção \"A estrada dos campos mortos\"",
+        "a horse cart on a country road crossing endless fields of wheat and corn that are all "
+        "rotten and dried out; Lily the centaur runs her hand along an ear of corn that "
+        "crumbles into dust; grey sky, a sad, silent landscape",
+        quem=("lily", "pyhmm", "johnny", "egon"), roupa=COM_EQUIPAMENTO,
+    ),
+    cena(
+        "t2e7-velho", "Ep. 7 · o velho da estrada", "seção \"O velho da estrada\"",
+        "morning by a dusty roadside: a very thin old man, so thin his ribs show, sits silently "
+        "with the look of someone who has accepted his fate; Egon the leonine paladin kneels "
+        "and puts four gold coins in his hand, and the old man lights up with joy; the horse "
+        "cart waits behind them",
+        quem=("egon", "lily", "pyhmm", "johnny"), roupa=COM_EQUIPAMENTO,
+    ),
+    cena(
+        "t2e7-ribeirao", "Ep. 7 · a carroça no ribeirão", "seção \"O ribeirão\"",
+        "at dusk, below a completely broken wooden bridge, Lily the centaur and Egon the "
+        "leonine paladin push and pull a horse cart through the thick mud of a shallow creek, "
+        "straining with all their strength, while Pyhmm and Johnny cheer from the bank",
+        quem=("lily", "egon", "pyhmm", "johnny"), roupa=COM_EQUIPAMENTO,
+    ),
+    cena(
+        "t2e7-altavela", "Ep. 7 · a chegada a Altavela", "seção \"Altavela\", antes da guarda",
+        "seen from the road at sunset: Altavela, a large and busy merchant city surrounded by "
+        "a river, with a stone bridge leading to it and only low walls; inside, many districts "
+        "with smoking forges, alchemists' towers and market streets full of colored awnings; "
+        "the heroes' horse cart approaches the bridge",
+        quem=("lily", "egon", "pyhmm", "johnny"), roupa=COM_EQUIPAMENTO,
+    ),
+    cena(
+        "t2e7-zanlia", "Ep. 7 · o osso de dragão no balcão", "seção \"Engrenagens e Encantos\"",
+        "inside a cluttered magic item shop full of softly chiming enchanted trinkets, gears "
+        "and glowing weapons; behind the counter an old gnome woman shopkeeper stares, amazed, "
+        "at a huge dragon bone lying on the counter; Johnny the goblin smiles innocently while "
+        "Egon the leonine paladin points at the most beautiful sword on display",
+        quem=("johnny", "egon"), roupa=COM_EQUIPAMENTO,
+    ),
+    cena(
+        "t2e7-sinos", "Ep. 7 · Zanlía e os sinos", "seção \"Os sinos\"",
+        "in front of a magic shop, an old gnome woman with blood-red eyes, a purple face, "
+        "bulging neck veins and her hair standing straight up rings a small handbell in fury "
+        "after locking her door; Pyhmm the halfling, just thrown out, stares at her; along the "
+        "street every merchant is locking up and ringing a bell too",
+        quem=("pyhmm",), roupa=COM_EQUIPAMENTO,
+    ),
     cena(
         "t2-simbolo-de-varek", "O símbolo de Varek", "ícone pequeno nos episódios 6 em diante",
         "an emblem: a monstrous mouth full of sharp teeth swallowing a sword, engraved on a "

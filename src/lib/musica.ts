@@ -134,6 +134,8 @@ const CENAS = {
   masmorra: [m("cena-masmorra"), m("rio-acido", 0.3)],
   /** A saída da mina, o vale e a descida até o vilarejo. */
   estrada: [m("cena-estrada"), m("rio-aberto", 0.4)],
+  /** Na estrada, longe de rio: a viagem de um lugar a outro. */
+  viagem: [m("cena-estrada")],
   /** Andando pelo vilarejo e pelos arredores, de dia. */
   vilarejo: [m("cena-vilarejo")],
   /** Dentro de uma taverna vazia ou calma. */
@@ -186,6 +188,7 @@ const CENA_DE_ABERTURA: Record<string, Ambiente> = {
   "/contos/cronicas/temporada-2/episodio-4": "taverna",
   "/contos/cronicas/temporada-2/episodio-5": "vilarejo",
   "/contos/cronicas/temporada-2/episodio-6": "taverna",
+  "/contos/cronicas/temporada-2/episodio-7": "vilarejo",
   "/eventos/guerra-leviana": "guerra-mar",
 };
 

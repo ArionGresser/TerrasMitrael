@@ -7,6 +7,7 @@ import * as t2e3 from "@/content/contos/cronicas/temporada-2/episodio-03.mdx";
 import * as t2e4 from "@/content/contos/cronicas/temporada-2/episodio-04.mdx";
 import * as t2e5 from "@/content/contos/cronicas/temporada-2/episodio-05.mdx";
 import * as t2e6 from "@/content/contos/cronicas/temporada-2/episodio-06.mdx";
+import * as t2e7 from "@/content/contos/cronicas/temporada-2/episodio-07.mdx";
 
 /**
  * As Crônicas de Mitrael: as sessões jogadas, contadas como história.
@@ -152,7 +153,7 @@ export const SERIES: Serie[] = [
           "vrakyr-windrose",
           "egon-vitriol",
         ],
-        episodios: episodios([t2e1, t2e2, t2e3, t2e4, t2e5, t2e6]),
+        episodios: episodios([t2e1, t2e2, t2e3, t2e4, t2e5, t2e6, t2e7]),
       },
     ],
   },
