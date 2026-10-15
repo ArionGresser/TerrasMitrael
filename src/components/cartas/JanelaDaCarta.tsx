@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, type MouseEvent, type ReactNode } from "re
 import Link from "next/link";
 import { MOLDURAS, type TipoDeCarta } from "@/lib/cartas";
 import { tocar } from "@/lib/som";
+import { GiroDaCarta, rotuloDoGiro } from "./CartaComVerso";
 
 /** Os blocos do texto das regras (parágrafos, listas, tabelas), em ordem. */
 const BLOCOS = [
@@ -253,6 +254,7 @@ export function JanelaDaCarta({
 }) {
   const janela = useRef<HTMLDialogElement>(null);
   const caixa = useRef<HTMLDivElement>(null);
+  const [verso, setVerso] = useState(false);
 
   useEffect(() => {
     const d = janela.current;
@@ -271,6 +273,7 @@ export function JanelaDaCarta({
       ref={janela}
       onClose={() => {
         tocar("fecharMenu");
+        setVerso(false);
         aoFechar();
       }}
       onClick={(e) => {
@@ -286,9 +289,12 @@ export function JanelaDaCarta({
           className="drop-shadow-[0_18px_30px_rgba(0,0,0,0.6)]"
           style={{ width: `min(90vw, calc((100dvh - 7.5rem) * ${proporcao}), 30rem)` }}
         >
-          {children}
+          <GiroDaCarta verso={verso}>{children}</GiroDaCarta>
         </div>
         <div className="flex flex-wrap justify-center gap-2">
+          <button type="button" onClick={() => setVerso((v) => !v)} aria-pressed={verso} className={BOTAO_DA_JANELA}>
+            {rotuloDoGiro(verso)}
+          </button>
           <button
             type="button"
             onClick={() => {

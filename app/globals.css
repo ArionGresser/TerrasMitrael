@@ -1764,3 +1764,109 @@ html[data-cursor] .cursor-grabbing {
   0%, 80% { opacity: 1; }
   100% { opacity: 0; }
 }
+
+/* ---------- As artes: ampliar e inspecionar ----------
+   A lupa aparece no canto de toda arte grande (ver BotaoAmpliar) e abre a
+   arte por cima da tela (ver Ampliador). Quem tem [data-inclinar] acompanha
+   o dedo ou o mouse, como uma carta inspecionada contra a luz: inclina para
+   o lado do ponteiro, e um brilho corre por cima. */
+
+.botao-ampliar {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 5;
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  border: 1px solid rgb(212 174 79 / 0.55);
+  background: rgb(26 17 10 / 0.72);
+  color: #f3e6c8;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.45);
+  cursor: zoom-in;
+  opacity: 0;
+  transform: scale(0.9);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+*:has(> .botao-ampliar):hover > .botao-ampliar,
+.botao-ampliar:focus-visible {
+  opacity: 1;
+  transform: none;
+}
+.botao-ampliar:hover {
+  background: rgb(26 17 10 / 0.9);
+}
+/* No toque não existe "passar por cima": a lupa fica sempre à vista */
+@media (hover: none) {
+  .botao-ampliar {
+    opacity: 0.9;
+    transform: none;
+  }
+}
+
+[data-inclinar] {
+  position: relative;
+  transform: perspective(1100px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transition: transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1);
+  will-change: transform;
+}
+[data-inclinar][data-inclinando] {
+  transition: transform 0.08s linear;
+}
+[data-inclinar]::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at var(--bx, 50%) var(--by, 50%),
+    rgb(255 244 214 / 0.38),
+    rgb(255 244 214 / 0.08) 35%,
+    transparent 60%
+  );
+  mix-blend-mode: soft-light;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+[data-inclinar][data-inclinando]::after {
+  opacity: 1;
+}
+
+/* A carta que vira: a frente e o verso, um de costas para o outro */
+.carta-giro {
+  position: relative;
+  transform: perspective(1400px) rotateY(0deg);
+  transform-style: preserve-3d;
+  transition: transform 0.75s cubic-bezier(0.3, 0.7, 0.2, 1);
+}
+.carta-giro[data-verso] {
+  transform: perspective(1400px) rotateY(180deg);
+}
+.carta-face {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.carta-face-verso {
+  position: absolute;
+  inset: 0;
+  transform: rotateY(180deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-inclinar] {
+    transform: none !important;
+  }
+  [data-inclinar]::after {
+    display: none;
+  }
+  .carta-giro {
+    transition: none;
+  }
+}

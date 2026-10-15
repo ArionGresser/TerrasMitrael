@@ -105,25 +105,25 @@ export const SERIES: Serie[] = [
     slug: "cronicas",
     titulo: "A Saga de Mitrael",
     selo: "Campanha principal",
-    chamada: "Tudo o que aconteceu na mesa, sessão a sessão",
+    chamada: "Cada batalha, cada juramento, cada preço pago",
     sinopse:
-      "A campanha principal de Terras de Mitrael, contada episódio por episódio. O que está escrito aqui foi jogado: as escolhas, os dados e o preço de cada um.",
+      "A grande crônica de Terras de Mitrael, contada capítulo a capítulo. Nada aqui é lenda de taverna: cada escolha foi feita à mesa, cada dado rolou de verdade, e cada preço foi pago.",
     arte: {
       tipo: "imagem",
       imagem: "/images/contos/cronicas/saga-capa.webp",
-      alt: "As duas gerações: os cinco do novo elenco numa estrada rumo às montanhas, e os sete da primeira geração no céu dourado, olhando por eles",
+      alt: "As duas gerações: os cinco heróis de agora numa estrada rumo às montanhas, e os sete primeiros no céu dourado, olhando por eles",
     },
     disponivel: true,
     temporadas: [
       {
         numero: 1,
-        titulo: "A primeira geração",
+        titulo: "A Era dos Sete",
         sinopse:
-          "As sessões do elenco antigo, jogadas sob o sistema de regras da casa, do primeiro ano de mesa em diante. Foi aqui que boa parte do mapa ganhou nome.",
+          "Antes de todos, vieram sete. Foram os primeiros a cruzar estas terras com espada e magia, e foi pelas mãos deles que boa parte do mapa ganhou nome. Suas crônicas ainda aguardam a pena da escriba.",
         arte: {
           tipo: "imagem",
           imagem: "/images/contos/cronicas/t1-capa.webp",
-          alt: "Os sete da primeira geração no alto de um morro ao nascer do sol, olhando uma terra de florestas, rios e montanhas",
+          alt: "Os sete primeiros heróis no alto de um morro ao nascer do sol, olhando uma terra de florestas, rios e montanhas",
         },
         elenco: [
           "howai",
@@ -138,13 +138,13 @@ export const SERIES: Serie[] = [
       },
       {
         numero: 2,
-        titulo: "O novo elenco",
+        titulo: "Os Acorrentados de Varek",
         sinopse:
-          "Cinco desconhecidos, já sob as regras de 2024: uma clériga centaura, um pequenino arqueólogo, um goblin bruxo, um anão mineiro e um paladino leonino.",
+          "Três despertam com ferro no pescoço, nas entranhas de uma mina guardada por mortos. Outros dois se juntam pelo caminho. Uma clériga centaura que fala com as feras, um pequenino que caça as folhas de um livro perdido, um goblin com um pacto marcado nas costas, um anão das minas e um paladino leonino de juba sem cor. Nenhum deles escolheu esta estrada. Foi ela que os escolheu.",
         arte: {
           tipo: "imagem",
           imagem: "/images/contos/cronicas/t2-capa.webp",
-          alt: "Os cinco do novo elenco saindo da boca de uma mina ao pôr do sol, com um vilarejo no vale lá embaixo",
+          alt: "Os cinco heróis saindo da boca de uma mina ao pôr do sol, com um vilarejo no vale lá embaixo",
         },
         elenco: [
           "lily-bouvardia",

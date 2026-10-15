@@ -14,6 +14,7 @@ import { TituloBrasao, Sobretitulo, Ornamento } from "@/components/ui/Titulo";
 import { SeloDeVolta } from "@/components/navegacao/SeloDeVolta";
 import { Dobra } from "@/components/ui/Dobra";
 import { CartaDaMagia } from "@/components/cartas/CartasDoLivro";
+import { CartaComVerso } from "@/components/cartas/CartaComVerso";
 import { BotaoImprimirCarta } from "@/components/cartas/JanelaDaCarta";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -85,13 +86,13 @@ export default async function PaginaMagia({ params }: Props) {
                 por cima da lista */}
             <div data-com-carta className="mt-10">
               <Dobra titulo="A carta">
-                <div className="mx-auto w-full max-w-[22rem]">
+                <CartaComVerso className="mx-auto w-full max-w-[22rem]">
                   <CartaDaMagia
                     magia={magia}
                     arte={ilustracoesDaMagia(magia.slug)[0] ?? iconeDaMagia(magia.slug)}
                     encaixe={ilustracoesDaMagia(magia.slug)[0] ? "cobrir" : "inteira"}
                   />
-                </div>
+                </CartaComVerso>
                 <div className="mt-5 text-center">
                   <BotaoImprimirCarta />
                 </div>

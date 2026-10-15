@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { BotaoAmpliar } from "@/components/arte/BotaoAmpliar";
 import type { ReactNode } from "react";
 import { SeloDeVolta } from "@/components/navegacao/SeloDeVolta";
 import { Ornamento, Sobretitulo, TituloBrasao } from "@/components/ui/Titulo";
@@ -48,6 +49,7 @@ export function Capa({
           className="object-cover"
         />
         <div aria-hidden className="vinheta-abertura absolute inset-0" />
+        <BotaoAmpliar src={imagem} alt={titulo} />
         {volta ? <SeloDeVolta href={volta.href} rotulo={volta.rotulo} lugar="capa" /> : null}
 
         <div className="relative px-6 text-center">

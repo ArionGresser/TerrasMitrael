@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fragment } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
@@ -105,7 +106,7 @@ export default async function PaginaTemporada({ params }: Props) {
   const naMesa = (
     <div className="flex min-h-full flex-col justify-center">
       <p className="font-titulo text-tinta-500 mb-4 text-center text-[0.66rem] tracking-[0.2em] uppercase">
-        Na mesa
+        Os heróis
       </p>
       <Elenco slugs={temporada.elenco} prioridade />
     </div>
@@ -165,7 +166,7 @@ export default async function PaginaTemporada({ params }: Props) {
 
           <div className="mt-8">
             <p className="font-titulo text-tinta-500 mb-3 text-center text-[0.66rem] tracking-[0.2em] uppercase">
-              Na mesa
+              Os heróis
             </p>
             <Elenco slugs={temporada.elenco} prioridade />
           </div>
@@ -188,26 +189,68 @@ export default async function PaginaTemporada({ params }: Props) {
                   <Pergaminho
                     variante="cartao"
                     borda={((i % 3) + 1) as 1 | 2 | 3}
-                    className="relative flex gap-4 sm:gap-6"
+                    className={`group relative ${episodio.meta.capa ? "" : "flex gap-4 sm:gap-6"}`}
                   >
-                    <span
-                      aria-hidden
-                      className="font-brasao text-dourado-600/70 w-10 shrink-0 text-center text-4xl leading-none sm:w-14 sm:text-5xl"
-                    >
-                      {episodio.meta.numero}
-                    </span>
-                    <div className="min-w-0">
-                      <TituloCapitulo>
-                        <Link
-                          href={`${base}/${chaveDoEpisodio(episodio)}/`}
-                          className="after:absolute after:inset-0 hover:underline"
-                        >
-                          <span className="sr-only">
-                            Episódio {episodio.meta.numero}:{" "}
+                    {/* A capa do episódio, com o número e o nome gravados
+                        na própria arte, como a capa de um capítulo */}
+                    {episodio.meta.capa ? (
+                      <div className="relative mb-4 aspect-[16/9] overflow-hidden rounded-sm border border-black/30 shadow-[0_10px_24px_-12px_rgba(0,0,0,0.8)]">
+                        <Image
+                          src={episodio.meta.capa}
+                          alt={episodio.meta.capaAlt ?? ""}
+                          fill
+                          sizes="(max-width: 768px) 100vw, 680px"
+                          className="object-cover transition-transform duration-700 ease-out motion-safe:group-hover:scale-[1.04]"
+                        />
+                        <div
+                          aria-hidden
+                          className="absolute inset-0 bg-[linear-gradient(to_top,rgb(12_8_4/0.92)_0%,rgb(12_8_4/0.55)_32%,transparent_62%)]"
+                        />
+                        <div className="absolute inset-x-0 bottom-0 flex items-end gap-3 p-4 sm:gap-5 sm:p-6">
+                          <span
+                            aria-hidden
+                            className="font-brasao text-dourado-300 text-6xl leading-[0.8] [text-shadow:0_2px_6px_rgb(0_0_0/0.8)] sm:text-7xl"
+                          >
+                            {episodio.meta.numero}
                           </span>
-                          {episodio.meta.titulo}
-                        </Link>
-                      </TituloCapitulo>
+                          <div className="min-w-0 pb-1">
+                            <p className="font-titulo text-dourado-300/90 text-[0.62rem] tracking-[0.3em] uppercase">
+                              Capítulo {episodio.meta.numero}
+                            </p>
+                            <h3 className="font-brasao text-pergaminho-50 mt-1 text-2xl leading-tight [text-shadow:0_2px_6px_rgb(0_0_0/0.85)] sm:text-3xl">
+                              <Link
+                                href={`${base}/${chaveDoEpisodio(episodio)}/`}
+                                className="after:absolute after:inset-0 hover:underline"
+                              >
+                                <span className="sr-only">Episódio {episodio.meta.numero}: </span>
+                                {episodio.meta.titulo}
+                              </Link>
+                            </h3>
+                          </div>
+                        </div>
+                      </div>
+                    ) : (
+                      <span
+                        aria-hidden
+                        className="font-brasao text-dourado-600/70 w-10 shrink-0 text-center text-4xl leading-none sm:w-14 sm:text-5xl"
+                      >
+                        {episodio.meta.numero}
+                      </span>
+                    )}
+                    <div className="min-w-0">
+                      {episodio.meta.capa ? null : (
+                        <TituloCapitulo>
+                          <Link
+                            href={`${base}/${chaveDoEpisodio(episodio)}/`}
+                            className="after:absolute after:inset-0 hover:underline"
+                          >
+                            <span className="sr-only">
+                              Episódio {episodio.meta.numero}:{" "}
+                            </span>
+                            {episodio.meta.titulo}
+                          </Link>
+                        </TituloCapitulo>
+                      )}
                       {episodio.meta.sessao ? (
                         <p className="text-tinta-500 mt-0.5 text-xs tracking-wide">
                           Jogado em {episodio.meta.sessao}

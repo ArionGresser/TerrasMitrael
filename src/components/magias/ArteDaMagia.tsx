@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { BotaoAmpliar } from "@/components/arte/BotaoAmpliar";
 import { Selo } from "@/components/ui/Selo";
 
 /**
@@ -14,6 +15,15 @@ export function IconeDaMagia({
 }) {
   const medida = tamanho === "lista" ? "size-14" : "size-64 max-w-full sm:size-80";
   const pixels = tamanho === "lista" ? 56 : 320;
+
+  if (icone && tamanho === "pagina") {
+    return (
+      <div className={`border-dourado-600/40 relative ${medida} shrink-0 overflow-hidden rounded-sm border shadow-[0_2px_6px_-2px_rgba(0,0,0,0.5)]`}>
+        <Image src={icone} alt="" fill sizes="320px" className="object-cover" />
+        <BotaoAmpliar src={icone} alt="O ícone da magia" />
+      </div>
+    );
+  }
 
   if (icone) {
     return (
@@ -101,6 +111,7 @@ function Quadro({ src, alt, grande = false }: { src: string; alt: string; grande
         sizes={grande ? "(max-width: 640px) 100vw, 608px" : "(max-width: 640px) 50vw, 300px"}
         className="object-cover"
       />
+      <BotaoAmpliar src={src} alt={alt} />
     </figure>
   );
 }

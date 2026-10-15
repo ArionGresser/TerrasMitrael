@@ -13,6 +13,7 @@ import { arte } from "@/lib/arte";
 import { SeloDeVolta } from "@/components/navegacao/SeloDeVolta";
 import { Dobra } from "@/components/ui/Dobra";
 import { CartaDoItem } from "@/components/cartas/CartasDoLivro";
+import { CartaComVerso } from "@/components/cartas/CartaComVerso";
 import { BotaoImprimirCarta } from "@/components/cartas/JanelaDaCarta";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -68,9 +69,9 @@ export default async function PaginaItem({ params }: Props) {
                 cima dela */}
             <div data-com-carta className="mt-10">
               <Dobra titulo="A carta">
-                <div className="mx-auto w-full max-w-[22rem]">
+                <CartaComVerso className="mx-auto w-full max-w-[22rem]">
                   <CartaDoItem item={item} arte={arte("itens", item.slug)} />
-                </div>
+                </CartaComVerso>
                 <div className="mt-5 text-center">
                   <BotaoImprimirCarta />
                 </div>

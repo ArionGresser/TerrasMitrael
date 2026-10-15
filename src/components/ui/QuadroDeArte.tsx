@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { BotaoAmpliar } from "@/components/arte/BotaoAmpliar";
 import { Selo } from "@/components/ui/Selo";
 
 /**
@@ -62,6 +63,7 @@ export function QuadroDeArte({
         }
         className="object-cover"
       />
+      <BotaoAmpliar src={src} alt={alt} />
     </figure>
   );
 }

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { BotaoAmpliar } from "@/components/arte/BotaoAmpliar";
 
 /**
  * Ilustração no meio do texto da lore.
@@ -41,6 +42,7 @@ export function Ilustracao({
           sizes={pequena ? "144px" : inteira ? "(max-width: 768px) 100vw, 448px" : "(max-width: 768px) 100vw, 700px"}
           className={inteira ? "object-cover" : "object-cover sepia-[0.16]"}
         />
+        {pequena ? null : <BotaoAmpliar src={src} alt={alt} legenda={legenda} />}
       </div>
       {legenda ? (
         <figcaption className="text-tinta-500 mt-2 text-center text-xs italic">
